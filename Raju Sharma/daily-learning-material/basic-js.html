@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>
+            Intro
+        </title>
+        <script type="text/javascript">
+            function button()
+            {
+                var strUser=document.getElementById("test1").value;
+                var strpass=document.getElementById("test2").value;
+                var rad=document.getElementById("rd1");
+                var sel=document.getElementById("drop");
+                if(strUser=="Raju" && strpass=="ra44ju88" && rad.checked==true)
+                {
+                    //alert ();
+                    //alert("Something wrong in if");
+                    alert("validation completed and the radio button value is "+rad.value+"Dropdwon values are"+sel.options[sel.selectedIndex].value);
+                }
+                else{
+                    alert("Something wrong");
+                }
+                //alert("Value inside the test box is"+str) 
+            }
+
+            function ChangeSt()
+            {
+                var par=document.getElementsByTagName("p");// par is the array type 
+                par[0].style.fontSize=25;
+                par[0].style.color="red";
+                par[1].style.fontWeight="bold";
+                par[2].style.fontStyle="italic"
+            }
+
+           
+        </script>
+
+    </head> 
+    <body>
+        
+        <h1 id="a">Something that has to change  </h1>
+        <input id="test1" placeholder="Enter username">
+        <input type="password" id="test2" placeholder="Enter Pass"><br>
+        <input id="rd1" name="grp1" type="radio" value="simple snip"> simple s</input><br>
+        <input id="rd2" name="grp1" type="radio" value="hard"> Hard One </input>
+        <br><hr>
+        <select id="drop">
+            <option value="Simple">
+                Simple
+            </option>
+            <option value="Hard"> 
+                Hard
+            </option>
+            <option value="Harder">
+                Harder
+            </option>
+        </select><hr>    
+        <p>!st pargraph me changing </p>
+        <p>2nd paragraph</p>
+        <p>3rd paragraph</p>
+        <br><button onclick="button()">click here</button>
+        <hr>
+        <br><button onclick="ChangeSt()">click here for change style </button>
+    
+
+    </body>
+</html>
