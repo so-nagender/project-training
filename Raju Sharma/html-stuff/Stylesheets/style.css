@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 1300px;
+    margin: 0 auto;
+
+}
+
+/*-- header starts --*/
+header {
+    margin : 20px 10px;
+}
+header nav{
+    display: inline-block;
+    margin: 20px 10px;
+
+}
+header nav li {
+    display: inline-block;
+}
+header nav li a {
+    padding: 0 10px;
+    text-decoration: none;
+}
+header nav li a:hover {
+    text-decoration: underline;
+    background: red;;
+}
+.left{
+    float: left;
+    width: 10%;
+    padding: 10px;
+    height: 300px;
+}
+
+header nav {
+    float: right;
+}
+
+/*-- header ends --*/
+
+
+
+article h3 {
+    font-size: 20px;
+}
+
+article h3 strong {
+    font-size: 34px;
+}
+m
+article p strong {
+    font-weight: normal;
+    font-style: italic;
+}
+
+article.greenColor p strong {
+    font-style: normal;
+}
+/* Footer start */
+footer{
+    margin: 350px 500px 10px 40px;
+}
+/* Footer end */
