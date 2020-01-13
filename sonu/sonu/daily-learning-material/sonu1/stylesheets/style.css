@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: lightcoral;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+
+}
+
+/*-- header starts --*/
+
+header {
+    padding: 20px 10px;
+}
+header nav, header nav li {
+    display: inline-block;
+}
+header nav li a {
+    padding: 0 10px;
+    text-decoration: none;
+}
+header nav li a:hover {
+    text-decoration: underline;
+    background: red;;
+}
+header nav {
+    float: right;
+}
+
+
+/*-- header ends --*/
+
+article p {
+    padding: 20px;
+    margin: 30px;
+    border: 1px solid green;
+}
+
+article h3 {
+    font-size: 20px;
+}
+
+article h3 strong {
+    font-size: 34px;
+}
+
+article p strong {
+    font-weight: normal;
+    font-style: italic;
+}
+
+article.greenColor p strong {
+    font-style: normal;
+}
+aside,section{
+    display: inline-block;
+    vertical-align: top;
+}
+aside{
+    width:25%;
+}
+section{
+    width:74%;
+}
