@@ -1,0 +1,105 @@
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+/* header styling */
+
+header{
+    padding: 20px;
+}
+header nav{
+    float: right;
+}
+header nav ul li {
+    display: inline-block;
+    padding-left: 10px;
+}
+header nav ul li a:hover{
+    text-decoration: underline;
+    background-color: rgb(106, 161, 143);
+    box :2px solid green;
+}
+
+
+/* main styling */
+article h3{
+    color : darkgoldenrod;
+    font-size: 30px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+aside ul li{
+    border-top: 2px solid green;
+    padding-left: 0px;
+    width: 140px;
+    text-align: center;
+    padding-top: 5px;
+    height: 20px;
+    border-right: 2px solid green;
+    border-left: 2px solid green;
+    border-bottom:2px solid green;;
+    list-style-type: None;
+    
+}
+aside ul li a:hover{
+    text-decoration: underline;
+    background-color: lightslategrey;
+    box :2px solid green;
+}
+aside,article{
+    display: inline-block;
+    vertical-align: top;
+}
+article{
+    width: 700px;
+    margin-left: 150px;
+}
+form{
+    align-self: center;
+    width: 200px;
+    text-align: center;
+    padding: 20px;
+    background-color: lightcyan;
+    margin-top: 50px;
+    margin-left: 200px;
+    
+}
+input[type = text]{
+    width : 200px;
+    padding: 12px 12px;
+    margin: 6px 0;
+    box-sizing: border-box;
+    text-decoration-color: lightgray;
+    border: 2px solid red;
+    border-radius: 4px;
+    text-align ; cn
+}
+input[type = date]{
+    width : 200px;
+    padding: 12px 12px;
+    margin: 6px 0;
+    box-sizing: border-box;
+    text-decoration-color: lightgray;
+    border: 2px solid red;
+    border-radius: 4px;
+    text-align ; cn
+}
+article p{
+    padding-top: 20px;
+}
+
+/* footer styling */
+footer{
+    text-align: center;
+}
+footer ul li{
+    display: inline-block;
+    padding-left: 10px;
+}
+footer span{
+    display: inline-right;
+    bottom: 0px;
+}
+
+
