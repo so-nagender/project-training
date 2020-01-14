@@ -1,25 +1,27 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg");
-    
+    background-image: url('../images/98181.png');
+    color:grey; 
+    background-position:center ;
+    background-size: cover; 
+    background-repeat: no-repeat ;
    
     
 }
 
-.container {
-    
-    margin: 0 auto;
 
-}
 
 /*-- header starts --*/
 
 header {
     padding: 20px 10px;
+    
+    
 }
-header nav, header nav li {
+header nav li {
     display: inline-block;
+
 }
 header nav li a {
     padding: 25px 30px;
@@ -31,14 +33,30 @@ header nav li a:hover {
     text-decoration: underline;
     background:#9a0130;
     text-decoration: none;
-    colo
+    
 }
 header nav {
-    float: right;
+    
+    position: fixed;
+    justify-content: right;
 }
+header ul {
+    right: 10px;
+}
+header img {
+    position: fixed;
+}
+header ul{
+    position: fixed;
+    justify-content: center;
+}
+
 
 /*-- header ends --*/
 
+main{
+    padding: 150px 0px 0px 0px;
+}
 article p {
     padding: 20PX;
     margin: 20px;
@@ -109,3 +127,37 @@ span{
   left: 100;
   
 }
+.popup {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url('../images/26058493.jpg   ');
+    background-position:center ;
+    background-size: cover; 
+    background-repeat: no-repeat ;
+    width: 350px;
+    height: 800px;
+    padding: 20px;
+    position: fixed;
+    line-height: 50px;
+    color :white;
+}
+form h2 {
+text-align: center;
+}
+
+input[type=text] {
+    height: 20px;
+    position: relative;
+    border: 2px solid #cdcdcd;
+    border-color: rgba(0, 0, 0, .14);
+    background-color: AliceBlue;
+    font-size: 14px;
+  }
+  
+  .advancedSearchTextbox {
+    width: 526px;
+    margin-right: -4px;
+  } 
