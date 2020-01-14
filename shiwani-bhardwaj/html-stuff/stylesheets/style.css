@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/12/10/13/background-2633962_960_720.jpg");
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+
+}
+
+/*-- header starts --*/
+
+header {
+    padding: 20px 10px;
+}
+header nav, header nav li {
+    display: inline-block;
+}
+header nav li a {
+    padding: 0 10px;
+    text-decoration: none;
+}
+header nav li a:hover {
+    text-decoration: underline;
+    background:yellowgreen;
+}
+header nav {
+    float: right;
+}
+
+/*-- header ends --*/
+
+aside,section{
+    display: inline-block;
+}
+
+article p {
+    padding: 100px;
+    margin: 50px;
+    border:10px solid blueviolet;
+    display: inline-block;
+}
+
+article h3 {
+    font-size: 20px;
+}
+
+article h3 strong {
+    font-size: 34px;
+}
+
+article p strong {
+    font-weight: normal;
+    font-style: italic;
+}
+
+article.greenColor p strong {
+    font-style: normal;
+}
+main aside ol li{
+    font-size: x-large;
+    text-decoration: underline;
+    font-family: cursive;
+ 
+       width: 100%;
+       background-color: indianred;
+       background-co
+}
+header form {
+    background-color:white;
+    font-size:large;
+
+
+}
+aside {
+    text-decoration: none;
+    display: block;
+    width: 200px;
+    padding: 50px 50px;
+}
