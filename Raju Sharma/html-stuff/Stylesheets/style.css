@@ -1,66 +1,157 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
-
 .container {
-    width: 1300px;
+    width: 1024px;
     margin: 0 auto;
-
 }
-
 /*-- header starts --*/
 header {
-    margin : 20px 10px;
+    padding: 4px 3px 1px 5px;
+    background-image: url(../img/banner.jpg);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;   
 }
-header nav{
-    display: inline-block;
-    margin: 20px 10px;
-
-}
-header nav li {
+header nav, header nav li {
     display: inline-block;
 }
 header nav li a {
-    padding: 0 10px;
+    padding:10px;
+    color: burlywood;
     text-decoration: none;
+    list-style: none;
+    height: 100%;
 }
 header nav li a:hover {
-    text-decoration: underline;
-    background: red;;
+    text-decoration: none;
+    background: rgb(165, 137, 164);
 }
-.left{
-    float: left;
-    width: 10%;
-    padding: 10px;
-    height: 300px;
-}
-
 header nav {
     float: right;
+    margin-top: 19px;
 }
-
 /*-- header ends --*/
 
 
+/*--- main start --*/
+.clear {
+    clear: both;
+}
+main {
+    background: #9CADAF;
+}
+aside {
+    width: 20%;
+    float: left;
+    position:sticky;
+    top:58px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;   
+}
+aside ul li {
+    list-style: none;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid wheat;   
+}
+aside li a {
+    padding: 10px;
+    display: inline-block;
+    width: 90%;
+    text-decoration: none;
+}
+aside li a:hover {
+    background:#BCC3DC;
+}
+section {
+    width: 80%;
+    background-image: url(../img/background-2691002_960_720.webp);
+    float: right;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
 
 article h3 {
     font-size: 20px;
 }
-
 article h3 strong {
     font-size: 34px;
 }
-m
 article p strong {
     font-weight: normal;
     font-style: italic;
 }
-
 article.greenColor p strong {
     font-style: normal;
 }
-/* Footer start */
+/* Footer starts */
 footer{
-    margin: 350px 500px 10px 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-top: 2px;
+    background-color : rgb(56, 117, 230);
+    border:2px solid #0c588b ;
 }
-/* Footer end */
+footer ul li{
+    display: inline-block;
+    padding: 0px 20px 2px 11px;
+}
+footer span{
+    float: left;
+    margin-left: 5px;
+    bottom: 0px;
+    padding-bottom: 1px;
+}
+footer ul li a:hover{
+    text-decoration: underline;
+    border :1px solid green;
+}
+/*-- footer ends --*/
+
+
+/* -- Pop Up styling start-- */
+.popup {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: hsl(221, 74%, 60%);
+    width: 350px;
+    height: 340px;
+    padding: 20px;
+    position: fixed;
+}
+input[type=text] {
+    width: 80%;
+    padding: 7px 7px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }  
+  form input[type=submit] {
+    width: 40%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 5px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+  }
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  /*-- pop up end--*/
