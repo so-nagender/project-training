@@ -93,35 +93,25 @@ article{
 }
 form{
     align-self: center;
-    width: 200px;
+    width: 250px;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     background-color: lightcyan;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 200px;
     border:2px solid green ;
     opacity: 90%;
     
 }
-input[type = text]{
+.formstyle{
     width : 200px;
-    padding: 12px 12px;
-    margin: 6px 0;
+    padding: 4px 12px;
+    margin: 3px 0;
     box-sizing: border-box;
     text-decoration-color: lightgray;
     border: 2px solid red;
     border-radius: 4px;
     text-align : center
-}
-input[type = date]{
-    width : 200px;
-    padding: 12px 12px;
-    margin: 6px 0;
-    box-sizing: border-box;
-    text-decoration-color: lightgray;
-    border: 2px solid red;
-    border-radius: 4px;
-    text-align : center;
 }
 article p{
     padding-top: 20px;
@@ -141,6 +131,8 @@ article p{
     right: 0;
     margin: auto 644px;
     height : 300px;
+    margin-top: 100px;
+    overflow: scroll;
 }
 
 
