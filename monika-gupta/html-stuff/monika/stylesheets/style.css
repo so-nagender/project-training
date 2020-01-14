@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+
+}
+
+/*-- header starts --*/
+
+header {
+    padding: 10px 10px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    right: 0;
+    bottom: auto;
+    background: whitesmoke;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+header nav, header nav li {
+    display: inline-block;
+    margin-top: 4px;
+    
+}
+header nav li a {
+    padding: 0 10px;
+    text-decoration:none;
+    
+    
+}
+header nav li a:hover {
+    text-decoration: underline;
+    height: 100%;
+    padding:15px 25px;
+    background: red;
+    
+}
+header nav {
+    float: right;
+    position: sticky;
+    z-index: 1;
+}
+
+/*-- header ends --*/
+
+/*--- main start --*/
+.clear {
+    clear: both;
+}
+main {
+    background: rgba(0, 128, 85, 0.527);
+}
+
+aside {
+    position: sticky;
+    top: 68px;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    width: 20%;
+    background: rgba(47, 255, 151, 0.39);
+    float: left;
+}
+
+aside ul li {
+    list-style: none;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+aside li a {
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+}
+
+aside li a:hover {
+    background: grey;
+    width: 90%;
+}
+
+section {
+    width: 80%;
+    background-image: url(../images/green1.jfif);
+    float: right;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+article p {
+    padding: 15px;
+    
+}
+
+article h3 {
+    font-size: 20px;
+}
+
+article h3 strong {
+    font-size: 50px;
+}
+
+article p strong {
+    font-weight: normal;
+    font-style: italic;
+}
+
+article.greenColor p strong {
+    font-style: normal;
+}
+
+.popup {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: grey;
+    width: 300px;
+    height: 510px;
+    padding: 20px;
+    position: fixed;
+    opacity: 90%;
+    text-align: center;
+    border: 2px solid black;
+}
+
+footer{
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 10px 10px;
+    background: plum;
+}
+
+/*-- footer ends --*/
