@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("https://image.freepik.com/free-vector/white-abstract-background-3d-paper-style_23-2148390819.jpg");
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+
+}
+
+/*-- header starts --*/
+
+header {
+    padding: 20px 10px;
+}
+header nav, header nav li {
+    display: inline-block;
+}
+header nav li a {
+    padding: 0 10px;
+    text-decoration: none;
+}
+header nav li a:hover {
+    text-decoration: underline;
+    background: red;;
+}
+header nav {
+    float: right;
+}
+
+/*-- header ends --*/
+
+aside,section {
+    display: inline-block;
+}
+
+article p {
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    border: 1px solid green;
+}
+
+article h3 {
+    font-size: 20px;
+}
+
+article h3 strong {
+    font-size: 34px;
+}
+
+article p strong {
+    font-weight: normal;
+    font-style: italic;
+}
+
+article.greenColor p strong {
+    font-style: normal;
+}
+
+ul.aside li {
+    line-height: 2.5em;
+    list-style: none;
+}
+aside,section{
+    display:inline-block;
+    vertical-align: top;
+}
+aside{
+    width: 25%;
+}
+section{
+    width: 74%;
+}
+
+
+
