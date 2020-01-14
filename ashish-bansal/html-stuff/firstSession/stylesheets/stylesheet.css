@@ -6,54 +6,90 @@
 /* header styling */
 
 header{
-    padding: 20px;
+    padding: 10px;
+    position: sticky;
+    top : 0px;
+    background-color: lavender;
+    margin-bottom: 5px;
+    z-index: 91;
+    border:2px solid green ;
+}
+header img{
+    opacity: 75%;
 }
 header nav{
     float: right;
 }
 header nav ul li {
     display: inline-block;
+    border: 2px solid green;
+    text-align: center;
+    background-color: white;
+}
+header nav ul li a{
+    width: 100%;
+    text-decoration: none; 
+    padding-right: 10px; 
     padding-left: 10px;
 }
 header nav ul li a:hover{
     text-decoration: underline;
-    background-color: rgb(106, 161, 143);
     box :2px solid green;
+    background: bisque;
 }
 
 
 /* main styling */
+.clear {
+    clear: both;
+}
+input[type = submit]{
+    border:2px solid green ;    
+}
+main{
+    margin-top: 20px;
+}
 article h3{
     color : darkgoldenrod;
     font-size: 30px;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+aside{
+    position: sticky;
+    left: 0;
+    top :70px;
+    vertical-align: top;
+}
 aside ul li{
-    border-top: 2px solid green;
-    padding-left: 0px;
-    width: 140px;
+    border: 2px solid green;
+    width: 200px;
     text-align: center;
-    padding-top: 5px;
-    height: 20px;
-    border-right: 2px solid green;
-    border-left: 2px solid green;
-    border-bottom:2px solid green;;
+    padding: 5px;
     list-style-type: None;
+    background-color: lavender;
     
+}
+aside ul li a {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
 }
 aside ul li a:hover{
     text-decoration: underline;
-    background-color: lightslategrey;
     box :2px solid green;
+    background: bisque;
 }
-aside,article{
+aside,article,section{
     display: inline-block;
     vertical-align: top;
 }
 article{
     width: 700px;
-    margin-left: 150px;
+    margin-left: 80px;
+    border:2px solid green ;
+    padding: 10px;
+    background-color: lavender;
 }
 form{
     align-self: center;
@@ -63,6 +99,8 @@ form{
     background-color: lightcyan;
     margin-top: 50px;
     margin-left: 200px;
+    border:2px solid green ;
+    opacity: 90%;
     
 }
 input[type = text]{
@@ -73,7 +111,7 @@ input[type = text]{
     text-decoration-color: lightgray;
     border: 2px solid red;
     border-radius: 4px;
-    text-align ; cn
+    text-align : center
 }
 input[type = date]{
     width : 200px;
@@ -83,15 +121,37 @@ input[type = date]{
     text-decoration-color: lightgray;
     border: 2px solid red;
     border-radius: 4px;
-    text-align ; cn
+    text-align : center;
 }
 article p{
     padding-top: 20px;
 }
+.button{
+    position: fixed;
+    text-align: right;
+    top : 40;
+    right: 40;
+    margin-left: 630px;
+}
+.popup{
+    position: fixed;
+    top : 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto 644px;
+    height : 300px;
+}
+
 
 /* footer styling */
 footer{
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
+    margin-top: 20px;
+    background-color : lavender;
+    border:2px solid green ;
 }
 footer ul li{
     display: inline-block;
@@ -100,6 +160,12 @@ footer ul li{
 footer span{
     display: inline-right;
     bottom: 0px;
+    padding-bottom: 10px;
+}
+footer ul li a:hover{
+    text-decoration: underline;
+    box :2px solid green;
+    background: bisque;
 }
 
 
