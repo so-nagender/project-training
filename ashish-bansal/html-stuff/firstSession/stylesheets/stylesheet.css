@@ -91,6 +91,26 @@ article{
     padding: 10px;
     background-color: lavender;
 }
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.table h3 {
+    padding: 20px 10px;
+    text-align: center;
+}
 form{
     align-self: center;
     width: 250px;
@@ -101,6 +121,7 @@ form{
     margin-left: 200px;
     border:2px solid green ;
     opacity: 90%;
+    display: none;
     
 }
 .formstyle{
@@ -121,7 +142,10 @@ article p{
     text-align: right;
     top : 40;
     right: 40;
-    margin-left: 630px;
+    margin-left: 580px;
+}
+.button2{
+    border:2px solid green ;
 }
 .popup{
     position: fixed;
