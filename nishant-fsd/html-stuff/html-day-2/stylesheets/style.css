@@ -96,13 +96,15 @@ section {
 .Popup
 {
     
-    display: inline-block;
-    position: fixed;
-    top: 4px;
-    left: 890px;
-    right: 0;
-    bottom: 565px;
-    margin: auto;
+   float: right;
+   width: 40%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 5px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 article input[type=submit] {
     width: 15%;
@@ -138,7 +140,7 @@ article.greenColor p strong {
     font-style: normal;
 }
 
-.popup {
+#popup {
     top: 0;
     left: 0;
     right: 0;
@@ -146,13 +148,22 @@ article.greenColor p strong {
     margin: auto;
     background: lightpink;
     width: 200px;
-    height: 350px;
+    height: 550px;
     padding: 20px;
-    position: fixed;
+    position: fixed; 
+    display: none;
 }
 .cancel
 {
     float: right;
+    width: 40%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 5px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 /*-- footer ends --*/
@@ -166,7 +177,7 @@ input[type=text] {
     box-sizing: border-box;
   }
   
-  form input[type=submit] {
+  form input[type=button] {
     width: 40%;
     background-color: #4CAF50;
     color: white;
@@ -208,3 +219,15 @@ input[type=text] {
         margin-bottom: 10px;
         padding: 5px;
     }
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      

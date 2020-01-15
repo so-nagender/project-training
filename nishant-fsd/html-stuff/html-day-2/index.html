@@ -41,7 +41,8 @@
                 </aside>
                 <section>
                     <article class="redColor">
-                        <input class="Popup" type="submit" value="Click for popup">
+                        <button class="Popup" type="button" onclick="openpopup()"> Popup  </button>
+            
                         <h3>This is our article <strong>First</strong></h3>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
@@ -64,6 +65,20 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
                         </p>
+                    </article>
+                    <article class="table">
+                        <h3>Saved data</h3>
+                        <div id="generateTable">
+                            <table>
+                                <tr><th>firstname</th>
+                                    <th>lastname</th>
+                                    <th>gender</th>
+                                    <th>skill</th>
+                                </tr>
+                            </table>
+
+
+                        </div>
                     </article>
                     <article class="greenColor">
                         <h3>This is our article <strong>First</strong></h3>
@@ -121,23 +136,25 @@
                 </span>
             </footer>
         </div>
-        <div class="popup">
-            <form class="form" action="">
+        <div id="popup">
+            <form id="form" action="">
                 First name:<br>
-                <input type="text" name="firstname" placeholder="Mickey">
+                <input id="firstname" type="text" name="firstname" placeholder="Mickey">
                 <br>
                 Last name:<br>
-                <input type="text" name="lastname" placeholder="Mouse"><br>
-                First name:<br>
-                <input type="text" name="firstname" placeholder="Mickey">
-                <br>
-                Last name:<br>
-                <input type="text" name="lastname" placeholder="Mouse">
+                <input id="lastname" type="text" name="lastname" placeholder="Mouse"><br>
+                Gender:<br>
+                <input id="m" type="radio" name="genderm" value="male">Male
+                <input id="f" type="radio" name="genderf" value="female"> female<br>
                 <br><br>
-                <input type="submit" value="Submit">
-                <input class="cancel" type="submit" value="Cancel">
-                
+                Skill:<br>
+                <input type="checkbox" id="cpp" value="c++"> c++<br>
+                <input type="checkbox" id="java" value="java"> java<br>
+                <input type="checkbox" id="python" value="python"> python<br>
+                <input type="button" value="submit"  onclick="generateTable()">
+                <button class="cancel" type="button" onclick="closepopup()">Cancel</button>
               </form> 
         </div>
+        <script src="javascript/script.js"></script>
     </body>
 </html>
