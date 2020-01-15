@@ -4,6 +4,7 @@
         <title>training</title>
         <link rel="stylesheet" href="stylesheets/cssreset.css">
         <link rel="stylesheet" href="stylesheets/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="container">
@@ -39,7 +40,21 @@
                         <li> <a href="#">four</a></li>
                         <li><a href="#">five</a></li>
                     </ul>
+                    
                 </aside>
+                <button type="button" class="buttonStyle fRight" onclick="openpopup()">Open popup</button>
+                <article class="redColor">
+                    <h3>This is our article <strong>First</strong></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
+                    </p>
+                </article>
+                <article class="greenColor" id = "generateTable">
+                    <h3>This is our article <strong>First</strong></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
+                    </p>
+                </article>
                 <article class="redColor">
                     <h3>This is our article <strong>First</strong></h3>
                     <p>
@@ -76,57 +91,11 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
                     </p>
                 </article>
-                <article class="redColor">
-                    <h3>This is our article <strong>First</strong></h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
-                    </p>
-                </article>
-                <article class="greenColor">
-                    <h3>This is our article <strong>First</strong></h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
-                    </p>
-                </article>
-                <article class="redColor">
-                    <h3>This is our article <strong>First</strong></h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
-                    </p>
-                </article>
-                <article class="greenColor">
-                    <h3>This is our article <strong>First</strong></h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
-                    </p>
-                </article>
-                <article class="redColor">
-                    <h3>This is our article <strong>First</strong></h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
-                    </p>
-                </article>
-                <article class="greenColor">
-                    <h3>This is our article <strong>First</strong></h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
-                    </p>
-                </article>
-                <article class="redColor">
-                    <h3>This is our article <strong>First</strong></h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
-                    </p>
-                </article>
-                <article class="greenColor">
-                    <h3>This is our article <strong>First</strong></h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
-                    </p>
-                </article>
-               <div class="popup"> <form>
+               
+               <div class="popup form" id ="popup"> <form>
 
                 <h2>My Form</h2>
+                <input type ="button" class="buttonStyle fRight round_button" onclick="closepopup()">
                     First name:<br>
                     <input type="text" name="firstname"><br>
                     Last name:<br>
@@ -144,8 +113,8 @@
                       <input type="checkbox" name="skills1" value="skills1"> pyhton<br>
                       <input type="checkbox" name="skills2" value="skills2"> C++<br>
                       <input type="checkbox" name="skills3" value="skills3"> C<br>
-                    <input type ="button" value = "button" >
-                    <input type ="button" value = "button1">
+                    <input type ="button" class="buttonStyle check" onclick=" closepopup();  generateTable()">
+                    
 
                   </form>
                 </div>
@@ -165,5 +134,6 @@
             </footer>
         </div>
     </div>
+    <script src="javascript/script.js"></script>
     </body>
 </html>

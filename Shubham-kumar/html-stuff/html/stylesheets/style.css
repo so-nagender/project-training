@@ -53,6 +53,32 @@ header ul{
 
 
 /*-- header ends --*/
+.buttonStyle{
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 7px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.fRight {
+    float: right;
+}
+.round_button{
+    border-radius: 50%;
+    background-color: black;
+    background-image: url('../images/x.png');
+    background-size: cover;
+
+}
+.check{
+    border-radius: 50%;
+    background-color: black;
+    background-image: url('../images/check.png');
+    background-size: cover ;
+}
 
 main{
     padding: 150px 0px 0px 0px;
@@ -148,10 +174,10 @@ form h2 {
 text-align: center;
 }
 
-input[type=text] {
+input {
     height: 20px;
     position: relative;
-    border: 2px solid #cdcdcd;
+    /* border: 2px solid #cdcdcd; */
     border-color: rgba(0, 0, 0, .14);
     background-color: AliceBlue;
     font-size: 14px;
@@ -161,3 +187,30 @@ input[type=text] {
     width: 526px;
     margin-right: -4px;
   } 
+
+  .greenColor{
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff
+
+  }
+  tr:nth-child(even) {
+    background-color: hsla(0, 0%, 87%, 0.144);
+}
+
+.form input {
+    border-bottom: 1px solid yellow;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    outline: none;
+}
+
+textarea {
+    border-color: rgba(0, 0, 0, .14);
+    background-color: AliceBlue;
+    font-size: 14px;
+    background: transparent;
+    color: yellow;
+    border-color: yellow;
+}
