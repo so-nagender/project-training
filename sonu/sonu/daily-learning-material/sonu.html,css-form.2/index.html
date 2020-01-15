@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>training</title>
+        <link rel="stylesheet" href="stylesheets/cssreset.css">
+        <link rel="stylesheet" href="stylesheets/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <a href="#">
+                    <img src="images/logo.jpg.png" width=50 height="37" alt="logo">
+                </a>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                           <a href="#">About us</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            Projects</a>
+                        </li>
+                        <li>
+                           <a href="#">Contact us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <aside>
+                    <ul>
+                        <li><a href="#"> About Company</a></li>
+                        <li><a href="#"> About Product</a></li>
+                        <li><a href="#"> Work Enviroment</a></li>
+                        <li><a href="#"> Company Location</a></li>
+                    </ul>
+                </aside>
+                <section>
+                        <article class="redColor">
+                            <h3> <strong>Oncehub</strong>
+                                <button type="button" class="buttonStyle fRight" onclick="openpopup()">Open popup</button>
+                            </h3> 
+                            <p>
+                                At OnceHub we’re all about powering organizations with smart scheduling solutions that shorten time-to-engagement in all phases of the customer lifecycle
+                            </p>
+                        </article>
+                        <article class="greenColor">
+                            <h3> <strong>Founders of Oncehub</strong></h3>
+                            <p>
+                                <img src="../sonu.html,css-form/images/rami goraly.PNG" width=150 height=150></br>                      
+                                Rami Goraly:  Chief Executive Officer </br></br>
+                                Rami has more than 25 years experience in the high-tech world. Prior to OnceHub, he founded two companies and also served as the CEO of multiple VC firms and private equity-backed software companies. When he’s not strategizing about the future of OnceHub, he enjoys hiking in the great outdoors.
+                            </br></br></br>
+                            <img src="../sonu.html,css-form/images/Gilad Goraly.PNG" width=150 height=150 ></br>
+                                Gilad Goraly: Chief Technology Officer</br></br>
+                                Gilad has a proven track record at international software companies. Prior to OnceHub, Gilad led one of the R&D offices at Accept Software. Gilad is a distinguished master in applied mathematics, as well as a mountain biker, world traveller, and athlete.
+                            </p>
+                        </article>
+                        <article class="table">
+                            <h3>Saved data</h3>
+                            <div id="generateTable"></div>
+                        </article>
+                </section>
+                <div class="clear"><div>   
+            </main>
+            <footer>
+                <span>
+                        &copy; Sonusah.com 
+                </span>
+                <ul>
+                    <li a href="#">@facebook @Linkedin @instagram</a></li>
+                </ul>
+            </footer>
+        </div>
+        <div class="popup" id="popup">
+            <form action="/action_page.php">
+                <div>
+                    <label for="Country">Select Country</label></br>
+                    <input id="In" type="checkbox" name="country" value="country"> India<br>
+                    <input id="Am" type="checkbox" name="country" value="country"> America<br>
+                    <input id="Ru" type="checkbox" name="country" value="country"> Russia<br>
+                    <input id="Ba" type="checkbox" name="country" value="country"> Bangkok<br></br>
+                </div>
+                <div>
+                    <label for="fname">F_Name</label>
+                    <input id="fname" type="text" name="fname" placeholder="enter your fname">
+                </div>
+                <div>
+                    <label for="lname">L_Name</label>
+                    <input id="lname" type="text" name="lname" placeholder="enter your lname">
+                </div>
+                <div>
+                    <p>Select Gender:</p>
+                    <input id="m" type="radio" name="gender" value="male"> Male<br>
+                    <input id="f" type="radio" name="gender" value="female"> Female<br>
+                    <input id="o" type="radio" name="gender" value="other"> Other<br> </br>
+                </div>
+                <!-- <div>
+                    <label for="skill">Select Skill</label></br>
+                    <input type="checkbox" name="skill" value="Knowledge"> java
+                    <input type="checkbox" name="skill" value="Knowledge"> css
+                    <input type="checkbox" name="skill" value="Knowledge"> html
+                    <input type="checkbox" name="skill" value="Knowledge"> Java script
+                </div>
+                <div>
+                    <label for="Address">Enter Address</label>
+                    <textarea class="formStyle"  rows="4" cols="21" name="comment" form="usrform"> Enter Address Here...</textarea></br></br>
+                </div>
+                <div>
+                    <label for="fname">Phone Number</label>
+                    <input class="formStyle"type="tel" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required></br></br>
+                </div>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input class="email" type="email" name="emailaddress" placeholder="abc@gmail.com"></br></br>
+                </div>   
+                <div> -->
+                    <input type="button" value="Submit" class="buttonStyle" onclick="generateTable()">
+                    <button type="button" onclick="closepopup()" class="buttonStyle">Close</button>
+                </div>
+           </form>
+        </div>
+        <script src="script.js">
+        </script>
+    </body>
+</html>

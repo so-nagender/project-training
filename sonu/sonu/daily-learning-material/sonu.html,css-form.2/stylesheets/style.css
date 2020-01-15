@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: lightcoral;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+main {
+    background:blanchedalmond;
+}
+body{
+    background-image: url(../images/onchub.jpg.jpg);
+}
+
+/*-- header starts --*/
+header{
+    padding:7px 20px 4px 4px;
+    position: sticky;
+    width:100%;
+    left:0;
+    box-sizing: border-box;
+    background: aliceblue;
+    height: 50px;
+
+
+}
+header a{
+    position: center;
+    padding: 0%;
+    margin: 0%;
+}
+}
+
+header {
+    padding: 10px 3px 5px 5px;
+}
+header nav, header nav li {
+    display: inline-block;
+}
+header nav li a {
+    padding: 0 10px;
+    text-decoration: none;
+}
+header nav li a:hover {
+    text-decoration: underline;
+    background: red;
+}
+header nav {
+    float: right;
+}
+header nav{
+    margin-top: 6px;
+}
+
+
+/*-- header ends --*/
+
+article p {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid green;
+}
+
+article h3 {
+    font-size: 20px;
+}
+
+article h3 strong {
+    font-size: 34px;
+}
+
+article p strong {
+    font-weight: normal;
+    font-style: italic;
+}
+
+article.greenColor p strong {
+    font-style: normal;
+}
+/* aside,section{
+    display: inline-block;
+    vertical-align: top;
+} */
+
+/* aside{
+    width:25%;
+} */
+
+/* section{
+    width:74%;
+} */
+
+aside{
+    float:left;
+    width:20%;
+    background:blanchedalmond;
+}
+aside ul li a:hover {
+    background: yellowgreen;
+    width: 100%;
+    list-style: none;
+}
+section{
+    float:right;
+    width:80%;
+    background: aqua
+}
+
+.clear{
+    clear:both;
+}
+aside ul li{
+    list-style: none;
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    padding:5%;
+    box-sizing: border-box;
+    border: 1px solid red;
+
+}
+
+/* footer work start */
+/* footer span{
+    padding-top: 30px;
+    margin-top: 10px ;
+  
+} */
+footer span{
+    float:left;
+}
+footer ul{
+    float: right;
+}
+footer ul li{
+    list-style: none;
+}
+
+.redcolor{
+    text-align: center;
+}
+/* popup form work */
+.popup{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: lightgreen;
+    width: 180px;
+    height: 200px;
+    padding: 20px;
+    position: absolute;
+    overflow: scroll;
+    border: 1px solid #ccc;
+    display: none;
+    
+}
+.buttonStyle{
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 7px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.fRight{
+    float: right;
+}
+
+/* table work start */
+.table {
+    background: #fff;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.table h3 {
+    padding: 20px 10px;
+    text-align: center;
+}
+/* table work end */
