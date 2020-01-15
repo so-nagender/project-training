@@ -26,9 +26,7 @@
                         <li>
                            <a href="#">Contact Us</a>
                         </li>
-                        <li>
-                            <a href="#">Pop-up</a>
-                         </li>
+                        
                     </ul>
                 </nav>
             </header>
@@ -48,8 +46,10 @@
                         <center>
                             
                             <br>
-                            <strong>OnceHub</strong>
+                            <strong>ONCEHUB</strong>
+                            <button type="button" class="buttonStyle fRight" onclick="openpopup()">Open popup</button>
                         </center>
+                        
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
@@ -62,6 +62,13 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
                         </p>
+                        <article class="table">
+                            <h3>Saved data</h3>
+                            <table id = "generateTable">
+                            
+                                
+                            </table>
+                        </article>
                     
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
@@ -105,6 +112,7 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
                         </p>
                     </article>
+                    
                 </section>
                 <div class="clear"></div>
             </main>
@@ -123,62 +131,70 @@
                 
             </footer>
         </div>
-        <div class="popup">
-            <form action="/action_page.php">
-                <center>Register Yourself!</center> <br>
-                First name:<br>
-                <input type="text" name="firstname">
+        <div class="popup" id="popup">
+            <form action="#">
+                <center>Register Yourself! </center>
                 <br>
-                Last name:<br>
-                <input type="text" name="lastname" place >
-                <br>
-                <br>
-                Gender:<br>
-                <input type="radio" name="gender" value="male"  > Male
-                <input type="radio" name="gender" value="female"> Female
-                <input type="radio" name="gender" value="other"> Other
-                <br>
-                <br>
+                <div>
+                    First name:<br>
+                    <input type="text" id="firstname">
+                </div>
+                <div>
+                    Last name:<br>
+                    <input type="text" id="lastname"  >
+                </div>
+                <div>
+                    Gender:<br>
+                    <input type="radio" class = "gender" name="gender" value="male" checked > Male
+                    <input type="radio" class = "gender" name="gender" value="female"> Female
+                    <input type="radio" class = "gender" name="gender" value="other"> Other
+                </div>
+                <div>
             
-                Contact No.:<br>
-                <input type="text" name="contactno">
-                <br>
+                    Contact No.:<br>
+                    <input type="text" id="contactno">
+                </div>
+                <div>
             
-                E-mail:<br>
-                <input type="text" name="email">
-                <br>
+                    E-mail:<br>
+                    <input type="text" id="email">
+                </div>
+                <div>
             
-                Address:<br>
-                <textarea rows="4" cols="30">
-                </textarea>
-                <br>
-                Country:<br>
-                <select>
-                    <option value="India">India</option>
-                    <option value="China">China</option>
-                    <option value="Japan">Japan</option>
-                    <option value="iran">Iran</option>
-                  </select>
-                <br>
+                    Address:<br>
+                    <textarea rows="4" cols="30" id="textarea">
+                    </textarea>
+                </div>
+                <div>
+                    Country:<br>
+                    <select id = "country">
+                        <option value="India" >India</option>
+                        <option value="China" >China</option>
+                        <option value="Japan" >Japan</option>
+                        <option value="iran" >Iran</option>
+                    </select>
+                </div>
+                <div>
                 
-                Skills:<br>
-                <input type="checkbox" name="skill1" value="c"> C
-                <input type="checkbox" name="skill2" value="c++"> C++
-                <input type="checkbox" name="skill3" value="database"> Database<br>
-                <input type="checkbox" name="skill3" value="Javascript"> Javascript
-                <input type="checkbox" name="skill3" value="Angular"> Angular
-                <br>
-                <br>
+                    Skills:<br>
+                    <input type="checkbox" class="skill" value="c"> C
+                    <input type="checkbox" class="skill" value="c++"> C++
+                    <input type="checkbox" class="skill" value="database"> Database<br>
+                    <input type="checkbox" class="skill" value="Javascript"> Javascript
+                    <input type="checkbox" class="skill" value="Angular"> Angular
+                </div>
+                <div>
             
-                Password:<br>
-                <input type="text" name="password">
-                <br>
-                <br>
+                    Password:<br>
+                    <input type="text" text="password">
+                </div>
 
-                <input type="submit" value="Submit">
-                <input type="submit" value="Close">
+                <input type="button" value="Submit" class="buttonStyle" onclick="generateTable()">
+                <button type="button" onclick="closepopup()" class="buttonStyle">Close</button>
                 
               </form> 
         </div>
+        <script src="javascript/script.js"> 
+        </script>
     </body>
 </html>

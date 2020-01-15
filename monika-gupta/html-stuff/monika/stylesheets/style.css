@@ -18,26 +18,26 @@ header {
     z-index: 1;
     right: 0;
     bottom: auto;
-    background: whitesmoke;
+    background-image: url(../images/green3.jpg);
     box-sizing: border-box;
     border: 1px solid black;
 }
 header nav, header nav li {
     display: inline-block;
-    margin-top: 4px;
-    
+    margin-top: 8px;  
 }
 header nav li a {
     padding: 0 10px;
     text-decoration:none;
+    color: crimson;
     
     
 }
 header nav li a:hover {
     text-decoration: underline;
     height: 100%;
-    padding:15px 25px;
-    background: red;
+    padding:25px 35px;
+    background: whitesmoke;
     
 }
 header nav {
@@ -88,7 +88,7 @@ aside li a:hover {
 
 section {
     width: 80%;
-    background-image: url(../images/green1.jfif);
+    background-image: url(../images/green2.jpg);
     float: right;
     padding: 10px;
     box-sizing: border-box;
@@ -102,10 +102,28 @@ article p {
 
 article h3 {
     font-size: 20px;
+    background: rgb(15, 223, 126);
+    box-sizing: border-box;
+    border: 2px solid black;
 }
 
 article h3 strong {
     font-size: 50px;
+}
+
+.buttonStyle{
+    background: #fff;
+    border: 1px solid black;
+    padding: 6px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+button[type="submit"] {
+    background:red;
+}
+.fRight {
+    float: right;
 }
 
 article p strong {
@@ -125,12 +143,55 @@ article.greenColor p strong {
     margin: auto;
     background: grey;
     width: 300px;
-    height: 510px;
+    height: 400px;
     padding: 20px;
     position: fixed;
     opacity: 90%;
     text-align: center;
     border: 2px solid black;
+    display: none;
+    overflow: scroll;
+}
+.popup form > div {
+    margin-bottom: 5px;
+}
+.popup input[type="text"] {
+    padding: 5px 2px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    border: 2px solid red;
+}
+.popup textarea {
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    border: 2px solid red;
+}
+
+.table {
+    background: rgb(10, 179, 10);
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #16f0c0;
+}
+
+.table h3 {
+    padding: 20px 10px;
+    text-align: center;
 }
 
 footer{
