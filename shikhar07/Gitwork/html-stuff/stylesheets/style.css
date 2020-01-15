@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+    background-color: lightblue;
+
+}
+
+/*-- header starts --*/
+
+header {
+    /* padding: 20px 10px; */
+    position: sticky;
+    background: rgb(184, 230, 173);
+    top: 0;
+    left: 0;
+    right: 0px
+}
+header nav, header nav li {
+    display: inline-block;
+}
+header nav li a {
+    padding: 50px 10px;
+    text-decoration: none;
+}
+header nav li a:hover {
+    text-decoration: underline;
+    background: yellowgreen;
+    
+}
+header nav {
+    float: right;
+}
+nav{
+    padding: 40px 40px;
+    height: 100%;
+}
+header nav li a
+{
+    /* line-height: 10px; */
+}
+
+/*-- header ends --*/
+
+/*--- main start --*/
+.clear {
+    clear: both;
+}
+main {
+    /* background: black; */
+}
+
+aside {
+     /* width: 21 */
+    /* background: red; */
+    float: left;
+    position: sticky;
+    background: rgb(230, 173, 190);
+    top: 100px;
+    width: 20%;
+    
+}
+
+
+aside ul li {
+    list-style: none;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+aside li a {
+    padding: 10px;
+
+    width: 90%;
+    text-decoration: none;
+    float: left;
+}
+
+aside li a:hover {
+    background: yellowgreen;
+    text-decoration: underline;
+}
+
+section {
+    width: 80%;
+    background: lightsalmon;
+    float: right;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+article p {
+    padding: 15px;
+    border: 1px solid green;
+}
+.submit {
+    position: fixed;
+    right: 42px;
+    bottom: 510px;
+}
+
+article h3 {
+    font-size: 20px;
+}
+
+article h3 strong {
+    font-size: 34px;
+}
+
+article p strong {
+    font-weight: bolder;
+    font-style: oblique;
+}
+
+article.greenColor p strong {
+    font-style: normal;
+}
+footer span, footer span li {
+    display: inline-block;
+}
+footer ul{
+    float: right;
+}
+
+.popup {
+    top: -74px;
+    left: 0;
+    right: -144px;
+    bottom: -202px;
+    margin: auto;
+    background: lightblue;
+    width: 190px;
+    height: 478px;
+    padding: 20px;
+    position: fixed;
+}
+footer li{
+    display: inline-block;
+}
+footer{
+    background: chartreuse;
+}
+h2{
+    padding: 9px;
+}
+span{
+    padding: 9px;
+}
+/*-- footer ends --*/
