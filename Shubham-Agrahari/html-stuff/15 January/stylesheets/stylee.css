@@ -14,25 +14,20 @@ header {
     padding: 20px 10px;
     position: sticky;
     top: 0;
-    background: white;
-    z-index: 3;
+    background: #fff;
+    z-index: 1;
 }
-header nav, header nav li,header nav aside {
+header nav, header nav li {
     display: inline-block;
 }
 header nav li a {
-    padding: 15px 10px;
+    padding: 0 10px;
     text-decoration: none;
-    background-color: indianred;
 }
 header nav li a:hover {
     text-decoration: underline;
-    background: red;
-    background-color: grey;
-    background-size: 100px;
+    background: red;;
 }
-
-
 header nav {
     float: right;
 }
@@ -44,7 +39,7 @@ header nav {
     clear: both;
 }
 main {
-    background: lightgreen;
+    background: black;
 }
 
 aside {
@@ -55,7 +50,6 @@ aside {
 
 aside ul li {
     list-style: none;
-    
 }
 
 aside li a {
@@ -67,24 +61,14 @@ aside li a {
 
 aside li a:hover {
     background: yellowgreen;
-    text-decoration: underline;
-    background-size: 100px;
-    background-color: grey;
 }
 
 section {
     width: 80%;
-    background: lightseagreen;
+    background: #ddd;
     float: right;
     padding: 10px;
     box-sizing: border-box;
-}
-
-.redColor h3{
-    text-align: left;
-}
-.redColor form{
-    text-align: right;
 }
 
 article p {
@@ -107,24 +91,9 @@ article h3 strong {
     border-radius: 20px;
     cursor: pointer;
 }
-.B1{
-    background-color: violet;
-}
-.B2{
-    background-color: tomato;
-}
 
-.B1{
-    float: left;
-}
-
-.B2{
-    float: right;
-}
-
-input[type="Submit"] {
+input[type="submit"] {
     background: green;
-    
 }
 
 .fRight {
@@ -133,7 +102,7 @@ input[type="Submit"] {
 
 article p strong {
     font-weight: normal;
-    font-style: bold;
+    font-style: italic;
 }
 
 article.greenColor p strong {
@@ -141,46 +110,22 @@ article.greenColor p strong {
 }
 
 .popup {
-    vertical-align: center;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
-    background: lightblue;
+    background: green;
     width: 200px;
-    height: 200px;
-    padding: 30px;
-    position: fixed;
-    overflow-y: scroll;
+    height: 320px;
+    padding: 20px;
+    position: absolute;
     display: none;
-    
 }
-
-footer span{
-    float:left;
-}
-footer ul{
-    float:right;
-    list-style: none;
-}
-
-
-/*-- footer ends --*/
-
-
-
 .popup form > div {
     margin-bottom: 10px;
 }
 
-.textArea{
-    resize: vertical;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    text-align: left;
-    height: 70px;
-}
 .popup input[type="text"] {
     padding: 10px 5px;
     border-radius: 5px;
@@ -189,30 +134,35 @@ footer ul{
 }
 
 .table {
-    background:skyblue;
+    background: #fff;
 }
 
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-    border: darkblue;
 }
 
 td, th {
-    border: 2px solid black;
+    border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
 }
 
 tr:nth-child(even) {
-    background-color:lightgreen;
+    background-color: #dddddd;
 }
-tr:nth-child(odd){
-    background-color: slateblue;
-}
+
 .table h3 {
     padding: 20px 10px;
     text-align: center;
 }
+/* .popup form div:nth-child(3){
+    background: yellowgreen;
+}
 
+.popup div:first-child {
+    background: red;
+} */
+
+/*-- footer ends --*/
