@@ -79,6 +79,8 @@ section{
     box-sizing: border-box;
     background-image: url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&dpr=1&auto=format&fit=crop&w=416&h=312&q=60");
     float: right;
+    text-shadow: blue;
+    background-size: cover;
    
 }
 
@@ -103,13 +105,6 @@ aside li a {
     width:auto;
     }
 
-article form{
-    padding: 100px;
-    margin: 50px;
-    border:10px solid blueviolet;
-    
-    width: 50%;
-}
 form{
     font-size: x-large;
     font-weight: 500;
@@ -120,9 +115,6 @@ article h3 {
     font-size: 20px;
 }
 
-article h3 strong {
-    font-size: 34px;
-}
 
 article p strong {
     font-weight: normal;
@@ -151,23 +143,44 @@ footer span li{
     width: 400px;
     height:400px;
     padding: 100px 100px;
-    box-sizing: border-box;
-    position: absolute;
-   background-image: url("https://i.pinimg.com/236x/83/f9/37/83f937b69f30bb886ab8a03390da6771.jpg");
+    position:fixed;
+   background-image: url("https://backgroundcheckall.com/wp-content/uploads/2017/12/login-form-background-images.gif");
    background-size: cover;
    font-family: cursive;
    text-align: center;
+   overflow: scroll;
+   overflow-y: scroll;
+   display: none;
+   
 
 }
 input[type=text]{
     width: 100%;
-    padding: 20px 20px;
+    padding: 30px 30px;
     margin: 8px 0;
     display: inline-block;
     border: 3px solid black;
     box-sizing: border-box;
+    border-radius: 10px;
+    
+   
+    
+
 }
-form input[type=submit]{
+div form input [type=radio]{
+    width: 100%;
+    padding: 40px;
+    margin: 8px 0;
+    border: 3px solid black;
+    box-sizing: border-box;
+    font-size: x-large;
+    font-family: cursive;
+    border-radius: 10px;
+display: inline-block;
+
+}
+
+div form input[type=button]{
     width: 100%;
     padding: 30x;
     margin: 8px 0;
@@ -176,12 +189,33 @@ form input[type=submit]{
     box-sizing: border-box;
     font-size: x-large;
     font-family: cursive;
+    border-radius: 10px;
+}
+div form button[type=button]{
+    width: 100%;
+    padding: 30x;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid black;
+    box-sizing: border-box;
+    font-size: x-large;
+    font-family: cursive;
+    border-radius: 10px;
 }
 
-input[type=submit]:hover{
+
+input[type=button]:hover
+{
     background-color: yellowgreen;
     text-decoration: underline;
+    cursor: pointer;
 }
+ button[type=button]:hover
+ {
+     background-color: yellowgreen;
+     text-decoration: underline;
+     cursor: pointer;
+ }
 .clear {
     clear: both;
 }
@@ -200,27 +234,70 @@ section article h3{
     font-size:xx-large;
     font-weight: 500;
     font-family: cursive;
+    text-align: center;
+    padding: 50px;
 }
-.sty{
-    
-   
-      
-        padding: 10x;
-        margin: 5px 0;
-    
-      
-        font-size: x-large;
-        font-family: cursive;
-        display:inline;
 
-    
-    }
-    
 .pop{
     float: right;
 }
-h3,.pop{
+.pop{
     display: inline-block;
     font-size: x-large;
         font-family: cursive;
+        border: 3px solid black;
+        border-radius: 10px;
+}
+section article h4{
+  
+    font-size:xx-large;
+    font-weight: 500;
+    font-family: cursive;
+    text-align: center;
+    padding: 100px;
+    text-decoration: underline;
+}
+
+td,th{
+    border: 8px solid black;
+    text-align: center;
+    padding: 15px;
+    border-radius:50px;
+}
+
+tr:nth-child(even){
+    background-color: palevioletred;
+}
+.buttonstyle{
+    background: #fff;
+    border: 10px solid black;
+    padding: 7px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+.fRight{
+    float: right;
+    font-size:xx-large;
+    font-weight: 500;
+    border: 10px solid black;
+    padding: 7px 15px;
+    border-radius: 20px;
+
+}
+table {
+    font-family:cursive;
+    border-collapse: collapse;
+    width: 100%;
+    border: 10px red;
+    overflow: hidden;
+}
+section h2{
+  
+    font-size:xx-large;
+    font-weight: 500;
+    font-family: cursive;
+    text-align: center;
+    padding: 100px;
 }

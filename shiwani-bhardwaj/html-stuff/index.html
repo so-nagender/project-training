@@ -47,37 +47,35 @@
                     </ul>
                 </aside>
                 <section>
+                    
+                    <h2>SAVED DATA</h2>
+                    
+                      <div id="generateTable" >
+                        
+                      </div>
+     
+        
                     <article class="redColor">
                         <div class="sty">
                         <h3>TOURISM</h3>
-                        <input class="pop" type="submit" value="popup">
+                        <button type="button" class="buttonStyle fRight" onclick="openpopup()">Open popup</button>
                         </div>
                         <p>
                             Tourism in India is important for the country's economy and is growing rapidly. The World Travel and Tourism Council calculated that tourism generated ₹16.91 lakh crore (US$240 billion) or 9.2% of India's GDP in 2018 and supported 42.673 million jobs, 8.1% of its total employment.[2] The sector is predicted to grow at an annual rate of 6.9% to ₹32.05 lakh crore (US$450 billion) by 2028 (9.9% of GDP).[3] In October 2015, India's medical tourism sector was estimated to be worth US$3 billion, and it is projected to grow to US$7–8 billion by 2020.[4] In 2014, 184,298 foreign patients traveled to India to seek medical treatment.[5] Hyderabad International airport is the only airport in India to be ranked among the top ten airports in the world.[6]
                         </p>
                     </article>
                     <article class="greenColor">
-                        <h3>LOGIN</h3>
-                        <form action="/action_page.php">
-                         
-                            First name:<br>
-                            <input type="text" name="firstname" value="Mickey">
-                            <br>
-                            Last name:<br>
-                            <input type="text" name="lastname" value="Mouse">
-                            <br>
-                            <input type="radio" name="gender" value="male" checked> Male<br>
-                              <input type="radio" name="gender" value="female"> Female<br>
-                               <input type="radio" name="gender" value="other"> Other<br>
-                               <input type="checkbox" name="vehicle1" value="Bike"> not a robot<br>
-                        
-                 <input type="submit" value="Submit">
-                           
-                          </form> 
+                        <h4>MORE INFO ABOUT DEHRADUN TOURISM</h4>
+                        <p>
+                            Dehradun is the capital of the Indian state of Uttarakhand, near the Himalayan foothills. At its core is the 6-sided Ghanta Ghar clock tower. To the southwest is Paltan Bazaar, a busy shopping area. Just east is the Sikh temple Gurdwara Nanaksar, topped with ornate white and golden domes. In Clement Town to the city’s southwest, Mindrolling Monastery is a Tibetan Buddhist center with shrine rooms in its Great Stupa.
+                        </p>
                         
                     </article>
+                   
+                    
                 </section>
-                <div class="clear"></div>
+               
+            <div class="clear"></div>
             </main>
             <footer>
                 <span>
@@ -90,15 +88,25 @@
                 </span>
             </footer>
         </div>
-        <div class="popup">
+        <div class="popup" id="popup">
             <form action="/action_page.php">
-                First name:<br>
-                <input type="text" name="firstname" value="Mickey"><br>
-                Last name:<br>
-                <input type="text" name="lastname" value="Mouse"><br><br>
-                <input type="submit" value="Submit">
+               <div> First name:<br>
+                <input type="text" name="firstname" value=""  placeholder="firstname"></div>
+                <div>Last name:<br>
+                <input type="text" name="lastname" value=""placeholder="lastname"></div>
+                <input type="radio" name="gender" value="male" checked> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="other"> Other<br>
+                <input type="checkbox" name="dicount" value="coupon"> coupon
+               <input type="checkbox" name="dicount2" value="bank offer"> bank offer <br>
+               <div> address:<br>
+                <input type="text" name="Adress" value=""placeholder="address"></div>
+                <div>
+                <input type="button" value="Submit" class="buttonStyle " onclick="generateTable()">
+                <button type="button" onclick="closepopup()" class="buttonStyle">close</button>
               </form>
-              
-        </div>
+              </div>
+              <script src="javascript/scripts.js">
+              </script>
     </body>
 </html>
