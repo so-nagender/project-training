@@ -72,22 +72,76 @@ aside li a:hover {
 }
 section {
     width: 80%;
-    background-image: url(../img/background-2691002_960_720.webp);
+    background-image: url(../img/images.jfif);
     float: right;
     padding: 10px;
+    
     box-sizing: border-box;
     border: 1px solid black;
 }
 
 article h3 {
     font-size: 20px;
+    background: rgb(77, 158, 235);
+    margin:8px 0px 8px 0px;
+    box-sizing: border-box;
+    border: 1px solid #5656cc;
 }
-article h3 strong {
-    font-size: 34px;
+article h2 {
+    font-size: 25px;
+    margin: 5px;
+    text-align: center;
+}
+
+/*   Table starts---*/
+
+.table {
+    background: #fff;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.table h3 {
+    padding: 20px 10px;
+    text-align: center;
+}
+
+/* --table end-- */
+
+.buttonStyle{
+    background: #fff;
+    border: 2px solid rgb(45, 152, 240);
+    padding: 7px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+input[type="submit"] {
+    background: green;
+}
+.fRight {
+    float: right;
 }
 article p strong {
     font-weight: normal;
     font-style: italic;
+}
+article p{
+    word-spacing: 2px;
 }
 article.greenColor p strong {
     font-style: normal;
@@ -119,39 +173,27 @@ footer ul li a:hover{
 
 
 /* -- Pop Up styling start-- */
+
 .popup {
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
-    background: hsl(221, 74%, 60%);
-    width: 350px;
-    height: 340px;
+    background: #6593ce;
+    width: 300px;
+    height: 500px;
     padding: 20px;
     position: fixed;
+    display: none;
 }
-input[type=text] {
-    width: 80%;
-    padding: 7px 7px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }  
-  form input[type=submit] {
-    width: 40%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 5px 5px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 9px;
-    cursor: pointer;
-  }
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
+.popup form > div {
+    margin-bottom: 10px;
+}
 
-  /*-- pop up end--*/
+.popup input[type="text"] {
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
