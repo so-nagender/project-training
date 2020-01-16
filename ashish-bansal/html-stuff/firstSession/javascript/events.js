@@ -10,39 +10,41 @@ form.addEventListener('submit', createTable);
 function createTable(event){
     event.preventDefault();
     console.log('evetn>>>>>>>>>>>>>',event);
-    console.log("input events",event.target.elements);
+    var n = event.target.elements.length;
 
-    // var table = document.createElement('table');
+    var table = document.createElement('table');
     // var text = "";
 
     // var x = document.getElementsByClassName("formstyle");
+    row = table.insertRow(-1);
+    var text = "";
     
-    // row = table.insertRow(-1);
-    // for(let j = 0;j<x.length;j++){
-    //     if(j == 2 ||j==3 ||j ==4){
-    //         if(x[j].checked){
-    //             var cell = row.insertCell();
-    //             console.log(x[j].value);
-    //             cell.innerHTML = x[j].value;    
-    //         }
-    //     }
-    //     else if(j == 12 ||j==13 ||j ==10 || j ==11){
-    //         if(x[j].checked){
-    //              text = text + ", " + x[j].value;
-    //              console.log(x[j].value)
-    //         } 
-    //     }
-    //     else{
-    //         var cell = row.insertCell();
-    //         console.log(x[j].value);
-    //         cell.innerHTML = x[j].value;
-    //     }
-    // }
-    // console.log(text);
-    // var cell = row.insertCell();
-    // cell.innerHTML = text; 
-    // var dvTable = document.getElementById("generateTable");
-    // dvTable.appendChild(row);
+    for(let i = 0;i<n-2;i++){
+        if(i == 2 ||i==3 ||i ==4){
+            if(event.target.elements[i].checked){
+                var cell = row.insertCell();
+                console.log(event.target.elements[i].value);
+                cell.innerHTML = event.target.elements[i].value;    
+            }
+        }
+        else if(i == 12 ||i==13 ||i ==10 || i ==11){
+            if(event.target.elements[i].checked){
+                 text = text + ", " + event.target.elements[i].value;
+                 console.log(event.target.elements[i].value)
+            } 
+        }
+        else{
+            var cell = row.insertCell();
+            console.log(event.target.elements[i].value);
+            cell.innerHTML = event.target.elements[i].value;
+        }
+    }
+    console.log(text);
+    var cell = row.insertCell();
+    cell.innerHTML = text; 
+    var dvTable = document.getElementById("generateTable");
+    dvTable.appendChild(row);
+    document.getElementById('generateTable').style.fontSize = '10px';
 }
 
 
