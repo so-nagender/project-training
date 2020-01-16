@@ -1,0 +1,10 @@
+.containerNew{
+    background-image: url(../images/banner.png);
+}
+/* nav bar styling */
+
+#logo{
+    width : 100px;
+    height:20px;
+
+}

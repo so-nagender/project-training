@@ -13,9 +13,7 @@ function createTable(event){
     var n = event.target.elements.length;
 
     var table = document.createElement('table');
-    // var text = "";
 
-    // var x = document.getElementsByClassName("formstyle");
     row = table.insertRow(-1);
     var text = "";
     
@@ -39,7 +37,7 @@ function createTable(event){
             cell.innerHTML = event.target.elements[i].value;
         }
     }
-    console.log(text);
+    // console.log(text);
     var cell = row.insertCell();
     cell.innerHTML = text; 
     var dvTable = document.getElementById("generateTable");
