@@ -92,31 +92,29 @@
                     </p>
                 </article>
                
-               <div class="popup form" id ="popup"> <form>
-
-                <h2>My Form</h2>
-                <input type ="button" class="buttonStyle fRight round_button" onclick="closepopup()">
+               <div class="popup form" id ="popup"> 
+                <form id="userDetails">
+                    <h2>My Form</h2>
+                    <input type ="button" class="buttonStyle fRight round_button" onclick="closepopup()">
                     First name:<br>
-                    <input type="text" name="firstname"><br>
+                    <input type="text" name="firstname" id="firstname"><br>
                     Last name:<br>
-                    <input type="text" name="lastname"><br>
-                    E-mail: <input type="email" name="emailaddress"><br>
-                    password:<input type="password" name="password"><br>
-                    Address:<br> <textarea rows="6" cols="40" name="comment" form="usrform">Enter text here...</textarea><br>
+                    <input type="text" name="lastname" id="lastname"><br>
+                    E-mail: <input type="email" name="emailaddress" id ="email"><br>
+                    password:<input type="password" name="password" id ="password"><br>
+                    Address:<br> <textarea rows="6" cols="40" name="comment" id="textarea">Enter text here...</textarea><br>
                     country
-                    <select id="country" name="country">
+                    <select id="country" name="country" id ="country">
                         <option value="australia">Australia</option>
                         <option value="canada">Canada</option>
                         <option value="usa">USA</option>
-                      </select>
-                      <br>
-                      <input type="checkbox" name="skills1" value="skills1"> pyhton<br>
-                      <input type="checkbox" name="skills2" value="skills2"> C++<br>
-                      <input type="checkbox" name="skills3" value="skills3"> C<br>
-                    <input type ="button" class="buttonStyle check" onclick=" closepopup();  generateTable()">
-                    
-
-                  </form>
+                    </select>
+                    <br>
+                    <input type="checkbox" name="skills" value="Python"> pyhton<br>
+                    <input type="checkbox" name="skills" value="C++"> C++<br>
+                    <input type="checkbox" name="skills" value="C"> C<br>
+                    <input type ="submit" class="buttonStyle check" >
+                </form>
                 </div>
             </main>
             <div>

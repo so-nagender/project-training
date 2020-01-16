@@ -214,3 +214,11 @@ textarea {
     color: yellow;
     border-color: yellow;
 }
+th {
+padding: 15px;
+border: 5px ;
+
+}
+td{
+    text-align: center;
+}
