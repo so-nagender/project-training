@@ -1,7 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
-
 .container {
     width: 1024px;
     margin: 0 auto;
@@ -29,16 +28,13 @@ header nav, header nav li {
 header nav li a {
     padding: 0 10px;
     text-decoration:none;
-    color: crimson;
-    
-    
+    color: crimson;   
 }
 header nav li a:hover {
     text-decoration: underline;
     height: 100%;
     padding:25px 35px;
-    background: whitesmoke;
-    
+    background: whitesmoke;   
 }
 header nav {
     float: right;
@@ -55,7 +51,6 @@ header nav {
 main {
     background: rgba(0, 128, 85, 0.527);
 }
-
 aside {
     position: sticky;
     top: 68px;
@@ -66,13 +61,11 @@ aside {
     background: rgba(47, 255, 151, 0.39);
     float: left;
 }
-
 aside ul li {
     list-style: none;
     box-sizing: border-box;
     border: 1px solid black;
 }
-
 aside li a {
     padding: 10px;
     display: inline-block;
@@ -80,12 +73,10 @@ aside li a {
     text-decoration: none;
     text-align: center;
 }
-
 aside li a:hover {
     background: grey;
     width: 90%;
 }
-
 section {
     width: 80%;
     background-image: url(../images/green2.jpg);
@@ -94,30 +85,25 @@ section {
     box-sizing: border-box;
     border: 1px solid black;
 }
-
 article p {
     padding: 15px;
     
 }
-
 article h3 {
     font-size: 20px;
     background: rgb(15, 223, 126);
     box-sizing: border-box;
     border: 2px solid black;
 }
-
 article h3 strong {
     font-size: 50px;
 }
-
 .buttonStyle{
     background: #fff;
     border: 1px solid black;
     padding: 6px 15px;
     border-radius: 20px;
     cursor: pointer;
-
 }
 button[type="submit"] {
     background:red;
@@ -125,16 +111,13 @@ button[type="submit"] {
 .fRight {
     float: right;
 }
-
 article p strong {
     font-weight: normal;
     font-style: italic;
 }
-
 article.greenColor p strong {
     font-style: normal;
 }
-
 .popup {
     top: 0;
     left: 0;
@@ -168,32 +151,26 @@ article.greenColor p strong {
     margin-top: 10px;
     border: 2px solid red;
 }
-
 .table {
     background: rgb(10, 179, 10);
 }
-
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
-
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
 }
-
 tr:nth-child(even) {
     background-color: #16f0c0;
 }
-
 .table h3 {
     padding: 20px 10px;
     text-align: center;
 }
-
 footer{
     box-sizing: border-box;
     border: 1px solid black;
