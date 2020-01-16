@@ -56,24 +56,16 @@
                     </article>
                     <article class="table">
                         <h3>Saved data</h3>
-                        <div id="generateTable">
-                            <table>
+                        <div >
+                            <table id="generateTable">
                                 <tr>
-                                    <th>
-                                        <strong>First Name</strong></th>
+                                       <th><strong>First Name</strong></th>
                                        <th> <strong>Last Name</strong></th>
                                        <th> <strong>Gender</strong></th>
-                                        <th><strong>Skills</strong></th>
                                         <th><strong>Email</strong></th>
                                         <th><strong>Password</strong></th>
-
-
-                               
-
-                            
-                            
-                            
-                            </tr>
+                                        <th><strong>Skills</strong></th>
+                                </tr>
                             </table>
                         </div>
                     </article>
@@ -149,8 +141,8 @@
                 </ul>
             </footer>
         </div>
-        <div class="popup" id="popup">
-            <form action="/" method="GET">
+        <div class = "popup" id = "popup">
+            <form id = 'form1' action = "/" method = "GET">
                 <div>
                     First name:<br>
                     <input id = 'firstname' input type="text" name="firstname" >
@@ -172,16 +164,16 @@
                     <input id = 'node' input type="checkbox" name="skill3" value="Nodejs" checked>Nodejs<br>
             </div>
             <div>
-                Email: <input id = 'email' input type="text" name="email"><br>
+                Email: <input id = 'email' input type="email" name="email"><br>
                 Password: <input id = 'pass' input type="password" name="pwd" maxlength="8"><br>
             </div>
-            <div>
+            <!-- <div>
                 <p>Permanent Address</p>
                 <textarea rows="4" cols="20">
                     kch bhi.
                     </textarea>
-                </div>
-                <input type="button" value="Submit" class="buttonStyle" onclick="generateTable()">
+                </div> -->
+                <input type="submit" value="Submit" class="buttonStyle" onclick="generateTable()">
                 <button type="button" onclick="closepopup()" class="buttonStyle">Close</button>
               </form> 
         </div>

@@ -4,63 +4,93 @@ function openpopup() {
 function closepopup() {
     document.getElementById('popup').style.display = 'none';
 }
-// const form = document.getElementById('form');
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault()
-// })
-function generateTable() {
-    var users = new Array();
-    var fname = document.getElementById("firstname").value;
-    var lname = document.getElementById("lastname").value;
-    if(document.getElementById("m").checked)
-    {
-        var gen=document.getElementById("m").value;
-    }
-    else if(document.getElementById("f").checked){
-        var gen=document.getElementById("f").value;
-    }
-    else{
-        var gen=document.getElementById("o").value;
-    }
-    var skill=new Array();
-    if(document.getElementById("java").checked)
-    {
-        skill.push(document.getElementById("java").value);
-    }
-    if(document.getElementById("js").checked)
-    {
-        skill.push(document.getElementById("js").value);
-    }
-    if(document.getElementById("node").checked)
-    {
-        skill.push(document.getElementById("node").value);
-    }
-    var email = document.getElementById("email").value;
-    var pass = document.getElementById("pass").value;
-
- users.push([fname,lname,gen,skill,email,pass]);
+var form = document.getElementById('form1');
+form.addEventListener('submit', generateTable);
+function generateTable(event) {
+    // popup.close();
+    event.preventDefault();
+    // console.log('evetn>>>>>>>>>>>>>',event);
+    var m = event.target.elements.length;
     var table = document.createElement('table');
-    var columnCount = users[0].length;
-    var row = table.insertRow(-1);
- for (var i = 0; i < columnCount; i++) {
-     var headerCell = document.createElement("td");
-     headerCell.innerHTML = users[0][i];
-     row.appendChild(headerCell);
- }
+        row = table.insertRow(-1);
+        var text = "";
+        for(let i = 0;i<m-2;i++){
+            if(i == 2 ||i == 3 ||i == 4){
+                if(event.target.elements[i].checked){
+                    var cell = row.insertCell();
+                    // console.log(event.target.elements[i].value);
+                    cell.innerHTML = event.target.elements[i].value;    
+                }
+            }
+            else if(i == 5 ||i == 6 ||i == 7){
+                if(event.target.elements[i].checked){
+                     text = text + ", " + event.target.elements[i].value;
+                    //  console.log(event.target.elements[i].value)
+                } 
+            }
+            else{
+                var cell = row.insertCell();
+                // console.log(event.target.elements[i].value);
+                cell.innerHTML = event.target.elements[i].value;
+            }
+        }
+        var cell = row.insertCell();
+        cell.innerHTML = text; 
+        var dvTable = document.getElementById("generateTable");
+        dvTable.appendChild(row);
+        document.getElementById('generateTable').style.fontSize = '10px';
+        document.getElementById('popup').style.display = 'none';
+    }
+    // var users = new Array();
+    // var fname = document.getElementById("firstname").value;
+    // var lname = document.getElementById("lastname").value;
+    // if(document.getElementById("m").checked)
+    // {
+    //     var gen=document.getElementById("m").value;
+    // }
+    // else if(document.getElementById("f").checked){
+    //     var gen=document.getElementById("f").value;
+    // }
+    // else{
+    //     var gen=document.getElementById("o").value;
+    // }
+    // var skill=new Array();
+    // if(document.getElementById("java").checked)
+    // {
+    //     skill.push(document.getElementById("java").value);
+    // }
+    // if(document.getElementById("js").checked)
+    // {
+    //     skill.push(document.getElementById("js").value);
+    // }
+    // if(document.getElementById("node").checked)
+    // {
+    //     skill.push(document.getElementById("node").value);
+    // }
+    // var email = document.getElementById("email").value;
+    // var pass = document.getElementById("pass").value;
+    
+//     var columnCount = users[0].length;
+//     var row = table.insertRow(-1);
+//  for (var i = 0; i < columnCount; i++) {
+//      var headerCell = document.createElement("td");
+//      headerCell.innerHTML = users[0][i];
+//      row.appendChild(headerCell);
+//  }
 
- //Add the data rows.
- for (var i = 1; i < users.length; i++) {
-     row = table.insertRow(-1);
-     for (var j = 0; j < columnCount; j++) {
-         var cell = row.insertCell(-1);
-         cell.innerHTML = users[i][j];
-     }
- }
+//  //Add the data rows.
+//  for (var i = 1; i < users.length; i++) {
+//      row = table.insertRow(-1);
+//      for (var j = 0; j < columnCount; j++) {
+//          var cell = row.insertCell(-1);
+//          cell.innerHTML = users[i][j];
+//      }
+//  }
 
- var dvTable = document.getElementById("generateTable");
- dvTable.appendChild(table);
- document.getElementById('popup').style.display = 'none';
-}
+//  var dvTable = document.getElementById("generateTable");
+//  dvTable.appendChild(table);
+//  document.getElementById('popup').style.display = 'none';
+// }
 
 
 
