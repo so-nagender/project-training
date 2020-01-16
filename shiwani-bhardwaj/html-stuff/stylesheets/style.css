@@ -263,6 +263,7 @@ td,th{
     text-align: center;
     padding: 15px;
     border-radius:50px;
+    width: 50px;
 }
 
 tr:nth-child(even){
@@ -284,6 +285,7 @@ tr:nth-child(even){
     border: 10px solid black;
     padding: 7px 15px;
     border-radius: 20px;
+    widows: 50px;
 
 }
 table {
@@ -292,6 +294,7 @@ table {
     width: 100%;
     border: 10px red;
     overflow: hidden;
+    size: initial;
 }
 section h2{
   

@@ -89,21 +89,24 @@
             </footer>
         </div>
         <div class="popup" id="popup">
-            <form action="/action_page.php">
-               <div> First name:<br>
+            <form  id="userdetails">
+               <div> First name<br>
                 <input type="text" name="firstname" value=""  placeholder="firstname"></div>
-                <div>Last name:<br>
-                <input type="text" name="lastname" value=""placeholder="lastname"></div>
-                <input type="radio" name="gender" value="male" checked> Male
-                <input type="radio" name="gender" value="female"> Female
-                <input type="radio" name="gender" value="other"> Other<br>
-                <input type="checkbox" name="dicount" value="coupon"> coupon
-               <input type="checkbox" name="dicount2" value="bank offer"> bank offer <br>
-               <div> address:<br>
-                <input type="text" name="Adress" value=""placeholder="address"></div>
+                <div>Last name<br>
+                <input type="text"  name="lastname" value=""placeholder="lastname"></div>
+                <div id="result"></div> 
+                <input type="radio"  name="gender" value="male" checked> Male
+                <input type="radio"  name="gender" value="female"> Female
+                <input type="radio"  name="gender" value="other"> Other<br>
+                <input type="checkbox"  name="discount" value="coupon"> coupon
+               <input type="checkbox"  name="discount" value="bank offer"> bank offer <br>
+               <div> address<br>
+                <input type="text" class="cl" name="Adress" value=""placeholder="address"></div>
+               
                 <div>
-                <input type="button" value="Submit" class="buttonStyle " onclick="generateTable()">
-                <button type="button" onclick="closepopup()" class="buttonStyle">close</button>
+                <input type="submit"  class="buttonStyle ">
+            
+                <!-- <button type="button" onclick="closepopup()" class="buttonStyle">close</button> -->
               </form>
               </div>
               <script src="javascript/scripts.js">
