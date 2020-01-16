@@ -32,8 +32,7 @@
                 </aside>
                 <section>
                     <article class="redColor">
-                        <form action="/action_page.php">
-                        </form>
+                        
                         <h3>About OnceHub <strong>First</strong><button type="button" class="buttonStyle fRight" onclick="openpopup()">Open popup</button></h3>
                         <p>
                             <strong>OnceHub</strong> powers organizations with smart scheduling solutions that shorten
@@ -52,7 +51,7 @@
                             released to market.
                         </p>
                     </article>
-                    <article class="greenColor">
+                    <article class="greenColor" id="generateTable">
                         <h3>This is our article <strong>First</strong></h3>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi beatae mollitia expedita tempora enim aliquid deserunt doloribus ipsum maxime rem quisquam iusto voluptatibus dolorum, <strong>blanditiis</strong> temporibus ea explicabo perspiciatis.
@@ -64,43 +63,7 @@
                     <article class = "table">
                         <h3>Saved Details</h3>
                         <div id = "generateTable"></div>
-                        <!-- <table>
-                            <tr>
-                                <th>Company</th>
-                                <th>Contact</th>
-                                <th>Country</th>
-                            </tr>
-                            <tr>
-                                <td>Alfreds Futterkiste</td>
-                                <td>Maria Anders</td>
-                                <td>Germany</td>
-                            </tr>
-                            <tr>
-                                <td>Centro comercial Moctezuma</td>
-                                <td>Francisco Chang</td>
-                                <td>Mexico</td>
-                            </tr>
-                            <tr>
-                                <td>Ernst Handel</td>
-                                <td>Roland Mendel</td>
-                                <td>Austria</td>
-                            </tr>
-                            <tr>
-                                <td>Island Trading</td>
-                                <td>Helen Bennett</td>
-                                <td>UK</td>
-                            </tr>
-                            <tr>
-                                <td>Laughing Bacchus Winecellars</td>
-                                <td>Yoshi Tannamuri</td>
-                                <td>Canada</td>
-                            </tr>
-                            <tr>
-                                <td>Magazzini Alimentari Riuniti</td>
-                                <td>Giovanni Rovelli</td>
-                                <td>Italy</td>
-                            </tr>
-                        </table> -->   
+                       
                     </article>
                         
                     <article class="greenColor">
@@ -164,44 +127,46 @@
         </div>
         
         <div class="popup" id="popup">
-            <form action="/action_page.php">
+            <form id = "userDetails">
                 <div>
                 First name:<br>
-                <input type="text" name="firstname" value="Shubham">
+                <input type="text" name="firstname" value="" >
                 </div>
                 <div> 
                 Last name:<br>
-                <input type="text" name="lastname" value="Agrahari">
+                <input type="text" name="lastname" value="" >
                 </div>
                 <div> 
                 EMail:<br>
-                <input type="text" name="email" value="shubham.agrahari@gmail.com">
+                <input type="text" name="email" value="" >
                 </div>
-                <div> 
+                 <div> 
                 Password:<br>
-                <input type="text" placeholder="Enter Password" name="psw" required>
+                <input type="password" placeholder="Enter Password" name="psw"  required>
                 </div> 
                 <div>
                 Gender:<br>   
-                <input type="radio" name="gender" value="male" checked> Male<br>
-                <input type="radio" name="gender" value="female"> Female<br>  
+                <input type="radio" name="gender" value="male"  > Male<br>
+                <input type="radio" name="gender" value="female" > Female<br>  
                 <input type="radio" name="gender" value="other"> Other
                 </div> 
                 <div>
                  Address:<br>   
                 <textarea rows="2" cols="20" class="textArea">
-                    Dehradun Uttarakhand.
+                    
                 </textarea>   
                 </div>
                 <div>
 
                 Country:<br>
-                <input type="checkbox" name="Country1" value="India" checked> India<br>
-                <input type="checkbox" name="Country2" value="America"> America<br>
-                <input type="checkbox" name="Country3" value="Russia" >Russia<br>
-                </div>  
-                <input type="button" value="Submit" class="buttonStyle B1"   onclick="closepopup(); generateTable()">
-                <button type="button" onclick="closepopup()" class="buttonStyle B2" >  Close</button>
+                
+                <input type="checkbox" name="Country" value="India" > India<br>
+                <input type="checkbox" name="Country" value="America"> America<br>
+                <input type="checkbox" name="Country" value="Russia" >Russia<br>
+                
+                </div>
+                <!-- <button type="button" onclick="closepopup()" class="buttonStyle B2" >  Close</button> -->
+                <input type ="submit" class="buttonStyle" >
               </form> 
             </div>
         <script src="javascript/script.js"></script>
