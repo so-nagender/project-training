@@ -37,7 +37,6 @@ header nav {
 }
 /*-- header ends --*/
 
-
 /*--- main start --*/
 .clear {
     clear: both;
@@ -75,11 +74,9 @@ section {
     background-image: url(../img/images.jfif);
     float: right;
     padding: 10px;
-    
     box-sizing: border-box;
     border: 1px solid black;
 }
-
 article h3 {
     font-size: 20px;
     background: rgb(77, 158, 235);
@@ -94,35 +91,29 @@ article h2 {
 }
 
 /*   Table starts---*/
-
 .table {
     background: #fff;
 }
-
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 8px;
 }
-
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
 }
-
 tr:nth-child(even) {
     background-color: #dddddd;
 }
-
 .table h3 {
     padding: 20px 10px;
     text-align: center;
 }
 
 /* --table end-- */
-
 .buttonStyle{
     background: #fff;
     border: 2px solid rgb(45, 152, 240);
@@ -146,6 +137,7 @@ article p{
 article.greenColor p strong {
     font-style: normal;
 }
+
 /* Footer starts */
 footer{
     padding-top: 10px;
@@ -171,9 +163,7 @@ footer ul li a:hover{
 }
 /*-- footer ends --*/
 
-
 /* -- Pop Up styling start-- */
-
 .popup {
     top: 0;
     left: 0;
@@ -190,10 +180,10 @@ footer ul li a:hover{
 .popup form > div {
     margin-bottom: 10px;
 }
-
 .popup input[type="text"] {
     padding: 10px 5px;
     border-radius: 5px;
     border: none;
     margin-top: 10px;
 }
+/* -- popup ends --*/

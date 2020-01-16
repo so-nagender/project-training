@@ -1,18 +1,16 @@
-    // Opening pop up function
+// Opening pop up function
 function openpopup() {
     document.getElementById('popup').style.display = 'block';
 }
-// pop up closing function
+// popup closing function
 function closepopup() {
     document.getElementById('popup').style.display = 'none';
 }
-var table = document.createElement('table'); // globle table variable for table and header ....
+var table = document.createElement('table'); // globle table variable for table creation and table header ....
 // header function 
-function header_table()
-{
+function header_table() {
     var customers = new Array();
     customers.push(["Name", "email", "Gender","email","Address","Text Area"]);
-   
     var columnCount = customers[0].length;
     var row = table.insertRow(-1);
     for (var i = 0; i < columnCount; i++) {
@@ -20,31 +18,30 @@ function header_table()
         headerCell.innerHTML = customers[0][i];
         row.appendChild(headerCell);
     }
-}
+} 
+
 header_table(); // one time header calling...
 
 // Creating table using js 
 var form = document.getElementById('popup');
 form.addEventListener('submit', generateTable);
-function generateTable() {
+function generateTable(event) {
     event.preventDefault();
-    console.log('evetn>>>>>>>>>>>>>',event);
-
-    var customers = new Array();
-    var x = document.getElementsByClassName("tak");
+    console.log('-----evet------',event);
+    var len = event.target.elements.length;
     row = table.insertRow(-1);
-    for(let j = 0;j<x.length;j++){
-        if(j == 2 ||j==3 ||j ==4){
-            if(x[j].checked){
+    for(let j = 0;j< len-2;j++) {
+        if(j == 2 || j==3 || j == 4) {
+            if(event.target.elements[j].checked) {
                 var cell = row.insertCell();
-                console.log(x[j].value);
-                cell.innerHTML = x[j].value;    
+                console.log(event.target.elements[j].value);
+                cell.innerHTML = event.target.elements[j].value;    
             }
         }
-        else{
+        else {
             var cell = row.insertCell();
-            console.log(x[j].value);
-            cell.innerHTML = x[j].value;
+            console.log(event.target.elements[j].value);
+            cell.innerHTML = event.target.elements[j].value;
         }
     }
     var dvTable = document.getElementById("generateTable");
