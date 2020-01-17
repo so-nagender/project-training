@@ -1,10 +1,120 @@
 .containerNew{
     background-image: url(../images/banner.png);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    /* background-blend-mode: contrast(50%); */
 }
 /* nav bar styling */
 
-#logo{
-    width : 100px;
-    height:20px;
 
+.nav-bar{
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.nav-bar a{
+    color: white;
+}
+
+.nav-bar li a:hover{
+    color : blue;
+}
+/* first container  */
+
+.white-color{
+    color:white;
+}
+.spacing-around{
+    padding : 120px;
+    line-height: 70px;
+}
+
+.col-1-spacing{
+    padding-top: 70px;
+}
+
+#front-text{
+    font-weight: 400;
+    font-size: 2.25rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.form-background-style{
+    background-color:white;
+    padding: 17px;
+    line-height: 50px;
+    border-radius: 5px;
+}
+.form-upper-text{
+    color: black;
+    font-size: x-large;
+    text-align: center;
+}
+.form-text-style{
+    font-size: 12px;
+    color: gray;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.button-color{
+    background-color: rgb(83, 201, 248);
+    color: white;
+    
+}
+
+/* second container */
+.blue-disc li {
+    list-style: none;
+    line-height: 25px;
+    color: black;
+}
+
+.blue-disc li::before {
+    content: "\2022";
+    color: rgb(83, 201, 248);
+    font-weight: 200px;
+    display: inline-block; 
+    width: 2em;
+    margin-left: -3em;
+  }
+
+.second-container-text{
+    font-size: 30px;
+    color: black;
+    margin: auto 0;
+    line-height: 57px;
+}
+  
+.list-text-style{
+    line-height: 24px;
+}
+
+/* third conatiner  */
+
+.third-container{
+    background-image: url(../images/loan.png);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.third-container-spacing{
+    padding-top: 40px;
+    padding-bottom : 30px;
+    line-height: 30px;
+    color:white;
+}
+.third-container-text{
+    font-weight: 200;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.fourth-container-spacing{
+    padding-top: 40px;
+    padding-bottom : 20px;
+    color:black;
+}
+
+.dash-bar{
+    background-color: rgb(83, 201, 248);
+    color : rgb(83, 201, 248) ;
 }
