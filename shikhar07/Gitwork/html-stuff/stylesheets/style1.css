@@ -1,8 +1,78 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
+.bg-header {
+    background: url(../images/bg_1.jpg) no-repeat;
+    /* padding: 300px; */
+    height: 100%;
+    background-image: linear-gradient(to top right,RGBA(248 , 61, 245,0.8),RGBA(249 ,204 ,124,0.8)),url('../images/bg_1.jpg');
 
-.container {
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    
+    background-size: cover;
+margin-bottom: 30px;
+}
+.color, .color a{
+    color: white;
+}
+.display-1{
+    font-weight: bold;
+    font-size: 100px;
+}
+}
+.white-color{
+    color:rgb(83, 76, 76);
+}
+.spacing-around{
+    padding: 100px 0px;
+    
+}
+/* #font{
+    font-size: 2.50rem;
+} */
+.color{
+    color: white;
+    text-align: center;
+}
+/* .footer{
+    padding: 10px;
+} */
+/* .f-right{
+    float: right;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* .container {
     width: 1024px;
     margin: 0 auto;
     background-color: lightblue;
@@ -10,10 +80,10 @@ body {
 }
 
 /*-- header starts --*/
-
+/* 
 header {
     /* padding: 20px 10px; */
-    position: sticky;
+    /* position: sticky;
     background: rgb(184, 230, 173);
     top: 0;
     left: 0;
@@ -32,8 +102,8 @@ header nav li a:hover {
     text-decoration: underline;
     background: yellowgreen;
     
-}
-header nav {
+} */
+/* header nav {
     float: right;
 }
 nav{
@@ -84,9 +154,9 @@ aside li a {
 aside li a:hover {
     background: yellowgreen;
     text-decoration: underline;
-}
+} */
 
-section {
+/* section {
     width: 80%;
     background: lightsalmon;
     float: right;
@@ -196,9 +266,9 @@ td, th {
 
 tr:nth-child(even) {
     background-color: darkcyan;
-}
+} */
       
-.popup form > div {
+/* .popup form > div {
     margin-bottom: 10px;
 }
 footer li{
@@ -206,11 +276,11 @@ footer li{
 }
 footer{
     background: chartreuse;
-}
-h2{
+} */
+/* h2{
     padding: 9px;
 }
 span{
     padding: 9px;
 }
-/*-- footer ends --*/
+-- footer ends -- */ */ */
