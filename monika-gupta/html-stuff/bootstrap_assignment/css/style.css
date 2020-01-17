@@ -1,0 +1,43 @@
+.containerNew{
+    background: url(../team-3-assets/banner.png) ;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    padding-top: 10px;  
+}
+
+.topcolumn a{
+    color: white;
+}
+article h2{
+    font-size: 55px;
+    color: white;
+    padding: 100px 390px 220px 260px;
+}
+.button2{
+    border-radius: 20px;
+    background: rgba(85, 83, 212, 0.952);
+    margin-right: 10px;
+}
+article h4{
+    font-size: 25px;
+    padding: 20px 480px;
+    text-align: center;
+}
+.service{
+    padding-top: 70px;
+    font-size: 15px;
+    color: rebeccapurple;
+}
+.box{
+    padding: 50px 20px;
+}
+.boxstyle{
+    padding: 30px 30px;
+    border-radius: 5px;
+}
+.foot{
+    background: black;
+    padding: 40px 40px 10px 40px;
+}
