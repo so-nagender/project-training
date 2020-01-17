@@ -1,0 +1,63 @@
+nav{
+    background: black;
+}
+.bg-image{
+    background-image: url(../dGVhbS0xLWFzc2V0cy56aXA=/team-1-assets/banner.png);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.bg-image-3{
+    background-image: url(../dGVhbS0xLWFzc2V0cy56aXA=/team-1-assets/loan.png);
+    height: 30%;
+
+}
+
+
+
+/* .row{
+    text: white;
+} */
+.text-white{
+    font-size: 40px;
+    ;
+}
+.container{
+    margin: 0px;
+    padding: 100px;
+}
+
+form{
+    border: 2px;
+}
+.spacing-around{
+    padding: 100px 9px 100px 100px;
+    margin: 0px 30px 100px 50px;
+    text-size-adjust: auto;
+}
+
+p{
+    margin: 80px auto auto 60;
+}
+.text-white.cont-3{
+    font-size: 25px;
+    padding-left: 130px;
+}
+.col-sm .navbar-brand img{
+    padding: 40px;
+    width: 500px;
+    height: 520px;
+}
+.btn.btn-info.btn-2{
+    margin: 100px;
+    margin-left: 250px;
+
+}
+p.text-white.bg-transparent{
+    margin-left: 35px;
+}
+
+h5{
+    margin-top: 50px;
+    margin-left: -41px;
+}
