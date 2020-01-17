@@ -1,0 +1,33 @@
+.body-img{
+    background:  linear-gradient(to top right,hsl(303, 64%, 65%,0.8), hsl(51, 64%, 71%, 0.8), transparent), url("../img/bg_1.jpg") no-repeat center; 
+}
+.color-logo a{
+    color:#fff;
+
+}
+.color a{
+    color:#fff;
+
+}
+.color a:hover{
+    color:#913a3a;
+    box-sizing: border-box;
+    border: 1px solid #913a3a;
+    border-radius: 3px;
+}
+.logo-font{
+    font-weight: 800;
+
+}
+.bolder{
+    font-weight: 900;
+    
+}
+.spacing-around{
+    padding: 200px 0px;
+    
+}
+footer{
+    background:black;
+    color: blanchedalmond;
+}

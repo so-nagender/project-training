@@ -79,7 +79,7 @@ section {
 }
 article h3 {
     font-size: 20px;
-    background: rgb(77, 158, 235);
+    background: hsl(209, 65%, 34%);
     margin:8px 0px 8px 0px;
     box-sizing: border-box;
     border: 1px solid #5656cc;
@@ -144,7 +144,7 @@ footer{
     padding-bottom: 10px;
     text-align: center;
     margin-top: 2px;
-    background-color : rgb(56, 117, 230);
+    background-color : hsl(209, 65%, 34%);
     border:2px solid #0c588b ;
 }
 footer ul li{
