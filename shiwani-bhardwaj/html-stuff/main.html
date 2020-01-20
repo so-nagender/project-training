@@ -3,14 +3,22 @@
     <head>
         <title>READIT</title>
         <link rel="stylesheet" href="stylesheets/styling.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <Body>
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+      
         <div class="container-fluid bg-image" >
            
             <header>
                 <nav>
+                 
                 <ul class="nav justify-content-end">
+                  <p>Read<strong>it</strong></p>
                     <li class="nav-item">
                       <a class="nav-link active" href="#">HOME</a>
                     </li>
@@ -18,38 +26,86 @@
                       <a class="nav-link" href="#">ARTICLE</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">TEAM</a>
+                      <a class="nav-link" href="dashboard.html">dashboard</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link " href="#">CONTACTS</a>
                     </li>
-                   <!-- Modal -->
-                 <li> 
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    Launch demo modal
-                  </button>
-                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          ...
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                      SIGN UP
+                    </button>
+                    
+                    
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <!-- FORM BRGINSSSSSSSS -->
+                            <form id="signup">
+                              <div class="form-group">
+                                <label for="exampleFormControlInput1">Email address</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                <label for="exampleFormControlInput1">choose Password</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="password ">
+                                <button type="submit" class="btn btn-primary">SUBMIT</button>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+                           
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-              </li>
-                </ul>
-                  </nav>
+
+
+
+                    <button type="button" class="btn btn-primary1" data-toggle="modal" data-target="#exampleModal1">
+                      SIGN IN
+                    </button>
+                    
+                    
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <!-- FORM BRGINSSSSSSSS -->
+                            <form>
+                              <div class="form-group">
+                                <label for="exampleFormControlInput1">Email address</label>
+                                <input type="email" class="name" id="exampleFormControlInput1" placeholder="name@example.com">
+                                <br>
+                                <label for="exampleFormControlInput1">Password</label>
+                                <input type="email" class="name" id="exampleFormControlInput1" placeholder="Pass..">
+                                <br>
+                                <button type="button" class="btn btn-primary" onclick= "checkCookie()">Login </button>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+                          
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </ul>
+                    <!-- Modal -->
+                    
+                   </nav>
             </header>
        
          <main class ="spacing">
@@ -91,5 +147,7 @@
        <footer class="last-part">
         <p>Copyright! @2020 All rights reserved</p>
        </footer>
+       <script src="javascript/my.js">
+       </script>
     </Body>
     </html>

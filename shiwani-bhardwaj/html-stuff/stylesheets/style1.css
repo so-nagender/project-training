@@ -1,0 +1,60 @@
+.dash-color
+{
+background: transparent;
+}
+.bg-image {
+    background-image: url(../images/bg_1.jpg);
+   background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:1100px;
+    
+   background-image: linear-gradient(to top right,RGBA(235 , 70, 245,0.8),RGBA(249 ,204 ,124,0.8)),url('../images/bg_1.jpg');
+   
+    
+} 
+header P{
+font-size:xx-large;
+font-weight: bolder;
+text-align: center;
+background-color:aquamarine;
+}
+header P strong{
+color:yellow;
+font-weight: bolder;
+font-size:xx-large;
+}
+.col-lg1{
+    border: 10px solid black;
+    padding-bottom: 500px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: x-large;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+.center {
+    display: block;
+    margin-left: 670px;
+    margin-right: auto;
+    margin-top: 120px;
+   
+  }
+  .modal-header{
+      background-color: aquamarine;
+  }
+  .btn btn-primary{
+      background-color: aquamarine;
+  }
+  .col-lg2{
+    border: 10px solid black;
+    padding-bottom: 500px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: x-large;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+.modal-footer{
+    background-color: aquamarine;
+}
