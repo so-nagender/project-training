@@ -48,3 +48,85 @@
 .menu-right {
     justify-content: flex-end;
 }
+
+.button_2{
+    margin-inline-start: 24px;
+}
+span.footer{
+    margin-left: 400px;
+}
+
+.points{
+    margin-left: -20px;
+}
+
+.side_menu{
+    list-style: none;
+    text-decoration: none;
+    margin-left: -20px;
+}
+
+ul li.header {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .content{
+      margin-top: 10px;
+  }
+
+  .content1{
+    margin-top: 10px;
+}
+
+.content2{
+    margin-top: 10px;
+}
+
+.content3{
+    margin-top: 10px;
+}
+
+.header1 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .content4{
+    margin-top: 10px;
+}
+.navbar{
+    float: right;
+}
+
+.search_box{
+    width: 900px!important;
+}
+
+.button1{
+    margin-top: 66px;
+}
+.button2{
+    margin-top: 30px;
+}
+.button3{
+    margin-top: 30px;
+}
+
+.gap{
+    margin-top: 40px;
+}
+.gap1{
+    margin-top: 10px;
+}
+.gap2{
+    margin-top: 10px;
+}
+.gap3{
+    margin-top: 10px;
+}
+.gap4{
+    margin-top: 10px;
+}
