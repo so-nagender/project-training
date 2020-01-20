@@ -1,5 +1,5 @@
 function openpopup() {
-    document.getElementById('popup').style.display = 'block';
+  document.getElementById('popup').style.display = 'block';
 }
 function closepopup() {
     document.getElementById('popup').style.display = 'none';
@@ -15,14 +15,14 @@ function generateTable(event) {
         row = table.insertRow(-1);
         var text = "";
         for(let i = 0;i<m-2;i++){
-            if(i == 2 ||i == 3 ||i == 4){
-                if(event.target.elements[i].checked){
+            if(i == 2 || i == 3 || i == 4){
+                if(event.target.elements[i].checked) {
                     var cell = row.insertCell();
                     // console.log(event.target.elements[i].value);
                     cell.innerHTML = event.target.elements[i].value;    
                 }
             }
-            else if(i == 5 ||i == 6 ||i == 7){
+            else if(i == 5 || i == 6 || i == 7){
                 if(event.target.elements[i].checked){
                      text = text + ", " + event.target.elements[i].value;
                     //  console.log(event.target.elements[i].value)
