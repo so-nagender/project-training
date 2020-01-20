@@ -9,14 +9,12 @@ function closepopup() {
 var table = document.createElement('table');
 // header function
 function tableHeader() {
-    var customers = new Array();
-    customers.push(["Firstname", "Lastname","Gender","Contact-No.","Email","Address","Country","Skills"]);
-    var columnCount = customers[0].length;
+    var headers = ["Firstname", "Lastname","Gender","Contact-No.","Email","Address","Country","Skills"];
     var row = table.insertRow(-1);
-    for (var i = 0; i < columnCount; i++) {
-        var headerCell = document.createElement("th");
-        headerCell.innerHTML = customers[0][i];
-        row.appendChild(headerCell);
+    for (var i = 0; i < headers.length; i++) {
+      var headerCell = document.createElement("th");
+      headerCell.innerHTML = headers[i];
+      row.appendChild(headerCell);
     }
 }
 //calling header
