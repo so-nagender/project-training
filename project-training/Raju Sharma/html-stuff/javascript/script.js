@@ -9,13 +9,11 @@ function closepopup() {
 var table = document.createElement('table'); // globle table variable for table creation and table header ....
 // header function 
 function header_table() {
-    var customers = new Array();
-    customers.push(["Name", "email", "Gender","email","Address","Text Area"]);
-    var columnCount = customers[0].length;
+    var headers = ["Name", "email", "Gender","email","Address","Text Area"];
     var row = table.insertRow(-1);
-    for (var i = 0; i < columnCount; i++) {
+    for (var i = 0; i < headers.length; i++) {
         var headerCell = document.createElement("th");
-        headerCell.innerHTML = customers[0][i];
+        headerCell.innerHTML = headers[i];
         row.appendChild(headerCell);
     }
 } 
