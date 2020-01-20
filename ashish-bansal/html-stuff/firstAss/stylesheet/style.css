@@ -116,5 +116,11 @@
 
 .dash-bar{
     background-color: rgb(83, 201, 248);
-    color : rgb(83, 201, 248) ;
+    color :white;
+}
+
+/* addaTask styling */
+.opentext{
+    font-size: 17px;
+    color: grey;
 }

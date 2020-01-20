@@ -1,49 +1,22 @@
-<!DOCTYPE html>
-<head>
-    <title>
-        Remember It| DashBoard
-    </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../firstAss/stylesheet/style.css">
-</head>
-<body>
-    <div class="container-fluid dash-bar">
-        <img class = "pl-5" src="../firstAss/images/footer_logo.png" >
-        <div class="float-right pr-5 pt-2">
-            Ashish Bansal<button type="button" class="btn btn-secondary mr-4 ml-2 pt-0" onclick="logout()">Logout</button>
-        </div>
-    </div>
-    <div class="container pt-2">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">DashBoard</a>
-                    <a href="#" class="list-group-item list-group-item-action">Recent activity</a>
-                    <nav class="navbar navbar-light list-group-item list-group-item-action">
-                        <form class="form-inline">
-                          <input class="form-control mr-lg-2" type="search" placeholder="Filter by name" aria-label="Search">
-                          <button class="btn btn-outline-success button-color" type="submit">search</button>
-                        </form>
-                    </nav>
-                    <button type="button" class=" list-group-item list-group-item-action btn btn-primary button-color" data-toggle="modal" data-target="#newTrip">Add a trip</button>
-                    <a href="#" class="list-group-item list-group-item-action">invite friends</a>
-                  </div>
-            </div>
-            <!-- Modal -->
-            <div class="modal fade" id="newTrip" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    
-                    </div>
-                    <div class="modal-body">
-                    <!-- modal body start here -->
-                    <h5 class="opentext">START A NEW TASK</h5>
+<html>
+    <head>
+        <title>add a Task</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../firstAss/stylesheet/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8 pt-5">
+                    <div class="row">
+                        <div class="col-sm-3 pt-1">
+                            <img src="../firstAss/images/footer_logo.png" >
+                        </div>
+                        <div class="col-sm-9">
+                            <h5 class="opentext pt-3">START A NEW TASK</h5>
                             <h4>My task shall be called....</h4>
                             <input class="form-control form-control-lg" type="text" placeholder="task to learn">
                             <div class="border-top border-bottom border-dark mt-4 pb-4 mb-3">
@@ -142,62 +115,16 @@
                             <div class="pt-3">
                             <button type="button" class="btn btn-danger">save</button>
                             </div>
-                    
-                    <!-- modal body ends here -->
-                    </div>
-
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-8">
-                <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-                    <!-- Navbar content -->
-                    <div class="float-right">
-                        <button type="button" class="btn btn-primary button-color">Primary</button>
-                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#addanexpanse">Add an expense</button>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-    <!-- modal second -->
-    <div class="modal fade" id="addanexpanse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Add an expanse</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <input class="form-control form-control-lg my-3" type="text" placeholder="Add your Task">
-                    <input class="form-control form-control-lg my-3" type="text" placeholder="Add your Subtask">
-                    <div class="row my-3">
-                        <div class="col-lg-6">
-                            <input class="form-control form-control-lg" type="text" placeholder="time needed">
-                        </div>
-                        <div class="col-lg-6">
-                            <input class="form-control form-control-lg" type="text" placeholder="number of people required">
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group my-3">
-                        <label for="formControlRange">Work Completed</label>
-                        <input type="range" class="form-control-range" id="formControlRange">
-                    </div>
-                    </form>
+                </div>
+                <div class="col-lg-2"></div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary button-color">Save changes</button>
-            </div>
-          </div>
+            <button type="button" class="btn btn-primary button-color float-right m-5">Feedback</button>
         </div>
-      </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
-</body>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+    </body>
 </html>
