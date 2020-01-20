@@ -109,11 +109,11 @@
         <div>
           <form action="">
             <label for="fname">UserName</label>
-            <input type="text" id="fname" name="firstname" placeholder="Username..">
+            <input type="text" class="name" name="name" placeholder="Username..">
         
             <label for="lname">Password</label>
-            <input type="text" id="lname" name="lastname" placeholder="Password">
-            <input type="submit" value="Login">
+            <input type="text" class="name" name="password" placeholder="Password">
+            <input type="submit" value="Login" onclick="checkCookie()">
           </form>
         </div>
         
@@ -135,21 +135,17 @@
       </div>
       <div class="modal-body">
         <div>
-          <form action="">
+          <form id="signup" action="">
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="firstname" placeholder="Your name..">
         
             <label for="lname">Last Name</label>
             <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-        
-            <label for="country">Country</label>
-            <select id="country" name="country">
-              <option value="australia">Australia</option>
-              <option value="canada">Canada</option>
-              <option value="usa">USA</option>
-            </select>
+
+            <label for="Password">Choose Password</label><br>
+            <input type="password" id="pass" name="Password" placeholder="Choose password">
           
-            <input type="submit" value="Submit">
+            <input type="submit" value="submit">
           </form>
         </div>
         
@@ -160,6 +156,7 @@
     </div>
   </div>
 </div>
+<script src="js/cookie.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

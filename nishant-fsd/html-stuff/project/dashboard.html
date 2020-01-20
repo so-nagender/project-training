@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container-fluid green">
+     <header>
+            <a class="navbar-brand" href="#">
+                <img src="image/logo.png">
+            </a>
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav right">
+                <li class="nav-item">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter2">
+                    Logout
+                  </button>
+                </li>
+              </ul>
+               </div>
+     </header>
+  </div>
+
+
+
+
+  <div class="container second">
+    <div class="row">
+       <div class="col-4 border-right">
+         <button type="button" class="btn btn-primary green" data-toggle="modal" data-target="#exampleModalCenter2">Add Contact</button>
+       </div>
+       <div class="col-8">
+          <input class="form-control my-0 py-1 lime-border" type="text" placeholder="Search Contact" aria-label="Search">
+          <div class="row">
+            <div class="col-4 border-top border-left"><p style="color: green;">Contact List</p></div>
+          </div>
+      </div>
+    </div>
+ 
+  </div>
+
+  <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Add Contact</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <form id="signup" action="">
+              <label for="fname">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name..">
+              <label for="fname">E-mail</label>
+              <input type="text" id="name" name="name" placeholder="Your E-mail..">
+              <label for="fname">phone number</label>
+              <input type="text" id="name" name="name" placeholder="Your Number..">
+              <input type="submit" value="submit">
+            </form>
+          </div>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

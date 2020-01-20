@@ -10,6 +10,9 @@ header nav
     background-size: cover;
     height: 450px;
 }
+.green{
+    background-color: #45a049;
+}
 .white{
     color: white !important;
 }
