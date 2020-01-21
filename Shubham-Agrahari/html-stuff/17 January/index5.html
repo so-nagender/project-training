@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <head>
     <Title>
        TO DO LIST 
@@ -10,7 +10,6 @@
 </head>
 <body>
   <script src="node.js"></script>
-
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -74,13 +73,13 @@
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Password">
                     </div>
                     <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="exampleCheck1">
                       <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" id="submit" onclick="checkCookie()">Submit</button>
                   </form>
                 </div>
                 <div class="modal-footer">
@@ -91,7 +90,7 @@
                 </div>
                 </div>
 
-                <button  type="button" class="btn btn-primary button_2" data-toggle="modal" data-target="#exampleModal_1">
+                <button  type="button" class="btn btn-primary button_2" data-toggle="modal" data-target="#exampleModal_1" onclick="addcookie(event)">
                  Sign Up
                 </button>
 
@@ -106,19 +105,19 @@
                   </button>
                   </div>
                   <div class="modal-body">
-                   <form >
+                   <form id="signup">
                      <div class="form-group">
                        <label for="exampleInputName">Name</label>
-                       <input type="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter Name">
+                       <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter Name">
                      </div>
-                     <div class="form-group">
+                     <!-- <div class="form-group">
                        <label for="exampleInputMobileNumber">Mobile Number</label>
-                       <input type="name" class="form-control" id="exampleInputMobileNumber" aria-describedby="mobileNumberHelp" placeholder="Enter Mobile Number">
-                     </div>
-                     <div class="form-group">
+                       <input type="text" class="form-control" id="exampleInputMobileNumber" aria-describedby="mobileNumberHelp" placeholder="Enter Mobile Number">
+                     </div> -->
+                     <!-- <div class="form-group">
                        <label for="exampleInputAddress">Address</label>
-                       <input type="name" class="form-control" id="exampleInputAddress" aria-describedby="addressHelp" placeholder="Enter Your Address">
-                     </div>                    
+                       <input type="text" class="form-control" id="exampleInputAddress" aria-describedby="addressHelp" placeholder="Enter Your Address">
+                     </div>                     -->
                      <div class="form-group">
                        <label for="exampleInputEmail1">Email address</label>
                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -132,7 +131,7 @@
                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
                      </div>
-                     <button type="submit" class="btn btn-primary" onsubmit="signMeUp()">Submit</button>
+                     <button type="submit" class="btn btn-primary"> Submit</button>
                    </form>
                  </div>
                  <div class="modal-footer">
@@ -145,11 +144,11 @@
             </div>
           </nav>
           <section>
-            <div class="row">
-              <article class="col-sm-6">
+            <!-- <div class="row">
+              <article class="col-sm-6"> -->
                   <font color="white"><h3>Get Loan for your<br> Business growth or<br> startup</h3></font>>
               </article>
-              <article class="col-sm-6">                
+              <!-- <article class="col-sm-6">                 -->
                 </article>
                 </div>
           </section>
@@ -159,13 +158,13 @@
     <main>
         <div class="container2">
             <div class="row">
-                <article class="col-sm-4">
-                    <img src="../17 January/images/about.png" alt="Responsive image" class="img-thumbnail">
+                <article class="col-sm-6">
+                    <img src="images/about.png" alt="Responsive image" class="img-thumbnail">
 
                 </article>
 
                     
-                <article class="col-sm-8 list">   
+                <article class="col-sm-6 list">   
                     <h2>Why Choose Us?</h2>
                     <p>Esteem spirit temper too say adieus who direct esteem.It esteems luckily or picture placing
                         drawing.Apartments frequently or motionless or reasonable.
@@ -198,23 +197,32 @@
     </footer>
     <span class="footer"><font color="blue"><strong>Copyright &copy;2020 All rights reserved | This template is made by Shubham Agrahari.</strong></font></span>
 
-
+    <script src="cookie.js"></script>
 
 </body>
-<script>
-  function signMeUp() {
-    localStorage.setItem('email', 'shubham@shubham.com')
-    localStorage.setItem('password', 'lol')
-  }
-
-  function signIn() {
-    const eMail = localStorage.getItem('email')
-    const passWord = localStorage.getItem('password')
-    // get form data
-    // equivalent
-  }
-
-</script>
+<!-- <script>
+    //document.cookie = "amuk";
+    var today = new Date();
+      var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
+        function cookieSet(form){
+            alert(form[0]);
+        }
+      function setCookie(id, value)
+      {
+          console.log('setcookie');
+        document.cookie=id + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+      }
+      //this should set the UserName cookie to the proper value;
+    function putCookie(form)
+                    
+      {
+          console.log('dsfskdjfsdfkjsdfkj');
+    //    setCookie("exampleInputName", form[0].exampleInputName.value);
+    
+    //     return true;
+      }
+    
+      </script> -->
 </html>        
 
 
