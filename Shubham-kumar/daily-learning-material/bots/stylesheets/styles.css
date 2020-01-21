@@ -1,0 +1,158 @@
+body {
+    background: black;
+   
+  }
+.center_content{
+    padding: 1px 324px !important;
+}
+
+.center_elements{
+    padding: 0px 0px 0px 200px;
+    
+}
+li{
+    padding: 0px 36px 0px 25px;
+}
+
+.font_large{
+
+    font-size: 45px;
+    line-height: 80px;
+
+}
+/* .center_elements_main{
+ padding: 23px 0px 0px 388px; 
+    
+} */
+.div2{
+    padding: 100px 500px 100px 386px;
+    background-color: transparent;
+}
+.div1{
+    position: relative;
+    background: red;
+    overflow: hidden;
+    background-image: url('../images/banner.png');
+    opacity: 0.85;
+    height: 899px;
+    
+}
+
+.nav-link{
+    color: white !important;
+}
+.whitecolor{
+    color:white !important;
+}
+
+
+.mid2{
+    background-color: white;
+    padding: 100px 400px 100px 400px;
+    
+    
+}
+.mid1{
+    background-color: white;
+    width:40%;
+    margin: auto;
+    text-align: center;
+    
+}
+.col-sm{
+ border: 1px solid black;
+ padding :10px;
+ margin: 20px;
+ text-align:center;
+}
+.col-sm img{
+  display: block;
+
+  width: 30%;
+  margin-bottom: 60px;
+  margin-top: 60px;
+
+}
+.end{
+    background-color: #1F1F1F;
+    
+}
+.end nav li{
+    padding: 100px 10px 100px 10px ;
+    font-size: 1em;
+}
+.end p{
+    color:white;
+    text-align: center;
+}
+.mid{
+    background-color: white;
+    padding: 100px;
+}
+
+button{
+    border-radius: 20px !important;
+    background-color: #8C89FE !important;
+    border-color: #8C89FE !important;
+}
+.color{
+color: #8C89FE 
+}
+.backcolor{
+    background-color: #8C89FE !important;
+}
+hr.new1 {
+    border-top: 1px solid grey;
+    width: 40%;
+    padding: 0px 40px;
+  }
+.new1 {
+    padding-bottom: 20px !important;
+    
+}
+
+.social ul{
+    color:white;
+    list-style: none !important;
+    padding-left: 500px;
+    padding-right: 100px;
+    display: flex;
+    p
+}
+.social ul li {
+    padding: 15px;
+    border-radius: 200px !important;
+    width: 50px;
+    margin: 10px;
+    border: 1px solid white;
+    border-radius: 100%;
+}
+
+.formstyle{
+    position: fixed !important;
+    transform: translate(561%,-170%) ;
+}
+.transparent{
+    background-color: transparent !important ;
+}
+
+.modal-backdrop {
+    position: relative !important;
+    
+}
+
+.form_popup div{
+
+    line-height: 10px;
+    text-align: justify;
+    padding: 40px 0px 40px 0px;
+    font-family: 'Josefin Sans', sans-serif ;
+    font-size: 25px;
+    
+    
+}
+.form_popup div input[type=text],input[type=password] {
+    border-color: transparent;
+    border-bottom: solid 1px
+
+  }
