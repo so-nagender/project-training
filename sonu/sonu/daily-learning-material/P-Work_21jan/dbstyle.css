@@ -1,0 +1,27 @@
+nav.navbar.navbar-expand-lg.navbar-light{
+    background-color: darkred;
+}
+.navbar-brand{
+    margin-left: 430px;;
+}
+.bg-img{
+    background-image: url(team-1-assets/about.png);
+    min-height: 65%;
+    background-position: center;
+    background-size: cover;
+}
+
+.text_1{
+    padding-top: 155px;
+}
+/* .text_2{
+    margin-left: 125px;
+}
+.apply_button{
+    margin-left: 480px;
+} */
+
+button.btn.btn.btn-primary.home-loan{
+    margin-top: 10px;
+}
+
