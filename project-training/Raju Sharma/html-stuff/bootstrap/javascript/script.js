@@ -2,8 +2,8 @@ var form = document.getElementById("signup");
 form.addEventListener("submit",setCookie);
 function setCookie(event) {
     var field_name = event.target.elements[0].value + event.target.elements[1].value + event.target.elements[2].value + event.target.elements[3].value;
-    // set value attribute crossponding to the name that is fname, lname and password.
-    var field_value = event.target.elements[0].value + event.target.elements[1].value + event.target.elements[3].value;
+    // set value attribute false like flag set.
+    var field_value = false;
     //exoiration variable for 10days
     var exp = 10;
     var d = new Date();
@@ -32,10 +32,59 @@ function getCookies(field_name) {
     var element=document.getElementsByClassName("userdetails");
     var username=element[0].value+element[1].value;
     var user=getCookies(username);
-    if (user != "") {
-       window.open("http://127.0.0.1:5500/project-training/Raju%20Sharma/html-stuff/bootstrap/dashboard.html", "_blank");
+    if (user == "false") {
+      var d = new Date();
+      d.setTime(d.getTime() + (10 * 24 * 60 * 60 * 1000));
+      var expires = "expires=" + d.toGMTString();
+      var cvalue=true;
+      var cname=username;
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      window.open("http://127.0.0.1:5500/dashboard.html", "_self");
     } 
-    else {
-       alert("username password not matched");
+    else if(user== "true") {
+      window.open("http://127.0.0.1:5500/dashboard.html", "_self");
+    }
+    else
+    {
+      alert("username and password not matched");
     }
   }
+  function checklogedin()
+  {
+    var decodedCookie = decodeURIComponent(document.cookie);        
+    var ca = decodedCookie.split(';');
+    var arr=[];
+    for(var i = 0; i < ca.length; i++) {
+      var temp=ca[i].split('=');
+      if(temp[1]=="true")
+      {
+        window.open("http://127.0.0.1:5500/dashboard.html", "_self")
+      }
+    }
+  }
+
+
+
+  // function checkCookie() {
+  //   var x=document.getElementsByClassName("name");
+  //   var username=x[0].value+x[1].value;
+  //   var user=getCookie(username);
+  //   if (user == "false") {
+  //     var d = new Date();
+  //     d.setTime(d.getTime() + (102460601000));
+  //     var expires = "expires=" + d.toGMTString();
+  //     var cvalue=true;
+  //     var cname=username;
+  //     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  //     window.open("http://127.0.0.1:5500/dashboard.html", "_self");
+  //   } 
+  //   else if(user== "true") {
+  //     window.open("http://127.0.0.1:5500/dashboard.html", "_self");
+  //   }
+  //   else
+  //   {
+  //     alert("username and password not matched");
+  //   }
+  // }
+
+
