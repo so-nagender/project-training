@@ -1,11 +1,12 @@
 var x=document.getElementById("signup");
-  x.addEventListener("submit",addcookie);
+x.addEventListener("submit",addcookie);
   function addcookie(event)
   {
-   var cname=event.target.elements[0].value+event.target.elements[1].value;
-   var cvalue=event.target.elements[1].value;
+    console.log(event)
+   var cname=event.target.elements[0].value + event.target.elements[1].value;
+   var isloggedin='false';
    var exdays=10;
-   setCookie(cname,cvalue,exdays);
+   setCookie(cname,isloggedin,exdays);
   }
 
 function setCookie(cname,cvalue,exdays) {
@@ -16,33 +17,36 @@ function setCookie(cname,cvalue,exdays) {
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
+var y = document.getElementById("signin")
+y.addEventListener("submit",checkCookie)
 
-
-
-
-function getCookie(cname) {
-  var name = cname + "=";
+function checkCookie(event){
+  event.preventDefault();
+  var text = event.target.elements[0].value + event.target.elements[1].value;
   var decodedCookie = decodeURIComponent(document.cookie);
-  var ca = decodedCookie.split(';');
-  for(var i = 0; i < ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
+  var arr = []
+  arr = decodedCookie.split(';');
+  var arr1 = []
+  var counter = 0;
+  for (let i = 0;i<arr.length;i++){
+    arr1.push(arr[i].split('='));
+  }
+  console.log(text)
+  console.log(arr1)
+  for(let i = 0;i<arr1.length;i++){
+    if(arr1[i][0] == text){
+      console.log('hi')
+      var s ="true";
+      document.cookie = text + "=" + s + ";" + ";path=/";
+      counter = counter +1;
+      break;
     }
   }
-  return "";
-}
+  if(counter == 0){
+    alert("sign up first")
+  }
+  else{
+    window.open('http://127.0.0.1:5500/dashboard.html','_self');
+  }
 
-function checkCookie() {
-  var x=document.getElementsByClassName("name");
-  var username=x[0].value+x[1].value;
-  var user=getCookie(username);
-  if (user != "") {
-    window.open("http://127.0.0.1:5500/dashboard.html", "_blank");
-  } else {
-     alert("username incorrect");
-  }
 }

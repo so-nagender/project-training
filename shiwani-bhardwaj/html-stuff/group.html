@@ -19,7 +19,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <div class="container-fluid bg-image">
         <p>Read<strong>it</strong></p>
-    
+    <script src="javascript/add.js"></script>
   
     <div class="container">
         <div class="row">
@@ -28,17 +28,46 @@
           </div>
           <div class="col-lg2">
           <p>start a new group</p>
-          <form>
-            <div class="row">
-              <div class="col">
+
+            <!-- <div class="row">
+              <div class="col"> -->
                 <input type="text" class="form-control" placeholder="Group name">
                 <br>
                 <p>GROUP MEMBERS</p>
                 <h1>tips:lots of people to add</h1>
-                
+                <!-- <form> -->
+                  <div class="design">
+                First name:<input type="text" name="fname" id="fname">last name:<input type="text" name="lname" id="lname">  email:<input type="text" name="email" id="email"><br>
+                <!-- mobile:<input type="text" name="cn" id="cn"><br> -->
+                <button onclick ="addpeople();"> add people</button>
               </div>
-              </form>
-          </div>
+              <!-- </form> -->
+               <!-- creating a table -->
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">first name</th>
+                      <th scope="col">last name</th>
+                      <th scope="col">email</th>
+                      <!-- <th scope="col">contanct no.</th> -->
+                    </tr>
+                   </thead>
+                  <tbody>
+                    <tr>
+                      
+                      <td>shiwani</td>
+                      <td>bhardwaj</td>
+                      <td>tani31.bsr@gmail.com</td>
+                     
+                    </tr>
+                   
+                    </tr>
+                    
+                  </tbody> 
+                </table> 
+               </div>
+
+              <!-- </div>  -->
         </div>
     </div>
   </div> 

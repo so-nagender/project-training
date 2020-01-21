@@ -15,16 +15,7 @@
 header{
     padding-right: 400px;
 }
-header p{
-    font-size:x-large;
-    font-weight: bolder;
-    text-align: left;
-}
-header p strong{
-color:yellow;
-font-weight: bolder;
-font-size: x-large;
-}
+
 .bg-image {
     background-image: url(../images/bg_1.jpg);
    background-repeat: no-repeat;
@@ -86,6 +77,26 @@ footer{
 
 }
 .btn btn-primary1{
-    margin-inline-start: 20px;
+    margin-inline-start: 30px;
+    background-color: black;
 }
+.modal-header {
+    background-color: aquamarine;
+}
+.modal-footer{
+    background-color: aquamarine;
+}
+.spacing h4{
+    font-size:40px;
+    font-weight: bolder;
+    text-align: center;
+  
+    margin-right:965px;
 
+}
+ .spacing h4 strong{
+color:yellow;
+font-weight: bolder;
+font-size: 40px;
+
+}
