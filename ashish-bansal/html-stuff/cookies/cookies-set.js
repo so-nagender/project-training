@@ -1,14 +1,6 @@
 var form = document.getElementById('popup');
 form.addEventListener('submit', setCookie);
-// function createTable(event){
-//     event.preventDefault();
-//     console.log('evetn>>>>>>>>>>>>>',event);
-//     // var n = event.target.elements.length;
-//     var email = event.target.elements[0].value;
-//     var password = event.target.elements[1].value;
-//     setCookie(email,password);
-//     console.log(email,password)
-// }
+
 function setCookie(event){
     event.preventDefault();
     var isLoggedin = true
