@@ -5,7 +5,7 @@
   function addcookie(event)
   {
    var cname=event.target.elements[0].value+event.target.elements[1].value+event.target.elements[2].value;
-   var cvalue=event.target.elements[0].value+event.target.elements[1].value;
+   var cvalue=false;
    var exdays=10;
    setCookie(cname,cvalue,exdays);
   }
@@ -38,9 +38,34 @@ function checkCookie() {
   var x=document.getElementsByClassName("name");
   var username=x[0].value+x[1].value;
   var user=getCookie(username);
-  if (user != "") {
-    window.open("http://127.0.0.1:5500/dashboard.html", "_blank");
-  } else {
-     alert("username password not matched");
+  if (user == "false") {
+    var d = new Date();
+    d.setTime(d.getTime() + (10*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    var cvalue=true;
+    var cname=username;
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    window.open("http://127.0.0.1:5500/dashboard.html", "_self");
+  } 
+  else if(user== "true") {
+    window.open("http://127.0.0.1:5500/dashboard.html", "_self");
+  }
+  else
+  {
+    alert("username and password not matched");
+  }
+}
+
+function checklogedin()
+{
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  var arr=[];
+  for(var i = 0; i < ca.length; i++) {
+    var temp=ca[i].split('=');
+    if(temp[1]=="true")
+    {
+      window.open("http://127.0.0.1:5500/dashboard.html", "_self")
+    }
   }
 }
