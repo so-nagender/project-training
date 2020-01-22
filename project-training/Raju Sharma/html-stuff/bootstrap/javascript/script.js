@@ -36,32 +36,46 @@ function getCookies(field_name) {
       var d = new Date();
       d.setTime(d.getTime() + (10 * 24 * 60 * 60 * 1000));
       var expires = "expires=" + d.toGMTString();
-      var cvalue=true;
-      var cname=username;
-      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-      window.open("http://127.0.0.1:5500/dashboard.html", "_self");
+      var value=true;
+      var name=username;
+      document.cookie = name + "=" + value + ";" + expires + ";path=/";
+      window.open("http://127.0.0.1:5500/project-training/Raju%20Sharma/html-stuff/bootstrap/dashboard.html", "_self");
     } 
-    else if(user== "true") {
-      window.open("http://127.0.0.1:5500/dashboard.html", "_self");
+    else if(user == "true") {
+      window.open("http://127.0.0.1:5500/project-training/Raju%20Sharma/html-stuff/bootstrap/dashboard.html", "_self");
     }
     else
     {
       alert("username and password not matched");
     }
   }
-  function checklogedin()
-  {
-    var decodedCookie = decodeURIComponent(document.cookie);        
-    var ca = decodedCookie.split(';');
-    var arr=[];
-    for(var i = 0; i < ca.length; i++) {
-      var temp=ca[i].split('=');
-      if(temp[1]=="true")
-      {
-        window.open("http://127.0.0.1:5500/dashboard.html", "_self")
-      }
+  function logout() {
+    var cookie = decodeURIComponent(document.cookie);
+    var arr = cookie.split(';');
+    for(var i = 0; i < arr.length; i++) {
+    user=false;
+    if(user==false) {
+      window.open("http://127.0.0.1:5500/project-training/Raju%20Sharma/html-stuff/bootstrap/dashboard.html");
+    }
+    else {
+      window.open("http://127.0.0.1:5500/project-training/Raju%20Sharma/html-stuff/bootstrap/home.html?")
     }
   }
+}
+
+  // function checklogedin()
+  // {
+  //   var decodedCookie = decodeURIComponent(document.cookie);        
+  //   var ca = decodedCookie.split(';');
+  //   var arr=[];
+  //   for(var i = 0; i < ca.length; i++) {
+  //     var temp=ca[i].split('=');
+  //     if(temp[1]=="true")
+  //     {
+  //       window.open("http://127.0.0.1:5500/project-training/Raju%20Sharma/html-stuff/bootstrap/dashboard.html", "_self")
+  //     }
+  //   }
+  // }
 
 
 
