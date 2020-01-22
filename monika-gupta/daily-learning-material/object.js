@@ -4,15 +4,17 @@ var obj = [
     {name: 'kavita', address: 'delhi'}
 ];
 
-var newObj = new Object();
+
 
 function user(add){
+    var newObj = new Object();
     for(var i=0; i<add.length; i++){
         newObj[add[i].name] = add[i].address;
     }
     return newObj;
 }
 console.log(user(obj));
+console.log((user(obj)).rajat);
 
 
 

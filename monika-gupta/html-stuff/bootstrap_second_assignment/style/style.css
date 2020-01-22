@@ -1,0 +1,26 @@
+.containerNew{
+    background-image: url(../image5.jpg);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.button2{
+    border-radius: 20px;
+    background: rgba(85, 83, 212, 0.952);
+    margin-right: 10px;
+}
+.section2{
+    background-image: url(../image3.jpg);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.section3{
+    background-image: url(../images6.jfif);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.section4{
+    background: rgba(250, 245, 237, 0.932);
+}
