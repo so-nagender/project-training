@@ -1,0 +1,70 @@
+.header-top
+{
+    background-color:#524EFF;
+}
+.font{
+    color: white;
+    font-weight: bold;
+   
+}
+section{
+    padding-top: 100PX;
+}
+.bg-image{
+    background-image: url(../images/new.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:800px;
+    width: 100%;
+  
+}
+.col-sm1{
+    padding-top: 300px;
+}
+.images1{
+    padding-top: 200px;
+    padding-left: 250PX;
+  
+    
+}
+.btn-primary{
+    background-color:#524EFF;
+    padding-top: 10px;
+    border-radius: 30px;
+    font-size: 30px;
+    margin-top: 30px;
+}
+.row{
+    padding-top: 30px;
+}
+
+.font1{
+  
+    font-size: large;
+    padding-top: 30px;
+    font-weight: bold;
+    
+    margin: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 5px 5px gray;
+   
+}
+.font2{
+    text-align: center;
+    font-size: 16PX;
+    color: gray;
+}
+.images{
+    height: 80px;
+}
+.font3{
+    font-weight: bolder;
+    font-size:45px;
+
+}
+.font4{
+    text-align: left;
+    font-size:20px;
+    color: gray;
+}
