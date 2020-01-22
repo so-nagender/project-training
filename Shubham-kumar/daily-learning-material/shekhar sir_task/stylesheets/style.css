@@ -1,0 +1,76 @@
+.color_blue{
+   background-color:#5550FF;
+}
+.color_blue_text{
+    color: #5550FF;
+}
+.header_top_padding{
+    padding: 20px;
+
+}
+.globe{
+    background-image: url("../images/zsPEu57-globe-grey-vector.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.section_padding{
+    padding-top: 150px;
+    
+}
+H1{
+    font-size: 50PX;
+    font-weight: bold;
+}
+
+.container img{
+    padding: 150px 0px 0px 0px;
+    position: relative;
+    
+}
+
+.padding_part_2{
+    padding-top: 100px;
+}
+.white_background{
+background-color: white;
+}
+
+.svg_img img{
+
+    width: 80px;
+}
+.border{
+    
+    box-shadow: 5px 5px 5px 5px  grey ;
+}
+.padding_top_100{
+    padding-top: 100px;
+}
+.padding_50{
+    padding-bottom: 200px;
+}
+.small_box_padding{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.row h4{
+    max-width: 60%;
+    text-align: center;
+    margin: 0 auto 20px;
+}
+.bottom_dotted_border{
+    border-bottom: 4px dashed grey;
+    padding-bottom: 100px;
+}
+.test_color{
+    background-color: red;
+}
+.padding_top_50{
+    padding-top: 50px;
+}
+.th4{
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto 20px;
+}
