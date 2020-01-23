@@ -1,0 +1,152 @@
+.color_blue{
+   background-color:#5550FF;
+}
+.color_blue_text{
+    color: #5550FF;
+}
+.header_top_padding{
+    padding: 20px;
+
+}
+.globe{
+    background-image: url("../images/zsPEu57-globe-grey-vector.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.section_padding{
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+H1{
+    font-size: 50PX;
+    font-weight: bold;
+}
+
+.globe img{
+    padding: 150px 0px 0px 0px;
+    position: relative;
+    
+}
+.broad_container{
+    padding-top: 100px;
+    position: relative;
+}
+.padding_part_2{
+    padding-top: 100px;
+}
+.white_background{
+background-color: white;
+}
+
+.svg_img img{
+
+    width: 80px;
+}
+.smallest_svg{
+    width: 20px;
+    
+}
+.small_svg{
+    width:50px;
+}
+.border{
+    
+-webkit-box-shadow: 0 0 10px rgba(0,0,0, .35);
+-moz-box-shadow: 0 0 10px rgba(0,0,0, .35);
+box-shadow: 0 0 10px rgba(0,0,0, .35);
+}
+.padding_top_100{
+    padding-top: 100px;
+}
+.padding_50{
+    padding-bottom: 100px;
+}
+.padding_top_50{
+    padding-top: 50px ;
+}
+.small_box_padding{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.padding_reset{
+    padding: 0px;
+}
+.row h4{
+    max-width: 60%;
+    text-align: center;
+    margin: 0 auto 20px;
+}
+.bottom_dotted_border{
+    border-bottom: 4px dashed grey;
+    padding-bottom: 100px;
+}
+.test_color{
+    background-color: red;
+}
+.padding_top_50{
+    padding-top: 50px;
+}
+.th4{
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto 20px;
+}
+.grey_background{
+    background-color: #D6D6D6;
+}
+.round_image{
+    border-radius: 50%;
+    max-width: 15%;
+    
+
+}
+.section6 p{
+    font-style: italic;
+}
+.float_right{
+    float :right;
+    
+}
+.text_side{
+    position: relative;
+    padding: 149px 75px 0px 0px;
+}
+.white_color{
+    color: white;
+    }
+
+
+.header_bottom_padding{
+    padding-bottom: 70px;
+
+}
+table th {
+    background-color: #5550FF;
+    font-size: 25px;
+    padding-bottom: 65px;
+}
+.stats {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.header_icons + .header_icons {
+    margin-left: 10px;
+}
+.menu-text{
+    font-size:15px;
+    font-weight: bold;
+}
+.header-shadow{
+
+    box-shadow: 2px 2px 2px 2px #DBDBDB ;
+    padding-bottom:30px ;
+}
+.butn{
+
+    background-color: #5550FF;
+    border-color: #5550FF;
+    border-radius: 50px 50px 50px 50px;
+    font-size: 20px;
+}
