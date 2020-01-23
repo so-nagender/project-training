@@ -20,7 +20,6 @@ window.onload = (event) => {
     myScript(event);
   };
 function myScript(event){
-    debugger;
     var newarr = [];
     var decodedCookie = decodeURIComponent(document.cookie);
     var arr = decodedCookie.split(';');

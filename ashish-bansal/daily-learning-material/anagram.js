@@ -4,9 +4,6 @@ function anagram(string1,string2){
     n1 = arr1.length;
     n2 = arr2.length;
     count = 0;
-    // console.log(arr1)
-    // console.log(arr2)
-    //console.log(n1,n2);
     if(n1>n2){
         for(let i=0;i<n2;i++){
             for(let j=0;j<n1;j++){
