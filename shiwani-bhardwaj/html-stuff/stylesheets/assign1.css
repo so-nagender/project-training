@@ -1,12 +1,37 @@
 .header-top
 {
     background-color:#524EFF;
+    padding-bottom: 16px;
+    /* padding-top: 18px; */
 }
+
+.header-top ul li{
+    list-style: none;
+    padding-left: 5px;
+}   
+.header-top ul li img{
+height: 35px;
+list-style: none;
+float: right;
+padding-left: 10px;
+
+}
+.header-top ul li a{
+font-size: large;
+    color: white;
+    float: left;
+    padding-left: 20px;
+    
+ 
+}
+
 .font{
     color: white;
     font-weight: bold;
    
 }
+
+
 section{
     padding-top: 100PX;
 }
@@ -32,11 +57,11 @@ section{
     background-color:#524EFF;
     padding-top: 10px;
     border-radius: 30px;
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 30px;
 }
 .row{
-    padding-top: 30px;
+    padding-top: 40px;
 }
 
 .font1{
@@ -48,12 +73,13 @@ section{
     margin: 10px;
     text-align: center;
     box-shadow: 5px 5px 5px 5px gray;
+    padding-bottom: 26px;
    
 }
 .font2{
     text-align: center;
-    font-size: 16PX;
-    color: gray;
+    font-size: 20PX;
+    color:#524EFF;
 }
 .images{
     height: 80px;
@@ -68,3 +94,49 @@ section{
     font-size:20px;
     color: gray;
 }
+.images6{
+   
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        border-radius: 50%;
+      padding-top: 40px;
+}
+footer{
+    margin-top: 200px;
+    padding-top: 20px;
+    background-color:#524EFF ;
+    padding-bottom: 75px;
+}
+.float{
+    font-size:xx-large;
+    font-weight: 900;
+    color: white;
+ 
+    float: right;
+    padding-right: 70px;
+}
+}
+.only-images{
+    
+    margin-top: 80px;
+    padding-top: 20px;
+}
+.row1{
+    padding-top: 40px;
+}
+
+.font5{
+    color: white;
+
+    font-size: 30PX;
+    padding-top: 30PX;
+    padding-left: 10px;
+    margin-left: -12px;
+}
+.font6{
+    text-align: center;
+    padding-top: 80px;
+    font-size:20px;
+    color: gray;}
