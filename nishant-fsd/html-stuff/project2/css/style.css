@@ -8,8 +8,6 @@ header nav
 .pic{
     background: url("../image/b.jpg") no-repeat;
     background-size: cover;
-    height: 450px;
-    text-align: center;
 }
 .height{
     height: 400px;
@@ -56,4 +54,15 @@ header nav
 }
 .right {
     float: right;
+}
+.hv:hover {
+  background-color: blue;
+  color: white;
+}
+.txtbold{
+font-weight: bold;
+}
+.second{
+    margin-top: 50px;
+    text-align: center;
 }
