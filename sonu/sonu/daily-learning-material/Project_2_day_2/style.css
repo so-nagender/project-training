@@ -1,0 +1,118 @@
+/*---header start----*/
+.img-thumbnail {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 2%;
+    height: auto;
+}
+
+.container-fluid.top_1{
+    background-color: dodgerblue;
+}
+
+.img-thumbnail_2{
+    width: 3%;
+    margin-left: -19px;
+}
+.header_2{
+    margin-left: 80px;
+}
+
+/*----Header end----*/
+
+/*----container  start---*/
+.bg_image{
+        background-image: url("image/world_img.jpg");
+        background-color: #dee2e6;
+        height: 500px;
+        
+}
+
+/*----Container1 column1---*/
+.col_1_content{
+    margin-top: 180px;
+    margin-left: 150px;
+}
+
+.text_1{
+    font-size: 31px;
+}
+
+.girl_image{
+    width: 330px;
+    height: 400px;
+    margin-top: 103px;
+}
+
+
+/*------ciontainer-2------*/
+.cont_2_text_1{
+    margin-top: 80px;
+    /* margin-bottom: 40px;
+    padding-bottom: 40px; */
+}
+.cont_2_text_2{
+    font-size: 30px;
+}
+
+.globe_image{
+    width:50px;
+    height: 50px;
+}
+.all_column{
+    padding-top: 42px;
+}
+
+.col_cont_2{
+        padding: 50px;
+        box-shadow: 2px 2px 2px 2px #888888;    
+}
+.dotted {
+    border: 1px dashed black;
+    border-style: none none dashed;
+    color: #fff; 
+    background-color: #fff; 
+    padding-top: 80PX;
+}
+
+/*----CONTiner-3-----*/
+.signup_startbuilding button.btn.btn-primary{
+    border-radius: 25px;
+}
+
+.all_column_cont_3{
+    margin-left: 100px;
+}
+.phone_what_image{
+    width: 350px;
+    height: 400px;
+
+}
+
+.img_i_symbol{
+    padding-top: 102px;;
+}
+
+/*---container-4---*/
+.bg_color{
+    background-color: antiquewhite;
+    height: 70%;
+}
+
+.offer_header{
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+.customer_name_text{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bg_color_footer{
+    background-color: rgb(71, 68, 247);
+}
+
+
