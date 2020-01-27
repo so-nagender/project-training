@@ -1,0 +1,8 @@
+.footSet{
+    margin: auto;
+    width: 25%;
+}
+#footer{
+    background-color: cornflowerblue;
+    background-image: url(../../assets/images/header-photo.jpg);
+}
