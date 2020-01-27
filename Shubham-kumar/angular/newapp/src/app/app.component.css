@@ -1,0 +1,25 @@
+#body-left{
+    float:left;
+    width:50%;
+    padding-top: 40px;
+    
+    
+}
+#body-right{
+    float:right;
+    width:50%;
+    padding-top: 40px;
+   
+    
+}
+#footer{
+    max-height: 20px;
+    padding-top: 40px;
+    background: black;
+    color: black;
+}
+#header{
+    font-size: 30px;
+    font-family: 'Uncial Antiqua', cursive;
+    font-family: 'Lobster', cursive;
+}
