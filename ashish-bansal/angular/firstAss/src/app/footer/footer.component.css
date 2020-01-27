@@ -1,0 +1,19 @@
+footer{
+    text-align: center;
+    background-color : lavender;
+    border:2px solid green ;
+}
+footer ul li{
+    display: inline-block;
+    padding-left: 10px;
+}
+footer span{
+    display: inline-right;
+    bottom: 0px;
+    padding-bottom: 10px;
+}
+footer ul li a:hover{
+    text-decoration: underline;
+    box :2px solid green;
+    background: bisque;
+}
