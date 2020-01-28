@@ -5,44 +5,25 @@
         <th scope="col">Auth Name</th>
         <th scope="col">Price</th>
         <th scope="col">ISB No.</th>
+        <th scope="col">Rating</th>
       </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">HTML</th>
-            <td>Mark</td>
-            <td>$100</td>
-            <td>12457</td>
-        </tr>
-        <tr class="my-2">
-            <th scope="row">Angular</th>
-            <td>Markle</td>
-            <td>$100</td>
-            <td>12457</td>
-        </tr>
-        <tr>
-            <th scope="row">CSS</th>
-            <td>Raju</td>
-            <td>$100</td>
-            <td>12457</td>
-        </tr>
-        <tr class="my-2">
-            <th scope="row">DATA Structure</th>
-            <td>R. Sharma</td>
-            <td>$100</td>
-            <td>12457</td>
-        </tr>
-        <tr>
-            <th scope="row">HTML and CSS</th>
-            <td>Nishant</td>
-            <td>$100</td>
-            <td>12457</td>
-        </tr>
-        <tr class="my-2">
-            <th scope="row">Akar bakker</th>
-            <td>Rajat Sir</td>
-            <td>$100</td>
-            <td>12457</td>
+        <tr *ngFor='let book of books'>
+            <th scope="row"> {{book.bookName}} </th>
+            <td>{{ book.bookAuthorName }}</td>
+            <td>${{ book.bookPrice }}</td>
+            <td>{{ book.bookISPno }}</td>
+            <td >
+                <span *ngFor = 'let i of rang(book.rate)' class="fa fa-star checked"></span>
+                <span *ngFor = 'let i of rang(5-book.rate)' class="fa fa-star"></span>
+            </td>
+            
+                <!-- <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span> -->
+           
         </tr>
     </tbody>
   </table>
