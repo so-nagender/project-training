@@ -10,3 +10,11 @@ ul li{
     font-family: 'Lobster', cursive;
     font-family: 'Pacifico', cursive;
 }
+a {
+    color:#007bff !important;
+}
+
+.shadow {
+    box-shadow: 5px 5px 5px 15px #DBDBDB;
+    
+}
