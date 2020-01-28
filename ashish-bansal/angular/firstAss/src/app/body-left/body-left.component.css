@@ -2,3 +2,7 @@
     border: 2px solid green;
     background-color: lavender;
 }
+
+.checked {
+    color: orange;
+  }

@@ -8,35 +8,10 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Ta-Nehisi Coates</td>
-            <td>We Were Eight Years in Power: An American Tragedy</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Daniel Riley</td>
-            <td> Fly Me</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Lisa Wingate</td>
-            <td>Before We Were Yours</td>
-        </tr>
-        <tr>
-            <th scope="row">4</th>
-            <td>Lisa Wingate</td>
-            <td>Before We Were Yours</td>
-        </tr>
-        <tr>
-            <th scope="row">5</th>
-            <td>Lisa Wingate</td>
-            <td>Before We Were Yours</td>
-        </tr>
-        <tr>
-            <th scope="row">6</th>
-            <td>Lisa Wingate</td>
-            <td>Before We Were Yours</td>
+        <tr *ngFor = 'let authors of author1'>
+            <th scope="row">{{authors.id}}</th>
+            <td>{{authors.name}}</td>
+            <td>{{authors.lastBook}}</td>
         </tr>
         </tbody>
     </table>
