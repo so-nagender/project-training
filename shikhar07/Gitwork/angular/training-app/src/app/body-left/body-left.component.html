@@ -4,103 +4,19 @@
       <tr>
         <th scope="col">#</th>
 
-        <th id="a" scope="col">
-            <!-- <img src="/assets/images/lit-horn.svg" alt="hub" class="img-fluid"> -->
-             THE HUB</th>
+        <th id="a" scope="col">THE HUB</th>
         <th scope="col">Author Name</th>
         <th scope="col">Price</th>
         <th scope="col">ISBN No.</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Goblet of fire</td>
-        <td>Rowling</td>
-        <td>1000</td>
-        <td>ABCD123</td>
+      <!---->
+      <tr *ngFor = 'let i of books'>
+        <th scope="row">{{i.serial_no}}</th>
+        <td>{{i.bookname}}</td>
+        <td>{{i.authornm}}</td>
+        <td>{{i.price}}</td>
+        <td>{{i.isbn}}</td>
       </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Deadly Hallows</td>
-        <td>Harry</td>
-        <td>1500</td>
-        <td>A12CD123</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Prisoner of Azakaban</td>
-        <td>Eve</td>
-        <td>2000</td>
-        <td>QWE123</td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td>Soccer Stone</td>
-        <td>Jack</td>
-        <td>1250</td>
-        <td>AB78123</td>
-      </tr>
-      <tr>
-        <th scope="row">5</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">6</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">7</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">8</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-        <td>@mdo</td>
-      </tr>
-
-      
-    </tbody>
-  </table>
-<!--   
-  <table class="table">
- <thead class="thead-light">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead> -->
-    <!-- <tbody>
-      <tr>
-        <th scope="row">4</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">5</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr> -->
-      <!-- <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr> -->
-    <!-- </tbody>
-  </table> --> 
+      <!---->

@@ -9,13 +9,15 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Robin</td>
-        <td>Gotham</td>
-        <td>Joker</td>
+      <!--  -->
+      <tr *ngFor = 'let i of author'>
+        <th scope="row">{{i.sr_no}}</th>
+        <td>{{i.authorname}}</td>
+        <td>{{i.country}}</td>
+        <td>{{i.lastbook}}</td>
       </tr>
-      <tr>
+      <!--  -->
+      <!-- <tr>
         <th scope="row">2</th>
         <td>Zack</td>
         <td>Washington</td>
@@ -56,7 +58,7 @@
         <td>Larry</td>
         <td>the Bird</td>
         <td>@twitter</td>
-      </tr>
+      </tr> -->
 
      </tbody>
   </table>

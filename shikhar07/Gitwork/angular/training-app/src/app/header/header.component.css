@@ -63,3 +63,6 @@ font-style: normal;
   li, a{
       color: black;
   }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
