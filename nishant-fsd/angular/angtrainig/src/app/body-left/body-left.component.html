@@ -5,45 +5,9 @@
       <th>Author</th>
       <th>Price</th>
     </tr>
-    <tr><td>Angular</td>
-        <td>Raju</td>
-        <td>10000</td>
-    </tr>
-    <tr><td>Angular</td>
-        <td>Raju</td>
-        <td>10000</td>
-    </tr>
-    <tr><td>Angular</td>
-        <td>Raju</td>
-        <td>10000</td>
-    </tr>
-    <tr><td>Angular</td>
-        <td>Raju</td>
-        <td>10000</td>
-    </tr>
-    <tr><td>Angular</td>
-        <td>Raju</td>
-        <td>10000</td>
-    </tr>
-    <tr><td>Angular</td>
-        <td>Raju</td>
-        <td>10000</td>
-    </tr>
-    <tr><td>Angular</td>
-        <td>Raju</td>
-        <td>10000</td>
-    </tr>
-    <tr><td>Angular</td>
-        <td>Raju</td>
-        <td>10000</td>
-    </tr>
-    <tr><td>Angular</td>
-        <td>Raju</td>
-        <td>10000</td>
-    </tr>
-    <tr><td>Angular</td>
-        <td>Raju</td>
-        <td>10000</td>
+    <tr *ngFor="let bookdata of bookdata"><td>{{bookdata.bookname}}</td>
+        <td>{{bookdata.author}}</td>
+        <td>{{bookdata.price}}</td>
     </tr>
   </table>
  

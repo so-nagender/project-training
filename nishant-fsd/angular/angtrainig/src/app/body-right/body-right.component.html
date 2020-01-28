@@ -1,45 +1,18 @@
 
-<table id="customers">
-    <tr>
+<table id="customers" >
+    <tr >
       <th>Author Name</th>
+      <th>country</th>
       <th>Last Book</th>
       <th>D.O.B</th>
+      <th>Rating</th>
     </tr>
-    <tr><td>Raju</td>
-        <td>Angular</td>
-        <td>21/02/1998</td>
-    </tr>
-    <tr><td>Raju</td>
-        <td>Angular</td>
-        <td>21/02/1998</td>
-    </tr>
-    <tr><td>Raju</td>
-        <td>Angular</td>
-        <td>21/02/1998</td>
-    </tr>
-    <tr><td>Raju</td>
-        <td>Angular</td>
-        <td>21/02/1998</td>
-    </tr>
-    <tr><td>Raju</td>
-        <td>Angular</td>
-        <td>21/02/1998</td>
-    </tr>
-    <tr><td>Raju</td>
-        <td>Angular</td>
-        <td>21/02/1998</td>
-    </tr>
-    <tr><td>Raju</td>
-        <td>Angular</td>
-        <td>21/02/1998</td>
-    </tr>
-    <tr><td>Raju</td>
-        <td>Angular</td>
-        <td>21/02/1998</td>
-    </tr>
-    <tr><td>Raju</td>
-        <td>Angular</td>
-        <td>21/02/1998</td>
+    <tr *ngFor="let authordata of authordata"><td>{{authordata.authorname}}</td>
+        <td>{{authordata.country}}</td>
+        <td>{{authordata.lastbook}}</td>
+        <td>{{authordata.dob}}</td>
+        <td><span *ngFor="let i of createrange(authordata.star)"class="fa fa-star checked"></span> 
+            <span *ngFor="let i of createrange(5-authordata.star)"class="fa fa-star"></span></td>
     </tr>
   </table>
   
