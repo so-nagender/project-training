@@ -1,0 +1,58 @@
+<div class="bg_image">
+    <div class="container-fluid">
+        <div class="container">
+            <!-- <div class="container"> -->
+                <!-- <div class="row row-cols-2">
+                  <div class="col"> -->
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                              <th scope="col">Name</th>
+                              <th scope="col">Author</th>
+                              <th scope="col">Price</th>
+                              <th scope="col">ISBD:</th>
+                              <th scope="col">Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor = "let book of book">
+                              <th scope="row">{{ book.name }} </th>
+                              <td>{{book.author}} </td>
+                              <td>{{book. price}} </td>
+                              <td>{{book.isbd}} </td>
+                              <td>
+                                <span *ngFor="let i of createRange(book.star)" class="fa fa-star checked" class="fa fa-star checked"></span> 
+                                <span *ngFor="let i of createRange(5-book.star)" class="fa fa-star checked" class="fa fa-star"></span></td>
+                            </tr>
+                            <!-- <tr>
+                              <th scope="row">Databases</th>
+                              <td>Patel</td>
+                              <td>34.8$</td>
+                              <td>5649</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Chemistry</th>
+                              <td>Deepak</td>
+                              <td>40$</td>
+                              <td>2653</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">DAA</th>
+                              <td>Aviral Sharma</td>
+                              <td>29$</td>
+                              <td>2658</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Machine Learning</th>
+                              <td>Scott</td>
+                              <td>40$</td>
+                              <td>2651</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                  <!-- </div>
+            </div> -->
+        </div>    
+    </div>
+</div>
+
