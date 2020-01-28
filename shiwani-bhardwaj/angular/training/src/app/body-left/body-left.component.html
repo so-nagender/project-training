@@ -1,58 +1,38 @@
 <div class="container">
   <div class="body-left">
-    <table class="table table-striped table-dark">
+
+     <table class="table table-striped table-dark" >
         <thead>
+          <!-- <a *ngFor='let Book_data of Book href="#> -->
           <tr>
             <th scope="col">BOOK NAME</th>
             <th scope="col">AUTHOR-NAME</th>
             <th scope="col">PUBLISHING-DATE</th>
             <th scope="col">BOOK-CODE</th>
             <th scope="col">BOOK-TYPE</th>
+            <th scope="col">STAR</th>
           </tr>
+       
         </thead>
         <tbody>
-          <tr>
-            <img src="../../assets/images/book.svg" class="images">
-            <th scope="row">Three mistakes of my life</th>
-            <td>chetan baghat</td>
-            <td>MAY-2008</td>
-            <td>5200</td>
-            <td>Thrill</td>
-          </tr>
-          <tr>
-            <img src="../../assets/images/book.svg" class="images">
-            <th scope="row">Three mistakes of my life</th>
-            <td>chetan baghat</td>
-            <td>MAY-2008</td>
-            <td>5200</td>
-            <td>Thrill</td>
+          
+          <tr *ngFor='let Books_data of Book'>
+            
+            <th scope="row"> <img src="../../assets/images/book.svg" class="images">{{Books_data.book_name}}</th>
+            <td><img src="../../assets/images/man.svg" class="images">{{Books_data.author_name}}</td>
+            <td><img src="../../assets/images/calendar.svg" class="images">{{Books_data.publishing_date}}</td>
+            <td>{{Books_data.book_code}}</td>
+            <td><img src="../../assets/images/thriller.svg" class="images">{{Books_data. book_type}}</td>
+            <td><span *ngFor='let i of createRange(Books_data.star)' class="fa fa-star checked"></span>
+             
+  
+              <span *ngFor='let i of createRange(5-Books_data.star)'  class="fa fa-star"></span></td>
+         
           </tr>
           
-          <tr>
-            <img src="../../assets/images/book.svg" class="images">
-            <th scope="row">Three mistakes of my life</th>
-            <td>chetan baghat</td>
-            <td>MAY-2008</td>
-            <td>5200</td>
-            <td>Thrill</td>
-          </tr>
-          <tr>
-            <img src="../../assets/images/book.svg" class="images">
-            <th scope="row">Three mistakes of my life</th>
-            <td>chetan baghat</td>
-            <td>MAY-2008</td>
-            <td>5200</td>
-            <td>Thrill</td>
-          </tr>
-          <tr>
-            <img src="../../assets/images/book.svg" class="images">
-            <th scope="row">You were my crush</th>
-            <td>durjoy dutta</td>
-            <td>april-2019</td>
-            <td>5200</td>
-            <td>Romantic</td>
-          </tr>
+          <button type="submit" class="btn btn-primary">Select Book</button>
         </tbody>
-      </table>
+        </table>
+      
     </div>
 </div>

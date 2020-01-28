@@ -2,19 +2,22 @@
     margin-top: 50px;
     float: left;
     width: 50%;
-    padding-bottom: 250px;
+    padding-bottom: 500px;
+    
 }
 #body-right{
     margin-top: 50px;
     float: left;
     width: 50%;
+    padding-bottom: 500px;
 }
 #foot{
     
-        text-align: center;
-        background-color: black;
-        color: blueviolet;
-        padding: 50px;
-        font-size: 30px;
-        font-weight: bolder;
-    }
+   
+    color: blueviolet;
+    /* padding: 50px; */
+    font-size: 30px;
+    font-weight: bolder;
+    bottom: 5PX;
+
+}
