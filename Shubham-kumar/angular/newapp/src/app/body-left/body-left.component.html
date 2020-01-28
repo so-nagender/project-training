@@ -7,67 +7,19 @@
       <p class="mb-1">Famous books</p>
       
     </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <!---->
+    <a *ngFor='let book of books' href="#" class="list-group-item list-group-item-action flex-column align-items-start">
       <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1"><img src="../../assets/images/library.svg"> Five on a Treasure Island</h5>
+        <h5 class="mb-1"><img src="../../assets/images/library.svg"> {{ book.book_name }}</h5>
         <small class="text-muted">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
+            <span *ngFor='let a of createRange(book.star)' class="fa fa-star checked"></span>
+            <span *ngFor='let a of createRange(5 - book.star)' class="fa fa-star"></span>
         </small>
       </div>
-      <p class="mb-1">Price - ₹ 147</p>
-      <p class="mb-1">Book Author - Enid Blyton</p>
-      <p class="mb-1">Book ISBN - 9781581180671</p>
-      
+      <p class="mb-1">Price - ₹ {{ book.Price }}</p>
+      <p class="mb-1">Book Author - {{ book.Book_author }}</p>
+      <p class="mb-1">Book ISBN - {{ book.ISBN }}</p>
     </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1"><img src="../../assets/images/library.svg">The Book of Why</h5>
-        <small class="text-muted">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-        </small>
-      </div>
-      <p class="mb-1">Price - ₹ 517</p>
-      <p class="mb-1">Book Author - Judia Pearl</p>
-      <p class="mb-1">Book ISBN - 9781581180671</p>
-      
-    </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-        <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1"><img src="../../assets/images/library.svg">Adventures of Sherlock Holmes</h5>
-          <small class="text-muted">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-          </small>
-        </div>
-        <p class="mb-1">Price - ₹ 149</p>
-        <p class="mb-1">Book Author - Sir Arthur Conan Doyle</p>
-        <p class="mb-1">Book ISBN - 9781581180671</p>
-        
-      </a>
-      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-        <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1"><img src="../../assets/images/library.svg">Adventures of Tom Sawyer, The</h5>
-          <small class="text-muted"><span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span></small>
-        </div>
-        <p class="mb-1">Price - ₹ 149</p>
-        <p class="mb-1">Book Author - Mark Twain</p>
-        <p class="mb-1">Book ISBN - 9781581180671</p>
-        
-      </a>    
+    <!---->    
   </div>
 </div>

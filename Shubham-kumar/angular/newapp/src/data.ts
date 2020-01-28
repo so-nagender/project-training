@@ -5,6 +5,7 @@ interface Books{
     Price: number,
     Book_author:string,
     ISBN: number,
+    star: number
 }
 
 
@@ -16,33 +17,37 @@ interface Authors{
 }
 
 
-const book : Books[] = [
+export const books : Books[] = [
     {
         book_name : "Five on Treasure Island",
         Price : 147,
         Book_author : "Enid Blyton",
-        ISBN : 9781581180671
+        ISBN : 9781581180671,
+        star: 3
     }
     ,
     {
         book_name : "The Book of Why",
         Price : 517,
         Book_author : "Judia Pearl",
-        ISBN : 9781581180671
+        ISBN : 9781581180671,
+        star: 4
     }
     ,
     {
         book_name : "Adventures of Sherlock Holmes",
         Price : 147,
         Book_author : "Sir Arthur Conan Doyale",
-        ISBN : 9781581180671
+        ISBN : 9781581180671,
+        star: 4
     }
     ,
     {
         book_name : "Adventures of Tom Sawyeer",
         Price : 749,
         Book_author : "Mark Twain",
-        ISBN : 9781581180671
+        ISBN : 9781581180671,
+        star: 4
     }
 ]
 
