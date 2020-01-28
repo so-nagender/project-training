@@ -5,46 +5,25 @@
             <th scope="col">B_No.</th>
             <th scope="col">Name</th>
             <th scope="col">LastBook</th>
-            <th scope="col">Price</th>
+            <th scope="col">Country</th>
             <th scope="col">Birthyear </th>
+            <th scope="col">Rating </th>
+            
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>The Red Sari</td>
-            <td>Javier Moro</td>
-            <td>600.00</td>
-            <td>A4676jk</td>
+          <tr *ngFor = 'let authors of author'>
+            <th scope="row">{{authors.id}}</th>
+            <td>{{authors.authorName}}</td>
+            <td>{{authors.lastBook}}</td>
+            <td>{{authors.country}}</td>
+            <td>{{authors.yearOfBirth}}</td>
+            <td >
+              <span *ngFor = 'let i of stars(authors.star)' class="fa fa-star checked"></span>
+              <span *ngFor = 'let i of stars(5-authors.star)' class="fa fa-star"></span>
+            </td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Walking With Gaints</td>
-            <td>Thornton</td>
-            <td>567.00</td>
-            <td>Ig6564578l</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>The Bird</td>
-            <td>787.00</td>
-            <td>Ig65678o</td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>My Music My Life</td>
-            <td>G.D. Pradhan</td>
-            <td>690.00</td>
-            <td>B898989</td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>One Life is Not Enough</td>
-            <td>Neel Singh</td>
-            <td>707.00</td>
-            <td>U66567o</td>
-          </tr>
+          
         </tbody>
       </table>
 </div>
