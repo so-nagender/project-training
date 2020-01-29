@@ -6,3 +6,6 @@
     background-color: cornflowerblue;
     background-image: url(../../assets/images/header-photo.jpg);
 }
+.gapFooter{
+    margin-top: -25px;
+}

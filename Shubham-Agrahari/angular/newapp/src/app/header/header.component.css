@@ -1,3 +1,10 @@
 #header{
     background-image: url(../../assets/images/Our-Books-header.jpg);
 }
+.gap{
+    margin-inline-end: 20px;
+}
+.img{
+    width: 40px;
+    float: left;
+}

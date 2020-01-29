@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BodyLeftComponent } from './body-left/body-left.component';
 import { BodyRightComponent } from './body-right/body-right.component';
+import { TemplateComponent } from './template/template.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BodyRightComponent } from './body-right/body-right.component';
     HeaderComponent,
     FooterComponent,
     BodyLeftComponent,
-    BodyRightComponent
+    BodyRightComponent,
+    TemplateComponent
   ],
   imports: [
     BrowserModule,
