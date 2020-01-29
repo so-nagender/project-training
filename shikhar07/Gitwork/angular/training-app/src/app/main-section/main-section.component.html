@@ -1,0 +1,17 @@
+<div>
+    <div class="row" style="margin: 10px; border: groove;">
+        <div class="col-7">
+            <article style="font-family: superclarendon serif;">
+                <h5> <strong>Author Name-</strong> {{author.authorname | uppercase}}</h5>
+                <h5><strong>Country- </strong>{{author.country}}</h5>
+                <h5><strong>DOB-</strong> {{author.dob | date}}</h5>
+                <h5><strong>Famous Books-</strong> {{author.famousbooks}}</h5>
+                <h4><strong>A short bio-</strong> {{author.bio}}</h4>
+                <button type="button" class="btn btn-primary">Like</button>  
+            </article>
+        </div>
+        <div class="col-5">
+           <img src="{{author.path}}" alt="" width="150px" height="200px" style="padding: 20px;"> 
+        </div>
+    </div>
+</div><br><br>

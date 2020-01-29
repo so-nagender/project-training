@@ -5,61 +5,25 @@
         <th scope="col">#</th>
         <th scope="col">Author Name</th>
         <th scope="col">Country</th>
-        <th scope="col">Last Book Published</th>
+        <th scope="col">Last Book</th>
+        <th scope="col">DOB</th>
       </tr>
     </thead>
     <tbody>
       <!--  -->
-      <tr *ngFor = 'let i of author'>
-        <th scope="row">{{i.sr_no}}</th>
-        <td>{{i.authorname}}</td>
-        <td>{{i.country}}</td>
-        <td>{{i.lastbook}}</td>
+      <tr *ngFor = 'let authObj of author' (click) = "showDetails(authObj)">
+        <th scope="row">{{authObj.sr_no}}</th>
+        <td>{{authObj.authorname | uppercase}}</td>
+        <td>{{authObj.country}}</td>
+        <td>{{authObj.lastbook}}</td>
+        <td>{{authObj.dob | date }}</td>
       </tr>
       <!--  -->
-      <!-- <tr>
-        <th scope="row">2</th>
-        <td>Zack</td>
-        <td>Washington</td>
-        <td>Diplomats</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Trump</td>
-        <td>Boston</td>
-        <td>Dumb</td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td>Chetan</td>
-        <td>India</td>
-        <td>2 States</td>
-      </tr>
-      <tr>
-        <th scope="row">5</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-      <tr>
-        <th scope="row">6</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-      <tr>
-        <th scope="row">7</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-      <tr>
-        <th scope="row">8</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr> -->
-
-     </tbody>
+      
+    </tbody>
   </table>
+  <div *ngIf = "toggle">
+    <app-main-section [author] = "selectedAuthor"></app-main-section>]
+    <button (click) = 'toggleSetter()'>X</button>
+  </div>
   

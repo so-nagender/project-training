@@ -3,7 +3,6 @@
     <thead class="thead-dark">
       <tr>
         <th scope="col">#</th>
-
         <th id="a" scope="col">THE HUB</th>
         <th scope="col">Author Name</th>
         <th scope="col">Price</th>
@@ -12,11 +11,18 @@
     </thead>
     <tbody>
       <!---->
-      <tr *ngFor = 'let i of books'>
+      <tr *ngFor = 'let i of books' (click) = "showDetails(i)">
         <th scope="row">{{i.serial_no}}</th>
-        <td>{{i.bookname}}</td>
+        <td>{{i.bookname | titlecase}}</td>
         <td>{{i.authornm}}</td>
         <td>{{i.price}}</td>
         <td>{{i.isbn}}</td>
       </tr>
       <!---->
+    </tbody>
+  </table>
+  <div *ngIf = "toggle">
+    <app-left-section [books] = "selectedBooks"></app-left-section>
+    <button (click) = 'toggleSetter()'>X</button>
+  </div>
+
