@@ -1,15 +1,15 @@
 #body-left{
-    margin-top: 50px;
+    margin-top: 10px;
     float: left;
     width: 50%;
-    padding-bottom: 500px;
+    padding-bottom: 258px;
     
 }
 #body-right{
-    margin-top: 50px;
-    float: left;
+    margin-top: 10px;
+    float: right;
     width: 50%;
-    padding-bottom: 500px;
+    padding-bottom: 258px;
 }
 #foot{
     

@@ -53,7 +53,7 @@ interface Author
         author_name:string,
         country:string,
         last_book:string,
-        year_of_birth:number,
+        year_of_birth:string,
         star:number
     }
   export  const Author_details : Author[]= [
@@ -63,7 +63,7 @@ interface Author
             author_name:"Jaswant Singh",
             country:"india",
             last_book:"India at Risk",
-            year_of_birth:1910,
+            year_of_birth:'01-01-200',
             star:3
         },
         {
@@ -72,7 +72,7 @@ interface Author
             author_name:"Jawahar Lal Nehru",
             country:"india",
             last_book:"The Discovery of India",
-            year_of_birth:1930,
+            year_of_birth:'01-01-1990',
             star:3
         },
         {
@@ -81,7 +81,7 @@ interface Author
             author_name:"Jawahar Lal Nehru",
             country:"india",
             last_book:"The Discovery of India",
-            year_of_birth:1930,
+            year_of_birth:'01-10-2001',
             star:3
         },
         {
@@ -90,7 +90,7 @@ interface Author
             author_name:"Jaswant Singh",
             country:"india",
             last_book:"India at Risk",
-            year_of_birth:1910,
+            year_of_birth:'02-04-2001',
             star:3
         },
         {
@@ -99,7 +99,7 @@ interface Author
             author_name:"Jawahar Lal Nehru",
             country:"india",
             last_book:"The Discovery of India",
-            year_of_birth:1930,
+            year_of_birth:'05-21-1997',
             star:2
         },
     ]

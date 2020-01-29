@@ -15,6 +15,17 @@ th tr td{
     margin-left: 80x;
    
 }
+/* td,th{
+    border: 8px solid black;
+    text-align: center;
+  
+    border-radius:50px;
+   
+}
+
+tr:nth-child(even){
+    background-color: palevioletred;
+} */
 .checked {
-    color:palevioletred;
+    color:#c01951;
   }

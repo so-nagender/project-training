@@ -7,14 +7,14 @@ th tr td{
     
 
 }
-.btn-primary{
-    background-color:#524EFF;
-    padding-top: 10px;
-    border-radius: 30px;
-    font-size: 20px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+td,th{
+    border: 8px solid black;
+    text-align: center;
+    padding: 15px; border-radius:30px;
+  
 }
+
+
 .checked {
-    color:palevioletred;
+    color:#c01951;
   }

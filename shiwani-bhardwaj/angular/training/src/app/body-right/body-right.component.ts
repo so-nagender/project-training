@@ -7,11 +7,27 @@ import { Author_details} from '../../data'
   styleUrls: ['./body-right.component.css']
 })
 export class BodyRightComponent implements OnInit {
+  toggle=false;
+  selectedAuthor:any;
   Author=Author_details
   constructor() { }
 
   ngOnInit() {
   }
+  
+   toggleSetter()
+   {
+     if (this.toggle)
+     {
+       this.toggle=false;
+     }
+     this.toggle=true;
+   }
+   showdetails(value)
+   {
+    this.selectedAuthor=value;
+    this.toggle=true;
+   }
   createRange(num)
   {
     let items:number[]=[];
