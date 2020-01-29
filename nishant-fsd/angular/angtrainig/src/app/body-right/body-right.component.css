@@ -23,3 +23,16 @@
   .checked {
     color: orange;
   }
+  #popup {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: blue;
+    width: 200px;
+    height: 550px;
+    padding: 20px;
+    position: fixed; 
+  
+}

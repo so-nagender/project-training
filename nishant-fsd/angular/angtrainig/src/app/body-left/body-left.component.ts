@@ -8,8 +8,20 @@ import {bookdata} from '../data'
 export class BodyLeftComponent implements OnInit {
   bookdata=bookdata
   constructor() { }
-
+   selectedbook: any
+   toggle=false
   ngOnInit() {
   }
-
+  togglesetter(){
+    console.log(this.toggle);
+    if(this.toggle){
+      this.toggle=false
+    }
+      
+  }
+  showdetail(data){
+    this.selectedbook=data
+    this.toggle=true
+  }
+ 
 }

@@ -7,13 +7,17 @@
       <th>D.O.B</th>
       <th>Rating</th>
     </tr>
-    <tr *ngFor="let authordata of authordata"><td>{{authordata.authorname}}</td>
+    
+    <tr *ngFor="let authordata of authordata" (click)="showdetail(authordata)"><td>{{authordata.authorname | uppercase}}</td>
         <td>{{authordata.country}}</td>
-        <td>{{authordata.lastbook}}</td>
-        <td>{{authordata.dob}}</td>
+        <td>{{authordata.lastbook | titlecase}}</td>
+        <td>{{authordata.dob |date }}</td>
         <td><span *ngFor="let i of createrange(authordata.star)"class="fa fa-star checked"></span> 
             <span *ngFor="let i of createrange(5-authordata.star)"class="fa fa-star"></span></td>
     </tr>
+    
   </table>
+
+  <div id="popup"class="container-fluid" *ngIf="toggle"><button (click)="togglesetter()">X</button><app-authordetails [author]="selectedauthor"></app-authordetails></div>
   
 

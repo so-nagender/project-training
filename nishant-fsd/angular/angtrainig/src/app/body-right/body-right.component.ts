@@ -8,15 +8,30 @@ import {authordata} from '../data';
 })
 export class BodyRightComponent implements OnInit {
    authordata=authordata
+   selectedauthor:any
+   toggle=false
   constructor() { }
+ 
 
   ngOnInit() {
+  }
+  togglesetter(){
+    console.log(this.toggle);
+    if(this.toggle){
+      this.toggle=false
+    }
+      
   }
   createrange(num:number){
     let item:number[]=[]
     for(let i=1;i<=num;i++){
-      item.push(i);
+      item.push(i)
     }
-    return item;
+    return item
   }
+  showdetail(authdata){
+    this.selectedauthor=authdata
+    this.toggle=true
+  }
+ 
 }
