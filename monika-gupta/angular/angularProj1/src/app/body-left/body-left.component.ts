@@ -10,10 +10,22 @@ import { book } from '../../data';
 export class BodyLeftComponent implements OnInit {
   
   book = book;
+  toggle = false;
+  selectedbook : any ;
 
   constructor() { }
 
   ngOnInit() {
+  }
+  toggleSetter(){
+    if(this.toggle){
+      this.toggle = false;
+    }
+    this.toggle = true;
+  }
+  showDetail(authordetailData){
+    this.selectedbook = authordetailData;
+    this.toggle = true;
   }
   stars(x) {
     let item: number[] =[];

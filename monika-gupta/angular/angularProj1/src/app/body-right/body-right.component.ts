@@ -8,13 +8,25 @@ import { author } from '../../data';
   styleUrls: ['./body-right.component.css']
 })
 export class BodyRightComponent implements OnInit {
-  author = author;
+ 
 
+  author = author;
+  toggle = false;
+  selectedAuthor : any ;
   constructor() { }
 
   ngOnInit() {
   }
-
+  toggleSetter(){
+    if(this.toggle){
+      this.toggle = false;
+    }
+    this.toggle = true;
+  }
+  showDetail(authordetailData){
+    this.selectedAuthor = authordetailData;
+    this.toggle = true;
+  }
   stars(x) {
     let item: number[] =[];
     for(let i=1; i<=x; i++)

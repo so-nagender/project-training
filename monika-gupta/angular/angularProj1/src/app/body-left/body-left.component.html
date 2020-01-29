@@ -11,10 +11,10 @@
           </tr>
         </thead>
         <tbody >
-          <tr *ngFor = 'let books of book'>
+          <tr *ngFor = 'let books of book' (click) = "showDetail(books)">
             <th scope="row">{{books.id}}</th>
             <td>{{books.bookName}}</td>
-            <td>{{books.authorName}}</td>
+            <td>{{books.authorName | uppercase}}</td>
             <td>{{books.price}}</td>
             <td>{{books.ispNo}}</td>
             <td >
@@ -25,4 +25,7 @@
           
         </tbody>
       </table>
+      <div *ngIf = 'toggle'>
+        <app-bookdetail [detail] = 'selectedbook'></app-bookdetail>
+      </div>
 </div>

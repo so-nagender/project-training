@@ -1,0 +1,33 @@
+<div class="container popup" style="padding-bottom: 40px;">
+    <ul class="list-group">
+        <li class="list-group-item head">Author's Detail</li>
+        <li class="list-group-item ">
+            <div class="row">
+                <div class="col-sm-2">
+                    <a href = #>
+                        <img src="../../assets/images/icon.jfif" alt="" width="80px" height="auto"> 
+                    </a>
+
+                </div>
+                <div class="col-sm-10 detail">
+                    <b>Author's Name : </b> {{detail.authorName | uppercase}}
+                    <br>
+                    <b>Country : </b> {{detail.country}}
+                    <br>
+                    <b>Date of Birth : </b>{{detail.yearOfBirth | date}}
+                    <div class="float-right">
+                        <span *ngFor = 'let i of stars(detail.star)' class="fa fa-star checked"></span>
+                        <span *ngFor = 'let i of stars(5-detail.star)' class="fa fa-star"></span>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="bio">
+               <b>Bio : </b>  {{detail.bio}}
+                <br>
+               <b> Books : </b>{{detail.lastBook}}
+            </div>
+        </li>
+      </ul>
+</div>
