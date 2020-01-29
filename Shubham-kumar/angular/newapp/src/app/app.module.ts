@@ -7,6 +7,9 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BodyLeftComponent } from './body-left/body-left.component';
 import { BodyRightComponent } from './body-right/body-right.component';
+import { CapitalizePipe } from './capitalize.pipe';
+import { CustomPipePipe } from './custom-pipe.pipe';
+import { AuthorTemplateComponent } from './author-template/author-template.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { BodyRightComponent } from './body-right/body-right.component';
     HeaderComponent,
     FooterComponent,
     BodyLeftComponent,
-    BodyRightComponent
+    BodyRightComponent,
+    CapitalizePipe,
+    CustomPipePipe,
+    AuthorTemplateComponent
   ],
   imports: [
     BrowserModule,

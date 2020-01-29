@@ -8,23 +8,26 @@
       <p class="mb-1">Famous Authors</p>
     
     </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1"><img src="../../assets/images/author.svg">Enid Blyton</h5>
-        <small class="text-muted">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-        </small>
-      </div>
-      <p class="mb-1">Date-of-birth - 11 August 1897</p>
-      <p class="mb-1">Country - United Kingdom</p>
-      <p class="mb-1">Famous Books - The Enchanted,The Magic Faraway Tree</p>
-      
-    </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div *ngIf="!shouldShowAuthorDetails">
+      <a *ngFor='let value of author'href="#" class="list-group-item list-group-item-action flex-column align-items-start" (click)="showDetails(value)">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1"><img src="../../assets/images/author.svg">{{value.author_name}}</h5>
+          <small class="text-muted">
+            <span  *ngFor ='let stars of createRange(value.stars)'class="fa fa-star  checked"></span>
+            <span  *ngFor ='let stars of createRange(5-value.stars)'class="fa fa-star"></span>
+          </small>
+        </div>
+        <p class="mb-1">Date-of-birth - {{value.Date_of_birth}}</p>
+        <p class="mb-1">Country - {{value.Country}}</p>
+        <p class="mb-1">Famous Books - {{value.Famous_books}}</p>
+        
+      </a>
+    </div>
+    <div *ngIf="shouldShowAuthorDetails">
+      <app-author-template [author]="selectedAuthor"></app-author-template>
+      <button class="btn btn-primary" (click)="showMainList()">Author List</button>
+    </div>
+    <!-- <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
       <div class="d-flex w-100 justify-content-between">
         <h5 class="mb-1"><img src="../../assets/images/author.svg">Judia Pearl</h5>
         <small class="text-muted">
@@ -71,6 +74,6 @@
         <p class="mb-1">Country - United States</p>
         <p class="mb-1">Famous Books - etc</p>
         
-      </a>    
+      </a>     -->
   </div>
 </div>  
