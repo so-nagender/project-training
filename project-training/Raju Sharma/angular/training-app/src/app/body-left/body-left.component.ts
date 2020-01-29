@@ -20,5 +20,19 @@ export class BodyLeftComponent implements OnInit {
     }
     return item;
   } 
+  
+  toggle = false;
+  authorSelector: any;
+  toggleSetter() {
+    if(this.toggle) {
+      this.toggle = false;
+    }
+    this.toggle = true;
+  }
+
+  showDetails(val) {
+    this.authorSelector = val;
+    this.toggle = true;
+  }
 
 }

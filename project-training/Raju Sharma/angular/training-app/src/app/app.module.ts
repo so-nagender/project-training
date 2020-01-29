@@ -8,6 +8,8 @@ import { BodyLeftComponent } from './body-left/body-left.component';
 import { BodyRightComponent } from './body-right/body-right.component';
 import { FooterComponent } from './footer/footer.component';
 import { ExtraComponent } from './extra/extra.component';
+import { AuthorDetailsComponent } from './author-details/author-details.component';
+import { BookDetailsComponent } from './book-details/book-details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ExtraComponent } from './extra/extra.component';
     BodyLeftComponent,
     BodyRightComponent,
     FooterComponent,
-    ExtraComponent
+    ExtraComponent,
+    AuthorDetailsComponent,
+    BookDetailsComponent,
   ],
   imports: [
     BrowserModule,

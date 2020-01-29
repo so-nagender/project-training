@@ -8,9 +8,11 @@ import { authors } from '../../data'
 export class BodyRightComponent implements OnInit {
   authors = authors;
   constructor() { }
-
+  // birthday = new Date(1988, 3, 15);
   ngOnInit() {
+
   }
+
   rang(num) {
     let item: number[] = [];
     for(let i=1; i<=num; i++)
@@ -19,4 +21,19 @@ export class BodyRightComponent implements OnInit {
     }
     return item;
   }
+
+  toggle = false;
+  authorSelector: any;
+  toggleSetter() {
+    if(this.toggle) {
+      this.toggle = false;
+    }
+    this.toggle = true;
+  }
+
+  showDetails(val) {
+    this.authorSelector = val;
+    this.toggle = true;
+  }
+
 }
