@@ -1,51 +1,38 @@
 <div class="bg_image">
     <div class="container-fluid">
         <div class="container">
-            <div class="container">
+            <!-- <div class="container"> -->
                 <!-- <div class="row row-cols-2">
                   <div class="col"> -->
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                              <th scope="col">Name</th>
-                              <th scope="col">Author</th>
+                              <th scope="col">Book_Name</th>
+                              <th scope="col">Author_Name</th>
                               <th scope="col">Price</th>
                               <th scope="col">ISBD:</th>
+                              <th scope="col">Rating</th>
                             </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">Physics</th>
-                              <td>Chan</td>
-                              <td>29.99$</td>
-                              <td>1098</td>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor = "let bookObj of book" (click)='showDetail(bookObj)'>
+                              <th scope="row">{{ bookObj.name | titlecase}} </th>
+                              <td>{{bookObj.author | uppercase}} </td>
+                              <td>{{bookObj. price}} </td>
+                              <td>{{bookObj.isbd}} </td>
+                              <td>
+                                <span *ngFor="let i of createRange(book.star)" class="fa fa-star checked" class="fa fa-star checked"></span> 
+                                <span *ngFor="let i of createRange(5-book.star)" class="fa fa-star checked" class="fa fa-star"></span></td>
                             </tr>
-                            <tr>
-                              <th scope="row">Databases</th>
-                              <td>Patel</td>
-                              <td>34.8$</td>
-                              <td>5649</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">Chemistry</th>
-                              <td>Deepak</td>
-                              <td>40$</td>
-                              <td>2653</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">DAA</th>
-                              <td>Aviral Sharma</td>
-                              <td>29$</td>
-                              <td>2658</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">Machine Learning</th>
-                              <td>Scott</td>
-                              <td>40$</td>
-                              <td>2651</td>
-                            </tr>
+                            
+                            
                         </tbody>
-                      </table>
+                    </table>
+                    <div *ngIf='toggle'>
+                      <app-section [book] = 'selectedbook'></app-section>
+                      <button class="btn" (click)='showmainList()'>Book List</button>
+                      <button (click)='toggleSetter'>X</button>
+                    </div>
                   <!-- </div>
             </div> -->
         </div>    

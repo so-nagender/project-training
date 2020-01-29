@@ -2,4 +2,6 @@
     background: url(src='/assets/images/bg_image.jpg');
 } */
 
-
+.checked {
+    color: orange;
+  }

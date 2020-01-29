@@ -14,13 +14,20 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <th scope="row">BudgetBook</th>
-                            <td>California</td>
-                            <td>Relative Motion</td>
-                            <td>01/08/1980</td>
+                          <tr *ngFor = "let author of authorinfo">
+                            <th scope="row"> {{author.publication}} </th>
+                            <td> {{author.country}} </td>
+                            <td> {{author.last_book}} </td>
+                            <td> {{author.DOB | date: "mediumDate"}} </td>
+                            <!-- <td>
+                              <span class="fa fa-star checked"></span >
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                            </td> -->
                           </tr>
-                          <tr>
+                          <!-- <tr>
                             <th scope="row">Universal</th>
                             <td>India</td>
                             <td>Organic</td>
@@ -43,9 +50,14 @@
                             <td>France</td>
                             <td>CNN</td>
                             <td>23/06/1985</td>
-                          </tr>
+                          </tr> -->
                         </tbody>
                     </table>
+                    <div *ngIf='toggle'>
+                      <app-section [book] = 'selectedbook'></app-section>
+                      <button class="btn" (click)='showmainList()'>Book List</button>
+                      <button (click)='toggleSetter'>X</button>
+                    </div>
                 <!--  </div> -->
             </div>
         </div>    
