@@ -9,7 +9,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor = 'let author of authors' (click)="showDetails(author)" data-toggle="modal" data-target="#exampleModalCenter">
+      <tr *ngFor = 'let author of authors' (click)="showDetailss(author)" data-toggle="modal" data-target="#exampleModalCenter">
         <th scope="row">{{ author.authorName }}</th>
         <td>{{ author.authorCountry }}</td>
         <td>{{ author.authorLastBook }}</td>

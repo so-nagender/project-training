@@ -31,7 +31,7 @@ export class BodyRightComponent implements OnInit {
     this.toggle = true;
   }
 
-  showDetails(val) {
+  showDetailss(val) {
     this.authorSelector = val;
     this.toggle = true;
   }

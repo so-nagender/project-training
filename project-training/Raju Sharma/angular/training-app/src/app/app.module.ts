@@ -10,6 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ExtraComponent } from './extra/extra.component';
 import { AuthorDetailsComponent } from './author-details/author-details.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
+import { TestComponent } from './test/test.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,10 +23,12 @@ import { BookDetailsComponent } from './book-details/book-details.component';
     ExtraComponent,
     AuthorDetailsComponent,
     BookDetailsComponent,
+    TestComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

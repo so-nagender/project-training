@@ -6,6 +6,17 @@
     <app-extra></app-extra>
 </div> -->
 <!-- extra end -->
+<div class="container">
+    <form>
+        <div class="form-group">
+          <!-- <label for="formGroupExampleInput">Example label</label> -->
+          <input [(ngModel)] = "fullName" name='fullname' placeholder="kuch v likh do magic dekho " >
+          <h4> {{fullName}}  </h4>
+        </div>
+    </form>
+</div>
+
+
 
 <div class="container-fluid full-image my-4">
     <div class="conatianer">
@@ -19,6 +30,7 @@
         </div>
     </div>
 </div>
+
 <div id="footer" class="mb-0">
     <app-footer></app-footer>
 </div>
