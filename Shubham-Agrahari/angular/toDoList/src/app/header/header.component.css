@@ -1,0 +1,11 @@
+.bgImage{
+    background: url(../../assets/banner.png);
+    background-size: cover;
+    height: 500px;  
+}
+.menu-right {
+    justify-content: flex-end;
+}
+#buttonGap{
+    margin-inline-end: 10px;
+}
