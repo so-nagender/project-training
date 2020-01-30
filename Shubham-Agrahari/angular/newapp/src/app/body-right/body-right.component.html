@@ -9,12 +9,13 @@
         <td>{{auth.last_Book}}</td>
         <td>{{auth.year_of_Birth | date: "mediumDate"}}</td>        
       </tr>
+    </a>
       <div *ngIf="toggle">
         <app-template [author]="selectedAuthor"></app-template>
         <button class="btn btn-primary" (click)="showMainList()">Close</button>
         <button (click)="toggleSettler()"></button> 
       </div>       
-      </a>
+      
     </tbody>    
   </table>
   <div class="clearfix"></div>
