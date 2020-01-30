@@ -1,0 +1,16 @@
+.topcolumn a{
+  color: white;
+}
+.button2{
+  border-radius: 20px;
+  background: rgba(85, 83, 212, 0.952);
+  margin-right: 10px;
+}
+/* .stick{
+  position: sticky;
+  z-index: 1;
+  top: 10px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+} */

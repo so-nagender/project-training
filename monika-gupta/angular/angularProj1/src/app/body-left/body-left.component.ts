@@ -17,6 +17,7 @@ export class BodyLeftComponent implements OnInit {
 
   ngOnInit() {
   }
+
   toggleSetter(){
     if(this.toggle){
       this.toggle = false;
@@ -27,6 +28,9 @@ export class BodyLeftComponent implements OnInit {
     this.selectedbook = authordetailData;
     this.toggle = true;
   }
+
+
+  
   stars(x) {
     let item: number[] =[];
     for(let i=1; i<=x; i++)

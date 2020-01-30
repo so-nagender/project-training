@@ -9,6 +9,8 @@ import { BodyLeftComponent } from './body-left/body-left.component';
 import { BodyRightComponent } from './body-right/body-right.component';
 import { AuthorsdetailComponent } from './authorsdetail/authorsdetail.component';
 import { BookdetailComponent } from './bookdetail/bookdetail.component';
+import { FormComponent } from './form/form.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,11 +22,13 @@ import { BookdetailComponent } from './bookdetail/bookdetail.component';
     BodyRightComponent,
     AuthorsdetailComponent,
     BookdetailComponent,
+    FormComponent,
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
