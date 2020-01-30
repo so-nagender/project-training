@@ -1,0 +1,20 @@
+section
+{
+    padding-top:350px
+;}
+.images
+{
+    height: auto;
+    width: 600px;
+    float: left;
+    margin: 20px;
+}
+.font
+{
+   
+    font-weight: 700;
+    font-size: 50px;
+    float: right;
+  padding: 20px;
+  
+}

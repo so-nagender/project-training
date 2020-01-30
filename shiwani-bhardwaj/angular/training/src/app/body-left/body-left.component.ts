@@ -9,7 +9,7 @@ import {  Books_data } from '../../data';
 export class BodyLeftComponent implements OnInit {
   toggle=false;
   selectedBook:any;
-   Book= Books_data
+  Book= Books_data
   constructor() { }
 
   ngOnInit() {
