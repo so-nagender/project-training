@@ -7,9 +7,22 @@ import {author} from '../../data'
 })
 export class BodyRightComponent implements OnInit {
   author1 = author;
+  toggle = false;
+  selectedAuthor : any;
   constructor() { }
 
   ngOnInit() {
+  }
+  toggleSetter(){
+    if(this.toggle){
+      this.toggle = false;
+    }
+    this.toggle = true;
+  }
+  
+  showDetail(authordetaildata){
+    this.selectedAuthor = authordetaildata;
+    this.toggle = true
   }
 
 }

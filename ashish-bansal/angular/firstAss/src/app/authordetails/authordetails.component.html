@@ -1,0 +1,30 @@
+<div class="container popup" style="padding-bottom: 40px;">
+    <ul class="list-group">
+        <li class="list-group-item head">Author's Detail</li>
+        <li class="list-group-item ">
+            <div class="row">
+                <div class="col-sm-2">
+                    <a href = #>
+                        <img src="../../assets/images/icon.jfif" alt="" width="80px" height="auto"> 
+                    </a>
+
+                </div>
+                <div class="col-sm-10 detail">
+                    <b>Author's Name : </b> {{details.name | uppercase}}
+                    <br>
+                    <b>Country : </b> {{details.country}}
+                    <br>
+                    <b>Date of Birth : </b>{{details.DateofBirth | date}}
+                    
+
+                </div>
+
+            </div>
+            <div class="bio">
+               <b>Bio : </b>  {{details.Bio}}
+                <br>
+               <b> Books : </b>{{details.lastBook}}
+            </div>
+        </li>
+      </ul>
+</div>

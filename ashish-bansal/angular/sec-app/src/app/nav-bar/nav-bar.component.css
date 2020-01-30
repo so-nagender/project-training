@@ -1,0 +1,17 @@
+.nav-bar{
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.nav-bar a{
+    color: white;
+}
+
+.nav-bar li a:hover{
+    color : blue;
+}
+
+.button-color{
+    background-color: rgb(83, 201, 248);
+    color: white;
+    
+}

@@ -8,11 +8,14 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor = 'let authors of author1'>
+        <tr *ngFor = 'let authors of author1' (click) = showDetail(authors)>
             <th scope="row">{{authors.id}}</th>
             <td>{{authors.name}}</td>
             <td>{{authors.lastBook}}</td>
         </tr>
         </tbody>
     </table>
+    <div *ngIf = 'toggle'>
+        <app-authordetails [details] = 'selectedAuthor'></app-authordetails>
+    </div>
 </div>

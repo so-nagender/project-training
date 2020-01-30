@@ -1,0 +1,39 @@
+.white-color{
+    color:white;
+}
+.spacing-around{
+    padding : 120px;
+    line-height: 70px;
+}
+
+.col-1-spacing{
+    padding-top: 70px;
+}
+
+#front-text{
+    font-weight: 400;
+    font-size: 2.25rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.form-background-style{
+    background-color:white;
+    padding: 17px;
+    line-height: 50px;
+    border-radius: 5px;
+}
+.form-upper-text{
+    color: black;
+    font-size: x-large;
+    text-align: center;
+}
+.form-text-style{
+    font-size: 12px;
+    color: gray;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.button-color{
+    background-color: rgb(83, 201, 248);
+    color: white;
+    
+}
