@@ -2,16 +2,17 @@
     <div class="row" style="margin: 10px; border: groove;">
         <div class="col-7">
             <article style="font-family: superclarendon serif;">
-                <h5> <strong>Book Name-</strong> {{books.bookname | uppercase}}</h5>
+                <h5> <strong>Book Name-</strong> {{books.bookname | titlecase}}</h5>
                 <h5><strong>Author Name- </strong>{{books.authornm}}</h5>
                 <h5><strong>Book Price-</strong> {{books.price | date}}</h5>
                 <h5><strong>ISBN no-</strong> {{books.isbn}}</h5>
                 <h4><strong>A short bio-</strong> {{books.bio}}</h4>
-                <button type="button" class="btn btn-primary">Like</button>  
+                <!-- <button type="button" class="btn btn-primary">Like</button>   -->
+                <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
             </article>
         </div>
         <div class="col-5">
-            <img src="/assets/images/iron.jpg" alt="" width="150px" height = "200px" style="padding: 20px;" >
+            <img src="{{books.path}}" alt="" width="150px" height = "200px" style="padding: 20px;" >
         </div>
     </div>
 </div><br><br>
