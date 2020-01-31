@@ -1,41 +1,49 @@
 <div class="bg_image">
-    <div class="container-fluid">
-        <div class="container">
-            <!-- <div class="container"> -->
-                <!-- <div class="row row-cols-2">
+  <div class="container-fluid">
+    <div class="container">
+      <!-- <div class="container"> -->
+      <!-- <div class="row row-cols-2">
                   <div class="col"> -->
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                              <th scope="col">Book_Name</th>
-                              <th scope="col">Author_Name</th>
-                              <th scope="col">Price</th>
-                              <th scope="col">ISBD:</th>
-                              <th scope="col">Rating</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr *ngFor = "let bookObj of book" (click)='showDetail(bookObj)'>
-                              <th scope="row">{{ bookObj.name | titlecase}} </th>
-                              <td>{{bookObj.author | uppercase}} </td>
-                              <td>{{bookObj. price}} </td>
-                              <td>{{bookObj.isbd}} </td>
-                              <td>
-                                <span *ngFor="let i of createRange(book.star)" class="fa fa-star checked" class="fa fa-star checked"></span> 
-                                <span *ngFor="let i of createRange(5-book.star)" class="fa fa-star checked" class="fa fa-star"></span></td>
-                            </tr>
-                            
-                            
-                        </tbody>
-                    </table>
-                    <div *ngIf='toggle'>
-                      <app-section [book] = 'selectedbook'></app-section>
-                      <button class="btn" (click)='showmainList()'>Book List</button>
-                      <button (click)='toggleSetter'>X</button>
-                    </div>
-                  <!-- </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Book_Name</th>
+            <th scope="col">Author_Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">ISBD:</th>
+            <th scope="col">Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let bookObj of book" (click)="showDetail(bookObj)">
+            <th class="row_select_left" scope="row">
+              {{ bookObj.name | titlecase }}
+            </th>
+            <td>{{ bookObj.author | uppercase }}</td>
+            <td>{{ bookObj.price }}</td>
+            <td>{{ bookObj.isbd }}</td>
+            <td>
+              <span
+                *ngFor="let i of createRange(book.star)"
+                class="fa fa-star checked"
+                class="fa fa-star checked"
+              ></span>
+              <span
+                *ngFor="let i of createRange(5 - book.star)"
+                class="fa fa-star checked"
+                class="fa fa-star"
+              ></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div *ngIf="toggle">
+        <app-section [book]="selectedbook"></app-section>
+        <button class="btn" (click)="showmainList()">Book List</button>
+        <button (click)="(toggleSetter)">X</button>
+      </div>
+      <!-- </div>
             </div> -->
-        </div>    
     </div>
+  </div>
 </div>
-

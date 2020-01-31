@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-.bg_body_image{
-    background-image: url(../src/assets/images/bg_image.jpg);
-    background-repeat: repeat;
-    
+.bg_body_image {
+  background-image: url(../src/assets/images/bg_image.jpg);
+  background-repeat: repeat;
 }
