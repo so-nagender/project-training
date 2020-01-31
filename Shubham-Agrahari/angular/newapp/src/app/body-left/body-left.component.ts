@@ -7,18 +7,16 @@ import { book } from '../../data';
   styleUrls: ['./body-left.component.css']
 })
 export class BodyLeftComponent implements OnInit {
-  books= book;
+  books = book;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-  createRange(num){
-    let items:number[]=[];
-    for(let i =1;i<=num;i++){
-      items.push(i)
+  ngOnInit() {}
+  createRange(num) {
+    const items: number[] = [];
+    for (let i = 1; i <= num; i++) {
+      items.push(i);
     }
     return items;
   }
-
 }

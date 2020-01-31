@@ -1,15 +1,19 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { BodyLeftComponent } from './body-left/body-left.component';
+import { BodyRightComponent } from './body-right/body-right.component';
+import { FooterComponent } from './footer/footer.component';
 
-describe('AppComponent', () => {
+xdescribe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent, HeaderComponent,BodyLeftComponent,BodyRightComponent,FooterComponent
       ],
     }).compileComponents();
   }));

@@ -8,14 +8,14 @@ describe('TemplateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TemplateComponent ]
-    })
-    .compileComponents();
+      declarations: [TemplateComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TemplateComponent);
     component = fixture.componentInstance;
+    component.author = {};
     fixture.detectChanges();
   });
 

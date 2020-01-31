@@ -1,24 +1,22 @@
 <div id="body-right">
-    <table class="table">    
+  <table class="table">
     <tbody>
-      <a *ngFor='let auth of author' href="#" (click)="showDetails(auth)">
-      <tr>
-        <th scope="row">{{auth.serial_Number}}</th>
-        <td>{{auth.author_Name | uppercase}}</td>
-        <td>{{auth.country}}</td>
-        <td>{{auth.last_Book}}</td>
-        <td>{{auth.year_of_Birth | date: "mediumDate"}}</td>        
-      </tr>
-    </a>
+      <a *ngFor="let auth of author" href="#" (click)="showDetails(auth)">
+        <tr>
+          <th scope="row">{{ auth.serial_Number }}</th>
+          <td>{{ auth.author_Name | uppercase }}</td>
+          <td>{{ auth.country }}</td>
+          <td>{{ auth.last_Book }}</td>
+          <td>{{ auth.year_of_Birth | date: "mediumDate" }}</td>
+        </tr>
+      </a>
+
       <div *ngIf="toggle">
         <app-template [author]="selectedAuthor"></app-template>
         <button class="btn btn-primary" (click)="showMainList()">Close</button>
-        <button (click)="toggleSettler()"></button> 
-      </div>       
-      
-    </tbody>    
+        <button (click)="toggleSettler()"></button>
+      </div>
+    </tbody>
   </table>
   <div class="clearfix"></div>
-</div>  
-
-
+</div>

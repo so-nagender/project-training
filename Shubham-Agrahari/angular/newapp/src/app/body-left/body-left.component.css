@@ -1,7 +1,6 @@
-#body-left{
-    width: 50%;
-    float:left;
-    background-color:lightseagreen;
-    border: 2px black;
-
+#body-left {
+  width: 50%;
+  float: left;
+  background-color: lightseagreen;
+  border: 2px black;
 }

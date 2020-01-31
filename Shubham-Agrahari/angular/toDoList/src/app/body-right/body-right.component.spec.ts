@@ -13,6 +13,8 @@ describe('BodyRightComponent', () => {
     .compileComponents();
   }));
 
+  
+
   beforeEach(() => {
     fixture = TestBed.createComponent(BodyRightComponent);
     component = fixture.componentInstance;
@@ -20,6 +22,9 @@ describe('BodyRightComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    console.log(expect(component).toBeTruthy());
   });
+  it('it should have 5 elements',() =>{
+  fixture.nativeElement.querySelectorAll('')
+  })
 });

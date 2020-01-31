@@ -8,25 +8,23 @@ import { authors } from '../../data';
 })
 export class BodyRightComponent implements OnInit {
   author = authors;
-  toggle=false;
+  toggle = false;
   selectedAuthor;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-  toggleSetter(){
-    if(this.toggle){
-      this.toggle=false;
+  ngOnInit() {}
+  toggleSetter() {
+    if (this.toggle) {
+      this.toggle = false;
     }
-    this.toggle=true;
+    this.toggle = true;
   }
-  showDetails(value){
-    this.toggle=true;
-    this.selectedAuthor=value;
+  showDetails(value) {
+    this.toggle = true;
+    this.selectedAuthor = value;
   }
-  showMainList(){
-    this.toggle=false;
+  showMainList() {
+    this.toggle = false;
   }
-
 }
