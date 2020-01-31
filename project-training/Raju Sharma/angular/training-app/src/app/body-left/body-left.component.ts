@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { books } from '../../data'
+import { books } from '../../data';
 
 @Component({
   selector: 'app-body-left',
@@ -8,31 +8,28 @@ import { books } from '../../data'
 })
 export class BodyLeftComponent implements OnInit {
   books = books;
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
   rang(num) {
-    let item: number[] =[];
-    for(let i=1; i<=num; i++)
-    {
+    let item: number[] = [];
+    for (let i = 1; i <= num; i++) {
       item.push(i);
     }
     return item;
-  } 
-  
+  }
+
   toggle = false;
-  authorSelector: any;
+  bookSelector: any;
   toggleSetter() {
-    if(this.toggle) {
+    if (this.toggle) {
       this.toggle = false;
     }
     this.toggle = true;
   }
 
-  showDetails(val) {
-    this.authorSelector = val;
+  showBookDetails(val) {
+    this.bookSelector = val;
     this.toggle = true;
   }
-
 }

@@ -15,9 +15,7 @@ export class AuthorDetailsComponent implements OnInit {
   // };
   @Input()
   authors;
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

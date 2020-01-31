@@ -1,6 +1,10 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { ArticleBodyComponent } from './article-body/article-body.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -9,7 +13,7 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent, ArticleBodyComponent, FooterComponent, HeaderComponent, NavBarComponent
       ],
     }).compileComponents();
   }));
@@ -30,6 +34,8 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('split-app app is running!');
+    //expect(compiled.querySelector('.content span').textContent).toContain('split-app app is running!');
   });
+  it('Counting ')
+
 });

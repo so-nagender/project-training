@@ -21,7 +21,7 @@ function header_table() {
 header_table(); // one time header calling...
 
 // Creating table using js 
-var form = document.getElementById('popup');
+  
 form.addEventListener('submit', generateTable);
 function generateTable(event) {
     event.preventDefault();
@@ -44,6 +44,7 @@ function generateTable(event) {
     }
     var dvTable = document.getElementById("generateTable");
     dvTable.innerHTML = "";
+    
     dvTable.appendChild(table);
     document.getElementById('popup').style.display = 'none';
 }

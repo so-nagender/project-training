@@ -23,14 +23,10 @@ import { FormsModule } from '@angular/forms';
     ExtraComponent,
     AuthorDetailsComponent,
     BookDetailsComponent,
-    TestComponent,
+    TestComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

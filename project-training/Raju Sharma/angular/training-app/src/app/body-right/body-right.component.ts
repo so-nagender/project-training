@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { authors } from '../../data'
+import { authors } from '../../data';
 @Component({
   selector: 'app-body-right',
   templateUrl: './body-right.component.html',
@@ -7,16 +7,13 @@ import { authors } from '../../data'
 })
 export class BodyRightComponent implements OnInit {
   authors = authors;
-  constructor() { }
+  constructor() {}
   // birthday = new Date(1988, 3, 15);
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   rang(num) {
     let item: number[] = [];
-    for(let i=1; i<=num; i++)
-    {
+    for (let i = 1; i <= num; i++) {
       item.push(i);
     }
     return item;
@@ -25,15 +22,14 @@ export class BodyRightComponent implements OnInit {
   toggle = false;
   authorSelector: any;
   toggleSetter() {
-    if(this.toggle) {
+    if (this.toggle) {
       this.toggle = false;
     }
     this.toggle = true;
   }
 
-  showDetailss(val) {
+  showDetails(val) {
     this.authorSelector = val;
     this.toggle = true;
   }
-
 }

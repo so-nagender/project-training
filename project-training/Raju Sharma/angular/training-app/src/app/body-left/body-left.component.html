@@ -1,40 +1,52 @@
 <table class="table table-hover">
-    <thead>
-      <tr>
-        <th scope="col">Book Name</th>
-        <th scope="col">Auth Name</th>
-        <th scope="col">Price</th>
-        <th scope="col">ISB No.</th>
-        <th scope="col">Rating</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor='let book of books'  (click)="showDetails(book)" data-toggle="modal" data-target="#exampleModalCenter">
-            <th scope="row"> {{book.bookName | uppercase}} </th>
-            <td>{{ book.bookAuthorName }}</td>
-            <td>{{ book.bookPrice | currency:"USD" }}</td>
-            <td>{{ book.bookISPno }}</td>
-            <td >
-                <span *ngFor = 'let i of rang(book.rate)' class="fa fa-star checked"></span>
-                <span *ngFor = 'let i of rang(5-book.rate)' class="fa fa-star"></span>
-            </td>
-        </tr>
-    </tbody>
-  </table>
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Author Details</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div *ngIf = "toggle">
-            <app-book-details [books] = "authorSelector"></app-book-details>
-          </div>
+  <thead>
+    <tr>
+      <th scope="col">Book Name</th>
+      <th scope="col">Auth Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">ISB No.</th>
+      <th scope="col">Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let book of books"
+      (click)="showBookDetails(book)"
+      data-toggle="modal"
+      data-target="#exampleModalCenter"
+    >
+      <th scope="row" class="item">{{ book.bookName | uppercase }}</th>
+      <td>{{ book.bookAuthorName }}</td>
+      <td>{{ book.bookPrice | currency: 'USD' }}</td>
+      <td>{{ book.bookISPno }}</td>
+      <td>
+        <span *ngFor="let i of rang(book.rate)" class="fa fa-star checked"></span>
+        <span *ngFor="let i of rang(5 - book.rate)" class="fa fa-star"></span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div
+  class="modal fade"
+  id="exampleModalCenter"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle1"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle1">Author Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div *ngIf="toggle">
+          <app-book-details [books]="bookSelector"></app-book-details>
         </div>
       </div>
     </div>
   </div>
+</div>
