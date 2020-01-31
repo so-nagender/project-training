@@ -1,8 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BodyComponent } from './body.component';
+import { By } from '@angular/platform-browser';
 
-describe('BodyComponent', () => {
+fdescribe('BodyComponent', () => {
   let component: BodyComponent;
   let fixture: ComponentFixture<BodyComponent>;
 
@@ -22,4 +23,6 @@ describe('BodyComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  
 });

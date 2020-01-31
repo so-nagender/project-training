@@ -1,27 +1,25 @@
-.head{
-    background: rgb(82, 36, 82);
-    text-align: center;
-    color: whitesmoke;
-    font-size: 25px;
+.head {
+  background: rgb(82, 36, 82);
+  text-align: center;
+  color: whitesmoke;
+  font-size: 25px;
 }
-.detail{
-    font-size: 15px;
-    
+.detail {
+  font-size: 15px;
 }
-.bio{
-    font-size: 15px;
-    padding-left: 21px;
+.bio {
+  font-size: 15px;
+  padding-left: 21px;
 }
-.checked{
-    color: rgb(230, 111, 43);
+.checked {
+  color: rgb(230, 111, 43);
 }
-.popup{
-    z-index: 1;
-    display: block;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-
+.popup {
+  z-index: 1;
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
 }

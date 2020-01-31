@@ -1,16 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BodyRightComponent } from './body-right.component';
+import { AuthorsdetailComponent } from '../authorsdetail/authorsdetail.component';
 
-describe('BodyRightComponent', () => {
+fdescribe('BodyRightComponent', () => {
   let component: BodyRightComponent;
   let fixture: ComponentFixture<BodyRightComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BodyRightComponent ]
-    })
-    .compileComponents();
+      declarations: [BodyRightComponent, AuthorsdetailComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -21,5 +21,10 @@ describe('BodyRightComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have 5 elements', () => {
+    const counter = fixture.nativeElement.querySelectorAll('.check');
+    expect(counter.length).toBe(5);
   });
 });

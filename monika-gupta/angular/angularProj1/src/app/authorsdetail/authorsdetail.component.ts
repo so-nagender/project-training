@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-
 @Component({
   selector: 'app-authorsdetail',
   templateUrl: './authorsdetail.component.html',
@@ -10,18 +9,15 @@ export class AuthorsdetailComponent implements OnInit {
   @Input()
   detail;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-  
+  ngOnInit() {}
+
   stars(x) {
-    let item: number[] =[];
-    for(let i=1; i<=x; i++)
-    {
+    const item: number[] = [];
+    for (let i = 1; i <= x; i++) {
       item.push(i);
     }
     return item;
   }
-
 }

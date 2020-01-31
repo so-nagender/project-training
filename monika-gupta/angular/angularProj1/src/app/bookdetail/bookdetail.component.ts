@@ -9,17 +9,14 @@ export class BookdetailComponent implements OnInit {
   @Input()
   detail;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
   stars(x) {
-    let item: number[] =[];
-    for(let i=1; i<=x; i++)
-    {
+    const item: number[] = [];
+    for (let i = 1; i <= x; i++) {
       item.push(i);
     }
     return item;
   }
-
 }

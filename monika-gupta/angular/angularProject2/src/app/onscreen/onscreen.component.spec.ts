@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OnscreenComponent } from './onscreen.component';
 
-describe('OnscreenComponent', () => {
+fdescribe('OnscreenComponent', () => {
   let component: OnscreenComponent;
   let fixture: ComponentFixture<OnscreenComponent>;
 

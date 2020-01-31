@@ -6,27 +6,25 @@
         <th scope="col">Name</th>
         <th scope="col">LastBook</th>
         <th scope="col">Country</th>
-        <th scope="col">Birthyear </th>
-        <th scope="col">Rating </th>
-            
+        <th scope="col">Birthyear</th>
+        <th scope="col">Rating</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor = 'let authors of author' (click) = "showDetail(authors)">
-        <th scope="row">{{authors.id}}</th>
-        <td>{{authors.authorName | uppercase}}</td>
-        <td>{{authors.lastBook}}</td>
-        <td>{{authors.country}}</td>
-        <td>{{authors.yearOfBirth | date }}</td>
-        <td >
-          <span *ngFor = 'let i of stars(authors.star)' class="fa fa-star checked"></span>
-          <span *ngFor = 'let i of stars(5-authors.star)' class="fa fa-star"></span>
+      <tr *ngFor="let authors of author" (click)="showDetail(authors)">
+        <th class="check" scope="row">{{ authors.id }}</th>
+        <td>{{ authors.authorName | uppercase }}</td>
+        <td>{{ authors.lastBook }}</td>
+        <td>{{ authors.country }}</td>
+        <td>{{ authors.yearOfBirth | date }}</td>
+        <td>
+          <span *ngFor="let i of stars(authors.star)" class="fa fa-star checked"></span>
+          <span *ngFor="let i of stars(5 - authors.star)" class="fa fa-star"></span>
         </td>
       </tr>
-          
     </tbody>
   </table>
-  <div *ngIf = 'toggle'>
-    <app-authorsdetail [detail] = 'selectedAuthor'></app-authorsdetail>
+  <div *ngIf="toggle">
+    <app-authorsdetail [detail]="selectedAuthor"></app-authorsdetail>
   </div>
 </div>

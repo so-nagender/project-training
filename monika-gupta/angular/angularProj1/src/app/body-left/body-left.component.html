@@ -1,31 +1,30 @@
 <div class="container bodyleft">
-    <table class="table container table-striped border border-success ">
-        <thead>
-          <tr >
-            <th scope="col">B_No.</th>
-            <th scope="col">BookName</th>
-            <th scope="col">AuthorName</th>
-            <th scope="col">Price</th>
-            <th scope="col">ISP No.</th>
-            <th scope="col">Rating </th>
-          </tr>
-        </thead>
-        <tbody >
-          <tr *ngFor = 'let books of book' (click) = "showDetail(books)">
-            <th scope="row">{{books.id}}</th>
-            <td>{{books.bookName}}</td>
-            <td>{{books.authorName | uppercase}}</td>
-            <td>{{books.price}}</td>
-            <td>{{books.ispNo}}</td>
-            <td >
-              <span *ngFor = 'let i of stars(books.star)' class="fa fa-star checked"></span>
-              <span *ngFor = 'let i of stars(5-books.star)' class="fa fa-star"></span>
-            </td>
-          </tr>
-          
-        </tbody>
-      </table>
-      <div *ngIf = 'toggle'>
-        <app-bookdetail [detail] = 'selectedbook'></app-bookdetail>
-      </div>
+  <table class="table container table-striped border border-success ">
+    <thead>
+      <tr>
+        <th scope="col">B_No.</th>
+        <th scope="col">BookName</th>
+        <th scope="col">AuthorName</th>
+        <th scope="col">Price</th>
+        <th scope="col">ISP No.</th>
+        <th scope="col">Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let books of book" (click)="showDetail(books)">
+        <th class="check" scope="row">{{ books.id }}</th>
+        <td>{{ books.bookName }}</td>
+        <td>{{ books.authorName | uppercase }}</td>
+        <td>{{ books.price }}</td>
+        <td>{{ books.ispNo }}</td>
+        <td>
+          <span *ngFor="let i of stars(books.star)" class="fa fa-star checked"></span>
+          <span *ngFor="let i of stars(5 - books.star)" class="fa fa-star"></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="toggle">
+    <app-bookdetail [detail]="selectedbook"></app-bookdetail>
+  </div>
 </div>

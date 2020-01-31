@@ -1,43 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import { book } from '../../data';
 
-
 @Component({
   selector: 'app-body-left',
   templateUrl: './body-left.component.html',
   styleUrls: ['./body-left.component.css']
 })
 export class BodyLeftComponent implements OnInit {
-  
   book = book;
   toggle = false;
-  selectedbook : any ;
+  selectedbook: any;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  toggleSetter(){
-    if(this.toggle){
+  toggleSetter() {
+    if (this.toggle) {
       this.toggle = false;
     }
     this.toggle = true;
   }
-  showDetail(authordetailData){
+  showDetail(authordetailData) {
     this.selectedbook = authordetailData;
     this.toggle = true;
   }
 
-
-  
   stars(x) {
-    let item: number[] =[];
-    for(let i=1; i<=x; i++)
-    {
+    const item: number[] = [];
+    for (let i = 1; i <= x; i++) {
       item.push(i);
     }
     return item;
   }
-
 }

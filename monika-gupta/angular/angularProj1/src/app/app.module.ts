@@ -12,7 +12,6 @@ import { BookdetailComponent } from './bookdetail/bookdetail.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,15 +21,10 @@ import { FormsModule } from '@angular/forms';
     BodyRightComponent,
     AuthorsdetailComponent,
     BookdetailComponent,
-    FormComponent,
-    
+    FormComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
