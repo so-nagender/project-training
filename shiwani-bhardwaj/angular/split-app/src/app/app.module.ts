@@ -7,22 +7,12 @@ import { HeaderComponent } from './header/header.component';
 import { MidPartComponent } from './mid-part/mid-part.component';
 import { MidPart1Component } from './mid-part1/mid-part1.component';
 import { FooterComponent } from './footer/footer.component';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    MidPartComponent,
-    MidPart1Component,
-    FooterComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  declarations: [AppComponent, HeaderComponent, MidPartComponent, MidPart1Component, FooterComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

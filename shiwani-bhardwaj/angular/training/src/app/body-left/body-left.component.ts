@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵConsole } from '@angular/core';
 import {  Books_data } from '../../data';
 
 @Component({
@@ -13,6 +13,7 @@ export class BodyLeftComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  
   }
   toggleSetter()
    {
@@ -36,4 +37,5 @@ createRange(num)
   }
   return items;
 }
+
 }

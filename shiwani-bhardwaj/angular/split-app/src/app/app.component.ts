@@ -7,15 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'split-app';
-  values ={
-    name:"shiwani"
+  values = {
+    name: 'shiwani'
   };
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
-
-
-

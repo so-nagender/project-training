@@ -11,8 +11,8 @@ export class BOOKDATAComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    
-  
+  console.log("value:-")
+  console.log(this.Books)
   }
 
 }

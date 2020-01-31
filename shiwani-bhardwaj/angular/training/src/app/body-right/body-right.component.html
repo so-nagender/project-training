@@ -12,7 +12,7 @@
           </tr>
           </thead> 
           <tbody>
-          <tr *ngFor='let Author_details of Author' href="#" (click)="showdetails(Author_details)">
+          <tr class="author1" *ngFor='let Author_details of Author' href="#" (click)="showdetails(Author_details)">
             <th scope="row">{{Author_details.serial_number}}</th>
             <td><img src="../../assets/images/man.svg" class="images">{{Author_details.author_name|uppercase}}</td>
             <td><img src="../../assets/images/india.svg" class="images">{{Author_details.country}}</td>

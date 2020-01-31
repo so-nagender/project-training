@@ -8,9 +8,8 @@ describe('MidPartComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MidPartComponent ]
-    })
-    .compileComponents();
+      declarations: [MidPartComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
