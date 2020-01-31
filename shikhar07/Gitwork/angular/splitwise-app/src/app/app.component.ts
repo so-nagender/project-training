@@ -10,7 +10,4 @@ export class AppComponent {
   // two way data binding
   // firstname : string = "Shikhar";
   // lastname : string = "Gupta";
-  
 }
-
-

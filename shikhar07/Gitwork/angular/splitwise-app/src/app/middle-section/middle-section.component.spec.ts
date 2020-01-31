@@ -8,9 +8,8 @@ describe('MiddleSectionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MiddleSectionComponent ]
-    })
-    .compileComponents();
+      declarations: [MiddleSectionComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

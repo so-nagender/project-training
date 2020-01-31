@@ -11,8 +11,8 @@
     </thead>
     <tbody>
       <!---->
-      <tr *ngFor = 'let i of books' (click) = "showDetails(i)">
-        <th scope="row">{{i.serial_no}}</th>
+      <tr  *ngFor = 'let i of books' (click) = "showDetails(i)">
+        <th class="rows" scope="row">{{i.serial_no}}</th>
         <td>{{i.bookname | titlecase}}</td>
         <td>{{i.authornm}}</td>
         <td>{{i.price}}</td>

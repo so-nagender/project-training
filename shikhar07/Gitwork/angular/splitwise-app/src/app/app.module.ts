@@ -10,18 +10,9 @@ import { FooterSectionComponent } from './footer-section/footer-section.componen
 import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    MiddleSectionComponent,
-    FooterSectionComponent,
-    NavbarComponent
-  ],
-  imports: [
-    BrowserModule,FormsModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, HeaderComponent, MiddleSectionComponent, FooterSectionComponent, NavbarComponent],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
