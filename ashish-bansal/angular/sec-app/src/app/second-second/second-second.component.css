@@ -1,37 +1,36 @@
 .blue-disc li {
-    list-style: none;
-    line-height: 25px;
-    color: black;
+  list-style: none;
+  line-height: 25px;
+  color: black;
 }
 
 .blue-disc li::before {
-    content: "\2022";
-    color: rgb(83, 201, 248);
-    font-weight: 200px;
-    display: inline-block; 
-    width: 2em;
-    margin-left: -3em;
-  }
-
-.second-container-text{
-    font-size: 30px;
-    color: black;
-    margin: auto 0;
-    line-height: 57px;
-}
-  
-.list-text-style{
-    line-height: 24px;
+  content: '\2022';
+  color: rgb(83, 201, 248);
+  font-weight: 200px;
+  display: inline-block;
+  width: 2em;
+  margin-left: -3em;
 }
 
-.form-text-style{
-    font-size: 12px;
-    color: gray;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.second-container-text {
+  font-size: 30px;
+  color: black;
+  margin: auto 0;
+  line-height: 57px;
 }
 
-.button-color{
-    background-color: rgb(83, 201, 248);
-    color: white;
-    
+.list-text-style {
+  line-height: 24px;
+}
+
+.form-text-style {
+  font-size: 12px;
+  color: gray;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.button-color {
+  background-color: rgb(83, 201, 248);
+  color: white;
 }

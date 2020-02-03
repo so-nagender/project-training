@@ -24,11 +24,8 @@ import { SecondSecondComponent } from './second-second/second-second.component';
     SecondFirstComponent,
     SecondSecondComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

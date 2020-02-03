@@ -9,7 +9,7 @@
         </thead>
         <tbody>
         <tr *ngFor = 'let authors of author1' (click) = showDetail(authors)>
-            <th scope="row">{{authors.id}}</th>
+            <th class = "counter" scope="row">{{authors.id}}</th>
             <td>{{authors.name}}</td>
             <td>{{authors.lastBook}}</td>
         </tr>

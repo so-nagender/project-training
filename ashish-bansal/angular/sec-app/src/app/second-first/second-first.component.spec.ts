@@ -8,9 +8,8 @@ describe('SecondFirstComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SecondFirstComponent ]
-    })
-    .compileComponents();
+      declarations: [SecondFirstComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,16 +1,30 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
+import { ThirdComponent } from './third/third.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { HomeBarComponent } from './home-bar/home-bar.component';
+import { SecondFirstComponent } from './second-first/second-first.component';
+import { SecondSecondComponent } from './second-second/second-second.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
+      imports: [RouterTestingModule],
       declarations: [
-        AppComponent
-      ],
+        AppComponent,
+        FirstComponent,
+        SecondComponent,
+        ThirdComponent,
+        FooterComponent,
+        NavBarComponent,
+        HomeBarComponent,
+        SecondFirstComponent,
+        SecondSecondComponent
+      ]
     }).compileComponents();
   }));
 
@@ -30,6 +44,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('sec-app app is running!');
   });
 });
