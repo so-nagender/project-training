@@ -1,0 +1,40 @@
+<div class="container">
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="box">
+    <div>
+       <label>Firstname:-</label>
+        <input type="text" id="firstname" formControlName="firstname" [ngClass]="{ 'is-invalid': submitted &&  f.firstname.errors }"/>
+        <!-- <div *ngIf="submitted && f.firstname.errors" class="invalid-feedback"> -->
+            <span class="float" *ngIf="submitted && f.firstname.errors && f.firstname.errors.required">Invalid</span>
+        <!-- </div> -->
+                <!-- <span *ngIf="f.firstName.errors.required">Name not valid</span> -->
+         
+    </div> 
+    <div>
+        <label>Lastname:-</label>
+        <input type="text" id="lastname" formControlName="lastname"  [ngClass]="{ 'is-invalid': submitted &&  f.lastname.errors }"/>
+        <span class="float" *ngIf="submitted && f.lastname.errors && f.firstname.errors.required">Invalid</span>
+    </div>
+    <div>
+        <label>Email:-</label>
+        <input type="text" id="email" formControlName="email" [ngClass]="{ 'is-invalid': submitted &&  f.email.errors }"/>
+        <span class="float" *ngIf="submitted && f.email.errors && f.email.errors.required">Invalid</span>
+    </div>
+    <div>
+        <label>Confirm email:-</label>
+        <input type="text" id="email" formControlName="cemail" [ngClass]="{ 'is-invalid': submitted &&  f.email.errors }"/>
+        <span class="float" *ngIf="submitted && f.email.errors && f.email.errors.required">Invalid</span>
+    </div>
+    <div>
+        <label> Address:-</label>
+        <textarea rows="5" cols="52" id="Address" formControlName="Address" [ngClass]="{ 'is-invalid': submitted &&  f.Address.errors }"></textarea>
+        <span class="float" *ngIf="submitted && f.Address.errors && f.email.errors.required">Invalid</span>
+    </div>
+    <div>
+    <label>Age:-</label>
+    <input type="text" id="age" formControlName="Age"[ngClass]="{ 'is-invalid': submitted &&  f.Age.errors }"/>
+    <span class="float" *ngIf="submitted && f.Age.errors && f.email.errors.required">Invalid</span>
+    </div>
+    <button class="button" type="submit">Submit</button>
+
+    </form>
+</div>

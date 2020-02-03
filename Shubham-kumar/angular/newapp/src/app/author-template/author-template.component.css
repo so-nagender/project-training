@@ -1,32 +1,30 @@
-
-img{
-    height: 200px;
+img {
+  height: 200px;
 }
-ul{
-    margin: auto;
-    list-style-type: None;
-    font-size: 40px;
-
+ul {
+  margin: auto;
+  list-style-type: None;
+  font-size: 40px;
 }
-.top{
-    float: right;
+.top {
+  float: right;
 }
 
-.details{
-    position: relative;
+.details {
+  position: relative;
 }
-li{
-    font-family: 'Uncial Antiqua', cursive;
-    font-family: 'Lobster', cursive;
-    font-family: 'Pacifico', cursive
+li {
+  font-family: 'Uncial Antiqua', cursive;
+  font-family: 'Lobster', cursive;
+  font-family: 'Pacifico', cursive;
 }
- 
-.row{
-    margin:auto;
+
+.row {
+  margin: auto;
 }
-.tag{
-    width : 100px;
-    position: absolute;
-    opacity: 0.5;
-    right: 10px;
+.tag {
+  width: 100px;
+  position: absolute;
+  opacity: 0.5;
+  right: 10px;
 }

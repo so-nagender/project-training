@@ -1,26 +1,28 @@
 <div class="container">
-    <div class="list-group">
+  <div class="list-group">
     <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
       <div class="d-flex w-100 justify-content-between">
         <h5 class="mb-1">Author list</h5>
-        
       </div>
       <p class="mb-1">Famous Authors</p>
-    
     </a>
     <div *ngIf="!shouldShowAuthorDetails">
-      <a *ngFor='let value of author'href="#" class="list-group-item list-group-item-action flex-column align-items-start" (click)="showDetails(value)">
+      <a
+        *ngFor="let value of author"
+        href="#"
+        class="list-group-item list-group-item-action flex-column align-items-start"
+        (click)="showDetails(value)"
+      >
         <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1"><img src="../../assets/images/author.svg">{{value.author_name}}</h5>
+          <h5 class="mb-1"><img src="../../assets/images/author.svg" />{{ value.author_name }}</h5>
           <small class="text-muted">
-            <span  *ngFor ='let stars of createRange(value.stars)'class="fa fa-star  checked"></span>
-            <span  *ngFor ='let stars of createRange(5-value.stars)'class="fa fa-star"></span>
+            <span *ngFor="let stars of createRange(value.stars)" class="fa fa-star  checked"></span>
+            <span *ngFor="let stars of createRange(5 - value.stars)" class="fa fa-star"></span>
           </small>
         </div>
-        <p class="mb-1">Date-of-birth - {{value.Date_of_birth}}</p>
-        <p class="mb-1">Country - {{value.Country}}</p>
-        <p class="mb-1">Famous Books - {{value.Famous_books}}</p>
-        
+        <p class="mb-1">Date-of-birth - {{ value.Date_of_birth }}</p>
+        <p class="mb-1">Country - {{ value.Country }}</p>
+        <p class="mb-1">Famous Books - {{ value.Famous_books }}</p>
       </a>
     </div>
     <div *ngIf="shouldShowAuthorDetails">
@@ -76,4 +78,4 @@
         
       </a>     -->
   </div>
-</div>  
+</div>

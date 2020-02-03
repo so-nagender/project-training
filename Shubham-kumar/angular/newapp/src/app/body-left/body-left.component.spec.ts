@@ -8,9 +8,8 @@ describe('BodyLeftComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BodyLeftComponent ]
-    })
-    .compileComponents();
+      declarations: [BodyLeftComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

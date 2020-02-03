@@ -8,9 +8,8 @@ describe('BooksTemplateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BooksTemplateComponent ]
-    })
-    .compileComponents();
+      declarations: [BooksTemplateComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -21,5 +20,14 @@ describe('BooksTemplateComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('should have he name of author', () => {
+    expect('book_name').toBeDefined;
+  });
+  it('should have he name of author', () => {
+    expect('Book_author').toBeDefined;
+  });
+  it('should have element count ', () => {
+    console.log(fixture.nativeElement.querySelectorAll('.text-muted'));
   });
 });

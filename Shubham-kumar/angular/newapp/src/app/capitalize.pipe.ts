@@ -4,11 +4,12 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'capitalize'
 })
 export class CapitalizePipe implements PipeTransform {
-
   transform(value: any, ...args: any[]): any {
-    return value.split(' ').map(item => {
-        return item.charAt(0).toUpperCase() + item.substr(1,)
-      }).join(' ');
+    return value
+      .split(' ')
+      .map(item => {
+        return item.charAt(0).toUpperCase() + item.substr(1);
+      })
+      .join(' ');
   }
-
 }

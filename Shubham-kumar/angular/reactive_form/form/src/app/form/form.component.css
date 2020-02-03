@@ -1,0 +1,39 @@
+.box{
+    margin-left:20%;
+    margin-top: 5%;
+    max-width: 25%;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: 'Righteous', cursive;
+    font-weight: 500;
+}
+input[type=text],input[type=number] ,input[type=email]{
+    width: 100%;
+    margin: 8px 0;
+    border-color: transparent;
+    border-bottom:1px solid grey ;
+    font-size: 20px;
+
+  }
+.is-invalid{
+    border-bottom: 1px solid red !important;
+   
+}
+
+.button{
+	background: #2A88AD;
+	padding: 8px 20px 8px 20px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #fff;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+	font: normal 30px 'Bitter', serif;
+	
+	font-size: 15px;
+}
+
+.float{
+    font-size: 15px;
+    color: red;
+}

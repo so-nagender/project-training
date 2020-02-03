@@ -1,10 +1,10 @@
-import { Component, OnInit, Pipe, PipeTransform } from "@angular/core";
-import { books } from "../../data";
-import { transformAll } from "@angular/compiler/src/render3/r3_ast";
+import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
+import { books } from '../../data';
+import { transformAll } from '@angular/compiler/src/render3/r3_ast';
 @Component({
-  selector: "app-body-left",
-  templateUrl: "./body-left.component.html",
-  styleUrls: ["./body-left.component.css"]
+  selector: 'app-body-left',
+  templateUrl: './body-left.component.html',
+  styleUrls: ['./body-left.component.css']
 })
 export class BodyLeftComponent implements OnInit {
   book = books;
@@ -26,13 +26,10 @@ export class BodyLeftComponent implements OnInit {
     this.selectedbooks = value;
   }
 
-showMainList() {
-  this.shouldShowBookDetails = false;
+  showMainList() {
+    this.shouldShowBookDetails = false;
+  }
 }
-}
-
-
-
 
 // interface operation {
 //   (input: string, chars?: string): string;
