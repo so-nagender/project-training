@@ -1,0 +1,41 @@
+
+<form [formGroup]="userprofile"  (ngSubmit)="onSubmit()" class="font1">
+   
+        FirstName:<br>
+        <input type="text" formControlName="FirstName" [ngClass]="{ 'is-invalid': submitted && f.FirstName.errors }" /><br>
+        <div *ngIf="submitted && f.FirstName.errors" class="invalid-feedback">
+            <div *ngIf="f.FirstName.errors.required">First Name is required</div>
+        </div>
+
+        LastName:<br>
+        <input type="text" formControlName="LastName" [ngClass]="{ 'is-invalid': submitted && f.LastName.errors }" /><br>
+        <div *ngIf="submitted && f.LastName.errors" class="invalid-feedback">
+            <div *ngIf="f.LastName.errors.required">Last Name is required</div>
+        </div>
+        
+        Email:<br>
+       <input type="text" formControlName="Email" [ngClass]="{ 'is-invalid': submitted && f.Email.errors }" /><br>
+       <div *ngIf="submitted && f.Email.errors" class="invalid-feedback">
+           <div *ngIf="f.Email.errors.required">Email is required</div>
+       </div>
+        
+        Password:<br>
+       <input type="text" formControlName="Password"[ngClass]="{ 'is-invalid': submitted && f.Password.errors }" /><br>
+       <div *ngIf="submitted && f.Password.errors" class="invalid-feedback">
+           <div *ngIf="f.Password.errors.required">Password is required</div>
+       </div>
+       Address:<br>
+        <input type="text" formControlName="Address"[ngClass]="{ 'is-invalid': submitted && f.Address.errors }" /><br>
+        <div *ngIf="submitted && f.Address.errors" class="invalid-feedback">
+            <div *ngIf="f.Address.errors.required">address is required</div>
+        </div>
+        Age:<br>
+        <input type="number" min="0" formControlName="Age"[ngClass]="{ 'is-invalid': submitted && f.Age.errors }" /><br>
+        <div *ngIf="submitted && f.Age.errors" class="invalid-feedback">
+            <div *ngIf="f.Age.errors.required">age is required</div>
+        </div>
+        <button type="submit">Submit</button>
+ 
+
+       </form>
+ 
