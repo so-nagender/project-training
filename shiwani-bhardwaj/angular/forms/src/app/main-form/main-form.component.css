@@ -2,3 +2,64 @@
     font-size: 30px;
   
 }
+input[type=text]{
+    width: 50%;
+    padding: 20px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid black;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+input[type=number]{
+    width: 50%;
+    padding: 20px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid black;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+input[type=text]:hover{
+    width: 50%;
+    padding: 20px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid red;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+button[type=submit]{
+    width: 50%;
+    padding: 20x;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid black;
+    box-sizing: border-box;
+    font-size: x-large;
+    font-family: cursive;
+    border-radius: 10px;
+    background-color: green;
+
+}
+.font2
+{
+    font-size: 25px;
+    color: red;
+    font-weight: 500;
+    
+}
+.font2:hover
+{
+    font-size: 25px;
+    color: red;
+    font-weight: 500;
+    
+}
+.bg-image {
+    background-image: url(../../assets/images/pexels-photo-949587.jpeg);
+   background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+}
