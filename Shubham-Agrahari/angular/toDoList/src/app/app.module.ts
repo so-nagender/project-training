@@ -8,6 +8,9 @@ import { BodyLeftComponent } from './body-left/body-left.component';
 import { BodyRightComponent } from './body-right/body-right.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 
 @NgModule({
@@ -17,11 +20,15 @@ import { FormsModule } from '@angular/forms';
     BodyLeftComponent,
     BodyRightComponent,
     FooterComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+   
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
