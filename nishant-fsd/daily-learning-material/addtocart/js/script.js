@@ -7,7 +7,8 @@ function subtract()
 if(total1>0){
 total1-=1
 grandtotal=total1+total2
-document.getElementsByClassName("total").innerHTML = grandtotal
+document.getElementById("burger").innerHTML=total1
+document.getElementById("total").innerHTML = grandtotal
 }
 else
 {
@@ -19,7 +20,8 @@ function add()
 {
   total1+=1
   grandtotal=total1+total2
-  document.getElementsByClassName("total").innerHTML = grandtotal
+  document.getElementById("burger").innerHTML=total1
+  document.getElementById("total").innerHTML = grandtotal
 }
 
 function subtract1()
@@ -27,7 +29,8 @@ function subtract1()
     if(total2>0){
     total2-=1
     grandtotal=total1+total2
-    document.getElementsByClassName("total").innerHTML = grandtotal
+    document.getElementById("pizza").innerHTML=total2
+    document.getElementById("total").innerHTML = grandtotal
     }
     else
     {
@@ -39,5 +42,6 @@ function add1()
 {
       total2+=1
       grandtotal=total1+total2
-      document.getElementsByClassName("total").innerHTML = grandtotal
-    }
+      document.getElementById("pizza").innerHTML=total2
+      document.getElementById("total").innerHTML = grandtotal
+ }
