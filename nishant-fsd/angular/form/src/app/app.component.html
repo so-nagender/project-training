@@ -24,12 +24,12 @@
       <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
    </div>
     <label for="CEmail">ConfirmEmail</label>
-    <input type="text" class="form-control" value="confermemail" formControlName="confirmemail" placeholder="ConfirmEmail" [ngClass]="{ 'is-invalid': submitted && f.confirmemail.errors }">
+    <input type="text" class="form-control" value="confermemail" formControlName="confirmemail" placeholder="ConfirmEmail" [ngClass]="{ 'is-invalid': submitted && f.confirmemail.errors}">
     <div *ngIf="submitted && f.confirmemail.errors" class="invalid-feedback">
       <div *ngIf="f.confirmemail.errors.required">ConfirmEmail is required</div>
       <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
-      <div *ngIf="confirmemailerr">"Email not matched"</div>
   </div>
+  <div *ngIf="confirmemailerr" class="invalid-feedback">Email not matched</div>
     <label for="Address">Address</label>
     <input class="form-control" type="text" formControlName="address" placeholder="your Address.." [ngClass]="{ 'is-invalid': submitted && f.address.errors }">
     <div *ngIf="submitted && f.address.errors" class="invalid-feedback">

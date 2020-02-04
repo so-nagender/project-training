@@ -25,15 +25,13 @@ export class AppComponent {
     }
     get f() { return this.myform.controls; }
 
-    func(Email,Confirmemail) {
+    func() {
+      if(this.myform.value.email!=this.myform.value.confirmemail)
+      {
+        this.confirmemailerr=true
+      }
        this.submitted=true;
-    //  if(Email.localeCompare(Confirmemail))
-    //  {
-    
-    //    this.confirmemailerr=true
-    //  }
       if (this.myform.invalid) {
-    
         return;
     }
     alert('SUCCESS!! :-)')
