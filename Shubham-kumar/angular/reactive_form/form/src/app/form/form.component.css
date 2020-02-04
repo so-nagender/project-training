@@ -6,7 +6,7 @@
     font-size: 20px;
     font-family: 'Righteous', cursive;
     font-weight: 500;
-    background-color:	#03A89E	   ;
+    background-color:	#27408B  ;
     color: white;
 }
 input[type=text],input[type=number] ,input[type=email], textarea{
@@ -27,7 +27,7 @@ input[type=text],input[type=number] ,input[type=email], textarea{
 }
 
 .button{
-	background: #03A89E;
+	background: #27408B;
 	padding: 8px 20px 8px 20px;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -57,6 +57,21 @@ input[type=text],input[type=number] ,input[type=email], textarea{
 }
 
 .line{
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
     padding-top: 100px;
+    padding-bottom: 50px;
 }
+
+.animation {
+    animation: mymove 3s ;
+}
+@keyframes mymove{
+    0% {
+      opacity: 0;
+      height: initial;
+    }
+    100% {
+      opacity: 1;
+      height: initial;
+    }
+  }
