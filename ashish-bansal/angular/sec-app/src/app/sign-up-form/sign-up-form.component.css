@@ -1,0 +1,15 @@
+.button-color {
+    background-color: rgb(83, 201, 248);
+    color: white;
+  }
+
+  .popup{
+    z-index: 1;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+
+}
