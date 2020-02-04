@@ -1,0 +1,39 @@
+<div class="header_bg_image">
+    <div class="container-fluid">
+        <app-header></app-header>
+   </div>
+</div>
+<div class="container-fluid">
+    <app-section1></app-section1>
+</div>
+<div class="footer_bg_image">
+    <div class="container-fluid">
+        <app-section2></app-section2>
+    </div>
+</div>
+<div class="container-fluid">
+    <app-footer></app-footer>
+</div>
+
+<!-- <p>
+    Enter Your Name : <input [value] = "data" (input)="data=$event.target.value"><br>
+    Your Name is : {{data}};
+</p>
+<p>
+    Enter Your Designation <input [(ngModel)] ="position"><br>
+    Your Designation is : {{position}}
+</p> -->
+<!-- <p>
+    Enter Berger :  <input [value] = "berger" (input)="berger=$event.target.value"><br>
+    Enter Pizza :  <input [value] = "pizza" (input)="pizza=$event.target.value"><br>
+    Total : {{berger+pizza}};
+</p> -->
+<P>
+    <h1>Adding Food</h1>
+    Berger : <input type="number" [(ngModel)] = "berger">
+    Pizza : <input type="number" [(ngModel)] = "pizza">
+    <input type="button" (click) ="totalFood()">
+
+
+</P>
+

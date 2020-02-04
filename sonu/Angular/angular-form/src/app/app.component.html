@@ -1,0 +1,38 @@
+
+<div class="container">
+  <h1 class="text-success">Angular Form</h1>
+    <div class="row">
+      <form [formGroup]="signupForm" (ngSubmit)="PostData(signupForm)">
+      <div class="form-group">
+        <label>First Name:</label><br/>
+        <input type="text" formControlName="fname">
+        <span *ngIf="signupForm.get('fname').touched && signupForm.get('fname').invalid" class='is-invalid text-danger'>First Name Is Required</span>
+      </div>
+      <div class="formGroup">
+        <label>Last Name:</label><br/>
+        <input type="text" formControlName="lname">
+        <span *ngIf="signupForm.get('lname').touched && signupForm.get('lname').invalid" class='is-invalid text-danger'>Last Name Is Required</span>
+      </div>
+      <div class="formGroup">
+        <label>Email:</label><br/>
+        <input type="email" formControlName="email">
+        <span *ngIf="signupForm.get('email').touched && signupForm.get('email').invalid" class='is-invalid text-danger'>Email Is Required</span>
+      </div>
+      <div class="formGroup">
+        <label>Confirm Email:</label><br/>
+        <input type="email" formControlName="confemail">
+        <span *ngIf="signupForm.get('confemail').touched && signupForm.get('email').invalid" class='is-invalid text-danger'>Email Is Required</span>
+      </div>
+      <div class="formGroup">
+        <label>Address:</label><br/>
+        <input type="text" formControlName="address">
+        <span *ngIf="signupForm.get('address').touched && signupForm.get('address').invalid" class='is-invalid text-danger'>Address Is Required</span>
+      </div>
+      <div class="formGroup">
+        <label>Age:</label><br/>
+        <input type="number" min="0" formControlName="age">
+        <span *ngIf="signupForm.get('age').touched && signupForm.get('age').invalid" class='is-invalid text-danger'>Age Is Required</span>
+      </div>
+      <input class="btn-success" type="submit" value="Submit" [disabled]="!signupForm.valid">
+    </form>
+</div>
