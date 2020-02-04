@@ -1,3 +1,5 @@
+<div class="container" style="text-align: center">
+  <h1 style="text-decoration: underline; color: darkolivegreen;">Angular Form </h1><br>
 <form [formGroup]="checkoutForm" (ngSubmit) = "onSubmit(checkoutForm.value)">
   <div class="form-group" >
     <h3 >First Name:</h3>
@@ -22,6 +24,18 @@
     </div>
   </div>
   <div class="form-group" >
+    <h3>Confirm Email Id:</h3>
+    <input type="text" name="confirmemail" appConfirmEqualValidator = "email" formControlName="confirmEmail" [ngClass] = "{'is-invalid': checkoutForm.get('confirmEmail').touched && checkoutForm.get('confirmEmail').invalid}">
+    <div *ngIf= "checkoutForm.get('confirmEmail').touched && checkoutForm.get('confirmEmail').invalid" class= "invalid-feedback">
+      <h4 *ngIf= "checkoutForm.get('confirmEmail').errors.required"> Confirm Email Id is Required</h4>
+      <!-- <h4 *ngIf= "checkoutForm.get('confirmEmail').errors.email"> Confirm Email must be a valid email address</h4> -->
+    </div>
+    <div *ngIf= "checkoutForm.get('confirmEmail').touched" class= "invalid-feedback">
+      <h4 *ngIf= "checkoutForm.get('confirmEmail').errors.notEqual"> Email & Confirm Email Id does not match</h4>
+      <!-- <h4 *ngIf= "checkoutForm.get('confirmEmail').errors.email"> Confirm Email must be a valid email address</h4> -->
+    </div>
+  </div>
+  <div class="form-group" >
     <h3>Address:</h3>
     <input type="text" name="Address"  formControlName="Address" [ngClass] = "{'is-invalid': checkoutForm.get('Address').touched && checkoutForm.get('Address').invalid}">
     <div class="invalid-feedback">
@@ -35,11 +49,9 @@
       <h4> Age is Required</h4>
     </div>
   </div>
-
-
   <button class="button" type="submit">Save</button>
-
 </form>
+</div>
 
 
 

@@ -18,8 +18,10 @@ constructor(
     firstName: new FormControl ('', Validators.required),
     lastName: new FormControl ('', Validators.required),
     email: new FormControl ('', [Validators.required, Validators.email]),
+    confirmEmail: new FormControl ('', [Validators.required, Validators.email]),
     Address: new FormControl ('', Validators.required),
     Age: new FormControl ('', [Validators.required, Validators.min(1)]),
+    
   }
 );
 }
