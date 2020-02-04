@@ -1,0 +1,12 @@
+img{
+    max-width: 50px;
+}
+
+.right{
+    float: left;
+}
+ul li{
+    list-style: none;
+    padding-left: 400px;
+    display: block;
+}

@@ -31,13 +31,17 @@ export class FormComponent implements OnInit {
       this.submitted = true;
 
       // stop here if form is invalid
-      if (this.checkoutForm.invalid) {
-        console.log(this.checkoutForm)
-        console.log(this.checkoutForm.status)
+      if (this.checkoutForm.invalid) 
+      {
+        alert("form error")
+        if(this.checkoutForm.value.email != this.checkoutForm.value.cemail){
+          alert("email msmatched")
+        }
       }
-
-      console.log(this.checkoutForm)
-  }
+      else{
+        alert('ok')
+      }
+   }
    
   
 

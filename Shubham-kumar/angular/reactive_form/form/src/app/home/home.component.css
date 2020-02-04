@@ -1,0 +1,11 @@
+img{
+    background-image: url(../../assets/images/homepage-background.png);
+    background-position: cover;
+    width: 100%;
+
+}
+
+.line{
+    border-bottom: 2px solid black;
+    padding-top: 100px;
+}
