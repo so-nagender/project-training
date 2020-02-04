@@ -9,7 +9,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 const appRoutes: Routes = [
-  { path: ' ',   component: HomeComponent },
+  { path: '',   component: HomeComponent },
   { path: 'sign-in', component: SignInComponent },
   { path: 'sign-up', component: FormComponent },
  
