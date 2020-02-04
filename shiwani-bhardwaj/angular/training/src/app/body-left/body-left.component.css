@@ -1,0 +1,20 @@
+.images{
+    height: 30px;
+}
+
+th tr td{
+    justify-content: space-around;
+    
+
+}
+td,th{
+    border: 8px solid black;
+    text-align: center;
+    padding: 15px; border-radius:30px;
+  
+}
+
+
+.checked {
+    color:#c01951;
+  }

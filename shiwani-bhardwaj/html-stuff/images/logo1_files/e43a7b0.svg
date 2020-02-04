@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Followers</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Followers" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-19" transform="translate(1.000000, 3.000000)" stroke="#31487E">
+            <circle id="Oval" fill="#FFFFFF" cx="5.92307692" cy="3.76923077" r="3.26923077"></circle>
+            <path d="M17.8076923,13.5 L17.8076923,12.2801193 C17.8076923,9.34473528 15.3816956,6.96153846 12.3846154,6.96153846 C9.38747914,6.96153846 6.96153846,9.34470449 6.96153846,12.2801193 L6.96153846,13.5 L17.8076923,13.5 Z" id="Path-Copy" fill="#4EB3F7"></path>
+            <circle id="Oval-Copy" fill="#FFFFFF" cx="12.3846154" cy="3.76923077" r="3.26923077"></circle>
+            <path d="M11.3879844,13.5 L11.3879844,12.2801193 C11.3879844,9.34513819 8.95300949,6.96153846 5.94399219,6.96153846 C2.93491862,6.96153846 0.5,9.3451074 0.5,12.2801193 L0.5,13.5 L11.3879844,13.5 Z" id="Path" fill="#4EB3F7"></path>
+        </g>
+    </g>
+</svg>

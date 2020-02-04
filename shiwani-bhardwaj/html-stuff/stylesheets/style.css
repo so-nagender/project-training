@@ -1,7 +1,9 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("https://cdn.pixabay.com/photo/2017/08/12/10/13/background-2633962_960_720.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg");
+   background-size: cover;
 }
+
 
 .container {
     width: 1024px;
@@ -18,37 +20,101 @@ header nav, header nav li {
     display: inline-block;
 }
 header nav li a {
-    padding: 0 10px;
-    text-decoration: none;
+    padding: 10px 10px;
+    border: 3px black;
+    font-size: large;
+    text-decoration: underline;
+    font-family: cursive;
+    width: 100%;
+    background-color: indianred;
+    border: 5px solid black;
 }
+
 header nav li a:hover {
     text-decoration: underline;
     background:yellowgreen;
+    
 }
 header nav {
     float: right;
 }
+header nav li{
+    padding: 20px 20px;
+}
 
 /*-- header ends --*/
 
-aside,section{
-    display: inline-block;
+/*aside styling */
+main aside ul li a{
+    font-size: x-large;
+    text-decoration: underline;
+    font-family: cursive;
+    width: 100%;
+    background-color: indianred;
+    border: 3px solid black;
+
+     
+}
+li a:hover {
+    text-decoration: underline;
+    background:yellowgreen;
 }
 
-article p {
-    padding: 100px;
+aside,section{
+    vertical-align: top;
+}
+aside{
+    text-align:left;
+    background-color: palevioletred;
+    float: left;
+    text-decoration: none;
+    box-sizing: border-box;
+    width: 20%;
+    padding: 50px 50px;
+}
+
+section{
+    width: 79%;
+    padding:20px;
+    box-sizing: border-box;
+    background-image: url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&dpr=1&auto=format&fit=crop&w=416&h=312&q=60");
+    float: right;
+    text-shadow: blue;
+    background-size: cover;
+   
+}
+
+aside li a {
+    width: 100%;
+    display:inline-block;
+    padding: 20px;
+    text-decoration: none;
+    background-color: cornflowerblue;
+    
+}
+
+
+
+
+    /*article styling*/
+    article p
+    {padding: 100px;
     margin: 50px;
     border:10px solid blueviolet;
     display: inline-block;
+    width:auto;
+    }
+
+form{
+    font-size: x-large;
+    font-weight: 500;
+    font-family: cursive;
 }
 
 article h3 {
     font-size: 20px;
 }
 
-article h3 strong {
-    font-size: 34px;
-}
 
 article p strong {
     font-weight: normal;
@@ -58,24 +124,183 @@ article p strong {
 article.greenColor p strong {
     font-style: normal;
 }
-main aside ol li{
-    font-size: x-large;
-    text-decoration: underline;
+footer span li{
+    padding: 20px 20px;
     font-family: cursive;
- 
-       width: 100%;
-       background-color: indianred;
-       background-co
+    font: outline;
+    text-decoration: underline;
+    font-size: x-large;
+    border: 3px solid black;
+    float: right;
+    list-style: none;
 }
-header form {
-    background-color:white;
-    font-size:large;
+.popup{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 400px;
+    height:400px;
+    padding: 100px 100px;
+    position:fixed;
+   background-image: url("https://backgroundcheckall.com/wp-content/uploads/2017/12/login-form-background-images.gif");
+   background-size: cover;
+   font-family: cursive;
+   text-align: center;
+   overflow: scroll;
+   overflow-y: scroll;
+   display: none;
+   
+
+}
+input[type=text]{
+    width: 100%;
+    padding: 30px 30px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid black;
+    box-sizing: border-box;
+    border-radius: 10px;
+    
+   
+    
+
+}
+div form input [type=radio]{
+    width: 100%;
+    padding: 40px;
+    margin: 8px 0;
+    border: 3px solid black;
+    box-sizing: border-box;
+    font-size: x-large;
+    font-family: cursive;
+    border-radius: 10px;
+display: inline-block;
+
+}
+
+div form input[type=button]{
+    width: 100%;
+    padding: 30x;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid black;
+    box-sizing: border-box;
+    font-size: x-large;
+    font-family: cursive;
+    border-radius: 10px;
+}
+div form button[type=button]{
+    width: 100%;
+    padding: 30x;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid black;
+    box-sizing: border-box;
+    font-size: x-large;
+    font-family: cursive;
+    border-radius: 10px;
+}
 
 
+input[type=button]:hover
+{
+    background-color: yellowgreen;
+    text-decoration: underline;
+    cursor: pointer;
 }
-aside {
-    text-decoration: none;
-    display: block;
-    width: 200px;
-    padding: 50px 50px;
+ button[type=button]:hover
+ {
+     background-color: yellowgreen;
+     text-decoration: underline;
+     cursor: pointer;
+ }
+.clear {
+    clear: both;
+}
+footer span li:hover{
+    text-decoration: underline;
+    background-color: yellowgreen;
+}
+footer span{
+    font-size: x-large;
+    font-family: cursive;
+    font-style: italic;
+   
+}
+section article h3{
+  
+    font-size:xx-large;
+    font-weight: 500;
+    font-family: cursive;
+    text-align: center;
+    padding: 50px;
+}
+
+.pop{
+    float: right;
+}
+.pop{
+    display: inline-block;
+    font-size: x-large;
+        font-family: cursive;
+        border: 3px solid black;
+        border-radius: 10px;
+}
+section article h4{
+  
+    font-size:xx-large;
+    font-weight: 500;
+    font-family: cursive;
+    text-align: center;
+    padding: 100px;
+    text-decoration: underline;
+}
+
+td,th{
+    border: 8px solid black;
+    text-align: center;
+    padding: 15px;
+    border-radius:50px;
+    width: 50px;
+}
+
+tr:nth-child(even){
+    background-color: palevioletred;
+}
+.buttonstyle{
+    background: #fff;
+    border: 10px solid black;
+    padding: 7px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+.fRight{
+    float: right;
+    font-size:xx-large;
+    font-weight: 500;
+    border: 10px solid black;
+    padding: 7px 15px;
+    border-radius: 20px;
+    widows: 50px;
+
+}
+table {
+    font-family:cursive;
+    border-collapse: collapse;
+    width: 100%;
+    border: 10px red;
+    overflow: hidden;
+    size: initial;
+}
+section h2{
+  
+    font-size:xx-large;
+    font-weight: 500;
+    font-family: cursive;
+    text-align: center;
+    padding: 100px;
 }

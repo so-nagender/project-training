@@ -1,0 +1,10 @@
+.bg-image {
+  background-image: url(../../split-app/src/assets/images/bg_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+
+  background-image: linear-gradient(to top right, RGBA(235, 70, 245, 0.8), RGBA(249, 204, 124, 0.8)),
+    url('../../split-app/src/assets/images/bg_1.jpg');
+}

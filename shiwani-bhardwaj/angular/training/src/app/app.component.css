@@ -1,0 +1,23 @@
+#body-left{
+    margin-top: 10px;
+    float: left;
+    width: 50%;
+    padding-bottom: 258px;
+    
+}
+#body-right{
+    margin-top: 10px;
+    float: right;
+    width: 50%;
+    padding-bottom: 258px;
+}
+#foot{
+    
+   
+    color: blueviolet;
+    /* padding: 50px; */
+    font-size: 30px;
+    font-weight: bolder;
+    bottom: 5PX;
+
+}

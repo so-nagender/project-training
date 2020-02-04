@@ -1,0 +1,16 @@
+.images1{
+    height: 340px;
+    /* float: left; */
+}
+ul li {
+    font-size:25px ;
+    font-family: cursive;
+    list-style: none;
+    padding-top: 10px;
+}
+p{
+    font-size:30px ;
+    font-family: cursive;
+    list-style: none;
+    padding-top: 10px;
+}

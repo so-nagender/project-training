@@ -1,0 +1,26 @@
+.header-top
+{
+    background-color:#524EFF;
+    padding-bottom: 16px;
+}
+    
+
+.header-top ul li{
+    list-style: none;
+    padding-left: 5px;
+}   
+.header-top ul li img{
+height: 35px;
+list-style: none;
+float: right;
+padding-left: 10px;
+
+}
+.header-top ul li a{
+font-size: large;
+    color: white;
+    float: left;
+    padding-left: 20px;
+    
+ 
+}

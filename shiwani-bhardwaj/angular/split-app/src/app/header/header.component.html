@@ -1,0 +1,102 @@
+<div class="container">
+  <h3><strong>Readit.</strong></h3>
+  <ul class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">HOME</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">ARTICLE</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">TEAM</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">CONTACT</a>
+    </li>
+
+    <!-- sign up form -->
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      SIGN UP
+    </button>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div style="background-color: pink;" class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">ENTER YOUR DETAILS</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- FORM BRGINSSSSSSSS -->
+            <form id="signup">
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input type="email" class="form-control" placeholder="name@example.com" />
+                <label for="exampleFormControlInput1">choose Password</label>
+                <input type="password" class="form-control" placeholder="password " />
+              </div>
+            </form>
+          </div>
+          <div style="background-color: pink;" class="modal-footer">
+            <button type="submit" class="btn btn-primary">SUBMIT</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- sign in form -->
+    <button type="button" class="btn btn-primary1" data-toggle="modal" data-target="#exampleModal1">
+      SIGN IN
+    </button>
+
+    <div
+      class="modal fade"
+      id="exampleModal1"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div style="background-color: pink;" class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">SIGN UP</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- FORM BRGINSSSSSSSS -->
+            <form id="signin">
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input type="email" class="form-control" placeholder="name@example.com" />
+                <label for="exampleFormControlInput1">choose Password</label>
+                <input type="password" class="form-control" placeholder="password " />
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+            </form>
+          </div>
+          <div style="background-color: pink;" class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ul>
+</div>

@@ -1,0 +1,102 @@
+.nav justify-content-end li{
+    font-size:large;
+    font-weight: 500;
+    background: transparent;
+  padding-right: 1000px;
+  font-weight: bolder;
+  color: white;
+  text-align: center;
+}
+.nav-item:hover{
+    text-decoration: underline;
+    background:yellowgreen;
+    border: 3px solid black;
+}
+header{
+    padding-right: 400px;
+}
+
+.bg-image {
+    background-image: url(../images/bg_1.jpg);
+   background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    
+   background-image: linear-gradient(to top right,RGBA(235 , 70, 245,0.8),RGBA(249 ,204 ,124,0.8)),url('../images/bg_1.jpg');
+   
+    
+}
+ 
+.spacing h1{
+    font-size:200px;
+    color:white;
+    font-weight: bolder;
+    text-align: center;
+   
+    margin-top: -23px;
+    
+}
+
+   
+.spacing p{
+   text-align:left;
+    line-height: 30px;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+    margin-left: 520px;
+    margin-right: 800px;
+    color: white;
+}
+    
+.spacing h6{
+line-height:5px;
+font-size: xx-large;
+text-align: center;
+margin-top: 233px;
+margin-right: 750px;
+color: white;
+}
+footer{
+  margin-top: 50px;
+}
+.last-part{
+    text-align: center;
+    background-color: black;
+    color: blueviolet;
+    padding: 50px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.img-thumbnail{
+    padding: 0px;
+    width: 700px;
+     margin-top: 40px;
+    
+
+}
+.btn btn-primary1{
+    margin-inline-start: 30px;
+    background-color: black;
+}
+.modal-header {
+    background-color: aquamarine;
+}
+.modal-footer{
+    background-color: aquamarine;
+}
+.spacing h4{
+    font-size:40px;
+    font-weight: bolder;
+    text-align: center;
+  
+    margin-right:965px;
+
+}
+ .spacing h4 strong{
+color:yellow;
+font-weight: bolder;
+font-size: 40px;
+
+}

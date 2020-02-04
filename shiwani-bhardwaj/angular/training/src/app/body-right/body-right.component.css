@@ -1,0 +1,31 @@
+.images{
+    height: 30px;
+}
+
+th tr td{
+    justify-content: space-around;
+}
+.btn-primary{
+    background-color:#524EFF;
+    padding-top: 10px;
+    border-radius: 30px;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 80x;
+   
+}
+/* td,th{
+    border: 8px solid black;
+    text-align: center;
+  
+    border-radius:50px;
+   
+}
+
+tr:nth-child(even){
+    background-color: palevioletred;
+} */
+.checked {
+    color:#c01951;
+  }
