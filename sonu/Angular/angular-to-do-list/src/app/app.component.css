@@ -1,0 +1,7 @@
+.header_bg_image{
+    background: url("/assets/images/banner.png");
+    height: 658px;
+}
+.footer_bg_image{
+    background: url(/src/assets/images/section2_loan.png);
+}
