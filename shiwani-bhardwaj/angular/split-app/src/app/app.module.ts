@@ -8,11 +8,13 @@ import { MidPartComponent } from './mid-part/mid-part.component';
 import { MidPart1Component } from './mid-part1/mid-part1.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, MidPartComponent, MidPart1Component, FooterComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule,ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {}
