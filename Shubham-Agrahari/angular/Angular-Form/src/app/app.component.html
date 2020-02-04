@@ -29,7 +29,7 @@
   
   
     <label>Confirm Email</label>
-    <input type="text" formControlName="cEmail" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cEmail.errors }" />
+    <input type="text" formControlName="cEmail" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cEmail.errors }"/>
     <div *ngIf="submitted && f.cEmail.errors" class="invalid-feedback">
         <div *ngIf="f.cEmail.errors.required">Confirm Email is required</div>
         <div *ngIf="f.cEmail.errors.cEmail">Email must be same with abov one</div>
