@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ValidatorFn} from '@angular/forms';
 import {enableProdMode} from '@angular/core';
 
 enableProdMode();
@@ -11,6 +11,8 @@ enableProdMode();
 })
 
 export class AppComponent implements OnInit {
+  static pwdMatchValidator: ValidatorFn;
+  static checkoutForm: any;
   ngOnInit()  {
     // throw new Error("Method not implemented.");
   }
@@ -26,7 +28,7 @@ export class AppComponent implements OnInit {
         firstName: ['', Validators.required],
         lastName: ['', Validators.required],
         email: ['', [Validators.required, Validators.email]],
-        cEmail: ['', [Validators.required, Validators.minLength(6)]],
+        cEmail: ['',[Validators.required, Validators.email] ],
         address: ['', [Validators.required, Validators.minLength(6)]],
         age:['', Validators.compose([
           Validators.required, AppComponent.nonZero ])
@@ -47,6 +49,21 @@ export class AppComponent implements OnInit {
       return null;
     }
   }
+  // static emailValidator(){
+  //   if(this.checkoutForm.get('email').value === this.checkoutForm.get('cEmail').value)
+  // }
+  // static pwdMatchValidator(frm: FormGroup) {
+  //   debugger
+  //   if(frm.get('email').value === frm.get('cEmail').value){
+  //     console.log('EmailVerified');
+  //     return {pwdMatchValidator: true};
+  //   }
+  //   else {
+  //     console.log('Email not Verified');
+  //     return null;
+  //   }
+      
+  // }
 
 onSubmit()
   {
@@ -54,18 +71,28 @@ onSubmit()
     console.log("Hello")
 
     // stop here if form is invalid
-    if (this.checkoutForm.invalid) {
+    if (this.checkoutForm.invalid) { 
+         
       
       alert("Form Not Filled Properly");
-      return;
-    }
-    console.log("SUCCESS!! :-)")
-    console.log(this.checkoutForm.value)
+    
+      }
+      else if(this.checkoutForm.get('email').value != this.checkoutForm.get('cEmail').value){
+        console.log('Email Not Verified');
+      }
+      // return;
+     
+      else{
+        console.log("SUCCESS!! :-)")
+      console.log(this.checkoutForm.value)
     // console.log(this.checkoutForm.value)
+      }
   }
 
 
+
 }
+
 
  
 
