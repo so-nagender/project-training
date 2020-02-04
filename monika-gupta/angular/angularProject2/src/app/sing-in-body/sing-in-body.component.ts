@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { MustMatch } from '../emailvalidator';
+import { MustMatch } from '../../emailvalidator';
+
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-sing-in-body',
+  templateUrl: './sing-in-body.component.html',
+  styleUrls: ['./sing-in-body.component.css']
 })
-export class AppComponent {
-  title = 'formAssignment';
+export class SingInBodyComponent implements OnInit {
+
   formData;
   submitted: boolean = false;
 
@@ -15,15 +17,12 @@ export class AppComponent {
  
   ngOnInit() {
     this.formData = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      cemail: ['', [Validators.required, Validators.email]],
-      address: ['', Validators.required],
-      age: [ , [Validators.required, Validators.min(1), Validators.max(99)]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      cpassword: ['', Validators.required]
     },
     {
-      validator: MustMatch('email', 'cemail')
+      validator: MustMatch('password', 'cpassword')
     });
   }
   get f() { return this.formData.controls; }

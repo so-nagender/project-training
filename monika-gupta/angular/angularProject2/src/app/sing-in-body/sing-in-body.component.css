@@ -1,0 +1,10 @@
+.body{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    color: antiquewhite;
+}
+.button2{
+    border-radius: 20px;
+    background: rgba(85, 83, 212, 0.952);
+    margin-right: 10px;
+}

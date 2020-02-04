@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { MustMatch } from '../emailvalidator';
+import { MustMatch } from '../../emailvalidator';
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-sing-up-body',
+  templateUrl: './sing-up-body.component.html',
+  styleUrls: ['./sing-up-body.component.css']
 })
-export class AppComponent {
-  title = 'formAssignment';
+export class SingUpBodyComponent implements OnInit {
+
   formData;
   submitted: boolean = false;
 
