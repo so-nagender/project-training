@@ -1,0 +1,33 @@
+<form [formGroup]="userprofile"  (ngSubmit)="onSubmit()" class="font1">
+     <h1>SIGN-IN</h1>
+    FirstName:<br>
+    <input type="text" formControlName="FirstName" [ngClass]="{ 'is-invalid': submitted && f.FirstName.errors }" /><br>
+    <div *ngIf="submitted && f.FirstName.errors" class="invalid-feedback">
+        <div *ngIf="f.FirstName.errors.required" class="font2">*First Name is required</div>
+    </div>
+
+    LastName:<br>
+    <input type="text" formControlName="LastName" [ngClass]="{ 'is-invalid': submitted && f.LastName.errors }" /><br>
+    <div *ngIf="submitted && f.LastName.errors" class="invalid-feedback">
+        <div *ngIf="f.LastName.errors.required" class="font2">*Last Name is required</div>
+    </div>
+    
+    Email:<br>
+   <input type="text" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" /><br>
+   <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+       <div *ngIf="f.email.errors.required" class="font2">*Email is required</div>
+   </div>
+   Password:<br>
+   <input type="text" formControlName="Password"[ngClass]="{ 'is-invalid': submitted && f.Password.errors }" /><br>
+   <div *ngIf="submitted && f.Password.errors" class="invalid-feedback">
+       <div *ngIf="f.Password.errors.required" class="font2">*Password is required</div>
+   </div>
+   Confirm_Password:<br>
+   <input type="text" formControlName="Confirm_Password" [ngClass]="{ 'is-invalid': submitted && f.Confirm_Password.errors }" /><br>
+   <div *ngIf="submitted && f.Confirm_Password.errors" class="invalid-feedback">
+       <div *ngIf="f.Confirm_Password.errors.required" class="font2">*Password is required</div>
+   </div>
+
+       <button type="submit" class="btn btn-primary">submit</button>
+ </form>
+

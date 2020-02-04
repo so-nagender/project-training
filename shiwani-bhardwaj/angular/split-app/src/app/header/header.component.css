@@ -1,40 +1,15 @@
-input[type=text]{
-    width: 50%;
-    padding: 20px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 3px solid black;
-    box-sizing: border-box;
-    border-radius: 10px;
-}
-input[type=number]{
-    width: 50%;
-    padding: 20px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 3px solid black;
-    box-sizing: border-box;
-    border-radius: 10px;
-}
-input[type=text]:hover{
-    width: 50%;
-    padding: 20px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 3px solid red;
-    box-sizing: border-box;
-    border-radius: 10px;
-}
-button[type=submit]{
-    width: 50%;
-    padding: 20x;
-    margin: 8px 0;
-    display: inline-block;
-    border: 3px solid black;
-    box-sizing: border-box;
-    font-size: x-large;
+ul li a {
+    padding: 10px 10px;
+    border: 3px black;
+    font-size: large;
+    text-decoration: underline;
     font-family: cursive;
-    border-radius: 10px;
-    background-color: green;
+    width: 100%;
+    
+}
 
+ul li a:hover {
+    text-decoration: underline;
+    background: pink;
+    
 }

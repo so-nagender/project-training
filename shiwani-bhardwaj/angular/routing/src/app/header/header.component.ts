@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +6,10 @@ import { RouterModule, Routes } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
- 
-   constructor(){} 
-       
-     
 
-  ngOnInit() {}
+  constructor() { }
+
+  ngOnInit() {
+  }
+
 }
