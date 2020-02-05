@@ -1,13 +1,33 @@
-<ul class="list-group">
-    <li class="list-group-item">
-        <span class="btn btn-sucess">-</span>
-        burger:
-        <span class="btn btn-sucess">+</span>
-    </li>
-    <li class="list-group-item">
-    <span class="btn btn-sucess">-</span>
-    pizza:
-        <span class="btn btn-sucess">+</span>
-    </li>
-   
-  </ul>
+<ul>
+        <li> 
+        <button (click)="add(burger)">+</button>
+        <img src="../../assets/images/burger.svg" class="images">
+        {{burger.value}}
+        burger
+        <button (click)="remove(burger)">-</button>
+        </li>
+        
+
+        <li>
+        <button (click)="add(pizza)">+</button>
+        <img src="../../assets/images/pizza.svg" class="images">
+        {{pizza.value}}
+        pizza
+        <button (click)="remove(pizza)">-</button>
+        </li>
+        
+
+        <li>
+        <button (click)="add(sandwich)">+</button>
+        <img src="../../assets/images/sandwich.svg" class="images">
+        {{sandwich.value}}
+        sandwich
+        <button (click)="remove(sandwich)">-</button>
+        </li>
+        
+
+        <li>
+           total items: {{burger.value + pizza.value + sandwich.value}}
+        </li>
+</ul>
+
