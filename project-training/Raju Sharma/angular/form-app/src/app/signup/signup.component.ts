@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
-import { MustMatch } from '../app/match';
+import { MustMatch } from '../match';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.css']
 })
-export class AppComponent {
-  title = 'form-app';
+export class SignupComponent implements OnInit {
   data: FormGroup;
   submitted: boolean = false;
   constructor( private FormBuilder: FormBuilder) {}
-
   ngOnInit() {
     this.data = this.FormBuilder.group({
       firstName: ['', Validators.required],
@@ -38,4 +36,3 @@ export class AppComponent {
         alert('SUCCESS!! :-)')
   }
 }
-

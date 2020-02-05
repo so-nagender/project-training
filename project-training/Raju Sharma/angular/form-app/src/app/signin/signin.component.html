@@ -1,0 +1,52 @@
+<div class="container-fluid bg">
+    <div class="row">
+        <div class="col-4">
+
+        </div>
+        <div class="col-4 box">
+            <div class="container mt-4">
+                <h1>SIGN IN</h1>
+                <form action="" [formGroup]='datas' (ngSubmit)='onSubmit(datas.value)'>
+                    <div class="row">
+                      <div class="col-10">
+                          <label>Email</label>
+                          <input type="text" name="email" id="e1" formControlName="email"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"  >
+                          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row my-4">
+                      <div class="col-10">
+                        <label>PassWord</label>
+                        <input type="password" name="password" id="p1" formControlName="password"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"  >
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                          <div *ngIf="f.email.password.required">Password Required</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-10">
+                        <label>Confirm Password</label>
+                        <input type="password" name="confirmpassword" id="e2" formControlName="confirmpassword"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmpassword.errors }"  >
+                        <div *ngIf="submitted && f.confirmemail.errors" class="invalid-feedback">
+                          <div *ngIf="f.confirmpassword.errors.required">Confirm Email is required</div>
+                          <div *ngIf="f.confirmpassword.errors.MustMatch">Email must match</div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="form-group my-4">
+                    <button [disabled]="loading" class="btn btn-outline-success">Log In</button>
+                    <button type="button" class="btn btn-outline-success ml-4" routerLink="/home" routerLinkActive="active">Back home</button>
+                  </div>
+                </form>
+              </div>
+        </div>
+        <div class="col-4">
+
+        </div>
+    </div>
+      
+  </div>
+  
