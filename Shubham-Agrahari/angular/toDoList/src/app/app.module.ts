@@ -8,6 +8,12 @@ import { BodyLeftComponent } from './body-left/body-left.component';
 import { BodyRightComponent } from './body-right/body-right.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SignupComponent } from './signup/signup.component';
+import { SigninComponent } from './signin/signin.component';
+import { HomeComponent } from './home/home.component';
+
+
 
 
 @NgModule({
@@ -16,12 +22,19 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     BodyLeftComponent,
     BodyRightComponent,
-    FooterComponent
+    FooterComponent,
+    SignupComponent,
+    SigninComponent,
+    HomeComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+   
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

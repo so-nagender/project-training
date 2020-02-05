@@ -1,24 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormGroup} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {enableProdMode} from '@angular/core';
+
+enableProdMode() 
 
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class SignupComponent implements OnInit {
 
-  
-
-  
   title = 'Angular-Form';
   checkoutForm: FormGroup;
   submitted = false;
   
-  
-
-  constructor(private formBuilder: FormBuilder){  
+  constructor(
+    private formBuilder: FormBuilder
+    ){ 
+    debugger; 
     this.checkoutForm = this.formBuilder.group({      
         firstName: ['', Validators.required],
         lastName: ['', Validators.required],
@@ -26,12 +27,14 @@ export class HeaderComponent implements OnInit {
         cEmail: ['', [Validators.required, Validators.minLength(6)]],
         address: ['', [Validators.required, Validators.minLength(6)]],
         age:['', Validators.compose([
-          Validators.required, HeaderComponent.nonZero ])
+          Validators.required, SignupComponent.nonZero ])
         ]
         // age: ['', [Validators.required]]
     }); 
+  }
 
-
+  ngOnInit()  {
+    // throw new Error("Method not implemented.");
   }
   get f() { return this.checkoutForm.controls; }
 
@@ -60,8 +63,5 @@ onSubmit()
     console.log(this.checkoutForm.value)
     // console.log(this.checkoutForm.value)
   }
-  ngOnInit() {
-  }
-
 
 }
