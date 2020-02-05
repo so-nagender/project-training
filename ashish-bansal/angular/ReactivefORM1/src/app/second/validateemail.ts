@@ -3,12 +3,6 @@ import {FormsModule,ReactiveFormsModule, Validators, ValidatorFn} from '@angular
 import {FormControl,FormGroup} from '@angular/forms'
 import {FormBuilder} from '@angular/forms'
 
-// export function ValidateEmail(email1,email2) : ValidatorFn {
-//     if (email1 != email2) {
-//         console.log("sdkgzshdfguyh")
-//     return null;
-//     }
-//   }
 
 export function ValidateEmail(controlName: string, matchingControlName: string) {
     return (formGroup: FormGroup) => {

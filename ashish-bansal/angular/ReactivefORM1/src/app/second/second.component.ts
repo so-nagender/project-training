@@ -17,13 +17,11 @@ export class SecondComponent implements OnInit {
   checkoutForm = this.fb.group({
     firstName : ['',Validators.required],
     lastName : ['',Validators.required],
-    Age : [,[Validators.required,Validators.max(100),Validators.min(1)]],
+    Age : [,[Validators.required,Validators.max(110),Validators.min(1)]],
     Email : ['',[Validators.required,Validators.email]],
     ConfirmEmail : ['',[Validators.required,Validators.email]],
-    address : this.fb.group({
-      street : '',
-      country : ''
-    })
+    street : ['',Validators.required],
+    country : ['',Validators.required]
   },{
     validator: ValidateEmail('Email', 'ConfirmEmail')
 })
@@ -34,6 +32,7 @@ export class SecondComponent implements OnInit {
   get f() { return this.checkoutForm.controls; }
 
   onSave(){
+    console.log(this.checkoutForm.controls)
     if (this.checkoutForm.invalid) {
       return;
   }  
