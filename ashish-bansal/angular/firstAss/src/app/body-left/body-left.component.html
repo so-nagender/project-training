@@ -1,0 +1,23 @@
+<div class="main pt-2 pr-2 pl-2">
+    <table class="table table-hover">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">ISBN</th>
+            <th scope="col">Ratings</th>   
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor = 'let books of book'>
+            <th class = "counter" scope="row">{{books.id}}</th>
+            <td>{{books.name}}</td>
+            <td>{{books.author}}</td>
+            <td>{{books.isbn}}</td>
+            <span *ngFor = 'let item of createRange(books.star)' class="fa fa-star checked"></span>
+            <span *ngFor = 'let item of createRange(5 - books.star)' class="fa fa-star"></span>
+        </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<head>
+    <title>Home page | RememberIt</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../firstAss/stylesheet/style.css">
+</head>
+<body id = "objectload">
+    <div class = "container-fluid containerNew">
+      <div class="row">
+        <div class="col-lg-2">
+          <img class="image-fluid p-3" src="../firstAss/images/logo.png" >  
+        </div>
+        <div class="col-lg-8">
+          <ul class="nav justify-content-center nav-bar p-3">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">loan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Blog</a>
+              <div class="dropdown-menu " style="background-color: transparent;">
+                <a class="dropdown-item" style="color:black;" href="#">Action</a>
+                <a class="dropdown-item" style="color:black;" href="#">Another action</a>
+                <a class="dropdown-item" style="color:black;" href="#">Something else here</a>
+                <a class="dropdown-item" style="color:black;" href="#">Separated link</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pages</a>
+            </li>
+            </ul>
+        </div>
+        <div class="col-lg-2 p-3">
+          <button type="button" class="btn btn-primary button-color" data-toggle="modal" data-target="#signUp">
+            Sign Up
+          </button>
+          <button type="button" class="btn btn-primary button-color" data-toggle="modal" data-target="#signIn">
+            Sign in
+          </button>
+          <div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Enter Credentials</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <!-- sign in form -->
+                  <form id = "signIn">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                      <button type="submit" class="btn btn-primary button-color">Submit</button>
+                  </div>
+                  </form>
+                  <!-- sign in form end -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Enter Credentials</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <!-- modal body starrt -->
+                    <form id = "signup">
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputEmail4">Email</label>
+                          <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="inputPassword4">Password</label>
+                          <input type="password" class="form-control" id="inputPassword4">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                      </div>
+                      <div class="form-group">
+                        <label for="inputAddress2">Address 2</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputCity">City</label>
+                          <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputState">State</label>
+                          <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="inputZip">Zip</label>
+                          <input type="text" class="form-control" id="inputZip">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="gridCheck">
+                          <label class="form-check-label" for="gridCheck">
+                            Check me out
+                          </label>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="submit" class="btn btn-primary">Sign in</button>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                      </div>  
+                    </form>
+                    
+                    <!-- modal body end -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="container white-color">
+            <div class = "row spacing-around">
+                <div class = "col-lg-6 col-1-spacing">
+                    <h5 id = "front-text">Get Loan for your Business growth or startup</h5>
+                    <button type="button" class="btn btn-primary button-color">How It Works</button>
+                </div>
+                <div class = "col-lg-6">
+                    <form class = "form-background-style">
+                      <article class = "form-upper-text">How much do you want?</article>
+                        <div class="form-group form-text-style">
+                          <article class="form-text-style">We provide online instant cash loans with quick</article>
+                          <select class="form-control form-text-styl" id="exampleFormControlSelect1" placeholder="Amount">
+                            <option class = "form-text-style" value="" selected disabled hidden>Amount</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <select class="form-control" id="exampleFormControlSelect2">
+                            <option value="" selected disabled hidden>Month</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                          <article class = "form-text-style">You have to pay: $0</article>
+                          </div>
+                          <button type="button" class="btn btn-primary btn-lg btn-block button-color">Continue</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container spacing-around">
+      <div class="row">
+        <div class="col-lg-6">
+          <img src = "images/about.png" class="img-fluid">
+        </div>
+        <div class="col-lg-6 second-container-text">
+          <article>Why Choose Us?</article>
+          <div class = "form-text-style list-text-style">
+          <p>Esteem spirit temper too say adieus who direct esteem.It esteems luckily or picture placing drawing.Apartments frequently or motionless on reasonable</p>
+          <ul class="blue-disc">
+            <li>loans with quick approval.</li>
+            <li>Customize a loan based on the amount.</li>
+            <li>Good credit profile and you have built your loan.</li>
+            <li>We provide online instant cash loans.</li>
+          </ul>
+          </div>
+          <button type="button" class="btn btn-primary button-color">About us</button>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid third-container">
+      <div class="container spacing-around  third-container-spacing">
+        <div class="row">
+          <div class="col-lg-9">
+            <p class = "third-container-text">Apply for a Loan for your startup,<br>education or comapny</p>
+          </div>
+          <div class="col-lg-3">
+            <button type="button" class="btn btn-primary button-color">Apply Now</button>
+          </div>
+        </div>
+      </div>  
+    </div>
+    <div class="container spacing-around fourth-container-spacing">
+      <p>Copyright&copy; All right reserved | this template is made with &hearts; by Colorlib</p>
+
+    </div>
+    <script src="javascript/cookies.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
+</body>
+</html>

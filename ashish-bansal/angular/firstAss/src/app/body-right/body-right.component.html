@@ -1,0 +1,21 @@
+<div class="main pt-2 pr-2 pl-2">
+    <table class="table table-hover">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Author</th>
+            <th scope="col">Last Book</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor = 'let authors of author1' (click) = showDetail(authors)>
+            <th class = "counter" scope="row">{{authors.id}}</th>
+            <td>{{authors.name}}</td>
+            <td>{{authors.lastBook}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <div *ngIf = 'toggle'>
+        <app-authordetails [details] = 'selectedAuthor'></app-authordetails>
+    </div>
+</div>

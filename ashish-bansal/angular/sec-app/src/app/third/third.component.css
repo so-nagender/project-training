@@ -1,0 +1,23 @@
+.third-container {
+  background-image: url(../../assets/images/loan.png);
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.third-container-spacing {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  line-height: 30px;
+  color: white;
+}
+.third-container-text {
+  font-weight: 200;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.button-color {
+  background-color: rgb(83, 201, 248);
+  color: white;
+}

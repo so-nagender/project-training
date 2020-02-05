@@ -1,0 +1,36 @@
+<form [formGroup] = "profileForm" (ngSubmit)="onSubmit()">
+    <label>
+        First Name:
+        <input type="text" formControlName= "firstName">
+    </label>
+
+    <label>
+        Last Name:
+        <input type="text" formControlName="lastName">
+    </label>  
+
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
+<br>
+<br>
+<br>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSave()">
+
+    <div>
+      <label for="name">
+        Name
+      </label>
+      <input id="name" type="text" formControlName="name">
+    </div>
+  
+    <div>
+      <label for="address">
+        Address
+      </label>
+      <input id="address" type="text" formControlName="address">
+    </div>
+  
+    <button class="button" type="submit">Purchase</button>
+  
+  </form>
+

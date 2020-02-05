@@ -1,0 +1,32 @@
+header{
+    padding: 10px;
+    position: sticky;
+    top : 0px;
+    background-color: lavender;
+    margin-bottom: 5px;
+    z-index: 91;
+    border:2px solid green ;
+}
+header img{
+    opacity: 75%;
+}
+header nav{
+    float: right;
+}
+header nav ul li {
+    display: inline-block;
+    border: 2px solid green;
+    text-align: center;
+    background-color: white;
+}
+header nav ul li a{
+    width: 100%;
+    text-decoration: none; 
+    padding-right: 10px; 
+    padding-left: 10px;
+}
+header nav ul li a:hover{
+    text-decoration: underline;
+    box :2px solid green;
+    background: bisque;
+}

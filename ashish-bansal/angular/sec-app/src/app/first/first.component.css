@@ -1,0 +1,7 @@
+.containerNew {
+  background-image: url(../../assets/images/banner.png);
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  /* background-blend-mode: contrast(50%); */
+}
