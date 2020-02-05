@@ -1,0 +1,19 @@
+body,
+html {
+  height: 100%;
+}
+.nav-text a {
+  font-family: inherit;
+  color: black;
+  font-size: larger;
+}
+.button-style {
+  border-radius: 15px;
+}
+footer {
+  background: black;
+}
+footer a {
+  color: rgb(255, 255, 255);
+  font-family: inherit;
+}

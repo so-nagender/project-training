@@ -1,0 +1,35 @@
+body, html {
+    height: 100%;
+}
+.nav-color {
+    background-color: #002fff;
+}
+.full-image {
+    background: url(../img/blue_abstract_background_310971.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.client-img-size {
+    width: 10%;
+    height: 50%;
+}
+.shadow {
+    box-shadow:4px 4px 4px 4px rgb(192, 187, 187);
+}
+.nav-text a {
+    font-family: inherit;
+    color: black;
+    font-size: larger;
+}
+.button-style {
+    border-radius:15px;
+}
+footer {
+    background: black;
+}
+footer a {
+    color: rgb(255, 255, 255);
+    font-family: inherit;
+}

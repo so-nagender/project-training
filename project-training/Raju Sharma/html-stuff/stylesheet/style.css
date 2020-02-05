@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+/*-- header starts --*/
+header {
+    padding: 4px 3px 1px 5px;
+    background-image: url(../img/banner.jpg);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;   
+}
+header nav, header nav li {
+    display: inline-block;
+}
+header nav li a {
+    padding:10px;
+    color: burlywood;
+    text-decoration: none;
+    list-style: none;
+    height: 100%;
+}
+header nav li a:hover {
+    text-decoration: none;
+    background: rgb(165, 137, 164);
+}
+header nav {
+    float: right;
+    margin-top: 19px;
+}
+/*-- header ends --*/
+
+/*--- main start --*/
+.clear {
+    clear: both;
+}
+main {
+    background: #9CADAF;
+}
+aside {
+    width: 20%;
+    float: left;
+    position:sticky;
+    top:58px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;   
+}
+aside ul li {
+    list-style: none;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid wheat;   
+}
+aside li a {
+    padding: 10px;
+    display: inline-block;
+    width: 90%;
+    text-decoration: none;
+}
+aside li a:hover {
+    background:#BCC3DC;
+}
+section {
+    width: 80%;
+    background-image: url(../img/images.jfif);
+    float: right;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+article h3 {
+    font-size: 20px;
+    background: hsl(209, 65%, 34%);
+    margin:8px 0px 8px 0px;
+    box-sizing: border-box;
+    border: 1px solid #5656cc;
+}
+article h2 {
+    font-size: 25px;
+    margin: 5px;
+    text-align: center;
+}
+
+/*   Table starts---*/
+.table {
+    background: #fff;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 8px;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.table h3 {
+    padding: 20px 10px;
+    text-align: center;
+}
+
+/* --table end-- */
+.buttonStyle{
+    background: #fff;
+    border: 2px solid rgb(45, 152, 240);
+    padding: 7px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+input[type="submit"] {
+    background: green;
+}
+.fRight {
+    float: right;
+}
+article p strong {
+    font-weight: normal;
+    font-style: italic;
+}
+article p{
+    word-spacing: 2px;
+}
+article.greenColor p strong {
+    font-style: normal;
+}
+
+/* Footer starts */
+footer{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-top: 2px;
+    background-color : hsl(209, 65%, 34%);
+    border:2px solid #0c588b ;
+}
+footer ul li{
+    display: inline-block;
+    padding: 0px 20px 2px 11px;
+}
+footer span{
+    float: left;
+    margin-left: 5px;
+    bottom: 0px;
+    padding-bottom: 1px;
+}
+footer ul li a:hover{
+    text-decoration: underline;
+    border :1px solid green;
+}
+/*-- footer ends --*/
+
+/* -- Pop Up styling start-- */
+.popup {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: #6593ce;
+    width: 300px;
+    height: 500px;
+    padding: 20px;
+    position: fixed;
+    display: none;
+}
+.popup form > div {
+    margin-bottom: 10px;
+}
+.popup input[type="text"] {
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+/* -- popup ends --*/

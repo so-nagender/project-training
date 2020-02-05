@@ -1,0 +1,129 @@
+.body-img{
+    background:  linear-gradient(to top right,hsla(303, 66%, 53%, 0.8), hsl(51, 64%, 71%, 0.8), transparent), url("../img/bg_1.jpg") no-repeat center; 
+}
+.navbar-brand {
+    display: inline-block;
+    font-size: 1.25rem;
+    white-space: nowrap; 
+    color: #fcf7f7;
+    font-weight: 900;
+    font-size: 26px;
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1;
+}
+.navbar-brand1 {
+    display: inline-block;
+    font-size: 1.25rem;
+    white-space: nowrap; 
+    color: #fcf7f7;
+    font-weight: 900;
+    font-size: 26px;
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1;
+}
+.navbar-brand:hover, .navbar-brand:focus {
+    text-decoration: none;
+    color:#913a3a;
+    box-sizing: border-box;
+    border: 1px solid #913a3a;
+    border-radius: 3px;
+}
+.navbar-brand i {
+    font-style: normal;
+    color: #f5ae0a; 
+}
+.navbar-brand i:hover{
+    color:#913a3a;
+}
+  
+.color a{
+    color:#fff;
+
+}
+.color a:hover{
+    color:#913a3a;
+    box-sizing: border-box;
+    border: 1px solid #913a3a;
+    border-radius: 3px;
+}
+.logo-font{
+    font-weight: 800;
+
+}
+.content-color{
+    color: #f1ecec;
+}
+.bolder{
+    color: rgb(255, 251, 251);
+    font-size: 8rem;
+    font-weight: 900;
+    
+}
+.spacing-around{
+    padding: 200px 0px;
+    
+}
+footer{
+    background:black;
+    color: #ada9a2;
+}
+
+
+/*  --Dashboard Start-- */
+
+.dash-color{
+    /* background: linear-gradient(to top right,hsl(303, 64%, 65%,0.8), hsl(51, 64%, 71%, 0.8), transparent) */
+    background: rgb(250, 141, 217);
+}
+.trip-sty{
+    box-sizing: border-box;
+    border-radius: 7px;
+    margin-right: 35px;
+}
+.bg-color{
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body, html {
+    height: 100%;
+  }
+.cover {
+    background:  linear-gradient(to top right,hsla(303, 66%, 53%, 0.8), hsl(51, 64%, 71%, 0.8), transparent), url("../img/bg_1.jpg") no-repeat center;
+    background-size: cover;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.cover-caption {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+/* only used for background overlay not needed for centering */
+form:before {
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: -1;
+    border-radius: 10px;
+}
+
+/* SIgn Up */
+.reg-color{
+    display: inline-block;
+    font-size: 2.75rem;
+    white-space: nowrap; 
+    color: #fcf7f7;
+    font-weight: 900;
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1;
+    margin-left: 98px;
+}
