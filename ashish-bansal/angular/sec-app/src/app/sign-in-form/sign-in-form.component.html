@@ -1,0 +1,42 @@
+<div class="popup">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Enter Credentials</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" routerLink="/">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- sign in form -->
+          <form id="signIn" [formGroup]="signIn" (ngSubmit)="onSave()">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="Email" [ngClass]="{ 'is-invalid': f.Email.errors }"/>
+              <div *ngIf="f.Email.errors" class="invalid-feedback">
+                <div *ngIf="f.Email.errors.required">Email Name is required</div>
+                <div *ngIf="f.Email.errors.email">Enter a valid email.</div>
+              </div>
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" formControlName="Password" [ngClass]="{ 'is-invalid': f.Password.errors }"/>
+              <div *ngIf="f.Email.errors" class="invalid-feedback">
+                <div *ngIf="f.Password.errors.required">Password is required</div>
+              </div>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" routerLink="/">Cancel</button>
+              <button type="submit" class="btn btn-primary button-color">Submit</button>
+            </div>
+          </form>
+          <!-- sign in form end -->
+        </div>
+      </div>
+    </div>
+  </div>
