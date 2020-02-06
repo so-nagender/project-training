@@ -1,5 +1,21 @@
-<div>
+<div >
   <div>
-    <router-outlet></router-outlet>`
+    <router-outlet></router-outlet>
   </div>
+  <div class="container-fluid popup" style="background:black; margin-top: 25px; padding-bottom: 50px;">
+    <div class="container" style="color: rgb(189, 97, 97);">
+      <h1>My First Attribute Directive</h1>
+
+      <h4>Pick a highlight color</h4>
+      <div>
+        <input type="radio" name="colors" (click)="color='lightgreen'">Green<br>
+        <input type="radio" name="colors" (click)="color='yellow'">Yellow<br>
+        <input type="radio" name="colors" (click)="color='cyan'">Cyan
+      </div>
+      
+      <button type="button" class="btn btn-outline-success float-right" [appFirstDir]="color">Submit</button>
+      <button type="button" class="btn btn-outline-danger float-right" style="margin-right: 5px;" [appFirstDir]="color" defaultColor="Green" > Close</button>
+    </div>
+  </div>
+  
 </div>

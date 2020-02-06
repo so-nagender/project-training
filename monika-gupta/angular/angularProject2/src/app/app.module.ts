@@ -17,6 +17,7 @@ import { SingInHeaderComponent } from './sing-in-header/sing-in-header.component
 import { SingInBodyComponent } from './sing-in-body/sing-in-body.component';
 import { SingUpBodyComponent } from './sing-up-body/sing-up-body.component';
 import { HomeComponent } from './home/home.component';
+import { FirstDirDirective } from './first-dir.directive';
 
 const appRoutes: Routes = [
   { path: 'Sign-up', component: SignUpComponent },
@@ -38,7 +39,8 @@ const appRoutes: Routes = [
     SingInHeaderComponent,
     SingInBodyComponent,
     SingUpBodyComponent,
-    HomeComponent
+    HomeComponent,
+    FirstDirDirective
   ],
   imports: [
     BrowserModule,
