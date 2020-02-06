@@ -1,4 +1,10 @@
-<form [formGroup]="userprofile"  (ngSubmit)="onSubmit()" class="font1">
+<h1>choose ur fav color</h1>
+  <div>
+    <input type="radio" name="colors" (click)="color='pink'">pink
+    <input type="radio" name="colors" (click)="color='black'">black
+    <input type="radio" name="colors" (click)="color='grey'">grey
+</div>
+<form [formGroup]="userprofile"  (ngSubmit)="onSubmit()" class="font1" >
     <h1>SIGN-UP</h1>
     FirstName:<br>
     <input type="text" formControlName="FirstName" [ngClass]="{ 'is-invalid': submitted && f.FirstName.errors }" /><br>
@@ -7,7 +13,7 @@
     </div>
 
     LastName:<br>
-    <input type="text" formControlName="LastName" [ngClass]="{ 'is-invalid': submitted && f.LastName.errors }" /><br>
+    <input type="text"  formControlName="LastName" [ngClass]="{ 'is-invalid': submitted && f.LastName.errors }" /><br>
     <div *ngIf="submitted && f.LastName.errors" class="invalid-feedback">
         <div *ngIf="f.LastName.errors.required" class="font2">*Last Name is required</div>
     </div>

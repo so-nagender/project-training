@@ -1,13 +1,19 @@
+<h1>choose ur fav color</h1>
+  <div>
+    <input type="radio" name="colors" (click)="color='pink'">pink
+    <input type="radio" name="colors" (click)="color='purple'">purple
+    <input type="radio" name="colors" (click)="color='blue'">blue
+</div>
 <form [formGroup]="userprofile"  (ngSubmit)="onSubmit()" class="font1">
-     <h1>SIGN-IN</h1>
+     <h1 >SIGN-IN</h1>
     FirstName:<br>
-    <input type="text" formControlName="FirstName" [ngClass]="{ 'is-invalid': submitted && f.FirstName.errors }" /><br>
+    <input type="text" formControlName="FirstName" [ngClass]="{ 'is-invalid': submitted && f.FirstName.errors }"  /><br>
     <div *ngIf="submitted && f.FirstName.errors" class="invalid-feedback">
         <div *ngIf="f.FirstName.errors.required" class="font2">*First Name is required</div>
     </div>
 
     LastName:<br>
-    <input type="text" formControlName="LastName" [ngClass]="{ 'is-invalid': submitted && f.LastName.errors }" /><br>
+    <input type="text" formControlName="LastName" [ngClass]="{ 'is-invalid': submitted && f.LastName.errors }"  /><br>
     <div *ngIf="submitted && f.LastName.errors" class="invalid-feedback">
         <div *ngIf="f.LastName.errors.required" class="font2">*Last Name is required</div>
     </div>
@@ -23,11 +29,11 @@
        <div *ngIf="f.Password.errors.required" class="font2">*Password is required</div>
    </div>
    Confirm_Password:<br>
-   <input type="text" formControlName="Confirm_Password" [ngClass]="{ 'is-invalid': submitted && f.Confirm_Password.errors }" /><br>
+   <input type="text" formControlName="Confirm_Password" [ngClass]="{ 'is-invalid': submitted && f.Confirm_Password.errors }"  /><br>
    <div *ngIf="submitted && f.Confirm_Password.errors" class="invalid-feedback">
        <div *ngIf="f.Confirm_Password.errors.required" class="font2">*Password is required</div>
    </div>
 
-       <button type="submit" class="btn btn-primary">submit</button>
+       <button type="submit" class="btn btn-primary" >submit</button>
  </form>
 

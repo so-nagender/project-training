@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
+
 
 @Component({
   selector: 'app-mid-part',
@@ -7,6 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MidPartComponent implements OnInit {
   constructor() {}
-
+  @Input() appSplit
   ngOnInit() {}
 }

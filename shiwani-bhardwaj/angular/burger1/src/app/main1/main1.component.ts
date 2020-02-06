@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { formattedError } from '@angular/compiler';
  function item(value)
 {
   this.value=value;
@@ -7,6 +8,7 @@ item.prototype.add =function(){
   this.value ++;
 }
 item.prototype.remove =function(){
+  
   this.value --;
 }
 
@@ -29,7 +31,13 @@ export class Main1Component implements OnInit {
    item.value ++;
   }
   remove(item)
-  {
+  { 
+    if (item.value>0)
+    {
     item.value --;
+    }
+    else{
+      return;
+    }
   }
   }

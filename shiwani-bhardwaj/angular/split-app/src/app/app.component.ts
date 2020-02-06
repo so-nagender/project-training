@@ -9,7 +9,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  
   title = 'split-app';
+  
   values = {
     name: 'shiwani'
   };

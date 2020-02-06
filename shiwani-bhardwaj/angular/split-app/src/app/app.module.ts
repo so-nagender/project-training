@@ -13,6 +13,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { SplitDirective } from './split.directive';
 
 const appRoutes: Routes = [
   { path: 'sign-up', component:SignUpComponent},
@@ -20,7 +21,7 @@ const appRoutes: Routes = [
   { path: 'home', component:HomeComponent},
   { path: 'sign-in', component:SignInComponent},]
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, MidPartComponent, MidPart1Component, FooterComponent, SignUpComponent, HomeComponent, SignInComponent],
+  declarations: [AppComponent, HeaderComponent, MidPartComponent, MidPart1Component, FooterComponent, SignUpComponent, HomeComponent, SignInComponent, SplitDirective],
   imports: [BrowserModule, AppRoutingModule, FormsModule,ReactiveFormsModule,
     RouterModule.forRoot(
       appRoutes,
