@@ -12,6 +12,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HomeComponent } from './home/home.component';
+import { HighlightTextDirective } from './highlight-text.directive';
+import { ModalHighlightDirective } from './navbar/modal-highlight.directive';
+
 
 const appRoutes: Routes = [
   { path: 'sign-up', component: SignUpComponent },
@@ -20,7 +23,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, MiddleSectionComponent, FooterSectionComponent, NavbarComponent, SignUpComponent, SignInComponent, HomeComponent],
+  declarations: [AppComponent, HeaderComponent, MiddleSectionComponent, FooterSectionComponent, NavbarComponent, SignUpComponent, SignInComponent, HomeComponent, HighlightTextDirective, ModalHighlightDirective],
   imports: [BrowserModule, FormsModule, AppRoutingModule,  RouterModule.forRoot(appRoutes)],
   providers: [],
   bootstrap: [AppComponent]
