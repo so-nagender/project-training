@@ -1,0 +1,11 @@
+<div>
+  Burger:<button (click)="add(Burger)">+</button>
+  {{Burger.value}}
+  <button (click)="sub(Burger)">-</button>
+  </div>
+  <div>
+    Pizza:<button (click)="add(Pizza)">+</button>
+    {{Pizza.value}}
+    <button (click)="sub(Pizza)">-</button>
+ </div>
+ <p>Total Items:{{Burger.value + Pizza.value}}</p>
