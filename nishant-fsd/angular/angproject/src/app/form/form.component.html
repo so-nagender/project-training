@@ -30,7 +30,11 @@
         <div *ngIf="f.address.errors.required">Address is required</div>
     </div>
       <label for="Age">Age</label>
+<<<<<<< HEAD
       <input class="form-control" type="text    " formControlName="age" placeholder="your Age.." [ngClass]="{ 'is-invalid': submitted && f.age.errors }">
+=======
+      <input class="form-control" type="text" formControlName="age" placeholder="your Age.." [ngClass]="{ 'is-invalid': submitted && f.age.errors }">
+>>>>>>> b11aedec2f1c116420f20a74b407c6bfd6ec05fe
       <div *ngIf="submitted && f.age.errors" class="invalid-feedback">
         <div *ngIf="f.age.errors.required">Age is required</div>
         <div *ngIf="f.age.errors">Only Integer Allowed</div>
