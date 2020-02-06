@@ -1,3 +1,14 @@
+<h1>My First Attribute Directive</h1>
+<h4>Pick a highlight color</h4>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<p [appColor]="color">Highlight me!</p>
+<p [appColor]="color"  defaultColor="violet">Highlight me too!</p>
+
+
 <label for="Email">Email</label>
 <input type="text" class="form-control" formControlName="email" placeholder="Email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
 <div *ngIf="submitted && f.email.errors" class="invalid-feedback">

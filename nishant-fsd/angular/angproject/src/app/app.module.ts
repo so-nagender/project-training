@@ -10,13 +10,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { FormComponent } from './form/form.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { ColorDirective } from './color.directive';
 
 const appRoutes: Routes = [
   { path: 'form', component: FormComponent },
   {path:'sign-in',component:SignInComponent}
 ];
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, BannerComponent, FooterComponent, FormComponent, SignInComponent],
+  declarations: [AppComponent, HeaderComponent, BannerComponent, FooterComponent, FormComponent, SignInComponent, ColorDirective],
   imports: [BrowserModule, AppRoutingModule, FormsModule,ReactiveFormsModule, RouterModule.forRoot(appRoutes)],
   providers: [],
   bootstrap: [AppComponent]
