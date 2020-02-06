@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { SigninComponent } from './signin/signin.component';
+import { FirstDirective } from './first.directive';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -19,7 +20,8 @@ const appRoutes: Routes = [
     AppComponent,
     SignupComponent,
     HomeComponent,
-    SigninComponent
+    SigninComponent,
+    FirstDirective
   ],
   imports: [
     BrowserModule,
