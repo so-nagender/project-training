@@ -18,8 +18,7 @@ export class SignupComponent implements OnInit {
   
   constructor(
     private formBuilder: FormBuilder
-    ){ 
-    debugger; 
+    ){   
     this.checkoutForm = this.formBuilder.group({      
         firstName: ['', Validators.required],
         lastName: ['', Validators.required],
@@ -29,12 +28,12 @@ export class SignupComponent implements OnInit {
         age:['', Validators.compose([
           Validators.required, SignupComponent.nonZero ])
         ]
-        // age: ['', [Validators.required]]
+        
     }); 
   }
 
   ngOnInit()  {
-    // throw new Error("Method not implemented.");
+    
   }
   get f() { return this.checkoutForm.controls; }
 
@@ -61,7 +60,8 @@ onSubmit()
     }
     console.log("SUCCESS!! :-)")
     console.log(this.checkoutForm.value)
-    // console.log(this.checkoutForm.value)
+    
+    
   }
 
 }

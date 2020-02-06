@@ -12,9 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
-
-
-
+import {DirectDirective}  from './direct.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +23,8 @@ import { HomeComponent } from './home/home.component';
     FooterComponent,
     SignupComponent,
     SigninComponent,
-    HomeComponent
+    HomeComponent,
+    DirectDirective
     
   ],
   imports: [
