@@ -1,7 +1,7 @@
 <div class="container-fluid body-img">
     <div>
        <div class="container pt-3">
-         <a href="#" class="float-left pt-2 navbar-brand mt-1">
+         <a [appFirst]="color" href="#" class="float-left pt-2 navbar-brand mt-1">
            Read<i>it</i>.
          </a>
          <ul class="nav justify-content-end color">
@@ -23,3 +23,23 @@
            </div>
        </div>
    </div>
+
+
+
+<div class="container">
+  <h1>My First Attribute Directive</h1>
+  <h4>Pick a highlight color</h4>
+  <div>
+    <input type="radio" name="colors" (click)="color='lightgreen'">Green
+    <input type="radio" name="colors" (click)="color='yellow'">Yellow
+    <input type="radio" name="colors" (click)="color='cyan'">Cyan
+  </div>
+  <div>
+    <input type="checkbox" name="text1" id="" (click)="text='Hiii'"> Hiii
+    <input type="checkbox" name="text2" id="" (click)="text='Hello'">Hello
+    <input type="checkbox" name="text3" id="" (click)="text='Hey'">Hey
+  </div>
+  <p [appFirst]="color">Highlight me!</p>
+  <h1 appFirst [firstInput]="color" [secondInput]="text">Text</h1>
+  <p [appFirst]="path" > click here</p>
+</div>
