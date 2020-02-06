@@ -8,6 +8,7 @@ import { FormComponent } from './form/form.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
+import { PreviewComponent } from './preview/preview.component';
 const appRoutes: Routes = [
   { path: '',   component: HomeComponent },
   { path: 'sign-in', component: SignInComponent },
@@ -21,6 +22,7 @@ const appRoutes: Routes = [
     FormComponent,
     SignInComponent,
     HomeComponent,
+    PreviewComponent,
     
   ],
   imports: [
