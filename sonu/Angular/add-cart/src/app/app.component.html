@@ -1,0 +1,15 @@
+<h1 class="text-center">Add-Cart</h1> 
+<div class="text-center">
+  Burger:<br/>
+  <button (click)="add(Burger)">+</button>
+  {{Burger.value}}
+  <button (click)="sub(Burger)">-</button>
+</div>
+<div class="text-center">
+  Pizza:<br/>
+  <button (click)="add(Pizza)">+</button>
+  {{Pizza.value}}
+  <button (click)="sub(Pizza)">-</button>
+ </div>
+ <div class="text-center">Total Items:{{Burger.value + Pizza.value}}</div>
+
