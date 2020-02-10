@@ -1,0 +1,26 @@
+<div class="container" *ngFor="let movie of movie">
+    <p class="font2">-our feature-</p>
+    <h1  class="font3" style="text-align: center;">Why Choose Us</h1>
+    <div class="row ">
+      <div class="col-sm font1">
+        <div>
+          <img src="../../assets/images/camera.svg" class="images">
+          <p >Global Reach And Local Presence</p>
+        <p class="font2">{{movie.id}}</p></div>
+       </div>
+      <div class="col-sm font1">
+        <div>
+          <img src="../../assets/images/clapperboard.svg" class="images" ><p >Fast & FlexibleSolutions</p>
+        <p class="font2">{{movie.name}}.</p></div>
+          
+       
+      </div>
+      <div class="col-sm font1">
+        <div >
+          <img src="../../assets/images/watching.svg" class="images"><p>
+        Customer  Experience</p>
+      <p class="font2">{{movie.year}} </p></div>
+      </div>
+    </div>
+    
+  </div>

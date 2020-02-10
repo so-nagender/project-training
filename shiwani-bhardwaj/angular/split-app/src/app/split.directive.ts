@@ -16,7 +16,8 @@ export class SplitDirective {
 
   @HostListener('mouseenter') onMouseEnter() {
      this.Split(this.color);
-    this.a(this.colors);
+      this.a(this.colors);
+
     // this.Split(this.secondinput);
 
 
@@ -24,12 +25,17 @@ export class SplitDirective {
 
   @HostListener('mouseleave') onMouseLeave() {
     this.Split(null);
+    
+  
+  
   }
+  
+  
 
    private Split(color: string) {
      this.el.nativeElement.style.backgroundColor = color;
    }
-  private a(colors: string) {
+    private a(colors: string) {
     this.el.nativeElement.innerText = colors;
   }
 }
