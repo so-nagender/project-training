@@ -1,4 +1,23 @@
 <div id ="size" class="bodyMarginBottom">       
 <img src="../../assets/about.png" class="img-fluid" alt="Responsive image" id="imageHeight">
-</div>
-
+<!-- </div>
+<div class="mt-5 ml-auto mr-auto col-md-5 text-center">
+    <b>Today's  Date:</b> {{ todaydate }}
+</div> -->
+<ul class="mt-5 ml-auto mr-auto col-md-5 text-center">
+    <table style="width:100%">
+        <tr>
+            <th>Movie ID</th>
+            <th>Movie Name</th>
+          
+          </tr>
+        <tr *ngFor='let lists of movie'>
+            <td>{{ lists.id }}</td> 
+            <td>{{ lists.name }} </td>
+            
+            
+        </tr>  
+        
+    </table>
+    
+</ul>
