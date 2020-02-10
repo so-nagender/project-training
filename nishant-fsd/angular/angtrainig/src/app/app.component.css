@@ -1,0 +1,11 @@
+.footer{
+    background-color:black;
+    margin-top: 70px;
+
+}
+.color{
+    background-color: cyan;
+}
+.pic{
+    background-image: url(/assets/pic.jpg);
+}

@@ -1,0 +1,49 @@
+
+<div>
+    <form [formGroup]="myform" (ngSubmit)="func()">
+      <label for="fname">First Name</label>
+      <input type="text" class="form-control" formControlName="firstname" placeholder="Your name.." [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }">
+      <div *ngIf="submitted && f.firstname.errors" class="invalid-feedback">
+        <div *ngIf="f.firstname.errors.required">First Name is required</div>
+      </div>
+      <label for="lname">Last Name</label>
+      <input type="text" class="form-control" formControlName="lastname" placeholder="Your last name.." [ngClass]="{ 'is-invalid': submitted && f.lastname.errors }">
+      <div *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
+        <div *ngIf="f.lastname.errors.required">Last Name is required</div>
+      </div>
+      <label for="Email">Email</label>
+      <input type="text" class="form-control" value="email"  formControlName="email" placeholder="Email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+        <div *ngIf="f.email.errors.required">Email is required</div>
+        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+     </div>
+      <label for="CEmail">ConfirmEmail</label>
+      <input type="text" class="form-control" value="confermemail" formControlName="confirmemail" placeholder="ConfirmEmail" [ngClass]="{ 'is-invalid': submitted && f.confirmemail.errors}">
+      <div *ngIf="submitted && f.confirmemail.errors" class="invalid-feedback">
+        <div *ngIf="f.confirmemail.errors.required">ConfirmEmail is required</div>
+        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+    </div>
+    <div *ngIf="confirmemailerr" class="invalid-feedback">Email not matched</div>
+      <label for="Address">Address</label>
+      <input class="form-control" type="text" formControlName="address" placeholder="your Address.." [ngClass]="{ 'is-invalid': submitted && f.address.errors }">
+      <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+        <div *ngIf="f.address.errors.required">Address is required</div>
+    </div>
+      <label for="Age">Age</label>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <input class="form-control" type="text    " formControlName="age" placeholder="your Age.." [ngClass]="{ 'is-invalid': submitted && f.age.errors }">
+=======
+      <input class="form-control" type="text" formControlName="age" placeholder="your Age.." [ngClass]="{ 'is-invalid': submitted && f.age.errors }">
+>>>>>>> b11aedec2f1c116420f20a74b407c6bfd6ec05fe
+=======
+      <input class="form-control" type="text" formControlName="age" placeholder="your Age.." [ngClass]="{ 'is-invalid': submitted && f.age.errors }">
+>>>>>>> b11aedec2f1c116420f20a74b407c6bfd6ec05fe
+      <div *ngIf="submitted && f.age.errors" class="invalid-feedback">
+        <div *ngIf="f.age.errors.required">Age is required</div>
+        <div *ngIf="f.age.errors">Only Integer Allowed</div>
+    </div>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  

@@ -1,0 +1,84 @@
+
+*
+{
+    margin: 0px;
+}
+.container{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+ul{
+    list-style-type: none;
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    color: brown;
+}
+p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+header{
+    background-color:yellow;
+    width: 1380px;
+}
+#logo{
+    background-image: url(../image/download.jfif);
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+    margin-top: 10px;
+}
+main,aside{
+    margin-top: 0px;
+}
+header,header nav,header a{
+    display:inline-block;
+}
+header nav, nav li
+{
+ float: right;
+ margin: 10px 10px;
+}
+
+main{
+    margin-top: 40px;
+    background-color: gainsboro;
+}
+aside{
+    background-color: lightblue;
+    margin-right: 20px;
+}
+aside li{
+    margin-top: 10px;
+}
+article
+{
+    margin-left: 10px;
+    background-color: lightpink;    
+}
+
+aside,article{
+    display: inline-block;
+    vertical-align: top;
+    
+}
+footer{
+    margin-top: 50px;
+    background-color: lightsalmon;
+}
+#insta{
+background-image: url(../image/insta.jfif);
+width: 40px;
+height: 20px;
+background-size: 100%;
+float: right;
+margin-left: 10px;
+}
+#fb{
+    background-image: url(../image/download.png);
+    width:20px;
+    height: 20px;
+    background-size: 100%;
+    float: right;
+    margin-left: 10px;
+}

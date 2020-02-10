@@ -1,0 +1,68 @@
+header nav
+{
+   float:right;
+   height: 40px;
+   background: transparent;
+  
+}
+.pic{
+    background: url("../image/b.jpg") no-repeat;
+    background-size: cover;
+}
+.height{
+    height: 400px;
+}
+.green{
+    background-color: #45a049;
+}
+.white{
+    color: white !important;
+}
+
+
+.btn-pad{
+    margin-left: 130px;
+    border-radius: 20px;
+    margin-top: 20px;
+
+}
+.col-border{
+    
+    border-radius: 8px;
+    padding-top: 10px;
+}
+.footer{
+    background-color:black;
+    height: 140px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.footer nav
+{
+   float: right;
+   height: 40px;
+   background: transparent;
+   margin-top: 30px;
+  
+}
+.footer-logo
+{
+    margin-top: 30px;
+}
+.txt{
+    text-align: center;
+}
+.right {
+    float: right;
+}
+.hv:hover {
+  background-color: blue;
+  color: white;
+}
+.txtbold{
+font-weight: bold;
+}
+.second{
+    margin-top: 50px;
+    text-align: center;
+}

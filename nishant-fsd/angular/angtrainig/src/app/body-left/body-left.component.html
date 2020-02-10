@@ -1,0 +1,14 @@
+
+<table id="customers">
+    <tr>
+      <th>Book Name</th>
+      <th>Author</th>
+      <th>Price</th>
+    </tr>
+    <tr *ngFor="let bookdata of bookdata" (click)="showdetail(bookdata)"><td>{{bookdata.bookname | titlecase}}</td>
+        <td>{{bookdata.author |  uppercase}}</td>
+        <td>{{bookdata.price}}</td>
+    </tr>
+  </table>
+ 
+  <div id="popup"class="container-fluid" *ngIf="toggle"><button (click)="togglesetter()">X</button><app-bookdetails [book]="selectedbook"></app-bookdetails></div>
