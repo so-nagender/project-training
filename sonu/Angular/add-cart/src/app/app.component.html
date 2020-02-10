@@ -11,5 +11,14 @@
   {{Pizza.value}}
   <button (click)="sub(Pizza)">-</button>
  </div>
- <div class="text-center">Total Items:{{Burger.value + Pizza.value}}</div>
+ <div class="text-center">{{text}} = {{Burger.value + Pizza.value}}</div>
+ <form>
+ <div class="">
+  <!-- {{hero}} -->
+  <P class="text-center" *ngFor="let i of hero">{{i.id}}    {{i.name}}</P>
+ </div>
+</form>
+
+
+
 
