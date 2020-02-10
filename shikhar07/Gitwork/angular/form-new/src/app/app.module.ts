@@ -5,12 +5,13 @@ import { Confirmemailvalidator} from './shared/confirm-equal-validator.directive
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { from } from 'rxjs';
+import { NextpageComponent } from './nextpage/nextpage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Confirmemailvalidator
+    Confirmemailvalidator,
+    NextpageComponent
   ],
   imports: [
     BrowserModule,
