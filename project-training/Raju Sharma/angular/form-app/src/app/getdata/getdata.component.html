@@ -1,0 +1,21 @@
+<p>getdata works!</p>
+<div class="container">
+    <button type="submit" routerLink="/home" class="btn btn-outline-success my-4">Home</button>
+    <button type="submit" routerLink="/setdata" class="btn btn-outline-success ml-4">Set Data</button>
+    <table class="table table-striped" >
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Movie_Name</th>
+          <th scope="col">Discription</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let m of movieDetails">
+          <th scope="row">{{ m.id }}</th>
+          <td>{{ m.name }}</td>
+          <td>{{ m.dis }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

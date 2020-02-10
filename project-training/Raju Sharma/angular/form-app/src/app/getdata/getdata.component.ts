@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MyserviceService } from '../myservice.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-getdata',
+  templateUrl: './getdata.component.html',
+  styleUrls: ['./getdata.component.css']
 })
-export class HomeComponent implements OnInit {
+export class GetdataComponent implements OnInit {
   todaydate: Date;
   movieDetails: object;
 

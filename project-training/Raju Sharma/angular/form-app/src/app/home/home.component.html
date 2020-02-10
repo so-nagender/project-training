@@ -1,10 +1,16 @@
 <div class="container-fluid body-img">
     <div>
        <div class="container pt-3">
-         <a [appFirst]="color" href="#" class="float-left pt-2 navbar-brand mt-1">
+         <a href="#" class="float-left pt-2 navbar-brand mt-1">
            Read<i>it</i>.
          </a>
          <ul class="nav justify-content-end color">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/setdata" routerLinkActive="active" >Set Movie Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/getdata" routerLinkActive="active" >Get Movie Details</a>
+          </li>
            <li class="nav-item">
              <a class="nav-link active" routerLink="/home" routerLinkActive="active">Home</a>
            </li>
@@ -23,12 +29,35 @@
            </div>
        </div>
    </div>
-
-
-
+   <div class="container">
+    <h1>servicess</h1>
+    <b>Today's  Date:</b> {{ todaydate }} <br>
+    <b id="m">Movie Lists are: </b>
+    <div *ngFor="let m of movieDetails">
+        {{ m.id}} {{ m.name }}
+    </div>
+  </div>
+  <div class="container">
+    <table class="table table-striped" >
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Movie_Name</th>
+          <th scope="col">Discription</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let m of movieDetails">
+          <th scope="row">{{ m.id }}</th>
+          <td>{{ m.name }}</td>
+          <td>{{ m.dis }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 <div class="container">
   <h1>My First Attribute Directive</h1>
-  <h4>Pick a highlight color</h4>
+  <h2>Pick a highlight color</h2>
   <div>
     <input type="radio" name="colors" (click)="color='lightgreen'">Green
     <input type="radio" name="colors" (click)="color='yellow'">Yellow
@@ -43,3 +72,4 @@
   <h1 appFirst [firstInput]="color" [secondInput]="text">Text</h1>
   <p [appFirst]="path" > click here</p>
 </div>
+
