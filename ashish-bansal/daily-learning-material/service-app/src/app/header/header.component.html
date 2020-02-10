@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4 mt-5">
+            <h5 class="pt-5">Today's Date is : {{todayTime}}</h5>
+        </div>
+        <div class="col-4 mt-5">
+            <table class="table table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope = "col">id</th>
+                        <th scope = "col">name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = 'let movie of myList'>
+                        <td>{{movie.id}}</td>
+                        <td>{{movie.name}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-4 mt-5">
+            <form [formGroup]="myform" (ngSubmit)="onSubmit()">
+                <div class="form-row">
+                    <label for="id">id</label>
+                    <input id ="id" class="form-control" type="text" placeholder="Enter your id" formControlName="id">
+                </div>
+                <div class="form-row">
+                    <label for="movies">movies</label>
+                    <input movies ="movies" class="form-control" type="text" placeholder="Enter your movies" formControlName="movies">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
