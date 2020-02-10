@@ -1,6 +1,8 @@
 <div class="container second">
-  <input [ngModel]="username" (ngModelChange)="username = $event" />
-  <p>Hello--{{ username }}</p>
+  <label>Add Movie-</label><input [ngModel]="username" (ngModelChange)="username = $event" />
+  <button>Add</button>
+  <p>{{ username }}</p>
+  <p *ngFor="let moviename of movie">{{moviename.name}}</p>
   <p class="service" style="text-align:center;font-weight: bolder; color: darkviolet;">Services</p>
   <h1 style="text-align: centre;">With more than 20 years of experience we can deliver the best product design.</h1>
   <div class="row second">
