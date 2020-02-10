@@ -1,0 +1,27 @@
+<div class="container-fluid head">
+  <h2>Services</h2>
+</div>
+<div class="container body">
+  <div>
+    <h4>Today's  Date:</h4>
+    <br> {{ todaydate }}
+  </div>
+  <div style="padding-top: 25px;">
+    <h4>Movie List:</h4>
+    <br>
+    <table class="table container table-striped border border-success ">
+      <thead>
+        <tr>
+          <th scope="col">Movie_ID</th>
+          <th scope="col">Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of movieList" >
+          <th class="check" scope="row">{{ p.id }}</th>
+          <td>{{ p.name | uppercase }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
