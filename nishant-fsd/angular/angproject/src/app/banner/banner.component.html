@@ -1,8 +1,20 @@
 <div class="container second">
-  <label>Add Movie-</label><input [ngModel]="username" (ngModelChange)="username = $event" />
-  <button>Add</button>
-  <p>{{ username }}</p>
+  <form [formGroup] = "loginForm" (ngSubmit)="onSubmit()">
+    <label>Add Movie-</label><input id ="id" class="form-control" type="text" placeholder="Enter your id" formControlName="id">
+    <input movies ="movies" class="form-control" type="text" placeholder="Enter your movies" formControlName="movies">
+    <button>Add</button>
+  </form>
+ 
+
+  <!-- <label>Add Movie-</label><input [ngModel]="username" (ngModelChange)="username = $event" />
+  <button>Add</button> -->
+
   <p *ngFor="let moviename of movie">{{moviename.name}}</p>
+  <h2>Teams</h2>
+<div *ngFor="let team of result ">
+  <h3>{{team.name}}</h3>
+  <p>{{team.description}}</p> 
+</div>
   <p class="service" style="text-align:center;font-weight: bolder; color: darkviolet;">Services</p>
   <h1 style="text-align: centre;">With more than 20 years of experience we can deliver the best product design.</h1>
   <div class="row second">
