@@ -1,16 +1,7 @@
 {
     "teams": [
-      {
-        "id": 1,
-        "name": "FC Barcelona",
-        "coach": "Ernesto Valverde",
-        "description": "The best football team in the world!"
-      },
-      {
-        "id": 2,
-        "name": "Real Madrid",
-        "coach": "Zinedine Zidane",
-        "description": "The worst football team in the world!"
-      }
+      { "id": 1, "name": "KANK" }, 
+      { "id": 2, "name": "Titanic again" },
+      { "id": 3, "name": "Titanic again 2.0" }
     ]
   }

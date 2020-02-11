@@ -12,5 +12,11 @@
 <div class="container-fluid" style="background: black;">
   <app-footer-section> </app-footer-section>
 </div>
+
+<div class="mt-5 ml-auto mr-auto col-md-5 text-center border border-secondary" >
+  <h3 ><strong>Movies List</strong></h3>
+  <p *ngFor= "let i of datas"> {{ i.id}} {{ i.name }} </p>
+ </div>
+
   
   

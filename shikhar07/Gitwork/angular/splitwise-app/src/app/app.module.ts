@@ -12,16 +12,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HomeComponent } from './home/home.component';
+import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
+  { path: 'form', component: FormComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'sign-in', component: SignInComponent },
   { path: '', component: HomeComponent },
 ];
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, MiddleSectionComponent, FooterSectionComponent, NavbarComponent, SignUpComponent, SignInComponent, HomeComponent],
-  imports: [BrowserModule, FormsModule, AppRoutingModule,  RouterModule.forRoot(appRoutes), HttpClientModule],
+  declarations: [AppComponent, HeaderComponent, MiddleSectionComponent, FooterSectionComponent, NavbarComponent, SignUpComponent, SignInComponent, HomeComponent, FormComponent],
+  imports: [BrowserModule, FormsModule, AppRoutingModule,  RouterModule.forRoot(appRoutes), HttpClientModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
