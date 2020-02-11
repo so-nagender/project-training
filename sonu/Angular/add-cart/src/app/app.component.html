@@ -20,5 +20,14 @@
 </form>
 
 
+<!-- mock api    -->
+<h2>Teams</h2>
+<div *ngFor="let team of teams$ | async">
+  <h2>{{team.name}}</h2>
+  <p>{{team.description}}</p>
+  <p>{{team.id}}</p>
+  <p>{{team.coach}}</p>
+</div>
+
 
 

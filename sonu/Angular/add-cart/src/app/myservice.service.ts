@@ -1,11 +1,17 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { url } from 'inspector';
 
 @Injectable({
   providedIn: 'root'
 })
 @Injectable()
 export class MyserviceService {
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
+
+  public getMovies(){
+    return this.httpClient.get("api/teams");
+  }
   display(){
     return 'Total Item';
   }
