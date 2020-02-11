@@ -8,10 +8,20 @@ import { HeaderComponent } from './header/header.component';
 import { MiddleSectionComponent } from './middle-section/middle-section.component';
 import { FooterSectionComponent } from './footer-section/footer-section.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule, Routes } from '@angular/router';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { HomeComponent } from './home/home.component';
+
+const appRoutes: Routes = [
+  { path: 'sign-up', component: SignUpComponent },
+  { path: 'sign-in', component: SignInComponent },
+  { path: '', component: HomeComponent },
+];
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, MiddleSectionComponent, FooterSectionComponent, NavbarComponent],
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  declarations: [AppComponent, HeaderComponent, MiddleSectionComponent, FooterSectionComponent, NavbarComponent, SignUpComponent, SignInComponent, HomeComponent],
+  imports: [BrowserModule, FormsModule, AppRoutingModule,  RouterModule.forRoot(appRoutes)],
   providers: [],
   bootstrap: [AppComponent]
 })
