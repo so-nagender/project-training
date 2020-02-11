@@ -1,5 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
+import { MoviesService  } from './movies.service'
+
 
 
 @Component({
@@ -10,18 +12,24 @@ import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
 export class AppComponent {
   title = 'form-new';
   checkoutForm: FormGroup;
+  nums;
 constructor(
   private formBuilder: FormBuilder,
-)
+  private movies : MoviesService,
+ )
 {
   this.checkoutForm = this.formBuilder.group({
     firstName: new FormControl ('', Validators.required),
     lastName: new FormControl ('', Validators.required),
     email: new FormControl ('', [Validators.required, Validators.email]),
+    confirmEmail: new FormControl ('', [Validators.required, Validators.email]),
     Address: new FormControl ('', Validators.required),
     Age: new FormControl ('', [Validators.required, Validators.min(1)]),
-  }
+}
 );
+}
+ngOnInit() {
+  this.nums= this.movies.movielist();
 }
 onSubmit(customerData) {
   // Process checkout data here
