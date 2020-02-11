@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MyServicesService {
 
-  constructor() { }
+  constructor(private http: HttpClient) {}
 
   todayDate() {
     let ndate = new Date();
@@ -24,4 +26,15 @@ export class MyServicesService {
     ];
     return list;
   }
+  getTeams(): Observable<any>{
+    return this.http.get('/api/teams');
+  }
+
+  setTeams (obj): Observable<any> {
+    return this.http.post<any>('/api/teams',obj)
+  }
+
+  // updateTeams (obj1): Observable<any> {
+  //   return this.http.put<any>( '/api/teams', obj1);
+  // }
 }

@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "api": "json-server data.json --routes routes.json --no-cors=true"
   },
   "private": true,
   "dependencies": {
