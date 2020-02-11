@@ -9,12 +9,14 @@
                     <tr>
                         <th scope = "col">id</th>
                         <th scope = "col">name</th>
+                        <th scope = "col">grade</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor = 'let movie of myList'>
+                    <tr *ngFor = 'let movie of datas'>
                         <td>{{movie.id}}</td>
                         <td>{{movie.name}}</td>
+                        <td>{{movie.grade}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -31,6 +33,19 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+
+            <form [formGroup]="mydelete" (ngSubmit)="onDelete()">
+                <div class="form-row">
+                    <label for="id">Enter your id to delete</label>
+                    <input id ="id" class="form-control" type="text" placeholder="Enter your id" formControlName="id">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            
+            <!-- <div *ngFor = 'let data of datas'>
+                <p>{{data.id}}</p>
+
+            </div> -->
         </div>
     </div>
 </div>
