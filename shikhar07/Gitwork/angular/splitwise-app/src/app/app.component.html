@@ -3,3 +3,8 @@
 <router-outlet></router-outlet>
   </div>
 </div>
+<h2>Teams</h2>
+<div *ngFor="let team of teams$ | async">
+  <h3>{{team.name}}</h3>
+  <p>{{team.description}}</p>
+</div>

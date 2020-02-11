@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
-import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+​import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MiddleSectionComponent } from './middle-section/middle-section.component';
@@ -21,7 +21,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, MiddleSectionComponent, FooterSectionComponent, NavbarComponent, SignUpComponent, SignInComponent, HomeComponent],
-  imports: [BrowserModule, FormsModule, AppRoutingModule,  RouterModule.forRoot(appRoutes)],
+  imports: [BrowserModule, FormsModule, AppRoutingModule,  RouterModule.forRoot(appRoutes), HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })
