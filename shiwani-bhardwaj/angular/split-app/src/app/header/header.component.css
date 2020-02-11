@@ -1,0 +1,15 @@
+ul li a {
+    padding: 10px 10px;
+    border: 3px black;
+    font-size: large;
+    text-decoration: underline;
+    font-family: cursive;
+    width: 100%;
+    
+}
+
+ul li a:hover {
+    text-decoration: underline;
+    background: pink;
+    
+}

@@ -1,0 +1,24 @@
+ul li
+{
+    list-style: none;
+    padding: 20px;
+}
+.images
+{
+    height: 80px;
+    padding: 10px;
+}
+.main
+{
+    margin: 200px 700px;
+}
+button{
+    border-radius: 10px;
+    padding: 15px;
+}
+button:hover
+{
+    font-weight: 700;
+    size: 10px;
+    background-color: palevioletred;
+}

@@ -1,0 +1,51 @@
+<h1>choose ur fav color</h1>
+  <div>
+    <input type="radio" name="colors" (click)="color='pink'">pink
+    <input type="radio" name="colors" (click)="color='black'">black
+    <input type="radio" name="colors" (click)="color='grey'">grey
+</div>
+<form [formGroup]="userprofile"  (ngSubmit)="onSubmit()" class="font1" >
+    <h1>SIGN-UP</h1>
+    FirstName:<br>
+    <input type="text" formControlName="FirstName" [ngClass]="{ 'is-invalid': submitted && f.FirstName.errors }" /><br>
+    <div *ngIf="submitted && f.FirstName.errors" class="invalid-feedback">
+        <div *ngIf="f.FirstName.errors.required" class="font2">*First Name is required</div>
+    </div>
+
+    LastName:<br>
+    <input type="text"  formControlName="LastName" [ngClass]="{ 'is-invalid': submitted && f.LastName.errors }" /><br>
+    <div *ngIf="submitted && f.LastName.errors" class="invalid-feedback">
+        <div *ngIf="f.LastName.errors.required" class="font2">*Last Name is required</div>
+    </div>
+    
+    Email:<br>
+   <input type="text" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" /><br>
+   <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+       <div *ngIf="f.email.errors.required" class="font2">*Email is required</div>
+   </div>
+   Confirm_Email:<br>
+   <input type="text" formControlName="Confirm_Email" [ngClass]="{ 'is-invalid': submitted && f.Confirm_Email.errors }" /><br>
+   <div *ngIf="submitted && f.Confirm_Email.errors" class="invalid-feedback">
+       <div *ngIf="f.Confirm_Email.errors.required" class="font2">*Email is required</div>
+   </div>
+    
+    Password:<br>
+   <input type="text" formControlName="Password"[ngClass]="{ 'is-invalid': submitted && f.Password.errors }" /><br>
+   <div *ngIf="submitted && f.Password.errors" class="invalid-feedback">
+       <div *ngIf="f.Password.errors.required" class="font2">*Password is required</div>
+   </div>
+   Address:<br>
+    <input type="text" formControlName="Address"[ngClass]="{ 'is-invalid': submitted && f.Address.errors }" /><br>
+    <div *ngIf="submitted && f.Address.errors" class="invalid-feedback">
+        <div *ngIf="f.Address.errors.required" class="font2">*address is required</div>
+    </div>
+    Age:<br>
+    <input type="number" min="0" formControlName="Age"[ngClass]="{ 'is-invalid': submitted && f.Age.errors }" /><br>
+    <div *ngIf="submitted && f.Age.errors" class="invalid-feedback">
+        <div *ngIf="f.Age.errors.required" class="font2">*age is required</div>
+        <div *ngIf="f.Age.errors.min" class="font2">*min-age is required is 1 years</div>
+        <div *ngIf="f.Age.errors.max" class="font2">*max-age is required is 150 years</div>
+    </div>
+    
+       <button type="submit" class="btn btn-primary">submit</button>
+ </form>

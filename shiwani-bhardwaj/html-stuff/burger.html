@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+  <body>
+    h1 style="text-align: center;">ITEMS IN CART</h1>
+        
+<div class="container main">.
+        <div class="row ">
+         <ul>
+          <div class="col-sm font1">
+            <div>
+                <li> 
+                        <button (click)="add(burger)">+</button>
+                        <img src="../../assets/images/burger.svg" class="images">
+                      
+                        burger
+                        <button (click)="remove(burger)">-</button>
+                        </li>
+                        
+                
+              </div>
+           </div>
+          <div class="col-sm font1">
+            <div>
+                <li>
+                        <button (click)="add(pizza)">+</button>
+                        <img src="../../assets/images/pizza.svg" class="images">
+                       
+                        pizza
+                        <button (click)="remove(pizza)">-</button>
+                        </li>
+                        
+             </div>
+              
+           
+          </div>
+          <div class="col-sm font1">
+            <div >
+                <li>
+                        <button (click)="add(sandwich)">+</button>
+                        <img src="../../assets/images/sandwich.svg" class="images">
+                    
+                        sandwich
+                        <button (click)="remove(sandwich)">-</button>
+                        </li>
+             </div>
+          </div>
+        </ul>
+        </div>
+              <li>
+                total items: {{burger.value + pizza.value + sandwich.value}}
+             </li>
+     
+      </div>
+  </body>
+</head>
+</html>

@@ -1,0 +1,8 @@
+<h1>LIST OF THE MOVIES</h1>
+<!-- <ul *ngFor="let movie of movies">
+    <li>{{movie.id}}   {{movie.name}}. - {{movie.director}} </li>
+</ul> -->
+<div *ngFor="let movie of movie" >
+     {{movie.id}}  {{movie.name}} -  {{movie.director}} ({{movie.year}})  
+    <!-- {{movie|json}} -->
+  </div>

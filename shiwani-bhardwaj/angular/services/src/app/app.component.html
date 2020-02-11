@@ -1,0 +1,8 @@
+<app-header></app-header>
+<app-mid-part></app-mid-part>
+<app-mid-part2></app-mid-part2>
+<h2>Teams</h2>
+<div *ngFor="let team of teams$ | async">
+  <h2>{{team.name}}</h2>
+  <p>{{team.description}}</p>
+</div>
