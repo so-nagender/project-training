@@ -1,0 +1,48 @@
+
+<div class="container" *ngFor="let team of myData" >
+    <p class="font2">-list of teams-</p>
+    <h1  class="font3" style="text-align: center;">teams</h1>
+    <div class="row ">
+      <div class="col-sm font1">
+        <div>
+          <p >team1</p>
+        <p class="font2">  {{team.name}}</p></div>
+       </div>
+      <div class="col-sm font1">
+        <div>
+          <p >team2</p>
+        <p class="font2">{{team.coach}}</p></div>  
+       </div>
+     </div> 
+ </div>
+ <h1  class="font3" style="text-align: center;">FORM</h1>
+  <div class="row ">
+    <div class="col-sm font1">
+      <div>
+        
+        <p >Detail of the users</p>
+    <form [formGroup]="myform"  (ngSubmit)="onSubmit()" >
+        <div>
+            <label for="first_name">
+              first_name-
+            </label>
+            <input id="first_name" type="text" formControlName="first_name">
+        </div>
+        <div>
+            <label for="first_name">
+              last_name-
+            </label>
+            <input id="last_name" type="text" formControlName="last_name">
+         </div>
+
+         <div>
+         <label for="address">
+         Address-
+        </label>
+        <input id="address" type="text" formControlName="address">
+        </div>
+        <button class="button" type="submit">submit</button>
+      </form>
+        </div>
+     </div>
+  </div>
