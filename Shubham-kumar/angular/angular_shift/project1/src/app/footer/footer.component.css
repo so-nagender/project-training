@@ -1,0 +1,44 @@
+.whitecolor {
+  color: white;
+}
+.new1 {
+  padding-bottom: 20px;
+}
+
+.container-fluid {
+  background-color: black;
+}
+.differencebwtn + .differencebwtn {
+  padding-left: 12%;
+}
+
+li {
+  list-style: none;
+  float: left;
+  display: flex;
+  justify-content: space-around;
+}
+
+.line {
+  border-bottom: 1px solid white;
+}
+.padding_bottom {
+  padding-bottom: 200px;
+}
+.padding_top {
+  padding-top: 200px;
+}
+.red {
+  color: red;
+}
+.copyright {
+  padding-top: 50px;
+}
+.whitecolor li {
+  margin-left: 100px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+  justify-content: center;
+}
+

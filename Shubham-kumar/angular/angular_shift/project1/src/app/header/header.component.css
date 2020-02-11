@@ -1,0 +1,56 @@
+.div1 {
+  position: relative;
+
+  overflow: hidden;
+  background-image: url("../../assets/images/banner1.png");
+
+  height: 899px;
+}
+
+.font_large {
+  font-size: 45px;
+  line-height: 80px;
+}
+.whitecolor {
+  color: white;
+  color-adjust: economy;
+}
+.pad {
+  max-width: 50%;
+}
+
+.section {
+  padding-top: 200px;
+  padding-left: 200px;
+}
+
+.diffrencebtwn + .diffrencebtwn {
+  margin-left: 200px;
+}
+li {
+  margin-left: 30px;
+}
+
+.form_popup div {
+  line-height: 10px;
+  text-align: justify;
+  padding: 40px 0px 40px 0px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 25px;
+  background: transparent;
+}
+.form_popup div input[type="text"],
+input[type="password"] {
+  border-color: transparent;
+  border-bottom: solid 1px;
+}
+
+button {
+  border-radius: 20px !important;
+  background-color: #68228B	 !important;
+  border-color: #68228B	 !important;
+}
+
+.access + .access{
+    margin: 10px ;
+}

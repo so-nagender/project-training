@@ -1,0 +1,29 @@
+.form_popup div {
+    line-height: 10px;
+    text-align: justify;
+    padding: 40px 0px 40px 0px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 25px;
+    background: transparent;
+  }
+  .form_popup div input[type="text"],
+  input[type="password"] {
+    border-color: transparent;
+    border-bottom: solid 1px;
+  }
+  [type=submit]
+  {
+      background: #68228B	;
+      color: white;
+      border-radius: 5px 5px 5px 5px;
+  }
+  .right{
+    float: right;
+    flex-direction: column;
+    
+  }
+  .side{
+    height: 500px;
+    background-color: red;
+    max-width: 20%;
+  }

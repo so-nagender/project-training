@@ -1,0 +1,30 @@
+.mid2{
+    background-color: white;
+    padding: 100px 400px 100px 400px;
+}
+.padding_top{
+    padding-top:200px;
+
+}
+.font_large{
+    font-size: 40px;
+    max-width: 30%;
+
+    line-height: 100px;
+}
+.col-sm img{
+    display: block;
+    width: 30%;
+    margin-bottom: 60px;
+    margin-top: 60px;
+  
+  }
+.col-sm{
+    border: 1px solid black;
+    margin: 100px 50px 100px 0px;
+
+    
+}
+h3{
+     padding-bottom: 40px;
+}
