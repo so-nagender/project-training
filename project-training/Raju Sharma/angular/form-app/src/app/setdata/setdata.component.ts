@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { MyserviceService } from '../myservice.service';
 import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-setdata',
   templateUrl: './setdata.component.html',
