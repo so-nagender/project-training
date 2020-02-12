@@ -1,85 +1,34 @@
-<div class="container-fluid head">
-  <h2>Services</h2>
-</div>
-<div class="container body">
+<!-- <div class="container-fluid head">
   <div>
-    <h4>Today's  Date:</h4>
-    <br> {{ todaydate }}
-  </div>
-  <div style="padding-top: 25px;">
-    <h4>Movie List:</h4>
-    <br>
-    <table class="table container table-striped border border-success ">
-      <thead>
-        <tr>
-          <th scope="col">Movie_ID</th>
-          <th scope="col">Name</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let p of movieList" >
-          <th class="check" scope="row">{{ p.id }}</th>
-          <td>{{ p.name | uppercase }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <h2>Teams</h2>
-  <div *ngFor="let team of apiTeam ">
-    <h3>{{team.name}}</h3>
-    <p>{{team.description}}</p>
-  </div>
-  <div>
-    <form [formGroup]="formData" (ngSubmit)="onSubmit(formData.value)">
-  
+    <form [formGroup]="formData1" (ngSubmit)="onUpdate()">
+    
       <div class="row">
+        <div class="col">
+          Id:
+          <br>
+          <input id="id" class="form-control" type="text" formControlName="id" >
+        </div>
         <div class="col">
           Name:
           <br>
-          <input id="name" class="form-control" type="text" formControlName="name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
-          <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
-            <div *ngIf="f.name.errors.required">Name is required</div>
-          </div>
+          <input id="name" class="form-control" type="text" formControlName="name" >
         </div>
         <div class="col">
           Description:
           <br>
-          <input id="des" class="form-control" type="text" formControlName="des" [ngClass]="{ 'is-invalid': submitted && f.des.errors }">
-          <div *ngIf="submitted && f.des.errors" class="invalid-feedback">
-            <div *ngIf="f.des.errors.required">Description is required</div>
-          </div>
-        </div>
-      </div>
-      <div style="margin-top: 10px;">
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-    </form>
-  </div>
-  <!-- <div>
-    <form [formGroup]="formData1" (ngSubmit)="onUpdate(formData1.value)">
-  
-      <div class="row">
-        <div class="col">
-          Name:
-          <br>
-          <input id="name1" class="form-control" type="text" formControlName="name1" [ngClass]="{ 'is-invalid': submitted && f.name1.errors }">
-          <div *ngIf="submitted && f.name1.errors" class="invalid-feedback">
-            <div *ngIf="f.name1.errors.required">Name is required</div>
-          </div>
-        </div>
-        <div class="col">
-          Description:
-          <br>
-          <input id="des1" class="form-control" type="text" formControlName="des1" [ngClass]="{ 'is-invalid': submitted && f.des1.errors }">
-          <div *ngIf="submitted && f.des1.errors" class="invalid-feedback">
-            <div *ngIf="f.des1.errors.required">Description is required</div>
-          </div>
+          <input id="des" class="form-control" type="text" formControlName="des" >  
         </div>
       </div>
       <div style="margin-top: 10px;">
         <button type="submit" class="btn btn-primary">Update</button>
       </div>
     </form>
-  </div> -->
-</div>
+  </div>
+</div> -->
+
+
+
+<router-outlet></router-outlet>
+
+
 

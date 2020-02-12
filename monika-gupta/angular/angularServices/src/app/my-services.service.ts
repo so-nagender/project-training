@@ -34,7 +34,8 @@ export class MyServicesService {
     return this.http.post<any>('/api/teams',obj)
   }
 
-  // updateTeams (obj1): Observable<any> {
-  //   return this.http.put<any>( '/api/teams', obj1);
-  // }
+  updateTeams (obj): Observable<any> {
+    const url = `/api/teams/`;
+    return this.http.put<any>( url, obj);
+  }
 }

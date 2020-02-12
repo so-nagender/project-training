@@ -1,0 +1,35 @@
+<div class="container-fluid head">
+    <div class="container">
+         Movie List
+        <button type="submit" class="btn btn-primary float-right" routerLink="/postdata">Add Movie</button>
+    </div>
+</div>
+<div class="container body">
+    <div>
+      <h4>Today's  Date:</h4>
+      <br> {{ todaydate }}
+    </div>
+    <div style="padding-top: 25px;">
+        <h4>Movie List</h4>
+        <br>
+        <table class="table container table-striped border border-success ">
+            <thead>
+            <tr>
+                <th scope="col">Movie_ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let team of apiTeam " >
+                    <th class="check" scope="row">{{ team.id }}</th>
+                    <td>{{ team.name | uppercase }}</td>
+                    <td><button type="submit" class="btn btn-primary" [routerLink]="['/movie/show', team.id]">Show</button>
+                        <button type="submit" class="btn btn-primary" style="margin-left: 10px;" [routerLink]="['/movie/edit', team.id]">Edit</button>
+                        <button type="submit" class="btn btn-primary" style="margin-left: 10px;" [routerLink]="['/movie/delete', team.id]">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+      </table>
+    </div>
+</div>

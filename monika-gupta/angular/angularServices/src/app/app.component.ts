@@ -20,9 +20,8 @@ export class AppComponent {
   teamName;
   teamDes;
   obj;
-  // teamUpdateDes;
-  // obj1;
-  // formData1;
+  formData1;
+  
  
   constructor(private http: HttpClient, private myservice: MyServicesService, private formBuilder: FormBuilder) {}
 
@@ -37,13 +36,15 @@ export class AppComponent {
       name: ['', Validators.required],
       des: ['', Validators.required]
     });
-    // this.formData1 = this.formBuilder.group({
-    //   name1: ['', Validators.required],
-    //   des1: ['', Validators.required]
-    // });
+    this.formData1 = this.formBuilder.group({
+      id : [''],
+      name: [''],
+      des: ['']
+    });
   }
   
-  get f() { return this.formData.controls; }
+  get u() { return this.formData.controls; }
+
   getTeams() {
     this.myservice.getTeams().subscribe((res)=>{
       console.log(res);
@@ -51,32 +52,27 @@ export class AppComponent {
     });
   }
 
-  onSubmit(customerData) {
+  onSubmit() {
     this.submitted = true;
     this.teamName = this.formData.controls.name.value;
     this.teamDes = this.formData.controls.des.value;
-    this.obj = { "name" : this.teamName ,"description" : this.teamDes };
+    this.obj = { "name" : this.teamName, "description" : this.teamDes };
     this.myservice.setTeams(this.obj).subscribe();
     this.getTeams();
-    
     if (this.formData.invalid) {
       return;
     }
-    console.warn('Your Data is recorded', customerData);
+    
   }
 
-  // onUpdate(customerData) {
-  //   this.submitted = true;
-  //   this.teamUpdateDes = this.formData1.controls.des1.value;
-  //   this.obj1 = { "name" : this.teamName ,"description" : this.teamUpdateDes };
-  //   this.myservice.updateTeams(this.obj1).subscribe();
-  //   this.getTeams();
-    
-  //   if (this.formData.invalid) {
-  //     return;
-  //   }
-  //   console.warn('Your Data is recorded', customerData);
-  // }
+  onUpdate() {
+    this.submitted = true;
+    let teamName = this.formData1.controls.name.value;
+    let teamDes = this.formData1.controls.des.value;
+    let obj = { "name" : teamName ,"description" : teamDes };
+    this.myservice.updateTeams(obj).subscribe();
+    this.getTeams();
+  }
 
  
   
