@@ -5,7 +5,7 @@ body,html {
       box-sizing: border-box;
       box-shadow: 7px 7px 7px 7px;
       margin-top: 150px;
-      background: rgba(0, 0, 0, 0.233);
+      background: rgba(228, 215, 215, 0.096);
   }
 .bg {
     background: url("../../assets/img/bg.jpg") no-repeat center center fixed;
@@ -22,7 +22,7 @@ input, textarea {
     border: none;
     outline: none;
     box-sizing: border-box;
-    border: solid 1px blanchedalmond;
+    border: solid 1px rgb(251, 248, 242);
 }
 h1 {
     color: rgba(171, 228, 157, 0.356);

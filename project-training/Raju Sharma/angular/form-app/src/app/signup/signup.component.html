@@ -1,66 +1,72 @@
 <div class="container-fluid bg">
     <div class="container mt-4">
-      <h1>SIGN UP</h1>
-      <form action="" [formGroup]='data' (ngSubmit)='onSubmit(data.value)'>
-        <div class="row">
-          <div class="col-4">
-            <label>First Name</label>
-            <input type="text" name="firstName"  formControlName="firstName"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"  > 
-            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
-              <div *ngIf="f.firstName.errors.required">First Name is required</div>
-            </div>
-          </div>
-          <div class="col-4">
-            <label>Last Name</label> 
-            <input type="text" name="lastName"  formControlName="lastName"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }"  >
-            <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
-              <div *ngIf="f.lastName.errors.required">Last Name is required</div>
-            </div>
-          </div>
+      <div class="row">
+        <div class="col-2">
         </div>
-        <div class="row my-4">
-          <div class="col-4">
-            <label>Email</label>
-            <input type="text" name="email" id="e1" formControlName="email"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"  >
-            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-              <div *ngIf="f.email.errors.required">Email is required</div>
-              <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+        <div class="col-8">
+          <h1>SIGN UP</h1>
+          <form action="" [formGroup]='data' (ngSubmit)='onSubmit(data.value)'>
+            <div class="row">
+              <div class="col-6">
+                <label>First Name</label>
+                <input type="text" name="firstName"  formControlName="firstName"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"  > 
+                <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                  <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <label>Last Name</label> 
+                <input type="text" name="lastName"  formControlName="lastName"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }"  >
+                <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                  <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="col-4">
-            <label>Confirm Email</label>
-            <input type="text" name="confirmemail" id="e2" formControlName="confirmemail"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmemail.errors }"  >
-            <div *ngIf="submitted && f.confirmemail.errors" class="invalid-feedback">
-              <div *ngIf="f.confirmemail.errors.required">Confirm Email is required</div>
-              <div *ngIf="f.confirmemail.errors.MustMatch">Email must match</div>
+            <div class="row my-4">
+              <div class="col-6">
+                <label>Email</label>
+                <input type="text" name="email" id="e1" formControlName="email"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"  >
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                  <div *ngIf="f.email.errors.required">Email is required</div>
+                  <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <label>Confirm Email</label>
+                <input type="text" name="confirmemail" id="e2" formControlName="confirmemail"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmemail.errors }"  >
+                <div *ngIf="submitted && f.confirmemail.errors" class="invalid-feedback">
+                  <div *ngIf="f.confirmemail.errors.required">Confirm Email is required</div>
+                  <div *ngIf="f.confirmemail.errors.MustMatch">Email must match</div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="row my-4">
-          <div class="col-8">
-            <label>Address</label>
-            <textarea type="text" name="address" rows="5"  formControlName="address"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.address.errors }" > </textarea>
-            <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
-              <div *ngIf="f.address.errors.required">Address is required</div>
+            <div class="row my-4">
+              <div class="col-6">
+                <label>Address</label>
+                <textarea type="text" name="address" rows="5"  formControlName="address"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.address.errors }" > </textarea>
+                <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                  <div *ngIf="f.address.errors.required">Address is required</div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-4">
-            <label>Age</label>
-            <input type="number" name="age"  formControlName="age"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.age.errors }"  >
-            <div *ngIf="submitted && f.age.errors" class="invalid-feedback">
-              <div *ngIf="f.age.errors.required">Age is required</div>
-              <div *ngIf="f.age.errors.min">Min age is 1 years</div>
-              <div *ngIf="f.age.errors.max">Max age is 130 years</div>
+            <div class="row">
+              <div class="col-6">
+                <label>Age</label>
+                <input type="number" name="age"  formControlName="age"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.age.errors }"  >
+                <div *ngIf="submitted && f.age.errors" class="invalid-feedback">
+                  <div *ngIf="f.age.errors.required">Age is required</div>
+                  <div *ngIf="f.age.errors.min">Min age is 1 years</div>
+                  <div *ngIf="f.age.errors.max">Max age is 130 years</div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="form-group my-4">
-          <button [disabled]="loading" class="btn btn-outline-success">Register</button>
-          <button type="button" class="btn btn-outline-success ml-4" routerLink="/home" routerLinkActive="active">Back home</button>
-        </div>
-      </form>
-    </div>  
+            <div class="form-group my-4">
+              <button [disabled]="loading" class="btn btn-outline-success">Register</button>
+              <button type="button" class="btn btn-outline-success ml-4" routerLink="/home" routerLinkActive="active">Back home</button>
+            </div>
+          </form>
+        </div>  
+      </div>
+    </div>
   </div>
   
