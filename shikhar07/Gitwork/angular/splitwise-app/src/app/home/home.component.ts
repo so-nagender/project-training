@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../movies.service';
+import { Router } from '@angular/router'; 
+
+
 
 
 @Component({
@@ -10,11 +13,17 @@ import { MoviesService } from '../movies.service';
 export class HomeComponent implements OnInit {
   datas
 
-  constructor(private movies : MoviesService) { }
+
+  constructor(private movies : MoviesService, private router :  Router, ) { 
+ 
+  }
+
 
   ngOnInit() {
     this.movies.getData().subscribe((res)=>{
       this.datas = res;
     });
    }
-  }
+
+   }
+  

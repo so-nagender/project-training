@@ -8,13 +8,21 @@ import { catchError } from 'rxjs/operators';
 })
 export class MoviesService 
 {
+
 constructor(private http: HttpClient ) { }
-arr1;
-    
+
+getdataId(id) : Observable<any>{
+  const urls = `/api/teams/${id}`;
+  return this.http.get(urls)
+  .pipe(catchError(this.handleError));
+}
+
+//Get Method     
 getData(): Observable<any>{
   return this.http.get('/api/teams')
   .pipe(catchError(this.handleError));
 }
+//Error Handling
 private handleError(errorResponse: HttpErrorResponse) {
   if(errorResponse.error instanceof ErrorEvent){
     console.log('Client side error', errorResponse.error.message)
@@ -23,6 +31,14 @@ private handleError(errorResponse: HttpErrorResponse) {
     console.log('Server side error', errorResponse)
   }
   return Observable.throw('There is a problem');
-}  
-
+}
+//Post Method
+postData(object): Observable<any>{
+  return this.http.post('/api/teams', object )
+  .pipe(catchError(this.handleError));
+}
+//Interceptors
+// getToken(){
+//   return localStorage.getItem('token')
+// }  
 }
