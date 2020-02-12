@@ -10,8 +10,9 @@ import { SigninComponent } from './signin/signin.component';
 import { FirstDirective } from './first.directive';
 import { SetdataComponent } from './setdata/setdata.component';
 import { GetdataComponent } from './getdata/getdata.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FresolverService } from './fresolver.service';
+import { Interceptor } from './interceptor';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -43,7 +44,11 @@ const appRoutes: Routes = [
     ),
     HttpClientModule,
   ],
-  providers: [],
+  providers: [ {
+      provide: HTTP_INTERCEPTORS,
+      useClass: Interceptor,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

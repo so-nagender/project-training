@@ -12,8 +12,8 @@ import { Observable } from 'rxjs';
 export class HomeComponent implements OnInit {
   // teams$: Observable<any>
   todaydate: Date;
-  movieDetails: object;
-  api: any;
+  movieDetails: any = {};
+  api: any = {};
 
   constructor(private Myser: MyserviceService, private http: HttpClient) { }
 
@@ -24,7 +24,5 @@ export class HomeComponent implements OnInit {
       // console.log(res);
       this.api = res;
     });
-  
   }
- 
 }
