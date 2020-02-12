@@ -9,6 +9,10 @@ import { MidPart2Component } from './mid-part2/mid-part2.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TeamComponent } from './team/team.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { InterceptComponent } from './intercept/intercept.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './intercept';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +20,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     MidPartComponent,
     MidPart2Component,
-    TeamComponent
+    TeamComponent,
+    InterceptComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -24,7 +30,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

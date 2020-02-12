@@ -21,7 +21,7 @@
       <div>
         
         <p >Detail of the users</p>
-    <form [formGroup]="myform"  (ngSubmit)="onSubmit()" >
+    <form [formGroup]="myform"  (ngSubmit)="onSubmit()">
         <div>
             <label for="first_name">
               first_name-
@@ -29,11 +29,18 @@
             <input id="first_name" type="text" formControlName="first_name">
         </div>
         <div>
-            <label for="first_name">
-              last_name-
+          <label for="user_id">
+           user_id
+          </label>
+          <input id="user_id" type="text" formControlName="user_id">
+      </div>
+        <div>
+            <label for="last_name">
+              last_name
             </label>
             <input id="last_name" type="text" formControlName="last_name">
          </div>
+        
 
          <div>
          <label for="address">
@@ -41,7 +48,8 @@
         </label>
         <input id="address" type="text" formControlName="address">
         </div>
-        <button class="button" type="submit">submit</button>
+        <button class="button" type="submit">submit</button><br>
+        <button (click)="data_del()">delete</button>
       </form>
         </div>
      </div>
