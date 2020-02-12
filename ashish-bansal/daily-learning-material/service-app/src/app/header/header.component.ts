@@ -29,8 +29,11 @@ export class HeaderComponent implements OnInit {
     id : [''],
   })
 
-  
-
+  myUpdate = this.newForm.group({
+    id : [''],
+    name : [''],
+    grade : ['']
+  })
   ngOnInit() {
     this.todayTime = this.newtime.todayDate();
     this.newtime.getData().subscribe((res)=>{
@@ -38,7 +41,6 @@ export class HeaderComponent implements OnInit {
       this.datas = res;
     });
 }
-  
   onSubmit(){
     this.a = this.myform.controls.id.value
     this.b = this.myform.controls.movies.value
@@ -53,6 +55,17 @@ export class HeaderComponent implements OnInit {
     let x = this.mydelete.controls.id.value
     console.log(parseInt(x))
     this.newtime.deleteData(x).subscribe();
+    this.newtime.getData().subscribe((res)=>{
+      this.datas = res;
+    })
+  }
+
+  onUpdate(){
+    let x = this.myUpdate.controls.id.value
+    let a = this.myUpdate.controls.name.value
+    let b = this.myUpdate.controls.grade.value
+    let obj = { "name" : a ,"grade" : b}
+    this.newtime.updateValue(x,obj).subscribe();
     this.newtime.getData().subscribe((res)=>{
       this.datas = res;
     })

@@ -9,7 +9,7 @@ export class TimeServiceService {
 
   constructor(private https: HttpClient ) {}
   // arr = [{id: 1, name: 'titanic'}, {id: 2, name: 'deja-vu'}, {id: 3, name: 'avatar'},{id: 4,name : 'parasite'},{id: 5,name :'birds of prey'}]
-
+  id : any
   todayDate() {
     let ndate = new Date();
     return ndate;
@@ -29,10 +29,21 @@ export class TimeServiceService {
   getData(): Observable<any>{
     return this.https.get('/api/posts')
   }
+
+  getdataId(x) : Observable<any>{
+    const url = `/api/posts/${x}`;
+    return this.https.get(url)
+  }
+
   
   deleteData(x : number): Observable<any>{
-    console.log('x...........', x);
     const url = `/api/posts/${x}`;
     return this.https.delete(url)
   }
+
+  updateValue (x,obj): Observable<any> {
+    const url = `/api/posts/${x}`;
+    return this.https.put<any>(url,obj)
+  }
+
 }

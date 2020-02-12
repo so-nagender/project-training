@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <table class="table table-hover table-bordered">
+                <thead style="background-color: cadetblue;">
+                    <tr>
+                        <th style="color: cornsilk;" scope = "col">id</th>
+                        <th style="color: cornsilk;" scope = "col">Movie</th>
+                        <th style="color: cornsilk;" scope = "col">Genre</th>
+                        <th style="color: cornsilk;" scope = "col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = 'let movie of datas'>
+                        <td>{{movie.id}}</td>
+                        <td>{{movie.movie}}</td>
+                        <td>{{movie.genre}}</td>
+                        <td><button type="button" class="btn btn-primary mr-2" [routerLink]="['/details',movie.id]">show</button>
+                            <button type="button" class="btn btn-primary" (click) = "onDelete(movie)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-4">
+            <p>Add New movies to your watchlist</p>
+        </div>
+    </div>
+</div>

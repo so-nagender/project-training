@@ -1,18 +1,21 @@
 {
   "posts": [
     {
-      "name": "dffg",
-      "grade": "fsdh",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, reiciendis. In consequuntur quam eos pariatur? Expedita, sapiente. Doloribus esse temporibus qui minus doloremque aliquam suscipit non vero, tenetur molestias dolor?",
+      "movie": "Sherlock Holmes",
+      "genre": "Thriller",
       "id": 1
     },
     {
-      "name": "fhhs",
-      "grade": "hrthrh",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, reiciendis. In consequuntur quam eos pariatur? Expedita, sapiente. Doloribus esse temporibus qui minus doloremque aliquam suscipit non vero, tenetur molestias dolor?",
+      "movie": "tarzen",
+      "genre": "Fantasy",
       "id": 2
     },
     {
-      "name": "drgeg",
-      "grade": "rqbv4b7",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, reiciendis. In consequuntur quam eos pariatur? Expedita, sapiente. Doloribus esse temporibus qui minus doloremque aliquam suscipit non vero, tenetur molestias dolor?",
+      "movie": "fault in our stars",
+      "genre": "Love Story",
       "id": 3
     }
   ]

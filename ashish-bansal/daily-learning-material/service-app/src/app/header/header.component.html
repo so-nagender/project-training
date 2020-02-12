@@ -41,6 +41,22 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+
+            <form [formGroup]="myUpdate" (ngSubmit)="onUpdate()">
+                <div class="form-row">
+                    <label for="id">id</label>
+                    <input id ="id" class="form-control" type="text" placeholder="Enter your id" formControlName="id">
+                </div>
+                <div class="form-row">
+                    <label for="id">name</label>
+                    <input id ="id" class="form-control" type="text" placeholder="Enter your name" formControlName="name">
+                </div>
+                <div class="form-row">
+                    <label for="movies">grade</label>
+                    <input movies ="movies" class="form-control" type="text" placeholder="Enter your grade" formControlName="grade">
+                </div>
+                <button type="submit" class="btn btn-primary">Update</button>
+            </form>
             
             <!-- <div *ngFor = 'let data of datas'>
                 <p>{{data.id}}</p>
