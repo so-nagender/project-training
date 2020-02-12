@@ -20,6 +20,7 @@ food.prototype.sub=function(){
   styleUrls: ['./app.component.css'],
   providers: [MyserviceService]
 })
+
 export class AppComponent {
   teams$: Observable<any> = this.http.get('/api/teams');
   title = 'add-cart';
@@ -28,6 +29,9 @@ export class AppComponent {
   text: string;
   hero: any;
   myservice: any;
+  id= 4;
+  url =  '/api/teams';
+  url3 = `/api/teams/${this.id}`
  
   add(food) {
     food.value ++;
@@ -40,8 +44,20 @@ export class AppComponent {
     else
     return;
   }
+  postData={
+    'test': 'my content'
+  }
   // teams$ = this.http.get('/api/teams');
   constructor(private _heroservice: MyserviceService,private http: HttpClient ){}
+
+  public ping() {
+    this.http.get('https://example.com/api/things')
+      .subscribe(
+        data => console.log(data),
+        err => console.log(err)
+      );
+  }
+  
   ngOnInit(){
     // this.teams$.subscribe((value:any)=>{
     //   console.log('result is',value)
@@ -49,9 +65,13 @@ export class AppComponent {
     this._heroservice.getMovies().subscribe((res)=>{
       console.log(res);
     });
+    // this.http.post(this.url, this.postData).toPromise().then((data:any)=>{
+    //   console.log(data);
+    // });
+    this.http.delete(this.url3).toPromise().then((data:any)=>{
+      console.log(data);
+    });
     this.hero=this._heroservice.getHeroes();
     this.text=this._heroservice.display();
-    
-    
   }
 }

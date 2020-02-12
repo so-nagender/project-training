@@ -1,3 +1,4 @@
+<table align="center" border="1" width="400px" height="200px">
 <h1 class="text-center">Add-Cart</h1> 
 <div class="text-center">
   Burger:<br/>
@@ -12,6 +13,7 @@
   <button (click)="sub(Pizza)">-</button>
  </div>
  <div class="text-center">{{text}} = {{Burger.value + Pizza.value}}</div>
+</table>
  <form>
  <div class="">
   <!-- {{hero}} -->
@@ -21,11 +23,11 @@
 
 
 <!-- mock api    -->
-<h2>Teams</h2>
-<div *ngFor="let team of teams$ | async">
+<h2 class="text-center">Teams</h2>
+<div class="text-center" *ngFor="let team of teams$ | async">
   <h2>{{team.name}}</h2>
   <p>{{team.description}}</p>
-  <p>{{team.id}}</p>
+  <!-- <p>{{team.id}}</p> -->
   <p>{{team.coach}}</p>
 </div>
 
