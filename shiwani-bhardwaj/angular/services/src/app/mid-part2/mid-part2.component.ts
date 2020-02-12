@@ -15,7 +15,7 @@ export class MidPart2Component implements OnInit {
   constructor(private movieservice: MovieserviceService) { }
 
   ngOnInit() {
-    this.movie = this.movieservice.movie();
+    // this.movie = this.movieservice.movie();
   }
 
 }

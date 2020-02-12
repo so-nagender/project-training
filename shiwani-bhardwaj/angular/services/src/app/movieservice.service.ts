@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MovieserviceService {
+  constructor(private https:HttpClient) { }
 
-  constructor() { }
-  movie() {
-    let movies= [
-       {id: 1, "name": 'titanic',"director":'James Cameron',year:1992},
-       {id: 2, "name": 'deja-vu',"director":'James',year:1993},
-       {id: 3, "name": 'avatar',"director":'James Cameron',year:1990},
-       {id: 4, "name": 'ddlj',"director":'yash chopra',year:1994}];
-    return movies;
+  teams (): Observable<any> {
+    return this.https.get<any>('/api/teams')
+  }
+
+  setValue (obj): Observable<any> {
+    return this.https.post<any>('/api/teams',obj)
   }
 }

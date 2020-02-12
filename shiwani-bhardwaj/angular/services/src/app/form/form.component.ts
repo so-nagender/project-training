@@ -10,13 +10,9 @@ import { FormBuilder } from '@angular/forms';
 })
 export class FormComponent implements OnInit {
   userprofile;
-  constructor(private fb : FormBuilder) { }
+  constructor() { }
 
-  myform = this.fb.group({
-    first_name : [''],
-    last_name : [''],
-    address :['']
-  })
+  
 
   ngOnInit() {
   }

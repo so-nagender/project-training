@@ -9,7 +9,7 @@ import {  HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'services';
-  teams$ = this.http.get('/api/teams');
+  // teams = this.http.get('/api/teams');
 ​
   constructor(private http: HttpClient) {}
 }
