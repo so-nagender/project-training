@@ -13,6 +13,9 @@ import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
 import {DirectDirective}  from './direct.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './intercept';
+import { MyTeamComponent } from './my-team/my-team.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     SignupComponent,
     SigninComponent,
     HomeComponent,
-    DirectDirective
+    DirectDirective,
+    MyTeamComponent
     
   ],
   imports: [
@@ -36,7 +40,11 @@ import { HttpClientModule } from '@angular/common/http';
    
     
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

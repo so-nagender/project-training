@@ -1,16 +1,20 @@
 {
-    "teams": [
-      {
-        "id": 1,
-        "name": "FC Barcelona",
-        "coach": "Ernesto Valverde",
-        "description": "The best football team in the world!"
-      },
-      {
-        "id": 2,
-        "name": "Real Madrid",
-        "coach": "Zinedine Zidane",
-        "description": "The worst football team in the world!"
-      }
-    ]
-}  
+  "teams": [
+    {
+      "id": 2,
+      "name": "Real Madrid",
+      "coach": "Zinedine Zidane",
+      "description": "The worst football team in the world!"
+    },
+    {
+      "fName": "Ravi",
+      "lName": "Agrahari",
+      "id": 3
+    },
+    {
+      "fName": "Shivani",
+      "lName": "Agrahari",
+      "id": 19
+    }
+  ]
+}
