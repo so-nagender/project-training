@@ -1,0 +1,63 @@
+{
+  "teams": [
+    {
+      "id": 1,
+      "name": "FC Barcelona",
+      "coach": "Ernesto Valverde",
+      "description": "The best football team in the world!"
+    },
+    {
+      "id": 2,
+      "name": "Real Madrid",
+      "coach": "Zinedine Zidane",
+      "description": "The worst football team in the world!"
+    },
+    {
+      "name": "zdxc",
+      "description": "asa",
+      "id": 3
+    },
+    {
+      "name": "raju",
+      "coach": "sharma",
+      "description": "lkshdfkgwsi;rpuh if siudfhihisu",
+      "id": 4
+    },
+    {
+      "name": "sxfgd",
+      "coach": "dfgdg",
+      "description": "gdghfhj gjhkhjkh fghrh ds w e3 t54erte rert rtr",
+      "id": 5
+    },
+    {
+      "name": "Monika India",
+      "coach": "kishor",
+      "description": "shdkfjshi  oidiuhfisjd ihsidfugidug",
+      "id": 6
+    },
+    {
+      "name": "Monika India",
+      "coach": "kishor",
+      "description": "shdkfjshi  oidiuhfisjd ihsidfugidug",
+      "id": 7
+    },
+    {
+      "name": "Monika India",
+      "coach": "dfgdg",
+      "description": "shdkfjshi  oidiuhfisjd ihsidfugidug",
+      "id": 8
+    },
+    {
+      "name": "Monika India",
+      "coach": "dfgdg",
+      "description": "qawed",
+      "id": 9
+    },
+    {
+      "name": "India",
+      "coach": "Shiwani",
+      "description": "kachra team hai",
+      "id": 10
+    }
+  ]
+}
