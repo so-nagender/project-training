@@ -15,9 +15,11 @@ import { HomeComponent } from './home/home.component';
 import { FormComponent } from './form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TokenInterceptorService } from './token-interceptor.service';
-import { EditComponent } from './edit/edit.component'
+import { EditComponent } from './edit/edit.component';
+import { EditableComponent } from './editable/editable.component'
 
 const appRoutes: Routes = [
+  { path: 'editable/:id', component: EditableComponent },
   { path: 'edit/:id', component: EditComponent },
   { path: 'form', component: FormComponent },
   { path: 'sign-up', component: SignUpComponent },
@@ -26,7 +28,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, MiddleSectionComponent, FooterSectionComponent, NavbarComponent, SignUpComponent, SignInComponent, HomeComponent, FormComponent, EditComponent],
+  declarations: [AppComponent, HeaderComponent, MiddleSectionComponent, FooterSectionComponent, NavbarComponent, SignUpComponent, SignInComponent, HomeComponent, FormComponent, EditComponent, EditableComponent],
   imports: [BrowserModule, FormsModule, AppRoutingModule,  RouterModule.forRoot(appRoutes), HttpClientModule, ReactiveFormsModule],
   providers: [
     {

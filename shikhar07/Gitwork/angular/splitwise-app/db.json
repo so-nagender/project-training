@@ -1,40 +1,28 @@
 {
   "teams": [
     {
-      "id": 1,
-      "name": "KANK"
-    },
-    {
-      "id": 2,
-      "name": "Titanic again"
-    },
-    {
-      "id": 3,
-      "name": "Titanic again 2.0"
-    },
-    {
-      "name": "K3G",
-      "Director": "karan ",
-      "Producer": "hiroo@dharma",
-      "Description": "just a movie",
-      "Review": "idgf",
-      "id": 4
-    },
-    {
-      "name": "K3G",
-      "Director": "karan ",
-      "Producer": "hiroo@dharma",
-      "Description": "just a movie",
-      "Review": "idgf",
+      "name": "Avengers ",
+      "Director": "Matt",
+      "Producer": "DC",
+      "Description": "Group of heroes",
+      "Review": "GREAT",
       "id": 5
     },
     {
-      "name": "Chennai Express",
-      "Director": "Rohit Shetty",
-      "Producer": "Gauri Khan",
-      "Description": "Train Love Story",
-      "Review": "One of the best",
+      "name": "MNIK",
+      "Director": "Kran",
+      "Producer": "srk",
+      "Description": "I am not a terrorist",
+      "Review": "mast",
       "id": 6
+    },
+    {
+      "name": "Black panther",
+      "Director": "ptani",
+      "Producer": "marvel",
+      "Description": "superhero movie",
+      "Review": "ek no",
+      "id": 7
     }
   ]
 }

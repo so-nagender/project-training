@@ -12,12 +12,33 @@
 <div class="container-fluid" style="background: black;">
   <app-footer-section> </app-footer-section>
 </div>
-<div class="mt-5 ml-auto mr-auto col-md-5 text-center border border-secondary" >
-  <h3 ><strong>Movies List</strong></h3>
-  <p *ngFor= "let i of datas"> {{ i.id}} {{ i.name }}
-    <button type="button" class="btn btn-dark"><a [routerLink]= "['/edit', i.id]" routerLinkActive="active" >Show</a></button>
-     </p>
-</div>
+<br/>
+<h2 style="text-align: center;">Movies List</h2>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th id="a" scope="col">Movie Name</th>
+      <th scope="col">Actions</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor= "let i of datas"> 
+    <td>{{ i.id}}</td>
+    <td>{{ i.name }}</td>
+    <td>
+      <a [routerLink]= "['/edit', i.id]" routerLinkActive="active" >
+        <button type="button" class="btn btn-success mx-2">Show</button>
+      </a>
+      <a [routerLink]= "['/editable', i.id]" routerLinkActive="active" >
+        <button type="button" class="btn btn-primary mx-2">Edit</button>
+      </a>
+      <button type="button" class="btn btn-dark" (click)= "onDelete(i.id)">Delete</button>
+   </td>
+  </tr>
+</tbody>
+</table>
 
   
   
