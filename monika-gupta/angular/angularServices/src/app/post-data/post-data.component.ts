@@ -31,12 +31,12 @@ export class PostDataComponent implements OnInit {
     this.submitted = true;
     this.teamName = this.formData.controls.name.value;
     this.teamDes = this.formData.controls.des.value;
-    this.obj = { "name" : this.teamName, "description" : this.teamDes };
-    this.myservice.setTeams(this.obj).subscribe();
-    this.getTeams();
     if (this.formData.invalid) {
       return;
     }
+    this.obj = { "name" : this.teamName, "description" : this.teamDes };
+    this.myservice.setTeams(this.obj).subscribe();
+    this.getTeams();
   }
 
   getTeams() {

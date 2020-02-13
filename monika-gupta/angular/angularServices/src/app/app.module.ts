@@ -11,11 +11,13 @@ import { TokenInterceptor } from 'src/interceptor';
 import { GetDataComponent } from './get-data/get-data.component';
 import { PostDataComponent } from './post-data/post-data.component';
 import { UpdatedataComponent } from './updatedata/updatedata.component';
+import { ShowMovieComponent } from './show-movie/show-movie.component';
 
 const appRoutes: Routes = [
   { path: '', component: GetDataComponent },
   { path: 'postdata', component: PostDataComponent },
-  { path: 'movie/:id', component: UpdatedataComponent }
+  { path: 'movie/edit/:id', component: UpdatedataComponent },
+  { path: 'movie/show/:id', component: ShowMovieComponent }
 ];
 
 @NgModule({
@@ -23,7 +25,8 @@ const appRoutes: Routes = [
     AppComponent,
     GetDataComponent,
     PostDataComponent,
-    UpdatedataComponent
+    UpdatedataComponent,
+    ShowMovieComponent
   ],
   imports: [
     BrowserModule,

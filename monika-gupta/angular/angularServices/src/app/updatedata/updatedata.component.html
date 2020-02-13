@@ -1,20 +1,20 @@
 <div class="container-fluid head">
     <div class="container">
          Update Movie List
-        <button type="submit" class="btn btn-primary float-right" routerLink="/">View Movie List</button>
+        <button type="submit" class="btn btn-primary float-right headButton" routerLink="/">View Movie List</button>
     </div>
 </div>
 <div class="container body">
     <form [formGroup]="formData1" (ngSubmit)="onUpdate()">
         Name:
         <br>
-        <input id="name" class="form-control" type="text" formControlName="name" >
+        <input id="name" class="form-control" type="text" [(ngModel)]="apiTeam.name" formControlName="name" >
         <br>
         Description:
         <br>
-        <input id="des" class="form-control" type="text" formControlName="des" >  
+        <input id="des" class="form-control" type="text" [(ngModel)]="apiTeam.description" formControlName="des"  >
         <div style="margin-top: 10px;">
-            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="submit" class="btn btn-primary button">Update</button>
         </div>
     </form>
   </div>

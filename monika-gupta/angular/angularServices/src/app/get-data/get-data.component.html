@@ -1,7 +1,7 @@
 <div class="container-fluid head">
     <div class="container">
          Movie List
-        <button type="submit" class="btn btn-primary float-right" routerLink="/postdata">Add Movie</button>
+        <button type="submit" class="btn btn-primary float-right headButton" routerLink="/postdata">Add Movie</button>
     </div>
 </div>
 <div class="container body">
@@ -21,12 +21,12 @@
             </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let team of apiTeam " >
-                    <th class="check" scope="row">{{ team.id }}</th>
+                <tr *ngFor="let team of data; let i = index">
+                    <th class="check" scope="row">{{i+1}}</th>
                     <td>{{ team.name | uppercase }}</td>
-                    <td><button type="submit" class="btn btn-primary" [routerLink]="['/movie/show', team.id]">Show</button>
-                        <button type="submit" class="btn btn-primary" style="margin-left: 10px;" [routerLink]="['/movie/edit', team.id]">Edit</button>
-                        <button type="submit" class="btn btn-primary" style="margin-left: 10px;" [routerLink]="['/movie/delete', team.id]">Delete</button>
+                    <td><button type="submit" class="btn btn-primary button" [routerLink]="['/movie/show', team.id]">Show</button>
+                        <button type="submit" class="btn btn-primary button" style="margin-left: 10px;" [routerLink]="['/movie/edit', team.id]">Edit</button>
+                        <button type="submit" class="btn btn-primary button" style="margin-left: 10px;" (click)="deleteMovie(team.id)" >Delete</button>
                     </td>
                 </tr>
             </tbody>

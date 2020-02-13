@@ -1,7 +1,7 @@
 <div class="container-fluid head">
     <div class="container">
         Add Movie To List
-        <button type="submit" class="btn btn-primary float-right" routerLink="/">View Movie List</button>
+        <button type="submit" class="btn btn-primary float-right headButton" routerLink="/">View Movie List</button>
     </div>
 </div>
 <div class="container body">
@@ -9,20 +9,22 @@
 
         Name:
         <br>
-        <input id="name" class="form-control" type="text" formControlName="name" [ngClass]="{ 'is-invalid': submitted && u.name.errors }">
+        <input id="name" class="form-control" type="text" formControlName="name"
+            [ngClass]="{ 'is-invalid': submitted && u.name.errors }">
         <div *ngIf="submitted && u.name.errors" class="invalid-feedback">
             <div *ngIf="u.name.errors.required">Name is required</div>
         </div>
         <br>
         Description:
         <br>
-        <input id="des" class="form-control" type="text" formControlName="des" [ngClass]="{ 'is-invalid': submitted && u.des.errors }">
+        <input id="des" class="form-control" type="text" formControlName="des"
+            [ngClass]="{ 'is-invalid': submitted && u.des.errors }">
         <div *ngIf="submitted && u.des.errors" class="invalid-feedback">
             <div *ngIf="u.des.errors.required">Description is required</div>
         </div>
         <div style="margin-top: 10px;">
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <button type="submit" class="btn btn-primary" style="margin-left: 10px;" routerLink="/">View</button>
+            <button type="submit" class="btn btn-primary button" > Submit </button>
+            <button type="button" class="btn btn-primary button" style="margin-left: 10px;" routerLink="/">Cancle</button>
         </div>
     </form>
-  </div>
+</div>
