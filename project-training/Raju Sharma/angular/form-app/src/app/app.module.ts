@@ -13,12 +13,14 @@ import { GetdataComponent } from './getdata/getdata.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FresolverService } from './fresolver.service';
 import { Interceptor } from './interceptor';
+import { EditComponent } from './edit/edit.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'setdata', component: SetdataComponent },
+  { path: 'edit/:id', component: EditComponent },
   { 
     path: 'getdata', 
     component: GetdataComponent,
@@ -34,7 +36,8 @@ const appRoutes: Routes = [
     SigninComponent,
     FirstDirective,
     SetdataComponent,
-    GetdataComponent
+    GetdataComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

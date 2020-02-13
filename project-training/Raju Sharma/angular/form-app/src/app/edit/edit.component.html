@@ -1,0 +1,45 @@
+<div class="container-fluid body-img">
+    <div class="container pt-3">
+      <a href="#" class="float-left pt-2 navbar-brand mt-1">
+        Read<i>it</i>.
+      </a>
+      <ul class="nav justify-content-end color">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/setdata" routerLinkActive="active">Set Movie Data</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/getdata" routerLinkActive="active">Get Movie Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/home" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signup" routerLinkActive="active">Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signin" routerLinkActive="active">Sign In</a>
+        </li>
+      </ul>
+    </div>
+    <form [formGroup]='data' (ngSubmit)='onSubmit()'>
+      <div class="container mt-4">
+        <div class="form-group">
+          <label class="content-color">Edit Team Name</label>
+          <input type="text" name="team" [(ngModel)]="users.name" formControlName="team" class="form-control">
+        </div>
+        <div class="form-group">
+          <label class="content-color">Edit Team Coach Name</label>
+          <input type="text" name="coachName" [(ngModel)]="users.coach" formControlName="coachName" class="form-control">
+        </div>
+        <div class="form-group">
+          <label class="content-color">Edit Team Description</label>
+          <input type="text" name="description" [(ngModel)]="users.description" formControlName="description" class="form-control">
+        </div>
+        <div>
+          <button type="submit" routerLink="/getdata" class="btn btn-outline-success mr-4">Submit</button>
+          <button type="button" routerLink="/home" class="btn btn-outline-success">Home</button>
+          <button type="button" routerLink="/getdata" class="btn btn-outline-success ml-4">Get Movie Details</button>
+        </div>
+      </div>
+    </form>
+  </div>

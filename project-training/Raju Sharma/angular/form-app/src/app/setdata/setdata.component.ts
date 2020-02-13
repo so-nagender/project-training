@@ -34,6 +34,5 @@ export class SetdataComponent implements OnInit {
     else {
       this.Myser.postData({ "name" : this.team, "coach" : this.coachName, "description": this.description }).subscribe();
     }
-  }
-  
+  }  
 }

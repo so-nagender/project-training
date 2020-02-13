@@ -13,51 +13,40 @@
       "description": "The worst football team in the world!"
     },
     {
-      "name": "zdxc",
-      "description": "asa",
-      "id": 3
-    },
-    {
-      "name": "raju",
-      "coach": "sharma",
-      "description": "lkshdfkgwsi;rpuh if siudfhihisu",
-      "id": 4
-    },
-    {
-      "name": "sxfgd",
-      "coach": "dfgdg",
-      "description": "gdghfhj gjhkhjkh fghrh ds w e3 t54erte rert rtr",
-      "id": 5
-    },
-    {
-      "name": "Monika India",
-      "coach": "kishor",
-      "description": "shdkfjshi  oidiuhfisjd ihsidfugidug",
-      "id": 6
-    },
-    {
-      "name": "Monika India",
-      "coach": "kishor",
-      "description": "shdkfjshi  oidiuhfisjd ihsidfugidug",
-      "id": 7
-    },
-    {
-      "name": "Monika India",
-      "coach": "dfgdg",
-      "description": "shdkfjshi  oidiuhfisjd ihsidfugidug",
-      "id": 8
-    },
-    {
-      "name": "Monika India",
-      "coach": "dfgdg",
-      "description": "qawed",
-      "id": 9
-    },
-    {
-      "name": "India",
+      "name": "South India",
       "coach": "Shiwani",
       "description": "kachra team hai",
       "id": 10
+    },
+    {
+      "name": "Monika India",
+      "coach": "Pakistan",
+      "description": "shdkfjshi  oidiuhfisjd ihsidfugidug",
+      "id": 11
+    },
+    {
+      "name": "USA united",
+      "coach": "Shiwani",
+      "description": "kachra team hai",
+      "id": 12
+    },
+    {
+      "name": "Pakistan",
+      "coach": "Monika ",
+      "description": "Tatti team aur kabhi jeet v nhi payegi",
+      "id": 13
+    },
+    {
+      "name": "East India",
+      "coach": "Raju Sharma",
+      "description": "Bahut hi achhi team hai humesa jeetegi",
+      "id": 14
+    },
+    {
+      "name": "Sri lanka",
+      "coach": "Monika",
+      "description": "tattfgnxcb",
+      "id": 15
     }
   ]
 }

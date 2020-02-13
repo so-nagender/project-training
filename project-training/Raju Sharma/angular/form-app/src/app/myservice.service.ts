@@ -32,4 +32,16 @@ export class MyserviceService {
   postData(obj): Observable<any> {
     return this.httpClient.post<any>('/api/teams',obj);
   }
+  update(id, obj): Observable<any> {
+    let add = `/api/teams/${id}`;
+    return this.httpClient.put<any>(add, obj)
+  }
+  deletData(id){
+    let add = `/api/teams/${id}`;
+    return this.httpClient.delete(add);
+  }
+  getSingleElementById(id): Observable<any> {
+    let address = `/api/teams/${id}`;
+    return this.httpClient.get(address);
+  }
 }
