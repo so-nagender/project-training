@@ -8,13 +8,18 @@
         <th>Team Name</th>
         <th>Team ID</th>
         <th>Team Coach</th>
-        <th>Team Description</th>      
+        <th>Team Description</th> 
+        <th>Actions</th>     
     </tr>
     <tr *ngFor="let team of teams$ | async">
+      
         <td>{{team.name}}</td> 
         <td>{{team.id}} </td>
         <td>{{team.coach}} </td>
-        <td>{{team.description}} </td>             
+        <td>{{team.description}} </td> 
+        <button>View</button>
+      <button>Delete</button>
+      <button>Edit</button>            
     </tr>      
 </table>
 
