@@ -16,14 +16,14 @@ export class TokenInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const headers = new HttpHeaders().set("access-token", "dsfdsfds");
     const requestnew = request.clone( { headers: headers});
-    console.log('hi@#$%^&*()(______________>>>>>>>')
+    // console.log('hi@#$%^&*()(______________>>>>>>>')
     return next.handle(requestnew).pipe(
         tap(evt => {
             if (evt instanceof HttpResponse) {
 	             
-	            console.log(" all looks good");
-	            // http response status code
-	            console.log(evt);
+	            // console.log(" all looks good");
+	            // // http response status code
+	            // console.log(evt);
 	          }
 })
     )}

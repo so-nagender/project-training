@@ -7,14 +7,96 @@
       "description": "The worst football team in the world!"
     },
     {
-      "fName": "Ravi",
-      "lName": "Agrahari",
-      "id": 3
+      "name": "Sonu",
+      "id": 6,
+      "coach": "Sonu Kumar Sah",
+      "description": "Nice Player"
     },
     {
-      "fName": "Shivani",
-      "lName": "Agrahari",
-      "id": 19
+      "name": "Shivani",
+      "coach": "Delhi",
+      "description": "Dehradun",
+      "id": 7
+    },
+    {
+      "name": "ftxtfhx",
+      "id": 8,
+      "coach": "rxtyhr5y",
+      "description": "e5sye54645"
+    },
+    {
+      "name": "Shivani",
+      "coach": "Delhi",
+      "description": "Dehradun",
+      "id": 9
+    },
+    {
+      "name": "Shivani",
+      "coach": "Delhi",
+      "description": "Dehradun",
+      "id": 10
+    },
+    {
+      "name": "Gamer",
+      "coach": "Kumar",
+      "description": "Dehradun",
+      "id": 13
+    },
+    {
+      "name": "Player",
+      "coach": "Kumar",
+      "description": "Dehradun",
+      "id": 14
+    },
+    {
+      "name": "Player",
+      "coach": "Kumar",
+      "description": "Dehradun",
+      "id": 15
+    },
+    [
+      {
+        "name": "",
+        "coach": "",
+        "description": ""
+      }
+    ],
+    [
+      {
+        "name": "",
+        "coach": "",
+        "description": ""
+      }
+    ],
+    {
+      "name": "serger",
+      "coach": "dfget",
+      "description": "gergee",
+      "id": 26
+    },
+    {
+      "name": "ewwe",
+      "coach": "ewgtewfwr",
+      "description": "erwgtwerwefr",
+      "id": 27
+    },
+    {
+      "name": "rdertfw",
+      "coach": "sefrwtfe",
+      "description": "esgtwstgw",
+      "id": 28
+    },
+    {
+      "name": "we4tgwstf",
+      "coach": "setgertg",
+      "description": "rewgtwre",
+      "id": 29
+    },
+    {
+      "name": "Shubham",
+      "id": "4",
+      "coach": "basfkf",
+      "description": "awdmalkdjj"
     }
   ]
 }
