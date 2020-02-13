@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieserviceService } from '../movieservice.service';
 import { FormBuilder } from '@angular/forms';
-import { Observable } from 'rxjs';
-import { dependenciesFromGlobalMetadata } from '@angular/compiler/src/render3/r3_factory';
+
 
 
 
@@ -13,60 +12,54 @@ import { dependenciesFromGlobalMetadata } from '@angular/compiler/src/render3/r3
 })
 export class TeamComponent implements OnInit {
   data: any;
-  myData:any;
-  obj : any;
-  obj1:any;
+  myData: any;
+  obj: any;
+  obj1: any;
+  user_id: any;
+  id: any;
 
-  constructor(private movieservice : MovieserviceService,private fb :FormBuilder) { }
+  constructor(private movieservice: MovieserviceService, private fb: FormBuilder) { }
 
   myform = this.fb.group({
-    first_name : [''],
-    last_name : [''],
-    address :[''],
-    user_id :[''],
+    first_name: [''],
+    last_name: [''],
+    address: [''],
+    user_id: [''],
 
   })
 
   ngOnInit() {
-     this.movieservice.teams().subscribe((res:any)=> {
-     this.myData= res;
+    this.movieservice.teams().subscribe((res: any) => {
+      this.myData = res;
     });
-    
+
   }
-  onSubmit(){
+  onSubmit() {
     let x = this.myform.controls.first_name.value;
-    let y =this.myform.controls.last_name.value;
-    let z =this.myform.controls.address.value;
-    let a = this.myform.controls.user_id.value;
-    this.obj = {"name" : x ,"coach" : y,"address" : z} 
+    let y = this.myform.controls.last_name.value;
+    let z = this.myform.controls.address.value;
+
+    this.obj = { "name": x, "coach": y, "address": z }
     this.movieservice.setValue(this.obj).subscribe();
-    this.movieservice.teams().subscribe((res:any)=> {
-      this.myData= res;
+    this.movieservice.teams().subscribe((res: any) => {
+      this.myData = res;
     });
-   
-   
+
+
   }
-  data_del()
-  {
-  
-    console.log("data deleted_<<<<<<<  ??????//")
-    let a = this.myform.value.user_id;
-    console.log(a);
-    this.obj1 = {"user_id":a} ;
-    this.movieservice.delete(this.obj1.user_id).subscribe();
-    this.movieservice.teams().subscribe((res:any)=> {
-      this.myData= res;
-  });
-  
-};
+  value_delete(value) {
+    this.movieservice.delete(value).subscribe();
+    this.movieservice.teams().subscribe((res: any) => {
+      this.myData = res;
+    });
+  }
 }
 
-​
 
 
 
-  
 
- 
 
- 
+
+
+

@@ -1,56 +1,73 @@
-
-<div class="container" *ngFor="let team of myData" >
-    <p class="font2">-list of teams-</p>
-    <h1  class="font3" style="text-align: center;">teams</h1>
-    <div class="row ">
-      <div class="col-sm font1">
-        <div>
-          <p >team1</p>
-        <p class="font2">  {{team.name}}</p></div>
-       </div>
-      <div class="col-sm font1">
-        <div>
-          <p >team2</p>
-        <p class="font2">{{team.coach}}</p></div>  
-       </div>
-     </div> 
- </div>
- <h1  class="font3" style="text-align: center;">FORM</h1>
+<p class="font2">-list of movies-</p>
+<h1 class="font3" style="text-align: center;">movie-name</h1>
+<div class="container" *ngFor="let team of myData; let i= index">
   <div class="row ">
     <div class="col-sm font1">
       <div>
-        
-        <p >Detail of the users</p>
-    <form [formGroup]="myform"  (ngSubmit)="onSubmit()">
+        <p>team-name</p>
+        <p class="font2"> {{team.name}}</p>
+      </div>
+    </div>
+    <div class="col-sm font1">
+      <div>
+        <p>team-coach</p>
+        <p class="font2">{{team.coach}}</p>
+      </div>
+    </div>
+    <div class="col-sm font1">
+      <div>
+        <p>team-userid</p>
+        <p class="font2"> {{i+1}}</p>
+      </div>
+    </div>
+    <div class="col-sm font1">
+      <div>
+        <button class="button" type="submit" [routerLink]="['/teams',team.id]">show</button>
+      </div>
+    </div>
+    <div class="col-sm font1">
+      <div>
+        <button (click)="edit()" [routerLink]="['/teams/edit/',team.id]">update</button>
+      </div>
+    </div>
+    <div class="col-sm font1">
+      <div>
+        <button (click)="value_delete(team.id)">delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+<h1 class="font3" style="text-align: center;">FORM</h1>
+<div class="row ">
+  <div class="col-sm font1">
+    <div>
+
+      <p>Detail of the users</p>
+      <form [formGroup]="myform" (ngSubmit)="onSubmit()">
         <div>
-            <label for="first_name">
-              first_name-
-            </label>
-            <input id="first_name" type="text" formControlName="first_name">
+          <label for="first_name">
+            first_name-
+          </label>
+          <input id="first_name" type="text" formControlName="first_name">
         </div>
         <div>
-          <label for="user_id">
-           user_id
+          <label for="last_name">
+            last_name
           </label>
-          <input id="user_id" type="text" formControlName="user_id">
-      </div>
-        <div>
-            <label for="last_name">
-              last_name
-            </label>
-            <input id="last_name" type="text" formControlName="last_name">
-         </div>
-        
+          <input id="last_name" type="text" formControlName="last_name">
+        </div>
 
-         <div>
-         <label for="address">
-         Address-
-        </label>
-        <input id="address" type="text" formControlName="address">
+
+        <div>
+          <label for="address">
+            Address-
+          </label>
+          <input id="address" type="text" formControlName="address">
         </div>
         <button class="button" type="submit">submit</button><br>
-        <button (click)="data_del()">delete</button>
+        <!-- <button (click)="data_del()">delete</button> -->
       </form>
-        </div>
-     </div>
+    </div>
   </div>
+
+</div>

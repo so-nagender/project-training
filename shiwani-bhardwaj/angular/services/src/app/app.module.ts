@@ -12,6 +12,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { InterceptComponent } from './intercept/intercept.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './intercept';
+import { RouterModule, Routes } from '@angular/router';
+import { SubmitComponent } from './submit/submit.component';
+import { HomeComponent } from './home/home.component';
+import { EditComponent } from './edit/edit.component';
+
+  const appRoutes: Routes = [
+   { path: 'teams/:id', component:SubmitComponent },
+   { path: '', component:HomeComponent }, 
+   {path: 'teams/edit/:id', component:EditComponent},
+   {path: 'teams', component:TeamComponent}, ];
 
 
 @NgModule({
@@ -22,13 +32,16 @@ import { TokenInterceptor } from './intercept';
     MidPart2Component,
     TeamComponent,
     InterceptComponent,
-  
+    SubmitComponent,
+    HomeComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     {

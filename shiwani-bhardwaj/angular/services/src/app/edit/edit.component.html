@@ -1,0 +1,30 @@
+<h1 class="font3" style="text-align: center;">FORM</h1>
+<div class="container">
+  <div class="row ">
+    <div class="col-sm font1">
+      <div>
+        <p>Detail of the users</p>
+        <form [formGroup]="myform">
+          <div>
+            <label for="first_name" class="font3">
+              first_name-
+            </label><br>
+            <input id="first_name" [(ngModel)]=myData.name type="text" formControlName="first_name">
+          </div>
+          <div>
+            <label for="last_name" class="font3">
+              last_name
+            </label><br>
+            <input id="last_name" type="text" [(ngModel)]=myData.coach formControlName="last_name">
+          </div>
+          <div>
+            <label for="address" class="font3">
+              Address-
+            </label><br>
+            <input id="address" type="text" [(ngModel)]=myData.address formControlName="address">
+          </div><br>
+          <button class="button" type="submit" routerLink="/teams" (click)="onSubmit()">submit</button><br>
+        </form>
+      </div>
+    </div>
+  </div>
