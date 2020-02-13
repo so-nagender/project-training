@@ -1,0 +1,55 @@
+<div class="row">
+
+  <div class="col-sm-2">
+    <nav class=" ">
+      <ul>
+           <li><label class="space">
+             Create
+                 </label>
+           </li>
+         <li><label class="space">
+          <button (click)="view_data()">view</button>
+         </label>
+         </li>
+       </ul>
+     </nav>
+
+  </div>
+  <div class="col-sm-5">
+    
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()"  class="form">
+  
+  
+  <label>
+      name:
+    <input type="text" formControlName="name">
+  </label>
+  <label>
+      coach:
+      <input type="text" formControlName="coach">
+    </label>
+    <label>
+      description:
+      <input type="text" formControlName="description">
+    </label>
+    <input type="hidden" formControlName="id">
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+    <button type="button" [disabled]="!profileForm.valid" (click)="updval(profileForm) ">Edit</button>
+
+   
+
+</form>
+
+  </div>
+  <div class="col-sm-5">
+    <div *ngFor="let team of myData">
+     {{team.name}} -  {{team.coach}} -  {{team.description}}<img src ="./../../assets/images/delete.svg" (click)="delval(team.id)">  <img src ="./../../assets/images/document.svg" (click)="editVal(team)">
+    </div>
+    
+
+
+  </div>
+
+</div>
+

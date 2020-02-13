@@ -1,0 +1,15 @@
+.form{
+    max-width: 50%;
+}
+.space + .space{
+    padding-left: 15px ;
+    padding-right: 15px;
+}
+ul li{
+    list-style: none;
+    text-decoration: none;
+}
+img{
+    width: 5%;
+    cursor: pointer;
+}
