@@ -3,31 +3,30 @@ import { NgModule } from '@angular/core';
 import {ReactiveFormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { TokenInterceptor } from './interceptor';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
-import { ThirdComponent } from './third/third.component';
 import { Routes, RouterModule } from '@angular/router';
 import { CardComponent } from './card/card.component';
-import { MainComponent } from './main/main.component';
+import { EditDetailsDirective } from './edit-details.directive';
+import { ResolverService } from './resolver.service';
+import { FooterComponent } from './footer/footer.component';
 
 
 const appRoutes: Routes = [
-  { path: 'details/:id', component: CardComponent },
-  { path: '', component: MainComponent },
+  { path: 'details/:id', component: CardComponent, resolve: { data: ResolverService } },
+  { path: '', component: SecondComponent },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     FirstComponent,
     SecondComponent,
-    ThirdComponent,
     CardComponent,
-    MainComponent,
+    EditDetailsDirective,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

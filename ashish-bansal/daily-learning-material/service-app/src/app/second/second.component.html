@@ -4,25 +4,59 @@
             <table class="table table-hover table-bordered">
                 <thead style="background-color: cadetblue;">
                     <tr>
-                        <th style="color: cornsilk;" scope = "col">id</th>
-                        <th style="color: cornsilk;" scope = "col">Movie</th>
-                        <th style="color: cornsilk;" scope = "col">Genre</th>
-                        <th style="color: cornsilk;" scope = "col">Actions</th>
+                        <th  class= "p-3" style="color: cornsilk;" scope = "col">id</th>
+                        <th class= "p-3" style="color: cornsilk;" scope = "col">Movie</th>
+                        <th class= "p-3" style="color: cornsilk;" scope = "col">Genre</th>
+                        <th class= "p-3" style="color: cornsilk;" scope = "col">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor = 'let movie of datas'>
-                        <td>{{movie.id}}</td>
+                    <tr *ngFor = 'let movie of datas; let i = index;'>
+                        <td>{{i+1}}</td>
                         <td>{{movie.movie}}</td>
                         <td>{{movie.genre}}</td>
-                        <td><button type="button" class="btn btn-primary mr-2" [routerLink]="['/details',movie.id]">show</button>
-                            <button type="button" class="btn btn-primary" (click) = "onDelete(movie)">Delete</button></td>
+                        <td><button style="background-color: cadetblue; color: cornsilk;" type="button" class="btn btn-primary mr-2" [routerLink]="['/details',movie.id]">show</button>
+                            <button style="background-color: cadetblue; color: cornsilk;" type="button" class="btn btn-primary" (click) = "onDelete(movie)">Delete</button></td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div class="col-lg-4">
-            <p>Add New movies to your watchlist</p>
+            <div style="background-color: cadetblue;">
+                <h5 class= "p-3" style="color: cornsilk; text-align: center;">Add a movie to your watchlist</h5>
+            </div>
+            <form class="mt-3" style="border: 2px solid cadetblue" [formGroup]="myform" (ngSubmit)="onSubmit()">
+                <div class="p-3">
+                    <div class="form-group">
+                        <label style="color: cadetblue; font-weight: 600;" for="exampleFormControlInput1">Enter Your Favourite Movie</label>
+                        <input style="border: 2px solid cadetblue" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Movie Name" formControlName="movie" [ngClass]="{ 'is-invalid':f.movie.errors }">
+                        <div *ngIf="f.movie.errors" class="invalid-feedback">
+                            <div *ngIf="f.movie.errors.required">Movie is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label style="color: cadetblue ; font-weight: 600;" for="exampleFormControlSelect1">Select Genre For your Movie</label>
+                        <select style="border: 2px solid cadetblue" class="form-control" id="exampleFormControlSelect1" formControlName="genre" [ngClass]="{ 'is-invalid':f.genre.errors }">
+                        <option>Thriller</option>
+                        <option>Romance</option>
+                        <option>Commedy</option>
+                        <option>fantasy</option>
+                        <option>Sci-Fi</option>
+                        </select>
+                        <div *ngIf="f.genre.errors" class="invalid-feedback">
+                            <div *ngIf="f.genre.errors.required">Genre is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label style="color: cadetblue; font-weight: 600;" for="exampleFormControlTextarea1">Describe Movie</label>
+                        <textarea style="border: 2px solid cadetblue" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Without spoilers,ofcourse!!" formControlName="description" [ngClass]="{ 'is-invalid':f.description.errors }"></textarea>
+                        <div *ngIf="f.description.errors" class="invalid-feedback">
+                            <div *ngIf="f.description.errors.required">Description is required</div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: cadetblue;color: cornsilk;">Submit</button>
+                </div>
+            </form>
+            </div>
         </div>
-    </div>
 </div>

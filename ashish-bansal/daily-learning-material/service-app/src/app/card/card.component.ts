@@ -12,15 +12,14 @@ export class CardComponent implements OnInit {
   constructor(private myData : TimeServiceService,private activatedRoute: ActivatedRoute) {
     
    }
-  
+  color : number;
   datas : any;
   
   ngOnInit() {
-    let id = this.activatedRoute.snapshot.params.id;
-    this.myData.getdataId(id).subscribe((res)=>{
-      console.log(res);
-      this.datas = res;
-    });
+    this.activatedRoute.data.subscribe((data) => {
+      this.datas = data.data;
+      this.color = this.datas.id
+      });
   }
 
 }

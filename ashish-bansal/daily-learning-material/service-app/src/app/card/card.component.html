@@ -1,15 +1,16 @@
-<app-first></app-first>
 <div class="container mt-5">
     <div class="row">
         <div class="col-lg-3"></div>
         <div class="col-lg-6">
-            <div class="card" style="width: 18rem;">
-                <img src="../../assets/images/card1.jpg" class="card-img-top" alt="...">
+            <div class="card" style="width: 30rem; border: 3px solid cadetblue">
+                <img src="../../assets/images/final.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h4 class="card-title">{{datas.movie}}</h4>
                   <h5 class="card-title">{{datas.genre}}</h5>
-                  <p class="card-text">{{datas.description}}.</p>
-                  <a href="#" class="btn btn-primary">Edit</a>
+                  <div>
+                  <div contenteditable="false"><p class="card-text m-2">{{datas.description}}.</p></div>
+                  <button appEditDetails [first] = "color" class="btn btn-primary mt-3" style="background-color: cadetblue; color: cornsilk;">Edit</button>
+                  </div>
                 </div>
               </div>
         </div>
