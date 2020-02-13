@@ -1,4 +1,4 @@
-<table align="center" border="1" width="400px" height="200px">
+<!-- <table align="center" border="1" width="400px" height="200px">
 <h1 class="text-center">Add-Cart</h1> 
 <div class="text-center">
   Burger:<br/>
@@ -15,21 +15,46 @@
  <div class="text-center">{{text}} = {{Burger.value + Pizza.value}}</div>
 </table>
  <form>
- <div class="">
+ <div class=""> -->
   <!-- {{hero}} -->
-  <P class="text-center" *ngFor="let i of hero">{{i.id}}    {{i.name}}</P>
+  <!-- <P class="text-center" *ngFor="let i of hero">{{i.id}}    {{i.name}}</P>
  </div>
-</form>
+</form> -->
 
 
 <!-- mock api    -->
-<h2 class="text-center">Teams</h2>
+<!-- <h2 class="text-center">Teams</h2>
 <div class="text-center" *ngFor="let team of teams$ | async">
-  <h2>{{team.name}}</h2>
-  <p>{{team.description}}</p>
-  <!-- <p>{{team.id}}</p> -->
-  <p>{{team.coach}}</p>
-</div>
+  <p>{{team.id}}</p>
+  <h2>{{team.name}}</h2> -->
+  <!-- <p>{{team.description}}</p> -->
+  
+  <!-- <p>{{team.coach}}</p> -->
+<!-- </div> -->
 
-
+<app-detail-form></app-detail-form>
+ 
+  <div class="col-lg-4 table-responsive">  
+      <table class="table table-striped">  
+          <thead>  
+              <tr>  
+                  <th>Movie Id</th>  
+                  <th>Movie Name</th> 
+                  <th>Show Detai</th> 
+              </tr>  
+          </thead>  
+          <tbody>  
+              <tr *ngFor="let team of teams$ | async">  
+                  <td>{{team.id}}</td>  
+                  <td>{{team.movieName}}</td>  
+                  <td>  
+                      <button [routerLink]="['/home', team.id]" type="button" class="btn btn-primary mr-1" >Show</button>  
+                      <!-- <button [routerLink]="['/detail-form', team.id]" type="button" class="btn btn-danger mr-1" (click)="DeleteStudent(Student.Id)">Edit</button>   -->
+                  </td>  
+              </tr>  
+          </tbody>  
+      </table>  
+  </div>  
+ 
+<router-outlet></router-outlet>
 

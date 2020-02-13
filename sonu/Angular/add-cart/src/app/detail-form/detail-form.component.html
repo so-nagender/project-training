@@ -1,0 +1,21 @@
+<div>  
+    <div class="card-header text-succes" style="text-align:center">  
+        <h2>WELCOME TO MOVIE BOOKING SITE</h2>  
+    </div>  
+        <form [formGroup]='myFormData' (ngSubmit)='onSubmit()'>  
+                <div class="form-group col-sm-3">  
+                    <label for="company">Movie Id</label>  
+                    <input type="number" class="form-control" formControlName="id" id="company" placeholder="Movie Id" >  
+                </div>  
+                <div class="form-group col-sm-3">  
+                    <label for="company">Movie Name</label>  
+                    <input type="text" class="form-control" formControlName="movieName" id="ContactNo" placeholder="Movie Name" >  
+                </div> 
+                <div class="form-group col-sm-5">  
+                    <button type="submit" class="btn btn-primary" >Submit</button>
+                    <button type="submit" (click)='onPut()' class="btn btn-success" >Update</button>
+                    <button type="button" (click)='onDelete()' class="btn btn-danger" >Delete</button>
+                </div>  
+        </form>  
+      
+</div> 

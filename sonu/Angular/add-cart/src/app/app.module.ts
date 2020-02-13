@@ -8,14 +8,20 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './interceptor';
+import { DetailFormComponent } from './detail-form/detail-form.component';
+import { HomeComponent } from './home/home.component';
+import { FormGroup, FormControl, Validators, FormBuilder }  from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DetailFormComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, HttpClientModule
+    AppRoutingModule, HttpClientModule,ReactiveFormsModule,FormsModule
   ],
   providers: [
     {
