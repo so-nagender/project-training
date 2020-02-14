@@ -10,6 +10,17 @@ export class MyserviceService {
   http: any;
   url =  '/api/teams';
   constructor(private httpClient: HttpClient) { }
+  
+  public getMovies(){
+    return this.httpClient.get("api/teams");
+  }
+
+  getOneData(id){
+    return this.httpClient.get("api/teams/"+id);
+  }
+  onPut(){
+    
+  }
 
   // getStudent():Observable<any>    
   // {    
@@ -27,26 +38,23 @@ export class MyserviceService {
   // getStudentById(StudentId: string): Observable<StudentVM> {    
   //   return this.http.get<StudentVM>(this.Url + '/student/GetStudentById?Id=' + StudentId);    
   // }
+    // display(){
+  //   return 'Total Item';
+  // }
+
+  // getHeroes(){
+  //   return [
+  //     { id: 11, name: 'Dr Nice' },
+  //     { id: 12, name: 'Narco' },
+  //     { id: 13, name: 'Bombasto' },
+  //     { id: 14, name: 'Celeritas' },
+  //     { id: 15, name: 'Magneta' },
+  //     { id: 16, name: 'RubberMan' },
+  //     { id: 17, name: 'Dynama' },
+  //     { id: 18, name: 'Dr IQ' },
+  //     { id: 19, name: 'Magma' },
+  //   ];
+  // }
   
-  public getMovies(){
-    return this.httpClient.get("api/teams");
-  }
 
-  display(){
-    return 'Total Item';
-  }
-
-  getHeroes(){
-    return [
-      { id: 11, name: 'Dr Nice' },
-      { id: 12, name: 'Narco' },
-      { id: 13, name: 'Bombasto' },
-      { id: 14, name: 'Celeritas' },
-      { id: 15, name: 'Magneta' },
-      { id: 16, name: 'RubberMan' },
-      { id: 17, name: 'Dynama' },
-      { id: 18, name: 'Dr IQ' },
-      { id: 19, name: 'Magma' },
-    ];
-  }
 }
