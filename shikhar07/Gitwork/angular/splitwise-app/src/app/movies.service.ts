@@ -3,63 +3,59 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/';
 import { catchError } from 'rxjs/operators';
 
-
 @Injectable({
   providedIn: 'root'
 })
 export class MoviesService 
 {
-
 constructor(private http: HttpClient ) { }
 
-getdataId(id) : Observable<any>{
+getdataId(id) : Observable<any>
+{
   const urls = `/api/teams/${id}`;
   return this.http.get(urls)
   .pipe(catchError(this.handleError));
 }
-getData(): Observable<any>{
-  return this.http.get('/api/teams');
-}
-// !----------------------------
-//Get Method //Promise     
-// getData(): Promise<any>{
-//   const promise= this.http.get('/api/teams') 
-//   return promise
-//   .toPromise()
-// .pipe(catchError(this.handleError));
-// !---------------------------------
-
 //Error Handling
-private handleError(errorResponse: HttpErrorResponse) {
-  if(errorResponse.error instanceof ErrorEvent){
+private handleError(errorResponse: HttpErrorResponse) 
+{
+  if(errorResponse.error instanceof ErrorEvent)
+  {
     console.log('Client side error', errorResponse.error.message)
   }
-  else{
+  else
+  {
     console.log('Server side error', errorResponse)
   }
   return Observable.throw('There is a problem');
 }
-
-//Post Method
-postData(object): Observable<any>{
-  return this.http.post('/api/teams', object )
-  // .pipe(catchError(this.handleError));
+//Get Data
+getData(): Observable<any>
+{
+  return this.http.get('/api/teams');
 }
-deleteData(id): Observable<any>{
+//Post Method
+postData(object): Observable<any>
+{
+  return this.http.post('/api/teams', object )
+  .pipe(catchError(this.handleError));
+}
+//Delete Method
+deleteData(id): Observable<any>
+{
   const del= `/api/teams/${id}`;
   return this.http.delete(del)
 }
-getOneMovie(id): Observable<any>{
-  const uri = `/api/teams/${id}`;
-  return this.http.get(uri)
+//Put method
+updateData(id, obj)
+{
+  const ur = `/api/teams/${id}`;
+  return this.http.put(ur, obj)
 }
-// updateData(id, data){
-//   const ur = `/api/teams/${id}/${data}`;
-//   return this.http.put(ur)
-// }
-
+//Interceptors
 Interceptors
-getToken(){
+getToken()
+{
   return localStorage.getItem('token')
 }  
 }

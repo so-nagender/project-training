@@ -1,28 +1,36 @@
 {
   "teams": [
     {
-      "name": "Avengers ",
-      "Director": "Matt",
-      "Producer": "DC",
-      "Description": "Group of heroes",
-      "Review": "GREAT",
-      "id": 5
-    },
-    {
-      "name": "MNIK",
-      "Director": "Kran",
+      "name": "Chennai Express",
+      "Director": "Rohit Shetty",
       "Producer": "srk",
-      "Description": "I am not a terrorist",
-      "Review": "mast",
-      "id": 6
+      "Description": "Train Love Story",
+      "Review": "excellent",
+      "id": 1
     },
     {
-      "name": "Black panther",
-      "Director": "ptani",
+      "name": "Iron Man",
+      "Director": "yaad nai",
+      "Producer": "Marvel",
+      "Description": "Lohe ka jigar",
+      "Review": "fantastico",
+      "id": 2
+    },
+    {
+      "name": "Captain America",
+      "Director": "YAad nahi",
       "Producer": "marvel",
-      "Description": "superhero movie",
-      "Review": "ek no",
-      "id": 7
+      "Description": "America Ass",
+      "Review": "theek",
+      "id": 3
+    },
+    {
+      "name": "Dr. Strange",
+      "Director": "Stephen",
+      "Producer": "dC",
+      "Description": "jaadu ki nagari",
+      "Review": "jadu bhara safar",
+      "id": 4
     }
   ]
 }

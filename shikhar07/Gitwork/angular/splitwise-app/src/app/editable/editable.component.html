@@ -1,4 +1,4 @@
-<form [formGroup]="myform" (ngSubmit) = "onSubmit()">
+<form [formGroup]="myform"  >
     <div class="form-group" >
       <h3 >name:</h3>
       <input type="text" name="firstname" formControlName="firstName" [(ngModel)]= "dataa.name">
@@ -19,7 +19,7 @@
       <h3>Review:</h3>
       <input type="text" name="Age"  formControlName="Age" [(ngModel)]= "dataa.Review" >
     </div>
-    <button class="button" type="submit">Update</button>
+    <button class="button" type="submit" (click)="updateDataa()">Update</button>
 </form>
   
   
