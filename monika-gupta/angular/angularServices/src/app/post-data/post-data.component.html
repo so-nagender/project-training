@@ -1,30 +1,59 @@
 <div class="container-fluid head">
-    <div class="container">
-        Add Movie To List
-        <button type="submit" class="btn btn-primary float-right headButton" routerLink="/">View Movie List</button>
-    </div>
+  <div class="container">
+    Add Movie To List
+    <button
+      type="submit"
+      class="btn btn-primary float-right headButton"
+      routerLink="/"
+    >
+      View Movie List
+    </button>
+  </div>
 </div>
 <div class="container body">
-    <form [formGroup]="formData" (ngSubmit)="onSubmit()">
-
-        Name:
-        <br>
-        <input id="name" class="form-control" type="text" formControlName="name"
-            [ngClass]="{ 'is-invalid': submitted && u.name.errors }">
-        <div *ngIf="submitted && u.name.errors" class="invalid-feedback">
-            <div *ngIf="u.name.errors.required">Name is required</div>
-        </div>
-        <br>
-        Description:
-        <br>
-        <input id="des" class="form-control" type="text" formControlName="des"
-            [ngClass]="{ 'is-invalid': submitted && u.des.errors }">
-        <div *ngIf="submitted && u.des.errors" class="invalid-feedback">
-            <div *ngIf="u.des.errors.required">Description is required</div>
-        </div>
-        <div style="margin-top: 10px;">
-            <button type="submit" class="btn btn-primary button" > Submit </button>
-            <button type="button" class="btn btn-primary button" style="margin-left: 10px;" routerLink="/">Cancle</button>
-        </div>
-    </form>
+  <form [formGroup]="formData">
+    Name:
+    <br />
+    <input
+      id="name"
+      class="form-control"
+      type="text"
+      formControlName="name"
+      [ngClass]="{ 'is-invalid': u.name.errors }"
+    />
+    <div *ngIf="u.name.errors" class="invalid-feedback">
+      <div *ngIf="u.name.errors.required">Name is required</div>
+    </div>
+    <br />
+    Description:
+    <br />
+    <input
+      id="des"
+      class="form-control"
+      type="text"
+      formControlName="des"
+      [ngClass]="{ 'is-invalid': u.des.errors }"
+    />
+    <div *ngIf="u.des.errors" class="invalid-feedback">
+      <div *ngIf="u.des.errors.required">Description is required</div>
+    </div>
+    <div style="margin-top: 10px;">
+      <button
+        type="submit"
+        class="btn btn-primary button"
+        (click)="onSubmit()"
+        routerLink="/"
+      >
+        Submit
+      </button>
+      <button
+        type="button"
+        class="btn btn-primary button"
+        style="margin-left: 10px;"
+        routerLink="/"
+      >
+        Cancel
+      </button>
+    </div>
+  </form>
 </div>

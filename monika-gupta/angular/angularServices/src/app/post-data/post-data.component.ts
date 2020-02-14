@@ -10,13 +10,16 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class PostDataComponent implements OnInit {
   formData;
-  submitted: boolean = false;
   teamName;
   teamDes;
   obj;
   apiTeam;
 
-  constructor(private http: HttpClient, private myservice: MyServicesService, private formBuilder: FormBuilder) { }
+  constructor(
+    private http: HttpClient,
+    private myservice: MyServicesService,
+    private formBuilder: FormBuilder
+  ) {}
 
   ngOnInit() {
     this.formData = this.formBuilder.group({
@@ -25,25 +28,26 @@ export class PostDataComponent implements OnInit {
     });
   }
 
-  get u() { return this.formData.controls; }
+  get u() {
+    return this.formData.controls;
+  }
 
   onSubmit() {
-    this.submitted = true;
-    this.teamName = this.formData.controls.name.value;
-    this.teamDes = this.formData.controls.des.value;
     if (this.formData.invalid) {
       return;
+    } else {
+      this.teamName = this.formData.controls.name.value;
+      this.teamDes = this.formData.controls.des.value;
+      this.obj = { name: this.teamName, description: this.teamDes };
+      this.myservice.setTeams(this.obj).subscribe();
+      this.getTeams();
     }
-    this.obj = { "name" : this.teamName, "description" : this.teamDes };
-    this.myservice.setTeams(this.obj).subscribe();
-    this.getTeams();
   }
 
   getTeams() {
-    this.myservice.getTeams().subscribe((res)=>{
+    this.myservice.getTeams().subscribe(res => {
       console.log(res);
       this.apiTeam = res;
     });
-  } 
-
+  }
 }

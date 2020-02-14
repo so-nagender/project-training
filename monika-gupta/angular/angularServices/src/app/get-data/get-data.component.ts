@@ -7,9 +7,8 @@ class Post {
     public id: number,
     public name: string,
     public description: string
-  ) { }
+  ) {}
 }
-
 
 @Component({
   selector: 'app-get-data',
@@ -19,16 +18,16 @@ class Post {
 export class GetDataComponent implements OnInit {
   todaydate;
   apiTeam;
-  data=[];
+  data = [];
 
-  constructor(private http: HttpClient, private myservice: MyServicesService) { }
+  constructor(private http: HttpClient, private myservice: MyServicesService) {}
   ngOnInit() {
     this.todaydate = this.myservice.todayDate();
     this.getMovie();
   }
 
-  deleteMovie(x){
-    let id = x;
+  deleteMovie(x) {
+    const id = x;
     this.myservice.deleteTeams(id).subscribe();
     this.getMovie();
   }
@@ -39,18 +38,15 @@ export class GetDataComponent implements OnInit {
       this.http
         .get(url)
         .toPromise()
-        .then((res: any) => {
-          // Success
-          this.data = res.map((res) => {
-            return new Post(
-              res.id,
-              res.name,
-              res.description
-            );
-          });
-          console.log(this.data);
-          resolve();
-        },
+        .then(
+          (res: any) => {
+            // Success
+            this.data = res.map(res1 => {
+              return new Post(res1.id, res1.name, res1.description);
+            });
+            console.log(this.data);
+            resolve();
+          },
           err => {
             // Error
             reject(err);
@@ -58,6 +54,5 @@ export class GetDataComponent implements OnInit {
         );
     });
     return promise;
-    
   }
 }

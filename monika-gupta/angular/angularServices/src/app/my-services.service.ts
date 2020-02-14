@@ -6,35 +6,33 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class MyServicesService {
-
   constructor(private http: HttpClient) {}
 
   todayDate() {
-    let ndate = new Date();
+    const ndate = new Date();
     return ndate;
   }
 
-  getTeams(): Observable<any>{
+  getTeams(): Observable<any> {
     return this.http.get('/api/teams');
   }
 
-  getMovie(x): Observable<any>{
+  getMovie(x): Observable<any> {
     const url = `/api/teams/${x}`;
     return this.http.get(url);
   }
 
-  setTeams (obj): Observable<any> {
-    return this.http.post<any>('/api/teams',obj)
+  setTeams(obj): Observable<any> {
+    return this.http.post<any>('/api/teams', obj);
   }
 
-  updateTeams (obj , x): Observable<any> {
+  updateTeams(obj, x): Observable<any> {
     const url = `/api/teams/${x}`;
-    return this.http.put<any>( url, obj);
+    return this.http.put<any>(url, obj);
   }
 
-  deleteTeams(x): Observable<any>{
+  deleteTeams(x): Observable<any> {
     const url = `/api/teams/${x}`;
-    return this.http.delete<any>( url);
+    return this.http.delete<any>(url);
   }
 }
-

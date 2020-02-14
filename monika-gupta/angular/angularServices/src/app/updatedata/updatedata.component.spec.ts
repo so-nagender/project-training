@@ -8,9 +8,8 @@ describe('UpdatedataComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UpdatedataComponent ]
-    })
-    .compileComponents();
+      declarations: [UpdatedataComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
