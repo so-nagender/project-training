@@ -23,3 +23,32 @@
     padding-bottom: 26px;
    
 }
+.button
+{
+    padding: 10px 20px;
+    font-weight: 800;
+    color: black;
+    background-color: blueviolet;
+
+}
+.style
+{
+    padding: 10px 20px;
+    font-weight: 800;
+    color: black;
+    background-color: blueviolet;
+}
+.font4
+{
+    font-size: 25px;
+    color: red;
+    font-weight: 500;
+    
+}
+.font4:hover
+{
+    font-size: 25px;
+    color: red;
+    font-weight: 500;
+    
+}

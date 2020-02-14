@@ -11,7 +11,6 @@ export class SignUpComponent implements OnInit {
   submitted=false;
    constructor(
         private FormBuilder: FormBuilder ) {
-          debugger;
         this.userprofile=this.FormBuilder.group({
            FirstName :['',[Validators.required]],    // this field is required 
            LastName : ['', [Validators.required]],

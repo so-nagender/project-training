@@ -4,7 +4,7 @@
     <input type="radio" name="colors" (click)="color='black'">black
     <input type="radio" name="colors" (click)="color='grey'">grey
 </div>
-<form [formGroup]="userprofile"  (ngSubmit)="onSubmit()" class="font1" >
+<form [formGroup]="userrpofile"  (ngSubmit)="onSubmit()" class="font1" >
     <h1>SIGN-UP</h1>
     FirstName:<br>
     <input type="text" formControlName="FirstName" [ngClass]="{ 'is-invalid': submitted && f.FirstName.errors }" /><br>

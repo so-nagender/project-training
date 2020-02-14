@@ -1,38 +1,62 @@
 <p class="font2">-list of movies-</p>
 <h1 class="font3" style="text-align: center;">movie-name</h1>
-<div class="container" *ngFor="let team of myData; let i= index">
+<div class="container">
   <div class="row ">
     <div class="col-sm font1">
       <div>
-        <p>team-name</p>
-        <p class="font2"> {{team.name}}</p>
+        <p>first-name</p>
+      </div>
+    </div>
+    <div class="col-sm font1">
+      <div>
+        <p>last-name</p>
       </div>
     </div>
     <div class="col-sm font1">
       <div>
         <p>team-coach</p>
-        <p class="font2">{{team.coach}}</p>
       </div>
     </div>
     <div class="col-sm font1">
       <div>
         <p>team-userid</p>
+      </div>
+    </div>
+    <div class="col-sm font1">
+      <div>
+        <p>Actions</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container" *ngFor="let team of myData; let i= index">
+  <div class="row ">
+    <div class="col-sm font1">
+      <div>
+        <p class="font2"> {{team.name}}</p>
+      </div>
+    </div>
+    <div class="col-sm font1">
+      <div>
+        <p class="font2">{{team.coach}}</p>
+      </div>
+    </div>
+    <div class="col-sm font1">
+      <div>
+        <p class="font2">{{team.address}}</p>
+      </div>
+    </div>
+    <div class="col-sm font1">
+      <div>
+
         <p class="font2"> {{i+1}}</p>
       </div>
     </div>
     <div class="col-sm font1">
       <div>
         <button class="button" type="submit" [routerLink]="['/teams',team.id]">show</button>
-      </div>
-    </div>
-    <div class="col-sm font1">
-      <div>
-        <button (click)="edit()" [routerLink]="['/teams/edit/',team.id]">update</button>
-      </div>
-    </div>
-    <div class="col-sm font1">
-      <div>
-        <button (click)="value_delete(team.id)">delete</button>
+        <button (click)="edit()" class="style" [routerLink]="['/teams/edit/',team.id]">edit</button>
+        <button (click)="value_delete(team.id)" class="style">delete</button>
       </div>
     </div>
   </div>
@@ -45,24 +69,31 @@
       <p>Detail of the users</p>
       <form [formGroup]="myform" (ngSubmit)="onSubmit()">
         <div>
-          <label for="first_name">
-            first_name-
-          </label>
-          <input id="first_name" type="text" formControlName="first_name">
+          <label for="first_name">first_name-</label>
+          <input type="text" formControlName="first_name" [ngClass]="{ 'is-invalid': submitted && f.first_name.errors }"/><br>
+          <div *ngIf="submitted && f.first_name.errors" class="invalid-feedback">
+            <div *ngIf="f.first_name.errors.required" class="font2">*First Name is required</div>
+          </div>
         </div>
         <div>
           <label for="last_name">
             last_name
           </label>
-          <input id="last_name" type="text" formControlName="last_name">
+          <input id="last_name" type="text" formControlName="last_name"
+            [ngClass]="{ 'is-invalid': submitted && f.last_name.errors }" /><br>
+          <div *ngIf="submitted && f.last_name.errors" class="invalid-feedback">
+            <div *ngIf="f.last_name.errors.required" class="font4">*last Name is required</div>
+          </div>
         </div>
-
-
         <div>
           <label for="address">
             Address-
           </label>
-          <input id="address" type="text" formControlName="address">
+          <input id="address" type="text" formControlName="address"
+            [ngClass]="{ 'is-invalid': submitted && f.address.errors }" /><br>
+          <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+            <div *ngIf="f.address.errors.required" class="font4">*First Name is required</div>
+          </div>
         </div>
         <button class="button" type="submit">submit</button><br>
         <!-- <button (click)="data_del()">delete</button> -->
