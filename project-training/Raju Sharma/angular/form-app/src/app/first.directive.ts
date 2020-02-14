@@ -1,40 +1,28 @@
-import { Directive, ElementRef, HostListener, Input  } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appFirst]'
 })
 export class FirstDirective {
-
-  constructor(private el: ElementRef) { }
-  @Input('appFirst') firstColor: string;
-  @Input('firstInput') col:string;
-  @Input('secondInput') text:string;
-  text1:string = "Hey guys surprise";
-  path:string = '../../assests/img/bg.jpg';
-
-
-
+  constructor(private el: ElementRef) {}
+  @Input('appFirst') firstColor; // Input from View
+  // On Mouse over content...using mouse listener.
+  inputText = 'Hey Default text';
   @HostListener('mouseenter') onMouseEnter() {
-    
-    this.test(this.col || 'red');
-    this.tess(this.text);
-    // this.img(this.path);
+    this.colorChange(this.firstColor || 'red');
+    this.textChange(this.inputText);
   }
-
+  // On mouse release...
   @HostListener('mouseleave') onMouseLeave() {
-    this.test(null);
-    this.tess(null);
-    this.el.nativeElement.innerText = "Hey Hii";
+    this.colorChange(null);
+    this.textChange(null);
+    this.el.nativeElement.innerText = 'Hey Hii';
   }
-  private tess(temp:string) {
+  // On Mouse Come text change..
+  private textChange(temp: string) {
     this.el.nativeElement.innerText = temp;
   }
-  private test(color:string) {
+  private colorChange(color: string) {
     this.el.nativeElement.style.backgroundColor = color;
   }
-  // private img(a:string) {
-  //   this.el.nativeElement.backgroundImage =  a;
-  //   console.log('gjasgh')
-  // }
 }
- 

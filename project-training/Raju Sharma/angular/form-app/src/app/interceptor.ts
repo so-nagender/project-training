@@ -1,12 +1,7 @@
 import { Injectable } from '@angular/core';
-import {
-  HttpRequest,
-  HttpHandler,
-  HttpEvent,
-  HttpInterceptor
-} from '@angular/common/http';
-import { MyserviceService } from './myservice.service';
 import { Observable } from 'rxjs';
+import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from '@angular/common/http';
+
 @Injectable()
 export class Interceptor implements HttpInterceptor {
   constructor() {}
@@ -14,10 +9,9 @@ export class Interceptor implements HttpInterceptor {
     // return next.handle(request);
     request = request.clone({
       setHeaders: {
-        Authorization: "hagsjkvh"
+        Authorization: 'Request Acceptor...'
       }
     });
-    //console.log(request,next);
     return next.handle(request);
   }
 }

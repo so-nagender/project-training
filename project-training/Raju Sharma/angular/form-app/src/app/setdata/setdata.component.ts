@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms'
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MyserviceService } from '../myservice.service';
 import { ActivatedRoute } from '@angular/router';
 @Component({
@@ -13,26 +13,32 @@ export class SetdataComponent implements OnInit {
   coachName: any;
   description: any;
 
-  constructor( private FormBuilder: FormBuilder, private Myser: MyserviceService, private activatedRoute: ActivatedRoute) { }
+  constructor(
+    private FormBuilderObj: FormBuilder,
+    private Myser: MyserviceService,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    this.data = this.FormBuilder.group({
+    this.data = this.FormBuilderObj.group({
       team: ['', Validators.required],
       coachName: ['', Validators.required],
-      description: ['', Validators.required],
+      description: ['', Validators.required]
     });
   }
-  get f() { return this.data.controls; }
+  get f() {
+    return this.data.controls;
+  }
   onSubmit() {
     this.team = this.data.controls.team.value;
     this.coachName = this.data.controls.coachName.value;
     this.description = this.data.controls.description.value;
     if (this.data.invalid) {
-      alert("Form is empty");
+      alert('Form is empty');
       return;
+    } else {
+      // if Form is valid then it will post the data into the JSON server...
+      this.Myser.postData({ name: this.team, coach: this.coachName, description: this.description }).subscribe();
     }
-    else {
-      this.Myser.postData({ "name" : this.team, "coach" : this.coachName, "description": this.description }).subscribe();
-    }
-  }  
+  }
 }

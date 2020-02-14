@@ -1,80 +1,75 @@
 <div class="container-fluid body-img">
-    <div>
-       <div class="container pt-3">
-         <a href="#" class="float-left pt-2 navbar-brand mt-1">
-           Read<i>it</i>.
-         </a>
-         <ul class="nav justify-content-end color">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/setdata" routerLinkActive="active" >Set Movie Data</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/getdata" routerLinkActive="active" >Get Movie Details</a>
-          </li>
-           <li class="nav-item">
-             <a class="nav-link active" routerLink="/home" routerLinkActive="active">Home</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" routerLink="/signup" routerLinkActive="active">Sign Up</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" routerLink="/signin" routerLinkActive="active" >Sign In</a>
-           </li>
-         </ul>
-       </div>
-    </div>
-       <div class="container">
-           <div class = "spacing-around content-color">
-               <h1 class="display-1 bolder t"> Angular Form </h1>
-           </div>
-       </div>
-   </div>
-   <!-- Testing start -->
-   <div class="container">
-    <h1>servicess</h1>
-    <b>Today's  Date:</b> {{ todaydate }} <br>
-    <b id="m">Movie Lists are: </b>
-    <div *ngFor="let m of movieDetails">
-        {{ m.id}} {{ m.name }}
+  <div>
+    <div class="container pt-3">
+      <a href="#" class="float-left pt-2 navbar-brand mt-1">
+        Read<i>it</i>.
+      </a>
+      <ul class="nav justify-content-end color">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/setdata" routerLinkActive="active">Set Movie Data</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/getdata" routerLinkActive="active">Get Movie Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/home" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signup" routerLinkActive="active">Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signin" routerLinkActive="active">Sign In</a>
+        </li>
+      </ul>
     </div>
   </div>
   <div class="container">
-    <table class="table table-striped" >
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Movie_Name</th>
-          <th scope="col">Discription</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr  *ngFor="let m of movieDetails">
-          <th scope="row">{{ m.id }}</th>
-          <td>{{ m.name }}</td>
-          <td>{{ m.dis }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="spacing-around content-color">
+      <h1 class="display-1 bolder t">Angular Form</h1>
+    </div>
   </div>
-  
-  <!-- testing end -->
+</div>
+<!-- Testing start -->
+<div class="container">
+  <h1>servicess</h1>
+  <b>Today's Date:</b> {{ todaydate }} <br />
+  <b id="m">Movie Lists are: </b>
+  <div *ngFor="let m of movieDetails">{{ m.id }} {{ m.name }}</div>
+</div>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Movie_Name</th>
+        <th scope="col">Discription</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let m of movieDetails">
+        <th scope="row">{{ m.id }}</th>
+        <td>{{ m.name }}</td>
+        <td>{{ m.dis }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-  <!-- ANgular directive -->
+<!-- testing end -->
+
+<!-- ANgular directive -->
 <div class="container">
   <h1>My First Attribute Directive</h1>
   <h2>Pick a highlight color</h2>
   <div>
-    <input type="radio" name="colors" (click)="color='lightgreen'">Green
-    <input type="radio" name="colors" (click)="color='yellow'">Yellow
-    <input type="radio" name="colors" (click)="color='cyan'">Cyan
+    <input type="radio" name="colors" (click)="color = 'lightgreen'" />Green
+    <input type="radio" name="colors" (click)="color = 'yellow'" />Yellow
+    <input type="radio" name="colors" (click)="color = 'cyan'" />Cyan
   </div>
   <div>
-    <input type="checkbox" name="text1" id="" (click)="text='Hiii'"> Hiii
-    <input type="checkbox" name="text2" id="" (click)="text='Hello'">Hello
-    <input type="checkbox" name="text3" id="" (click)="text='Hey'">Hey
+    <input type="checkbox" name="text1" id="" (click)="text = 'Hiii'" /> Hiii
+    <input type="checkbox" name="text2" id="" (click)="text = 'Hello'" />Hello
+    <input type="checkbox" name="text3" id="" (click)="text = 'Hey'" />Hey
   </div>
   <p [appFirst]="color">Highlight me!</p>
-  <h1 appFirst [firstInput]="color" [secondInput]="text">Text</h1>
-  <p [appFirst]="path" > click here</p>
 </div>
-

@@ -1,16 +1,16 @@
 {
   "teams": [
     {
-      "id": 1,
       "name": "FC Barcelona",
       "coach": "Ernesto Valverde",
-      "description": "The best football team in the world!"
+      "description": "The best football team in the world! and",
+      "id": 1
     },
     {
-      "id": 2,
       "name": "Real Madrid",
       "coach": "Zinedine Zidane",
-      "description": "The worst football team in the world!"
+      "description": "The worst football team in the world!",
+      "id": 2
     },
     {
       "name": "South India",
@@ -41,12 +41,6 @@
       "coach": "Raju Sharma",
       "description": "Bahut hi achhi team hai humesa jeetegi",
       "id": 14
-    },
-    {
-      "name": "Sri lanka",
-      "coach": "Monika",
-      "description": "tattfgnxcb",
-      "id": 15
     }
   ]
 }

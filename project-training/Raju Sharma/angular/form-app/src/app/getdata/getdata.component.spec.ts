@@ -8,9 +8,8 @@ describe('GetdataComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GetdataComponent ]
-    })
-    .compileComponents();
+      declarations: [GetdataComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,4 +1,4 @@
-<div class="container-fluid body-img">
+<div class="container-fluid bg">
   <div class="container pt-3">
     <a href="#" class="float-left pt-2 navbar-brand mt-1">
       Read<i>it</i>.
@@ -21,28 +21,43 @@
       </li>
     </ul>
   </div>
-  <form [formGroup]='data' (ngSubmit)='onSubmit()'>
+  <form [formGroup]="data" (ngSubmit)="onSubmit()">
     <div class="container mt-4">
       <div class="form-group">
         <label class="content-color">Enter Team Name</label>
-        <input type="text" name="team" formControlName="team" class="form-control"
-          [ngClass]="{ 'is-invalid': f.team.errors }">
+        <input
+          type="text"
+          name="team"
+          formControlName="team"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': f.team.errors }"
+        />
         <div *ngIf="f.team.errors" class="invalid-feedback">
           <div *ngIf="f.team.errors.required">required</div>
         </div>
       </div>
       <div class="form-group">
         <label class="content-color">Team Coach Name</label>
-        <input type="text" name="coachName" formControlName="coachName" class="form-control"
-          [ngClass]="{ 'is-invalid': f.coachName.errors }">
+        <input
+          type="text"
+          name="coachName"
+          formControlName="coachName"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': f.coachName.errors }"
+        />
         <div *ngIf="f.coachName.errors" class="invalid-feedback">
           <div *ngIf="f.coachName.errors.required">Required</div>
         </div>
       </div>
       <div class="form-group">
         <label class="content-color">Team Description</label>
-        <input type="text" name="description" formControlName="description" class="form-control"
-          [ngClass]="{ 'is-invalid': f.description.errors }">
+        <input
+          type="text"
+          name="description"
+          formControlName="description"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': f.description.errors }"
+        />
         <div *ngIf="f.description.errors" class="invalid-feedback">
           <div *ngIf="f.description.errors.required">Required</div>
         </div>
