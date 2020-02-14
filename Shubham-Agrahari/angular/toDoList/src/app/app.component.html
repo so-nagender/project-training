@@ -1,8 +1,9 @@
 
- <app-header></app-header>
+ 
 <router-outlet></router-outlet>
 <h2>Teams</h2>
-<div>  
+<div> 
+  <form> 
   <table style="width:100%">
     <tr>
         <th>Team Name</th>
@@ -17,17 +18,19 @@
         <td>{{team.id}} </td>
         <td>{{team.coach}} </td>
         <td>{{team.description}} </td> 
+        
         <button>View</button>
-      <button>Delete</button>
-      <button>Edit</button>            
+        <button type="button" (click)='onDelete(team.id)'>Delete</button>
+        <button type="button" (click)='onPut(team.id)' [routerLink]="['/teams/edit-form/',team.id]">Edit</button>      
+            
     </tr>      
 </table>
+</form>
 
 </div>
 <br>
-<br>
-<br>
-<app-my-team></app-my-team>
+
+
 
 
 

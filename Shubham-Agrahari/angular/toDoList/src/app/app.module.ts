@@ -16,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './intercept';
 import { MyTeamComponent } from './my-team/my-team.component';
+import { EditFormComponent } from './edit-form/edit-form.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { MyTeamComponent } from './my-team/my-team.component';
     SigninComponent,
     HomeComponent,
     DirectDirective,
-    MyTeamComponent
+    MyTeamComponent,
+    EditFormComponent,
+
     
   ],
   imports: [
