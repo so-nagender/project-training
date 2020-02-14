@@ -3,7 +3,7 @@
     {
       "movie": "The Seven Samurai",
       "genre": "Thriller",
-      "description": "\"What's the use of worrying about your beard when your head's about to be taken?\" — Gisaku It's the only Japanese film on the list and later was remade as The Magnificent Seven, a Western with Steve McQueen and Charles Bronson.\n\nyou fuck off!!",
+      "description": "\"What's the use of worrying about your beard when your head's about to be taken?\" — Gisaku It's the only Japanese film on the list and later was remade as The Magnificent Seven, a Western with Steve McQueen and Charles Bronson.",
       "id": 4
     },
     {
@@ -15,20 +15,26 @@
     {
       "movie": "The Deer Hunter",
       "genre": "Thriller",
-      "description": "“You have to think about one shot. One shot is what it's all about. A deer's gotta be taken with one shot.” — Michael\n\nWhen John Cazale got sick during filming, the studio wanted to recast, but Streep threatened to walk off the picture if it did.",
+      "description": "“You have to think about one shot. One shot is what it's all about. A deer's gotta be taken with one shot.” — Michael When John Cazale got sick during filming, the studio wanted to recast, but Streep threatened to walk off the picture if it did",
       "id": 6
     },
     {
       "movie": "Rocky",
       "genre": "Thriller",
-      "description": "“Yo, Adrian! It's me, Rocky.” — Rocky\n\nStallone wrote the script's first draft in just three days, then refused to sell it unless he was cast in the lead role.",
+      "description": "“Yo, Adrian! It's me, Rocky.” — Rocky Stallone wrote the script's first draft in just three days, then refused to sell it unless he was cast in the lead role trtyvrrn6en6m4",
       "id": 7
     },
     {
       "movie": "Memento",
       "genre": "Thriller",
-      "description": "“Memory can change the shape of a room; it can change the color of a car. And memories can be distorted. They're just an interpretation, they're not a record, and they're irrelevant if you have the facts.” — Leonard Shelby\nNolan reportedly was going to cast Alec Baldwin in Pearce's part, but he must have forgotten. ",
+      "description": "“Memory can change the shape of a room; it can change the color of a car. And memories can be distorted. They're just an interpretation, they're not a record, and they're irrelevant if you have the facts.” — Leonard Shelby Nolan reportedly was going to cast Alec Baldwin in Pearce's part, but he must have forgotten. ...",
       "id": 8
+    },
+    {
+      "movie": "The Godfather",
+      "genre": "Thriller",
+      "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son..",
+      "id": 9
     }
   ]
 }

@@ -8,20 +8,12 @@ import { Observable } from 'rxjs';
 export class TimeServiceService {
 
   constructor(private https: HttpClient ) {}
-  // arr = [{id: 1, name: 'titanic'}, {id: 2, name: 'deja-vu'}, {id: 3, name: 'avatar'},{id: 4,name : 'parasite'},{id: 5,name :'birds of prey'}]
   id : any
   todayDate() {
     let ndate = new Date();
     return ndate;
   }
 
-  // moviesList(){
-  //   return this.arr
-  // }
-
-  // setValue(a,b){
-  //  this.arr.push({"id" : a ,"name" : b})
-  // }
   setValue (obj): Observable<any> {
     return this.https.post<any>('/api/posts',obj)
   }

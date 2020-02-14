@@ -12,32 +12,34 @@ export class EditDetailsDirective {
   
   @Input('first') myid: any ;
   datas : any;
+  counter : number = 0;
 
 
   @HostListener('click') onClick(){
     this.clicked()
   }
 
-  @HostListener('dblclick') ondblclicked(){
-    this.dblclicked()
-  }
-
   clicked(){
-    this.card.nativeElement.previousSibling.contentEditable = "true"
+    if(this.counter == 0){
+      console.log(this.counter)
+      this.card.nativeElement.previousSibling.contentEditable = "true"
     this.myService.getdataId(this.myid).subscribe((res)=>{
       this.datas = res;
     });
     this.card.nativeElement.previousSibling.style.border = "2px solid cadetblue"
-  }
-
-  dblclicked(){
-    let myText = this.card.nativeElement.previousSibling.innerText
+    this.counter = 1;
+    }
+    else if(this.counter == 1){
+      let myText = this.card.nativeElement.previousSibling.innerText
     let a = this.datas.movie
     let b = this.datas.genre
     let obj = { "movie" : a ,"genre" : b, "description" : myText}
     this.myService.updateValue(this.myid,obj).subscribe();
     this.card.nativeElement.previousSibling.contentEditable = "false"
     this.card.nativeElement.previousSibling.style.border = "none"
-}
+    this.counter = 0;
+    }
+    
+  }
 
 }
