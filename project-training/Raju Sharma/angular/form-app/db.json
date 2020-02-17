@@ -31,16 +31,10 @@
       "id": 12
     },
     {
-      "name": "Pakistan",
-      "coach": "Monika ",
-      "description": "Tatti team aur kabhi jeet v nhi payegi",
+      "name": "Pakishtan",
+      "coach": "Monika gupta",
+      "description": "bahut hi bekar ka team hai ",
       "id": 13
-    },
-    {
-      "name": "East India",
-      "coach": "Raju Sharma",
-      "description": "Bahut hi achhi team hai humesa jeetegi",
-      "id": 14
     }
   ]
 }

@@ -29,4 +29,13 @@ export class GetdataComponent implements OnInit {
       this.users = res;
     });
   }
+  delete(id) {
+    this.Myser.deletData(id).subscribe();
+    this.activatedRoute.data.subscribe(data => {
+      this.users = data.users;
+    })
+    this.Myser.getUsers().subscribe(res => {
+      this.users = res;
+    });
+  }
 }
