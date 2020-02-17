@@ -11,7 +11,6 @@ export class AppComponent {
   teams$ = this.http.get('/api/teams');
   constructor(private http: HttpClient) {}
 }
-  // two way data binding
-  // firstname : string = "Shikhar";
-  // lastname : string = "Gupta";
-
+// two way data binding
+// firstname : string = "Shikhar";
+// lastname : string = "Gupta";

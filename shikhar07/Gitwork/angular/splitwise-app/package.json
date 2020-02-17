@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "fix:prettier": "prettier --write \"**/*.{ts,js,css,scss,md,html}",
+    "test:prettier": "prettier --list-different \"**/*.{ts,js,css,scss,md,html}\"",
     "api": "json-server db.json --routes routes.json --no-cors=true"
   },
   "private": true,
