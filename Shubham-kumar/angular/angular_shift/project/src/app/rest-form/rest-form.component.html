@@ -1,21 +1,29 @@
+
+
 <div class="row">
 
   <div class="col-sm-2">
     <nav class=" ">
       <ul>
-           <li><label class="space">
-             Create
+           <!-- <li><label class="space">
+            <div (click)="change_toggle()">
+              view
+              </div>
                  </label>
-           </li>
-         <li><label class="space">
-          <button (click)="view_data()">view</button>
+           </li> -->
+           <li><div *ngIf="!Edit_toggle" (click)="change_toggle()">change to view</div><div *ngIf="Edit_toggle" (click)="change_toggle()">change to create Form</div> </li>
+
+         <!-- <li><label class="space">
+        <div  ">create</div>
          </label>
-         </li>
+         </li> -->
        </ul>
      </nav>
 
   </div>
-  <div class="col-sm-5">
+  <div class="col-sm-5" *ngIf="!Edit_toggle">
+    
+
     
 
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()"  class="form">
@@ -34,22 +42,31 @@
       <input type="text" formControlName="description">
     </label>
     <input type="hidden" formControlName="id">
-    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
-    <button type="button" [disabled]="!profileForm.valid" (click)="updval(profileForm) ">Edit</button>
+    <div *ngIf="!button"><button type="submit" [disabled]="!profileForm.valid">Submit</button></div>
+    <div *ngIf="button"><button type="button" [disabled]="!profileForm.valid" (click)="updval(profileForm)">Edit</button></div>
 
    
 
 </form>
+</div>
 
-  </div>
-  <div class="col-sm-5">
+
+  
+  <div class="col-sm-5" *ngIf="Edit_toggle">
+    
     <div *ngFor="let team of myData">
      {{team.name}} -  {{team.coach}} -  {{team.description}}<img src ="./../../assets/images/delete.svg" (click)="delval(team.id)">  <img src ="./../../assets/images/document.svg" (click)="editVal(team)">
+     <img src ="./../../assets/images/eye.svg" (click)="postVal(team)">
     </div>
-    
-
-
   </div>
+
+  <div class = col-sm-10 *ngIf="SelectedData">
+    
+      {{userVal.name}} -  {{userVal.coach}} -  {{userVal.description}}
+
+
+</div>
+
 
 </div>
 
