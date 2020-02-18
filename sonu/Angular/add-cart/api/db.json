@@ -2,11 +2,11 @@
   "teams": [
     {
       "id": 1,
-      "movieName": "sonu"
+      "movieName": "IronMan"
     },
     {
       "id": 2,
-      "movieName": "IronMan"
+      "movieName": "SpiderMan"
     }
   ]
 }
