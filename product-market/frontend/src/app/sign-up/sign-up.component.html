@@ -1,0 +1,35 @@
+<div class="container">
+    <button type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <h1><strong style="font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">SIGN-UP</strong></h1>
+    <p><u>or</u> <strong style="color: #f88288"> Create a new account</strong></p>
+    <form [formGroup]="signupform">
+        <div class="form-group">
+            <label for="inputName" style="padding-top: 15px;">Full-Name</label>
+            <input type="text" formControlName="fullname" class="form-control" id="inputName" placeholder="Full-Name"
+                [ngClass]="{ 'is-invalid':f.fullname.errors }" />
+            <div *ngIf="f.fullname.errors" class="invalid-feedback">
+                <div *ngIf="f.fullname.errors.required">*Full-Name is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1" style="padding-top: 15px;">Username</label>
+            <input type="text" formControlName="username" class="form-control" aria-describedby="emailHelp"
+                placeholder="mobile no. or email" [ngClass]="{ 'is-invalid':f.username.errors }" />
+            <div *ngIf="f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">*UserName is required</div>
+            </div>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your information with anyone else.
+            </small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1" style="padding-top: 15px;">Password</label>
+            <input type="password" formControlName="password" class="form-control" placeholder="password"
+                [ngClass]="{ 'is-invalid':f.password.errors }" />
+            <div *ngIf="f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">*password length should be 8</div>
+            </div>
+        </div>
+        <button type="submit" class="btn">SIGN-UP</button>
+    </form>
