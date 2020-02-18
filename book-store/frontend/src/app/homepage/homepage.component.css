@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 .slider{
@@ -17,12 +18,20 @@ nav{
     display: grid;
     grid-template-columns: 10% 1fr 1fr 10%;
     min-height: 10px;
+    color: white;
+    justify-content: center;
+    align-items:center;
+    font-size: 45px;
     
 }
 
 #logo{
-    grid-column: 2/3;
+    grid-column: 1/2;
     font-size: 24px;
+}
+#login{
+    grid-column: 4/5;
+
 }
 section{
     display: flex;
@@ -71,7 +80,5 @@ section{
 
 
 #logo img{
-    width: 20%;
-
-
+    width: 50%;
 }
