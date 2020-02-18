@@ -1,6 +1,7 @@
 .navbar-expand-lg
 {
     background-color: #f88288;
+    padding-right: 18px;
 }
 .nav-link
 {
@@ -18,3 +19,15 @@ background-color: black;
 font-weight: 400;
 padding:px ;
 }                                                                                                                                                                           
+.images
+{
+    height:30px
+}
+.dropdown-item
+{
+    font-weight:700;
+}
+.navbar-expand-lg .navbar-nav .nav-link 
+{
+    padding-right:18px
+}

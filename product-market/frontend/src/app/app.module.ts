@@ -11,23 +11,23 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: "/", component: AppComponent },
+  { path: "", component: HomeComponent },
 ];
 
 import { LoginComponent } from './login/login.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
-import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-
     HomeComponent,
     MainComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
 
     LoginComponent,
     SignUpComponent,
@@ -38,9 +38,9 @@ import { HeaderComponent } from './header/header.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
-     ReactiveFormsModule,
-     FormsModule,
+    RouterModule.forRoot(routes),
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
