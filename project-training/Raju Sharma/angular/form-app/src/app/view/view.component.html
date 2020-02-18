@@ -1,0 +1,25 @@
+<div class="container-fluid bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="card text-center">
+        <div class="card-header">
+          <h2>TEAM {{ users.name }}</h2>
+        </div>
+        <div class="card-body">
+          <img class="card-img-top" src="../../assets/img/team.jpg" alt="Card image cap" />
+          <h3 class="card-title my-3">Coach : {{ users.coach }}</h3>
+          <div class="card-footer text-muted">
+            <h3>Description:</h3>
+          </div>
+          <p class="card-text">{{ users.description }}</p>
+        </div>
+        <div class="card-footer text-muted">
+          <button routerLink="/getdata" class="btn btn-outline-success mr-3">GET LIST</button>
+          <button [routerLink]="['/edit', users.id]" class="btn btn-outline-success">Edit Team</button>
+        </div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+  </div>
+</div>

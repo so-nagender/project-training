@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms'
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MustMatch } from '../match';
 
 @Component({
@@ -9,28 +9,31 @@ import { MustMatch } from '../match';
 })
 export class SigninComponent implements OnInit {
   datas: FormGroup;
-  submitted: boolean = false;
-  constructor( private FormBuilder: FormBuilder) {}
+  submitted = false;
+  constructor(private FormBuilderObj: FormBuilder) {}
   ngOnInit() {
-    this.datas = this.FormBuilder.group({
-      email: ['',[Validators.required, Validators.email]],
-      password: ['',Validators.required],
-      confirmpassword: ['',Validators.required],
-    },
-    {
-      validator: MustMatch('password', 'confirmpassword'),
-  });
+    this.datas = this.FormBuilderObj.group(
+      {
+        email: ['', [Validators.required, Validators.email]],
+        password: ['', Validators.required],
+        confirmpassword: ['', Validators.required]
+      },
+      {
+        validator: MustMatch('password', 'confirmpassword')
+      }
+    );
   }
-  get f() { return this.datas.controls; }
+  get f() {
+    return this.datas.controls;
+  }
 
   onSubmit(val) {
     this.submitted = true;
     if (this.datas.invalid) {
-      console.log(this.datas.controls)
+      console.log(this.datas.controls);
       return;
     }
-    console.warn('Your Input has been submitted',val);
-
-        alert('SUCCESS!! :-)')
+    console.warn('Your Input has been submitted', val);
+    alert('SUCCESS!! :-)');
   }
 }

@@ -1,0 +1,22 @@
+body,
+html {
+  height: 100%;
+}
+.bg {
+  background: url('../../assets/img/light2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  padding-bottom: 4.2%;
+}
+.box {
+  box-sizing: border-box;
+  border: 3px solid rgb(53, 53, 53);
+}
+td {
+  font-size: large;
+  max-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

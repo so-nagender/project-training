@@ -1,39 +1,48 @@
-<p>getdata works!</p>
-<div class="container">
-  <button type="submit" routerLink="/home" class="btn btn-outline-success my-4">Home</button>
-  <button type="submit" routerLink="/setdata" class="btn btn-outline-success ml-4">Set Data</button>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Movie_Name</th>
-        <th scope="col">Discription</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let m of movieDetails">
-        <th scope="row">{{ m.id }}</th>
-        <td>{{ m.name }}</td>
-        <td>{{ m.dis }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div class="container">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Team name</th>
-        <th scope="col">coach</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let m of users">
-        <th scope="row">{{ m.id }}</th>
-        <td>{{ m.name }}</td>
-        <td>{{ m.coach }}</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="conatiner-fluid bg">
+  <div class="container box my-4">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Team name</th>
+          <th scope="col">coach</th>
+          <th scope="col">Descriptin</th>
+          <th scope="col" class="pl-4">Fuctions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let m of users; let indec = index">
+          <th scope="row">{{ indec + 1 }}</th>
+          <td>{{ m.name }}</td>
+          <td>{{ m.coach }}</td>
+          <td>{{ m.description }}</td>
+          <td>
+            <button type="button" [routerLink]="['/view', m.id]" class="btn btn-light">View</button>
+            <button type="button" [routerLink]="['/edit', m.id]" class="btn btn-light mx-2">Edit</button>
+            <button type="button" (click)="delete(m.id)" class="btn btn-light">delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="container">
+    <button type="submit" routerLink="/home" class="btn btn-outline-success my-4">Home</button>
+    <button type="submit" routerLink="/setdata" class="btn btn-outline-success ml-4">Set Data</button>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Movie_Name</th>
+          <th scope="col">Discription</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let m of movieDetails">
+          <th scope="row">{{ m.id }}</th>
+          <td>{{ m.name }}</td>
+          <td>{{ m.dis }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

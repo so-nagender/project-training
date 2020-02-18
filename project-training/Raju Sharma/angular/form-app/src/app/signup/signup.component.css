@@ -1,25 +1,27 @@
-body,html {
-    height: 100%;
-  }
+body,
+html {
+  height: 100%;
+}
 .bg {
-    background: url("../../assets/img/bg.jpg") no-repeat center center fixed;
-    background-size: cover;
-    height: 100%;
-    overflow: hidden;
-    padding-bottom: 4.2%;
+  background: url('../../assets/img/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  padding-bottom: 4.2%;
 }
 label {
-    color: rgba(169, 255, 130, 0.609);
+  color: rgba(169, 255, 130, 0.609);
 }
-input, textarea {
-    background: rgba(2, 0, 0, 0);
-    border: none;
-    outline: none;
-    box-sizing: border-box;
-    border: solid 1px blanchedalmond;
+input,
+textarea {
+  background: rgba(2, 0, 0, 0);
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  border: solid 1px blanchedalmond;
 }
 h1 {
-    color: rgba(171, 228, 157, 0.356);
-    font-size: 3.8rem;
-    font-weight: 900;
+  color: rgba(171, 228, 157, 0.356);
+  font-size: 3.8rem;
+  font-weight: 900;
 }

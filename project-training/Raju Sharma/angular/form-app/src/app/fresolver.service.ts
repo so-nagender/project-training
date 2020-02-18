@@ -5,9 +5,9 @@ import { MyserviceService } from './myservice.service';
 @Injectable({
   providedIn: 'root'
 })
-export class FresolverService implements Resolve<any>  {
+export class FresolverService implements Resolve<any> {
   constructor(private fakeApi: MyserviceService) {}
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    return this.fakeApi.getUsers();
+    return this.fakeApi.getUsers(); // Rsolving function...
   }
 }

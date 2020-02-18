@@ -1,0 +1,60 @@
+body,
+html {
+  height: 100%;
+}
+.bg {
+  background: url('../../assets/img/light2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  padding-bottom: 18.5%;
+}
+.box {
+  box-sizing: border-box;
+  border: 3px solid rgb(53, 53, 53);
+}
+.navbar-brand {
+  display: inline-block;
+  font-size: 1.25rem;
+  white-space: nowrap;
+  color: #fcf7f7;
+  font-weight: 900;
+  font-size: 26px;
+  font-family: 'Poppins', Arial, sans-serif;
+  line-height: 1;
+}
+.navbar-brand1 {
+  display: inline-block;
+  font-size: 1.25rem;
+  white-space: nowrap;
+  color: #fcf7f7;
+  font-weight: 900;
+  font-size: 26px;
+  font-family: 'Poppins', Arial, sans-serif;
+  line-height: 1;
+}
+.navbar-brand:hover,
+.navbar-brand:focus {
+  text-decoration: none;
+  color: #913a3a;
+  box-sizing: border-box;
+  border: 1px solid #913a3a;
+  border-radius: 3px;
+}
+.navbar-brand i {
+  font-style: normal;
+  color: #f5ae0a;
+}
+.navbar-brand i:hover {
+  color: #913a3a;
+}
+
+.color a {
+  color: #fff;
+}
+.color a:hover {
+  color: #913a3a;
+  box-sizing: border-box;
+  border: 1px solid #913a3a;
+  border-radius: 3px;
+}

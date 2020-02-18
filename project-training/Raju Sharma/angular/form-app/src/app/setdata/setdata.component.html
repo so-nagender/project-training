@@ -1,17 +1,72 @@
-<div class="container mt-4">
-    <div class="form-group">
-        <label for="exampleInputEmail1">Movie ID</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ID">
+<div class="container-fluid bg">
+  <div class="container pt-3">
+    <a href="#" class="float-left pt-2 navbar-brand mt-1">
+      Read<i>it</i>.
+    </a>
+    <ul class="nav justify-content-end color">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/setdata" routerLinkActive="active">Set Movie Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/getdata" routerLinkActive="active">Get Movie Details</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/home" routerLinkActive="active">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/signup" routerLinkActive="active">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/signin" routerLinkActive="active">Sign In</a>
+      </li>
+    </ul>
+  </div>
+  <form [formGroup]="data" (ngSubmit)="onSubmit()">
+    <div class="container mt-4">
+      <div class="form-group">
+        <label class="content-color">Enter Team Name</label>
+        <input
+          type="text"
+          name="team"
+          formControlName="team"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': f.team.errors }"
+        />
+        <div *ngIf="f.team.errors" class="invalid-feedback">
+          <div *ngIf="f.team.errors.required">required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="content-color">Team Coach Name</label>
+        <input
+          type="text"
+          name="coachName"
+          formControlName="coachName"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': f.coachName.errors }"
+        />
+        <div *ngIf="f.coachName.errors" class="invalid-feedback">
+          <div *ngIf="f.coachName.errors.required">Required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="content-color">Team Description</label>
+        <input
+          type="text"
+          name="description"
+          formControlName="description"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': f.description.errors }"
+        />
+        <div *ngIf="f.description.errors" class="invalid-feedback">
+          <div *ngIf="f.description.errors.required">Required</div>
+        </div>
+      </div>
+      <div>
+        <button type="submit" routerLink="/getdata" class="btn btn-outline-success mr-4">Submit</button>
+        <button type="button" routerLink="/home" class="btn btn-outline-success">Home</button>
+        <button type="button" routerLink="/getdata" class="btn btn-outline-success ml-4">Get Movie Details</button>
+      </div>
     </div>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Movie</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Movie Name">
-    </div>
-    <div class="form-group">
-        <label>Type</label>
-        <input type="text" class="form-control" placeholder="Enter Movie Type">
-    </div>
-    <button type="submit" class="btn btn-outline-success mr-4">Submit</button>
-    <button type="submit" routerLink="/home" class="btn btn-outline-success">Home</button>
-    <button type="submit" routerLink="/getdata" class="btn btn-outline-success ml-4">Get Movie Details</button>
+  </form>
 </div>

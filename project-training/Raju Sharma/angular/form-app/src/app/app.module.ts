@@ -10,16 +10,22 @@ import { SigninComponent } from './signin/signin.component';
 import { FirstDirective } from './first.directive';
 import { SetdataComponent } from './setdata/setdata.component';
 import { GetdataComponent } from './getdata/getdata.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FresolverService } from './fresolver.service';
+import { Interceptor } from './interceptor';
+import { EditComponent } from './edit/edit.component';
+import { ViewComponent } from './view/view.component';
 
+// Routing Valiables...
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'setdata', component: SetdataComponent },
-  { 
-    path: 'getdata', 
+  { path: 'edit/:id', component: EditComponent },
+  { path: 'view/:id', component: ViewComponent },
+  {
+    path: 'getdata',
     component: GetdataComponent,
     resolve: { users: FresolverService }
   }
@@ -33,17 +39,18 @@ const appRoutes: Routes = [
     SigninComponent,
     FirstDirective,
     SetdataComponent,
-    GetdataComponent
+    GetdataComponent,
+    EditComponent,
+    ViewComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule, RouterModule.forRoot(
-      appRoutes,
-    ),
-    HttpClientModule,
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, RouterModule.forRoot(appRoutes), HttpClientModule],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: Interceptor,
+      multi: true
+    }
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
