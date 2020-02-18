@@ -78,7 +78,9 @@ section{
     
 }
 
-
+h3.logo_align{
+    text-align: right;
+}
 #logo img{
     width: 50%;
 }

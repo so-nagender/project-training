@@ -1,0 +1,14 @@
+.padding_left{
+padding-left: 183px;
+}
+img{
+    width: 50%;
+}
+.flex + .flex{
+    padding-left: 150px;
+    padding-right: 150x;
+    
+}
+.shadow{
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
