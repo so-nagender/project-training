@@ -1,0 +1,20 @@
+.navbar-expand-lg
+{
+    background-color: #f88288;
+}
+.nav-link
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:500;
+    color: white;
+    font-size: 20px;
+    padding: 10px 10px;
+}
+.btn
+{
+border-radius: 0px;
+color: white;
+background-color: black;
+font-weight: 400;
+padding:px ;
+}                                                                                                                                                                           
