@@ -7,10 +7,12 @@ import { HeaderComponent } from './header/header.component';
 import { DefaultComponent } from './default/default.component'
 import { FooterComponent } from './footer/footer.component'
 import { from } from 'rxjs';
+import { SignupComponent } from './signup/signup.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: '', component: DefaultComponent },
+  { path: 'signup', component: SignupComponent},
 ];
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ const appRoutes: Routes = [
     HomeComponent,
     HeaderComponent,
     DefaultComponent,
-    FooterComponent
+    FooterComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
