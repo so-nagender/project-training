@@ -27,13 +27,13 @@
 }
 .navbar-brand i {
     font-style: normal;
-    color: rgba(185, 8, 2, 0.808); 
+    color: rgb(180, 66, 66); 
 }
 .navbar-brand i:hover{
     color:#ee8267;
 }
 .color a{
-    color: rgb(224, 230, 235); 
+    color: rgb(180, 66, 66); 
 }
 .color a:hover{
     color:#ee8267;
