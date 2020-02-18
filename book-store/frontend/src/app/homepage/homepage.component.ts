@@ -25,7 +25,7 @@ export class HomepageComponent implements OnInit {
       { width: "100"},
       {width :"80%"}
 
-    ).fromTo(this.slider.nativeElement, -1.2 ,{x:"-100"},{x:"0%"}, "-=1.2")
+    )
   }
 
   ngOnInit() {
