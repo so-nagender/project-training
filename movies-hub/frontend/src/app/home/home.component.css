@@ -9,5 +9,5 @@ a {
     text-decoration: none;
 }
 .gradient {
-    background: linear-gradient(rgba(75, 75, 75, 0.609),rgb(58, 58, 58),rgb(138, 135, 135));
+    background: linear-gradient(black,rgb(58, 58, 58));
 }
