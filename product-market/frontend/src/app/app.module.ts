@@ -7,6 +7,11 @@ import { HomeComponent } from './home/home.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+  { path: "/", component: AppComponent },
+];
 
 @NgModule({
   declarations: [
@@ -18,7 +23,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
