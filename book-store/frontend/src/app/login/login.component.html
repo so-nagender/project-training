@@ -12,21 +12,26 @@
   </head>
   <body>
     <h4 style="text-align: center;">SIGN IN FORM</h4>
-    <div class="container box">
+    <div class="container">
         <div class="row">
             <div class="col-sm-3">    
             </div>
-            <div class="col-sm-6 border rounded" style="padding: 25px 25px;"> 
-                
-                <form>
+            <div class="col-sm-6 " > 
+                <form name="form" [formGroup]="form">
                     <div class="form-group row" style="margin-top: 10px;">
                         <div class="col">
-                            <input type="text" class="form-control" id="staticEmail" placeholder="email@example.com">
+                            <input type="text" class="form-control" formControlName="email" [ngClass]="{'is-invalid': form.get('email').touched && form.get('email').invalid}" id="staticEmail" placeholder="email@example.com">
+                            <div class="invalid-feedback">
+                                <div>Email is Required</div>
+                            </div>
                         </div>
                     </div>
                     <div class="row" style="margin-top: 10px;">
                         <div class="col">
-                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                            <input type="password" class="form-control" formControlName="password" [ngClass]="{'is-invalid': form.get('password').touched && form.get('password').invalid}" id="inputPassword3" placeholder="Password">
+                            <div class="invalid-feedback">
+                                <div>Password is Required</div>
+                            </div>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Sign In</button>
