@@ -1,0 +1,10 @@
+.text--bold {
+    font-size: 20px;
+    font-weight: 500!important;
+}
+.palewhite {
+    color: black;
+}
+a {
+    text-decoration: none!important;
+}
