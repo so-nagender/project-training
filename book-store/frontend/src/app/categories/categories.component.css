@@ -1,0 +1,29 @@
+.padding_top{
+
+    padding-top: 200px;
+}
+.border {
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+    margin-top: 10px;
+    height: 100px;
+    
+  
+  
+}
+tr{
+    padding: 100px;
+    min-height: 100px;
+}
+
+.plus_image{
+   background-image: url("../../assets/images/plus.svg");
+   background-position: center;
+   background-repeat:no-repeat ;
+   background-size: contain ;
+   cursor: pointer;
+}
+.padding_left{
+    margin-left: 10px;
+}
