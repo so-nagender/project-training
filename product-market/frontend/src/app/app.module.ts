@@ -3,44 +3,53 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { HomeComponent } from './home/home.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { Routes, RouterModule } from '@angular/router';
-
-const routes: Routes = [
-  { path: "/", component: AppComponent },
-];
-
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 
+const routes: Routes = [
+  { path: "home",
+    component: HomeComponent,
+    children : [
+      {
+        path: "",
+        component: SidebarComponent,
+      },
+      {
+      path: "signup",
+      component: SignUpComponent,
+      },
+      {
+        path :"signin",
+        component : LoginComponent
+      }] },
+  
+];
+
 
 @NgModule({
   declarations: [
     AppComponent,
-
     HomeComponent,
     MainComponent,
     FooterComponent,
-    SidebarComponent
-
+    SidebarComponent,
     LoginComponent,
     SignUpComponent,
     HeaderComponent,
-
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
-     ReactiveFormsModule,
-     FormsModule,
+    RouterModule.forRoot(routes),
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
