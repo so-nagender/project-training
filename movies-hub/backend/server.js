@@ -26,7 +26,7 @@ server.use((req, res, next) => {
   next()
 });
 
-server.get('/signup', (req, res) => {
+server.post('/signup', (req, res) => {
   if(!req.body.name || !req.body.password) return res.sendStatus(401);
   
   // Checks if user already exists.
@@ -42,7 +42,7 @@ server.get('/signup', (req, res) => {
   res.json({accessToken: accessToken});
 });
 
-server.get('/login', (req, res) => {
+server.post('/login', (req, res) => {
   if(!req.body.name || !req.body.password) return res.sendStatus(403);
   
   // Checks if already exists.
@@ -57,7 +57,8 @@ server.get('/login', (req, res) => {
 // Authenticate and handles req handling.
 function authenticateAndProcessReq(req, res, next) {
 	const authHeader = req.headers['authorization'];
-	const token = authHeader && authHeader.split(' ')[1];
+  console.log('authHeader', authHeader)
+  const token = authHeader && authHeader.split(' ')[1];
 	if(token == null) return  res.sendStatus(401);
 
 	jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
