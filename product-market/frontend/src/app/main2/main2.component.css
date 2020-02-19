@@ -1,0 +1,20 @@
+
+.images
+{
+height: 55px;
+}
+.btn
+{
+border-radius: 0px;
+color: white;
+background-color: black;
+font-weight: 600;
+padding: 12px ;
+margin-left: 25PX;
+font-size: 15px;
+}   
+.rounded-circle
+{
+ padding: 25px;
+ width: auto;
+}
