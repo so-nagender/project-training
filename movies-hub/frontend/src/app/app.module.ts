@@ -8,7 +8,7 @@ import { DefaultComponent } from './default/default.component'
 import { FooterComponent } from './footer/footer.component'
 // import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Confirmpasswordvalidator } from './match'
+import { Confirmpasswordvalidator } from '../../src/app/match'
 import { SignupComponent } from './signup/signup.component';
 import { DetailsComponent } from './details/details.component';
 import { ListComponent } from './list/list.component';
@@ -40,7 +40,7 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(
       appRoutes,
-    )
+    ),
   ],
   providers: [],
   bootstrap: [AppComponent]
