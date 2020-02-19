@@ -1,0 +1,20 @@
+body, html
+{
+    height: 100%;
+}
+.bg-header {
+    background: url(../images/Industry-solutions-main-header.svg) no-repeat;
+    /* padding: 300px; */
+    height: 100%;
+    
+
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    
+    background-size: cover;
+}
+
+.background{
+    background: rgb(28, 4, 94);
+}

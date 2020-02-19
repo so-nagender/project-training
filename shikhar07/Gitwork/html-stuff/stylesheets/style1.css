@@ -1,0 +1,286 @@
+.bg-header {
+    background: url(../images/bg_1.jpg) no-repeat;
+    /* padding: 300px; */
+    height: 100%;
+    background-image: linear-gradient(to top right,RGBA(248 , 61, 245,0.8),RGBA(249 ,204 ,124,0.8)),url('../images/bg_1.jpg');
+
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    
+    background-size: cover;
+margin-bottom: 30px;
+}
+.color, .color a{
+    color: white;
+}
+.display-1{
+    font-weight: bold;
+    font-size: 100px;
+}
+
+.white-color{
+    color:rgb(83, 76, 76);
+}
+.spacing-around{
+    padding: 100px 0px;
+    
+}
+/* #font{
+    font-size: 2.50rem;
+} */
+.color{
+    color: white;
+    text-align: center;
+}
+/* .footer{
+    padding: 10px;
+} */
+/* .f-right{
+    float: right;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* .container {
+    width: 1024px;
+    margin: 0 auto;
+    background-color: lightblue;
+
+}
+
+/*-- header starts --*/
+/* 
+header {
+    /* padding: 20px 10px; */
+    /* position: sticky;
+    background: rgb(184, 230, 173);
+    top: 0;
+    left: 0;
+    right: 0px;
+    z-index: 1;;
+    
+}
+header nav, header nav li {
+    display: inline-block;
+}
+header nav li a {
+    padding: 50px 10px;
+    text-decoration: none;
+}
+header nav li a:hover {
+    text-decoration: underline;
+    background: yellowgreen;
+    
+} */
+/* header nav {
+    float: right;
+}
+nav{
+    padding: 40px 40px;
+    height: 100%;
+}
+header nav li a
+{
+    /* line-height: 10px; */
+}
+
+/*-- header ends --*/
+
+/*--- main start --*/
+.clear {
+    clear: both;
+}
+main {
+    /* background: black; */
+}
+
+aside {
+     /* width: 21 */
+    /* background: red; */
+    float: left;
+    position: sticky;
+    background: rgb(230, 173, 190);
+    top: 100px;
+    width: 20%;
+    
+}
+
+
+aside ul li {
+    list-style: none;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+aside li a {
+    padding: 10px;
+
+    width: 90%;
+    text-decoration: none;
+    float: left;
+}
+
+aside li a:hover {
+    background: yellowgreen;
+    text-decoration: underline;
+} */
+
+/* section {
+    width: 80%;
+    background: lightsalmon;
+    float: right;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+article p {
+    padding: 15px;
+    border: 1px solid green;
+}
+.buttonStyle{
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 7px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/* button[type="button"]{
+    position: sticky;
+} */
+.fRight {
+    float: right;
+}
+
+
+article h3 {
+    font-size: 20px;
+}
+
+article h3 strong {
+    font-size: 34px;
+}
+
+article p strong {
+    font-weight: bolder;
+    font-style: oblique;
+}
+
+article.greenColor p strong {
+    font-style: normal;
+}
+footer span, footer span li {
+    display: inline-block;
+}
+footer ul{
+    float: right;
+}
+
+.popup {
+    top: 237px;
+    left: 0;
+    right:-154px;
+    bottom: 0;
+    margin: auto;
+    background: lightblue;
+    width: 190px;
+    height: 600px;
+    padding: 20px;
+    position: fixed;
+    display: none;
+}
+input[type=text] {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px; }
+    input[type=text]:focus {
+        background-color: rgb(226, 230, 173);
+      }
+  
+  input[type=password] {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px;
+  }
+  input[type=email] {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px;
+  }
+  
+.table {
+    background: #fff;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: darkcyan;
+} */
+      
+/* .popup form > div {
+    margin-bottom: 10px;
+}
+footer li{
+    display: inline-block;
+}
+footer{
+    background: chartreuse;
+} */
+/* h2{
+    padding: 9px;
+}
+span{
+    padding: 9px;
+}
+-- footer ends -- */ */ */

@@ -1,0 +1,10 @@
+.white-color {
+  color: rgb(83, 76, 76);
+}
+.spacing-around {
+  padding: 100px 0px;
+}
+.display-1 {
+  font-weight: bold;
+  font-size: 100px;
+}

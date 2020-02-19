@@ -1,0 +1,29 @@
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Author Name</th>
+        <th scope="col">Country</th>
+        <th scope="col">Last Book</th>
+        <th scope="col">DOB</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--  -->
+      <tr *ngFor = 'let authObj of author' (click) = "showDetails(authObj)">
+        <th scope="row">{{authObj.sr_no}}</th>
+        <td>{{authObj.authorname | uppercase}}</td>
+        <td>{{authObj.country}}</td>
+        <td>{{authObj.lastbook}}</td>
+        <td>{{authObj.dob | date }}</td>
+      </tr>
+      <!--  -->
+      
+    </tbody>
+  </table>
+  <div *ngIf = "toggle">
+    <app-main-section [author] = "selectedAuthor"></app-main-section>]
+    <button (click) = 'toggleSetter()'>X</button>
+  </div>
+  
