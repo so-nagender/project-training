@@ -1,0 +1,86 @@
+<div class="container-fluid body-img">
+  <!-- Nav Bar Start -->
+  <div>
+    <header>
+      <div class="container pt-3">
+        <a href="#" class="float-left pt-3 navbar-brand mt-1">
+          <img src="../../assets/img/logo2.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+          <i> Movie$-Hub</i>
+        </a>
+        <ul class="nav justify-content-end color">
+          <li class="nav-item">
+            <a class="nav-link active"  routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/signup">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="modal" data-target="#exampleModal1" href="#">Sign In</a>
+            <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="signin">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control userdetails" aria-describedby="emailHelp"
+                          placeholder="Enter email">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control userdetails" placeholder="Password">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+  </div>
+  <!-- nav Bar end -->
+  <div class="container">
+    <div class="spacing-around content-color">
+      <div class="row">
+        <div class="col-4">
+          <form class="signin-form">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email Address / User</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Or User">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+          </form>
+          <button type="submit" class="btn btn-danger mt-4">Log In</button>
+          <div class="signup-style">
+           <label>New To Movie$-Hub</label> <a href="" class="color">Sign Up </a>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="pl-4">
+            <h4> Hello Welcome to</h4>
+            <h1 class="display-1 bolder"> Movie$-Hub </h1>
+            <h6>
+              <br> <i> Movie Hub allows you to manage your Movie Collection. You can search for Movies and TV-Shows online and add them to your collection. 
+                You can view your collection and watch trailers, images and different facts for every Movie or TV-Show.</i>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+
