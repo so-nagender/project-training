@@ -1,0 +1,9 @@
+.p{
+    clear: both;
+}
+.bgImage3{
+    background-image: url(../../assets/loan.png);
+    background-size: cover;
+    height: 200px;
+    
+}

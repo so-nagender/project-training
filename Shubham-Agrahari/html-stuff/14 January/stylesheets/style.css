@@ -1,0 +1,218 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+
+}
+
+/*-- header starts --*/
+
+header {
+    padding: 20px 10px;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 3;
+}
+header nav, header nav li,header nav aside {
+    display: inline-block;
+}
+header nav li a {
+    padding: 15px 10px;
+    text-decoration: none;
+    background-color: indianred;
+}
+header nav li a:hover {
+    text-decoration: underline;
+    background: red;
+    background-color: grey;
+    background-size: 100px;
+}
+
+
+header nav {
+    float: right;
+}
+
+/*-- header ends --*/
+
+/*--- main start --*/
+.clear {
+    clear: both;
+}
+main {
+    background: lightgreen;
+}
+
+aside {
+    width: 20%;
+    background: red;
+    float: left;
+}
+
+aside ul li {
+    list-style: none;
+    
+}
+
+aside li a {
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+}
+
+aside li a:hover {
+    background: yellowgreen;
+    text-decoration: underline;
+    background-size: 100px;
+    background-color: grey;
+}
+
+section {
+    width: 80%;
+    background: lightseagreen;
+    float: right;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.redColor h3{
+    text-align: left;
+}
+.redColor form{
+    text-align: right;
+}
+
+article p {
+    padding: 15px;
+    border: 1px solid green;
+}
+
+article h3 {
+    font-size: 20px;
+}
+
+article h3 strong {
+    font-size: 34px;
+}
+
+.buttonStyle{
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 7px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.B1{
+    background-color: violet;
+}
+.B2{
+    background-color: tomato;
+}
+
+.B1{
+    float: left;
+}
+
+.B2{
+    float: right;
+}
+
+input[type="Submit"] {
+    background: green;
+    
+}
+
+.fRight {
+    float: right;
+}
+
+article p strong {
+    font-weight: normal;
+    font-style: bold;
+}
+
+article.greenColor p strong {
+    font-style: normal;
+}
+
+.popup {
+    vertical-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: lightblue;
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+    position: fixed;
+    overflow-y: scroll;
+    display: none;
+    
+}
+
+footer span{
+    float:left;
+}
+footer ul{
+    float:right;
+    list-style: none;
+}
+
+
+/*-- footer ends --*/
+
+
+
+.popup form > div {
+    margin-bottom: 10px;
+}
+
+.textArea{
+    resize: vertical;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+    height: 70px;
+}
+.popup input[type="text"] {
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+
+.table {
+    background:skyblue;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: darkblue;
+}
+
+td, th {
+    border: 2px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color:lightgreen;
+}
+tr:nth-child(odd){
+    background-color: slateblue;
+}
+.table h3 {
+    padding: 20px 10px;
+    text-align: center;
+}
+

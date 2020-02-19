@@ -1,0 +1,35 @@
+<div id="body-left">
+  <table class="table">
+    <!-- <caption>List of users</caption> -->
+    <!-- <thead>
+      <tr>
+        <th scope="col">Serial Number</th>
+        <th scope="col">BookName </th>
+        <th scope="col">AuthorName</th>
+        <th scope="col">Price</th>
+        <th scope="col">ISBN Number</th>        
+        <th scope="col"> Stars  </th>
+      </tr>
+    </thead> -->
+    <tbody>
+      <div>
+        <tr *ngFor="let book of books">
+          <th scope="row">{{ book.serial_Number }}</th>
+          <td>{{ book.book_Name | titlecase }}</td>
+          <td>{{ book.author_Name | uppercase }}</td>
+          <td>{{ book.price }}</td>
+          <td>{{ book.ISBN_Number }}</td>
+
+          <td>
+            <span
+              *ngFor="let i of createRange(5 - book.stars)"
+              class="fa fa-star checked"
+            ></span>
+
+            <!-- <span *ngFor='let i of createRange(5-book.stars)' class="fa fa-star"></span> -->
+          </td>
+        </tr>
+      </div>
+    </tbody>
+  </table>
+</div>
