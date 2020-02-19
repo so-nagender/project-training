@@ -1,0 +1,12 @@
+.moviesDetailsMargin2{
+    margin-top: 110px;
+}
+.imageShadow{
+    box-shadow: 10px 10px 5px #ccc;
+}
+.inputLength{
+    max-width: 200px;
+}
+.downloadButtonSpace{
+    margin-right: 16px;
+}

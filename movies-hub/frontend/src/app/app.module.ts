@@ -12,6 +12,8 @@ import { Confirmpasswordvalidator } from '../../src/app/match'
 import { SignupComponent } from './signup/signup.component';
 import { DetailsComponent } from './details/details.component';
 import { ListComponent } from './list/list.component';
+import { EditmovieComponent } from './editmovie/editmovie.component';
+import { AddmovieComponent } from './addmovie/addmovie.component';
 import { HttpClientModule } from '@angular/common/http';
 import { from } from 'rxjs';
 
@@ -19,7 +21,9 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: '', component: DefaultComponent },
   { path: 'signup', component: SignupComponent},
-  { path: 'details', component: DetailsComponent}
+  { path: 'details', component: DetailsComponent},
+  { path: 'edit', component: EditmovieComponent},
+  { path: 'add', component: AddmovieComponent }
 ];
 @NgModule({
   declarations: [
@@ -31,6 +35,8 @@ const appRoutes: Routes = [
     SignupComponent,
     DetailsComponent,
     ListComponent,
+    EditmovieComponent,
+    AddmovieComponent,
     Confirmpasswordvalidator
   ],
   imports: [

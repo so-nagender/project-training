@@ -12,3 +12,14 @@
     height: 40px;
     width: 40px;
 }
+.xOverflow{
+    overflow-x: hidden;
+}
+.imageShadow{
+    box-shadow: 10px 10px 5px #ccc;
+}
+.img {
+    width: 50px;
+    height: 50px;
+    border:2px solid #fff;    
+}
