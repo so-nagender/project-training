@@ -1,0 +1,14 @@
+.moviesDetailsMargin{
+    margin-top: 110px;
+}
+.moviesDetailsContentGap{
+    margin-top: 20px;
+}
+.downloadButtonSpace{
+    margin-right: 16px;
+}
+.moviesDetailsLogoSize{
+    white-space: space pre;
+    height: 40px;
+    width: 40px;
+}
