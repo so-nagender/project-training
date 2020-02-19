@@ -6,13 +6,16 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { DefaultComponent } from './default/default.component'
 import { FooterComponent } from './footer/footer.component'
-import { from } from 'rxjs';
+// import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Confirmpasswordvalidator } from '../../src/app/match'
 import { SignupComponent } from './signup/signup.component';
 import { DetailsComponent } from './details/details.component';
 import { ListComponent } from './list/list.component';
 import { EditmovieComponent } from './editmovie/editmovie.component';
 import { AddmovieComponent } from './addmovie/addmovie.component';
-import { FormsModule }   from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { from } from 'rxjs';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -33,10 +36,13 @@ const appRoutes: Routes = [
     DetailsComponent,
     ListComponent,
     EditmovieComponent,
-    AddmovieComponent
+    AddmovieComponent,
+    Confirmpasswordvalidator
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     FormsModule,
     RouterModule.forRoot(
       appRoutes,
