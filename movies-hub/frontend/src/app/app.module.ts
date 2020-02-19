@@ -6,10 +6,13 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { DefaultComponent } from './default/default.component'
 import { FooterComponent } from './footer/footer.component'
-import { from } from 'rxjs';
+// import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Confirmpasswordvalidator } from './match'
 import { SignupComponent } from './signup/signup.component';
 import { DetailsComponent } from './details/details.component';
 import { ListComponent } from './list/list.component';
+import { from } from 'rxjs';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -26,10 +29,13 @@ const appRoutes: Routes = [
     FooterComponent,
     SignupComponent,
     DetailsComponent,
-    ListComponent
+    ListComponent,
+    Confirmpasswordvalidator
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot(
       appRoutes,
     )
