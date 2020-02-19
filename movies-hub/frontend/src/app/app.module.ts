@@ -10,6 +10,7 @@ import { from } from 'rxjs';
 import { SignupComponent } from './signup/signup.component';
 import { DetailsComponent } from './details/details.component';
 import { ListComponent } from './list/list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
     )
