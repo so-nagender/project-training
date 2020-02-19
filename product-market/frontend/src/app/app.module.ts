@@ -19,6 +19,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { Main2Component } from './main2/main2.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     LoginComponent,
     SignUpComponent,
     HeaderComponent,
+    Main2Component,
 
 
   ],
