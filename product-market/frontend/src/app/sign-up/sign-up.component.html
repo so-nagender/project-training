@@ -1,18 +1,10 @@
-<div class="container pt-4 pr-5 pl-5 pb-2">
+<div class="container pt-4 pr-5 pl-5 pb-5">
     <button type="button" class="close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
     <h1><strong style="font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">SIGN-UP</strong></h1>
     <p><u>or</u> <strong style="color: #f88288"> Create a new account</strong></p>
-    <form [formGroup]="signupform">
-        <div class="form-group">
-            <label for="inputName" style="padding-top: 3px;">Full-Name</label>
-            <input type="text" formControlName="fullname" class="form-control" id="inputName" placeholder="Full-Name"
-                [ngClass]="{ 'is-invalid':f.fullname.errors }" />
-            <div *ngIf="f.fullname.errors" class="invalid-feedback">
-                <div *ngIf="f.fullname.errors.required">*Full-Name is required</div>
-            </div>
-        </div>
+    <form [formGroup]="signupform" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="exampleInputEmail1" style="padding-top: 3px;">Username</label>
             <input type="text" formControlName="username" class="form-control" aria-describedby="emailHelp"
