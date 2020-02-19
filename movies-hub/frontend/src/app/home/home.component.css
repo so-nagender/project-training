@@ -1,0 +1,13 @@
+.text--bold {
+    font-size: 20px;
+    font-weight: 500;
+}
+.palewhite {
+    color: black;
+}
+a {
+    text-decoration: none;
+}
+.gradient {
+    background: linear-gradient(black,rgb(58, 58, 58));
+}

@@ -1,0 +1,71 @@
+.body-img{
+    background:  linear-gradient(hsla(0, 2%, 10%, 0.493), rgba(14, 13, 13, 0.8), transparent), url("../../assets/img/background-image.jpg") no-repeat center; 
+}
+.navbar-brand {
+    display: inline-block;
+    font-size: 1.25rem;
+    white-space: nowrap; 
+    color: #fcf7f7;
+    font-weight: 900;
+    font-size: 26px;
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1;
+}
+.navbar-brand1 {
+    font-size: 1.2rem; 
+    color: #fcf7f7;
+    font-weight: 600;
+    font-size: 26px;
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1;
+}
+.navbar-brand:hover, .navbar-brand:focus {
+    text-decoration: none;
+    box-sizing: border-box;
+    border: 1.5px solid #9e9d9d;
+    border-radius: 3px;
+}
+.navbar-brand i {
+    font-style: normal;
+    color: rgb(180, 66, 66); 
+}
+.navbar-brand i:hover{
+    color:#ee8267;
+}
+.color a{
+    color: rgb(180, 66, 66); 
+}
+.color a:hover{
+    color:#ee8267;
+    box-sizing: border-box;
+    border: 1.5px solid #9e9d9d;
+    border-radius: 3px;
+}
+.logo-font{
+    font-weight: 800;
+}
+.content-color{
+    color: rgba(206, 204, 204, 0.801);
+}
+.bolder{
+    color: rgba(177, 177, 177, 0.712);
+    font-size: 7rem;
+    font-weight: 900;
+}
+.spacing-around{
+    padding: 200px 0px;
+}
+input[type="text"], input[type="password"] {
+    background-color:rgba(0, 0, 0, 0);
+    color:white;
+    border: 1px solid rgb(192, 190, 190);
+    outline:none;
+    transition:height 1s;
+    -webkit-transition:height 1s;
+}
+label {
+    color: aliceblue;
+}
+.signup-style {
+    margin-top: 10%;
+}
