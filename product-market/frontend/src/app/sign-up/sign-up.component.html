@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container pt-4 pr-5 pl-5 pb-2">
     <button type="button" class="close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -6,7 +6,7 @@
     <p><u>or</u> <strong style="color: #f88288"> Create a new account</strong></p>
     <form [formGroup]="signupform">
         <div class="form-group">
-            <label for="inputName" style="padding-top: 15px;">Full-Name</label>
+            <label for="inputName" style="padding-top: 3px;">Full-Name</label>
             <input type="text" formControlName="fullname" class="form-control" id="inputName" placeholder="Full-Name"
                 [ngClass]="{ 'is-invalid':f.fullname.errors }" />
             <div *ngIf="f.fullname.errors" class="invalid-feedback">
@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1" style="padding-top: 15px;">Username</label>
+            <label for="exampleInputEmail1" style="padding-top: 3px;">Username</label>
             <input type="text" formControlName="username" class="form-control" aria-describedby="emailHelp"
                 placeholder="mobile no. or email" [ngClass]="{ 'is-invalid':f.username.errors }" />
             <div *ngIf="f.username.errors" class="invalid-feedback">
@@ -24,7 +24,7 @@
             </small>
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1" style="padding-top: 15px;">Password</label>
+            <label for="exampleInputPassword1" style="padding-top: 3px;">Password</label>
             <input type="password" formControlName="password" class="form-control" placeholder="password"
                 [ngClass]="{ 'is-invalid':f.password.errors }" />
             <div *ngIf="f.password.errors" class="invalid-feedback">

@@ -1,14 +1,14 @@
-.form-control
+/* .form-control
 {
     width: 60%;
     padding: 20px;
 
-}
-.container
+} */
+/* .container
 {
     margin-top: 100px;
 
-}
+} */
 
 .btn
 {
@@ -16,6 +16,6 @@ border-radius: 0px;
 color: white;
 background-color: black;
 font-weight: 400;
-padding: 10px 15px;
+padding: 5px 15px;
 margin-top: 25px;
 }
