@@ -1,4 +1,4 @@
-interface Book {
+ interface Book {
   serial_Number: number;
   book_Name: string;
   author_Name: string;
