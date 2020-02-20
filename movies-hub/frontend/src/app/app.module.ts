@@ -17,13 +17,20 @@ import { AddmovieComponent } from './addmovie/addmovie.component';
 import { HttpClientModule } from '@angular/common/http';
 import { from } from 'rxjs';
 
+
+
+
+
+
+
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: '', component: DefaultComponent },
   { path: 'signup', component: SignupComponent},
   { path: 'details', component: DetailsComponent},
   { path: 'edit', component: EditmovieComponent},
-  { path: 'add', component: AddmovieComponent }
+  { path: 'add', component: AddmovieComponent },
+  { path: 'list', component: ListComponent }
 ];
 @NgModule({
   declarations: [
@@ -43,7 +50,9 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
+            
     FormsModule,
+    
     RouterModule.forRoot(
       appRoutes,
     ),
