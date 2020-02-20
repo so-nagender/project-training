@@ -9,7 +9,7 @@
         </a>
         <ul class="nav justify-content-end color">
           <li class="nav-item">
-            <a class="nav-link active"  routerLink="/home">Home</a>
+            <a class="nav-link active" routerLink="/home">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/signup">Sign Up</a>
@@ -53,19 +53,27 @@
     <div class="spacing-around content-color">
       <div class="row">
         <div class="col-4">
-          <form class="signin-form">
+          <form [formGroup]="checkoutForm" (ngSubmit)="onLogin()" class="signin-form">
             <div class="form-group">
               <label for="exampleInputEmail1">Email Address / User</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Or User">
+              <input type="text" name="email" id="e1" formControlName="email" required placeholder="Email"
+                class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">required</div>
+              </div>
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              <input type="password" name="password" id="e2" formControlName="password" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="Password">
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">required</div>
+              </div>
             </div>
+            <button type="submit" class="btn btn-danger mt-4">Log In</button>
           </form>
-          <button type="submit" class="btn btn-danger mt-4">Log In</button>
           <div class="signup-style">
-           <label>New To Movie$-Hub</label> <a  routerLink="/signup" class="color">Sign Up </a>
+            <label>New To Movie$-Hub</label> <a routerLink="/signup" class="color">Sign Up </a>
           </div>
         </div>
         <div class="col-8">
@@ -73,8 +81,10 @@
             <h4> Hello Welcome to</h4>
             <h1 class="display-1 bolder"> Movie$-Hub </h1>
             <h6>
-              <br> <i> Movie Hub allows you to manage your Movie Collection. You can search for Movies and TV-Shows online and add them to your collection. 
-                You can view your collection and watch trailers, images and different facts for every Movie or TV-Show.</i>
+              <br> <i> Movie Hub allows you to manage your Movie Collection. You can search for Movies and TV-Shows
+                online and add them to your collection.
+                You can view your collection and watch trailers, images and different facts for every Movie or
+                TV-Show.</i>
             </h6>
           </div>
         </div>
@@ -83,4 +93,3 @@
   </div>
 </div>
 <app-footer></app-footer>
-

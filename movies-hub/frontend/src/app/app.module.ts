@@ -16,6 +16,9 @@ import { EditmovieComponent } from './editmovie/editmovie.component';
 import { AddmovieComponent } from './addmovie/addmovie.component';
 import { HttpClientModule } from '@angular/common/http';
 import { from } from 'rxjs';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { Interceptor } from '../app/interceptor';
+import { DataResolverService } from './data-resolver.service';
 
 
 
@@ -24,7 +27,12 @@ import { from } from 'rxjs';
 
 
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: 'home', 
+    component: HomeComponent,
+    resolve: {
+      hero: DataResolverService
+    }
+   },
   { path: '', component: DefaultComponent },
   { path: 'signup', component: SignupComponent},
   { path: 'details', component: DetailsComponent},
@@ -57,7 +65,11 @@ const appRoutes: Routes = [
       appRoutes,
     ),
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: Interceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
