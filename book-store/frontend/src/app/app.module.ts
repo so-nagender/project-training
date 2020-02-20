@@ -9,6 +9,10 @@ import { FormsModule } from '@angular/forms'
 import { SignupComponent } from './signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms'
 import { LoginComponent } from './login/login.component';
+import { ContactListComponent } from './contact-list/contact-list.component';
+import { FilterPipe } from '../filter.pipe';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,10 +20,16 @@ import { LoginComponent } from './login/login.component';
     HeaderComponent,
     CategoriesComponent,
     SignupComponent,
+    LoginComponent,
+    ContactListComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
