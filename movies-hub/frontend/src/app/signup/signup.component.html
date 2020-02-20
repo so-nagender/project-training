@@ -1,7 +1,7 @@
 <div>
   <app-header></app-header>
 </div>
-<form [formGroup]="checkoutForm" >
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
   <div>
     <img src="../../assets/img/clapperboard.svg" width="150px" style="margin-top: -100px;">
     <h2 class="title">Jump on board</h2>
@@ -14,7 +14,7 @@
         <div class="line"></div>
       </div>
       <div class="invalid-feedback">
-        <h5 style="font-size: small;"><strong >Name is a required field</strong></h5>
+        <h5 style="font-size: small;"><strong>Name is a required field</strong></h5>
       </div>
     </div>
   </label>
@@ -26,42 +26,40 @@
       <div class="line"></div>
     </div>
     <div class="invalid-feedback">
-      <h5 style="font-size: small;"><strong >Email is a required field</strong></h5>
+      <h5 style="font-size: small;"><strong>Email is a required field</strong></h5>
     </div>
   </div>
   </label>
   <label>
-    <div class="form-group" >
-      <input type="password" required class="input" formControlName= "password" [ngClass]= "{'is-invalid': checkoutForm.get('password').touched && checkoutForm.get('password').invalid}">
-      <p class="label-txt">Password</p>
-      <div class="line-box">
-      <div class="line"></div>
+    <input type="password" name="password" id="e1" formControlName="password" required class="input"
+      [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+    <p class="label-txt">Password</p>
+    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+      <div *ngIf="f.password.errors.required">required</div>
     </div>
-    <div class="invalid-feedback">
-      <h5 style="font-size: small;"><strong >Password is a required field</strong></h5>
-    </div>
-  </div>
-  </label>
-  <label>
-    <div class="form-group" >
-      <input type="password" required class="input" appMatch= "password" formControlName= "retypepassword" [ngClass]= "{'is-invalid': checkoutForm.get('retypepassword').touched && checkoutForm.get('retypepassword').invalid}">
-      <p class="label-txt">Retype Password</p>
     <div class="line-box">
       <div class="line"></div>
     </div>
-    <div *ngIf= "checkoutForm.get('retypepassword').touched && checkoutForm.get('retypepassword').invalid" class="invalid-feedback" >
-      <h5 *ngIf= "checkoutForm.get('retypepassword').errors.required" style="font-size: small;"><strong >Retype password is a required field</strong></h5>
-    </div>
-    <div *ngIf= "checkoutForm.get('retypepassword').touched" class= "invalid-feedback">
-      <h5 *ngIf= "checkoutForm.get('retypepassword').errors.notEqual && !checkoutForm.get('retypepassword').errors.required" style="font-size: small;"> 
-        <strong>Passwords do not match</strong>
-      </h5>
+    <div class="invalid-feedback">
+      <h5 style="font-size: small;"><strong>Password is a required field</strong></h5>
     </div>
   </div>
+  </label>
+  <label>
+    <input type="password" name="retypepassword" id="e2" formControlName="retypepassword" required class="input"
+      [ngClass]="{ 'is-invalid': submitted && f.retypepassword.errors }" />
+    <p class="label-txt">Retype Password</p>
+      <div *ngIf="submitted && f.retypepassword.errors" class="invalid-feedback">
+        <div *ngIf="f.retypepassword.errors.required">Confirm Email is required</div>
+        <div *ngIf="f.retypepassword.errors.MustMatch">Email must match</div>
+      </div>
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
   </label>
   <button type="submit">Sign up</button>
   <p class="center super mt-3">
     "Already have an account?"
-    <a href="">Sign in here</a> 
+    <a href="">Sign in here</a>
   </p>
 </form>
