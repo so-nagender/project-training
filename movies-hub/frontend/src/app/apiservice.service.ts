@@ -13,6 +13,9 @@ export class ApiserviceService {
     return this.http.get('api/movies')
   }
   siginUp(): Observable<any> {
-    return this.http.get('/api/posts');
+    return this.http.get<any>('/api/posts');
+  }
+  signupData(obj):Observable<any> {
+    return this.http.post<any>('/api/signup',obj);
   }
 }

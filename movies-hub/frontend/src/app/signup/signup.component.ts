@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
-import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { ApiserviceService } from '../apiservice.service';
+import { ActivatedRoute } from '@angular/router';
+import { MustMatch } from '../match';
 
 @Component({
   selector: 'app-signup',
@@ -9,15 +11,39 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 })
 export class SignupComponent implements OnInit {
   checkoutForm: FormGroup;
-  constructor( private formBuilder: FormBuilder) { 
+  email: any;
+  password: any;
+  submitted: boolean = false;
+  constructor( private formBuilder: FormBuilder, private myservice: ApiserviceService, private activatedRoute: ActivatedRoute) { 
     this.checkoutForm = this.formBuilder.group({
       Name: new FormControl ('', Validators.required),
       email: new FormControl ('', [Validators.required, Validators.email]),
       password: new FormControl ('', Validators.required),
       retypepassword: new FormControl ('', Validators.required)
-  });
+  },
+  {
+    validator: MustMatch('password', 'retypepassword') // Custmize Validator
+  }
+  );
 }
 
   ngOnInit() {
   }
+  get f() {
+    return this.checkoutForm.controls;
+  }
+onSubmit() {
+  this.submitted = true;
+  const name = this.checkoutForm.controls.Name.value;
+  const email = this.checkoutForm.controls.email.value;
+  const password = this.checkoutForm.controls.password.value;
+  const obj = { "name": email, "password": password }
+  if (this.checkoutForm.invalid) {
+    alert('Fields is/are empty');
+    return;
+  } else {
+    // if Form is valid then it will post the data into the JSON server...
+    this.myservice.signupData(obj).subscribe(res =>{console.log(res);localStorage.setItem("accessToken", res.accessToken);});
+  }
+}
 }
