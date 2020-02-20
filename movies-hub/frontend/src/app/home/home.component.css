@@ -11,3 +11,13 @@ a {
 .gradient {
     background: linear-gradient(black,rgb(58, 58, 58));
 }
+.card-img-top{
+    height: auto;
+    max-height: 500px;
+    width: auto;
+    max-width: 240px;
+  }
+.card{
+    width: 500px;
+    height: 540px;
+}
