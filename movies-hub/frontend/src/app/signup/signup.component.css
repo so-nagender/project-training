@@ -2,15 +2,20 @@
 /* body {
     background: #C5E1A5;
   } */
+  .form-group{
+    position: relative;
+    display: block;
+    margin: 20px 0
+  }
   form {
     width: 60%;
     margin: 60px auto;
-    /* background: #efefef; */
+    /* background: #efefef;  */
     padding: 60px 120px 80px 120px;
-    text-align: center;
-    /* -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
-    box-shadow: 2px 2px 3px rgba(0,0,0,0.1); */
-  }
+    text-align: center; 
+    /* -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1); */
+    /* box-shadow: 2px 2px 3px rgba(0,0,0,0.1); */
+   }
   label {
     display: block;
     position: relative;
@@ -92,4 +97,22 @@
   color: #333;
   font-size: 16px;
   line-height: 22px;
+}
+.form-group .label-txt{
+  position: absolute;
+  left: 0px;
+  top: 8px;
+  transition: all ease 0.2s;
+  -webkit-transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s ;
+  font-size: 14px;
+}
+.input:focus + .label-txt{
+  top: -20px;
+  font-size: 12px;
+  color: rgb(180, 66, 66); ;
+}
+.input:valid + .label-txt{
+  top: -20px;
+  font-size: 12px;
 }
