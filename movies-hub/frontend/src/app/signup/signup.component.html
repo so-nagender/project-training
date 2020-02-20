@@ -8,8 +8,8 @@
   </div>
   <label>
     <div class="form-group" >
+      <input type= "text" required class= "input" formControlName= "Name" [ngClass]= "{'is-invalid': checkoutForm.get('Name').touched && checkoutForm.get('Name').invalid}">
       <p class="label-txt">Name</p>
-      <input type= "text" class= "input" formControlName= "Name" [ngClass]= "{'is-invalid': checkoutForm.get('Name').touched && checkoutForm.get('Name').invalid}">
       <div class="line-box">
         <div class="line"></div>
       </div>
@@ -19,28 +19,33 @@
     </div>
   </label>
   <label>
+    <div class="form-group" >
+    <input type="text" required class="input" formControlName= "email" [ngClass]= "{'is-invalid': checkoutForm.get('email').touched && checkoutForm.get('email').invalid}">
     <p class="label-txt">Email Address</p>
-    <input type="text" class="input" formControlName= "email" [ngClass]= "{'is-invalid': checkoutForm.get('email').touched && checkoutForm.get('email').invalid}">
     <div class="line-box">
       <div class="line"></div>
     </div>
     <div class="invalid-feedback">
       <h5 style="font-size: small;"><strong >Email is a required field</strong></h5>
     </div>
+  </div>
   </label>
   <label>
-    <p class="label-txt">Password</p>
-    <input type="password" class="input" formControlName= "password" [ngClass]= "{'is-invalid': checkoutForm.get('password').touched && checkoutForm.get('password').invalid}">
-    <div class="line-box">
+    <div class="form-group" >
+      <input type="password" required class="input" formControlName= "password" [ngClass]= "{'is-invalid': checkoutForm.get('password').touched && checkoutForm.get('password').invalid}">
+      <p class="label-txt">Password</p>
+      <div class="line-box">
       <div class="line"></div>
     </div>
     <div class="invalid-feedback">
       <h5 style="font-size: small;"><strong >Password is a required field</strong></h5>
     </div>
+  </div>
   </label>
   <label>
-    <p class="label-txt">Retype Password</p>
-    <input type="password" class="input" appMatch= "password" formControlName= "retypepassword" [ngClass]= "{'is-invalid': checkoutForm.get('retypepassword').touched && checkoutForm.get('retypepassword').invalid}">
+    <div class="form-group" >
+      <input type="password" required class="input" appMatch= "password" formControlName= "retypepassword" [ngClass]= "{'is-invalid': checkoutForm.get('retypepassword').touched && checkoutForm.get('retypepassword').invalid}">
+      <p class="label-txt">Retype Password</p>
     <div class="line-box">
       <div class="line"></div>
     </div>
@@ -52,6 +57,7 @@
         <strong>Passwords do not match</strong>
       </h5>
     </div>
+  </div>
   </label>
   <button type="submit">Sign up</button>
   <p class="center super mt-3">
