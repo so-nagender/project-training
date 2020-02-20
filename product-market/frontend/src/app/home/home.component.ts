@@ -10,10 +10,6 @@ export class HomeComponent implements OnInit {
 
   constructor(private serve : ProductcatchService) { }
 
-  ngOnInit() {
-    this.serve.getData().subscribe(res => {
-      console.log(res)
-    });
-  }
+  ngOnInit() {}
 
 }

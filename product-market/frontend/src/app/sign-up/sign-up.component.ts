@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import {ProductcatchService} from '../productcatch.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -11,22 +12,28 @@ import {ProductcatchService} from '../productcatch.service'
 export class SignUpComponent implements OnInit {
   signupform: FormGroup;
 
-  constructor(private fb:FormBuilder,private serve : ProductcatchService) { }
+  constructor(private fb:FormBuilder,private serve : ProductcatchService,private router: Router,) { }
   get f() { return this.signupform.controls; }
 
   ngOnInit() {
     this.signupform = this.fb.group({
-        fullname: ['', [Validators.required]],
         username: ['', [Validators.required, Validators.email]],
         password: ['', [Validators.required, Validators.minLength(8)]]
     });
 }
 
 onSubmit(){
-  const username = this.signupform.controls.username.value
-  const pasword = this.signupform.controls.password.value
-  const obj = { "name": username,"password": pasword};
-  this.serve.signUp(obj).subscribe(res =>{localStorage.setItem("accessToken",res.accessToken);});
-  
+  if (this.signupform.invalid) {
+    console.log('here are')
+    return;
+  }
+  else{
+    console.log('here')
+    const username = this.signupform.controls.username.value
+    const pasword = this.signupform.controls.password.value
+    const obj = { "name": username,"password": pasword};
+    this.serve.signUp(obj).subscribe(res =>{localStorage.setItem("accessToken",res.accessToken);});
+    this.router.navigate(['/categories']); 
+  } 
 }
 }

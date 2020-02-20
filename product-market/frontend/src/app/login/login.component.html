@@ -4,7 +4,7 @@
     </button>
     <h1><strong style="font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">LOGIN</strong></h1>
     <p><u>or</u> <strong style="color: #f88288;"> already have an account</strong></p>
-    <form [formGroup]="loginform">
+    <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
 
         <div class="form-group">
             <label for="exampleInputEmail1" style="padding-top: 3px;">Username</label>

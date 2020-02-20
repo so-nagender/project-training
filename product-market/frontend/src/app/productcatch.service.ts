@@ -18,4 +18,8 @@ export class ProductcatchService {
     return this.http.post<any>('/api/signup', obj);
   }
 
+  logIn(obj): Observable<any> {
+    return this.http.post<any>('/api/login', obj);
+  }
+
 }

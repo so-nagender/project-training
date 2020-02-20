@@ -13,9 +13,11 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Main2Component } from './main2/main2.component';
 import { Sidebar2Component } from './sidebar2/sidebar2.component';
+import { CategoryComponent } from './category/category.component';
+import {TokenInterceptor} from './interceptor'
 
 const routes: Routes = [
   { path: "home",
@@ -26,14 +28,29 @@ const routes: Routes = [
         component: SidebarComponent,
       },
       {
-      path: "signup",
-      component: SignUpComponent,
+        path: "signup",
+        component: SignUpComponent,
       },
       {
         path :"signin",
         component : LoginComponent
       }] },
-  
+    {
+      path: "categories",
+      component :CategoryComponent,
+      children : [
+        {
+          path: "",
+          component: SidebarComponent,
+        },
+        {
+        path: "signup",
+        component: SignUpComponent,
+        },
+        {
+          path :"signin",
+          component : LoginComponent
+        }] }, 
 ];
 
 @NgModule({
@@ -48,6 +65,7 @@ const routes: Routes = [
     HeaderComponent,
     Main2Component,
     Sidebar2Component,
+    CategoryComponent,
 
 
   ],
@@ -59,7 +77,13 @@ const routes: Routes = [
     FormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
