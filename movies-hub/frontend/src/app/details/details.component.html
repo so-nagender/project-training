@@ -5,11 +5,13 @@
 <div class="row moviesDetailsMargin">
     <div class="col-2">            
     </div>
-    <div class="col-2 imageShadow">
-        <img src="../../assets/img/frozen.jpg" class="img-fluid" alt="Responsive image">            
+    <div class="container col-2 imageShadow">         
+        <img src="../../assets/img/frozen.jpg" class="img-fluid image" alt="Responsive" style="width:100%" >
+        <div class="middle">
+           <button class="btn btn-danger" routerLink='/add'>View Details</button>
+        </div>        
     </div>
-    <div class="col-1">
-
+    <div class="col-1">        
     </div>        
     <div class="col-5">
         <h3>Frozen II</h3>
@@ -20,13 +22,17 @@
         <button class="downloadButtonSpace">1080p.bluray</button>
         <button>720.bluray</button>
         <div>
-        <img src="../../assets/img/heart.svg" class="img-fluid moviesDetailsLogoSize moviesDetailsContentGap" alt="Responsive image">
+            <button>
+                 <img src="../../assets/img/heart.svg" class="img-fluid moviesDetailsLogoSizeLike moviesDetailsContentGap" alt="Responsive image">
+            </button>
+        </div>
         <div>
         <img src="../../assets/img/imdb.svg" class="img-fluid moviesDetailsLogoSize" alt="Responsive image">
         </div>
-        </div>
+        
     </div>
-    <div class="col-2">            
+    <div class="col-2">  
+        <button routerLink='/add' class="btn btn-danger">Add Movie</button>          
     </div>
     <div class='clearfix'></div>
 </div>
@@ -51,7 +57,7 @@
     </div>
     <div class='clearfix'></div>
 </div>
-<button routerLink='/add'>Add Movie</button>
+
 <div>
     <app-footer></app-footer>
 </div>
