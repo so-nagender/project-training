@@ -19,6 +19,8 @@ import { Sidebar2Component } from './sidebar2/sidebar2.component';
 import { CategoryComponent } from './category/category.component';
 import {TokenInterceptor} from './interceptor'
 import { ResolverService } from './resolver.service';
+import { AddformComponent } from './addform/addform.component';
+import { ListComponent } from './list/list.component'
 
 const routes: Routes = [
   { path: "home",
@@ -68,6 +70,8 @@ const routes: Routes = [
     Main2Component,
     Sidebar2Component,
     CategoryComponent,
+    AddformComponent,
+    ListComponent,
 
 
   ],
