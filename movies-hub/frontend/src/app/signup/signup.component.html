@@ -31,6 +31,7 @@
   </div>
   </label>
   <label>
+    <div class="form-group" >
     <input type="password" name="password" id="e1" formControlName="password" required class="input"
       [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
     <p class="label-txt">Password</p>
@@ -44,8 +45,10 @@
       <h5 style="font-size: small;"><strong>Password is a required field</strong></h5>
     </div>
   </div>
+
   </label>
   <label>
+    <div class="form-group" >
     <input type="password" name="retypepassword" id="e2" formControlName="retypepassword" required class="input"
       [ngClass]="{ 'is-invalid': submitted && f.retypepassword.errors }" />
     <p class="label-txt">Retype Password</p>
@@ -56,6 +59,7 @@
     <div class="line-box">
       <div class="line"></div>
     </div>
+  </div>
   </label>
   <button type="submit">Sign up</button>
   <p class="center super mt-3">
