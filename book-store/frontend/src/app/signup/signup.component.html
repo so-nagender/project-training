@@ -1,14 +1,6 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h4 style="text-align: center;">SIGN UP FORM</h4>
-    <form name="form" [formGroup]="form" class="container">
+<div class="container padding_top">
+    <h1 class= " text-center">Sign Up</h1>
+    <form name="form" [formGroup]="form"  (ngSubmit)="onSubmit(form)" >
         <div class="row">
           <div class="col">
             <input type="text" class="form-control" formControlName="fname" [ngClass]="{'is-invalid': form.get('fname').touched && form.get('fname').invalid}" placeholder="First name">
@@ -77,7 +69,8 @@
                 </div>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Sign Up</button>
+          <button type="submit" class="btn btn-sign-up" style="margin-top: 10px;">Sign Up</button>
+          <a class="signin-position" routerLink="/login" routerLinkActive="active">Already a member?|Sign in Here</a>
     </form>
-  </body>
-</html>
+
+</div>
