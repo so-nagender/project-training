@@ -22,9 +22,8 @@ text-align: center;
  .card
 {
     border:solid black 2px;
-    margin-left: 25PX;
     margin-bottom: 15px;
-   width:80%;
+    width:170px;
 } 
  .card-title
 {

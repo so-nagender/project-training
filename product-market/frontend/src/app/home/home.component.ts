@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductcatchService} from '../productcatch.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,10 @@ import { ProductcatchService} from '../productcatch.service'
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private serve : ProductcatchService) { }
+  constructor(private serve : ProductcatchService,private router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    if(localStorage.getItem("accessToken")){this.router.navigate(['/categories']);}
+  }
 
 }

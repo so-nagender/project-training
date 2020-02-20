@@ -24,16 +24,17 @@ export class SignUpComponent implements OnInit {
 
 onSubmit(){
   if (this.signupform.invalid) {
-    console.log('here are')
     return;
   }
   else{
-    console.log('here')
     const username = this.signupform.controls.username.value
     const pasword = this.signupform.controls.password.value
     const obj = { "name": username,"password": pasword};
     this.serve.signUp(obj).subscribe(res =>{localStorage.setItem("accessToken",res.accessToken);});
     this.router.navigate(['/categories']); 
   } 
+}
+onClose(){
+  this.router.navigate(['/home']); 
 }
 }

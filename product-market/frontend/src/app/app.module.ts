@@ -18,6 +18,7 @@ import { Main2Component } from './main2/main2.component';
 import { Sidebar2Component } from './sidebar2/sidebar2.component';
 import { CategoryComponent } from './category/category.component';
 import {TokenInterceptor} from './interceptor'
+import { ResolverService } from './resolver.service';
 
 const routes: Routes = [
   { path: "home",
@@ -38,6 +39,7 @@ const routes: Routes = [
     {
       path: "categories",
       component :CategoryComponent,
+      resolve: { data: ResolverService },
       children : [
         {
           path: "",
