@@ -27,3 +27,20 @@ tr{
 .padding_left{
     margin-left: 10px;
 }
+.cat_name{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+div.submit{
+  right: 1px;
+  bottom: 1px;
+  position: absolute;
+}
+div.close{
+    right: 1px;
+    top: 1px;
+    position: absolute;
+}
+.form-row{
+    float: left;
+}
