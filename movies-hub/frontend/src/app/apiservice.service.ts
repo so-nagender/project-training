@@ -9,13 +9,12 @@ export class ApiserviceService {
 
   constructor(private http: HttpClient) { }
   getUsers(): Observable<any> {
-    console.log(this.http.get('/api/movies'));
     return this.http.get('api/movies')
-  }
-  siginUp(): Observable<any> {
-    return this.http.get<any>('/api/posts');
   }
   signupData(obj):Observable<any> {
     return this.http.post<any>('/api/signup',obj);
+  }
+  lognIn(obj) {
+    return this.http.post<any>('api/login',obj);
   }
 }
