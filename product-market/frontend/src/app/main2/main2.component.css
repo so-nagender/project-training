@@ -9,12 +9,37 @@ border-radius: 0px;
 color: white;
 background-color: black;
 font-weight: 600;
-padding: 12px ;
-margin-left: 25PX;
+padding: 6px ;
+
 font-size: 15px;
-}   
-.rounded-circle
+text-align: center;
+} 
+.images2
 {
- padding: 25px;
+  height: auto;
+  width:40%;
+}
+ .card
+{
+    border:solid black 2px;
+    margin-left: 25PX;
+    margin-bottom: 15px;
+   width:80%;
+} 
+ .card-title
+{
+    font-weight: 700;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+    font-size: 20px;
+    text-align: justify;
+}  
+.card-text
+{
+  font-weight: 300;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+  font-size: 12px;
+} 
+.rounded-0
+{
  width: auto;
 }
