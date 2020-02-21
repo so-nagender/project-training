@@ -21,12 +21,8 @@ text-align: center;
 }
  .card
 {
-<<<<<<< HEAD
-    border:solid black 2px;
-=======
     border:solid #f88288 2px;
     margin-left: 25PX;
->>>>>>> a707d42e186798821daf547cf5707e00ad37bc22
     margin-bottom: 15px;
     width:170px;
 } 
