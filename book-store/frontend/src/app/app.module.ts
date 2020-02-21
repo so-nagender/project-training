@@ -11,6 +11,11 @@ import { ReactiveFormsModule } from '@angular/forms'
 import { LoginComponent } from './login/login.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { FilterPipe } from '../filter.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactTableComponent } from './contact-table/contact-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -22,13 +27,18 @@ import { FilterPipe } from '../filter.pipe';
     SignupComponent,
     LoginComponent,
     ContactListComponent,
-    FilterPipe
+    FilterPipe,
+    ContactTableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
    
   ],
   providers: [],
