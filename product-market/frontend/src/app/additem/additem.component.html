@@ -2,30 +2,49 @@
     <button type="button" class="close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
-    <h1><strong style="font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">ADD CATEGORY</strong></h1>
+    <h1><strong style="font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">ADD ITEM</strong></h1>
     <p><u>or</u> <strong style="color: #f88288;">  Add your fav item  </strong></p>
     <form [formGroup]="itemform" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="exampleInputEmail1" style="padding-top: 3px;">Name of Item</label>
-            <input type="text" formControlName="item" class="form-control"  placeholder="Name of Item"
+            <input type="text" formControlName="item" class="form-control" placeholder="Name of  Item"  
                 [ngClass]="{ 'is-invalid':f.item.errors }" />
-            <div *ngIf="f.item.errors" class="invalid-feedback">
-                <div *ngIf="f.item.errors.required">*Item Name is required</div>
-            </div>
+                <div *ngIf="f.item.errors" class="invalid-feedback">
+                    <div *ngIf="f.item.errors.required">*Caterogy Name is required</div>
+                </div>
         </div>
-        <div class="form-group">
-            <label for="exampleInputEmail1" style="padding-top: 3px;">Requirement of Item</label>
-            <input type="text" formControlName="RItem" class="form-control" 
-                aria-describedby="emailHelp" placeholder=" Requirement of RItem"
-                [ngClass]="{ 'is-invalid':f.RItem.errors }" />
-            <div *ngIf="f.RItem.errors" class="invalid-feedback">
-                <div *ngIf="f.RItem.errors.required">*required</div>
+        <div class="form-group ">
+            <label for="inputState" style="padding-top: 3px;" >Choose Caterogy</label>
+            <select id="inputState" class="form-control"  formControlName="choose"  [ngClass]="{ 'is-invalid':f.choose.errors }" >
+              <option selected>GROCERY...</option >
+              <option>FEMALE</option>
+              <option>MALE</option>
+              <option>BABY</option>
+              <option>ELECTRONICS</option>
+              <option>OTHERS</option>
+            </select>
+            <div *ngIf="f.choose.errors" class="invalid-feedback">
+                <div *ngIf="f.choose.errors.required">*Caterogy Name is required</div>
             </div>
+          </div>
+        <div class="form-group">
+            <label for="inputState" style="padding-top: 3px;" >Ratings</label>
+            <select id="inputState" class="form-control"  formControlName="rating"  [ngClass]="{ 'is-invalid':f.rating.errors }" >
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <div *ngIf="f.rating.errors" class="invalid-feedback">
+                <div *ngIf="f.rating.errors.required">*Caterogy Name is required</div>
+            </div>
+            
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1" style="padding-top: 3px;">Description of Item</label>
             <input type="text" formControlName="Description" class="form-control" 
-                aria-describedby="emailHelp" style="padding:80px" 
+                aria-describedby="emailHelp" style="padding:40px;" 
                 [ngClass]="{ 'is-invalid':f.Description.errors }" />
             <div *ngIf="f.Description.errors" class="invalid-feedback">
                 <div *ngIf="f.Description.errors.required">*Description of item </div>
@@ -34,3 +53,4 @@
         <button type="submit" class="btn ">ADD ITEM</button>
     </form>
 </div>
+
