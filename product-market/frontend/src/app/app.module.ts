@@ -20,7 +20,8 @@ import { CategoryComponent } from './category/category.component';
 import {TokenInterceptor} from './interceptor'
 import { ResolverService } from './resolver.service';
 import { AddformComponent } from './addform/addform.component';
-import { ListComponent } from './list/list.component'
+import { ListComponent } from './list/list.component';
+import { AdditemComponent } from './additem/additem.component'
 
 const routes: Routes = [
   { path: "home",
@@ -68,6 +69,7 @@ const routes: Routes = [
     CategoryComponent,
     AddformComponent,
     ListComponent,
+    AdditemComponent,
 
 
   ],
