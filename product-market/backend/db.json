@@ -1,10 +1,6 @@
 {
   "product-category": [
     {
-      "id": 2,
-      "name": "groceries"
-    },
-    {
       "name": "fashion",
       "description": "Main consumer electronics products include radio receivers, television sets, MP3 players",
       "createdAt": 1582205272823,
@@ -12,39 +8,31 @@
       "id": 3
     },
     {
-      "name": "raju",
-      "description": "chutiye",
-      "createdAt": 1582205399256,
-      "updatedAt": 1582205399256,
+      "name": "ELECTRONICS",
+      "description": "LAPTOP,FVDSBSGF",
+      "createdAt": 1582267088971,
+      "updatedAt": 1582267088971,
       "id": 4
+    }
+  ],
+  "product-items": [
+    {
+      "id": 1,
+      "categoryId": 4,
+      "name": "laptop",
+      "rating" : 4
     },
     {
-      "name": "DFGHU",
-      "description": "RFDGDG",
-      "createdAt": 1582265010801,
-      "updatedAt": 1582265010801,
-      "id": 5
+      "id": 3,
+      "categoryId": 2,
+      "name": "vegetables",
+      "rating" : 5
     },
     {
-      "name": "GFGDGFH",
-      "description": "FHSHDGFH",
-      "createdAt": 1582265161514,
-      "updatedAt": 1582265161514,
-      "id": 6
-    },
-    {
-      "name": "123456",
-      "description": "FHSHDGFH",
-      "createdAt": 1582265171520,
-      "updatedAt": 1582265171520,
-      "id": 7
-    },
-    {
-      "name": "RAJU",
-      "description": "12345",
-      "createdAt": 1582265236827,
-      "updatedAt": 1582265236827,
-      "id": 8
+      "id": 4,
+      "categoryId": 4,
+      "name": "mobiles",
+      "rating" : 3
     }
   ],
   "posts": [

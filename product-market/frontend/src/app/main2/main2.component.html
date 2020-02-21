@@ -29,7 +29,7 @@
           <button type="button" class="close" aria-label="Close" (click)="onClose(data)">
             <span aria-hidden="true">&times;</span>
           </button>
-          <h4 class="card-title"> {{data.name}} </h4>
+          <button style="border-radius: 0px; border: 0px;background-color: white;" class="p-0" [routerLink]="['/items', data.id]"><span><h4 class="card-title"> {{data.name}} </h4></span></button>
           <p class="card-text">Main consumer electronics products include radio receivers, television sets, MP3 players.</p>
           <button class="btn" type="submit">EDIT</button>
         </div>

@@ -36,6 +36,14 @@ export class ProductcatchService {
 
   getMessage(): Observable<any>{
     return this.subject.asObservable();
-}
+  }
 
+  getItems(x: number): Observable<any> {
+    const url = `/api/product-items?categoryId=${x}`;
+    return this.http.get(url);
+  }
+  deleteItem(x: number): Observable<any> {
+    const url = `/api/product-items/${x}`;
+    return this.http.delete(url);
+  }
 }

@@ -1,185 +1,48 @@
 <div class="container" style="margin-top: 20px;">
-  
-
-        <table class="table" style="border: solid black 2px;margin-left: 5px;">
-            <thead>
-                <tr>
-                    <th scope="col" class="font1">LIST OF ITEMS</th>
-                    <th scope="col" class="font1">RATINGS</th>
-                    <th scope="col" class="font1">CHOOSE BRAND</th>
-                    <th scope="col" class="font1">ITEMS ARE</th>
-                     </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="font2">Microwave oven.</td>
-
-                    <td>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-
-                    </td>
-                    <td>
-                        <select id="BRAND" name="brands" form="brandform">
-                            <option value="L.G">L.G</option>
-                            <option value="SONY">SONY</option>
-                            <option value="SAMSUNG">SAMSUNG</option>
-                          </select>
-                    </td>
-                    <td>
-                      <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row no-gutters">
-                          <div class="col-md-4">
-                            <img src="../../assets/images/download (1).jfif" class="card-img" alt="...">
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <h5 class="card-title">Microwave oven</h5>
-                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                          </div>
-                        </div>
+  <table class="table" style="border: solid black 2px;margin-left: 5px;">
+      <thead>
+          <tr>
+              <th scope="col" class="font1">LIST OF ITEMS</th>
+              <th scope="col" class="font1">RATINGS</th>
+              <th scope="col" class="font1">CHOOSE BRAND</th>
+              <th scope="col" class="font1">ITEMS ARE</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let data of datas">
+              <td class="font2">{{data.name}} </td>
+              <td >
+                  <span class="fa fa-star checked" *ngFor="let star of [].constructor(data.rating);let i = index"></span>
+                  <span class="fa fa-star" *ngFor="let star of [].constructor(5 - data.rating);let i = index"></span>
+              </td>
+              <td>
+                  <select id="BRAND" name="brands" form="brandform">
+                      <option value="L.G">L.G</option>
+                      <option value="SONY">SONY</option>
+                      <option value="SAMSUNG">SAMSUNG</option>
+                    </select>
+              </td>
+              <td>
+                <button type="button" class="close" aria-label="Close" (click) = "onClose(data)">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="card mb-3" style="max-width: 300px;">
+                  <div class="row no-gutters">
+                    <div class="col-md-4">
+                      <img src="../../assets/images/download (1).jfif" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">{{data.name}}</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                       </div>
-                    </td>
-                 </tr>
-                <tr>
-                    <td class="font2">Gas fireplace</td>
-                    <td>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star "></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-
-                    </td>
-                    <td>
-                        <select id="BRAND" name="brands" form="brandform">
-                            <option value="L.G" style="padding: 20px;">L.G</option>
-                            <option value="SONY">SONY</option>
-                            <option value="SAMSUNG">SAMSUNG</option>
-                          </select>
-                    </td>
-                    <td>
-                      <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row no-gutters">
-                          <div class="col-md-4">
-                            <img src="../../assets/images/download (2).jfif" class="card-img" alt="...">
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <h5 class="card-title">Gas fireplace</h5>
-                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="font2">Refrigerators</td>
-                    <td>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-
-                    </td>
-                    <td>
-                        <select id="BRAND" name="brands" form="brandform">
-                            <option value="L.G">L.G</option>
-                            <option value="SONY">SONY</option>
-                            <option value="SAMSUNG">SAMSUNG</option>
-                          </select>
-                    </td>
-                    <td>
-                      <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row no-gutters">
-                          <div class="col-md-4">
-                            <img src="../../assets/images/download (3).jfif" class="card-img" alt="...">
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <h5 class="card-title">Refrigerators</h5>
-                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="font2">Laptop</td>
-                    <td>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-
-                    </td>
-                    <td>
-                        <select id="BRAND" name="brands" form="brandform">
-                            <option value="L.G">L.G <img src="../../assets/images/lg.svg"></option>
-                            <option value="SONY">SONY <img src="../../assets/images/sony.svg"></option>
-                            <option value="SAMSUNG">SAMSUNG <img src="../../assets/images/samsung.svg"></option>
-                          </select>
-                    </td>
-                    <td>
-                      <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row no-gutters">
-                          <div class="col-md-4">
-                            <img src="../../assets/images/download (4).jfif" class="card-img" alt="...">
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <h5 class="card-title">Laptop</h5>
-                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="font2">Electric water heater tan</td>
-                    <td>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-
-                    </td>
-                    <td>
-                        <select id="BRAND" name="brands" form="brandform">
-                            <option value="L.G">L.G</option>
-                            <option value="SONY">SONY</option>
-                            <option value="SAMSUNG">SAMSUNG</option>
-                          </select>
-                    </td>
-                    <td>
-                      <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row no-gutters">
-                          <div class="col-md-4">
-                            <img src="../../assets/images/download (5).jfif" class="card-img" alt="...">
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <h5 class="card-title">Electric water heater tan</h5>
-                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
