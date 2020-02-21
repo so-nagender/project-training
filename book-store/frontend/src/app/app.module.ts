@@ -9,7 +9,9 @@ import { FormsModule } from '@angular/forms'
 import { SignupComponent } from './signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms'
 import { LoginComponent } from './login/login.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS, HttpResponse } from '@angular/common/http';
+import { TokenInterceptor } from './TokenInterceptor';
+import { DashboardComponent } from './dashboard/dashboard.component'
 
 @NgModule({
   declarations: [
@@ -18,15 +20,21 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     CategoriesComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+   
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
