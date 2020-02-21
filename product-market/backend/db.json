@@ -19,32 +19,11 @@
       "id": 4
     },
     {
-      "name": "DFGHU",
-      "description": "RFDGDG",
-      "createdAt": 1582265010801,
-      "updatedAt": 1582265010801,
+      "name": "shiwani",
+      "description": "dress",
+      "createdAt": 1582277744481,
+      "updatedAt": 1582277744481,
       "id": 5
-    },
-    {
-      "name": "GFGDGFH",
-      "description": "FHSHDGFH",
-      "createdAt": 1582265161514,
-      "updatedAt": 1582265161514,
-      "id": 6
-    },
-    {
-      "name": "123456",
-      "description": "FHSHDGFH",
-      "createdAt": 1582265171520,
-      "updatedAt": 1582265171520,
-      "id": 7
-    },
-    {
-      "name": "RAJU",
-      "description": "12345",
-      "createdAt": 1582265236827,
-      "updatedAt": 1582265236827,
-      "id": 8
     }
   ],
   "posts": [

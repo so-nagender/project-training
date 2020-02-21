@@ -15,7 +15,7 @@ export class AdditemComponent implements OnInit {
     this.itemform = this.fb.group({
         item: ['', [Validators.required]],
         choose:['',[Validators.required]],
-        RItem:['', [Validators.required]],
+        rating:['', [Validators.required]],
         Description:['', [Validators.required]],
     });
       
