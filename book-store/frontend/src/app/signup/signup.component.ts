@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder, EmailValidator } from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { ApiService } from '../api.service';
 
 
 @Component({
@@ -18,11 +20,21 @@ export class SignupComponent implements OnInit {
     password2: new FormControl('',[Validators.required, Validators.minLength(6)])
   })
 
-  constructor() { }
+  constructor(private api: ApiService) { }
  
 
   ngOnInit() {
   }
+
+  onSubmit(form) {
+    if (this.form.value.password == this.form.value.password2){
+      const password = this.form.value.password
+     this.api.postloginDetails(this.form.value.email,password)
+  }
+  else {
+    console.log("password doesnt match")
+  }
+}
 
   
   

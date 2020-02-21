@@ -17,6 +17,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 
+import { HttpClientModule, HTTP_INTERCEPTORS, HttpResponse } from '@angular/common/http';
+import { TokenInterceptor } from './TokenInterceptor';
+import { DashboardComponent } from './dashboard/dashboard.component'
 
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ import { MatSortModule } from '@angular/material/sort';
     LoginComponent,
     ContactListComponent,
     FilterPipe,
-    ContactTableComponent
+    ContactTableComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -38,10 +42,15 @@ import { MatSortModule } from '@angular/material/sort';
     BrowserAnimationsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    HttpClientModule,
    
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
