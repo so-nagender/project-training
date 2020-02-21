@@ -1,5 +1,5 @@
 <div class="container pt-4 pr-5 pl-5 pb-5">
-    <button type="button" class="close" aria-label="Close">
+    <button type="button" class="close" aria-label="Close" (click) = "onClose()">
         <span aria-hidden="true">&times;</span>
     </button>
     <h1><strong style="font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">ADD CATEGORY</strong></h1>
@@ -24,6 +24,6 @@
                 <div *ngIf="f.item.errors.required">*Item Name is required</div>
             </div>
         </div>
-        <button type="submit" class="btn ">ADD</button>
+        <button type="submit" class="btn">ADD</button>
     </form>
 </div>

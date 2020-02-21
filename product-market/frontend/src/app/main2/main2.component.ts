@@ -15,8 +15,12 @@ export class Main2Component implements OnInit {
     this.activatedRoute.data.subscribe(data => {
       this.datas = data.data;
     });
+    this.serve.getMessage().subscribe(() => {this.serve.getData().subscribe(res => {
+      this.datas = res;
+    });});
   }
 
+   
   onClose(data) {
     const x = data.id;
     this.serve.deleteData(x).subscribe();

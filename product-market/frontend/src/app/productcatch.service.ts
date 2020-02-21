@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductcatchService {
 
-  constructor(private http : HttpClient) { }
+  constructor(private http : HttpClient,) { }
+
+  private subject =  new Subject();
 
   getData(): Observable<any> {
     return this.http.get("/api/product-category")
@@ -24,5 +26,16 @@ export class ProductcatchService {
     const url = `/api/product-category/${x}`;
     return this.http.delete(url);
   }
+  postValue(obj): Observable<any> {
+    return this.http.post<any>('/api/product-category', obj);
+  }
+
+  sendMessage(message: any) {
+    this.subject.next(message);
+  }
+
+  getMessage(): Observable<any>{
+    return this.subject.asObservable();
+}
 
 }
