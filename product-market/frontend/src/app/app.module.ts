@@ -49,12 +49,8 @@ const routes: Routes = [
           component: SidebarComponent,
         },
         {
-        path: "signup",
-        component: SignUpComponent,
-        },
-        {
-          path :"signin",
-          component : LoginComponent
+        path: "addform",
+        component: AddformComponent,
         }] }, 
 ];
 

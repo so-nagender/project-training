@@ -21,8 +21,7 @@ text-align: center;
 }
  .card
 {
-    border:solid #f88288 2px;
-    margin-left: 25PX;
+    border:solid black 2px;
     margin-bottom: 15px;
     width:170px;
 } 
