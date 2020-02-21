@@ -17,7 +17,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Main2Component } from './main2/main2.component';
 import { Sidebar2Component } from './sidebar2/sidebar2.component';
 import { CategoryComponent } from './category/category.component';
-import {TokenInterceptor} from './interceptor';
+import {TokenInterceptor} from './interceptor'
+import { ResolverService } from './resolver.service';
 import { AddformComponent } from './addform/addform.component';
 import { ListComponent } from './list/list.component';
 import { AdditemComponent } from './additem/additem.component'
@@ -41,6 +42,7 @@ const routes: Routes = [
     {
       path: "categories",
       component :CategoryComponent,
+      resolve: { data: ResolverService },
       children : [
         {
           path: "",

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ProductcatchService} from '../productcatch.service'
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-main2',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Main2Component implements OnInit {
 
-  constructor() { }
-
+  constructor(private serve : ProductcatchService,private activatedRoute: ActivatedRoute) { }
+  datas : any;
   ngOnInit() {
+    this.activatedRoute.data.subscribe(data => {
+      this.datas = data.data;
+    });
+  }
+
+  onClose(data) {
+    const x = data.id;
+    this.serve.deleteData(x).subscribe();
+    this.serve.getData().subscribe(res => {
+      this.datas = res;
+    });
   }
 
 }

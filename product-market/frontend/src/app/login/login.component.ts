@@ -28,9 +28,11 @@ onSubmit(){
     const username = this.loginform.controls.username.value
     const pasword = this.loginform.controls.password.value
     const obj = { "name": username,"password": pasword};
-    this.serve.logIn(obj).subscribe(res =>{localStorage.setItem("accessToken",res.accessToken);});
-    this.router.navigate(['/categories']); 
+    this.serve.logIn(obj).subscribe(res =>{localStorage.setItem("accessToken",res.accessToken);this.router.navigate(['/categories']); });
   }
+}
+onClose(){
+  this.router.navigate(['/home']); 
 }
 }
 

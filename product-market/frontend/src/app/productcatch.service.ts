@@ -10,8 +10,7 @@ export class ProductcatchService {
   constructor(private http : HttpClient) { }
 
   getData(): Observable<any> {
-    console.log(this.http.get('/api/movies'));
-    return this.http.get('/api/movies')
+    return this.http.get("/api/product-category")
   }
 
   signUp(obj): Observable<any> {
@@ -20,6 +19,10 @@ export class ProductcatchService {
 
   logIn(obj): Observable<any> {
     return this.http.post<any>('/api/login', obj);
+  }
+  deleteData(x: number): Observable<any> {
+    const url = `/api/product-category/${x}`;
+    return this.http.delete(url);
   }
 
 }

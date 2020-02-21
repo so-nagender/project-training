@@ -19,179 +19,23 @@
       </div>
       <button class="btn" style="float: right; font-size: 25px; margin-right:40px"   type="submit">ADD CATEGORY</button>
     </div>
-   </div>
-  <h1
-    style="font-weight: bolder;font-family :'Trebuchet MS','Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;text-align: center; margin-bottom: 10px;">
-    Shop on Our Site <img src="../../assets/images/packages.svg" class="images"></h1>
+ </div>
+ <div class="pl-3">
   <div class="row">
-    <div class="col-lg-2">
+    <div class="col-lg-3" *ngFor="let data of datas">
       <div class="card">
         <img src="../../assets/images/images (1).jfif" class="rounded-0" alt="...">
         <div class="card-body">
-          <button type="button" class="close" aria-label="Close">
+          <button type="button" class="close" aria-label="Close" (click)="onClose(data)">
             <span aria-hidden="true">&times;</span>
           </button>
-          <h4 class="card-title"> ABOUT ITEMS </h4>
-          <p class="card-text">Main consumer electronics products include radio receivers, television sets, MP3 players.
-          </p>
-          <button class="btn" type="submit">EDIT</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-2">
-      <div class="card">
-        <img src="../../assets/images/images (1).jfif" class="rounded-0" alt="...">
-        <div class="card-body">
-          <button type="button" class="close" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="card-title"> ABOUT ITEMS </h4>
-          <p class="card-text">Main consumer electronics products include radio receivers, television sets, MP3 players.
-          </p>
-          <button class="btn" type="submit">EDIT</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-2">
-      <div class="card">
-        <img src="../../assets/images/images (1).jfif" class="rounded-0" alt="...">
-        <div class="card-body">
-          <button type="button" class="close" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="card-title"> ABOUT ITEMS </h4>
-          <p class="card-text">Main consumer electronics products include radio receivers, television sets, MP3 players.
-          </p>
-          <button class="btn" type="submit">EDIT</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-2">
-      <div class="card">
-        <img src="../../assets/images/images (1).jfif" class="rounded-0" alt="...">
-        <div class="card-body">
-          <button type="button" class="close" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="card-title"> ABOUT ITEMS </h4>
-          <p class="card-text">Main consumer electronics products include radio receivers, television sets, MP3 players.
-          </p>
-          <button class="btn" type="submit">EDIT</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-2">
-      <div class="card">
-        <img src="../../assets/images/images (1).jfif" class="rounded-0" alt="...">
-        <div class="card-body">
-          <button type="button" class="close" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="card-title"> ABOUT ITEMS </h4>
-          <p class="card-text">Main consumer electronics products include radio receivers, television sets, MP3 players.
-          </p>
-          <button class="btn" type="submit">EDIT</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-2">
-      <div class="card">
-        <img src="../../assets/images/images (1).jfif" class="rounded-0" alt="...">
-        <div class="card-body">
-          <button type="button" class="close" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="card-title"> ABOUT ITEMS </h4>
-          <p class="card-text">Main consumer electronics products include radio receivers, television sets, MP3 players.
-          </p>
+          <h4 class="card-title"> {{data.name}} </h4>
+          <p class="card-text">Main consumer electronics products include radio receivers, television sets, MP3 players.</p>
           <button class="btn" type="submit">EDIT</button>
         </div>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-lg-2">
-      <div class="card">
-        <img src="../../assets/images/images (1).jfif" class="rounded-0" alt="...">
-        <div class="card-body">
-          <button type="button" class="close" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="card-title"> ABOUT ITEMS </h4>
-          <p class="card-text">Main consumer electronics products include radio receivers, television sets, MP3 players.
-          </p>
-          <button class="btn" type="submit">EDIT</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-2">
-      <div class="card">
-        <img src="../../assets/images/images (1).jfif" class="rounded-0" alt="...">
-        <div class="card-body">
-          <button type="button" class="close" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="card-title"> ABOUT ITEMS </h4>
-          <p class="card-text">Main consumer electronics products include radio receivers, television sets, MP3 players.
-          </p>
-          <button class="btn" type="submit">EDIT</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-2">
-      <div class="card">
-        <img src="../../assets/images/images (1).jfif" class="rounded-0" alt="...">
-        <div class="card-body">
-          <button type="button" class="close" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="card-title"> ABOUT ITEMS </h4>
-          <p class="card-text">Main consumer electronics products include radio receivers, television sets, MP3 players.
-          </p>
-          <button class="btn" type="submit">EDIT</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-2">
-      <div class="card">
-        <img src="../../assets/images/images (1).jfif" class="rounded-0" alt="...">
-        <div class="card-body">
-          <button type="button" class="close" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="card-title"> ABOUT ITEMS </h4>
-          <p class="card-text">Main consumer electronics products include radio receivers, television sets, MP3 players.
-          </p>
-          <button class="btn" type="submit">EDIT</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-2">
-      <div class="card">
-        <img src="../../assets/images/images (1).jfif" class="rounded-0" alt="...">
-        <div class="card-body">
-          <button type="button" class="close" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="card-title"> ABOUT ITEMS </h4>
-          <p class="card-text">Main consumer electronics products include radio receivers, television sets, MP3 players.
-          </p>
-          <button class="btn" type="submit">EDIT</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-2">
-      <div class="card">
-        <img src="../../assets/images/images (1).jfif" class="rounded-0" alt="...">
-        <div class="card-body">
-          <button type="button" class="close" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="card-title"> ABOUT ITEMS </h4>
-          <p class="card-text">Main consumer electronics products include radio receivers, television sets, MP3 players.
-          </p>
-          <button class="btn" type="submit">EDIT</button>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
+
+  
