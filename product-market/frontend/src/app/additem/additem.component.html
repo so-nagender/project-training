@@ -1,0 +1,36 @@
+<div class="container pt-4 pr-5 pl-5 pb-5">
+    <button type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <h1><strong style="font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">ADD CATEGORY</strong></h1>
+    <p><u>or</u> <strong style="color: #f88288;">  Add your fav item  </strong></p>
+    <form [formGroup]="itemform" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="exampleInputEmail1" style="padding-top: 3px;">Name of Item</label>
+            <input type="text" formControlName="item" class="form-control"  placeholder="Name of Item"
+                [ngClass]="{ 'is-invalid':f.item.errors }" />
+            <div *ngIf="f.item.errors" class="invalid-feedback">
+                <div *ngIf="f.item.errors.required">*Item Name is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1" style="padding-top: 3px;">Requirement of Item</label>
+            <input type="text" formControlName="RItem" class="form-control" 
+                aria-describedby="emailHelp" placeholder=" Requirement of RItem"
+                [ngClass]="{ 'is-invalid':f.RItem.errors }" />
+            <div *ngIf="f.RItem.errors" class="invalid-feedback">
+                <div *ngIf="f.RItem.errors.required">*required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1" style="padding-top: 3px;">Description of Item</label>
+            <input type="text" formControlName="Description" class="form-control" 
+                aria-describedby="emailHelp" style="padding:80px" 
+                [ngClass]="{ 'is-invalid':f.Description.errors }" />
+            <div *ngIf="f.Description.errors" class="invalid-feedback">
+                <div *ngIf="f.Description.errors.required">*Description of item </div>
+            </div>
+        </div>
+        <button type="submit" class="btn ">ADD ITEM</button>
+    </form>
+</div>
