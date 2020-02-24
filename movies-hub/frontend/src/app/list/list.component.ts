@@ -18,7 +18,7 @@ export class ListComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.data.subscribe(data => {
-      this.movies = data.users;
+      this.movies = data.movies;
     });
     this.myservice.getMovies().subscribe(res => {
       this.movies = res;
@@ -26,9 +26,6 @@ export class ListComponent implements OnInit {
   }
   delete(id) {
     this.myservice.deleteMovie(id).subscribe();
-    this.activatedRoute.data.subscribe(data => {
-      this.movies = data.users;
-    })
     this.myservice.getMovies().subscribe(res => {
       this.movies = res;
     });

@@ -1,13 +1,14 @@
 <div>
     <app-header></app-header>
 </div>
-<table class="table">     
+<div class="container">
+<table class="table table-striped">     
     <tr>
-        <th>Movie Name</th>
-        <th>Year </th>
-        <th>Cast</th>
-        <th>Classification</th>
-        <th>Rating</th> 
+        <th style="width:15%">Movie Name</th>
+        <th style="width:4%">Year </th>
+        <th style="width:30%">Cast</th>
+        <th style="width:12%">Classification</th>
+        <th style="width:1%">Rating</th> 
         <th>Actions</th>             
     </tr>
     <tbody>
@@ -21,11 +22,12 @@
             <button>View</button>
         </a> 
             <button class="mx-2">Edit</button>    
-            <button (click)="delete(m.id)">Delete</button>           
+            <button (click)="delete(movie.id)">Delete</button>           
         </tr>
     </tbody>
 </table>
-<button routerLink='/details'>Back</button>
+<button routerLink='/add' class="btn btn-danger mb-2 float-right">Add Movie</button> 
+</div>
 <div>
     <app-footer></app-footer>
 </div>
