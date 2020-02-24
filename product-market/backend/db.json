@@ -31,24 +31,6 @@
   ],
   "product-items": [
     {
-      "name": "microwave",
-      "categoryId": "4",
-      "rating": "3",
-      "description": "etftvywu",
-      "createdAt": 1582523728248,
-      "updatedAt": 1582523728248,
-      "id": 5
-    },
-    {
-      "name": "refrigerator",
-      "categoryId": "4",
-      "rating": "4",
-      "description": "vndnd kghsknmhkmgkbmgskhgmnkxbmnxk",
-      "createdAt": 1582523992721,
-      "updatedAt": 1582523992721,
-      "id": 6
-    },
-    {
       "name": "vegetables",
       "categoryId": "5",
       "rating": "3",
@@ -58,38 +40,44 @@
       "id": 7
     },
     {
-      "name": "heater",
+      "name": "mobiles",
       "categoryId": "4",
-      "rating": "4",
-      "description": "this is a nice product",
-      "createdAt": 1582536945242,
-      "updatedAt": 1582536945242,
+      "rating": "5",
+      "description": "Mobile phones are no more merely a part of our lives. ... From budget to state-of-the-art smartphones; indigenous names to global big-wigs - a whole universe of mobiles await you",
+      "cost": 20000,
+      "createdAt": 1582544969291,
+      "updatedAt": 1582544969291,
       "id": 8
     },
     {
-      "name": "laptop",
+      "name": "Laptops",
       "categoryId": "4",
-      "rating": "5",
-      "description": "gdffhjgd",
-      "createdAt": 1582540556481,
-      "updatedAt": 1582540556481,
+      "rating": "4",
+      "description": "Flipkart has wide range of branded laptops browse and buy online shopping store. ... Acer Predator Helios 300 Core i7 8th Gen - (8 GB + 16 GB Optane/2 TB HDD/Windows 10 Home/6 GB Graphics.",
+      "cost": 50000,
+      "createdAt": 1582545002861,
+      "updatedAt": 1582545002861,
       "id": 9
     }
   ],
-  "product-cart" : [
+  "product-cart": [
     {
-      "id" : 1,
-      "name" : "Women A-line Pink Dress",
-      "rating" : 3,
-      "cost" : 1000,
-      "description" : "A dress (also known as a frock or a gown) is a garment traditionally worn by women or girls consisting of a skirt with an attached bodice (or a matching bodice giving the effect of a one-piece garment."
+      "name": "Laptops",
+      "rating": 4,
+      "cost": 50000,
+      "description": "Flipkart has wide range of branded laptops browse and buy online shopping store. ... Acer Predator Helios 300 Core i7 8th Gen - (8 GB + 16 GB Optane/2 TB HDD/Windows 10 Home/6 GB Graphics.",
+      "createdAt": 1582545196510,
+      "updatedAt": 1582545196510,
+      "id": 3
     },
     {
-      "id" : 1,
-      "name" : "Women A-line Pink Dress",
-      "rating" : 3,
-      "cost" : 1000,
-      "description" : "A dress (also known as a frock or a gown) is a garment traditionally worn by women or girls consisting of a skirt with an attached bodice (or a matching bodice giving the effect of a one-piece garment."
+      "name": "mobiles",
+      "rating": 5,
+      "cost": 20000,
+      "description": "Mobile phones are no more merely a part of our lives. ... From budget to state-of-the-art smartphones; indigenous names to global big-wigs - a whole universe of mobiles await you",
+      "createdAt": 1582545934814,
+      "updatedAt": 1582545934814,
+      "id": 4
     }
   ],
   "posts": [

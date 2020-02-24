@@ -1,6 +1,6 @@
 <div class="container" style="margin-top: 20px;">
   <div class="row mt-4">
-    <div class="col-lg-7">
+    <div class="col-lg-6">
       <div id="mainDisplay" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -22,11 +22,23 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-5">
-      <input class="form-control" type="text" placeholder="Search For products" style="width: 60%;margin-right: 20px;"
-        [(ngModel)]="search"><br>
-      <button class="btn " style="float: right; font-size: 15px; margin-right:40px;margin-top: -60px;"
+    <div class="col-lg-6">
+      <div class="row mt-2">
+        <div class="col-lg-7">
+          <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm"><img style="height: 20px;" src="../../assets/images/search.svg"></span>
+          </div>
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="search">
+        </div>
+      </div>
+        <div class="col-lg-5">
+          <button class="btn " style="float: right; font-size: 15px;;"
         (click)="onaddItem()" type="submit">ADD ITEM</button>
+        </div>
+      </div>
+      
+      
     </div>
   </div>
   <table class="table" style="border: solid black 2px;margin-left: 5px;">
@@ -44,9 +56,8 @@
     <tbody>
       <tr *ngFor="let data of datas| filterdata: search : 'name'">
         <td class="font2">{{data.name}}<br>
-          <p style="margin-top: 10PX;">MRP:₹364</p><BR>
-          <button type="submit" class="btn" style="margin-top: 40px; float: left;">ADD TO CART</button>
-        
+          <p style="margin-top: 10PX;">MRP: {{data.cost}}</p><BR>
+          <button type="button" class="btn" style="margin-top: 40px; float: left;" (click) = "onaddCart(data)">ADD TO CART</button>
         </td>
 
         <td>
@@ -72,8 +83,7 @@
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title">{{data.name}}</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
+                  <p class="card-text">{{data.description}}.</p>
                 </div>
               </div>
             </div>

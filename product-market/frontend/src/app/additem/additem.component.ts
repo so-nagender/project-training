@@ -19,6 +19,7 @@ export class AdditemComponent implements OnInit {
     this.itemform = this.fb.group({
         item: ['', [Validators.required]],
         rating:['', [Validators.required]],
+        cost : ['',Validators.required],
         Description:['', [Validators.required]],
     });  
         
@@ -29,7 +30,7 @@ export class AdditemComponent implements OnInit {
     this.router.navigate([url]); 
   }
   onSubmit(){
-    const obj = { "name": this.itemform.controls.item.value, "categoryId" : this.id, "rating" : this.itemform.controls.rating.value , "description" : this.itemform.controls.Description.value};
+    const obj = { "name": this.itemform.controls.item.value, "categoryId" : this.id, "rating" : this.itemform.controls.rating.value , "description" : this.itemform.controls.Description.value,"cost" :this.itemform.controls.cost.value};
     this.serve.postItem(obj).subscribe();
     this.serve.sendnewItem();
   }

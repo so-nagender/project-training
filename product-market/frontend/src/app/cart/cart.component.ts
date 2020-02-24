@@ -23,6 +23,17 @@ export class CartComponent implements OnInit {
       this.totalCost = item.cost + this.totalCost
     });
   })  
+  this.serve.getnewsubCart().subscribe(()=>{this.serve.getCart().subscribe((res) => 
+    {
+      this.counter = 0;
+      this.totalCost = 0;
+      this.datas = res;
+      this.datas.forEach((item) => {
+      item.rating = parseInt(item.rating); 
+      this.counter = this.counter + 1; 
+      this.totalCost = item.cost + this.totalCost
+    });
+  }) })
   }
 
   onClose(){
@@ -35,6 +46,19 @@ export class CartComponent implements OnInit {
       console.log("2");
       this.router.navigate(['/categories'],{relativeTo :this.activatedRoute})
     }
+  }
+  onDelete(data){
+    const x = data.id;
+    this.serve.deleteCart(x).subscribe();
+    this.serve.getCart().subscribe((res) => 
+    {this.datas = res;
+    this.datas.forEach((item) => {
+      item.rating = parseInt(item.rating); 
+    });
+    this.counter = this.counter -1
+    this.totalCost = this.totalCost - parseInt(data.cost)
+  }) 
+    
   }
   
   }
