@@ -9,6 +9,7 @@ import { Route } from '@angular/compiler/src/core';
 export class ApiService {
   observeddata : any
   url =`/api/movies`
+  categoryFormData: any;
   constructor(private http: HttpClient) { }
   postloginDetails(email, password){
   
@@ -41,6 +42,11 @@ export class ApiService {
       const urlget$ = this.http.get('/api/catogries-booksstore').subscribe((data: any)=> {
          console.log('_____________<<<<<<<<<<<<',data)});
   }
+  Viewdatacategories(){
+   const Formdata$ =this.http.get('/api/catogries-booksstore')
+    return Formdata$
+   }
 }
+   
 
   

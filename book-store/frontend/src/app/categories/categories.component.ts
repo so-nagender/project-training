@@ -11,6 +11,9 @@ import { ApiService } from '../api.service';
 export class CategoriesComponent implements OnInit {
   view_form = false
   @ViewChild('category_form', {static: true}) category_form: ElementRef;
+  categoryFormdata: any;
+  Hascatdata= false;
+
    toggle_form() {
     this.view_form = true
   }
@@ -21,7 +24,7 @@ export class CategoriesComponent implements OnInit {
     t1.fromTo(this.category_form, 5,{x:"-100%"},
     {x:"0%", ease:Power2.easeInOut}) 
   }
-
+ 
   categoryForm = new FormGroup({
     bookname: new FormControl('', Validators.required),
     bookdescription: new FormControl('', Validators.required)
@@ -31,8 +34,29 @@ export class CategoriesComponent implements OnInit {
     this.view_form=false;
     this.api.postbookcategories(form)
   }
+  view(){
+  const apidata= this.api.Viewdatacategories().subscribe(catformdata=>{this.categoryFormdata = catformdata;
+  
+    if(this.categoryFormdata!= null){
+      this.Hascatdata = true;
+      console.log(this.categoryFormdata)
+  
+    }
+  
+  
+  
+  
+  })
 
+  
+  
+  }
+  
+
+ 
+  
   ngOnInit() {
+    this.view();
   }
 
 }

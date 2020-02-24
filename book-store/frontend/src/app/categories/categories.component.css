@@ -1,6 +1,8 @@
 .padding_top{
 
     padding-top: 200px;
+    font-family: 'Pacifico' ;
+    font-size: 22px;
 }
 .border {
     -moz-box-shadow: 0 0 10px #ccc;
@@ -62,3 +64,10 @@ button[type=submit], [type=reset], [type=close] {
 
 }
 
+.imageinvalid img{
+
+    width: 30%;
+}
+.red{
+    color: red;
+}
