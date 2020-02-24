@@ -1,7 +1,7 @@
 <div>
     <app-header></app-header>
 </div>
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="checkoutForm" >
     <div class="row moviesDetailsMargin">
         <div class="col-2">
         </div>
@@ -31,7 +31,7 @@
             </label>
             <label>
                 <div class="form-group">
-                    <input type="text" required class="input" formControlName="cat" [(ngModel)]= "data">
+                    <input type="text" required class="input" formControlName="cat" [(ngModel)]= "dataa.cat.genre">
                     <p class="label-txt">Category</p>
                     <div class="line-box">
                         <div class="line"></div>
@@ -51,4 +51,5 @@
         <div class="col-4">
         </div>
     </div>
+    <button class="button" type="submit" (click)="updateDataa()">Update</button>
 </form>
