@@ -28,6 +28,7 @@ export class ListComponent implements OnInit {
       this.datas.forEach( item => item.rating = parseInt(item.rating));
     });});
   }
+  
 
   onClose(data){
     const x = data.id;
