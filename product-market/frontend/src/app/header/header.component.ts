@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { ProductcatchService } from '../productcatch.service'
 
 @Component({
   selector: 'app-header',
@@ -8,9 +9,16 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router: Router) { }
-
+  constructor(private router: Router ,private serve : ProductcatchService) { }
+  datas : any
   ngOnInit() {
+    this.serve.getData().subscribe(data => {
+      this.datas = data;
+      console.log(this.datas)
+    });
+    this.serve.getMessage().subscribe(() => {this.serve.getData().subscribe(res => {
+      this.datas = res;
+    });});
   }
   onLogout(){
     localStorage.removeItem("accessToken");

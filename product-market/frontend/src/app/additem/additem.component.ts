@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
+import {ProductcatchService} from '../productcatch.service'
 
 @Component({
   selector: 'app-additem',
@@ -8,16 +10,27 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class AdditemComponent implements OnInit {
   itemform: FormGroup;
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,private router :Router,private activatedRoute: ActivatedRoute,private serve : ProductcatchService) {
+    this.id = this.activatedRoute.snapshot['_routerState']._root.children[0].value.params.id;
+   }
   get f() { return this.itemform.controls; }
-
+  id : any
   ngOnInit() {
     this.itemform = this.fb.group({
         item: ['', [Validators.required]],
-        choose:['',[Validators.required]],
         rating:['', [Validators.required]],
         Description:['', [Validators.required]],
-    });
-      
-}
+    });  
+        
+  }
+
+  onClose(){
+    const url = `items/${this.id}`
+    this.router.navigate([url]); 
+  }
+  onSubmit(){
+    const obj = { "name": this.itemform.controls.item.value, "categoryId" : this.id, "rating" : this.itemform.controls.rating.value , "description" : this.itemform.controls.Description.value};
+    this.serve.postItem(obj).subscribe();
+    this.serve.sendnewItem();
+  }
 }

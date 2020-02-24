@@ -15,16 +15,8 @@
                         Categories
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#"> <img src="../../assets/images/female.svg"
-                                class="images">female</a>
-                        <a class="dropdown-item" href="#"><img src="../../assets/images/male.svg"
-                                class="images">male</a>
-                        <a class="dropdown-item" href="#"><img src="../../assets/images/avatar.svg"
-                                class="images">children</a>
-                        <a class="dropdown-item" href="#"><img src="../../assets/images/laptop.svg"
-                                class="images">elctronics items</a>
-                        <a class="dropdown-item" href="#"><img src="../../assets/images/lipstick.svg"
-                                class="images">others</a>           
+                        <a [routerLink]="['/items', data.id]" class="dropdown-item" *ngFor="let data of datas"> <img src="../../assets/images/female.svg"
+                                class="images">{{data.name}}</a>           
                     </div>
                 </li>
 

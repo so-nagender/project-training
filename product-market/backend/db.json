@@ -13,6 +13,20 @@
       "createdAt": 1582267088971,
       "updatedAt": 1582267088971,
       "id": 4
+    },
+    {
+      "name": "Groceries",
+      "description": "Main consumer electronics products include radio receivers, television sets, MP3 players.",
+      "createdAt": 1582525475435,
+      "updatedAt": 1582525475435,
+      "id": 5
+    },
+    {
+      "name": "Accessories",
+      "description": "Main consumer electronics",
+      "createdAt": 1582525516601,
+      "updatedAt": 1582525516601,
+      "id": 6
     }
   ],
   "product-items": [
@@ -20,19 +34,40 @@
       "id": 1,
       "categoryId": 4,
       "name": "laptop",
-      "rating" : 4
-    },
-    {
-      "id": 3,
-      "categoryId": 2,
-      "name": "vegetables",
-      "rating" : 5
+      "rating": 4
     },
     {
       "id": 4,
       "categoryId": 4,
       "name": "mobiles",
-      "rating" : 3
+      "rating": 3
+    },
+    {
+      "name": "microwave",
+      "categoryId": "4",
+      "rating": "3",
+      "description": "etftvywu",
+      "createdAt": 1582523728248,
+      "updatedAt": 1582523728248,
+      "id": 5
+    },
+    {
+      "name": "refrigerator",
+      "categoryId": "4",
+      "rating": "4",
+      "description": "vndnd kghsknmhkmgkbmgskhgmnkxbmnxk",
+      "createdAt": 1582523992721,
+      "updatedAt": 1582523992721,
+      "id": 6
+    },
+    {
+      "name": "vegetables",
+      "categoryId": "5",
+      "rating": "3",
+      "description": "bdjsbfjangkfdg",
+      "createdAt": 1582525578632,
+      "updatedAt": 1582525578632,
+      "id": 7
     }
   ],
   "posts": [

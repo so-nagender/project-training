@@ -65,8 +65,8 @@ const routes: Routes = [
           component: SidebarComponent,
         },
         {
-        path: "addform",
-        component: AddformComponent,
+          path: "additem",
+          component: AdditemComponent,
         }]
     }
 ];
