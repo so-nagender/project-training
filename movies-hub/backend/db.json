@@ -15,7 +15,7 @@
         {
             "id": 1,
             "body": "some comment",
-            "post';Id": 1
+            "postId": 1
         }
     ],
     "profile": [
@@ -122,6 +122,12 @@
             "password": "1234",
             "createdAt": 1582521629524,
             "updatedAt": 1582521629525
+        },
+        {
+            "name": "subh@gmail.com",
+            "password": "1234",
+            "createdAt": 1582530262794,
+            "updatedAt": 1582530262794
         }
     ],
     "movies": [
@@ -207,160 +213,109 @@
             "id": 12,
             "year": "1995",
             "cast": "[Sanjay Dutt, Arshad Warsi]",
-            "catId": 12
+            "catId": 5
         },
         {
             "movieName": "Singham",
             "id": 13,
             "year": "1996",
             "cast": "[Ajay Devgan, Kareena kapoor]",
-            "catId": 13
+            "catId": 5
         },
         {
             "movieName": "Yaadein",
             "id": 14,
             "year": "1986",
             "cast": "Amitabh Bachhan",
-            "catId": 14
+            "catId": 4
         },
         {
             "movieName": "Chalte-Chalte",
             "id": 15,
             "year": "1982",
             "cast": "Rishi Kapoor",
-            "catId": 15
+            "catId": 6
         },
         {
             "movieName": "Kahaani",
             "id": 16,
             "year": "1980",
             "cast": "Vidya Balan",
-            "catId": 16
+            "catId": 8
         },
         {
             "movieName": "1920 Evil Return",
             "id": 17,
             "year": "2009",
             "cast": "[Aftab Shivdasani, Tia Bajpai]",
-            "catId": 17
+            "catId": 10
         },
         {
             "movieName": "Bhoolbhulaiya",
             "id": 18,
             "year": "2006",
             "cast": "[Akshay Kumar, Vidya Balan]",
-            "catId": 18
+            "catId": 3
         },
         {
             "movieName": "Wanted",
             "id": 19,
             "year": "2007",
             "cast": "[Salman Khan, Aisha Takia]",
-            "catId": 19
+            "catId": 4
         },
         {
             "movieName": "Dhol",
             "id": 20,
             "year": "2003",
             "cast": "[Kunal Khemu, tushar, rajpal yadav]",
-            "catId": 20
-        },
-        {
-            "createdAt": 1581847747057,
-            "updatedAt": 1581847747057,
-            "id": 7
-        },
-        {
-            "createdAt": 1581847781775,
-            "updatedAt": 1581847781775,
-            "id": 8
-        },
-        {
-            "createdAt": 1581847793897,
-            "updatedAt": 1581847793897,
-            "id": 9
+            "catId": 10
         }
     ],
-    "cat": [
+    "cats": [
         {
             "genre": "Adventure ",
-            "Id": 1
+            "id": 1
         },
         {
             "genre": "Animation",
-            "Id": 2
+            "id": 2
         },
         {
             "genre": "Action",
-            "Id": 3
+            "id": 3
         },
         {
             "genre": " Biography",
-            "Id": 4
+            "id": 4
         },
         {
             "genre": " Thriller",
-            "Id": 5
+            "id": 5
         },
         {
             "genre": " Sci-Fi",
-            "Id": 6
+            "id": 6
         },
         {
             "genre": " Sport",
-            "Id": 7
+            "id": 7
         },
         {
-            "genre": " Adventure ",
-            "Id": 8
-        },
-        {
-            "genre": " Romantic ",
-            "Id": 9
+            "genre": "Fantasy",
+            "id": 8
         },
         {
             "genre": " Romantic ",
-            "Id": 10
-        },
-        {
-            "genre": " Romantic ",
-            "Id": 11
-        },
-        {
-            "genre": " Comedy ",
-            "Id": 12
-        },
-        {
-            "genre": " Action ",
-            "Id": 13
-        },
-        {
-            "genre": " Romantic ",
-            "Id": 14
-        },
-        {
-            "genre": " Romantic ",
-            "Id": 15
-        },
-        {
-            "genre": " Romantic ",
-            "Id": 16
+            "id": 9
         },
         {
             "genre": " Thriller ",
-            "Id": 17
+            "id": 10
         },
         {
             "genre": " Comedy ",
-            "Id": 18
-        },
-        {
-            "genre": " Action ",
-            "Id": 19
-        },
-        {
-            "genre": " Romantic ",
-            "Id": 20
+            "id": 11
         }
     ],
     "tests": [

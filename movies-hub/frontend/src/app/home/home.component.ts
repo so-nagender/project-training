@@ -9,14 +9,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   movieDetails: any;
-  users: any;
+  movies: any;
 
   constructor(private myservice: ApiserviceService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.myservice.getUsers().subscribe(res => {
-      this.users = res;
-      console.log(this.users.title)
+    this.myservice.getMovies().subscribe(res => {
+      this.movies = res;
     });
   }
 

@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 export class ApiserviceService {
 
   constructor(private http: HttpClient) { }
-  getUsers(): Observable<any> {
-    return this.http.get('api/movies')
+  getMovies(): Observable<any> {
+    return this.http.get('api/movies?_expand=cat')
   }
   signupData(obj):Observable<any> {
     return this.http.post<any>('/api/signup',obj);
