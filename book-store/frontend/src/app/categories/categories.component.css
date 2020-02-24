@@ -73,6 +73,6 @@ button[type=submit], [type=reset], [type=close] {
     color: red;
 }
 
-a{
-    text-decoration: none;
+p{
+    cursor: pointer;
 }
