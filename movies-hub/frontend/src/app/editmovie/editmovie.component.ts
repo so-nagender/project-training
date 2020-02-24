@@ -27,8 +27,7 @@ export class EditmovieComponent implements OnInit {
     this.getDataa();
   }
   getDataa(){
-    this.myservice.getOneMovie(this.id).subscribe((res) =>{
-      console.log(res);
+    this.myservice.getSingleElementById(this.id).subscribe((res) =>{
       this.dataa = res;
       })
     }
