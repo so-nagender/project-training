@@ -3,6 +3,7 @@
     padding-top: 200px;
     font-family: 'Pacifico' ;
     font-size: 22px;
+    padding-bottom: 250px;
 }
 .border {
     -moz-box-shadow: 0 0 10px #ccc;
@@ -70,4 +71,8 @@ button[type=submit], [type=reset], [type=close] {
 }
 .red{
     color: red;
+}
+
+a{
+    text-decoration: none;
 }

@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
   logout(){
-    console.log('hi')
+    localStorage.clear();
 
     
   }
