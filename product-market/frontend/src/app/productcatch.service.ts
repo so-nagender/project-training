@@ -11,6 +11,8 @@ export class ProductcatchService {
 
   private subject =  new Subject();
 
+  private subjectforId =  new Subject();
+
   getData(): Observable<any> {
     return this.http.get("/api/product-category")
   }
@@ -45,5 +47,17 @@ export class ProductcatchService {
   deleteItem(x: number): Observable<any> {
     const url = `/api/product-items/${x}`;
     return this.http.delete(url);
+  }
+
+  getnewItem():Observable<any>{
+    return this.subjectforId.asObservable();
+  }
+
+  sendnewItem(){
+    this.subjectforId.next();
+  }
+
+  postItem(obj): Observable<any> {
+    return this.http.post<any>('/api/product-items', obj);
   }
 }
