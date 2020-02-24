@@ -29,4 +29,8 @@ export class ApiserviceService {
     const address = `/api/movies/${id}?_expand=cat`;
     return this.http.get(address);
   }
+  getOneMovie(id): Observable<any> {
+    const address = `/api/movies/${id}`;
+    return this.http.get(address);
+  }
 }

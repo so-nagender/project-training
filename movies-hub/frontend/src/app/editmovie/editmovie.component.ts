@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
+import { ApiserviceService } from '../apiservice.service';
+
 
 @Component({
   selector: 'app-editmovie',
@@ -6,10 +10,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./editmovie.component.css']
 })
 export class EditmovieComponent implements OnInit {
+  id;
+  dataa: any;
 
-  constructor() { }
+  constructor(private checkout: FormBuilder, private activatedRoute: ActivatedRoute, private myservice: ApiserviceService) {
+    this.id= (this.activatedRoute.snapshot.params.id);
+   }
+   checkoutForm= this.checkout.group({
+    movienm : [''],
+    date : [''],
+    cat: [''],
+    cast: [''],
+  })
 
   ngOnInit() {
+    this.getDataa();
   }
-
+  getDataa(){
+    this.myservice.getOneMovie(this.id).subscribe((res) =>{
+      console.log(res);
+      this.dataa = res;
+      })
+    }
 }
