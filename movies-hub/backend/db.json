@@ -126,35 +126,144 @@
     ],
     "movies": [
         {
-            "author": "nagender111",
-            "id": 1
+            "movieName": "Frozen 2",
+            "id": 1,
+            "year": "2019",
+            "cast": "[Kristen Bell, Evan Rachel Wood, Jeremy Sisto]",
+            "catId": 1
         },
         {
-            "title": "DDLJ",
-            "author": "nagender",
-            "id": 2
+            "movieName": "A Shaun the Sheep Movie: Farmageddon",
+            "id": 2,
+            "year": "2019",
+            "cast": "[Joe Sugg , Andy Nyman, Justin Fletcher]",
+            "catId": 2
         },
         {
-            "title": "DDLJ",
-            "author": "nagender",
-            "id": 3
+            "movieName": "Avengers: Infinity War",
+            "id": 3,
+            "year": "2018",
+            "cast": "[Chris Hemsworth , Chris Pratt , Robert Downey Jr.]",
+            "catId": 3
         },
         {
-            "title": "DDLJ",
-            "author": "nagender",
-            "id": 4
+            "movieName": "The Wolf of Wall Street",
+            "id": 4,
+            "year": "2013",
+            "cast": "[Leonardo DiCaprio , Margot Robbie , Matthew McConaughey]",
+            "catId": 4
         },
         {
-            "title": "DDLJ",
-            "author": "nagender",
-            "createdAt": 1581839360624,
-            "id": 5
+            "movieName": "The Dark Knight",
+            "id": 5,
+            "year": "2008",
+            "cast": "[Christian Bale , Cillian Murphy ,Heath Ledger]",
+            "catId": 5
         },
         {
-            "title": "DDLJ",
-            "author": "nagender",
-            "createdAt": 1581839364657,
-            "id": 6
+            "movieName": "The Dark Knight Rises",
+            "id": 6,
+            "year": "2012",
+            "cast": "[Christian Bale , Cillian Murphy ,Heath Ledger]",
+            "catId": 6
+        },
+        {
+            "movieName": "M.S. Dhoni: The Untold Story",
+            "id": 7,
+            "year": "2016",
+            "cast": "[Anupam Kher, Sushant Singh Rajput , Disha, Kiara]",
+            "catId": 7
+        },
+        {
+            "movieName": "Into the Wild",
+            "id": 8,
+            "year": "2007",
+            "cast": "[Kristen Stewart, Jena Malone , Merritt Wever ]",
+            "catId": 8
+        },
+        {
+            "movieName": "Kuch Kuch Hota hai",
+            "id": 9,
+            "year": "1990",
+            "cast": "[Shah Rukh Khan, Kajol]",
+            "catId": 9
+        },
+        {
+            "movieName": "Kaho Na Pyar Hai",
+            "id": 10,
+            "year": "1992",
+            "cast": "[Hrithik Roshan, Amisha Patel]",
+            "catId": 10
+        },
+        {
+            "movieName": "Mohabbetein",
+            "id": 11,
+            "year": "1989",
+            "cast": "[Shahrukh Khan , Amitabh Bachhan, Aishwarya]",
+            "catId": 11
+        },
+        {
+            "movieName": "Dhamaal",
+            "id": 12,
+            "year": "1995",
+            "cast": "[Sanjay Dutt, Arshad Warsi]",
+            "catId": 12
+        },
+        {
+            "movieName": "Singham",
+            "id": 13,
+            "year": "1996",
+            "cast": "[Ajay Devgan, Kareena kapoor]",
+            "catId": 13
+        },
+        {
+            "movieName": "Yaadein",
+            "id": 14,
+            "year": "1986",
+            "cast": "Amitabh Bachhan",
+            "catId": 14
+        },
+        {
+            "movieName": "Chalte-Chalte",
+            "id": 15,
+            "year": "1982",
+            "cast": "Rishi Kapoor",
+            "catId": 15
+        },
+        {
+            "movieName": "Kahaani",
+            "id": 16,
+            "year": "1980",
+            "cast": "Vidya Balan",
+            "catId": 16
+        },
+        {
+            "movieName": "1920 Evil Return",
+            "id": 17,
+            "year": "2009",
+            "cast": "[Aftab Shivdasani, Tia Bajpai]",
+            "catId": 17
+        },
+        {
+            "movieName": "Bhoolbhulaiya",
+            "id": 18,
+            "year": "2006",
+            "cast": "[Akshay Kumar, Vidya Balan]",
+            "catId": 18
+        },
+        {
+            "movieName": "Wanted",
+            "id": 19,
+            "year": "2007",
+            "cast": "[Salman Khan, Aisha Takia]",
+            "catId": 19
+        },
+        {
+            "movieName": "Dhol",
+            "id": 20,
+            "year": "2003",
+            "cast": "[Kunal Khemu, tushar, rajpal yadav]",
+            "catId": 20
         },
         {
             "createdAt": 1581847747057,
@@ -170,6 +279,88 @@
             "createdAt": 1581847793897,
             "updatedAt": 1581847793897,
             "id": 9
+        }
+    ],
+    "cat": [
+        {
+            "genre": "Adventure ",
+            "Id": 1
+        },
+        {
+            "genre": "Animation",
+            "Id": 2
+        },
+        {
+            "genre": "Action",
+            "Id": 3
+        },
+        {
+            "genre": " Biography",
+            "Id": 4
+        },
+        {
+            "genre": " Thriller",
+            "Id": 5
+        },
+        {
+            "genre": " Sci-Fi",
+            "Id": 6
+        },
+        {
+            "genre": " Sport",
+            "Id": 7
+        },
+        {
+            "genre": " Adventure ",
+            "Id": 8
+        },
+        {
+            "genre": " Romantic ",
+            "Id": 9
+        },
+        {
+            "genre": " Romantic ",
+            "Id": 10
+        },
+        {
+            "genre": " Romantic ",
+            "Id": 11
+        },
+        {
+            "genre": " Comedy ",
+            "Id": 12
+        },
+        {
+            "genre": " Action ",
+            "Id": 13
+        },
+        {
+            "genre": " Romantic ",
+            "Id": 14
+        },
+        {
+            "genre": " Romantic ",
+            "Id": 15
+        },
+        {
+            "genre": " Romantic ",
+            "Id": 16
+        },
+        {
+            "genre": " Thriller ",
+            "Id": 17
+        },
+        {
+            "genre": " Comedy ",
+            "Id": 18
+        },
+        {
+            "genre": " Action ",
+            "Id": 19
+        },
+        {
+            "genre": " Romantic ",
+            "Id": 20
         }
     ],
     "tests": [
