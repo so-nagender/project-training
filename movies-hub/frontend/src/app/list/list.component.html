@@ -1,1 +1,29 @@
-<p>list works!</p>
+
+
+<table class="table">     
+    
+    <tr>
+        <th>Movie Name</th>
+        <th>Year </th>
+        <th>Cast</th>
+        <th>Classification</th>
+        <th>Rating</th> 
+        <th>Actions</th>             
+    </tr>
+    
+    <tbody>
+       
+        <tr *ngFor="let book of books">
+            <td>{{ book.movie_Name }}</td>
+            <td>{{ book.year }}</td>
+            <td>{{ book.cast }}</td>
+            <td>{{ book.classification }}</td>
+            <td>{{ book.rating }}</td>
+            <button class="buttonGap">Edit</button>   
+            <button>Delete</button>           
+        </tr>
+        
+    </tbody>
+</table>
+  
+  

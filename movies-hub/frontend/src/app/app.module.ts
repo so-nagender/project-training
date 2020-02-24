@@ -20,6 +20,12 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Interceptor } from '../app/interceptor';
 import { DataResolverService } from './data-resolver.service';
 
+
+
+
+
+
+
 const appRoutes: Routes = [
   { path: 'home', 
     component: HomeComponent,
@@ -31,7 +37,8 @@ const appRoutes: Routes = [
   { path: 'signup', component: SignupComponent},
   { path: 'details', component: DetailsComponent},
   { path: 'edit', component: EditmovieComponent},
-  { path: 'add', component: AddmovieComponent }
+  { path: 'add', component: AddmovieComponent },
+  { path: 'list', component: ListComponent }
 ];
 @NgModule({
   declarations: [
@@ -51,7 +58,9 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
+            
     FormsModule,
+    
     RouterModule.forRoot(
       appRoutes,
     ),
