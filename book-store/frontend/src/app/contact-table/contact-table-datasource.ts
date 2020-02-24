@@ -43,6 +43,7 @@ export class ContactTableDataSource extends DataSource<ContactTableItem> {
   data: ContactTableItem[] = EXAMPLE_DATA;
   paginator: MatPaginator;
   sort: MatSort;
+  filter: string;
 
   constructor() {
     super();

@@ -1,1 +1,411 @@
-{"posts":[{"id":1,"title":"json-server","author":"typicode"},{"title":"software developer","author":"nagender","id":2}],"comments":[{"id":1,"body":"some comment","postId":1}],"profile":[{"name":"nagender","password":"nene"},{"username":"dwewew","password":"sdsdsd"},{"name":"dwewew","password":"sdsdsd"},{"name":"dwewesdsdw","password":"sdsdsd"},{"name":"dwewesdsdw","password":"sdsdsd"},{"name":"dwewesdsdsdsdsdw","password":"sdsdsd"},{"name":"dwewesdsdsdsdsasdasddw","password":"sdsdsd"},{"name":"hello","password":"1234"},{"name":"monika","password":"12345678","createdAt":1582193122864,"updatedAt":1582193122864},{"name":"test","password":"12345678","createdAt":1582194137471,"updatedAt":1582194137471},{"name":"test1","password":"12345678","createdAt":1582198412281,"updatedAt":1582198412281},{"name":"test11","password":"12345678","createdAt":1582198789009,"updatedAt":1582198789009},{"name":"test21","password":"12345678","createdAt":1582198856345,"updatedAt":1582198856345},{"name":"book_test1@gmail.com","password":"123456","createdAt":1582199360124,"updatedAt":1582199360124},{"name":"123123@gmil.com","password":"12312455","createdAt":1582200034461,"updatedAt":1582200034461},{"name":"moni@gmail.com","password":"12344678","createdAt":1582200209229,"updatedAt":1582200209229},{"name":"fg23@gmil.com","password":"12345678","createdAt":1582201253131,"updatedAt":1582201253131},{"name":"12@gmail.com","password":"123456789","createdAt":1582203313495,"updatedAt":1582203313495},{"name":"1313123@gmail.com","password":"147258369","createdAt":1582203451270,"updatedAt":1582203451270},{"name":"test11@gmail.com","password":"123456789","createdAt":1582203497615,"updatedAt":1582203497615},{"name":"1h2@gmail.com","password":"123456","createdAt":1582203565581,"updatedAt":1582203565581},{"name":"1213123@gmil.com","password":"12345678","createdAt":1582204390059,"updatedAt":1582204390059},{"name":"wwww@ddf.df","password":"111122","createdAt":1582204473702,"updatedAt":1582204473702},{"name":"wewew@sdsd.sd","password":"111111","createdAt":1582204496622,"updatedAt":1582204496622},{"name":"wwwwewe@sdsds.sds","password":"111111","createdAt":1582204575752,"updatedAt":1582204575752}],"movies":[{"author":"nagender111","id":1},{"title":"DDLJ","author":"nagender","id":2},{"title":"DDLJ","author":"nagender","id":3},{"title":"DDLJ","author":"nagender","id":4},{"title":"DDLJ","author":"nagender","createdAt":1581839360624,"id":5},{"title":"DDLJ","author":"nagender","createdAt":1581839364657,"id":6},{"createdAt":1581847747057,"updatedAt":1581847747057,"id":7},{"createdAt":1581847781775,"updatedAt":1581847781775,"id":8},{"createdAt":1581847793897,"updatedAt":1581847793897,"id":9}],"tests":[{"id":1},{"id":2},{"movie-id":"1","name":"movie test","id":3}],"categories_books":[{"id":1},{"id":2},{"movie-id":"1","name":"movie test","id":3}]}
+{
+    "catogries-booksstore": [
+        {
+            "id": 1,
+            "title": "horror",
+            "description" : "horror cat"
+        },
+        {
+            "title": "adventure",
+            "id": 2,
+            "description" : "adventure cat"
+        },
+        {
+            "title": "fantasy",
+            "id": 3,
+            "description" : "fantasy cat"
+        }
+    ],
+    "books": [
+        {
+            "id":1,
+            "Book-Name": "Bird Box",
+            "Author-Name": "Josh Malerman",
+            "catogriesId": 1
+        },
+        {
+            "id":2,
+            "Book-Name": "Intercepts",
+            "Author-Name": "T. J. Payne",
+            "catogriesId": 1
+        },
+        {
+            "id":3,
+            "Book-Name": "The Amityville Horror",
+            "Author-Name": "Jay Anson",
+            "catogriesId": 1
+        },
+        {
+            "id":4,
+            "Book-Name": "The Exorcist",
+            "Author-Name": "William Peter Blatty",
+            "catogriesId": 1
+        },
+        {
+            "id":5,
+            "Book-Name": "The Haunting of Hill House",
+            "Author-Name": "Shirley Jackson",
+            "catogriesId": 1
+        },
+        {
+            "id":6,
+            "Book-Name": "Dracula",
+            "Author-Name": "Bram Stoker",
+            "catogriesId": 1
+        },
+        {
+            "id":7,
+            "Book-Name": "Frankenstein",
+            "Author-Name": "Mary Shelley",
+            "catogriesId": 1
+        },
+        {
+            "id":8,
+            "Book-Name": "The Shining",
+            "Author-Name": "Stephen King",
+            "catogriesId": 1
+        },
+        {
+            "id":9,
+            "Book-Name": "Beloved",
+            "Author-Name": "Toni Morrison",
+            "catogriesId": 1
+        },
+        {
+            "id":10,
+            "Book-Name": "Rebecca",
+            "Author-Name": "Daphne du Maurier",
+            "catogriesId": 1
+        },
+        {
+            "id":11,
+            "Book-Name": "The Odyssey",
+            "Author-name": "by Homer",
+            "catogriesId": 2
+        },
+        {
+            "id":12,
+            "Book-Name": "Gulliver's Travels",
+            "Author-name": "Jonathan Swift",
+            "catogriesId": 2
+        },
+        {
+            "id":13,
+            "Book-Name": "Moby-Dick",
+            "Author-name": "Herman Melville",
+            "catogriesId": 2
+        },
+        {
+            "id":14,
+            "Book-Name": "Treasure Island",
+            "Author-name": " Robert Louis Stevenson",
+            "catogriesId": 2
+        },
+        {
+            "id":15,
+            "Book-Name": "King Solomon's Mines",
+            "Author-name": "H. Rider Haggard",
+            "catogriesId": 2
+        },
+        {
+            "id":16,
+            "Book-Name": "The Adventures of Huckleberry Finn",
+            "Author-name": "Mark Twain",
+            "catogriesId": 2
+        },
+        {
+            "id":17,
+            "Book-Name": "Heart of Darkness",
+            "Author-name": " Joseph Conrad",
+            "catogriesId": 2
+        },
+        {
+            "id":18,
+            "Book-Name": "The Call of the Wild",
+            "Author-name": "Jack London",
+            "catogriesId": 2
+        },
+        {
+            "id":19,
+            "Book-Name": "The Sheltering Sky",
+            "Author-name": " Paul Bowles",
+            "catogriesId": 2
+        },
+        {
+            "id":20,
+            "Book-Name": "The Road",
+            "Author-name": "Cormac McCarthy",
+            "catogriesId": 2
+        },
+        {
+            "id": 21,
+            "Book-Name": "The Golem and the Djinni",
+            "Author-Name": "Helene Wecker",
+            "catogriesId": 3
+        },
+        {
+            "id": 22,
+            "Book-Name": "Dune",
+            "Author-Name": "Frank Herbert",
+            "catogriesId": 3
+        },
+        {
+            "id": 23,
+            "Book-Name": "The Dark Tower",
+            "Author-Name": "Stephen King",
+            "catogriesId": 3
+        },
+        {
+            "id": 24,
+            "Book-Name": "A Game of Thrones",
+            "Author-Name": "George R.R. Martin",
+            "catogriesId": 3
+        },
+        {
+            "id": 25,
+            "Book-Name": "Good Omens",
+            "Author-Name": "Terry Pratchett and Neil Gaiman",
+            "catogriesId": 3
+        },
+        {
+            "id": 26,
+            "Book-Name": "Rivers of London",
+            "Author-Name": "Ben Aaronovitch",
+            "catogriesId": 3
+        },
+        {
+            "id": 27,
+            "Book-Name": "The Wheel of Time series",
+            "Author-Name": "Robert Jordan",
+            "catogriesId": 3
+        },
+        {
+            "id": 28,
+            "Book-Name": "The Gormenghast series",
+            "Author-Name": "Mervyn Peake",
+            "catogriesId": 3
+        },
+        {
+            "id": 29,
+            "Book-Name": "Northern Lights",
+            "Author-Name": "Philip Pullman",
+            "catogriesId": 3
+        },
+        {
+            "id": 40,
+            "Book-Name": "The Book of Dust",
+            "Author-Name": "Philip Pullman",
+            "catogriesId": 3
+        }
+    ],
+    "profile": [
+        {
+            "name": "nagender",
+            "password": "nene"
+        },
+        {
+            "username": "dwewew",
+            "password": "sdsdsd"
+        },
+        {
+            "name": "dwewew",
+            "password": "sdsdsd"
+        },
+        {
+            "name": "dwewesdsdw",
+            "password": "sdsdsd"
+        },
+        {
+            "name": "dwewesdsdw",
+            "password": "sdsdsd"
+        },
+        {
+            "name": "dwewesdsdsdsdsdw",
+            "password": "sdsdsd"
+        },
+        {
+            "name": "dwewesdsdsdsdsasdasddw",
+            "password": "sdsdsd"
+        },
+        {
+            "name": "hello",
+            "password": "1234"
+        },
+        {
+            "name": "monika",
+            "password": "12345678",
+            "createdAt": 1582193122864,
+            "updatedAt": 1582193122864
+        },
+        {
+            "name": "test",
+            "password": "12345678",
+            "createdAt": 1582194137471,
+            "updatedAt": 1582194137471
+        },
+        {
+            "name": "test1",
+            "password": "12345678",
+            "createdAt": 1582198412281,
+            "updatedAt": 1582198412281
+        },
+        {
+            "name": "test11",
+            "password": "12345678",
+            "createdAt": 1582198789009,
+            "updatedAt": 1582198789009
+        },
+        {
+            "name": "test21",
+            "password": "12345678",
+            "createdAt": 1582198856345,
+            "updatedAt": 1582198856345
+        },
+        {
+            "name": "book_test1@gmail.com",
+            "password": "123456",
+            "createdAt": 1582199360124,
+            "updatedAt": 1582199360124
+        },
+        {
+            "name": "123123@gmil.com",
+            "password": "12312455",
+            "createdAt": 1582200034461,
+            "updatedAt": 1582200034461
+        },
+        {
+            "name": "moni@gmail.com",
+            "password": "12344678",
+            "createdAt": 1582200209229,
+            "updatedAt": 1582200209229
+        },
+        {
+            "name": "fg23@gmil.com",
+            "password": "12345678",
+            "createdAt": 1582201253131,
+            "updatedAt": 1582201253131
+        },
+        {
+            "name": "12@gmail.com",
+            "password": "123456789",
+            "createdAt": 1582203313495,
+            "updatedAt": 1582203313495
+        },
+        {
+            "name": "1313123@gmail.com",
+            "password": "147258369",
+            "createdAt": 1582203451270,
+            "updatedAt": 1582203451270
+        },
+        {
+            "name": "test11@gmail.com",
+            "password": "123456789",
+            "createdAt": 1582203497615,
+            "updatedAt": 1582203497615
+        },
+        {
+            "name": "1h2@gmail.com",
+            "password": "123456",
+            "createdAt": 1582203565581,
+            "updatedAt": 1582203565581
+        },
+        {
+            "name": "1213123@gmil.com",
+            "password": "12345678",
+            "createdAt": 1582204390059,
+            "updatedAt": 1582204390059
+        },
+        {
+            "name": "wwww@ddf.df",
+            "password": "111122",
+            "createdAt": 1582204473702,
+            "updatedAt": 1582204473702
+        },
+        {
+            "name": "wewew@sdsd.sd",
+            "password": "111111",
+            "createdAt": 1582204496622,
+            "updatedAt": 1582204496622
+        },
+        {
+            "name": "wwwwewe@sdsds.sds",
+            "password": "111111",
+            "createdAt": 1582204575752,
+            "updatedAt": 1582204575752
+        }
+    ],
+    "movies": [
+        {
+            "author": "nagender111",
+            "id": 1
+        },
+        {
+            "title": "DDLJ",
+            "author": "nagender",
+            "id": 2
+        },
+        {
+            "title": "DDLJ",
+            "author": "nagender",
+            "id": 3
+        },
+        {
+            "title": "DDLJ",
+            "author": "nagender",
+            "id": 4
+        },
+        {
+            "title": "DDLJ",
+            "author": "nagender",
+            "createdAt": 1581839360624,
+            "id": 5
+        },
+        {
+            "title": "DDLJ",
+            "author": "nagender",
+            "createdAt": 1581839364657,
+            "id": 6
+        },
+        {
+            "createdAt": 1581847747057,
+            "updatedAt": 1581847747057,
+            "id": 7
+        },
+        {
+            "createdAt": 1581847781775,
+            "updatedAt": 1581847781775,
+            "id": 8
+        },
+        {
+            "createdAt": 1581847793897,
+            "updatedAt": 1581847793897,
+            "id": 9
+        }
+    ],
+    "tests": [
+        {
+            "id": 1
+        },
+        {
+            "id": 2
+        },
+        {
+            "movie-id": "1",
+            "name": "movie test",
+            "id": 3
+        }
+    ],
+    "categories_books": [
+        {
+            "id": 1
+        },
+        {
+            "id": 2
+        },
+        {
+            "movie-id": "1",
+            "name": "movie test",
+            "id": 3
+        }
+    ]
+}

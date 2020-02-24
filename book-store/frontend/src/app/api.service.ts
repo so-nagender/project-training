@@ -23,11 +23,17 @@ export class ApiService {
       localStorage.setItem('accessToken', data.accessToken);
       
       });
-    }
-    viewdata(){
+  }
+  viewdata(){
       const teams$ = this.http.get(this.url)
       return teams$;
   
-    }
+  }
+
+  getBook(){
+    const url1 = `/api/books`;
+    const book$ = this.http.get(url1);
+    return book$;
+  }
 }
   

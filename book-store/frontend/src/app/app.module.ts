@@ -16,10 +16,12 @@ import { ContactTableComponent } from './contact-table/contact-table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import {MatInputModule} from '@angular/material/input';
 
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpResponse } from '@angular/common/http';
 import { TokenInterceptor } from './TokenInterceptor';
-import { DashboardComponent } from './dashboard/dashboard.component'
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { FooterComponent } from './footer/footer.component'
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     ContactListComponent,
     FilterPipe,
     ContactTableComponent,
-    DashboardComponent
+    DashboardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,8 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     MatPaginatorModule,
     MatSortModule,
     HttpClientModule,
+    MatInputModule
+   
    
   ],
   providers: [{
