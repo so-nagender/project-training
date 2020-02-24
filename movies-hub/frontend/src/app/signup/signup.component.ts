@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
 import { ApiserviceService } from '../apiservice.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MustMatch } from '../match';
 
 @Component({
@@ -14,7 +14,7 @@ export class SignupComponent implements OnInit {
   email: any;
   password: any;
   submitted: boolean = false;
-  constructor( private formBuilder: FormBuilder, private myservice: ApiserviceService, private activatedRoute: ActivatedRoute) { 
+  constructor(private router: Router, private formBuilder: FormBuilder, private myservice: ApiserviceService, private activatedRoute: ActivatedRoute) { 
     this.checkoutForm = this.formBuilder.group({
       Name: new FormControl ('', Validators.required),
       email: new FormControl ('', [Validators.required, Validators.email]),
@@ -43,7 +43,10 @@ onSubmit() {
     return;
   } else {
     // if Form is valid then it will post the data into the JSON server...
-    this.myservice.signupData(obj).subscribe(res =>{console.log(res);localStorage.setItem("accessToken", res.accessToken);});
+    this.myservice.signupData(obj).subscribe(res =>{
+      localStorage.setItem("accessToken", res.accessToken);
+      this.router.navigate(['/home']);
+  });
   }
 }
 }
