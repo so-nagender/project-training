@@ -8,13 +8,25 @@ import { Observable } from 'rxjs';
 export class ApiserviceService {
 
   constructor(private http: HttpClient) { }
-  getUsers(): Observable<any> {
-    return this.http.get('api/movies')
+  getMovies(): Observable<any> {
+    return this.http.get('api/movies?_expand=cat')
   }
   signupData(obj):Observable<any> {
     return this.http.post<any>('/api/signup',obj);
   }
   lognIn(obj) {
     return this.http.post<any>('api/login',obj);
+  }
+  updateMovie(id, obj): Observable<any> {
+    const add = `/api/movies/${id}`;
+    return this.http.put<any>(add, obj);
+  }
+  deleteMovie(id) {
+    const add = `/api/movies/${id}`;
+    return this.http.delete(add);
+  }
+  getSingleElementById(id): Observable<any> {
+    const address = `/api/movies/${id}?_expand=cat`;
+    return this.http.get(address);
   }
 }
