@@ -1,4 +1,4 @@
-<div class="container">
+ <div class="container">
   
 <div class="row mt-4">
   <div class="col-lg-9">
@@ -27,198 +27,80 @@
   <button class="btn mt-3" style="float: right; font-size: 15px; margin-right:40px" [routerLink]="['addform']" type="submit">ADD CATEGORY</button>
 </div>
  </div>
-
-
-  <table class="table" style="border: solid black 2px;margin-left: 5px;">
-    <thead>
-      <tr>
+ <table class="table" style="border: solid black 2px;margin-left: 5px;">
+  <thead>
+    <tr>
+      <th colspan="4">Search :
+        <input type="text" [(ngModel)]="search">
+      </th>
+    </tr>
+    <tr>
+   
         <th scope="col" class="font1">LIST OF ITEMS</th>
         <th scope="col" class="font1">RATINGS</th>
         <th scope="col" class="font1">CHOOSE BRAND</th>
         <th scope="col" class="font1">ITEMS ARE</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="font2">Microwave oven.<br>
-          <button type="submit" class="btn ">ADD TO CART</button>
-        </td>
-
-        <td>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
-
-        </td>
-        <td>
-          <select id="BRAND" name="brands" form="brandform">
-            <option value="L.G">L.G</option>
-            <option value="SONY">SONY</option>
-            <option value="SAMSUNG">SAMSUNG</option>
-          </select>
-        </td>
-        <td>
-          <div class="card mb-3" style="max-width: 540px;">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                <img src="../../assets/images/download (1).jfif" class="card-img" >
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Microwave oven</h5>
-                  <p class="card-text">An oven is a thermally insulated chamber used for the heating, baking, or drying of a substance, and most commonly used for cooking. Kilns and furnaces are special-purpose ovens</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td class="font2">Gas fireplace<br>
-          <button type="submit" class="btn ">ADD TO CART</button>
-        </td>
-        <td>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
-
-        </td>
-        <td>
-          <select id="BRAND" name="brands" form="brandform">
-            <option value="L.G" style="padding: 20px;">L.G</option>
-            <option value="SONY">SONY</option>
-            <option value="SAMSUNG">SAMSUNG</option>
-          </select>
-        </td>
-        <td>
-          <div class="card mb-3" style="max-width: 540px;">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                <img src="../../assets/images/download (2).jfif" class="card-img" >
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Gas fireplace</h5>
-                  <p class="card-text">An oven is a thermally insulated chamber used for the heating, baking, or drying of a substance, and most commonly used for cooking. Kilns and furnaces are special-purpose ovens</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td class="font2">Refrigerators
-          <br>
-          <button type="submit" class="btn ">ADD TO CART</button>
-        </td>
-        <td>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
-
-        </td>
-        <td>
-          <select id="BRAND" name="brands" form="brandform">
-            <option value="L.G">L.G</option>
-            <option value="SONY">SONY</option>
-            <option value="SAMSUNG">SAMSUNG</option>
-          </select>
-        </td>
-        <td>
-          <div class="card mb-3" style="max-width: 540px;">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                <img src="../../assets/images/download (3).jfif" class="card-img" >
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Refrigerators</h5>
-                  <p class="card-text">An oven is a thermally insulated chamber used for the heating, baking, or drying of a substance, and most commonly used for cooking. Kilns and furnaces are special-purpose ovens</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td class="font2">Laptop<br>
-          <button type="submit" class="btn ">ADD TO CART</button>
-        </td>
-        <td>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
-
-        </td>
-        <td>
-          <select id="BRAND" name="brands" form="brandform">
-            <option value="L.G">L.G <img src="../../assets/images/lg.svg"></option>
-            <option value="SONY">SONY <img src="../../assets/images/sony.svg"></option>
-            <option value="SAMSUNG">SAMSUNG <img src="../../assets/images/samsung.svg"></option>
-          </select>
-        </td>
-        <td>
-          <div class="card mb-3" style="max-width: 540px;">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                <img src="../../assets/images/download (4).jfif" class="card-img" >
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Laptop</h5>
-                  <p class="card-text">An oven is a thermally insulated chamber used for the heating, baking, or drying of a substance, and most commonly used for cooking. Kilns and furnaces are special-purpose ovens</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td class="font2">Electric water heater tan<br>
-          <button type="submit" class="btn ">ADD TO CART</button>
-        </td>
-        <td>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
-
-        </td>
-        <td>
-          <select id="BRAND" name="brands" form="brandform">
-            <option value="L.G">L.G</option>
-            <option value="SONY">SONY</option>
-            <option value="SAMSUNG">SAMSUNG</option>
-          </select>
-        </td>
-        <td>
-          <div class="card mb-3" style="max-width: 540px;">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                <img src="../../assets/images/download (5).jfif" class="card-img" >
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Electric water heater tan</h5>
-                  <p class="card-text">An oven is a thermally insulated chamber used for the heating, baking, or drying of a substance, and most commonly used for cooking. Kilns and furnaces are special-purpose ovens</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data_items of  items| filterdata: search : 'list_of_items'">
+      <td>{{data_items .list_of_items}}</td>
+      <td>{{data_items .ratings}}</td>
+      <td>{{data_items .choose_brand}}</td>
+      <td>{{data_items .items_are}}</td>
+    </tr>
+  </tbody>
+  
   </table>
+</div>  
 
-</div>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+<!-- <table>
+<thead>
+  <tr>
+    <th colspan="4">Search :
+      <input type="text" [(ngModel)]="search">
+    </th>
+  </tr>
+  <tr>
+ 
+    <th style="width:60px;max-width:100px;">Name</th>
+    <th style="width:60px;max-width:50px;">rating</th>
+    <th style="width:60px;max-width:50px;">age</th>
+    <th style="width:60px;max-width:50px;">g</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let data_items of  items| filterdata: search : 'list_of_items'">
+    <td>{{data_items .list_of_items}}</td>
+    <td>{{data_items .ratings}}</td>
+    <td>{{data_items .choose_brand}}</td>
+    <td>{{data_items .items_are}}</td>
+  </tr>
+</tbody>
+
+</table>  -->

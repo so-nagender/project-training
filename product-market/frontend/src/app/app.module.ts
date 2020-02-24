@@ -21,7 +21,9 @@ import {TokenInterceptor} from './interceptor'
 import { ResolverService } from './resolver.service';
 import { AddformComponent } from './addform/addform.component';
 import { ListComponent } from './list/list.component';
-import { AdditemComponent } from './additem/additem.component'
+import { AdditemComponent } from './additem/additem.component';
+import { CartComponent } from './cart/cart.component';
+import { FilterdataPipe } from './filterdata.pipe'
 
 const routes: Routes = [
   { path: "home",
@@ -70,6 +72,8 @@ const routes: Routes = [
     AddformComponent,
     ListComponent,
     AdditemComponent,
+    CartComponent,
+    FilterdataPipe,
 
 
   ],
