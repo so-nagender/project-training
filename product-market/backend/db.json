@@ -31,18 +31,6 @@
   ],
   "product-items": [
     {
-      "id": 1,
-      "categoryId": 4,
-      "name": "laptop",
-      "rating": 4
-    },
-    {
-      "id": 4,
-      "categoryId": 4,
-      "name": "mobiles",
-      "rating": 3
-    },
-    {
       "name": "microwave",
       "categoryId": "4",
       "rating": "3",
@@ -68,6 +56,24 @@
       "createdAt": 1582525578632,
       "updatedAt": 1582525578632,
       "id": 7
+    },
+    {
+      "name": "heater",
+      "categoryId": "4",
+      "rating": "4",
+      "description": "this is a nice product",
+      "createdAt": 1582536945242,
+      "updatedAt": 1582536945242,
+      "id": 8
+    },
+    {
+      "name": "laptop",
+      "categoryId": "4",
+      "rating": "5",
+      "description": "gdffhjgd",
+      "createdAt": 1582540556481,
+      "updatedAt": 1582540556481,
+      "id": 9
     }
   ],
   "product-cart" : [
