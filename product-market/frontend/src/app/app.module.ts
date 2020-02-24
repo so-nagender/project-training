@@ -55,7 +55,12 @@ const routes: Routes = [
         {
         path: "addform",
         component: AddformComponent,
-        }] 
+        },
+        {
+          path: "cart",
+          component: CartComponent,
+        }
+      ] 
     },
     {
       path: 'items/:id',
@@ -69,7 +74,12 @@ const routes: Routes = [
         {
           path: "additem",
           component: AdditemComponent,
-        }]
+        },
+        {
+          path: "cart",
+          component: CartComponent,
+        }
+      ]
     }
 ];
 

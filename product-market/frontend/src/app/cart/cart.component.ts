@@ -1,15 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-function item(value)
-{
-  this.value=value;
-}
-item.prototype.add =function(){
-  this.value ++;
-}
-item.prototype.remove =function(){
-  
-  this.value --;
-}
+import {ProductcatchService} from '../productcatch.service'
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -18,24 +9,32 @@ item.prototype.remove =function(){
 })
 export class CartComponent implements OnInit {
 
-  dress = { value:0 };
-
-  constructor() { }
- 
+  constructor(private serve : ProductcatchService,private activatedRoute: ActivatedRoute,private router : Router) { }
+  datas : any
+  counter : number = 0; 
+  totalCost : number = 0;
+  
   ngOnInit() {
+    this.serve.getCart().subscribe((res) => 
+    {this.datas = res;
+    this.datas.forEach((item) => {
+      item.rating = parseInt(item.rating); 
+      this.counter = this.counter + 1; 
+      this.totalCost = item.cost + this.totalCost
+    });
+  })  
   }
-  add(item)
-  {
-   item.value ++;
-  }
-  remove(item)
-  { 
-    if (item.value>0)
-    {
-    item.value --;
+
+  onClose(){
+    if(this.activatedRoute.snapshot['_routerState']._root.children[0].value.params.id){
+      const id = this.activatedRoute.snapshot['_routerState']._root.children[0].value.params.id
+      const url = `items/${id}`
+      this.router.navigate([url]); 
     }
     else{
-      return;
+      console.log("2");
+      this.router.navigate(['/categories'],{relativeTo :this.activatedRoute})
     }
   }
+  
   }

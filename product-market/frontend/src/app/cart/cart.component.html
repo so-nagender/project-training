@@ -1,26 +1,24 @@
-<div class="container mt-4">
+<div class="container" style="margin-top: 85px;">
     <div class="row">
-        <div class="col-lg-7">
+        <div>
             <table class="table" style="border: solid black 2px;">
                 <thead>
                     <tr>
-                        <th scope="col" style="font-size: 30px;background-color: #f88288;border: solid black 2px;">My Cart</th>
+                        <th scope="col" style="font-size: 30px;background-color: #f88288;border: solid black 2px;">My Cart 
+                            <button type="button" class="close" aria-label="Close" (click) = "onClose()">
+                            <span aria-hidden="true">&times;</span>
+                        </button></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <div class="row ">
-                            <div class="col-lg-4">
+                        <div class="row p-2" style="border: solid black 2px; margin :8px;box-sizing :content-box;" *ngFor="let data of datas">
+                            <div class="col-lg-5" style="text-align: center;">
                                 <img src="../../assets/images/eeeuygyxyaka3kcwqgfj.jpg" class="images">
-                                <p style="margin-left: 49px;
-                                margin-bottom: 3px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 18px;">QUANTITY</p>
-                                <button (click)="remove(dress)" style="margin-left: 53px;">-</button>
-                                {{dress.value}}
-                                <button (click)="add(dress)">+</button>
+                                <p class="m-2" style="margin-bottom: 3px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 18px;">QUANTITY : 1</p>
                             </div>
-                            <div class="col-lg-8">
-
-                                <h5 class="card-title" style="margin-top: 25px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 30px;">Women A-line Pink Dress</h5>
+                            <div class="col-lg-7">
+                                <h5 class="card-title" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 30px;">{{data.name}}</h5>
                                 <p class="card-text" style="font-size: 20px;">Size: S, Size:10</p>
                                 <p class="card-text"><small class="text-muted" style="font-size: 15px;">Seller: RetailNet</small></p>
                                 <p class="card-text" style="font-size: 20px;">
@@ -30,16 +28,16 @@
                                     <span class="fa fa-star"></span>
                                     <span class="fa fa-star"></span>
                                 </p>
-                                <p class="card-text" style="font-size: 13px;font-weight: 500;">
-                                    A dress (also known as a frock or a gown) is a garment traditionally worn by women or girls consisting of a skirt with an attached bodice (or a matching bodice giving the effect of a one-piece garment.
-                                </p>
+                                <p class="card-text" style="font-size: 13px;font-weight: 500;text-align: justify;">{{data.description}}</p>
+                                
 
                             </div>
                         </div>
 
                     </tr>
                 </tbody>
-                <p style="margin-left: 45px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 20px;margin-bottom: -1rem;"> total items: {{dress.value }}</p>
+                <p style="padding-left: 35px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 20px;margin-bottom: -1rem;">Total Items : {{counter}}</p>
+                <p class="pt-2" style="padding-left: 35px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 20px;margin-bottom: -1rem;">Total Cost : {{totalCost}}</p>
                 <button class="btn mt-4" style="float: right; font-size: 15px; margin:10px" type="submit">Place
                     Order</button>
             </table>

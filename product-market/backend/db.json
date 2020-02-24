@@ -70,6 +70,22 @@
       "id": 7
     }
   ],
+  "product-cart" : [
+    {
+      "id" : 1,
+      "name" : "Women A-line Pink Dress",
+      "rating" : 3,
+      "cost" : 1000,
+      "description" : "A dress (also known as a frock or a gown) is a garment traditionally worn by women or girls consisting of a skirt with an attached bodice (or a matching bodice giving the effect of a one-piece garment."
+    },
+    {
+      "id" : 1,
+      "name" : "Women A-line Pink Dress",
+      "rating" : 3,
+      "cost" : 1000,
+      "description" : "A dress (also known as a frock or a gown) is a garment traditionally worn by women or girls consisting of a skirt with an attached bodice (or a matching bodice giving the effect of a one-piece garment."
+    }
+  ],
   "posts": [
     {
       "id": 1,

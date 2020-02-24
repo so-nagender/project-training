@@ -39,7 +39,7 @@
           <tr *ngFor="let data of datas">
               <td class="font2">{{data.name}} </td>
               <td >
-                  <span class="fa fa-star checked" *ngFor="let star of [].constructor(data.rating)"></span>
+                  <span class="fa fa-star checked" *ngFor="let star of [].constructor(data.rating);let i of index"></span>
                   <span class="fa fa-star" *ngFor="let star of [].constructor(5 - data.rating)"></span>
               </td>
               <td>
@@ -72,7 +72,7 @@
   </table>
 </div>
 
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
