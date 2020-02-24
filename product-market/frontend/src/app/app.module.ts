@@ -24,6 +24,8 @@ import { ListComponent } from './list/list.component';
 import { AdditemComponent } from './additem/additem.component';
 import { CartComponent } from './cart/cart.component';
 import { FilterdataPipe } from './filterdata.pipe'
+import { ItemviewComponent } from './itemview/itemview.component';
+import { ResolverItemsService} from './resolver-items.service'
 
 const routes: Routes = [
   { path: "home",
@@ -53,7 +55,22 @@ const routes: Routes = [
         {
         path: "addform",
         component: AddformComponent,
-        }] }, 
+        }] 
+    },
+    {
+      path: 'items/:id',
+      component :ItemviewComponent,
+      resolve: { data : ResolverItemsService },
+      children : [
+        {
+          path: "",
+          component: SidebarComponent,
+        },
+        {
+        path: "addform",
+        component: AddformComponent,
+        }]
+    }
 ];
 
 @NgModule({
@@ -74,6 +91,7 @@ const routes: Routes = [
     AdditemComponent,
     CartComponent,
     FilterdataPipe,
+    ItemviewComponent,
 
 
   ],

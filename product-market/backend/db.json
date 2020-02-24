@@ -1,10 +1,6 @@
 {
   "product-category": [
     {
-      "id": 2,
-      "name": "groceries"
-    },
-    {
       "name": "fashion",
       "description": "Main consumer electronics products include radio receivers, television sets, MP3 players",
       "createdAt": 1582205272823,
@@ -12,11 +8,19 @@
       "id": 3
     },
     {
-      "name": "raju",
-      "description": "chutiye",
-      "createdAt": 1582205399256,
-      "updatedAt": 1582205399256,
+      "name": "ELECTRONICS",
+      "description": "LAPTOP,FVDSBSGF",
+      "createdAt": 1582267088971,
+      "updatedAt": 1582267088971,
       "id": 4
+    }
+  ],
+  "product-items": [
+    {
+      "id": 1,
+      "categoryId": 4,
+      "name": "laptop",
+      "rating" : 4
     },
     {
       "name": "shiwani",
