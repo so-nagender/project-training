@@ -29,9 +29,7 @@ export class LoginComponent implements OnInit {
     
   }
   onSubmit(form) {
-    this.api.getbookdetails(this.form.value.email, this.form.value.password)
-    this.routes.navigate(['\dashboard'])
-    
+    this.api.postlogin(this.form.value.email, this.form.value.password)
   }
   viewData()
   {

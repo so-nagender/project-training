@@ -1,6 +1,8 @@
 .padding_top{
 
     padding-top: 200px;
+    font-family: 'Pacifico' ;
+    font-size: 22px;
 }
 .border {
     -moz-box-shadow: 0 0 10px #ccc;
@@ -26,4 +28,46 @@ tr{
 }
 .padding_left{
     margin-left: 10px;
+}
+.cat_name{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+div.submit{
+  right: 1px;
+  bottom: 0%;
+  position: absolute;
+}
+div.close{
+    right: 1px;
+    top: 0%;
+    position: absolute;
+ 
+   
+
+
+}
+div.reset{
+    right: 1px;
+    bottom: 50%;
+    position: absolute;
+}
+.form-row{
+    float: left;
+}
+button[type=submit], [type=reset], [type=close] {
+    background-color:transparent;
+
+ 
+    box-sizing: border-box;
+    cursor:pointer;
+
+}
+
+.imageinvalid img{
+
+    width: 30%;
+}
+.red{
+    color: red;
 }

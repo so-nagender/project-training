@@ -1,0 +1,94 @@
+.padding-top-200px{
+    padding-top: 200px;
+}
+.padding-left-200px{
+
+    padding-left: 300px;
+}
+.line{
+    border: 1px solid grey;
+    margin-top: 200px;
+   
+}
+.books-section{
+    padding-top: 100px;
+
+}
+img{
+    height: 100%;
+
+    
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    padding: 5%;
+    text-align: center;
+  }
+  
+  #slideshow {
+    overflow: hidden;
+    height: 510px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .slide-wrapper {
+    width: 3330px;
+    -webkit-animation: slide 18s ease infinite;
+   
+  }
+  
+  .slide {
+    float: left;
+    height: 510px;
+    width: 1110px;
+    position: relative;
+  }
+  
+  .slide:nth-child(1) {
+    
+
+    background-size: unset;
+  }
+  
+  .slide:nth-child(2) {
+
+    
+    background-size: unset;
+
+  }
+  
+  .slide:nth-child(3) {
+
+ 
+    background-size: unset;
+
+
+  }
+  
+  .slide-number {
+    
+    text-align: center;
+    padding-left: 45%;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 15%;
+    width: 100%;
+    left: 0;
+    
+  }
+  h1{
+    color: white;
+    z-index: 1;
+    font-size: 75px;
+    
+  }
+  @-webkit-keyframes slide {
+    10% {margin-left: 0px;}
+    20% {margin-left: -1110px;}
+    30% {margin-left: -2220px;}
+   
+    
+  }
+  

@@ -5,7 +5,7 @@
       <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
     </div>
   
-    <table class="table" *ngIf="(cars | filter: searchText).length > 0; else noResults">
+    <table class="table" *ngIf="(book | filter: searchText).length > 0; else noResults">
       <colgroup>
         <col width="5%">
         <col width="*">
@@ -21,11 +21,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let car of cars | filter: searchText  ; let i = index">
+        <tr *ngFor="let books of book | filter: searchText  ; let i = index">
           <th scope="row">{{i + 1}}</th>
-          <td>{{car.brand}}</td>
-            <td>{{car.model}}</td>
-        <td>{{car.year}}</td>
+          <td>{{book.Book-Name}}</td>
+            <td>{{book.Author-name}}</td>
+        <td>xyz</td>
         </tr>
       </tbody>
     </table>

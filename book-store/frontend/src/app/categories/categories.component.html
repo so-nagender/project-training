@@ -1,20 +1,50 @@
 <div class="container padding_top">
     <div class="row">
-      <div class="col-sm-8 border">col-sm-8</div>
-    
-    </div>
-      <div class="row">
-        <div class="col-sm-4 border plus_image"(click)="toggle_form()">col-sm-8</div>
-        <div class="col-sm-7 border padding_left" *ngIf="view_form" #category_form>
-
+      <div class="col-sm-4">Category Name</div><div class="col-sm">Description</div>
+      <div class="imageinvalid" *ngIf="!Hascatdata"><img src ="../../assets/images/support (1).svg">
+      <p class='red'>Server Error</p></div>
+        <div class="col-sm-8 border " *ngFor="let data of categoryFormdata">
           
-
-
-
-
+          <div class="row"><div class="col-sm-4 "> {{data.title}}</div>
+          <div class="col-sm "> <p>{{data.description}} </p> </div>
         </div>
-      </div>
-      </div>
+        
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 border plus_image"(click)="toggle_form()" style="height:200px"></div>
+        <div class="col-sm-4 border padding_left" style="height:200px" *ngIf="view_form" #category_form>
+            <form name="categoryForm" [formGroup]="categoryForm" (ngSubmit)="onSubmit(categoryForm)" class="container">
+                <div class="form-row">
+                    <div class="col">
+                        <div class="cat_name">
+                          <input type="text" id="catname"  class="form-control" formControlName="bookname" [ngClass]="{'is-invalid': categoryForm.get('bookname').touched && categoryForm.get('bookname').invalid}" placeholder="Book Name">
+                            <div class="invalid-feedback">
+                              <div>Book Name is Required</div>
+                            </div>
+                        </div>
+                        <div>
+                          <textarea  rows="3" cols="3" id="catdescription" class="form-control" formControlName="bookdescription" [ngClass]="{'is-invalid': categoryForm.get('bookdescription').touched && categoryForm.get('bookdescription').invalid}" placeholder="Book Description"></textarea>
+                            <div class="invalid-feedback">
+                              <div>Dscription is Required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                      <div class="close ">
+                        <button type="close">close</button>
+                      </div>
+                     
+                      <div class="submit"> 
+                        <button type="submit" [disabled]="categoryForm.invalid">submit</button>
+                      </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
     
 
   

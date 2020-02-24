@@ -23,6 +23,7 @@ import { TokenInterceptor } from './TokenInterceptor';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FooterComponent } from './footer/footer.component'
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +50,7 @@ import { FooterComponent } from './footer/footer.component'
     HttpClientModule,
     MatInputModule
    
+
    
   ],
   providers: [{
