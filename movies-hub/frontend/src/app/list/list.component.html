@@ -20,10 +20,10 @@
             <td>{{ book.cast }}</td>
             <td>{{ book.classification }}</td>
             <td>{{ book.rating }}</td>
-            <button class="buttonGap">Edit</button>   
-            <button>Delete</button>           
+            <button>View</button> 
+            <button class="mx-2">Edit</button>    
+            <button (click)="delete(m.id)">Delete</button>           
         </tr>
-        
     </tbody>
 </table>
 <button routerLink='/details'>Back</button>

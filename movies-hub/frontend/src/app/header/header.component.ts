@@ -19,8 +19,3 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/']);
   }
 }
-
-// onLogout(){
-//   localStorage.removeItem("accessToken");
-//   this.router.navigate(['/home']);
-// }

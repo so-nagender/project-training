@@ -1,5 +1,7 @@
-
 import {Component, OnInit} from '@angular/core';
+import { ApiserviceService } from '../apiservice.service';
+import { ActivatedRoute } from '@angular/router';
+
 export interface Book {
   movie_Name: string;
   year: number;
@@ -73,13 +75,24 @@ export interface Book {
 })
 export class ListComponent implements OnInit {
   books=books;
-  constructor() { }
+  movies: any;
+  movieID: string;
+  constructor(private myservice: ApiserviceService, private activatedRoute: ActivatedRoute) {
+    this.movieID = this.activatedRoute.snapshot.paramMap.get('id');
+   }
 
   ngOnInit() {
   
-
   }
-
+  delete(id) {
+    this.myservice.deleteMovie(id).subscribe();
+    this.activatedRoute.data.subscribe(data => {
+      this.movies = data.users;
+    })
+    this.myservice.getUsers().subscribe(res => {
+      this.movies = res;
+    });
+  }
 
  
 }
