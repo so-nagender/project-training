@@ -1,0 +1,23 @@
+<form [formGroup]="myform">
+  <div class="form-group">
+    <h3>name:</h3>
+    <input type="text" name="firstname" formControlName="firstName" [(ngModel)]="dataa.name" />
+  </div>
+  <div class="form-group">
+    <h3>Director:</h3>
+    <input type="text" name="lastname" formControlName="lastName" [(ngModel)]="dataa.Director" />
+  </div>
+  <div class="form-group">
+    <h3>Producer:</h3>
+    <input type="text" name="email" formControlName="email" [(ngModel)]="dataa.Producer" />
+  </div>
+  <div class="form-group">
+    <h3>Description:</h3>
+    <input type="text" name="Address" formControlName="Address" [(ngModel)]="dataa.Description" />
+  </div>
+  <div class="form-group">
+    <h3>Review:</h3>
+    <input type="text" name="Age" formControlName="Age" [(ngModel)]="dataa.Review" />
+  </div>
+  <button class="button" type="submit" (click)="updateDataa()">Update</button>
+</form>
