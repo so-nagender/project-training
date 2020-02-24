@@ -29,11 +29,7 @@ export class LoginComponent implements OnInit {
     
   }
   onSubmit(form) {
-    this.api.getbookdetails(this.form.value.email, this.form.value.password)
-    if(postMessage!= null){
-    
-    }
-    
+    this.api.postlogin(this.form.value.email, this.form.value.password)
   }
   viewData()
   {

@@ -33,14 +33,32 @@ tr{
 }
 div.submit{
   right: 1px;
-  bottom: 1px;
+  bottom: 0%;
   position: absolute;
 }
 div.close{
     right: 1px;
-    top: 1px;
+    top: 0%;
+    position: absolute;
+ 
+   
+
+
+}
+div.reset{
+    right: 1px;
+    bottom: 50%;
     position: absolute;
 }
 .form-row{
     float: left;
 }
+button[type=submit], [type=reset], [type=close] {
+    background-color:transparent;
+
+ 
+    box-sizing: border-box;
+    cursor:pointer;
+
+}
+

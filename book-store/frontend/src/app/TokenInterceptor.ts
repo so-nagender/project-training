@@ -28,13 +28,16 @@ export class TokenInterceptor implements HttpInterceptor {
     
     return next.handle(request).pipe(
       map((event: HttpEvent<any>) => {
-        console.log("xxxxxxxxxxxxxxxxxxxx", event instanceof HttpResponse)
+       
         if (event instanceof HttpResponse) {
           console.log(event.status)
           if(event.status === 200)
           {
-            this.routes.navigate(['\dashboard'])
+            // this.routes.navigate(['\dashboard'])
+            console.log(event)
+            return event;
           }
+         else
           return event.body;
         }
       })

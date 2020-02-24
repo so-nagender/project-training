@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   logout(){
     console.log('hi')
 
-    localStorage.removeItem('accessToken');
+    
   }
 
 }

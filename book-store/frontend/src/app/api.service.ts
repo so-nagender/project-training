@@ -17,10 +17,10 @@ export class ApiService {
       localStorage.setItem('accessToken', data.accessToken);
       });
     }
-  getbookdetails(email, password){
-    
+  postlogin(email, password){
+
     const teams$ = this.http.post('/api/login', { "name" : email,"password" : password}).subscribe((data: any)=> {
-      localStorage.setItem('accessToken', data.accessToken);
+      localStorage.setItem("accessToken", data.accessToken);
       
       });
     }
@@ -29,5 +29,18 @@ export class ApiService {
       return teams$;
   
     }
+    postbookcategories(form){
+
+      const urltopostcateories$ = this.http.post('/api/catogries-booksstore', 
+      {
+        "title": form.value.bookname,
+        "description" : form.value.bookdescription
+      }).
+      subscribe((data: any)=> {
+      console.log(data)});
+      const urlget$ = this.http.get('/api/catogries-booksstore').subscribe((data: any)=> {
+         console.log('_____________<<<<<<<<<<<<',data)});
+  }
 }
+
   

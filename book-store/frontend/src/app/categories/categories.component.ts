@@ -1,6 +1,7 @@
 import { Component, OnInit,ViewChild, ElementRef, } from '@angular/core';
 import {TimelineMax, TweenMax} from "gsap";
 import { FormGroup, FormControl, Validators } from "@angular/forms"
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-categories',
@@ -14,7 +15,7 @@ export class CategoriesComponent implements OnInit {
     this.view_form = true
   }
 
-  constructor() { }
+  constructor(private api : ApiService) { }
   animation() {
     let t1: TimelineMax = new TimelineMax();
     t1.fromTo(this.category_form, 5,{x:"-100%"},
@@ -26,8 +27,9 @@ export class CategoriesComponent implements OnInit {
     bookdescription: new FormControl('', Validators.required)
   })
 
-  onSubmit(){
+  onSubmit(form){
     this.view_form=false;
+    this.api.postbookcategories(form)
   }
 
   ngOnInit() {
