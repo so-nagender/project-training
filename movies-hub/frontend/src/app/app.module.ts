@@ -29,7 +29,7 @@ const appRoutes: Routes = [
    },
   { path: '', component: DefaultComponent },
   { path: 'signup', component: SignupComponent},
-  { path: 'details', component: DetailsComponent},
+  { path: 'details/:id', component: DetailsComponent},
   { path: 'edit', component: EditmovieComponent},
   { path: 'add', component: AddmovieComponent },
   { path: 'list', component: ListComponent }

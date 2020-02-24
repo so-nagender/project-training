@@ -17,7 +17,9 @@
             <td>{{ movie.cast }}</td>
             <td>{{ movie.cat.genre }}</td>
             <td>{{ movie.rating }}</td>
-            <button>View</button> 
+        <a [routerLink] = "['/details', movie.id]" routerLinkActive="active" >
+            <button>View</button>
+        </a> 
             <button class="mx-2">Edit</button>    
             <button (click)="delete(m.id)">Delete</button>           
         </tr>

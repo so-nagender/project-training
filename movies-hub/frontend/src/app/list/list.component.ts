@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { ApiserviceService } from '../apiservice.service';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-list',
@@ -11,8 +12,8 @@ export class ListComponent implements OnInit {
   movies: any;
   movieID: string;
   cat: any;
-  constructor(private myservice: ApiserviceService, private activatedRoute: ActivatedRoute) {
-    this.movieID = this.activatedRoute.snapshot.paramMap.get('id');
+  constructor(private myservice: ApiserviceService, private activatedRoute: ActivatedRoute, private router :  Router) {
+    let id = this.activatedRoute.snapshot.params.id;
    }
 
   ngOnInit() {

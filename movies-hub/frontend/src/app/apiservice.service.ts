@@ -26,7 +26,7 @@ export class ApiserviceService {
     return this.http.delete(add);
   }
   getSingleElementById(id): Observable<any> {
-    const address = `/api/movies/${id}`;
+    const address = `/api/movies/${id}?_expand=cat`;
     return this.http.get(address);
   }
 }
