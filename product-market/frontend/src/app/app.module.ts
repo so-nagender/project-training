@@ -22,6 +22,8 @@ import { ResolverService } from './resolver.service';
 import { AddformComponent } from './addform/addform.component';
 import { ListComponent } from './list/list.component';
 import { AdditemComponent } from './additem/additem.component';
+import { CartComponent } from './cart/cart.component';
+import { FilterdataPipe } from './filterdata.pipe'
 import { ItemviewComponent } from './itemview/itemview.component';
 import { ResolverItemsService} from './resolver-items.service'
 
@@ -87,6 +89,8 @@ const routes: Routes = [
     AddformComponent,
     ListComponent,
     AdditemComponent,
+    CartComponent,
+    FilterdataPipe,
     ItemviewComponent,
 
 

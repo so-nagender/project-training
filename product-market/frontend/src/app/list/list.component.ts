@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,Router } from '@angular/router';
 import {ProductcatchService} from '../productcatch.service'
 
+
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
