@@ -33,8 +33,16 @@ export class ApiService {
 
   getBook(){
     const url1 = `/api/books`;
-    const book$ = this.http.get(url1);
-    return book$;
+    return this.http.get(url1); 
+  }
+
+  getCat(){
+    const url2 = `/api/books?_expand=catogrie`;
+    return this.http.get(url2); 
+  }
+
+  deleteBook(id){
+    const url3 =`/api/books/{x}`
   }
     
   postbookcategories(form){
@@ -49,7 +57,7 @@ export class ApiService {
       const urlget$ = this.http.get('/api/catogries-booksstore').subscribe((data: any)=> {
          console.log('_____________<<<<<<<<<<<<',data)});
   }
-  
+
   Viewdatacategories(){
    const Formdata$ =this.http.get('/api/catogries-booksstore')
     return Formdata$

@@ -5,27 +5,34 @@
       <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
     </div>
   
-    <table class="table" *ngIf="(book | filter: searchText).length > 0; else noResults">
+    <table class="table" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
       <colgroup>
         <col width="5%">
         <col width="*">
-        <col width="35%">
+        <col width="25%">
         <col width="15%">
+        <col width="25%">
       </colgroup>
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Brand </th>
-          <th scope="col">Model</th>
-          <th scope="col">Year</th>
+          <th scope="col">Book Name </th>
+          <th scope="col">Author Name</th>
+          <th scope="col">Catogery</th>
+          <th scope="col">Action</th>
+          
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let books of book | filter: searchText  ; let i = index">
+        <tr *ngFor="let books of apiBook | filter: searchText  ; let i = index">
           <th scope="row">{{i + 1}}</th>
-          <td>{{book.Book-Name}}</td>
-            <td>{{book.Author-name}}</td>
-        <td>xyz</td>
+          <td>{{books.BookName}}</td>
+            <td>{{books.AuthorName}}</td>
+        <td>{{books.catogrie.title}}</td>
+        <td><button type="button" class="btn btn-primary" style="margin-right: 10px;">View</button>
+          <button type="button" class="btn btn-primary" style="margin-right: 10px;">Edit</button>
+          <button type="button" class="btn btn-primary" (click)="onDelete(books.id)">Delete</button>
+        </td>
         </tr>
       </tbody>
     </table>
@@ -35,4 +42,4 @@
     </ng-template>
   </div>
 
-  <app-contact-table></app-contact-table>
+  
