@@ -19,14 +19,11 @@ export class DefaultComponent implements OnInit {
       password: new FormControl('', Validators.required),
     })
   };
-
   ngOnInit() {
   }
-
   get f() {
     return this.checkoutForm.controls;
   }
-
   onLogin() {
     this.isSubmitted = true;
     const email = this.checkoutForm.controls.email.value;
@@ -40,9 +37,8 @@ export class DefaultComponent implements OnInit {
       this.myservice.lognIn(obj).subscribe(res => {
         localStorage.setItem("accessToken", res.accessToken);
         this.router.navigate(['/home']);
-       });
-      
+      });
     }
-  
+
   }
 }
