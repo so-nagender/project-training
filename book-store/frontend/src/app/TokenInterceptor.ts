@@ -33,7 +33,7 @@ export class TokenInterceptor implements HttpInterceptor {
           console.log(event.status)
           if(event.status === 200)
           {
-            // this.routes.navigate(['\dashboard'])
+            this.routes.navigate(['\dashboard'])
             console.log(event)
             return event;
           }
