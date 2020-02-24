@@ -24,6 +24,46 @@ export interface Book {
     cast: 'Katrina',
     classification: "Romantic",
     rating: 8,   
+  },
+  {
+    movie_Name: "Kuch Kuch Hota Hai",
+    year: 1998,
+    cast: 'Jaswant',
+    classification: "Romantic",
+    rating: 8,
+    
+  },
+  {
+    movie_Name: "Kuch Kuch Hota Hai",
+    year: 1998,
+    cast: 'Jaswant',
+    classification: "Romantic",
+    rating: 8,
+    
+  },
+  {
+    movie_Name: "Kuch Kuch Hota Hai",
+    year: 1998,
+    cast: 'Jaswant',
+    classification: "Romantic",
+    rating: 8,
+    
+  },
+  {
+    movie_Name: "Kuch Kuch Hota Hai",
+    year: 1998,
+    cast: 'Jaswant',
+    classification: "Romantic",
+    rating: 8,
+    
+  },
+  {
+    movie_Name: "Kuch Kuch Hota Hai",
+    year: 1998,
+    cast: 'Jaswant',
+    classification: "Romantic",
+    rating: 8,
+    
   }
 ];
 @Component({

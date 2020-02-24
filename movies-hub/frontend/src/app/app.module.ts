@@ -33,6 +33,7 @@ const appRoutes: Routes = [
   { path: 'edit', component: EditmovieComponent},
   { path: 'add', component: AddmovieComponent },
   { path: 'list', component: ListComponent }
+  
 ];
 @NgModule({
   declarations: [
