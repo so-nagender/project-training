@@ -4,20 +4,40 @@ import {
   HttpRequest,
   HttpHandler,
   HttpEvent,
-  HttpInterceptor
+  HttpInterceptor,
+  HttpResponse,
+  HttpErrorResponse
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+import { map } from 'rxjs/operators';
+
+
 
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {
-  constructor(public auth: ApiService) {}
+  constructor(public auth: ApiService, private routes : Router) {}
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    
+ 
     request = request.clone({
       setHeaders: {
         Authorization: `Bearer ${localStorage.getItem("accessToken")}`
+  
       }
     });
-    return next.handle(request);
+    
+    return next.handle(request).pipe(
+      map((event: HttpEvent<any>) => {
+        console.log("xxxxxxxxxxxxxxxxxxxx", event instanceof HttpResponse)
+        if (event instanceof HttpResponse) {
+          console.log(event.status)
+          if(event.status === 200)
+          {
+            this.routes.navigate(['\dashboard'])
+          }
+          return event.body;
+        }
+      })
+    );
   }
-} 
+}

@@ -21,6 +21,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS, HttpResponse } from '@angular/comm
 import { TokenInterceptor } from './TokenInterceptor';
 import { DashboardComponent } from './dashboard/dashboard.component'
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,7 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     ContactListComponent,
     FilterPipe,
     ContactTableComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +45,7 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     MatPaginatorModule,
     MatSortModule,
     HttpClientModule,
+
    
   ],
   providers: [{
