@@ -1,13 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import { CARS } from '../../cars'
-
-
-interface Car {
-  brand: string;
-  model: string;
-  year: number;
-}
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -17,20 +10,30 @@ interface Car {
 })
 export class ContactListComponent implements OnInit {
   
-  cars: Car[] = CARS;
   searchText: string;
   apiBook;
+  id;
 
-  constructor(private api: ApiService ) {}  
+  constructor(private api: ApiService, private activatedRoute: ActivatedRoute ) 
+  {
+    this.id = this.activatedRoute.snapshot.params.id;
+  }  
 
   ngOnInit() {
     this.book();
   }
   book(){
     this.api.getBook().subscribe((res)=>{
-      console.log(res);
       this.apiBook = res;
     });
+    this.api.getCat().subscribe((res)=>{
+      this.apiBook = res;
+    });
+  }
+
+  onDelete(x){
+    this.id = x;
+    
   }
  
   
