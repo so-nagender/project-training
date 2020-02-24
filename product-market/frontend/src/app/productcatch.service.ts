@@ -60,4 +60,8 @@ export class ProductcatchService {
   postItem(obj): Observable<any> {
     return this.http.post<any>('/api/product-items', obj);
   }
+
+  getCart(): Observable<any> {
+    return this.http.get("/api/product-cart")
+  }
 }

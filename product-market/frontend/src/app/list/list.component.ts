@@ -19,7 +19,7 @@ export class ListComponent implements OnInit {
     this.activatedRoute.data.subscribe(data => {
       this.datas = data.data;
       this.datas.forEach( item => item.rating = parseInt(item.rating));
-      console.log(this.activatedRoute.snapshot.params.id)
+      console.log(this.datas)
     });
     this.serve.getnewItem().subscribe(() => {
       const varId = this.activatedRoute.snapshot.params.id
