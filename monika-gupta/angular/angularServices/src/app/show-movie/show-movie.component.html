@@ -1,0 +1,26 @@
+<div class="container-fluid head">
+  <div class="container">
+    Movie Description
+    <button
+      type="submit"
+      class="btn btn-primary float-right headButton"
+      routerLink="/"
+    >
+      View Movie List
+    </button>
+    <button
+      type="submit"
+      class="btn btn-primary headButton float-right"
+      style="margin-left: 10px;"
+      [routerLink]="['/movie/edit', apiTeam.id]"
+    >
+      Update
+    </button>
+  </div>
+</div>
+<div class="container body">
+  <h2>{{ apiTeam.name | uppercase }}</h2>
+  <br />
+  <h4>Description</h4>
+  {{ apiTeam.description }}
+</div>
