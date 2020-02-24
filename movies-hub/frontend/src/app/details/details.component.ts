@@ -9,12 +9,14 @@ import { ApiserviceService } from '../apiservice.service';
 })
 export class DetailsComponent implements OnInit {
   data: any;
+  id:any
 
-  constructor(private activatedRoute: ActivatedRoute, private myservice: ApiserviceService) { }
+  constructor(private activatedRoute: ActivatedRoute, private myservice: ApiserviceService) {
+    this.id = this.activatedRoute.snapshot.params.id;
+   }
 
   ngOnInit() {
-    let id = this.activatedRoute.snapshot.params.id;
-    this.myservice.getSingleElementById(id).subscribe((res) =>{
+    this.myservice.getSingleElementById(this.id).subscribe((res) =>{
       this.data= res;
       console.log(this.data);
     });

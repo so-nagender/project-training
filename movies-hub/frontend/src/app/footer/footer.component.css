@@ -1,3 +1,16 @@
 .nav-style {
     background: black;
 }
+.footerText{
+    color: white;
+   
+}
+.footerTextMargin1{
+    margin-left: 300px;
+}
+.footerTextMargin2{
+    margin-left: 350px;
+}
+.footerLinkGap{
+    margin-left: 10px;
+}
