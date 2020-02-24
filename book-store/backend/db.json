@@ -1,5 +1,5 @@
 {
-  "catogries-booksstore": [
+  "catogries": [
     {
       "id": 1,
       "title": "horror",
@@ -26,182 +26,182 @@
   "books": [
     {
       "id": 1,
-      "Book-Name": "Bird Box",
-      "Author-Name": "Josh Malerman",
+      "BookName": "Bird Box",
+      "AuthorName": "Josh Malerman",
       "catogriesId": 1
     },
     {
       "id": 2,
-      "Book-Name": "Intercepts",
-      "Author-Name": "T. J. Payne",
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
       "catogriesId": 1
     },
     {
       "id": 3,
-      "Book-Name": "The Amityville Horror",
-      "Author-Name": "Jay Anson",
+      "BookName": "The Amityville Horror",
+      "AuthorName": "Jay Anson",
       "catogriesId": 1
     },
     {
       "id": 4,
-      "Book-Name": "The Exorcist",
-      "Author-Name": "William Peter Blatty",
+      "BookName": "The Exorcist",
+      "AuthorName": "William Peter Blatty",
       "catogriesId": 1
     },
     {
       "id": 5,
-      "Book-Name": "The Haunting of Hill House",
-      "Author-Name": "Shirley Jackson",
+      "BookName": "The Haunting of Hill House",
+      "AuthorName": "Shirley Jackson",
       "catogriesId": 1
     },
     {
       "id": 6,
-      "Book-Name": "Dracula",
-      "Author-Name": "Bram Stoker",
+      "BookName": "Dracula",
+      "AuthorName": "Bram Stoker",
       "catogriesId": 1
     },
     {
       "id": 7,
-      "Book-Name": "Frankenstein",
-      "Author-Name": "Mary Shelley",
+      "BookName": "Frankenstein",
+      "AuthorName": "Mary Shelley",
       "catogriesId": 1
     },
     {
       "id": 8,
-      "Book-Name": "The Shining",
-      "Author-Name": "Stephen King",
+      "BookName": "The Shining",
+      "AuthorName": "Stephen King",
       "catogriesId": 1
     },
     {
       "id": 9,
-      "Book-Name": "Beloved",
-      "Author-Name": "Toni Morrison",
+      "BookName": "Beloved",
+      "AuthorName": "Toni Morrison",
       "catogriesId": 1
     },
     {
       "id": 10,
-      "Book-Name": "Rebecca",
-      "Author-Name": "Daphne du Maurier",
+      "BookName": "Rebecca",
+      "AuthorName": "Daphne du Maurier",
       "catogriesId": 1
     },
     {
       "id": 11,
-      "Book-Name": "The Odyssey",
-      "Author-name": "by Homer",
+      "BookName": "The Odyssey",
+      "AuthorName": "by Homer",
       "catogriesId": 2
     },
     {
       "id": 12,
-      "Book-Name": "Gulliver's Travels",
-      "Author-name": "Jonathan Swift",
+      "BookName": "Gulliver's Travels",
+      "AuthorName": "Jonathan Swift",
       "catogriesId": 2
     },
     {
       "id": 13,
-      "Book-Name": "Moby-Dick",
-      "Author-name": "Herman Melville",
+      "BookName": "Moby Dick",
+      "AuthorName": "Herman Melville",
       "catogriesId": 2
     },
     {
       "id": 14,
-      "Book-Name": "Treasure Island",
-      "Author-name": " Robert Louis Stevenson",
+      "BookName": "Treasure Island",
+      "AuthorName": " Robert Louis Stevenson",
       "catogriesId": 2
     },
     {
       "id": 15,
-      "Book-Name": "King Solomon's Mines",
-      "Author-name": "H. Rider Haggard",
+      "BookName": "King Solomon's Mines",
+      "AuthorName": "H. Rider Haggard",
       "catogriesId": 2
     },
     {
       "id": 16,
-      "Book-Name": "The Adventures of Huckleberry Finn",
-      "Author-name": "Mark Twain",
+      "BookName": "The Adventures of Huckleberry Finn",
+      "AuthorName": "Mark Twain",
       "catogriesId": 2
     },
     {
       "id": 17,
-      "Book-Name": "Heart of Darkness",
-      "Author-name": " Joseph Conrad",
+      "BookName": "Heart of Darkness",
+      "AuthorName": " Joseph Conrad",
       "catogriesId": 2
     },
     {
       "id": 18,
-      "Book-Name": "The Call of the Wild",
-      "Author-name": "Jack London",
+      "BookName": "The Call of the Wild",
+      "AuthorName": "Jack London",
       "catogriesId": 2
     },
     {
       "id": 19,
-      "Book-Name": "The Sheltering Sky",
-      "Author-name": " Paul Bowles",
+      "BookName": "The Sheltering Sky",
+      "AuthorName": " Paul Bowles",
       "catogriesId": 2
     },
     {
       "id": 20,
-      "Book-Name": "The Road",
-      "Author-name": "Cormac McCarthy",
+      "BookName": "The Road",
+      "AuthorName": "Cormac McCarthy",
       "catogriesId": 2
     },
     {
       "id": 21,
-      "Book-Name": "The Golem and the Djinni",
-      "Author-Name": "Helene Wecker",
+      "BookName": "The Golem and the Djinni",
+      "AuthorName": "Helene Wecker",
       "catogriesId": 3
     },
     {
       "id": 22,
-      "Book-Name": "Dune",
-      "Author-Name": "Frank Herbert",
+      "BookName": "Dune",
+      "AuthorName": "Frank Herbert",
       "catogriesId": 3
     },
     {
       "id": 23,
-      "Book-Name": "The Dark Tower",
-      "Author-Name": "Stephen King",
+      "BookName": "The Dark Tower",
+      "AuthorName": "Stephen King",
       "catogriesId": 3
     },
     {
       "id": 24,
-      "Book-Name": "A Game of Thrones",
-      "Author-Name": "George R.R. Martin",
+      "BookName": "A Game of Thrones",
+      "AuthorName": "George R.R. Martin",
       "catogriesId": 3
     },
     {
       "id": 25,
-      "Book-Name": "Good Omens",
-      "Author-Name": "Terry Pratchett and Neil Gaiman",
+      "BookName": "Good Omens",
+      "AuthorName": "Terry Pratchett and Neil Gaiman",
       "catogriesId": 3
     },
     {
       "id": 26,
-      "Book-Name": "Rivers of London",
-      "Author-Name": "Ben Aaronovitch",
+      "BookName": "Rivers of London",
+      "AuthorName": "Ben Aaronovitch",
       "catogriesId": 3
     },
     {
       "id": 27,
-      "Book-Name": "The Wheel of Time series",
-      "Author-Name": "Robert Jordan",
+      "BookName": "The Wheel of Time series",
+      "AuthorName": "Robert Jordan",
       "catogriesId": 3
     },
     {
       "id": 28,
-      "Book-Name": "The Gormenghast series",
-      "Author-Name": "Mervyn Peake",
+      "BookName": "The Gormenghast series",
+      "AuthorName": "Mervyn Peake",
       "catogriesId": 3
     },
     {
       "id": 29,
-      "Book-Name": "Northern Lights",
-      "Author-Name": "Philip Pullman",
+      "BookName": "Northern Lights",
+      "AuthorName": "Philip Pullman",
       "catogriesId": 3
     },
     {
-      "id": 40,
-      "Book-Name": "The Book of Dust",
-      "Author-Name": "Philip Pullman",
+      "id": 30,
+      "BookName": "The Book of Dust",
+      "AuthorName": "Philip Pullman",
       "catogriesId": 3
     }
   ],
@@ -397,7 +397,7 @@
       "id": 2
     },
     {
-      "movie-id": "1",
+      "movieid": "1",
       "name": "movie test",
       "id": 3
     }
@@ -410,7 +410,7 @@
       "id": 2
     },
     {
-      "movie-id": "1",
+      "movieid": "1",
       "name": "movie test",
       "id": 3
     }
