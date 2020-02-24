@@ -21,7 +21,7 @@
         <a [routerLink] = "['/details', movie.id]" routerLinkActive="active" >
             <button>View</button>
         </a> 
-            <button class="mx-2">Edit</button>    
+            <button [routerLink]= "['/edit', movie.id]" routerLinkActive="active" class="mx-2">Edit</button>    
             <button (click)="delete(movie.id)">Delete</button>           
         </tr>
     </tbody>
