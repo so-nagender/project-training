@@ -1,1 +1,54 @@
-<p>editmovie works!</p>
+<div>
+    <app-header></app-header>
+</div>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <div class="row moviesDetailsMargin">
+        <div class="col-2">
+        </div>
+        <div class="container col-2 imageShadow">
+            <img src="../../assets/img/frozen.jpg" class="img-fluid image" alt="Responsive" style="width:100%">
+        </div>
+        <div class="col-1">
+        </div>
+        <div class="col-3">
+            <label>
+                <div class="form-group">
+                    <input type="text" required class="input" formControlName="movienm" [(ngModel)]= "dataa.movieName">
+                    <p class="label-txt">Movie Name</p>
+                    <div class="line-box">
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </label>
+            <label>
+                <div class="form-group">
+                    <input type="text" required class="input" formControlName="date" [(ngModel)]= "dataa.year">
+                    <p class="label-txt">Release Date</p>
+                    <div class="line-box">
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </label>
+            <label>
+                <div class="form-group">
+                    <input type="text" required class="input" formControlName="cat" [(ngModel)]= "data">
+                    <p class="label-txt">Category</p>
+                    <div class="line-box">
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </label>
+            <label>
+                <div class="form-group">
+                    <input type="text" required class="input" formControlName="cast" [(ngModel)]= "dataa.cast" >
+                    <p class="label-txt">Cast</p>
+                    <div class="line-box">
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </label>
+        </div>
+        <div class="col-4">
+        </div>
+    </div>
+</form>
