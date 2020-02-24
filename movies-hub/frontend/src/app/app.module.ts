@@ -20,12 +20,6 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Interceptor } from '../app/interceptor';
 import { DataResolverService } from './data-resolver.service';
 
-
-
-
-
-
-
 const appRoutes: Routes = [
   { path: 'home', 
     component: HomeComponent,

@@ -17,4 +17,16 @@ export class ApiserviceService {
   lognIn(obj) {
     return this.http.post<any>('api/login',obj);
   }
+  updateMovie(id, obj): Observable<any> {
+    const add = `/api/movies/${id}`;
+    return this.http.put<any>(add, obj);
+  }
+  deleteMovie(id) {
+    const add = `/api/movies/${id}`;
+    return this.http.delete(add);
+  }
+  getSingleElementById(id): Observable<any> {
+    const address = `/api/movies/${id}`;
+    return this.http.get(address);
+  }
 }
