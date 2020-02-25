@@ -63,5 +63,7 @@ export class CategoriesComponent implements OnInit {
   ngOnInit() {
     this.view();
   }
-
+ close(categoryForm){
+   this.view_form=false;
+ }
 }
