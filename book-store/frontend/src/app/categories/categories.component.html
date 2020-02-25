@@ -5,7 +5,7 @@
       <p class='red'>Server Error</p></div>
         <div class="col-sm-8 border " *ngFor="let data of categoryFormdata">
           
-          <div class="row"><div class="col-sm-4 "> {{data.title}}</div>
+          <div class="row"><div class="col-sm-4 "> <p (click)="retrivedata(data.id)"> {{data.title}}</p></div>
           <div class="col-sm "> <p>{{data.description}} </p> </div>
         </div>
         

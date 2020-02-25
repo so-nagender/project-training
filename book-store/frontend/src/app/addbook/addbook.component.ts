@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { FormBuilder} from '@angular/forms';
+import { FormBuilder, Validators,} from '@angular/forms';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -40,10 +40,10 @@ export class AddbookComponent implements OnInit {
   
   formValue() {
     this.formData = this.formBuilder.group({
-      bookname: [''],
-      authorname: [''],
-      catname: [''],
-      des: ['']
+      bookname: ['',Validators.required],
+      authorname: ['',Validators.required],
+      catname: ['',Validators.required],
+      des: ['',Validators.required]
     });
   }
 
