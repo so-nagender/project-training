@@ -58,16 +58,6 @@
       "createdAt": 1582545002861,
       "updatedAt": 1582545002861,
       "id": 9
-    },
-    {
-      "name": "microwave",
-      "categoryId": "4",
-      "rating": "5",
-      "description": "drgstyyvrevhbui",
-      "cost": 5000,
-      "createdAt": 1582612390787,
-      "updatedAt": 1582612390787,
-      "id": 10
     }
   ],
   "product-cart": [
@@ -79,42 +69,6 @@
       "createdAt": 1582545196510,
       "updatedAt": 1582545196510,
       "id": 3
-    },
-    {
-      "name": "mobiles",
-      "rating": 5,
-      "cost": 20000,
-      "description": "Mobile phones are no more merely a part of our lives. ... From budget to state-of-the-art smartphones; indigenous names to global big-wigs - a whole universe of mobiles await you",
-      "createdAt": 1582545934814,
-      "updatedAt": 1582545934814,
-      "id": 4
-    },
-    {
-      "name": "mobiles",
-      "rating": 5,
-      "cost": 20000,
-      "description": "Mobile phones are no more merely a part of our lives. ... From budget to state-of-the-art smartphones; indigenous names to global big-wigs - a whole universe of mobiles await you",
-      "createdAt": 1582612334439,
-      "updatedAt": 1582612334439,
-      "id": 5
-    },
-    {
-      "name": "Laptops",
-      "rating": 4,
-      "cost": 50000,
-      "description": "Flipkart has wide range of branded laptops browse and buy online shopping store. ... Acer Predator Helios 300 Core i7 8th Gen - (8 GB + 16 GB Optane/2 TB HDD/Windows 10 Home/6 GB Graphics.",
-      "createdAt": 1582612344840,
-      "updatedAt": 1582612344840,
-      "id": 6
-    },
-    {
-      "name": "microwave",
-      "rating": 5,
-      "cost": 5000,
-      "description": "drgstyyvrevhbui",
-      "createdAt": 1582612393976,
-      "updatedAt": 1582612393976,
-      "id": 7
     }
   ],
   "posts": [

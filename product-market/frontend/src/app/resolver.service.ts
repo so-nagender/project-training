@@ -18,7 +18,10 @@ export class ResolverService implements Resolve<any> {
     private router: Router
   ) {}
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    if(localStorage.getItem("accessToken")){return this.serve.getData();}
-    else{this.router.navigate(['/home']); }
+    if (localStorage.getItem('accessToken')) {
+      return this.serve.getData();
+    } else {
+      this.router.navigate(['/home']);
+    }
   }
 }

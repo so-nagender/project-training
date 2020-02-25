@@ -1,95 +1,86 @@
- .font1
-{
-    background-color: black;
-    font-size: 20px;
-    font-weight: 400;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: cornsilk;
-
-} 
-tr:nth-child(even){
-    background-color:#f88288;
-    color: white;
-    
+.font1 {
+  background-color: black;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: cornsilk;
 }
-.font2
-{
-    font-size: 15px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight:700;
-    margin-left: 5PX;
+tr:nth-child(even) {
+  background-color: #f88288;
+  color: white;
+}
+.font2 {
+  font-size: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 700;
+  margin-left: 5px;
 }
 
-.checked
-{
-    color:orangered;
+.checked {
+  color: orangered;
 }
-  .card
-{
- 
-    margin-left: 15PX;
-    margin-bottom: 15px;
-    width:80%;
-    border: solid black 2px;
-} 
- .card-title
-{
-    font-weight: 700;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
-    font-size: 20px;
-    text-align: justify;
-    color: black;
-}  
-.card-text
-{
+.card {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  width: 80%;
+  border: solid black 2px;
+}
+.card-title {
+  font-weight: 700;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+  text-align: justify;
+  color: black;
+}
+.card-text {
   font-weight: 300;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: 12px;
   color: black;
-} 
-.btn
-{
-border-radius: 0px;
-color: white;
-background-color: black;
-font-weight: 400;
-padding: 5px 15px;
-
 }
-.card-img
-{
-    height: 75%;
-    width: 75%;
-    margin: 6px;
+.btn {
+  border-radius: 0px;
+  color: white;
+  background-color: black;
+  font-weight: 400;
+  padding: 5px 15px;
 }
-.images
-{
-height: 55px;
+.card-img {
+  height: 75%;
+  width: 75%;
+  margin: 6px;
+}
+.images {
+  height: 55px;
 }
 .text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #008CBA;
-  }
-  
-  .container:hover .overlay {
-    opacity: 1;
-  }
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #008cba;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}

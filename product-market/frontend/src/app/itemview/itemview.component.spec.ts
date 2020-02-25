@@ -8,9 +8,8 @@ describe('ItemviewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ItemviewComponent ]
-    })
-    .compileComponents();
+      declarations: [ItemviewComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

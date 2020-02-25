@@ -1,86 +1,94 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { MainComponent } from './main/main.component';
-import { FooterComponent } from './footer/footer.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { HomeComponent } from "./home/home.component";
+import { MainComponent } from "./main/main.component";
+import { FooterComponent } from "./footer/footer.component";
+import { SidebarComponent } from "./sidebar/sidebar.component";
+import { Routes, RouterModule } from "@angular/router";
+import { LoginComponent } from "./login/login.component";
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HeaderComponent } from './header/header.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { Main2Component } from './main2/main2.component';
-import { Sidebar2Component } from './sidebar2/sidebar2.component';
-import { CategoryComponent } from './category/category.component';
-import {TokenInterceptor} from './interceptor'
-import { ResolverService } from './resolver.service';
-import { AddformComponent } from './addform/addform.component';
-import { ListComponent } from './list/list.component';
-import { AdditemComponent } from './additem/additem.component';
-import { CartComponent } from './cart/cart.component';
-import { FilterdataPipe } from './filterdata.pipe'
-import { ItemviewComponent } from './itemview/itemview.component';
-import { ResolverItemsService} from './resolver-items.service'
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HeaderComponent } from "./header/header.component";
+import { SignUpComponent } from "./sign-up/sign-up.component";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+import { Main2Component } from "./main2/main2.component";
+import { Sidebar2Component } from "./sidebar2/sidebar2.component";
+import { CategoryComponent } from "./category/category.component";
+import { TokenInterceptor } from "./interceptor";
+import { ResolverService } from "./resolver.service";
+import { AddformComponent } from "./addform/addform.component";
+import { ListComponent } from "./list/list.component";
+import { AdditemComponent } from "./additem/additem.component";
+import { CartComponent } from "./cart/cart.component";
+import { FilterdataPipe } from "./filterdata.pipe";
+import { ItemviewComponent } from "./itemview/itemview.component";
+import { ResolverItemsService } from "./resolver-items.service";
+import { HomeDisplayComponent } from "./home-display/home-display.component";
 
 const routes: Routes = [
-  { path: "home",
+  {
+    path: "",
+    component: HomeDisplayComponent
+  },
+  {
+    path: "home",
     component: HomeComponent,
-    children : [
+    children: [
       {
         path: "",
-        component: SidebarComponent,
+        component: SidebarComponent
       },
       {
         path: "signup",
-        component: SignUpComponent,
+        component: SignUpComponent
       },
       {
-        path :"signin",
-        component : LoginComponent
-      }] },
-    {
-      path: "categories",
-      component :CategoryComponent,
-      resolve: { data: ResolverService },
-      children : [
-        {
-          path: "",
-          component: SidebarComponent,
-        },
-        {
+        path: "signin",
+        component: LoginComponent
+      }
+    ]
+  },
+  {
+    path: "categories",
+    component: CategoryComponent,
+    resolve: { data: ResolverService },
+    children: [
+      {
+        path: "",
+        component: SidebarComponent
+      },
+      {
         path: "addform",
-        component: AddformComponent,
-        },
-        {
-          path: "cart",
-          component: CartComponent,
-        }
-      ] 
-    },
-    {
-      path: 'items/:id',
-      component :ItemviewComponent,
-      resolve: { data : ResolverItemsService },
-      children : [
-        {
-          path: "",
-          component: SidebarComponent,
-        },
-        {
-          path: "additem",
-          component: AdditemComponent,
-        },
-        {
-          path: "cart",
-          component: CartComponent,
-        }
-      ]
-    }
+        component: AddformComponent
+      },
+      {
+        path: "cart",
+        component: CartComponent
+      }
+    ]
+  },
+  {
+    path: "items/:id",
+    component: ItemviewComponent,
+    resolve: { data: ResolverItemsService },
+    children: [
+      {
+        path: "",
+        component: SidebarComponent
+      },
+      {
+        path: "additem",
+        component: AdditemComponent
+      },
+      {
+        path: "cart",
+        component: CartComponent
+      }
+    ]
+  }
 ];
 
 @NgModule({
@@ -102,8 +110,7 @@ const routes: Routes = [
     CartComponent,
     FilterdataPipe,
     ItemviewComponent,
-
-
+    HomeDisplayComponent
   ],
   imports: [
     BrowserModule,
@@ -111,7 +118,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [
     {
@@ -122,4 +129,4 @@ const routes: Routes = [
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

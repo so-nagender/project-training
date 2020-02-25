@@ -1,19 +1,16 @@
-.images
-{
-    height: 200px;
+.images {
+  height: 200px;
 }
-.btn
-{
-border-radius: 0px;
-color: white;
-background-color: black;
-font-weight: 600;
-padding: 6px ;
+.btn {
+  border-radius: 0px;
+  color: white;
+  background-color: black;
+  font-weight: 600;
+  padding: 6px;
 
-font-size: 15px;
-text-align: center;
+  font-size: 15px;
+  text-align: center;
 }
-.checked
-{
-    color:orangered;
+.checked {
+  color: orangered;
 }

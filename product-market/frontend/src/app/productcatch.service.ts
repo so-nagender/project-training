@@ -6,17 +6,16 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductcatchService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http : HttpClient,) { }
+  private subject = new Subject();
 
-  private subject =  new Subject();
+  private subjectforId = new Subject();
 
-  private subjectforId =  new Subject();
-  
   private subjectofcart = new Subject();
 
   getData(): Observable<any> {
-    return this.http.get("/api/product-category")
+    return this.http.get('/api/product-category');
   }
 
   signUp(obj): Observable<any> {
@@ -38,7 +37,7 @@ export class ProductcatchService {
     this.subject.next(message);
   }
 
-  getMessage(): Observable<any>{
+  getMessage(): Observable<any> {
     return this.subject.asObservable();
   }
 
@@ -51,11 +50,11 @@ export class ProductcatchService {
     return this.http.delete(url);
   }
 
-  getnewItem():Observable<any>{
+  getnewItem(): Observable<any> {
     return this.subjectforId.asObservable();
   }
 
-  sendnewItem(){
+  sendnewItem() {
     this.subjectforId.next();
   }
 
@@ -64,10 +63,10 @@ export class ProductcatchService {
   }
 
   getCart(): Observable<any> {
-    return this.http.get("/api/product-cart")
+    return this.http.get('/api/product-cart');
   }
 
-  addCart(obj : any){
+  addCart(obj: any) {
     return this.http.post<any>('/api/product-cart', obj);
   }
 
@@ -76,13 +75,11 @@ export class ProductcatchService {
     return this.http.delete(url);
   }
 
-  setnewsubCart(){
+  setnewsubCart() {
     this.subjectofcart.next();
   }
 
-  getnewsubCart():Observable<any>{
+  getnewsubCart(): Observable<any> {
     return this.subjectofcart.asObservable();
   }
-
-
 }

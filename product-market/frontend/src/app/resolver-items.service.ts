@@ -11,7 +11,7 @@ import { ProductcatchService } from './productcatch.service';
 @Injectable({
   providedIn: 'root'
 })
-export class ResolverItemsService implements Resolve<any>{
+export class ResolverItemsService implements Resolve<any> {
   constructor(
     private serve: ProductcatchService,
     private activatedRoute: ActivatedRoute,
@@ -19,7 +19,10 @@ export class ResolverItemsService implements Resolve<any>{
   ) {}
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     const id = route.params.id;
-    if(localStorage.getItem("accessToken")){return this.serve.getItems(id);}
-    else{this.router.navigate(['/home']); }
+    if (localStorage.getItem('accessToken')) {
+      return this.serve.getItems(id);
+    } else {
+      this.router.navigate(['/home']);
+    }
   }
 }

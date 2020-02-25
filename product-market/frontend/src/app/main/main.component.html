@@ -1,37 +1,78 @@
 <div class="container-fluid pt-4 pb-5 pl-5">
-    <div class="row">
-        <div class="col-lg-1">
-            <img class="img-fluid" src= "../../assets/images/cart.svg">
-        </div>
-        <div class="col-lg-8"> 
-        </div>
-        <div class="col-lg-3 mt-1">
-            <button type="button" class="btn btn-dark rounded-0 border-0" style="background-color: black;color: white;"  [routerLink]="['signup']">Sign Up</button>
-            <button type="button" class="btn btn-light rounded-0 border-0" style="background-color: white;"  [routerLink]="['signin']">Log In</button>  
-        </div>
+  <div class="row">
+    <div class="col-lg-1">
+      <img class="img-fluid" src="../../assets/images/cart.svg" />
     </div>
-    <div class="mt-5">
-        <div id="mainDisplay" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <h1 style="font-weight: bolder;font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Need Groceries?</h1>
-              </div>
-              <div class="carousel-item">
-                <h1 style="font-weight: bolder;font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Need Fashion?!</h1>
-              </div>
-              <div class="carousel-item">
-                <h1 style="font-weight: bolder;font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Need Discounts?</h1>
-              </div>
-            </div>
-        </div>
-        <h5>We have got you covered,Order anything,anytime!!</h5>
-        <div class="input-group input-group-lg pt-5">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="inputGroup-sizing-lg"><img src="../../assets/images/search.svg"></span>
-            </div>
-            <input type="text" class="form-control mr-5" placeholder="Search For Category" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" style="height :60px;">
-        </div>
-        <h5 class="pt-3">Available Everywhere,Anywhere around the world.</h5>
-        <h5 class=" ">Spreading Smiles  <img src="../../assets/images/smile (1).svg"> .</h5>
+    <div class="col-lg-8"></div>
+    <div class="col-lg-3 mt-1">
+      <button
+        type="button"
+        class="btn btn-dark rounded-0 border-0"
+        style="background-color: black;color: white;"
+        [routerLink]="['signup']"
+      >
+        Sign Up
+      </button>
+      <button
+        type="button"
+        class="btn btn-light rounded-0 border-0"
+        style="background-color: white;"
+        [routerLink]="['signin']"
+      >
+        Log In
+      </button>
     </div>
+  </div>
+  <div class="mt-5">
+    <div
+      id="mainDisplay"
+      class="carousel slide carousel-fade"
+      data-ride="carousel"
+      data-interval="3000"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h1
+            style="font-weight: bolder;font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
+          >
+            Need Groceries?
+          </h1>
+        </div>
+        <div class="carousel-item">
+          <h1
+            style="font-weight: bolder;font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
+          >
+            Need Fashion?!
+          </h1>
+        </div>
+        <div class="carousel-item">
+          <h1
+            style="font-weight: bolder;font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
+          >
+            Need Discounts?
+          </h1>
+        </div>
+      </div>
+    </div>
+    <h5>We have got you covered,Order anything,anytime!!</h5>
+    <div class="input-group input-group-lg pt-5">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg"
+          ><img src="../../assets/images/search.svg"
+        /></span>
+      </div>
+      <input
+        type="text"
+        class="form-control mr-5"
+        placeholder="Enter your Location"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+        style="height :60px;"
+      />
+    </div>
+    <h5 class="pt-3">Available Everywhere,Anywhere around the world.</h5>
+    <h5 class=" ">
+      Spreading Smiles <img src="../../assets/images/smile (1).svg" /> .
+    </h5>
+  </div>
 </div>

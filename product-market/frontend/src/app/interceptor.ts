@@ -19,32 +19,29 @@ export class TokenInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<any>> {
     request = request.clone({
       setHeaders: {
-        Authorization: `Bearer ${localStorage.getItem("accessToken")}`
+        Authorization: `Bearer ${localStorage.getItem('accessToken')}`
       }
     });
-    return next.handle(request)
-    .pipe(
+    return next.handle(request).pipe(
       retry(1),
       catchError((error: HttpErrorResponse) => {
-      let errorMessage = '';
-      if (error.error instanceof ErrorEvent) {
-      // client-side error
-      errorMessage = `Error: ${error.error.message}`;
-      }
-      else if(error.status == 403) {
-      // server-side error
-      console.log(error)
-      errorMessage = `${error.error.message}`;
-      }
-      else if(error.status == 409) {
-        // server-side error
-        console.log(error)
-        errorMessage = `user already exists,please either use an new mail address or login`;
-      }
+        let errorMessage = '';
+        if (error.error instanceof ErrorEvent) {
+          // client-side error
+          errorMessage = `Error: ${error.error.message}`;
+        } else if (error.status === 403) {
+          // server-side error
+          console.log(error);
+          errorMessage = `${error.error.message}`;
+        } else if (error.status === 409) {
+          // server-side error
+          console.log(error);
+          errorMessage = `user already exists,please either use an new mail address or login`;
+        }
 
-      alert(errorMessage);
-      return throwError(errorMessage);
+        console.log(errorMessage);
+        return throwError(errorMessage);
       })
-      )
+    );
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductcatchService} from '../productcatch.service'
+import { ProductcatchService } from '../productcatch.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,11 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor(private serve : ProductcatchService,private router: Router) { }
+  constructor(private serve: ProductcatchService, private router: Router) {}
 
   ngOnInit() {
-    if(localStorage.getItem("accessToken")){this.router.navigate(['/categories']);}
+    if (localStorage.getItem('accessToken')) {
+      this.router.navigate(['/categories']);
+    }
   }
-
 }
