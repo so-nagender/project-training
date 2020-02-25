@@ -18,15 +18,15 @@
                                 <p class="m-2" style="margin-bottom: 3px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 18px;">QUANTITY : 1</p>
                             </div>
                             <div class="col-lg-7">
+                                <button type="button" class="close pl-2" aria-label="Close" (click)="onDelete(data)">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
                                 <h5 class="card-title" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 30px;">{{data.name}}</h5>
-                                <p class="card-text" style="font-size: 20px;">Size: S, Size:10</p>
+                                <p class="card-text" style="font-size: 20px;">Cost: {{data.cost}}</p>
                                 <p class="card-text"><small class="text-muted" style="font-size: 15px;">Seller: RetailNet</small></p>
                                 <p class="card-text" style="font-size: 20px;">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star checked" *ngFor="let star of [].constructor(data.rating)"></span>
+                                    <span class="fa fa-star" *ngFor="let star of [].constructor(5 - data.rating)"></span>
                                 </p>
                                 <p class="card-text" style="font-size: 13px;font-weight: 500;text-align: justify;">{{data.description}}</p>
                                 

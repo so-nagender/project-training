@@ -43,4 +43,10 @@ export class ListComponent implements OnInit {
     this.router.navigate(['additem'],{relativeTo :this.activatedRoute})
   }
 
+  onaddCart(data){
+    const obj = {"name" : data.name,"rating" : data.rating,"cost" : data.cost,"description" :data.description};
+    this.serve.addCart(obj).subscribe()
+    this.serve.setnewsubCart();
+  }
+
 }
