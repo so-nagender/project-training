@@ -12,6 +12,7 @@ import { ApiserviceService } from '../apiservice.service';
 export class EditmovieComponent implements OnInit {
   id;
   dataa: any;
+  catogry: any;
 
   constructor(private checkout: FormBuilder, private activatedRoute: ActivatedRoute, private myservice: ApiserviceService) {
     this.id= (this.activatedRoute.snapshot.params.id);
@@ -30,5 +31,10 @@ export class EditmovieComponent implements OnInit {
     this.myservice.getSingleElementById(this.id).subscribe((res) =>{
       this.dataa = res;
       })
+    }
+    getCategory() {
+      this.myservice.getCat().subscribe((res) => {
+        this.catogry = res;
+      });
     }
 }
