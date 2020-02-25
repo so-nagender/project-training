@@ -134,12 +134,6 @@
       "password": "1234",
       "createdAt": 1582540118311,
       "updatedAt": 1582540118311
-    },
-    {
-      "name": "agar@gmail.com",
-      "password": "1234",
-      "createdAt": 1582607926485,
-      "updatedAt": 1582607926485
     }
   ],
   "movies": [
@@ -344,26 +338,26 @@
     },
     {
       "movieName": "Wanted",
-      "id": 19,
       "year": "2007",
+      "catId": "3",
       "cast": [
         "Salman Khan",
         "Aisha Takia"
       ],
-      "catId": 4,
-      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
+      "updatedAt": 1582614251545,
+      "id": 19
     },
     {
       "movieName": "Dhol",
-      "id": 20,
       "year": "2003",
+      "catId": "11",
       "cast": [
         "Kunal Khemu",
         "tushar",
         "rajpal yadav"
       ],
-      "catId": 10,
-      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
+      "updatedAt": 1582614034337,
+      "id": 20
     }
   ],
   "cats": [

@@ -1,7 +1,7 @@
 <div>
     <app-header></app-header>
 </div>
-<form [formGroup]="checkoutForm" >
+<form [formGroup]="checkoutForm">
     <div class="row moviesDetailsMargin">
         <div class="col-2">
         </div>
@@ -13,7 +13,7 @@
         <div class="col-3">
             <label>
                 <div class="form-group">
-                    <input type="text" required class="input" formControlName="movienm" [(ngModel)]= "dataa.movieName">
+                    <input type="text" required class="input" formControlName="moviename" [(ngModel)]= "dataa.movieName">
                     <p class="label-txt">Movie Name</p>
                     <div class="line-box">
                         <div class="line"></div>
@@ -29,26 +29,16 @@
                     </div>
                 </div>
             </label>
-            <label>
-                <div class="form-group">
-                    <p class="label-txt">Category</p>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <div class="dropdown-menu">
-                            <ul type="null"  *ngFor="let i of catogry">
-                                <li>{{i.genre}}</li>
-                            </ul>
-                        </div>
-                      </div>
+              <!-- Dropdown Start -->
+              <div class="form-row align-items-center">
+                <div class="col-auto my-1">
+                  <select formControlName="cat" class="custom-select mr-sm-2" id="inlineFormCustomSelect" >
+                    <option selected>{{dataa.cat.genre}}</option>
+                    <option value="{{i.id}}" *ngFor="let i of catogry">{{i.genre}}</option>
+                  </select>
                 </div>
-            </label>
-            <!-- Dropdown start -->
-            
-            <!-- Dropdown end -->
-
-
+              </div>
+              <!-- Dropdown End -->
             <label>
                 <div class="form-group">
                     <input type="text" required class="input" formControlName="cast" [(ngModel)]= "dataa.cast" >
@@ -62,5 +52,7 @@
         <div class="col-4">
         </div>
     </div>
-    <button class="button" type="submit" (click)="updateDataa()">Update</button>
+    <div class="col-auto my-1">
+        <button type="submit" routerLink="/list" (click)=onSubmit() class="btn btn-primary">Submit</button>
+      </div>
 </form>
