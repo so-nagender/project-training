@@ -19,6 +19,7 @@ import { from } from 'rxjs';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Interceptor } from '../app/interceptor';
 import { DataResolverService } from './data-resolver.service';
+import { GenresComponent } from './genres/genres.component';
 
 const appRoutes: Routes = [
   {
@@ -72,7 +73,8 @@ const appRoutes: Routes = [
     ListComponent,
     EditmovieComponent,
     AddmovieComponent,
-    Confirmpasswordvalidator
+    Confirmpasswordvalidator,
+    GenresComponent
   ],
   imports: [
     BrowserModule,

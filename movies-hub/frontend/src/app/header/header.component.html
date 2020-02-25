@@ -1,7 +1,8 @@
-<div class="container-fluid bg-dark">
+<div class="container-fluid" style="background-color: darkgrey;">
   <header class="container">
     <div class="py-2">
-      <a routerLink="/"><img src="/assets/img/moviehub.png" alt="Logo" class="img-fluid float-left" width="100px" height="100px" style="padding: 10px; margin: -10px;"></a>
+      <a routerLink="/home"><img src="/assets/img/moviehub.png" alt="Logo" class="img-fluid float-left" width="100px"
+          height="100px" style="padding: 10px; margin: -10px;"></a>
       <ul class="nav justify-content-end color">
         <div class="row ">
           <div class="col-12">
@@ -16,13 +17,32 @@
           </div>
         </div>
         <li class="nav-item">
-          <a class="nav-link active" >Details</a>
+          <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+             Genres
+            </a>
+            <div class="dropdown-menu input">
+              <a class="dropdown-item" href="#">Adventure</a>
+              <a class="dropdown-item" href="#">Animation</a>
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Biography</a>
+              <a class="dropdown-item" href="#">Thriller</a>
+              <a class="dropdown-item" href="#"> Sci-Fi</a>
+              <a class="dropdown-item" href="#">Sport</a>
+              <a class="dropdown-item" href="#">Fantasy</a>
+              <a class="dropdown-item" href="#">Romantic</a>
+              <a class="dropdown-item" href="#">Thriller</a>
+              <a class="dropdown-item" href="#">Comedy</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><strong>+</strong>Add a Genre</a>
+            </div>
+          </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink='/list'>Movie List</a>
+          <a class="nav-link" routerLink='/list' style="color: white;">Movie List</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)=logout()>Log out</a>
+          <a class="nav-link" (click)=logout() style="color: white;">Log out</a>
         </li>
       </ul>
     </div>
