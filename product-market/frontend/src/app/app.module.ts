@@ -27,11 +27,6 @@ import { FilterdataPipe } from './filterdata.pipe'
 import { ItemviewComponent } from './itemview/itemview.component';
 import { ResolverItemsService} from './resolver-items.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SortingComponent } from './sorting/sorting.component';
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort'
-
 const routes: Routes = [
   { path: "home",
     component: HomeComponent,
@@ -108,7 +103,6 @@ const routes: Routes = [
     CartComponent,
     FilterdataPipe,
     ItemviewComponent,
-    SortingComponent,
 
 
   ],
@@ -120,9 +114,6 @@ const routes: Routes = [
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
   ],
   providers: [
     {
