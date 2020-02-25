@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,7 +25,12 @@ import { AdditemComponent } from './additem/additem.component';
 import { CartComponent } from './cart/cart.component';
 import { FilterdataPipe } from './filterdata.pipe'
 import { ItemviewComponent } from './itemview/itemview.component';
-import { ResolverItemsService} from './resolver-items.service'
+import { ResolverItemsService} from './resolver-items.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SortingComponent } from './sorting/sorting.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort'
 
 const routes: Routes = [
   { path: "home",
@@ -81,6 +86,7 @@ const routes: Routes = [
         }
       ]
     }
+    
 ];
 
 @NgModule({
@@ -102,6 +108,7 @@ const routes: Routes = [
     CartComponent,
     FilterdataPipe,
     ItemviewComponent,
+    SortingComponent,
 
 
   ],
@@ -112,6 +119,10 @@ const routes: Routes = [
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [
     {

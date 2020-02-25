@@ -8,13 +8,6 @@
       "id": 3
     },
     {
-      "name": "ELECTRONICS",
-      "description": "LAPTOP,FVDSBSGF",
-      "createdAt": 1582267088971,
-      "updatedAt": 1582267088971,
-      "id": 4
-    },
-    {
       "name": "Groceries",
       "description": "Main consumer electronics products include radio receivers, television sets, MP3 players.",
       "createdAt": 1582525475435,
@@ -27,18 +20,23 @@
       "createdAt": 1582525516601,
       "updatedAt": 1582525516601,
       "id": 6
+    },
+    {
+      "name": "electronics",
+      "description": "heater",
+      "createdAt": 1582613120109,
+      "updatedAt": 1582613120109,
+      "id": 7
+    },
+    {
+      "name": "hghhjh",
+      "description": "mnm,,mn",
+      "createdAt": 1582614026677,
+      "updatedAt": 1582614026677,
+      "id": 8
     }
   ],
   "product-items": [
-    {
-      "name": "microwave",
-      "categoryId": "4",
-      "rating": "3",
-      "description": "etftvywu",
-      "createdAt": 1582523728248,
-      "updatedAt": 1582523728248,
-      "id": 5
-    },
     {
       "name": "vegetables",
       "categoryId": "5",
@@ -47,6 +45,42 @@
       "createdAt": 1582525578632,
       "updatedAt": 1582525578632,
       "id": 7
+    },
+    {
+      "name": "heater",
+      "categoryId": "4",
+      "rating": "5",
+      "description": "cc",
+      "createdAt": 1582608904295,
+      "updatedAt": 1582608904295,
+      "id": 8
+    },
+    {
+      "name": "gas",
+      "categoryId": "4",
+      "rating": "3",
+      "description": "ccccdc",
+      "createdAt": 1582608911891,
+      "updatedAt": 1582608911891,
+      "id": 9
+    },
+    {
+      "name": "shiwani",
+      "categoryId": "4",
+      "rating": "3",
+      "description": "ccccdccsdc",
+      "createdAt": 1582608921086,
+      "updatedAt": 1582608921086,
+      "id": 10
+    },
+    {
+      "name": "heater",
+      "categoryId": "7",
+      "rating": "2",
+      "description": "ccc",
+      "createdAt": 1582613135787,
+      "updatedAt": 1582613135787,
+      "id": 11
     }
   ],
   "product-cart": [
