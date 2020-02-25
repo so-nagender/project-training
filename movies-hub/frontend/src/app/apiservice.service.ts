@@ -36,4 +36,8 @@ export class ApiserviceService {
   getCat(): Observable<any> {
     return this.http.get('/api/cats');
   }
+  updateData(id, obj){
+  const ur = `/api/movies/${id}`;
+  return this.http.put(ur, obj)
+}
 }
