@@ -138,18 +138,6 @@
   ],
   "movies": [
     {
-      "movieName": "Frozen 2",
-      "id": 1,
-      "year": "2019",
-      "cast": [
-        "Kristen Bell",
-        "Evan Rachel Wood",
-        "Jeremy Sisto"
-      ],
-      "catId": 1,
-      "synopsis": "Frozen II, also known as Frozen 2, is a 2019 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios.At the 92nd Academy Awards, the film received a nomination for Best Original Song for 'Into the Unknown'."
-    },
-    {
       "movieName": "A Shaun the Sheep Movie: Farmageddon",
       "id": 2,
       "year": "2019",

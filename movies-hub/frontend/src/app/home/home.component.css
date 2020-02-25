@@ -53,5 +53,13 @@ a {
   
   .xy:hover .middle {
     opacity: 1;
-    
-  }
+    }
+    .pad{
+      padding: 0px;
+    }
+    .pad1{
+      padding: 0px;
+    }
+    .bg-color{
+      background: #101010;
+    }
