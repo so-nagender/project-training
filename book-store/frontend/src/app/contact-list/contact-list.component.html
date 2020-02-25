@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container padding_bottom">
     <h2 class="py-4">BOOKS <button (click)=setview()>View all</button>
       <button routerLink="/categories">Catogery View</button></h2>
     
@@ -46,7 +46,7 @@
       <p>No results found for "{{searchText}}".</p>
     </ng-template>
   </div>
-</div>
+
 
 
   <div  *ngIf="showcategoryview" class="container">
@@ -61,3 +61,4 @@
      <td>
     </tr>
    </div>
+  </div>

@@ -33,7 +33,8 @@ export class LoginComponent implements OnInit {
   onSubmit(form) {
     const apicall =this.api.postlogin(this.form.value.email, this.form.value.password)
     this.islogin = true;
-    // this.routes.navigate(['/dashboard'])
+   
+    // this.api.disable()/////////
   }
   viewData()
   {

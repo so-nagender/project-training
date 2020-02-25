@@ -91,6 +91,12 @@ export class ApiService {
     return data$;
 
    }
+  //  disablebutton(){
+
+  //   button= false;
+
+
+  //  }
    
    
   

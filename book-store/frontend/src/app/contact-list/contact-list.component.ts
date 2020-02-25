@@ -45,7 +45,6 @@ export class ContactListComponent implements OnInit {
   setview(){
     this.showcategoryview= false;
   }
- 
   meta_data(){
     console.log('hiiiiiiiiiiii')
     const data =this.api.charid()
