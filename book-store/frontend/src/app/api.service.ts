@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { TokenInterceptor} from '././TokenInterceptor'
 import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
+import { Subject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,11 @@ export class ApiService {
   observeddata : any
   url =`/api/movies`
   categoryFormData: any;
+  charterid: any;
+
+
+
+
   constructor(private http: HttpClient , private routes: Router) { }
   postloginDetails(email, password){
   
@@ -62,15 +68,32 @@ export class ApiService {
       const urlget$ = this.http.get('/api/catogries').subscribe((data: any)=> {
          console.log('_____________<<<<<<<<<<<<',data)});
   }
+  sendata(id){
+    console.log('here --------------->>>>>>>>>>',id)
+    this.routes.navigate(['/contactlist'])
+    this.charterid= id
+    return id;
+  }
+  charid(){
+    return  this.charterid
+    
+  }
 
   Viewdatacategories(){
    const Formdata$ =this.http.get('/api/catogries')
     return Formdata$
    }
    retrivedata(id){
-    const data$ =this.http.get(`/api/books?catogriesId=${id}`);
+    
+    const data$ =this.http.get(`/api/books?catogrieId=${id}`);
+
+
     return data$;
+
    }
+   
+   
+  
 }
    
 

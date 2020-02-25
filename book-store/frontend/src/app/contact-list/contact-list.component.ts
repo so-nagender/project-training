@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { ActivatedRoute } from '@angular/router';
-
-
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-contact-list',
   templateUrl: './contact-list.component.html',
@@ -13,6 +12,8 @@ export class ContactListComponent implements OnInit {
   searchText: string;
   apiBook;
   id;
+  getdata : any
+ showcategoryview = false;
 
   constructor(private api: ApiService, private activatedRoute: ActivatedRoute ) 
   {
@@ -21,6 +22,9 @@ export class ContactListComponent implements OnInit {
 
   ngOnInit() {
     this.book();
+    // this.categorydataview();
+    this.meta_data();
+    
   }
   book(){
     this.api.getBook().subscribe((res)=>{
@@ -35,7 +39,22 @@ export class ContactListComponent implements OnInit {
     this.id = x;
     
   }
+  categorydataview(){
+    this.api.Viewdatacategories().subscribe(data=> { console.log('_______>>>',data)})
+  }
+  setview(){
+    this.showcategoryview= false;
+  }
  
+  meta_data(){
+    console.log('hiiiiiiiiiiii')
+    const data =this.api.charid()
+    this.api.retrivedata(data).subscribe(res=> {this.getdata =res; console.log('xxxxxxxxxx',this.getdata);
+    
+    })
+    this.showcategoryview= true;
+    
   
 
+  }
 }
