@@ -1,29 +1,52 @@
-<div class="container">
-    <button type="button" class="close" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
-    <h1><strong style="font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">LOGIN</strong></h1>
-    <p><u>or</u> <strong style="color: #f88288;"> already have an account</strong></p>
-    <form [formGroup]="loginform">
-
-        <div class="form-group">
-            <label for="exampleInputEmail1" style="padding-top: 15px;">Username</label>
-            <input type="text" formControlName="username" class="form-control" 
-                aria-describedby="emailHelp" placeholder="mobile no. or email"
-                [ngClass]="{ 'is-invalid':f.username.errors }" />
-            <div *ngIf="f.username.errors" class="invalid-feedback">
-                <div *ngIf="f.username.errors.required">*UserName is required</div>
-            </div>
-            <small id="emailHelp" class="form-text text-muted">We'll never share your information with anyone else.
-            </small>
+<div class="container pt-4 pr-5 pl-5 pb-5">
+  <button type="button" class="close" aria-label="Close" (click)="onClose()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h1>
+    <strong
+      style="font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+      >LOGIN</strong
+    >
+  </h1>
+  <p>
+    <u>or</u> <strong style="color: #f88288;"> already have an account</strong>
+  </p>
+  <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="exampleInputEmail1" style="padding-top: 3px;">Username</label>
+      <input
+        type="text"
+        formControlName="username"
+        class="form-control"
+        aria-describedby="emailHelp"
+        placeholder="mobile no. or email"
+        [ngClass]="{ 'is-invalid': f.username.errors }"
+      />
+      <div *ngIf="f.username.errors" class="invalid-feedback">
+        <div *ngIf="f.username.errors.required">*UserName is required</div>
+      </div>
+      <small id="emailHelp" class="form-text text-muted"
+        >We'll never share your information with anyone else.
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1" style="padding-top: 15px;"
+        >Password</label
+      >
+      <input
+        type="password"
+        formControlName="password"
+        class="form-control"
+        placeholder="password"
+        [ngClass]="{ 'is-invalid': f.password.errors }"
+      />
+      <div *ngIf="f.password.errors" class="invalid-feedback">
+        <div *ngIf="f.password.errors.required">
+          *password length should be 6
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1" style="padding-top: 15px;">Password</label>
-            <input type="password" formControlName="password"class="form-control" placeholder="password"  [ngClass]="{ 'is-invalid':f.password.errors }" />
-            <div *ngIf="f.password.errors" class="invalid-feedback">
-                <div *ngIf="f.password.errors.required">*password length should be 6</div>
-            </div>
-        </div>
-        <button type="submit" class="btn ">LOGIN</button>
-    </form>
+      </div>
+    </div>
+    <div *ngIf="error" style="color: red;">{{ error }}</div>
+    <button type="submit" class="btn ">LOGIN</button>
+  </form>
 </div>

@@ -1,0 +1,82 @@
+<button
+  class="btn mt-4"
+  style="float: right; font-size: 15px; margin-right:40px"
+  [routerLink]="['addform']"
+  type="submit"
+>
+  ADD CATEGORY
+</button>
+<div class="mt-5 mr-3">
+  <div
+    id="mainDisplay"
+    class="carousel slide carousel-fade"
+    data-ride="carousel"
+    data-interval="3000"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <h2
+          style="font-weight: bolder;font-family :'Trebuchet MS','Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;padding-left: 25px;"
+        >
+          Everything at lowest price!!!
+          <img
+            src="../../assets/images/international-e-commerce (1).svg"
+            class="images"
+          />
+        </h2>
+      </div>
+      <div class="carousel-item">
+        <h2
+          style="font-weight: bolder;font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;padding-left: 25px"
+        >
+          Get 50% off
+          <img src="../../assets/images/discount-voucher.svg" class="images" />
+        </h2>
+      </div>
+      <div class="carousel-item">
+        <h2
+          style="font-weight: bolder;font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;padding-left: 25px"
+        >
+          Vouchers <img src="../../assets/images/giftbox.svg" class="images" />
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div class="pl-3">
+    <div class="row">
+      <div class="col-lg-3" *ngFor="let data of datas">
+        <div class="card">
+          <img
+            src="../../assets/images/download (6).jfif"
+            class="rounded-0"
+            alt="..."
+          />
+          <div class="card-body">
+            <button
+              type="button"
+              class="close"
+              aria-label="Close"
+              (click)="onClose(data)"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <button
+              style="border-radius: 0px; border: 0px;background-color: white;"
+              class="p-0"
+              [routerLink]="['/items', data.id]"
+            >
+              <span
+                ><h4 class="card-title">{{ data.name }}</h4></span
+              >
+            </button>
+            <p class="card-text">
+              Main consumer electronics products include radio receivers,
+              television sets, MP3 players.
+            </p>
+            <button class="btn" type="submit">EDIT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

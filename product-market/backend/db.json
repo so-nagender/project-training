@@ -1,4 +1,74 @@
 {
+  "product-category": [
+    {
+      "name": "fashion",
+      "description": "Main consumer electronics products include radio receivers, television sets, MP3 players",
+      "createdAt": 1582205272823,
+      "updatedAt": 1582205272823,
+      "id": 3
+    },
+    {
+      "name": "Groceries",
+      "description": "Main consumer electronics products include radio receivers, television sets, MP3 players.",
+      "createdAt": 1582525475435,
+      "updatedAt": 1582525475435,
+      "id": 5
+    },
+    {
+      "name": "Accessories",
+      "description": "Main consumer electronics",
+      "createdAt": 1582525516601,
+      "updatedAt": 1582525516601,
+      "id": 6
+    },
+    {
+      "name": "electronics",
+      "description": "heater",
+      "createdAt": 1582613120109,
+      "updatedAt": 1582613120109,
+      "id": 7
+    }
+  ],
+  "product-items": [
+    {
+      "name": "vegetables",
+      "categoryId": "5",
+      "rating": "3",
+      "description": "bdjsbfjangkfdg",
+      "createdAt": 1582525578632,
+      "updatedAt": 1582525578632,
+      "id": 7
+    },
+    {
+      "name": "heater",
+      "categoryId": "4",
+      "rating": "5",
+      "description": "cc",
+      "createdAt": 1582608904295,
+      "updatedAt": 1582608904295,
+      "id": 8
+    },
+    {
+      "name": "gas",
+      "categoryId": "4",
+      "rating": "3",
+      "description": "ccccdc",
+      "createdAt": 1582608911891,
+      "updatedAt": 1582608911891,
+      "id": 9
+    }
+  ],
+  "product-cart": [
+    {
+      "name": "Laptops",
+      "rating": 4,
+      "cost": 50000,
+      "description": "Flipkart has wide range of branded laptops browse and buy online shopping store. ... Acer Predator Helios 300 Core i7 8th Gen - (8 GB + 16 GB Optane/2 TB HDD/Windows 10 Home/6 GB Graphics.",
+      "createdAt": 1582545196510,
+      "updatedAt": 1582545196510,
+      "id": 3
+    }
+  ],
   "posts": [
     {
       "id": 1,
@@ -50,6 +120,90 @@
     {
       "name": "hello",
       "password": "1234"
+    },
+    {
+      "name": "ashish2",
+      "password": "12345",
+      "createdAt": 1582103240211,
+      "updatedAt": 1582103240211
+    },
+    {
+      "name": "ashish3",
+      "password": "12345",
+      "createdAt": 1582108190048,
+      "updatedAt": 1582108190048
+    },
+    {
+      "name": "adssad",
+      "password": "adasdasd",
+      "createdAt": 1582110463479,
+      "updatedAt": 1582110463479
+    },
+    {
+      "name": "nagenderwqwqwqw",
+      "password": "dadadad",
+      "createdAt": 1582110484708,
+      "updatedAt": 1582110484708
+    },
+    {
+      "name": "bansal.ashu35@gmail.com",
+      "password": "ashish321",
+      "createdAt": 1582110695696,
+      "updatedAt": 1582110695696
+    },
+    {
+      "name": "raj@gmail.com",
+      "password": "ashish321",
+      "createdAt": 1582111996388,
+      "updatedAt": 1582111996388
+    },
+    {
+      "name": "ra@gmail.com",
+      "password": "ashish",
+      "createdAt": 1582112145187,
+      "updatedAt": 1582112145187
+    },
+    {
+      "name": "raj1234@gmail.com",
+      "password": "ashish321",
+      "createdAt": 1582112171820,
+      "updatedAt": 1582112171820
+    },
+    {
+      "name": "raju457@gmail.com",
+      "password": "ashish321",
+      "createdAt": 1582112256125,
+      "updatedAt": 1582112256125
+    },
+    {
+      "name": "shi@gmail.com",
+      "password": "mysisdsaefasd",
+      "createdAt": 1582117093222,
+      "updatedAt": 1582117093222
+    },
+    {
+      "name": "vfdhgsh@gmail.com",
+      "password": "ndfjhrjgvndfgn",
+      "createdAt": 1582117201334,
+      "updatedAt": 1582117201334
+    },
+    {
+      "name": "shikhar@gmail.com",
+      "password": "raju56789",
+      "createdAt": 1582178433292,
+      "updatedAt": 1582178433292
+    },
+    {
+      "name": "bansal.ashu35@gmial.com",
+      "password": "ashish321",
+      "createdAt": 1582178714898,
+      "updatedAt": 1582178714898
+    },
+    {
+      "name": "shiwani@gmail.com",
+      "password": "ashish321",
+      "createdAt": 1582191797427,
+      "updatedAt": 1582191797427
     }
   ],
   "movies": [
@@ -98,6 +252,13 @@
       "createdAt": 1581847793897,
       "updatedAt": 1581847793897,
       "id": 9
+    },
+    {
+      "name": "ashish",
+      "password": "1234",
+      "createdAt": 1582097217428,
+      "updatedAt": 1582097217428,
+      "id": 10
     }
   ],
   "tests": [
