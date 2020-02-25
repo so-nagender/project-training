@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, RootRenderer } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { ApiService} from '.././api.service'
@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   })
   data: any;
   observeddata: any;
+  islogin: boolean;
 
  
   constructor(private api: ApiService , private routes : Router) { 
@@ -27,9 +28,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     
+    
   }
   onSubmit(form) {
-    this.api.postlogin(this.form.value.email, this.form.value.password)
+    const apicall =this.api.postlogin(this.form.value.email, this.form.value.password)
+    this.islogin = true;
+    // this.routes.navigate(['/dashboard'])
   }
   viewData()
   {

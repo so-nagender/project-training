@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -6,13 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  
+    val = '/login/'
+  constructor(private routes: Router) { 
+  //   routes.events.pipe(
+  //     filter(event => event instanceof NavigationEnd)  
+  //   ).subscribe((event: NavigationEnd) => {
+  //     console.log("this is _________>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",event.url);
+  //   });
+    }
+  
 
   ngOnInit() {
+    console.log(this.routes.url)
   }
   logout(){
-    console.log('hi')
+    localStorage.clear();
 
     
   }

@@ -14,6 +14,7 @@ export class CategoriesComponent implements OnInit {
   @ViewChild('category_form', {static: true}) category_form: ElementRef;
   categoryFormdata: any;
   Hascatdata= false;
+  catdata: any;
 
    toggle_form() {
     this.view_form = true
@@ -45,7 +46,9 @@ export class CategoriesComponent implements OnInit {
     }
   });
   }
-  
+  retrivedata(id){
+    this.api.retrivedata(id).subscribe(data=>{this.catdata = data;console.log(this.catdata)})
+  }
   ngOnInit() {
     this.view();
   }
