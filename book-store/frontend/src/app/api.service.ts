@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { TokenInterceptor} from '././TokenInterceptor'
 import { Route } from '@angular/compiler/src/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -31,18 +32,43 @@ export class ApiService {
   
   }
 
-  getBook(){
+  getBook(): Observable<any>{
     const url1 = `/api/books`;
-    return this.http.get(url1); 
+    return this.http.get<any>(url1); 
   }
 
-  getCat(){
+  getCatogery(): Observable<any>{
+    const url1 = `/api/catogries`;
+    return this.http.get<any>(url1); 
+  }
+
+
+  getCat(): Observable<any>{
     const url2 = `/api/books?_expand=catogrie`;
-    return this.http.get(url2); 
+    return this.http.get<any>(url2); 
+  }
+  getBookDetail(x): Observable<any>{
+    const url3 = `/api/books/${x}`;
+    return this.http.get<any>(url3); 
   }
 
-  deleteBook(id){
-    const url3 =`/api/books/{x}`
+  getCatDetail(x): Observable<any>{
+    const url4 = `/api/books/${x}?_expand=catogrie`;
+    return this.http.get<any>(url4); 
+  }
+
+  updateBook(obj, x): Observable<any>{
+    const url = `/api/books/${x}`;
+    return this.http.put<any>( url, obj);
+  }
+
+  addBook(obj): Observable<any> {
+    return this.http.post<any>('/api/books', obj);
+  }
+
+  deleteTeams(x): Observable<any>{
+    const url = `/api/books/${x}`;
+    return this.http.delete<any>( url);
   }
     
   postbookcategories(form){

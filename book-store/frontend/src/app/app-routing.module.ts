@@ -6,6 +6,9 @@ import { ContactListComponent } from './contact-list/contact-list.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ViewComponent } from './view/view.component';
+import { EditComponent } from './edit/edit.component';
+import { AddbookComponent } from './addbook/addbook.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -14,6 +17,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent},
   { path: 'dashboard', component: DashboardComponent},
+  { path: 'book/view/:id', component: ViewComponent},
+  { path: 'book/edit/:id', component: EditComponent},
+  { path: 'addbook', component: AddbookComponent},
 ];
 
 @NgModule({

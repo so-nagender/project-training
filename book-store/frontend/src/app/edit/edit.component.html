@@ -1,0 +1,32 @@
+<div class="container" style="margin-bottom: 100px; margin-top: 25px; text-align: center;">
+    <h2  style="margin-bottom: 50px;">Edit Book Details</h2>
+    <form [formGroup]="formData">
+
+         Book Name:
+        <br>
+        <input id="bookname" class="form-control" type="text" [(ngModel)]="apiBook.BookName" formControlName="bookname">
+        <br>
+        Author Name:
+        <br>
+        <input id="authorname" class="form-control" type="text" [(ngModel)]="apiBook.AuthorName" formControlName="authorname">
+        <br>
+        Catogery Name:
+        <br>
+        <div class="form-row align-items-center">
+            
+              <select formControlName="catname" class="custom-select mr-sm-2" id="inlineFormCustomSelect" >
+                <option selected>{{apiBook1.catogrie.title}}</option>
+                <option value="{{i.id}}" *ngFor="let i of apiBook2">{{i.title}}</option>
+              </select>
+            </div>
+        
+        <br>
+        Description:
+        <br>
+        <input id="des" class="form-control" type="text" [(ngModel)]="apiBook.description" formControlName="des">
+        <div style="margin-top: 10px;">
+            <button type="submit" class="btn btn-primary" (click)="onUpdate()" routerLink="/contactlist"> Update </button>
+            <button type="button" class="btn btn-primary" style="margin-left: 10px;" routerLink="/contactlist">Cancle</button>
+        </div>
+    </form>
+</div> 

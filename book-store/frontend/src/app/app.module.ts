@@ -21,7 +21,10 @@ import {MatInputModule} from '@angular/material/input';
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpResponse } from '@angular/common/http';
 import { TokenInterceptor } from './TokenInterceptor';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { FooterComponent } from './footer/footer.component'
+import { FooterComponent } from './footer/footer.component';
+import { ViewComponent } from './view/view.component';
+import { EditComponent } from './edit/edit.component';
+import { AddbookComponent } from './addbook/addbook.component'
 
 
 @NgModule({
@@ -36,7 +39,10 @@ import { FooterComponent } from './footer/footer.component'
     FilterPipe,
     ContactTableComponent,
     DashboardComponent,
-    FooterComponent
+    FooterComponent,
+    ViewComponent,
+    EditComponent,
+    AddbookComponent
   ],
   imports: [
     BrowserModule,

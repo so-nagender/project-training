@@ -31,11 +31,10 @@ export class ContactListComponent implements OnInit {
     });
   }
 
-  onDelete(x){
-    this.id = x;
-    
-  }
- 
-  
+  onDelete(x) {
+    const id = x;
+    this.api.deleteTeams(id).subscribe();
+    this.book();
+  } 
 
 }

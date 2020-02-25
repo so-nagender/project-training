@@ -1,0 +1,44 @@
+<div class="container" style="margin-bottom: 100px; margin-top: 25px; text-align: center;">
+    <h2 style="text-align: center; margin-bottom: 25px;">Add Book Here</h2>
+    <form [formGroup]="formData">
+
+        Book Name:
+        <br>
+        <input id="bookname" class="form-control" type="text" formControlName="bookname"
+            [ngClass]="{ 'is-invalid': submitted && u.bookname.errors }">
+        <div *ngIf="submitted && u.bookname.errors" class="invalid-feedback">
+            <div *ngIf="u.bookname.errors.required"> Book Name is required</div>
+        </div>
+        <br>
+        Author Name:
+        <br>
+        <input id="authorname" class="form-control" type="text" formControlName="authorname"
+            [ngClass]="{ 'is-invalid': submitted && u.authorname.errors }">
+        <div *ngIf="submitted && u.authorname.errors" class="invalid-feedback">
+            <div *ngIf="u.authorname.errors.required"> Author Name is required</div>
+        </div>
+        <br>
+        Catogery Name:
+        <br>
+        <div class="form-row align-items-center">
+            
+              <select formControlName="catname" class="custom-select mr-sm-2" id="inlineFormCustomSelect" >
+                
+                <option value="{{i.id}}" *ngFor="let i of apiBook2">{{i.title}}</option>
+              </select>
+            </div>
+        
+        <br>
+        Description:
+        <br>
+        <input id="des" class="form-control" type="text" formControlName="des"
+            [ngClass]="{ 'is-invalid': submitted && u.des.errors }">
+        <div *ngIf="submitted && u.des.errors" class="invalid-feedback">
+            <div *ngIf="u.des.errors.required">Description is required</div>
+        </div>
+        <div style="margin-top: 10px;">
+            <button type="submit" class="btn btn-primary " (click)="onSubmit()" routerLink="/contactlist"> Add Book</button>
+            <button type="button" class="btn btn-primary" style="margin-left: 10px;" routerLink="/contactlist">Cancle</button>
+        </div>
+    </form>
+</div> 
