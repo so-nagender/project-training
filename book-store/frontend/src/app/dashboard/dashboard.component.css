@@ -1,14 +1,14 @@
 .padding-top-200px{
-    padding-top: 200px;
-    padding-bottom: 250px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .padding-left-200px{
 
-    padding-left: 300px;
+    padding-left: 100px;
 }
 .line{
     border: 1px solid grey;
-    margin-top: 200px;
+    margin-top: 55px;
    
 }
 .books-section{
@@ -157,8 +157,9 @@ div span{
 .view_button{
   background-color: #75c74e;
   border: 1px solid #75c74e;
-  margin-top: 100px;
+  margin-top: 110px;
   margin-left: 22px;
+  border-radius: 20px;
 
 }
 
