@@ -43,6 +43,7 @@ export class EditmovieComponent implements OnInit {
       this.myservice.getCat().subscribe((res) => {
         this.catogry = res;
       });
+    }
     updateDataa()
     {
       this.update= true;
