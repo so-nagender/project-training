@@ -172,13 +172,6 @@
       "AuthorName": "Terry Pratchett and Neil Gaiman",
       "catogrieId": 3,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
-    },
-    {
-      "id": 27,
-      "BookName": "The Wheel of Time series",
-      "AuthorName": "Robert Jordan",
-      "catogrieId": 3,
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
     }
   ],
   "profile": [
