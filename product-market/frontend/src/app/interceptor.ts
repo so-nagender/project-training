@@ -3,9 +3,12 @@ import {
   HttpRequest,
   HttpHandler,
   HttpEvent,
-  HttpInterceptor
+  HttpInterceptor,
+  HttpErrorResponse,
+  HttpResponse
 } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
 
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {
@@ -19,6 +22,29 @@ export class TokenInterceptor implements HttpInterceptor {
         Authorization: `Bearer ${localStorage.getItem("accessToken")}`
       }
     });
-    return next.handle(request);
+    return next.handle(request)
+    .pipe(
+      retry(1),
+      catchError((error: HttpErrorResponse) => {
+      let errorMessage = '';
+      if (error.error instanceof ErrorEvent) {
+      // client-side error
+      errorMessage = `Error: ${error.error.message}`;
+      }
+      else if(error.status == 403) {
+      // server-side error
+      console.log(error)
+      errorMessage = `${error.error.message}`;
+      }
+      else if(error.status == 409) {
+        // server-side error
+        console.log(error)
+        errorMessage = `user already exists,please either use an new mail address or login`;
+      }
+
+      alert(errorMessage);
+      return throwError(errorMessage);
+      })
+      )
   }
 }
