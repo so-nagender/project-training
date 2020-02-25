@@ -344,6 +344,7 @@
         "Salman Khan",
         "Aisha Takia"
       ],
+      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. ",
       "updatedAt": 1582614251545,
       "id": 19
     },
@@ -356,8 +357,18 @@
         "tushar",
         "rajpal yadav"
       ],
-      "updatedAt": 1582614034337,
+      "synopsis": "Based mujhe kuch nhi huwa  on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. ",
+      "updatedAt": 1582631514222,
       "id": 20
+    },
+    {
+      "movieName": "Tere Naam",
+      "year": "2010",
+      "catId": "9",
+      "cast": "Salman Khan, Heroin nhi pta",
+      "synopsis": "Frozen II, also known as Frozen 2, is a 2019 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios.At the 92nd Academy Awards, the film received a nomination for Best Original Song for 'Into the Unknown'.",
+      "updatedAt": 1582632389461,
+      "id": 21
     }
   ],
   "cats": [

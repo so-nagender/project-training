@@ -1,7 +1,7 @@
 <div>
     <app-header></app-header>
 </div>
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="checkoutForm">
     <div class="row moviesDetailsMargin">
         <div class="col-2">
         </div>
@@ -13,7 +13,7 @@
         <div class="col-3">
             <label>
                 <div class="form-group">
-                    <input type="text" required class="input" formControlName="Name">
+                    <input type="text" required class="input" formControlName="moviename">
                     <p class="label-txt">Movie Name</p>
                     <div class="line-box">
                         <div class="line"></div>
@@ -22,25 +22,20 @@
             </label>
             <label>
                 <div class="form-group">
-                    <input type="text" required class="input" formControlName="Name">
+                    <input type="text" required class="input" formControlName="date">
                     <p class="label-txt">Release Date</p>
                     <div class="line-box">
                         <div class="line"></div>
                     </div>
                 </div>
             </label>
+            <h5>catogaries</h5>
+            <select formControlName="cat" class="custom-select" formControlsName="cat" id="iinlineFormCustomSelect">
+                <option value="{{i.id}}" *ngFor="let i of catogry">{{i.genre}}</option>
+            </select>
             <label>
                 <div class="form-group">
-                    <input type="text" required class="input" formControlName="Name">
-                    <p class="label-txt">Category</p>
-                    <div class="line-box">
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </label>
-            <label>
-                <div class="form-group">
-                    <input type="text" required class="input" formControlName="Name">
+                    <input type="text" required class="input" formControlName="cast">
                     <p class="label-txt">Cast</p>
                     <div class="line-box">
                         <div class="line"></div>
@@ -48,7 +43,21 @@
                 </div>
             </label>
         </div>
-        <div class="col-4">
+        <div class="col-4"></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-5"></div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="synopsys">Synopsys:</label>
+                    <textarea class="form-control" rows="4" formControlName="syn" id="comment"></textarea>
+                </div>
+            </div>
+            <div class="col-3"></div>
         </div>
+    </div>
+    <div class="col-auto my-1">
+        <button type="submit" routerLink="/list" (click)=onSubmit() class="btn btn-primary">Submit</button>
     </div>
 </form>

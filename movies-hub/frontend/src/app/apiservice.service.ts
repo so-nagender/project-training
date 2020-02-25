@@ -11,6 +11,10 @@ export class ApiserviceService {
   getMovies(): Observable<any> {
     return this.http.get('api/movies?_expand=cat')
   }
+  getMoviesByCatg(id): Observable<any> {
+    const add = `api/cats/${id}?_embed=movies`
+    return this.http.get(add);
+  }
   signupData(obj): Observable<any> {
     return this.http.post<any>('/api/signup', obj);
   }
@@ -29,10 +33,6 @@ export class ApiserviceService {
     const address = `/api/movies/${id}?_expand=cat`;
     return this.http.get(address);
   }
-  getOneMovie(id): Observable<any> {
-    const address = `/api/movies/${id}`;
-    return this.http.get(address);
-  }
   getCat(): Observable<any> {
     return this.http.get('/api/cats');
   }
@@ -43,5 +43,8 @@ export class ApiserviceService {
   update(id, obj): Observable<any> {
     const add = `/api/movies/${id}`;
     return this.http.put<any>(add, obj);
+  }
+  postData(obj): Observable<any> {
+    return this.http.post<any>('/api/movies',obj)
   }
 }

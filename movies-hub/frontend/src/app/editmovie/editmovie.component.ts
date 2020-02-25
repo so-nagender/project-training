@@ -22,6 +22,7 @@ export class EditmovieComponent implements OnInit {
     date : [''],
     cat: [''],
     cast: [''],
+    syn: [''],
   })
 
   ngOnInit() {
@@ -43,7 +44,8 @@ export class EditmovieComponent implements OnInit {
       const year= this.checkoutForm.controls.date.value;
       const category= this.checkoutForm.controls.cat.value;
       const cast= this.checkoutForm.controls.cast.value;
-      const obj= {movieName: moviename, year: year, catId: category, ["cast"]: cast};
+      const synopsys = this.checkoutForm.controls.syn.value;
+      const obj= {movieName: moviename, year: year, catId: category, ["cast"]: cast, synopsis: synopsys};
       this.myservice.update(this.id, obj).subscribe();
     }
 }
