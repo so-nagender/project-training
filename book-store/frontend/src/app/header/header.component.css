@@ -1,3 +1,8 @@
+*{
+    background-color: #EBEBEB !important;
+}
+
+
 .padding_left{
 padding-left: 183px;
 }
@@ -11,7 +16,4 @@ img{
 }
 .shadow{
     box-shadow: 10px 10px 5px #aaaaaa;
-}
-.header-position{
-    
 }
