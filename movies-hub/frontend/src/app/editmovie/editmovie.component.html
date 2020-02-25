@@ -36,9 +36,10 @@
                         <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <span class="sr-only">Toggle Dropdown</span>
                         </button>
-                        
-                        <div class="dropdown-menu" *ngFor="let i of catogry">
-                            <p>{{ i.genre }}</p>
+                        <div class="dropdown-menu">
+                            <ul type="null"  *ngFor="let i of catogry">
+                                <li>{{i.genre}}</li>
+                            </ul>
                         </div>
                       </div>
                 </div>

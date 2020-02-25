@@ -32,7 +32,7 @@ export class EditmovieComponent implements OnInit {
 
   ngOnInit() {
     this.getDataa();
-    this.updateDataa();
+    this.getCategory();
   }
   getDataa(){
     this.myservice.getSingleElementById(this.id).subscribe((res) =>{
@@ -44,8 +44,7 @@ export class EditmovieComponent implements OnInit {
         this.catogry = res;
       });
     }
-    updateDataa()
-    {
+    updateDataa() {
       this.update= true;
       this.moviename= this.checkoutForm.controls.movienm.value;
       this.year= this.checkoutForm.controls.date.value;
