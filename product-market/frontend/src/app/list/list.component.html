@@ -26,28 +26,28 @@
       <div class="row mt-2">
         <div class="col-lg-7">
           <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-sm"><img style="height: 20px;" src="../../assets/images/search.svg"></span>
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm"><img style="height: 20px;"
+                  src="../../assets/images/search.svg"></span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm" [(ngModel)]="search">
           </div>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="search">
         </div>
-      </div>
         <div class="col-lg-5">
-          <button class="btn " style="float: right; font-size: 15px;;"
-        (click)="onaddItem()" type="submit">ADD ITEM</button>
+          <button class="btn " style="float: right; font-size: 15px;;" (click)="onaddItem()" type="submit">ADD
+            ITEM</button>
         </div>
       </div>
-      
-      
+
+
     </div>
   </div>
-  <table class="table" style="border: solid black 2px;margin-left: 5px;">
-     <thead>
+  <table class="table" id="table" style="border: solid black 2px;margin-left: 5px;">
+    <thead>
       <tr>
-
-      </tr>
-      <tr>
-        <th scope="col" class="font1">LIST OF ITEMS</th>
+        <th scope="col" class="font1" (click)="sortTable()">LIST OF ITEMS</th>
+        <th scope="col" class="font1" (click)="sortTablecost()">COST</th>
         <th scope="col" class="font1">RATINGS</th>
         <th scope="col" class="font1">CHOOSE BRAND</th>
         <th scope="col" class="font1">ITEMS ARE</th>
@@ -56,10 +56,13 @@
     <tbody>
       <tr *ngFor="let data of datas| filterdata: search : 'name'">
         <td class="font2">{{data.name}}<br>
-          <p style="margin-top: 10PX;">MRP: {{data.cost}}</p><BR>
-          <button type="button" class="btn" style="margin-top: 40px; float: left;" (click) = "onaddCart(data)">ADD TO CART</button>
-        </td>
 
+          <button type="button" class="btn" style="margin-top: 40px; float: left;" (click)="onaddCart(data)">ADD TO
+            CART</button>
+        </td>
+        <td>
+          <p style="margin-top: 10PX;">{{data.cost}}</p>
+        </td>
         <td>
           <span class="fa fa-star checked" *ngFor="let star of [].constructor(data.rating)"></span>
           <span class="fa fa-star" *ngFor="let star of [].constructor(5 - data.rating)"></span>
@@ -79,11 +82,11 @@
             <div class="row no-gutters">
               <div class="col-md-4">
                 <img src="../../assets/images/download (1).jfif" class="card-img" alt="...">
-                </div>
+              </div>
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title">{{data.name}}</h5>
-                  <p class="card-text">{{data.description}}.</p>
+                  <p class="card-text">{{data.description}}</p>
                 </div>
               </div>
             </div>
@@ -117,29 +120,4 @@
 
 
 
- 
-<!-- <table>
-<thead>
-  <tr>
-    <th colspan="4">Search :
-      <input type="text" [(ngModel)]="search">
-    </th>
-  </tr>
-  <tr>
- 
-    <th style="width:60px;max-width:100px;">Name</th>
-    <th style="width:60px;max-width:50px;">rating</th>
-    <th style="width:60px;max-width:50px;">age</th>
-    <th style="width:60px;max-width:50px;">g</th>
-  </tr>
-</thead>
-<tbody>
-  <tr *ngFor="let data_items of  items| filterdata: search : 'list_of_items'">
-    <td>{{data_items .list_of_items}}</td>
-    <td>{{data_items .ratings}}</td>
-    <td>{{data_items .choose_brand}}</td>
-    <td>{{data_items .items_are}}</td>
-  </tr>
-</tbody>
 
-</table>  -->
