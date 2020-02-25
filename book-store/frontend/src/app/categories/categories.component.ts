@@ -3,6 +3,8 @@ import {TimelineMax, TweenMax} from "gsap";
 import { FormGroup, FormControl, Validators } from "@angular/forms"
 import { ApiService } from '../api.service';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { Router } from '@angular/router';
+import { identifierModuleUrl } from '@angular/compiler';
 
 @Component({
   selector: 'app-categories',
@@ -20,7 +22,7 @@ export class CategoriesComponent implements OnInit {
     this.view_form = true
   }
 
-  constructor(private api : ApiService) { }
+  constructor(private api : ApiService , public routes : Router) { }
   animation() {
     let t1: TimelineMax = new TimelineMax();
     t1.fromTo(this.category_form, 5,{x:"-100%"},
@@ -46,9 +48,18 @@ export class CategoriesComponent implements OnInit {
     }
   });
   }
+ 
   retrivedata(id){
-    this.api.retrivedata(id).subscribe(data=>{this.catdata = data;console.log(this.catdata)})
+    this.api.retrivedata(id).subscribe(data=>{this.catdata = data;console.log('catlist',this.catdata)
+    this.routes.navigate(['/contactlist'])
+    console.log('data to be sent',this.catdata)
+  })
+ 
   }
+  senddata(id){
+    this.api.sendata(id)
+  }
+ 
   ngOnInit() {
     this.view();
   }

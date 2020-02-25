@@ -1,10 +1,13 @@
-<div class="container">
-    <h2 class="py-4">Contact</h2>
+<div class="container padding_bottom">
+    <h2 class="py-4">BOOKS <button (click)=setview()>View all</button>
+      <button routerLink="/categories">Catogery View</button></h2>
+    
   
     <div class="form-group mb-4">
       <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
     </div>
-  
+    <div *ngIf="!showcategoryview">
+
     <table class="table" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
       <colgroup>
         <col width="5%">
@@ -26,7 +29,7 @@
       <tbody>
         <tr *ngFor="let books of apiBook | filter: searchText  ; let i = index">
           <th scope="row">{{i + 1}}</th>
-          <td>{{books.BookName}}</td>
+            <td>{{books.BookName}}</td>
             <td>{{books.AuthorName}}</td>
         <td>{{books.catogrie.title}}</td>
         <td><button type="button" class="btn btn-primary" style="margin-right: 10px;" [routerLink]="['/book/view', books.id]">View</button>
@@ -36,10 +39,24 @@
         </tr>
       </tbody>
     </table>
-  
+
     <ng-template #noResults>
       <p>No results found for "{{searchText}}".</p>
     </ng-template>
   </div>
 
-  
+
+
+  <div  *ngIf="showcategoryview" class="container">
+   <div  *ngFor="let element of getdata">
+
+    <tr>
+      <td>
+     {{element.BookName}}
+     
+     <td>
+     {{element.AuthorName}}
+     <td>
+    </tr>
+   </div>
+  </div>

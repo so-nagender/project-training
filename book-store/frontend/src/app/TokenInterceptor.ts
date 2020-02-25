@@ -16,7 +16,8 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {
-  constructor(public auth: ApiService, private routes : Router) {}
+  message: any;
+  constructor(public auth: ApiService, private routes : Router, private api: ApiService) {}
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
  
     request = request.clone({
@@ -35,6 +36,8 @@ export class TokenInterceptor implements HttpInterceptor {
           {
            
             console.log(event)
+            this.api.currentMessage.subscribe(message=> this.message= message)
+            this.api.newMessage()
             return event;
           }
          else
