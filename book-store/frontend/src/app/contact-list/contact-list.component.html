@@ -1,6 +1,12 @@
 <div class="container">
-    <h2 class="py-4">BOOKS <button (click)=setview()>View all</button>
-      <button routerLink="/categories">Catogery View</button></h2>
+  <div class="row row-cols-3">
+    <div class="col"><div class="upper-button"><i><b>Books</b></i></div></div>
+    <div class="col"><button class="upper-button" (click)=setview()>View Books</button></div>
+    <div class="col"><button class="upper-button" routerLink="/categories">Book categories</button></div>
+  </div>
+    
+    
+    
     
   
     <div class="form-group mb-4">
@@ -49,15 +55,51 @@
 </div>
 
 
-  <div  *ngIf="showcategoryview" class="container">
-   <div  *ngFor="let element of getdata">
 
-    <tr>
-      <td>
-     {{element.BookName}}
-     
-     <td>
-     {{element.AuthorName}}
-     <td>
-    </tr>
-   </div>
+<div *ngIf="showcategoryview" class="container">
+<table style="width: 100%;">
+  <tr>
+    <th style="width: 33.3%;">Book Name</th>
+    <th style="width: 33.3%;">Book Author</th>
+    <th style="width: 33.3%;">Action</th>
+  </tr>
+  <tr *ngFor="let element of getdata">
+    <td>{{element.BookName}}</td>
+    <td>{{element.AuthorName}}</td>
+    <td>
+      <button type="button" class="btn btn-primary" style="margin-right: 10px;">View</button>
+      <button type="button" class="btn btn-primary" style="margin-right: 10px;">Edit</button>
+      <button type="button" class="btn btn-primary" (click)="onDelete(books.id)">Delete</button>
+    </td>
+  </tr>
+
+
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div  *ngIf="showcategoryview" class="container">
+  <div  *ngFor="let element of getdata">
+    <table  border="1px" style="width:100%">     
+      <tr>
+        <td style="width:50%">{{element.BookName}}</td>
+        <td style="width:50%">{{element.AuthorName}}</td>
+      </tr>
+    </table>
+  </div>
+</div> -->
