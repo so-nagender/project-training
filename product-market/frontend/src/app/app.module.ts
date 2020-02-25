@@ -111,8 +111,7 @@ const routes: Routes = [
     CartComponent,
     FilterdataPipe,
     ItemviewComponent,
-    HomeDisplayComponent,
-    SortingComponent,
+    HomeDisplayComponent
 
 
   ],
