@@ -1,18 +1,16 @@
-/* .padding_top{
+.padding_top{
     padding-top: 200px;
-    font-family: 'Pacifico' ;
-    font-size: 22px;
+  
+
     padding-bottom: 250px;
-} */
+    margin-left : 20% ;
+}
 .container{
     padding-top: 30px;
-    font-family: 'Pacifico' ;
-    font-size: 22px;
+
     padding-bottom: 50px;
 }
-div .row{
-    padding-left: 284px;
-}
+
 .border {
     -moz-box-shadow: 0 0 10px #ccc;
     -webkit-box-shadow: 0 0 10px #ccc;
@@ -49,10 +47,6 @@ div.close{
     right: 1px;
     top: 0%;
     position: absolute;
- 
-   
-
-
 }
 div.reset{
     right: 1px;
@@ -81,4 +75,11 @@ button[type=submit], [type=reset], [type=close] {
 
 p{
     cursor: pointer;
+    margin-top: 26px;
+}
+.col-sm-4.border.plus_image{
+    margin-left: 16%;
+}
+div .col-sm-4.border.padding_left{
+    margin-left: 16%;
 }
