@@ -4,6 +4,7 @@ import { TokenInterceptor} from '././TokenInterceptor'
 import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
 import { Subject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,11 +14,17 @@ export class ApiService {
   url =`/api/movies`
   categoryFormData: any;
   charterid: any;
+  private message = new BehaviorSubject<any>(false)
+  currentMessage = this.message
 
 
 
 
   constructor(private http: HttpClient , private routes: Router) { }
+  changemessage(message:boolean){
+    this.message.next(message)
+  }
+
   postloginDetails(email, password){
   
     const teams$ = this.http.post('http://localhost:3000/signup',{ "name" : email,"password" : password})
@@ -77,6 +84,9 @@ export class ApiService {
   charid(){
     return  this.charterid
     
+  }
+  newMessage(){
+    this.changemessage(true)
   }
 
   Viewdatacategories(){

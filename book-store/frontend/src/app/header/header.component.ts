@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,8 @@ import { filter } from 'rxjs/operators';
 export class HeaderComponent implements OnInit {
   
     val = '/login/'
-  constructor(private routes: Router) { 
+    buttonisdisabled: boolean= false;
+  constructor(private routes: Router, private api : ApiService) { 
   //   routes.events.pipe(
   //     filter(event => event instanceof NavigationEnd)  
   //   ).subscribe((event: NavigationEnd) => {
@@ -21,11 +23,16 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.routes.url)
+    this.api.currentMessage.subscribe(message=>{
+    this.buttonisdisabled= message;
+  })
+
   }
   logout(){
     localStorage.clear();
-
-    
+    this.buttonisdisabled= false
   }
+
+  
 
 }

@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
   data: any;
   observeddata: any;
   islogin: boolean;
+  message: any;
 
  
   constructor(private api: ApiService , private routes : Router) { 
@@ -28,14 +29,15 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     
-    
   }
   onSubmit(form) {
     const apicall =this.api.postlogin(this.form.value.email, this.form.value.password)
-    this.islogin = true;
    
-    // this.api.disable()/////////
+    
+   
+    // this.api.disable()/////////  
   }
+  
   viewData()
   {
      const data=this.api.viewdata().subscribe(data => { this.observeddata = data; console.log(this.observeddata)});
