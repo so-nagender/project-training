@@ -20,8 +20,15 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Interceptor } from '../app/interceptor';
 import { DataResolverService } from './data-resolver.service';
 import { GenresComponent } from './genres/genres.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MovieListComponent } from './movie-list/movie-list.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import {MatButtonModule} from '@angular/material/button';
 
 const appRoutes: Routes = [
+  {path:'movielist',component:MovieListComponent},
   {
     path: 'home',
     component: HomeComponent,
@@ -74,18 +81,27 @@ const appRoutes: Routes = [
     EditmovieComponent,
     AddmovieComponent,
     Confirmpasswordvalidator,
-    GenresComponent
+    GenresComponent,
+    MovieListComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
-
+    MatButtonModule,
     FormsModule,
 
     RouterModule.forRoot(
       appRoutes,
     ),
+
+    BrowserAnimationsModule,
+
+    MatTableModule,
+
+    MatPaginatorModule,
+
+    MatSortModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
