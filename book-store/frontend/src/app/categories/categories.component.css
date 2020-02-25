@@ -1,9 +1,17 @@
-.padding_top{
-
+/* .padding_top{
     padding-top: 200px;
     font-family: 'Pacifico' ;
     font-size: 22px;
     padding-bottom: 250px;
+} */
+.container{
+    padding-top: 30px;
+    font-family: 'Pacifico' ;
+    font-size: 22px;
+    padding-bottom: 50px;
+}
+div .row{
+    padding-left: 284px;
 }
 .border {
     -moz-box-shadow: 0 0 10px #ccc;
@@ -12,8 +20,6 @@
     margin-top: 10px;
     height: 100px;
     
-  
-  
 }
 tr{
     padding: 100px;
