@@ -12,6 +12,7 @@ import { ApiserviceService } from '../apiservice.service';
 export class EditmovieComponent implements OnInit {
   id;
   dataa: any;
+  catogry: any;
   update= false;
   moviename;
   year;
@@ -38,6 +39,10 @@ export class EditmovieComponent implements OnInit {
       this.dataa = res;
       })
     }
+    getCategory() {
+      this.myservice.getCat().subscribe((res) => {
+        this.catogry = res;
+      });
     updateDataa()
     {
       this.update= true;

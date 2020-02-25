@@ -31,13 +31,23 @@
             </label>
             <label>
                 <div class="form-group">
-                    <input type="text" required class="input" formControlName="cat" [(ngModel)]= "dataa.cat.genre">
                     <p class="label-txt">Category</p>
-                    <div class="line-box">
-                        <div class="line"></div>
-                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        
+                        <div class="dropdown-menu" *ngFor="let i of catogry">
+                            <p>{{ i.genre }}</p>
+                        </div>
+                      </div>
                 </div>
             </label>
+            <!-- Dropdown start -->
+            
+            <!-- Dropdown end -->
+
+
             <label>
                 <div class="form-group">
                     <input type="text" required class="input" formControlName="cast" [(ngModel)]= "dataa.cast" >
