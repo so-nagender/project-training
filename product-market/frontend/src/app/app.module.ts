@@ -1,5 +1,5 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, Component } from '@angular/core';
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -10,23 +10,24 @@ import { SidebarComponent } from "./sidebar/sidebar.component";
 import { Routes, RouterModule } from "@angular/router";
 import { LoginComponent } from "./login/login.component";
 
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { HeaderComponent } from "./header/header.component";
-import { SignUpComponent } from "./sign-up/sign-up.component";
-import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
-import { Main2Component } from "./main2/main2.component";
-import { Sidebar2Component } from "./sidebar2/sidebar2.component";
-import { CategoryComponent } from "./category/category.component";
-import { TokenInterceptor } from "./interceptor";
-import { ResolverService } from "./resolver.service";
-import { AddformComponent } from "./addform/addform.component";
-import { ListComponent } from "./list/list.component";
-import { AdditemComponent } from "./additem/additem.component";
-import { CartComponent } from "./cart/cart.component";
-import { FilterdataPipe } from "./filterdata.pipe";
-import { ItemviewComponent } from "./itemview/itemview.component";
-import { ResolverItemsService } from "./resolver-items.service";
-import { HomeDisplayComponent } from "./home-display/home-display.component";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { Main2Component } from './main2/main2.component';
+import { Sidebar2Component } from './sidebar2/sidebar2.component';
+import { CategoryComponent } from './category/category.component';
+import {TokenInterceptor} from './interceptor'
+import { ResolverService } from './resolver.service';
+import { AddformComponent } from './addform/addform.component';
+import { ListComponent } from './list/list.component';
+import { AdditemComponent } from './additem/additem.component';
+import { CartComponent } from './cart/cart.component';
+import { FilterdataPipe } from './filterdata.pipe'
+import { ItemviewComponent } from './itemview/itemview.component';
+import { ResolverItemsService} from './resolver-items.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeDisplayComponent } from './home-display/home-display.component';
 
 const routes: Routes = [
   {
@@ -110,7 +111,10 @@ const routes: Routes = [
     CartComponent,
     FilterdataPipe,
     ItemviewComponent,
-    HomeDisplayComponent
+    HomeDisplayComponent,
+    SortingComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -118,7 +122,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     {
