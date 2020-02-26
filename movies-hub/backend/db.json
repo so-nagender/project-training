@@ -287,33 +287,6 @@
       "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
     },
     {
-      "movieName": "Chalte-Chalte",
-      "id": 15,
-      "year": "1982",
-      "cast": "Rishi Kapoor",
-      "catId": 6,
-      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
-    },
-    {
-      "movieName": "Kahaani",
-      "id": 16,
-      "year": "1980",
-      "cast": "Vidya Balan",
-      "catId": 8,
-      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
-    },
-    {
-      "movieName": "1920 Evil Return",
-      "id": 17,
-      "year": "2009",
-      "cast": [
-        "Aftab Shivdasani",
-        "Tia Bajpai"
-      ],
-      "catId": 10,
-      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life."
-    },
-    {
       "movieName": "Bhoolbhulaiya",
       "id": 18,
       "year": "2006",
@@ -403,6 +376,18 @@
     {
       "genre": " Comedy ",
       "id": 11
+    },
+    {
+      "genre": "Anime",
+      "createdAt": 1582710513931,
+      "updatedAt": 1582710513931,
+      "id": 13
+    },
+    {
+      "genre": "Suspense",
+      "createdAt": 1582719135136,
+      "updatedAt": 1582719135136,
+      "id": 14
     }
   ],
   "tests": [

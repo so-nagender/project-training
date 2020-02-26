@@ -65,7 +65,14 @@ const appRoutes: Routes = [
     resolve: {
       hero: DataResolverService
     }
-   }
+   },
+   { 
+    path: 'Genres', 
+    component: GenresComponent,
+    resolve: {
+      hero: DataResolverService
+    }
+   },
 
 ];
 @NgModule({
@@ -82,7 +89,8 @@ const appRoutes: Routes = [
     AddmovieComponent,
     Confirmpasswordvalidator,
     GenresComponent,
-    MovieListComponent
+    MovieListComponent,
+
   ],
   imports: [
     BrowserModule,
