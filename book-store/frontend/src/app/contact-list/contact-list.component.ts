@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { bufferToggle } from 'rxjs/operators';
 @Component({
   selector: 'app-contact-list',
   templateUrl: './contact-list.component.html',
@@ -13,7 +14,7 @@ export class ContactListComponent implements OnInit {
   apiBook;
   id;
   getdata : any
- showcategoryview = false;
+ showcategoryview :boolean;
 
   constructor(private api: ApiService, private activatedRoute: ActivatedRoute ) 
   {
@@ -21,10 +22,14 @@ export class ContactListComponent implements OnInit {
   }  
 
   ngOnInit() {
-    this.book();
-    // this.categorydataview();
-    this.meta_data();
+   
+      this.meta_data();
+ 
     
+      this.book();
+     
+   
+  
   }
   book(){
     this.api.getBook().subscribe((res)=>{
@@ -59,8 +64,5 @@ export class ContactListComponent implements OnInit {
     
     })
     this.showcategoryview= true;
-    
-  
-
   }
 }

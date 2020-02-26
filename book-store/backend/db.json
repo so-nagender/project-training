@@ -14,37 +14,30 @@
       "title": "fantasy",
       "id": 3,
       "description": "Fantasy, from the Greek meaning ‘making visible,’ is a genre of fiction that concentrates on imaginary elements (the fantastic). This"
+    },
+    {
+      "title": "horror1",
+      "description": "vbvcb vcnbn",
+      "createdAt": 1582695512953,
+      "updatedAt": 1582695512953,
+      "id": 4
+    },
+    {
+      "title": "gbfgbf",
+      "description": "dfgvdf",
+      "createdAt": 1582696045911,
+      "updatedAt": 1582696045911,
+      "id": 5
     }
   ],
   "books": [
     {
-      "BookName": "Intercepts",
-      "AuthorName": "T. J. Payne",
+      "BookName": "The Haunting of Hill House",
+      "AuthorName": "dasf",
       "catogrieId": "1",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
-      "updatedAt": 1582625834190,
-      "id": 2
-    },
-    {
-      "id": 3,
-      "BookName": "The Amityville Horror",
-      "AuthorName": "Jay Anson",
-      "catogrieId": 1,
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
-    },
-    {
-      "id": 4,
-      "BookName": "The Exorcist",
-      "AuthorName": "William Peter Blatty",
-      "catogrieId": 1,
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
-    },
-    {
-      "id": 5,
-      "BookName": "The Haunting of Hill House",
-      "AuthorName": "Shirley Jackson",
-      "catogrieId": 1,
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
+      "updatedAt": 1582636284889,
+      "id": 5
     },
     {
       "id": 11,
@@ -68,11 +61,12 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
     },
     {
-      "id": 14,
       "BookName": "Treasure Island",
       "AuthorName": " Robert Louis Stevenson",
-      "catogrieId": 2,
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
+      "catogrieId": "2",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
+      "updatedAt": 1582694924222,
+      "id": 14
     },
     {
       "BookName": "King Solomon's Mines",
@@ -297,12 +291,24 @@
   ],
   "tests": [
     {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
       "movieid": "1",
       "name": "movie test",
       "id": 3
     }
   ],
   "categories_books": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
     {
       "movieid": "1",
       "name": "movie test",

@@ -37,6 +37,7 @@ export class CategoriesComponent implements OnInit {
   onSubmit(form){
     this.view_form=false;
     this.api.postbookcategories(form)
+    this.view();
   }
   view(){
     this.api.Viewdatacategories().subscribe(catformdata=>{this.categoryFormdata = catformdata;
