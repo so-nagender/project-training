@@ -29,6 +29,10 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    this.checkcredentials();
+
+    
     
   }
   onSubmit(form) {
@@ -59,5 +63,10 @@ export class LoginComponent implements OnInit {
   {
      const data=this.api.viewdata().subscribe(data => { this.observeddata = data; console.log(this.observeddata)});
 
+  }
+  checkcredentials(){
+    if(localStorage.getItem('accessToken')){
+    this.routes.navigate(['/dashboard'])
+    }
   }
 }
