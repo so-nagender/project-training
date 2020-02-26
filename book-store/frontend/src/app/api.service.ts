@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { TokenInterceptor} from '././TokenInterceptor'
 import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
-import { Subject, Observable } from 'rxjs';
+import { Subject, Observable, throwError } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -16,32 +17,29 @@ export class ApiService {
   charterid: any;
   private message = new BehaviorSubject<any>(false)
   currentMessage = this.message
+  cutomerror= new BehaviorSubject<string>('default');
 
 
 
 
   constructor(private http: HttpClient , private routes: Router) { }
+ 
   changemessage(message:boolean){
     this.message.next(message)
+  }
+  changeerror(err){
+    this.cutomerror.next(err)
   }
 
   postloginDetails(email, password){
   
-    const teams$ = this.http.post('http://localhost:3000/signup',{ "name" : email,"password" : password})
-    .subscribe((data: any)=> {
-      localStorage.setItem('accessToken', data.accessToken);
-      });
-    }
+    return  this.http.post('http://localhost:3000/signup',{ "name" : email,"password" : password})
+    
+  
+  }
   postlogin(email, password){
 
-    const teams$ = this.http.post('/api/login', { "name" : email,"password" : password}).subscribe((data: any)=> {
-      localStorage.setItem("accessToken", data.accessToken);
-      if(data!= null){
-        this.routes.navigate(['/dashboard'])
-        console.warn("yes")
-      }
-     
-      });
+    return  this.http.post('/api/login', { "name" : email,"password" : password})
   }
   viewdata(){
       const teams$ = this.http.get(this.url)
@@ -126,14 +124,15 @@ export class ApiService {
     return data$;
 
    }
-  //  disablebutton(){
-
-  //   button= false;
-
-
-  //  }
+   handleError(error: HttpErrorResponse){
    
-   
+    if(error.status){
+    this.changeerror(error.message)
+    return throwError(error)
+    }
+   else
+   return throwError(error)
+  }
   
 }
    
