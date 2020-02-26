@@ -21,7 +21,14 @@ export class AddbookComponent implements OnInit {
     this.book();
   }
 
+  get u() {
+    return this.formData.controls;
+  }
+
   onSubmit() {
+    if (this.formData.invalid) {
+      return;
+    } else {
     const BookName = this.formData.controls.bookname.value;
     const AuthorName = this.formData.controls.authorname.value;
     const CatName = this.formData.controls.catname.value;
@@ -30,6 +37,7 @@ export class AddbookComponent implements OnInit {
     console.log(obj)
     this.api.addBook(obj).subscribe();
     this.book();
+    }
   }
 
   book(){

@@ -1,12 +1,15 @@
-<div class="container" style="margin-bottom: 100px; margin-top: 25px;">
+<div class="container  midView" style="margin-bottom: 100px; margin-top: 25px;">
     <h2 style="text-align: center;">Book Description</h2>
     <div style="text-align: center;">
-    <h2 style="color: blueviolet; margin-top: 50px;">{{apiBook.BookName | uppercase}}</h2>
+    <h2 style="color: blueviolet; margin-top: 50px;" >{{apiBook.BookName | uppercase}}</h2>
     <br>
     <h4>Author Name - {{apiBook.AuthorName| uppercase}}</h4>
     <h4>Book Catogery - {{apiBook.catogrie.title| uppercase}}</h4>
     <h4 style="margin-top: 50px;">Book Description </h4>
     {{apiBook.description}}
+    <br>
+
+    <button type="button" class="btn btn-primary" style="margin-right: 10px; margin-top: 50px;" [routerLink]="['/book/edit', apiBook.id]">Edit Detail</button>
    
     </div>
   </div>

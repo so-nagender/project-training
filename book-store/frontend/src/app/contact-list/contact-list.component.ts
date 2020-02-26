@@ -40,6 +40,12 @@ export class ContactListComponent implements OnInit {
     this.api.deleteTeams(id).subscribe();
     this.book();
   } 
+  onDelete1(x) {
+    const id = x;
+    this.api.deleteTeams(id).subscribe();
+    this.categorydataview();
+    this.meta_data();
+  } 
   
   categorydataview(){
     this.api.Viewdatacategories().subscribe(data=> { console.log('_______>>>',data)})
@@ -48,9 +54,8 @@ export class ContactListComponent implements OnInit {
     this.showcategoryview= false;
   }
   meta_data(){
-    console.log('hiiiiiiiiiiii')
     const data =this.api.charid()
-    this.api.retrivedata(data).subscribe(res=> {this.getdata =res; console.log('xxxxxxxxxx',this.getdata);
+    this.api.retrivedata(data).subscribe(res=> {this.getdata =res;
     
     })
     this.showcategoryview= true;
