@@ -28,6 +28,7 @@ import { ItemviewComponent } from './itemview/itemview.component';
 import { ResolverItemsService} from './resolver-items.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeDisplayComponent } from './home-display/home-display.component';
+import { ListEditDirective } from './list-edit.directive';
 
 const routes: Routes = [
   {
@@ -111,7 +112,8 @@ const routes: Routes = [
     CartComponent,
     FilterdataPipe,
     ItemviewComponent,
-    HomeDisplayComponent
+    HomeDisplayComponent,
+    ListEditDirective
 
 
   ],

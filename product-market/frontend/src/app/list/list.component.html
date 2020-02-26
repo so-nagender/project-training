@@ -79,7 +79,7 @@
             CART</button>
         </td>
         <td>
-          <p style="margin-top: 10PX;">{{data.cost}}</p>
+          <p>{{data.cost}}</p>
         </td>
         <td>
           <span
@@ -116,6 +116,7 @@
                 <div class="card-body">
                   <h5 class="card-title">{{data.name}}</h5>
                   <p class="card-text">{{data.description}}</p>
+                  <button appListEdit [first]="data.id" type="button" class="btn p-1 mb-2 float-right" >EDIT</button>
                 </div>
               </div>
             </div>

@@ -56,6 +56,15 @@
       "createdAt": 1582608911891,
       "updatedAt": 1582608911891,
       "id": 9
+    },
+    {
+      "name": "Laptop",
+      "categoryId": "7",
+      "rating": "3",
+      "description": "datad",
+      "cost": 30000,
+      "updatedAt": 1582702687985,
+      "id": 10
     }
   ],
   "product-cart": [

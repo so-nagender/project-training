@@ -82,4 +82,14 @@ export class ProductcatchService {
   getnewsubCart(): Observable<any> {
     return this.subjectofcart.asObservable();
   }
+
+  getParticularItem(x: number): Observable<any> {
+    const url = `/api/product-items/${x}`;
+    return this.http.get(url);
+  }
+
+  updateparticularItem(x, obj): Observable<any> {
+    const url = `/api/product-items/${x}`;
+    return this.http.put<any>(url, obj);
+  }
 }
