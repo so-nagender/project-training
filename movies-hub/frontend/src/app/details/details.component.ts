@@ -18,7 +18,6 @@ export class DetailsComponent implements OnInit {
   ngOnInit() {
     this.myservice.getSingleElementById(this.id).subscribe((res) =>{
       this.data= res;
-      console.log(this.data);
     });
   }
 }

@@ -365,13 +365,10 @@
     {
       "movieName": "Main tera Hero",
       "year": "2014",
-      "catId": "11",
-      "cast": [
-        "Varun Dhawan, Iliana "
-      ],
+      "catId": "",
+      "cast": "Varun Dhawan, Iliana Decruiz",
       "synopsis": "Main Tera Hero ( transl. I am your hero) is a 2014 Indian Hindi-language romantic action comedy film, directed by David Dhawan and produced by Shobha Kapoor and Ekta Kapoor for Balaji Motion Pictures. The film stars Nargis Fakhri, Varun Dhawan and Ileana D'Cruz in the lead roles.\n",
-      "createdAt": 1582717791810,
-      "updatedAt": 1582717791810,
+      "updatedAt": 1582719226972,
       "id": 22
     }
   ],
