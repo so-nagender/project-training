@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,6 +25,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SecondTableComponent } from './second-table/second-table.component';
+import { SearchTableComponent } from './search-table/search-table.component';
+
+
 
 
 @NgModule({
@@ -35,7 +38,8 @@ import { SecondTableComponent } from './second-table/second-table.component';
     MyTreeComponent,
     MyDropComponent,
     MyAddressComponent,
-    SecondTableComponent
+    SecondTableComponent,
+    SearchTableComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,8 @@ import { SecondTableComponent } from './second-table/second-table.component';
     MatInputModule,
     MatSelectModule,
     MatRadioModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

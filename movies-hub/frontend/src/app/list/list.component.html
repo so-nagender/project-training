@@ -2,20 +2,28 @@
     <app-header></app-header>
 </div>
 <div class="container">
-    <button (click)="sortTable()">Sort</button>
+    <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Search Movies"
+    aria-describedby="inputGroup-sizing-sm" [(ngModel)]="search" class="searchInList">
+    
+    <!-- <button (click)="sortTable()">Sort</button> -->
 <table class="table table-striped" id="table">     
     <tr>
-        <th style="width:15%">Movie Name
         
+        <th style="width:15%">Movie Name         
+            <img src="../../assets/img/arrowUp.svg" class="img-fluid" alt="Responsive image" (click)="sortTableAsc()" class="arrow">
+            <img src="../../assets/img/arrowDown.svg" class="img-fluid" alt="Responsive image" (click)="sortTableDes()" class="arrow">         
         </th>
-        <th style="width:4%">Year </th>
+        <th style="width:8%">Year 
+            <img src="../../assets/img/arrowUp.svg" class="img-fluid" alt="Responsive image" (click)="sortTableYearAsc()" class="arrow">
+            <img src="../../assets/img/arrowDown.svg" class="img-fluid" alt="Responsive image" (click)="sortTableYearDes()" class="arrow">  
+        </th>    
         <th style="width:30%">Cast</th>
         <th style="width:12%">Classification</th>
         <th style="width:1%">Rating</th> 
         <th>Actions</th>             
     </tr>
     <tbody>
-        <tr *ngFor="let movie of movies">
+        <tr *ngFor="let movie of movies| filterdata :search">
             <td>{{ movie.movieName }}</td>
             <td>{{ movie.year }}</td>
             <td>{{ movie.cast }}</td>
