@@ -1,12 +1,19 @@
 <div class="container">
   <div class="row row-cols-3">
+    
     <div class="col"><button class="upper-button" (click)=setview()>View All Books</button></div>
     <div class="col"><button class="upper-button" routerLink="/categories">View categories Book</button></div>
-  </div>  
-  <div class="form-group mb-4">
-    <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
   </div>
-  <div *ngIf="!showcategoryview">
+    
+    
+    
+    
+  
+    <div class="form-group mb-4">
+      <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
+    </div>
+    <div *ngIf="!showcategoryview">
+
     <table class="table" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
       <colgroup>
         <col width="5%">
@@ -38,12 +45,11 @@
         </tr>
       </tbody>
     </table>
+
+    <ng-template #noResults>
+      <p>No results found for "{{searchText}}".</p>
+    </ng-template>
   </div>
-  
-  <ng-template #noResults>
-    <p>No results found for "{{searchText}}".</p>
-  </ng-template>
-</div>
 
 
 
