@@ -356,11 +356,23 @@
     {
       "movieName": "Tere Naam",
       "year": "2003",
-      "catId": "9",
+      "catId": "11",
       "cast": "Salman Khan,  Bhumika Chawla",
       "synopsis": "Frozen II, also known as Frozen 2, is a 2019 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios.At the 92nd Academy Awards, the film received a nomination for Best Original Song for 'Into the Unknown'.",
-      "updatedAt": 1582693821138,
+      "updatedAt": 1582710135215,
       "id": 21
+    },
+    {
+      "movieName": "Main tera Hero",
+      "year": "2014",
+      "catId": "11",
+      "cast": [
+        "Varun Dhawan, Iliana "
+      ],
+      "synopsis": "Main Tera Hero ( transl. I am your hero) is a 2014 Indian Hindi-language romantic action comedy film, directed by David Dhawan and produced by Shobha Kapoor and Ekta Kapoor for Balaji Motion Pictures. The film stars Nargis Fakhri, Varun Dhawan and Ileana D'Cruz in the lead roles.\n",
+      "createdAt": 1582717791810,
+      "updatedAt": 1582717791810,
+      "id": 22
     }
   ],
   "cats": [

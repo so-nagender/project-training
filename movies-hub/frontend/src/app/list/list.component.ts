@@ -28,10 +28,8 @@ export class ListComponent implements OnInit {
     });
     this.myservice.getData().subscribe(id => {
       this.catid = id;
-      console.log(this.catid);
       this.myservice.getMoviesByCatg(this.catid).subscribe(res => {
-        this.movies = res.movies;
-        console.log(res.movies)
+        this.movies = res;
       });
     });
     this.myservice.getDataT().subscribe(response => {
