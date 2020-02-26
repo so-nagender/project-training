@@ -3,23 +3,22 @@
 </div>
 <div class="container">
     <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Search Movies"
-    aria-describedby="inputGroup-sizing-sm" [(ngModel)]="search" class="searchInList">
+    aria-describedby="inputGroup-sizing-sm" [(ngModel)]="search" class="form-control mr-sm-2 searchInList">    
     
     <!-- <button (click)="sortTable()">Sort</button> -->
 <table class="table table-striped" id="table">     
     <tr>
         
-        <th style="width:15%">Movie Name         
+        <th style="width:18%">Movie Name         
             <img src="../../assets/img/arrowUp.svg" class="img-fluid" alt="Responsive image" (click)="sortTableAsc()" class="arrow">
             <img src="../../assets/img/arrowDown.svg" class="img-fluid" alt="Responsive image" (click)="sortTableDes()" class="arrow">         
         </th>
-        <th style="width:8%">Year 
+        <th style="width:10%">Year 
             <img src="../../assets/img/arrowUp.svg" class="img-fluid" alt="Responsive image" (click)="sortTableYearAsc()" class="arrow">
             <img src="../../assets/img/arrowDown.svg" class="img-fluid" alt="Responsive image" (click)="sortTableYearDes()" class="arrow">  
         </th>    
         <th style="width:30%">Cast</th>
-        <th style="width:12%">Classification</th>
-        <th style="width:1%">Rating</th> 
+        <th style="width:18%">Classification</th>        
         <th>Actions</th>             
     </tr>
     <tbody>
@@ -27,8 +26,7 @@
             <td>{{ movie.movieName }}</td>
             <td>{{ movie.year }}</td>
             <td>{{ movie.cast }}</td>
-            <td>{{ movie.cat.genre }}</td>
-            <td>{{ movie.rating }}</td>
+            <td>{{ movie.cat.genre }}</td>            
         <a [routerLink] = "['/details', movie.id]" routerLinkActive="active" >
             <button>View</button>
         </a> 

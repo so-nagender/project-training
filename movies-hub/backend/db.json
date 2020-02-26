@@ -139,15 +139,16 @@
   "movies": [
     {
       "movieName": "A Shaun the Sheep Movie: Farmageddon",
-      "id": 2,
       "year": "2019",
+      "catId": "10",
       "cast": [
         "Joe Sugg",
         "Andy Nyman",
         "Justin Fletcher"
       ],
-      "catId": 2,
-      "synopsis": "When an alien with amazing powers crash-lands near Mossy Bottom Farm, Shaun the Sheep goes on a mission to shepherd the intergalactic visitor home before a sinister organization can capture her."
+      "synopsis": "When an alien with amazing powers crash-lands near Mossy Bottom Farm, Shaun the Sheep goes on a mission to shepherd the intergalactic visitor home before a sinister organization can capture her.",
+      "updatedAt": 1582701839275,
+      "id": 2
     },
     {
       "movieName": "Avengers: Infinity War",
@@ -326,36 +327,37 @@
     },
     {
       "movieName": "Wanted",
+      "id": 19,
       "year": "2007",
-      "catId": "3",
       "cast": [
         "Salman Khan",
         "Aisha Takia"
       ],
-      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. ",
-      "updatedAt": 1582614251545,
-      "id": 19
+      "catId": 4,
+      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
     },
     {
       "movieName": "Dhol",
+      "id": 20,
       "year": "2003",
-      "catId": "11",
       "cast": [
         "Kunal Khemu",
         "tushar",
         "rajpal yadav"
       ],
-      "synopsis": "Based mujhe kuch nhi huwa  on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. ",
-      "updatedAt": 1582631514222,
-      "id": 20
+      "catId": 10,
+      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
     },
     {
-      "movieName": "Tere Naam",
-      "year": "2003",
-      "catId": "9",
-      "cast": "Salman Khan,  Bhumika Chawla",
-      "synopsis": "Frozen II, also known as Frozen 2, is a 2019 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios.At the 92nd Academy Awards, the film received a nomination for Best Original Song for 'Into the Unknown'.",
-      "updatedAt": 1582636113281,
+      "movieName": "Koi Mil Gaya",
+      "year": "2006",
+      "catId": "8",
+      "cast": [
+        "Hrithik Roshan and Preeti Jinta"
+      ],
+      "synopsis": "Movie is about alliens.",
+      "createdAt": 1582701921999,
+      "updatedAt": 1582701921999,
       "id": 21
     }
   ],

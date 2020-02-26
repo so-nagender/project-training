@@ -29,7 +29,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { FilterdataPipe } from './filterdata.pipe';
 
 const appRoutes: Routes = [
-  {path:'movielist',component:MovieListComponent},
+  {path:'movielist',component:MovieListComponent},   
   {
     path: 'home',
     component: HomeComponent,
