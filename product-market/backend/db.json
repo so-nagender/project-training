@@ -76,6 +76,15 @@
       "createdAt": 1582545196510,
       "updatedAt": 1582545196510,
       "id": 3
+    },
+    {
+      "name": "laptop",
+      "rating": 3,
+      "cost": 200,
+      "description": "ccvcvc",
+      "createdAt": 1582702177279,
+      "updatedAt": 1582702177279,
+      "id": 5
     }
   ],
   "posts": [
