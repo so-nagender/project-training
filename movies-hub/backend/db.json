@@ -151,27 +151,29 @@
     },
     {
       "movieName": "Avengers: Infinity War",
-      "id": 3,
       "year": "2018",
+      "catId": "6",
       "cast": [
         "Chris Hemsworth",
         "Chris Pratt",
         "Robert Downey Jr."
       ],
-      "catId": 3,
-      "synopsis": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment, the fate of Earth and existence has never been more uncertain."
+      "synopsis": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment, the fate of Earth and existence has never been more uncertain.",
+      "updatedAt": 1582693835019,
+      "id": 3
     },
     {
       "movieName": "The Wolf of Wall Street",
-      "id": 4,
       "year": "2013",
+      "catId": "11",
       "cast": [
         "Leonardo DiCaprio",
         "Margot Robbie",
         "Matthew McConaughey"
       ],
-      "catId": 4,
-      "synopsis": "Jordan Belfort is a Long Island penny stockbroker who served 22 months in prison for defrauding investors in a massive 1990s securities scam that involved widespread corruption on Wall Street and in the corporate banking world, including shoe designer Steve Madden."
+      "synopsis": "Jordan Belfort is a Long Island penny stockbroker who served 22 months in prison for defrauding investors in a massive 1990s securities scam that involved widespread corruption on Wall Street and in the corporate banking world, including shoe designer Steve Madden.",
+      "updatedAt": 1582693910217,
+      "id": 4
     },
     {
       "movieName": "The Dark Knight",
@@ -235,26 +237,28 @@
     },
     {
       "movieName": "Kaho Na Pyar Hai",
-      "id": 10,
       "year": "1992",
+      "catId": "9",
       "cast": [
         "Hrithik Roshan",
         "Amisha Patel"
       ],
-      "catId": 10,
-      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
+      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. ",
+      "updatedAt": 1582693846594,
+      "id": 10
     },
     {
       "movieName": "Mohabbetein",
-      "id": 11,
       "year": "1989",
+      "catId": "9",
       "cast": [
         "Shahrukh Khan",
         "Amitabh Bachhan",
         "Aishwarya"
       ],
-      "catId": 11,
-      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
+      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. ",
+      "updatedAt": 1582699441726,
+      "id": 11
     },
     {
       "movieName": "Dhamaal",
@@ -327,7 +331,7 @@
     {
       "movieName": "Wanted",
       "year": "2007",
-      "catId": "3",
+      "catId": 3,
       "cast": [
         "Salman Khan",
         "Aisha Takia"
@@ -355,7 +359,7 @@
       "catId": "9",
       "cast": "Salman Khan,  Bhumika Chawla",
       "synopsis": "Frozen II, also known as Frozen 2, is a 2019 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios.At the 92nd Academy Awards, the film received a nomination for Best Original Song for 'Into the Unknown'.",
-      "updatedAt": 1582636113281,
+      "updatedAt": 1582693821138,
       "id": 21
     }
   ],

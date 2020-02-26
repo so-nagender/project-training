@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
 export class ApiserviceService {
 
   constructor(private http: HttpClient) { }
+  private subject = new Subject();
+  private subjecttwo = new Subject();
   getMovies(): Observable<any> {
     return this.http.get('api/movies?_expand=cat')
   }
@@ -46,5 +48,17 @@ export class ApiserviceService {
   }
   postData(obj): Observable<any> {
     return this.http.post<any>('/api/movies',obj)
+  }
+  setData(msg: any) {
+    this.subject.next(msg);
+  }
+  getData(): Observable<any> {
+    return this.subject.asObservable();
+  }
+  setDataT() {
+    this.subjecttwo.next();
+  }
+  getDataT(): Observable<any> {
+    return this.subjecttwo.asObservable();
   }
 }
