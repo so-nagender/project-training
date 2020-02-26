@@ -5,7 +5,7 @@ import { ApiService} from '.././api.service'
 
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-login',
@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
   observeddata: any;
   islogin: boolean;
   message: any;
+  validerr: string;
 
  
   constructor(private api: ApiService , private routes : Router) { 
@@ -31,13 +32,29 @@ export class LoginComponent implements OnInit {
     
   }
   onSubmit(form) {
-    const apicall =this.api.postlogin(this.form.value.email, this.form.value.password)
+    const apicall =this.api.postlogin(this.form.value.email, this.form.value.password).subscribe((data: any)=> {
+      localStorage.setItem("accessToken", data.accessToken);
+      if(data!= null){
+        this.routes.navigate(['/dashboard'])
+ 
+      }
+     
+      },
+      error => {
+        this.api.handleError(error);
+        this.api.cutomerror.subscribe(res =>{Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: res
+        });this.validerr = res})
+      });
+      
    
     
    
     // this.api.disable()/////////  
   }
-  
+
   viewData()
   {
      const data=this.api.viewdata().subscribe(data => { this.observeddata = data; console.log(this.observeddata)});

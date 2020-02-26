@@ -15,7 +15,7 @@
         <div class="form-row align-items-center">
             
               <select formControlName="catname" class="custom-select mr-sm-2" id="inlineFormCustomSelect" >
-                <option selected>{{apiBook1.catogrie.title}}</option>
+                <option value="{{apiBook1.catogrie.id}}" selected>{{apiBook1.catogrie.title}}</option>
                 <option value="{{i.id}}" *ngFor="let i of apiBook2">{{i.title}}</option>
               </select>
             </div>
