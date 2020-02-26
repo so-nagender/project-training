@@ -25,6 +25,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import {MatButtonModule} from '@angular/material/button';
+import { FilterdataPipe } from './filterdata.pipe';
 
 const appRoutes: Routes = [
   {path:'movielist',component:MovieListComponent},
@@ -80,7 +81,8 @@ const appRoutes: Routes = [
     EditmovieComponent,
     AddmovieComponent,
     Confirmpasswordvalidator,
-    MovieListComponent
+    MovieListComponent,
+    FilterdataPipe
   ],
   imports: [
     BrowserModule,
