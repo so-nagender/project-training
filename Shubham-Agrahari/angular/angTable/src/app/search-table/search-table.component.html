@@ -1,0 +1,66 @@
+
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+
+    <style>
+        div, input{
+            font:15px Tahoma;
+            margin:10px;
+        }
+        input {
+            padding:5px 7px;
+        }
+        table, th, td {
+            border:solid 1px #CCC;
+            padding:1px 3px;
+            font:15px Tahoma;
+        }
+        th {
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myController">
+
+        <!--THE SEARCH BOX-->
+        Search <input type="text" ng-model="search" 
+            placeholder="Enter some text to search" />
+
+        <table>
+            <tr>
+                <th>ID</th>
+                    <th>Employee Name</th>
+                        <th>Date of Joining</th>
+                            <th>Age</th>
+            </tr>
+
+            <!--TABLE ROWS WITH A FILTER-->
+            <tr ng-repeat="emps in employees | filter : search">
+
+                <td>{{emps.id}}</td>
+                    <td>{{emps.name}}</td>
+                        <td>{{emps.joinDate | date : 'dd/MM/yyyy'}}</td>
+                            <td>{{emps.age}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    angular.module("myApp", [])
+        .controller('myController', ['$scope', function ($scope) {
+
+            // JSON ARRAY OBJECT.
+            $scope.employees =
+            [
+                { 'id': '001', 'name': 'Alpha', 'joinDate': '05/17/2015', 'age': 37 },
+                { 'id': '002', 'name': 'Bravo', 'joinDate': '03/25/2016', 'age': 27 },
+                { 'id': '003', 'name': 'Charlie', 'joinDate': '09/11/2015', 'age': 29 },
+                { 'id': '004', 'name': 'Delta', 'joinDate': '09/11/2015', 'age': 19 },
+                { 'id': '005', 'name': 'Echo', 'joinDate': '03/09/2014', 'age': 32 }
+            ]
+
+        } ]);
+</script>
+</html>

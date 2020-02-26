@@ -1,3 +1,9 @@
 .buttonGap{
     margin-right: 5px;
 }
+.arrow{
+    width: 13px;
+}
+.searchInList{
+    width: 250px;
+}

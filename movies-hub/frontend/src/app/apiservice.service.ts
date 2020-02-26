@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,11 +8,13 @@ import { Observable } from 'rxjs';
 export class ApiserviceService {
 
   constructor(private http: HttpClient) { }
+  private subject = new Subject();
+  private subjecttwo = new Subject();
   getMovies(): Observable<any> {
     return this.http.get('api/movies?_expand=cat')
   }
   getMoviesByCatg(id): Observable<any> {
-    const add = `api/cats/${id}?_embed=movies`
+    const add = `api/movies?catId=${id}`
     return this.http.get(add);
   }
   signupData(obj): Observable<any> {
@@ -53,5 +55,17 @@ export class ApiserviceService {
   }
   postCat(obj): Observable<any> {
     return this.http.post<any>('/api/cats',obj)
+  }
+  setData(msg: any) {
+    this.subject.next(msg);
+  }
+  getData(): Observable<any> {
+    return this.subject.asObservable();
+  }
+  setDataT() {
+    this.subjecttwo.next();
+  }
+  getDataT(): Observable<any> {
+    return this.subjecttwo.asObservable();
   }
 }
