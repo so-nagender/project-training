@@ -26,13 +26,17 @@ export class HeaderComponent implements OnInit {
     this.api.currentMessage.subscribe(message=>{
     this.buttonisdisabled= message;
   })
+  if(localStorage.getItem('accessToken')){
+    this.buttonisdisabled = true;
+  }
 
   }
   logout(){
     localStorage.clear();
-    this.buttonisdisabled= false
+    if(localStorage.getItem('accessToken')){
+      this.buttonisdisabled= false
+    }
+    
   }
-
-  
 
 }
