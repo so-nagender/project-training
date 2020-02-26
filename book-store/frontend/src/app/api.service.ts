@@ -72,6 +72,10 @@ export class ApiService {
     return this.http.get<any>(url4); 
   }
 
+  updateCat(obj, x): Observable<any>{
+    const url = `/api/catogries/${x}`;
+    return this.http.put<any>( url, obj);
+  }
   updateBook(obj, x): Observable<any>{
     const url = `/api/books/${x}`;
     return this.http.put<any>( url, obj);
@@ -83,6 +87,16 @@ export class ApiService {
 
   deleteTeams(x): Observable<any>{
     const url = `/api/books/${x}`;
+    return this.http.delete<any>( url);
+  }
+  
+  deleteCat(x): Observable<any>{
+    const url = `/api/catogries/${x}`;
+    return this.http.delete<any>( url);
+  }
+
+  deleteCatBook(x): Observable<any>{
+    const url = `/api/books?catogrieId=${x}`;
     return this.http.delete<any>( url);
   }
     

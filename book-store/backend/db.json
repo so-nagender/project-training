@@ -14,27 +14,6 @@
       "title": "fantasy",
       "id": 3,
       "description": "Fantasy, from the Greek meaning ‘making visible,’ is a genre of fiction that concentrates on imaginary elements (the fantastic). This"
-    },
-    {
-      "title": "horror1",
-      "description": "vbvcb vcnbn",
-      "createdAt": 1582695512953,
-      "updatedAt": 1582695512953,
-      "id": 4
-    },
-    {
-      "title": "gbfgbf",
-      "description": "dfgvdf",
-      "createdAt": 1582696045911,
-      "updatedAt": 1582696045911,
-      "id": 5
-    },
-    {
-      "title": "fcvffd",
-      "description": "fdvdfvbfghng",
-      "createdAt": 1582703589199,
-      "updatedAt": 1582703589199,
-      "id": 6
     }
   ],
   "books": [
@@ -147,6 +126,15 @@
       "createdAt": 1582709711646,
       "updatedAt": 1582709711646,
       "id": 28
+    },
+    {
+      "BookName": "Monika",
+      "AuthorName": "Gupta",
+      "catogrieId": "1",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
+      "createdAt": 1582717123760,
+      "updatedAt": 1582717123760,
+      "id": 29
     }
   ],
   "profile": [

@@ -2,20 +2,24 @@
 <div class="container">
   <div class="container padding_top">
       <div class="row">
-        <div class="col-sm-4"><b>Category Name</b></div><div class="col-sm"><b>Description</b></div>
+        <div class="col-sm-4"><b>Category Name</b></div><div class="col-sm-4"><b>Description</b></div><div class="col-sm-4"><b>Action</b></div>
         <div class="imageinvalid" *ngIf="!Hascatdata"><img src ="../../assets/images/support (1).svg">
         <p class='red'>Server Error</p></div>
-          <div class="col-sm-8 border " *ngFor="let data of categoryFormdata"> 
+          <div class="col-sm-12 border " *ngFor="let data of categoryFormdata"> 
             <div class="row"><div class="col-sm-4 "> <p (click)="senddata(data.id)"> {{data.title | uppercase}}</p></div>
             <div class="col-sm "> <p>{{data.description}} </p> </div>
+              <div class="col-sm ">
+              <br> <button type="button" class="btn btn-primary" (click)="onDeleteCat(data.id)">Delete</button> 
+              </div>
+          
           </div>
         </div>
       </div>
       <div class="row-add-image">
-        <div class="col-sm-4 border plus_image"(click)="toggle_form()" style="height:100px"></div>
+        <div class="col-sm-4 border plus_image"(click)="toggle_form()" style="height:100px" ></div>
       </div>
       <div class="row-add-image-form">
-        <div class="col-sm-4 border padding_left" style="height:200px" *ngIf="view_form" #category_form>
+        <div class="col-sm-4 border" style="height:200px" *ngIf="view_form" #category_form>
           <form name="categoryForm" [formGroup]="categoryForm" (ngSubmit)="onSubmit(categoryForm)" class="container">
               <div class="form-row">
                   <div class="col">

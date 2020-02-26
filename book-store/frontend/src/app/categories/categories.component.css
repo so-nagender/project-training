@@ -3,7 +3,7 @@
   
 
     padding-bottom: 250px;
-    margin-left : 20% ;
+   
 }
 .container{
     padding-top: 30px;
@@ -16,7 +16,7 @@
     -webkit-box-shadow: 0 0 10px #ccc;
     box-shadow: 0 0 10px #ccc;
     margin-top: 10px;
-    height: 100px;
+    
     
 }
 tr{
@@ -30,10 +30,9 @@ tr{
    background-repeat:no-repeat ;
    background-size: contain ;
    cursor: pointer;
+
 }
-.padding_left{
-    margin-left: 10px;
-}
+
 .cat_name{
     margin-top: 4px;
     margin-bottom: 4px;
@@ -53,9 +52,9 @@ div.reset{
     bottom: 50%;
     position: absolute;
 }
-.form-row{
-    float: left;
-}
+/* .form-row{
+    float: center;
+} */
 button[type=submit], [type=reset], [type=close] {
     background-color:transparent;
 
@@ -78,8 +77,8 @@ p{
     margin-top: 26px;
 }
 .col-sm-4.border.plus_image{
-    margin-left: 16%;
+    margin-left: 36%;
 }
-div .col-sm-4.border.padding_left{
-    margin-left: 16%;
+div .col-sm-4.border{
+    margin-left: 36%;
 }

@@ -40,7 +40,7 @@ export class AddbookComponent implements OnInit {
     console.log(obj)
     this.api.addBook(obj).subscribe();
     this.book();
-    this.router.navigate(['contactlist'])
+    this.router.navigate(['viewbook'])
     }
   }
 
