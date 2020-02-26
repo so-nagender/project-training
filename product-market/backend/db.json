@@ -56,6 +56,86 @@
       "createdAt": 1582608911891,
       "updatedAt": 1582608911891,
       "id": 9
+    },
+    {
+      "name": "dsgsdf",
+      "categoryId": "6",
+      "rating": "2",
+      "description": "zcbnfmfhx,fz",
+      "cost": 5356,
+      "createdAt": 1582637230605,
+      "updatedAt": 1582637230605,
+      "id": 10
+    },
+    {
+      "name": "laptop",
+      "categoryId": "7",
+      "rating": "3",
+      "description": "ccvcvc",
+      "cost": 200,
+      "createdAt": 1582695074651,
+      "updatedAt": 1582695074651,
+      "id": 11
+    },
+    {
+      "name": "heater",
+      "categoryId": "7",
+      "rating": "2",
+      "description": "ccvcvccv cxb",
+      "cost": 800,
+      "createdAt": 1582695085402,
+      "updatedAt": 1582695085402,
+      "id": 12
+    },
+    {
+      "name": "gas",
+      "categoryId": "7",
+      "rating": "2",
+      "description": "ccvcvccv cxb ggfbfb",
+      "cost": 100,
+      "createdAt": 1582695093932,
+      "updatedAt": 1582695093932,
+      "id": 13
+    },
+    {
+      "name": "subham",
+      "categoryId": "7",
+      "rating": "1",
+      "description": "bgnvb",
+      "cost": 500,
+      "createdAt": 1582695947031,
+      "updatedAt": 1582695947031,
+      "id": 14
+    },
+    {
+      "name": "microwave",
+      "categoryId": "7",
+      "rating": "2",
+      "description": "ccc",
+      "cost": 500,
+      "createdAt": 1582701320269,
+      "updatedAt": 1582701320269,
+      "id": 15
+    },
+    {
+      "name": "microwave",
+      "categoryId": "7",
+      "rating": "2",
+      "description": "ccccvv",
+      "cost": 600,
+      "createdAt": 1582701336611,
+      "updatedAt": 1582701336611,
+      "id": 16
+    },
+    {
+      "name": "phone",
+      "categoryId": "7",
+      "rating": "4",
+      "description": "4 gb ram\n",
+      "cost": 6000,
+      "createdAt": 1582702103494,
+      "updatedAt": 1582702103494,
+      "id": 17
     }
   ],
   "product-cart": [
@@ -67,6 +147,15 @@
       "createdAt": 1582545196510,
       "updatedAt": 1582545196510,
       "id": 3
+    },
+    {
+      "name": "laptop",
+      "rating": 3,
+      "cost": 200,
+      "description": "ccvcvc",
+      "createdAt": 1582702177279,
+      "updatedAt": 1582702177279,
+      "id": 5
     }
   ],
   "posts": [

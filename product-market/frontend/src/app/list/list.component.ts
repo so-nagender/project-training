@@ -60,7 +60,7 @@ export class ListComponent implements OnInit {
 
 
   // sorting fuction of items by name
-   sortTable (){ 
+   sortTableAsc (){ 
      console.log("shashdhahdhasdh<<<<<<<<<<<<<<<<<<<<<<");
     var table, i, x, y; 
     table = document.getElementById("table"); 
@@ -93,8 +93,41 @@ export class ListComponent implements OnInit {
         } 
     } 
 }
+sortTableDsc (){ 
+  console.log("shashdhahdhasdh<<<<<<<<<<<<<<<<<<<<<<");
+ var table, i, x, y; 
+ table = document.getElementById("table"); 
+ var switching = true; 
+
+ // Run loop until no switching is needed 
+ while (switching) { 
+     switching = false; 
+     var rows = table.rows; 
+   console.log(rows)
+     for (i = 1; i < (rows.length - 1); i++) { 
+         var Switch = false; 
+         // Fetch 2 elements that need to be compared 
+         x = rows[i].getElementsByTagName("td")[0]; 
+         y = rows[i + 1].getElementsByTagName("td")[0]; 
+
+         // Check if 2 rows need to be switched 
+         if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) 
+             { 
+
+             // If yes, mark Switch as needed and break loop 
+             Switch = true; 
+             break; 
+         }
+     } 
+     if (Switch) { 
+         // Function to switch rows and mark switch as completed 
+         rows[i].parentNode.insertBefore(rows[i + 1], rows[i]); 
+         switching = true; 
+     } 
+ } 
+}
 // sorting function of cost 
-sortTablecost (){ 
+sortTablecostAsc (){ 
   console.log("shashdhahdhasdh<<<<<<<<<<<<<<<<<<<<<<");
  var table, i, x, y; 
  table = document.getElementById("table"); 
@@ -127,8 +160,7 @@ sortTablecost (){
      } 
  } 
 }
-//sorting function of ratings
-sortTablerating (){ 
+sortTablecostDsc (){ 
   console.log("shashdhahdhasdh<<<<<<<<<<<<<<<<<<<<<<");
  var table, i, x, y; 
  table = document.getElementById("table"); 
@@ -142,12 +174,11 @@ sortTablerating (){
      for (i = 1; i < (rows.length - 1); i++) { 
          var Switch = false; 
          // Fetch 2 elements that need to be compared 
-         x = rows[i].getElementsByTagName("td")[2]; 
-          console.log(x)
-         y = rows[i + 1].getElementsByTagName("td")[2]; 
-         console.log(y)
+         x = rows[i].getElementsByTagName("td")[1]; 
+         console.log(x)
+         y = rows[i + 1].getElementsByTagName("td")[1]; 
          // Check if 2 rows need to be switched 
-         if (Number(x.innerHTML) > Number(y.innerHTML)) 
+         if (Number(x.childNodes[0].innerHTML) < Number(y.childNodes[0].innerHTML)) 
              { 
 
              // If yes, mark Switch as needed and break loop 
@@ -162,4 +193,5 @@ sortTablerating (){
      } 
  } 
 }
+
 }

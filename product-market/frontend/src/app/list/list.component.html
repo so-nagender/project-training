@@ -64,15 +64,21 @@
   <table class="table" id="table" style="border: solid black 2px;margin-left: 5px;">
     <thead>
       <tr>
-        <th scope="col" class="font1" (click)="sortTable()">LIST OF ITEMS</th>
-        <th scope="col" class="font1" (click)="sortTablecost()">COST</th>
+        <th scope="col" class="font1" >
+          <img src="../../assets/images/sort-up-ascending-arrow.svg"  (click)="sortTableAsc()" class="images2">
+          LIST OF ITEMS
+         <img src="../../assets/images/sort-down.svg"class="images2"  (click)="sortTableDsc()"></th>
+        <th scope="col" class="font1" >
+          <img src="../../assets/images/sort-up-ascending-arrow.svg"  (click)="sortTablecostAsc()" class="images2">
+          COST
+          <img src="../../assets/images/sort-down.svg"class="images2"  (click)="sortTablecostDsc()"></th>
         <th scope="col" class="font1">RATINGS</th>
         <th scope="col" class="font1">CHOOSE BRAND</th>
         <th scope="col" class="font1">ITEMS ARE</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of datas| filterdata: search : 'name'">
+      <tr *ngFor="let data of datas| filterdata: search">
         <td class="font2">{{data.name}}<br>
 
           <button type="button" class="btn" style="margin-top: 40px; float: left;" (click)="onaddCart(data)">ADD TO
