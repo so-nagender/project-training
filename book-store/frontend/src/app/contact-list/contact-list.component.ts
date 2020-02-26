@@ -13,7 +13,7 @@ export class ContactListComponent implements OnInit {
   apiBook;
   id;
   getdata : any
- showcategoryview = false;
+  showcategoryview ;
 
   constructor(private api: ApiService, private activatedRoute: ActivatedRoute ) 
   {
@@ -23,6 +23,8 @@ export class ContactListComponent implements OnInit {
   ngOnInit() {
     this.book();
     this.meta_data();
+
+   
    
     
   }

@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators, FormBuilder, EmailValidator } from 
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { ApiService } from '../api.service';
 import Swal from 'sweetalert2'
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -22,7 +23,7 @@ export class SignupComponent implements OnInit {
   })
   validerr: string;
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService, private routes: Router) { }
  
 
   ngOnInit() {
@@ -33,6 +34,10 @@ export class SignupComponent implements OnInit {
       const password = this.form.value.password
       this.api.postloginDetails(this.form.value.email,password).subscribe((data: any)=> {
         localStorage.setItem('accessToken', data.accessToken);
+        if(data!= null){
+          this.routes.navigate(['/dashboard'])
+   
+        }
         }, error => {
           this.api.handleError(error);
           this.api.cutomerror.subscribe(res =>{Swal.fire({
@@ -43,7 +48,11 @@ export class SignupComponent implements OnInit {
         });
   }
   else {
-    console.log("password doesnt match")
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: "pass doesnt match"
+    })
   }
 }
 
