@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, Validators,} from '@angular/forms';
 import { ApiService } from '../api.service';
+import { Router} from '@angular/router'
 
 @Component({
   selector: 'app-addbook',
@@ -13,8 +14,9 @@ export class AddbookComponent implements OnInit {
   apiBook;
   apiBook1;
   apiBook2;
+  submitted = false;
 
-  constructor(private api: ApiService, private http: HttpClient, private formBuilder: FormBuilder) { }
+  constructor(private api: ApiService, private http: HttpClient, private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit() {
     this.formValue();
@@ -26,6 +28,7 @@ export class AddbookComponent implements OnInit {
   }
 
   onSubmit() {
+    this.submitted = true;
     if (this.formData.invalid) {
       return;
     } else {
@@ -37,6 +40,7 @@ export class AddbookComponent implements OnInit {
     console.log(obj)
     this.api.addBook(obj).subscribe();
     this.book();
+    this.router.navigate(['contactlist'])
     }
   }
 

@@ -5,16 +5,16 @@
         Book Name:
         <br>
         <input id="bookname" class="form-control" type="text" formControlName="bookname"
-            [ngClass]="{ 'is-invalid': u.bookname.errors }">
-        <div *ngIf=" u.bookname.errors" class="invalid-feedback">
+            [ngClass]="{ 'is-invalid':submitted && u.bookname.errors }">
+        <div *ngIf="submitted && u.bookname.errors" class="invalid-feedback">
             <div *ngIf="u.bookname.errors.required"> Book Name is required</div>
         </div>
         <br>
         Author Name:
         <br>
         <input id="authorname" class="form-control" type="text" formControlName="authorname"
-            [ngClass]="{ 'is-invalid':  u.authorname.errors }">
-        <div *ngIf=" u.authorname.errors" class="invalid-feedback">
+            [ngClass]="{ 'is-invalid': submitted && u.authorname.errors }">
+        <div *ngIf=" submitted && u.authorname.errors" class="invalid-feedback">
             <div *ngIf="u.authorname.errors.required"> Author Name is required</div>
         </div>
         <br>
@@ -22,22 +22,26 @@
         <br>
         <div class="form-row align-items-center">
             
-              <select formControlName="catname" class="custom-select mr-sm-2" id="inlineFormCustomSelect" >
+              <select formControlName="catname" class="custom-select mr-sm-2" id="inlineFormCustomSelect" 
+              [ngClass]="{ 'is-invalid': submitted && u.catname.errors }">
                 
                 <option value="{{i.id}}" *ngFor="let i of apiBook2">{{i.title}}</option>
               </select>
+              <div *ngIf="submitted && u.catname.errors" class="invalid-feedback">
+                <div *ngIf="u.catname.errors.required">Catogery is required</div>
+            </div>
             </div>
         
         <br>
         Description:
         <br>
         <input id="des" class="form-control" type="text" formControlName="des"
-            [ngClass]="{ 'is-invalid': u.des.errors }">
-        <div *ngIf="u.des.errors" class="invalid-feedback">
+            [ngClass]="{ 'is-invalid': submitted && u.des.errors }">
+        <div *ngIf="submitted && u.des.errors" class="invalid-feedback">
             <div *ngIf="u.des.errors.required">Description is required</div>
         </div>
         <div style="margin-top: 10px;">
-            <button type="submit" [disabled]="!ngForm.valid" class="btn btn-primary " (click)="onSubmit()" routerLink="/contactlist"> Add Book</button>
+            <button type="submit" [disabled]="!ngForm.valid" class="btn btn-primary " (click)="onSubmit()" > Add Book</button>
             <button type="button" class="btn btn-primary" style="margin-left: 10px;" routerLink="/contactlist">Cancle</button>
         </div>
     </form>
