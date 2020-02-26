@@ -35,6 +35,7 @@ export class HeaderComponent implements OnInit {
     localStorage.clear();
     if(localStorage.getItem('accessToken')){
       this.buttonisdisabled= false
+      this.routes.navigate([''])
     }
     
   }
