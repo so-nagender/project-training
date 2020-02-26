@@ -19,6 +19,7 @@ import { from } from 'rxjs';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Interceptor } from '../app/interceptor';
 import { DataResolverService } from './data-resolver.service';
+import { GenresComponent } from './genres/genres.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MatTableModule } from '@angular/material/table';
@@ -81,8 +82,10 @@ const appRoutes: Routes = [
     EditmovieComponent,
     AddmovieComponent,
     Confirmpasswordvalidator,
-    MovieListComponent,
-    FilterdataPipe
+    
+    FilterdataPipe,
+    GenresComponent,
+    MovieListComponent
   ],
   imports: [
     BrowserModule,

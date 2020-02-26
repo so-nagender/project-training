@@ -23,6 +23,12 @@ export class ListComponent implements OnInit {
     this.myservice.getMovies().subscribe(res => {
       this.movies = res;
     });
+    // this.myservice.catSelected((catid) => {
+    //   this.myservice.  getMoviesByCatg(id): Observable<any> {
+    //     ().subscribe(res => {
+    //     this.movies = res;
+    //   });
+    // })
   }
   delete(id) {
     this.myservice.deleteMovie(id).subscribe();
