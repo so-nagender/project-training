@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
 export class DefaultComponent implements OnInit {
   checkoutForm: FormGroup;
   isSubmitted: boolean = false;
+  error: string;
+  loading: boolean;
 
   constructor(private router: Router, private formBuilder: FormBuilder, private myservice: ApiserviceService, private activatedRoute: ActivatedRoute) {
     this.checkoutForm = this.formBuilder.group({
@@ -37,7 +39,12 @@ export class DefaultComponent implements OnInit {
       this.myservice.lognIn(obj).subscribe(res => {
         localStorage.setItem("accessToken", res.accessToken);
         this.router.navigate(['/home']);
-      });
+      },
+      error => {
+        this.error = error;
+        this.loading = false;
+      }
+      );
     }
 
   }
