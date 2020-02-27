@@ -138,6 +138,30 @@
   ],
   "movies": [
     {
+      "movieName": "Shaun the ",
+      "year": "2019",
+      "catId": "11",
+      "cast": [
+        "Joe Sugg","Andy Nyman","namo","shiwani"
+      ],
+      "synopsis": "Shaun the sheep is tired of doing the same work at the farm everyday. He decides to take a day off. In order to do that, he needs to make sure the farmer doesn't know. When more happens than they can handle, the sheep find their way in the big city. Now they need to get back to the farm.",
+      "updatedAt": 1582807147412,
+      "id": 2
+    },
+    {
+      "movieName": "Avengers ",
+      "year": "2012",
+      "catId": "6",
+      "cast": [
+        "Chris Hemsworth",
+        "Chris Pratt",
+        "Robert Downey Jr."
+      ],
+      "synopsis": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment, the fate of Earth and existence has never been more uncertain.",
+      "updatedAt": 1582804436288,
+      "id": 3
+    },
+    {
       "movieName": "The Wolf of Wall Street",
       "year": "2013",
       "catId": "11",
@@ -152,15 +176,14 @@
     },
     {
       "movieName": "The Dark Knight",
-      "id": 5,
       "year": "2008",
+      "catId": "5",
       "cast": [
-        "Christian Bale",
-        "Cillian Murphy",
-        "Heath Ledger"
+        "Christian Bale,Cillian Murphy,Heath Ledger"
       ],
-      "catId": 5,
-      "synopsis": "Set within a year after the events of Batman Begins (2005), Batman, Lieutenant James Gordon, and new District Attorney Harvey Dent successfully begin to round up the criminals that plague Gotham City, until a mysterious and sadistic criminal mastermind known only as 'The Joker' appears in Gotham, creating a new wave of chaos. Batman's struggle against The Joker becomes deeply personal, forcing him to 'confront everything he believes' and improve his technology to stop him. A love triangle develops between Bruce Wayne, Dent, and Rachel Dawes."
+      "synopsis": "Set within a year after the events of Batman Begins (2005), Batman, Lieutenant James Gordon, and new District Attorney Harvey Dent successfully begin to round up the criminals that plague Gotham City, until a mysterious and sadistic criminal mastermind known only as 'The Joker' appears in Gotham, creating a new wave of chaos. Batman's struggle against The Joker becomes deeply personal, forcing him to 'confront everything he believes' and improve his technology to stop him. A love triangle develops between Bruce Wayne, Dent, and Rachel Dawes.",
+      "updatedAt": 1582804992552,
+      "id": 5
     },
     {
       "movieName": "The Dark Knight Rises",
@@ -335,13 +358,12 @@
     {
       "movieName": "Tere Naam",
       "year": "2003",
-      "catId": "11",
+      "catId": "1",
       "cast": [
-        "Salman Khan",
-        "Bhumika Chawla"
+        "Salman Khan","Bhumika Chawla"
       ],
       "synopsis": "Frozen II, also known as Frozen 2, is a 2019 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios.At the 92nd Academy Awards, the film received a nomination for Best Original Song for 'Into the Unknown'.",
-      "updatedAt": 1582710135215,
+      "updatedAt": 1582807055588,
       "id": 21
     },
     {

@@ -8,8 +8,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  movieDetails: any;
+;
   movies: any;
+
 
   constructor(private myservice: ApiserviceService, private activatedRoute: ActivatedRoute) { }
 
@@ -17,6 +18,8 @@ export class HomeComponent implements OnInit {
     this.myservice.getMovies().subscribe(res => {
       this.movies = res;
     });
+
+    }
   }
 
-}
+
