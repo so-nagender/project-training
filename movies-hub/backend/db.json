@@ -150,6 +150,18 @@
       "synopsis": "When an alien with amazing powers crash-lands near Mossy Bottom Farm, Shaun the Sheep goes on a mission to shepherd the intergalactic visitor home before a sinister organization can capture her."
     },
     {
+      "movieName": "Avengers: Infinity War",
+      "id": 3,
+      "year": "2018",
+      "cast": [
+        "Chris Hemsworth",
+        "Chris Pratt",
+        "Robert Downey Jr."
+      ],
+      "catId": 3,
+      "synopsis": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment, the fate of Earth and existence has never been more uncertain."
+    },
+    {
       "movieName": "The Wolf of Wall Street",
       "year": "2013",
       "catId": "11",
@@ -322,7 +334,7 @@
     {
       "movieName": "Wanted",
       "year": "2007",
-      "catId": 3,
+      "catId": "3",
       "cast": [
         "Salman Khan",
         "Aisha Takia"
@@ -424,6 +436,24 @@
     {
       "genre": " Comedy ",
       "id": 11
+    },
+    {
+      "genre": "Anime",
+      "createdAt": 1582710513931,
+      "updatedAt": 1582710513931,
+      "id": 13
+    },
+    {
+      "genre": "Suspense",
+      "createdAt": 1582719135136,
+      "updatedAt": 1582719135136,
+      "id": 14
+    },
+    {
+      "genre": "Passion",
+      "createdAt": 1582720716329,
+      "updatedAt": 1582720716329,
+      "id": 15
     }
   ],
   "tests": [
