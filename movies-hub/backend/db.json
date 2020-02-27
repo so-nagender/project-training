@@ -287,6 +287,33 @@
       "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
     },
     {
+      "movieName": "Chalte-Chalte",
+      "id": 15,
+      "year": "1982",
+      "cast": "Rishi Kapoor",
+      "catId": 6,
+      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
+    },
+    {
+      "movieName": "Kahaani",
+      "id": 16,
+      "year": "1980",
+      "cast": "Vidya Balan",
+      "catId": 8,
+      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
+    },
+    {
+      "movieName": "1920 Evil Return",
+      "id": 17,
+      "year": "2009",
+      "cast": [
+        "Aftab Shivdasani",
+        "Tia Bajpai"
+      ],
+      "catId": 10,
+      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life."
+    },
+    {
       "movieName": "Bhoolbhulaiya",
       "id": 18,
       "year": "2006",
@@ -312,23 +339,24 @@
     {
       "movieName": "Dhol",
       "year": "2003",
-      "catId": "11",
       "cast": [
         "Kunal Khemu",
         "tushar",
         "rajpal yadav"
       ],
-      "synopsis": "Based mujhe kuch nhi huwa  on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. ",
-      "updatedAt": 1582631514222,
-      "id": 20
+      "catId": 10,
+      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
     },
     {
-      "movieName": "Tere Naam",
-      "year": "2010",
-      "catId": "9",
-      "cast": "Salman Khan, Heroin nhi pta",
-      "synopsis": "Frozen II, also known as Frozen 2, is a 2019 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios.At the 92nd Academy Awards, the film received a nomination for Best Original Song for 'Into the Unknown'.",
-      "updatedAt": 1582632389461,
+      "movieName": "Koi Mil Gaya",
+      "year": "2006",
+      "catId": "8",
+      "cast": [
+        "Hrithik Roshan and Preeti Jinta"
+      ],
+      "synopsis": "Movie is about alliens.",
+      "createdAt": 1582701921999,
+      "updatedAt": 1582701921999,
       "id": 21
     },
     {
@@ -342,6 +370,30 @@
       "createdAt": 1582787000741,
       "updatedAt": 1582787000741,
       "id": 22
+    },
+    {
+      "movieName": "",
+      "year": "",
+      "catId": "",
+      "cast": [
+        ""
+      ],
+      "synopsis": "",
+      "createdAt": 1582721452806,
+      "updatedAt": 1582721452806,
+      "id": 23
+    },
+    {
+      "movieName": "",
+      "year": "",
+      "catId": "",
+      "cast": [
+        ""
+      ],
+      "synopsis": "",
+      "createdAt": 1582721464719,
+      "updatedAt": 1582721464719,
+      "id": 24
     }
   ],
   "cats": [
