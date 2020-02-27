@@ -29,7 +29,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { FilterdataPipe } from './filterdata.pipe';
 
 const appRoutes: Routes = [
-  {path:'movielist',component:MovieListComponent},
+  {path:'movielist',component:MovieListComponent},   
   {
     path: 'home',
     component: HomeComponent,
@@ -66,7 +66,14 @@ const appRoutes: Routes = [
     resolve: {
       hero: DataResolverService
     }
-   }
+   },
+   { 
+    path: 'Genres', 
+    component: GenresComponent,
+    resolve: {
+      hero: DataResolverService
+    }
+   },
 
 ];
 @NgModule({
@@ -85,7 +92,8 @@ const appRoutes: Routes = [
     
     FilterdataPipe,
     GenresComponent,
-    MovieListComponent
+    MovieListComponent,
+
   ],
   imports: [
     BrowserModule,

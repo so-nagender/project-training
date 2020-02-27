@@ -31,6 +31,10 @@ export class ApiserviceService {
     const add = `/api/movies/${id}`;
     return this.http.delete(add);
   }
+  deleteCat(id) {
+    const add = `/api/cats/${id}`;
+    return this.http.delete(add);
+  }
   getSingleElementById(id): Observable<any> {
     const address = `/api/movies/${id}?_expand=cat`;
     return this.http.get(address);
@@ -48,6 +52,9 @@ export class ApiserviceService {
   }
   postData(obj): Observable<any> {
     return this.http.post<any>('/api/movies',obj)
+  }
+  postCat(obj): Observable<any> {
+    return this.http.post<any>('/api/cats',obj)
   }
   setData(msg: any) {
     this.subject.next(msg);
