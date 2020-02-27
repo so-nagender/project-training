@@ -1,68 +1,84 @@
 <div>
-    <app-header></app-header>
+  <app-header></app-header>
 </div>
 <form [formGroup]="checkoutForm">
-    <div class="row moviesDetailsMargin">
-        <div class="col-2">
-        </div>
-        <div class="container col-2 imageShadow">
-            <img src="../../assets/img/frozen.jpg" class="img-fluid image" alt="Responsive" style="width:100%">
-        </div>
-        <div class="col-1">
-        </div>
-        <div class="col-3">
-            <label>
-                <div class="form-group">
-                    <input type="text" required class="input" formControlName="moviename" [(ngModel)]="dataa.movieName">
-                    <p class="label-txt">Movie Name</p>
-                    <div class="line-box">
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </label>
-            <label>
-                <div class="form-group">
-                    <input type="text" required class="input" formControlName="date" [(ngModel)]="dataa.year">
-                    <p class="label-txt">Release Date</p>
-                    <div class="line-box">
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </label>
-            <!-- Dropdown Start -->
-            <h5>catogaries</h5>
-            <select formControlName="cat" class="custom-select" id="iinlineFormCustomSelect">
-                <option value="{{dataa.catId}}" selected>{{dataa.cat.genre}}</option>
-                <option value="{{i.id}}" *ngFor="let i of catogry">{{i.genre}}</option>
-            </select>
-            <!-- Dropdown End -->
-            <label>
-                <div class="form-group">
-                    <input type="text" required class="input" formControlName="cast" [(ngModel)]="dataa.cast">
-                    <p class="label-txt">Cast</p>
-                    <div class="line-box">
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </label>
-        </div>
-        <div class="col-4">
-        </div>
+  <div class="row moviesDetailsMargin">
+    <div class="col-2">
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-5"></div>
-            <div class="col-4">
-                <div class="form-group">
-                    <label for="synopsys">Synopsys:</label>
-                    <textarea class="form-control" rows="4" formControlName="syn" [(ngModel)]="dataa.synopsis"
-                        id="comment"></textarea>
-                </div>
-            </div>
-            <div class="col-3"></div>
+    <div class="container col-2 imageShadow">
+      <img src="../../assets/img/frozen.jpg" class="img-fluid image" alt="Responsive" style="width:100%">
+    </div>
+    <div class="col-1">
+    </div>
+    <div class="col-3">
+      <label>
+        <div class="form-group">
+          <input type="text" required class="input" formControlName="moviename" [(ngModel)]="dataa.movieName"
+            [ngClass]="{'is-invalid': checkoutForm.get('moviename').touched && checkoutForm.get('moviename').invalid}">
+          <p class="label-txt">Movie Name</p>
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+          <div class="invalid-feedback">
+            <h5 style="font-size: small;"><strong>Movie Name ke bina nahi babumoshai</strong></h5>
+          </div>
         </div>
+      </label>
+      <label>
+        <div class="form-group">
+          <input type="text" required class="input" formControlName="date" [(ngModel)]="dataa.year"
+            [ngClass]="{'is-invalid': checkoutForm.get('date').touched && checkoutForm.get('date').invalid}">
+          <p class="label-txt">Release Date</p>
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+          <div class="invalid-feedback">
+            <h5 style="font-size: small;"><strong>Jate Jate "Year" to batate jao</strong></h5>
+          </div>
+        </div>
+      </label>
+      <!-- Dropdown Start -->
+      <h5>catogaries</h5>
+      <select formControlName="cat" class="custom-select" id="iinlineFormCustomSelect">
+        <option value="{{dataa.catId}}" selected>{{dataa.cat.genre}}</option>
+        <option value="{{i.id}}" *ngFor="let i of catogry">{{i.genre}}</option>
+      </select>
+      <!-- Dropdown End -->
+      <label>
+        <div class="form-group">
+          <input type="text" required class="input" formControlName="cast" [(ngModel)]="dataa.cast"
+          [ngClass]="{'is-invalid': checkoutForm.get('cast').touched && checkoutForm.get('cast').invalid}">
+          <p class="label-txt">Cast</p>
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+          <div class="invalid-feedback">
+            <h5 style="font-size: small;"><strong>Not Caste but Cast is required</strong></h5>
+          </div>
+        </div>
+      </label>
     </div>
-    <div class="col-auto my-1">
-        <button type="submit" routerLink="/list" (click)=onSubmit() class="btn btn-primary">Submit</button>
+    <div class="col-4">
     </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-5"></div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="synopsys">Synopsis:</label>
+          <textarea class="form-control" rows="4" formControlName="syn" [(ngModel)]="dataa.synopsis"id="comment"
+          [ngClass]="{'is-invalid': checkoutForm.get('syn').touched && checkoutForm.get('syn').invalid}">
+        </textarea>
+        <div class="invalid-feedback">
+          <h5 style="font-size: small;"><strong>Hulk wants synopsis</strong></h5>
+        </div>
+        </div>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+  <div class="col-auto my-1">
+    <button type="submit"  (click)=onSubmit() class="btn btn-primary">Submit</button>
+  </div>
 </form>

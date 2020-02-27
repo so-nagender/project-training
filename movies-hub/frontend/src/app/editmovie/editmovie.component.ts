@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
 import { ApiserviceService } from '../apiservice.service';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -10,20 +12,22 @@ import { ApiserviceService } from '../apiservice.service';
   styleUrls: ['./editmovie.component.css']
 })
 export class EditmovieComponent implements OnInit {
+  checkoutForm: FormGroup;
   id;
   dataa: any;
   catogry: any;
 
-  constructor(private checkout: FormBuilder, private activatedRoute: ActivatedRoute, private myservice: ApiserviceService) {
+  constructor(private checkout: FormBuilder, private activatedRoute: ActivatedRoute, private myservice: ApiserviceService, private route: Router) {
     this.id= (this.activatedRoute.snapshot.params.id);
-   }
-   checkoutForm= this.checkout.group({
-    moviename : [''],
-    date : [''],
+   
+   this.checkoutForm= this.checkout.group({
+    moviename : ['', [Validators.required]],
+    date : ['', Validators.required],
     cat: [''],
-    cast: [''],
-    syn: [''],
+    cast: ['', Validators.required],
+    syn: ['', [Validators.required]]
   })
+}
 
   ngOnInit() {
     this.getDataa();
@@ -40,6 +44,11 @@ export class EditmovieComponent implements OnInit {
       });
     }
     onSubmit() {
+      if(this.checkoutForm.invalid)
+      {
+        return;
+      }
+      else{
       const moviename= this.checkoutForm.controls.moviename.value;
       const year= this.checkoutForm.controls.date.value;
       const category= this.checkoutForm.controls.cat.value;
@@ -47,5 +56,9 @@ export class EditmovieComponent implements OnInit {
       const synopsys = this.checkoutForm.controls.syn.value;
       const obj= {movieName: moviename, year: year, catId: category, ["cast"]: [cast], synopsis: synopsys};
       this.myservice.update(this.id, obj).subscribe();
+      this.route.navigate(['/list']);
+
+      }
+      
     }
-}
+  }
