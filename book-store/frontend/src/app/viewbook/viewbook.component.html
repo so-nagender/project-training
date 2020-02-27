@@ -4,7 +4,7 @@
     </div>
     
   
-      <table class="table" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
+      <table id="bookTable" class="table" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
         <colgroup>
           <col width="5%">
           <col width="*">
@@ -15,8 +15,9 @@
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Book Name </th>
-            <th scope="col">Author Name</th>
+            <th scope="col" ><img src="../../assets/images/sort-down.svg" height="20px" (click)=bookNameSortDes()>Book Name
+              <img src="../../assets/images/sort-up-ascending-arrow.svg" height="20px" (click)=bookNameSortAes()></th>
+            <th scope="col" >Author Name</th>
             <th scope="col">Catogery</th>
             <th scope="col">Action</th>
             
