@@ -1,6 +1,3 @@
-*{
-
-}
 img{
     width: 40%;
 }
@@ -21,6 +18,4 @@ padding-left: 183px;
 .bigimg{
     position: relative;
     width: 50px;
-    /* right: 1px;
-    top: 1px; */
 }
