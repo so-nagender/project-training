@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ViewComponent } from './view/view.component';
 import { EditComponent } from './edit/edit.component';
 import { AddbookComponent } from './addbook/addbook.component';
+import { ViewbookComponent } from './viewbook/viewbook.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -20,6 +21,8 @@ const routes: Routes = [
   { path: 'book/view/:id', component: ViewComponent},
   { path: 'book/edit/:id', component: EditComponent},
   { path: 'addbook', component: AddbookComponent},
+  { path: 'viewbook', component: ViewbookComponent},
+  
 ];
 
 @NgModule({

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs/operators';
 import { ApiService } from '../api.service';
+
 
 @Component({
   selector: 'app-header',
@@ -38,6 +38,10 @@ export class HeaderComponent implements OnInit {
       this.routes.navigate([''])
     }
     
+  }
+
+  viewBook(){
+    this.routes.navigate(['/contactlist'])
   }
 
 }

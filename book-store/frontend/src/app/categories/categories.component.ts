@@ -2,9 +2,9 @@ import { Component, OnInit,ViewChild, ElementRef, } from '@angular/core';
 import {TimelineMax, TweenMax} from "gsap";
 import { FormGroup, FormControl, Validators } from "@angular/forms"
 import { ApiService } from '../api.service';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
-import { identifierModuleUrl } from '@angular/compiler';
+
 
 @Component({
   selector: 'app-categories',
@@ -12,6 +12,7 @@ import { identifierModuleUrl } from '@angular/compiler';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
+  id;
   view_form = false
   @ViewChild('category_form', {static: true}) category_form: ElementRef;
   categoryFormdata: any;
@@ -22,7 +23,9 @@ export class CategoriesComponent implements OnInit {
     this.view_form = true
   }
 
-  constructor(private api : ApiService , public routes : Router) { }
+  constructor(private api : ApiService , public routes : Router, private activatedRoute: ActivatedRoute) { 
+    this.id = this.activatedRoute.snapshot.params.id;
+  }
   animation() {
     let t1: TimelineMax = new TimelineMax();
     t1.fromTo(this.category_form, 5,{x:"-100%"},
@@ -66,5 +69,13 @@ export class CategoriesComponent implements OnInit {
   }
  close(categoryForm){
    this.view_form=false;
+ }
+
+ onDeleteCat(x){
+  const id = x;
+  this.api.deleteCat(id).subscribe();
+  this.api.deleteCatBook(id).subscribe();
+  this.view();
+
  }
 }

@@ -27,12 +27,21 @@
           <a routerLink="/categories" routerLinkActive="active">Categories</a>
         </li>
         <li class="nav-item flex" *ngIf="this.buttonisdisabled">
-          <a routerLink="/addbook" routerLinkActive="active">Add-Book</a>
-        </li>
-        <li class="nav-item flex" *ngIf="this.buttonisdisabled">
-          <a routerLink="/contactlist" routerLinkActive="active">View-Books</a>
-        </li>
-
+            <a routerLink="/addbook" routerLinkActive="active">Add Book</a>
+          </li>
+          <li class="nav-item flex"  *ngIf="this.buttonisdisabled">
+            <!-- <a routerLink="/contactlist" routerLinkActive="active">View-Books</a> -->
+            
+            <div class="dropdown" >
+              <button class="btn btn-secondary dropdown-toggle" style="color: black;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                View-Books
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" ><button class="upper-button"  routerLink="/viewbook">View All Books</button></a>
+                <a class="dropdown-item" ><button class="upper-button" routerLink="/categories">Catogrie's Books</button></a>
+              </div>
+            </div>  
+          </li>
         <li class="nav-item flex" *ngIf="this.buttonisdisabled">
           <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
         </li>

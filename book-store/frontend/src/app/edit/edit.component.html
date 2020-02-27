@@ -4,29 +4,45 @@
 
          Book Name:
         <br>
-        <input id="bookname" class="form-control" type="text" [(ngModel)]="apiBook.BookName" formControlName="bookname">
+        <input id="bookname" class="form-control" type="text" [(ngModel)]="apiBook.BookName" formControlName="bookname"
+        [ngClass]="{ 'is-invalid':submitted && u.bookname.errors }">
+        <div *ngIf="submitted && u.bookname.errors" class="invalid-feedback">
+          <div *ngIf="u.bookname.errors.required"> Book Name is required</div>
+      </div>
         <br>
         Author Name:
         <br>
-        <input id="authorname" class="form-control" type="text" [(ngModel)]="apiBook.AuthorName" formControlName="authorname">
+        <input id="authorname" class="form-control" type="text" [(ngModel)]="apiBook.AuthorName" formControlName="authorname"
+        [ngClass]="{ 'is-invalid': submitted && u.authorname.errors }">
+        <div *ngIf=" submitted && u.authorname.errors" class="invalid-feedback">
+          <div *ngIf="u.authorname.errors.required"> Author Name is required</div>
+      </div>
         <br>
         Catogery Name:
         <br>
         <div class="form-row align-items-center">
             
-              <select formControlName="catname" class="custom-select mr-sm-2" id="inlineFormCustomSelect" >
+              <select formControlName="catname" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && u.catname.errors }" >
                 <option value="{{apiBook1.catogrie.id}}" selected>{{apiBook1.catogrie.title}}</option>
                 <option value="{{i.id}}" *ngFor="let i of apiBook2">{{i.title}}</option>
               </select>
+              <div *ngIf="submitted && u.catname.errors" class="invalid-feedback">
+                <div *ngIf="u.catname.errors.required">Catogery is required</div>
+            </div>
             </div>
         
         <br>
         Description:
         <br>
-        <input id="des" class="form-control" type="text" [(ngModel)]="apiBook.description" formControlName="des">
+        <input id="des" class="form-control" type="text" [(ngModel)]="apiBook.description" formControlName="des"
+        [ngClass]="{ 'is-invalid': submitted && u.des.errors }">
+        <div *ngIf="submitted && u.des.errors" class="invalid-feedback">
+          <div *ngIf="u.des.errors.required">Description is required</div>
+      </div>
         <div style="margin-top: 10px;">
-            <button type="submit" class="btn btn-primary" (click)="onUpdate()" routerLink="/contactlist"> Update </button>
-            <button type="button" class="btn btn-primary" style="margin-left: 10px;" routerLink="/contactlist">Cancle</button>
+            <button type="submit" [disabled]="!ngForm.valid" class="btn btn-primary" (click)="onUpdate()"> Update </button>
+            <button type="button" class="btn btn-primary" style="margin-left: 10px;" routerLink="/viewbook">Cancle</button>
         </div>
     </form>
 </div> 

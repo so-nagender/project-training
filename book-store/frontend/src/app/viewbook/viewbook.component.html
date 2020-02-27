@@ -1,0 +1,43 @@
+<div class="container" style="margin-top : 30px"> 
+    <div class="form-group mb-4">
+        <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
+    </div>
+    
+  
+      <table id="bookTable" class="table" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
+        <colgroup>
+          <col width="5%">
+          <col width="*">
+          <col width="25%">
+          <col width="15%">
+          <col width="25%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col" ><img src="../../assets/images/sort-down.svg" height="20px" (click)=bookNameSortDes()>Book Name
+              <img src="../../assets/images/sort-up-ascending-arrow.svg" height="20px" (click)=bookNameSortAes()></th>
+            <th scope="col" >Author Name</th>
+            <th scope="col">Catogery</th>
+            <th scope="col">Action</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let books of apiBook | filter: searchText  ; let i = index">
+            <th scope="row">{{i + 1}}</th>
+              <td>{{books.BookName}}</td>
+              <td>{{books.AuthorName}}</td>
+          <td>{{books.catogrie.title}}</td>
+          <td><button type="button" class="btn btn-primary" style="margin-right: 10px;" [routerLink]="['/book/view', books.id]">View</button>
+            <button type="button" class="btn btn-primary" style="margin-right: 10px;" [routerLink]="['/book/edit', books.id]">Edit</button>
+            <button type="button" class="btn btn-primary" (click)="onDelete(books.id)">Delete</button>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <ng-template #noResults>
+        <p>No results found for "{{searchText}}".</p>
+      </ng-template>
+    </div>
