@@ -5,13 +5,18 @@
           <div class="col">
             <input type="text" class="form-control" formControlName="fname" [ngClass]="{'is-invalid': form.get('fname').touched && form.get('fname').invalid}" placeholder="First name">
             <div class="invalid-feedback">
-                <div>First Name is Required</div>
+                <div><ul>
+                    <li>First Name is Required</li>
+                    <li>First name contain only Alphabet</li>
+                </ul> 
             </div>
+            </div>
+            
           </div>
           <div class="col">
             <input type="text" class="form-control" formControlName="lname" [ngClass]="{'is-invalid': form.get('lname').touched && form.get('lname').invalid}" placeholder="Last name">
             <div class="invalid-feedback">
-                <div>Last Name is Required</div>
+                <div>Last Name is Required with only Alphabet</div>
             </div>
           </div>
         </div>
@@ -62,15 +67,15 @@
                 
             </div>
             <div class="col" >
-                <input type="password" class="form-control" formControlName="password2" [ngClass]="{'is-invalid': form.get('password2').touched && form.get('password2').invalid}" id="inputPassword3" placeholder="Confirm Password">
+                <input type="password" class="form-control" formControlName="password2" [ngClass]="{'is-invalid': form.get('password2').touched && form.get('password2').invalid}" id="inputPassword3" placeholder="Cnf Password">
                 <div *ngIf="form.get('password2').touched && form.get('password2').invalid" class="invalid-feedback">
                     <div *ngIf="form.get('password2').errors.required">Password must Required</div>
                     <div *ngIf="form.get('password2').errors.minlength">Password at least siX character</div>
                 </div>
             </div>
-          </div>
-          <button type="submit" class="btn btn-sign-up" style="margin-top: 10px;">Sign Up</button>
-          <a class="signin-position" routerLink="/login" routerLinkActive="active">Already a member?|Sign in Here</a>
+        </div>
+        <button type="submit" class="btn btn-sign-up" style="margin-top: 10px;">Sign Up</button>
+        <div><a class="text-left" routerLink="/login" routerLinkActive="active">Already member?|Sign Here</a></div>
     </form>
 
 </div>
