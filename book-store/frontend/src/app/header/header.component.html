@@ -1,14 +1,27 @@
 <div class="header-position">
-<nav class="navbar navbar-expand-lg navbar-light bg-light padding_left shadow">
-   <a class="navbar-brand" href=""><img src ="../../assets/images/book.svg"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <nav
+    class="navbar navbar-expand-lg navbar-dark bg-dark padding_left shadow"
+ 
+  >
+    <a class="navbar-brand" href=""
+      ><img src="../../assets/images/book.svg"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
-  
+
     <div class="collapse navbar-collapse flex" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active flex">
-           <a routerLink="" routerLinkActive="active">Home</a>
+          <a routerLink="" routerLinkActive="active">Home</a>
         </li>
         <li class="nav-item flex" *ngIf="this.buttonisdisabled">
           <a routerLink="/categories" routerLinkActive="active">Categories</a>
@@ -31,24 +44,24 @@
           </li>
         <li class="nav-item flex" *ngIf="this.buttonisdisabled">
           <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-          </li>
-         
-          
-      
-        
+        </li>
       </ul>
       <div class=" my-2 my-lg-0">
         <ul class="navbar-nav mr-auto">
-        <li class="nav-item flex" *ngIf="this.buttonisdisabled">
-          <a href="" routerLinkActive="active" (click) ="logout()"><img class= "bigimg" src="../../assets/images/shut-down-icon.svg"></a>
+          <li class="nav-item flex" *ngIf="this.buttonisdisabled">
+            <a href="" routerLinkActive="active" (click)="logout()"
+              ><img class="bigimg" src="../../assets/images/shut-down-icon.svg"
+            /></a>
           </li>
           <li class="nav-item flex" *ngIf="!this.buttonisdisabled">
-            <a routerLink="/login" routerLinkActive="active"><img  class= "bigimg" src="../../assets/images/shut-down-icon (1).svg"></a>
+            <a routerLink="/login" routerLinkActive="active"
+              ><img
+                class="bigimg"
+                src="../../assets/images/shut-down-icon (1).svg"
+            /></a>
           </li>
-          </ul>
-        </div>
-     
+        </ul>
+      </div>
     </div>
-
   </nav>
 </div>
