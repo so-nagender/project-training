@@ -26,18 +26,12 @@
       "id": 2
     },
     {
-      "id": 3,
-      "BookName": "The Amityville Horror",
-      "AuthorName": "Jay Anson",
-      "catogrieId": 1,
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
-    },
-    {
-      "id": 4,
-      "BookName": "The Exorcist",
-      "AuthorName": "William Peter Blatty",
-      "catogrieId": 1,
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
+      "BookName": "ghgfhgf",
+      "AuthorName": "uiou",
+      "catogrieId": "2",
+      "description": "ioui",
+      "updatedAt": 1582789921578,
+      "id": 3
     },
     {
       "id": 5,
@@ -174,6 +168,15 @@
       "createdAt": 1582715582199,
       "updatedAt": 1582715582199,
       "id": 26
+    },
+    {
+      "BookName": "ewe",
+      "AuthorName": "werw",
+      "catogrieId": "2",
+      "description": "erwer",
+      "createdAt": 1582789988352,
+      "updatedAt": 1582789988352,
+      "id": 27
     }
   ],
   "profile": [

@@ -55,6 +55,7 @@
 
 
 <div *ngIf="showcategoryview" class="container">
+ 
 <table style="width: 100%;" *ngIf="(getdata | filter: searchText).length > 0; else noResults">
   <tr>
     <th style="width: 33.3%;">Book Name</th>
