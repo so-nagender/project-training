@@ -286,7 +286,7 @@
       "movieName": "Yaadein",
       "id": 14,
       "year": "1986",
-      "cast": "Amitabh Bachhan",
+      "cast": ["Amitabh Bachhan"],
       "catId": 4,
       "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
     },
@@ -294,7 +294,7 @@
       "movieName": "Chalte-Chalte",
       "id": 15,
       "year": "1982",
-      "cast": "Rishi Kapoor",
+      "cast": ["Rishi Kapoor"],
       "catId": 6,
       "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
     },
@@ -357,7 +357,7 @@
       "movieName": "Tere Naam",
       "year": "2003",
       "catId": "11",
-      "cast": "Salman Khan,  Bhumika Chawla",
+      "cast": ["Salman Khan",  "Bhumika Chawla"],
       "synopsis": "Frozen II, also known as Frozen 2, is a 2019 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios.At the 92nd Academy Awards, the film received a nomination for Best Original Song for 'Into the Unknown'.",
       "updatedAt": 1582710135215,
       "id": 21
@@ -365,10 +365,10 @@
     {
       "movieName": "Main tera Hero",
       "year": "2014",
-      "catId": "",
-      "cast": "Varun Dhawan, Iliana Decruiz",
+      "catId": "11",
+      "cast": ["Varun Dhawan", "Iliana Decruiz"],
       "synopsis": "Main Tera Hero ( transl. I am your hero) is a 2014 Indian Hindi-language romantic action comedy film, directed by David Dhawan and produced by Shobha Kapoor and Ekta Kapoor for Balaji Motion Pictures. The film stars Nargis Fakhri, Varun Dhawan and Ileana D'Cruz in the lead roles.\n",
-      "updatedAt": 1582719226972,
+      "updatedAt": 1582720742708,
       "id": 22
     }
   ],
