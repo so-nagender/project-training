@@ -9,14 +9,11 @@
         </a>
         <ul class="nav justify-content-end color">
           <li class="nav-item">
-            <a class="nav-link active" routerLink="/home">Home</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" routerLink="/signup">Sign Up</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="modal" data-target="#exampleModal1" href="#">Sign In</a>
-            <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            <!-- <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -42,7 +39,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </li>
         </ul>
       </div>
@@ -56,8 +53,8 @@
           <form [formGroup]="checkoutForm" (ngSubmit)="onLogin()" class="signin-form">
             <div class="form-group">
               <label for="exampleInputEmail1">Email Address / User</label>
-              <input type="text" name="email" id="e1" formControlName="email" required placeholder="Email"
-                class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+              <input type="text" name="email" id="e1" formControlName="email" placeholder="Email" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
               <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                 <div *ngIf="f.email.errors.required">required</div>
               </div>
@@ -71,31 +68,31 @@
               </div>
             </div>
             <div>
-              <h5>
+              <h5 style="color: brown ;">
                 {{error}}
               </h5>
             </div>
-            <button type="submit" class="btn btn-danger mt-4">Log In</button>
+            <button type="submit" class="btn btn-outline-danger mt-4">Log In</button>
           </form>
           <div class="signup-style">
-            <label>New To Movie$-Hub</label> <a routerLink="/signup" class="color">Sign Up </a>
+            <label>New To Movie$-Hub</label> <a routerLink="/signup" style="color: rgb(240, 50, 16);"
+              class="color ml-1">Sign Up </a>
           </div>
         </div>
         <div class="col-8">
           <div class="pl-4">
             <h4> Hello Welcome to</h4>
             <h1 class="display-1 bolder"> Movie$-Hub </h1>
-            <h6>
+            <!-- <h6>
               <br> <i> Movie Hub allows you to manage your Movie Collection. You can search for Movies and TV-Shows
                 online and add them to your collection.
                 You can view your collection and watch trailers, images and different facts for every Movie or
                 TV-Show.</i>
-            </h6>
+            </h6> -->
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<button class="btn btn-danger" routerLink='/movielist'>View Angular Table</button>
 <app-footer></app-footer>

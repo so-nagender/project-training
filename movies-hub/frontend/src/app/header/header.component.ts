@@ -29,7 +29,6 @@ export class HeaderComponent implements OnInit {
     });
   }
   onSelect(obj) {
-    
     this.myservice.setData(obj.id);
     this.router.navigate(['list'])
   }

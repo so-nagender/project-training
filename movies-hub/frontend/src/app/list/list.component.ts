@@ -20,24 +20,37 @@ export class ListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.activatedRoute.data.subscribe(data => {
-      this.movies = data.movies;
-    });
+   
+    this.getCatById();
+    this.getMovieBySubject();
+    this.getMovies();
+  }
+  getMovies() {
     this.myservice.getMovies().subscribe(res => {
+      console.log('movies direct')
+      console.log(this.activatedRoute)
       this.movies = res;
     });
+  }
+  getCatById() {
     this.myservice.getData().subscribe(id => {
       this.catid = id;
       this.myservice.getMoviesByCatg(this.catid).subscribe(res => {
+        console.log(res)
+        console.log('cat id')
+        console.log(this.activatedRoute)
         this.movies = res;
       });
     });
+  }
+  getMovieBySubject() {
     this.myservice.getDataT().subscribe(response => {
       this.myservice.getMovies().subscribe(res => {
+        console.log('movie subject')
+        console.log(this.activatedRoute)
         this.movies = res;
       })
     })
-
   }
   delete(id) {
     this.myservice.deleteMovie(id).subscribe();
@@ -45,7 +58,7 @@ export class ListComponent implements OnInit {
       this.movies = res;
     });
   }
-
+ // Get Elements by its category
   getCategory() {
     this.myservice.getCat().subscribe((res) => {
       this.catogry = res;
