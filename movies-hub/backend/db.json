@@ -163,15 +163,16 @@
     },
     {
       "movieName": "The Wolf of Wall Street",
-      "id": 4,
       "year": "2013",
+      "catId": "11",
       "cast": [
         "Leonardo DiCaprio",
         "Margot Robbie",
         "Matthew McConaughey"
       ],
-      "catId": 4,
-      "synopsis": "Jordan Belfort is a Long Island penny stockbroker who served 22 months in prison for defrauding investors in a massive 1990s securities scam that involved widespread corruption on Wall Street and in the corporate banking world, including shoe designer Steve Madden."
+      "synopsis": "Jordan Belfort is a Long Island penny stockbroker who served 22 months in prison for defrauding investors in a massive 1990s securities scam that involved widespread corruption on Wall Street and in the corporate banking world, including shoe designer Steve Madden.",
+      "updatedAt": 1582693910217,
+      "id": 4
     },
     {
       "movieName": "The Dark Knight",
@@ -235,26 +236,28 @@
     },
     {
       "movieName": "Kaho Na Pyar Hai",
-      "id": 10,
       "year": "1992",
+      "catId": "9",
       "cast": [
         "Hrithik Roshan",
         "Amisha Patel"
       ],
-      "catId": 10,
-      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
+      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. ",
+      "updatedAt": 1582693846594,
+      "id": 10
     },
     {
       "movieName": "Mohabbetein",
-      "id": 11,
       "year": "1989",
+      "catId": "9",
       "cast": [
         "Shahrukh Khan",
         "Amitabh Bachhan",
         "Aishwarya"
       ],
-      "catId": 11,
-      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
+      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. ",
+      "updatedAt": 1582699441726,
+      "id": 11
     },
     {
       "movieName": "Dhamaal",
@@ -282,7 +285,9 @@
       "movieName": "Yaadein",
       "id": 14,
       "year": "1986",
-      "cast": "Amitabh Bachhan",
+      "cast": [
+        "Amitabh Bachhan"
+      ],
       "catId": 4,
       "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
     },
@@ -290,7 +295,9 @@
       "movieName": "Chalte-Chalte",
       "id": 15,
       "year": "1982",
-      "cast": "Rishi Kapoor",
+      "cast": [
+        "Rishi Kapoor"
+      ],
       "catId": 6,
       "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
     },
@@ -338,62 +345,51 @@
     },
     {
       "movieName": "Dhol",
-      "year": "2003",   
+      "year": "2003",
+      "catId": "11",
       "cast": [
         "Kunal Khemu",
         "tushar",
         "rajpal yadav"
       ],
-      "catId": 10,
-      "synopsis": "Based on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. "
+      "synopsis": "Based mujhe kuch nhi huwa  on a true story. After graduating from Emory University, Christopher McCandless abandoned his possessions, gave his entire savings account to charity, and hitchhiked to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters who shape his life. ",
+      "updatedAt": 1582631514222,
+      "id": 20
     },
     {
-      "movieName": "Koi Mil Gaya",
-      "year": "2006",
-      "catId": "8",
+      "movieName": "Tere Naam",
+      "year": "2003",
+      "catId": "11",
       "cast": [
-        "Hrithik Roshan and Preeti Jinta"
+        "Salman Khan",
+        "Bhumika Chawla"
       ],
-      "synopsis": "Movie is about alliens.",
-      "createdAt": 1582701921999,
-      "updatedAt": 1582701921999,
+      "synopsis": "Frozen II, also known as Frozen 2, is a 2019 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios.At the 92nd Academy Awards, the film received a nomination for Best Original Song for 'Into the Unknown'.",
+      "updatedAt": 1582710135215,
       "id": 21
     },
     {
-      "movieName": "",
-      "year": "",
-      "catId": "",
+      "movieName": "Main Tera Hero",
+      "year": "2014",
+      "catId": "11",
       "cast": [
-        ""
+        "Varun Dhawan, illena Dcruz, Nargis Fakri "
       ],
-      "synopsis": "",
-      "createdAt": 1582787000741,
-      "updatedAt": 1582787000741,
+      "synopsis": "Main Tera Hero ( transl. I am your hero) is a 2014 Indian Hindi-language romantic action comedy film, directed by David Dhawan and produced by Shobha Kapoor and Ekta Kapoor for Balaji Motion Pictures. The film stars Nargis Fakhri, Varun Dhawan and Ileana D'Cruz in the lead roles.",
+      "updatedAt": 1582787465217,
       "id": 22
     },
     {
-      "movieName": "",
-      "year": "",
-      "catId": "",
+      "movieName": "My Name is Khan",
+      "year": "2011",
+      "catId": "9",
       "cast": [
-        ""
+        "Shahrukh Khan, Kajol"
       ],
-      "synopsis": "",
-      "createdAt": 1582721452806,
-      "updatedAt": 1582721452806,
+      "synopsis": "y Name Is Khan is a 2010 Indian Hindi-language drama film directed by Karan Johar, produced by Hiroo Johar and Gauri Khan, and starring Shah Rukh Khan and Kajol in lead roles",
+      "createdAt": 1582787428945,
+      "updatedAt": 1582787428945,
       "id": 23
-    },
-    {
-      "movieName": "",
-      "year": "",
-      "catId": "",
-      "cast": [
-        ""
-      ],
-      "synopsis": "",
-      "createdAt": 1582721464719,
-      "updatedAt": 1582721464719,
-      "id": 24
     }
   ],
   "cats": [

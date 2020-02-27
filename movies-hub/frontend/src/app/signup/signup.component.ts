@@ -14,6 +14,8 @@ export class SignupComponent implements OnInit {
   email: any;
   password: any;
   submitted: boolean = false;
+  error: string;
+  loading: boolean;
   constructor(private router: Router, private formBuilder: FormBuilder, private myservice: ApiserviceService, private activatedRoute: ActivatedRoute) { 
     this.checkoutForm = this.formBuilder.group({
       Name: new FormControl ('', Validators.required),
@@ -42,7 +44,12 @@ onSubmit() {
     this.myservice.signupData(obj).subscribe(res =>{
       localStorage.setItem("accessToken", res.accessToken);
       this.router.navigate(['/home']);
-  });
+  },
+  error => {
+    this.error = error;
+    this.loading = false;
+  }
+  );
   }
 }
 }
