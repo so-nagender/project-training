@@ -54,7 +54,7 @@ export class EditmovieComponent implements OnInit {
       const category= this.checkoutForm.controls.cat.value;
       const cast= this.checkoutForm.controls.cast.value;
       const synopsys = this.checkoutForm.controls.syn.value;
-      const obj= {movieName: moviename, year: year, catId: category, ["cast"]: [cast], synopsis: synopsys};
+      const obj= {movieName: moviename, year: year, catId: category, cast: [cast], synopsis: synopsys};
       this.myservice.update(this.id, obj).subscribe();
       this.route.navigate(['/list']);
 
