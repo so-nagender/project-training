@@ -29,12 +29,8 @@
   </label>
   <label>
     <div class="form-group" >
-    <input type="password" name="password" id="e1" formControlName="password" required class="input"
-      [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+    <input type="password" required class="input" formControlName= "password" [ngClass]= "{'is-invalid': checkoutForm.get('password').touched && checkoutForm.get('password').invalid}">
     <p class="label-txt">Password</p>
-    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-      <div *ngIf="f.password.errors.required">required</div>
-    </div>
     <div class="line-box">
       <div class="line"></div>
     </div>
@@ -42,19 +38,19 @@
       <h5 style="font-size: small;"><strong>Password is a required field</strong></h5>
     </div>
   </div>
-
   </label>
   <label>
     <div class="form-group" >
-    <input type="password" name="retypepassword" id="e2" formControlName="retypepassword" required class="input"
-      [ngClass]="{ 'is-invalid': submitted && f.retypepassword.errors }" />
-    <p class="label-txt">Retype Password</p>
-      <div *ngIf="submitted && f.retypepassword.errors" class="invalid-feedback">
-        <div *ngIf="f.retypepassword.errors.required">Confirm Email is required</div>
-        <div *ngIf="f.retypepassword.errors.MustMatch">Email must match</div>
-      </div>
+    <input type="password" required class="input" appMatch= "password" formControlName= "retypepassword" [ngClass]= "{'is-invalid': checkoutForm.get('retypepassword').touched && checkoutForm.get('retypepassword').invalid}">
+    <p class="label-txt">Retype password</p>
     <div class="line-box">
       <div class="line"></div>
+    </div>
+    <div class="invalid-feedback">
+      <h5 *ngIf= "checkoutForm.get('retypepassword').errors.required" style="font-size: small;"><strong>Retype password is a required field</strong></h5>
+    </div>
+    <div *ngIf= "checkoutForm.get('retypepassword').touched" class= "invalid-feedback">
+      <h4 style="font-size: small;" *ngIf= "checkoutForm.get('retypepassword').errors.notEqual && !checkoutForm.get('retypepassword').errors.required"><strong>Passwords do not match</strong></h4>
     </div>
   </div>
   </label>

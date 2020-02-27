@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
 import { ApiserviceService } from '../apiservice.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MustMatch } from '../match';
+
 
 @Component({
   selector: 'app-signup',
@@ -20,11 +20,7 @@ export class SignupComponent implements OnInit {
       email: new FormControl ('', [Validators.required, Validators.email]),
       password: new FormControl ('', Validators.required),
       retypepassword: new FormControl ('', Validators.required)
-  },
-  {
-    validator: MustMatch('password', 'retypepassword') // Custmize Validator
-  }
-  );
+  });
 }
 
   ngOnInit() {
