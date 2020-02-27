@@ -1,14 +1,14 @@
 *{
-    background-color: #EBEBEB !important;
-}
 
+}
+img{
+    width: 40%;
+}
 
 .padding_left{
 padding-left: 183px;
 }
-img{
-    width: 50%;
-}
+
 .flex + .flex{
     padding-left: 150px;
     padding-right: 150x;
@@ -18,3 +18,9 @@ img{
     box-shadow: 10px 10px 5px #aaaaaa;
 }
 
+.bigimg{
+    position: relative;
+    width: 50px;
+    /* right: 1px;
+    top: 1px; */
+}
