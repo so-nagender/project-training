@@ -16,8 +16,8 @@ import { ViewCatComponent } from './view-cat/view-cat.component';
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'categories', component: CategoriesComponent },
-  { path: 'Categoriefffff/book/:id', component: ContactListComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'contactlist', component: ContactListComponent },
+  { path: 'login', component: LoginComponent , data : {animation :'isRight'} },
   { path: 'signup', component: SignupComponent},
   { path: 'dashboard', component: DashboardComponent},
   { path: 'book/view/:id', component: ViewComponent},
