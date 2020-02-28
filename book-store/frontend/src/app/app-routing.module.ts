@@ -10,11 +10,13 @@ import { ViewComponent } from './view/view.component';
 import { EditComponent } from './edit/edit.component';
 import { AddbookComponent } from './addbook/addbook.component';
 import { ViewbookComponent } from './viewbook/viewbook.component';
+import { EditCatComponent } from './edit-cat/edit-cat.component';
+import { ViewCatComponent } from './view-cat/view-cat.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'categories', component: CategoriesComponent },
-  { path: 'contactlist', component: ContactListComponent },
+  { path: 'Categoriefffff/book/:id', component: ContactListComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent},
   { path: 'dashboard', component: DashboardComponent},
@@ -22,6 +24,8 @@ const routes: Routes = [
   { path: 'book/edit/:id', component: EditComponent},
   { path: 'addbook', component: AddbookComponent},
   { path: 'viewbook', component: ViewbookComponent},
+  { path: 'Categorie/edit/:id', component: EditCatComponent},
+  { path: 'Categorie/book/:id', component: ViewCatComponent },
   
 ];
 

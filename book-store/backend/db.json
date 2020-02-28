@@ -1,14 +1,16 @@
 {
   "catogries": [
     {
-      "id": 1,
       "title": "horror",
-      "description": "Horror literature has roots in religion, folklore, and history; "
+      "description": "Horror literature has roots in religion, folklore, and history; ",
+      "updatedAt": 1582802204663,
+      "id": 1
     },
     {
-      "title": "adventure",
-      "id": 2,
-      "description": "Adventure (pronounced ad-ven-cher) was originally a Middle English word derived from the Old French aventure "
+      "title": "Adventure ",
+      "description": "Adventure (pronounced ad-ven-cher) was originally a Middle English word derived from the Old French aventure ",
+      "updatedAt": 1582802154119,
+      "id": 2
     },
     {
       "title": "fantasy",
@@ -22,7 +24,7 @@
       "AuthorName": "dasf",
       "catogrieId": "1",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
-      "updatedAt": 1582787229775,
+      "updatedAt": 1582869862928,
       "id": 5
     },
     {
@@ -126,24 +128,6 @@
       "createdAt": 1582709711646,
       "updatedAt": 1582709711646,
       "id": 28
-    },
-    {
-      "BookName": "Monika",
-      "AuthorName": "Gupta",
-      "catogrieId": "1",
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
-      "createdAt": 1582717123760,
-      "updatedAt": 1582717123760,
-      "id": 29
-    },
-    {
-      "BookName": "Intercepts",
-      "AuthorName": "T. J. Payne",
-      "catogrieId": "1",
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
-      "createdAt": 1582781304559,
-      "updatedAt": 1582781304559,
-      "id": 30
     }
   ],
   "profile": [

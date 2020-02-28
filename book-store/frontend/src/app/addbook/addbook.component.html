@@ -35,8 +35,9 @@
         <br>
         Description:
         <br>
-        <input id="des" class="form-control" type="text" formControlName="des"
+        <textarea id="des" class="form-control" type="text" formControlName="des"
             [ngClass]="{ 'is-invalid': submitted && u.des.errors }">
+        </textarea>
         <div *ngIf="submitted && u.des.errors" class="invalid-feedback">
             <div *ngIf="u.des.errors.required">Description is required</div>
         </div>

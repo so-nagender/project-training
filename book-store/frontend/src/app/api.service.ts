@@ -56,6 +56,10 @@ export class ApiService {
     const url1 = `/api/catogries`;
     return this.http.get<any>(url1); 
   }
+  getCatDetailEdit(x): Observable<any>{
+    const url1 = `/api/catogries/${x}`;
+    return this.http.get<any>(url1); 
+  }
 
 
   getCat(): Observable<any>{
@@ -98,6 +102,11 @@ export class ApiService {
   deleteCatBook(x): Observable<any>{
     const url = `/api/books?catogrieId=${x}`;
     return this.http.delete<any>( url);
+  }
+
+  getCatBook(x): Observable<any>{
+    const url = `/api/books?catogrieId=${x}`;
+    return this.http.get<any>( url);
   }
     
   postbookcategories(form){

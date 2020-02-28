@@ -24,8 +24,9 @@
             
               <select formControlName="catname" class="form-control"
               [ngClass]="{ 'is-invalid': submitted && u.catname.errors }" >
-                <option value="{{apiBook1.catogrie.id}}" selected>{{apiBook1.catogrie.title}}</option>
+               
                 <option value="{{i.id}}" *ngFor="let i of apiBook2">{{i.title}}</option>
+                <option value="{{apiBook1.catogrie.id}}" selected>{{apiBook1.catogrie.title}}</option>
               </select>
               <div *ngIf="submitted && u.catname.errors" class="invalid-feedback">
                 <div *ngIf="u.catname.errors.required">Catogery is required</div>
@@ -35,14 +36,15 @@
         <br>
         Description:
         <br>
-        <input id="des" class="form-control" type="text" [(ngModel)]="apiBook.description" formControlName="des"
+        <textarea id="des" class="form-control" type="text" [(ngModel)]="apiBook.description" formControlName="des"
         [ngClass]="{ 'is-invalid': submitted && u.des.errors }">
+        </textarea>
         <div *ngIf="submitted && u.des.errors" class="invalid-feedback">
           <div *ngIf="u.des.errors.required">Description is required</div>
       </div>
         <div style="margin-top: 10px;">
             <button type="submit" [disabled]="!ngForm.valid" class="btn btn-primary" (click)="onUpdate()"> Update </button>
-            <button type="button" class="btn btn-primary" style="margin-left: 10px;" routerLink="/viewbook">Cancle</button>
+            <button type="button" class="btn btn-primary" style="margin-left: 10px;" [routerLink]="['/book/view', apiBook.id]">Cancle</button>
         </div>
     </form>
 </div> 
