@@ -60,3 +60,36 @@ h3.logo_align{
 #logo img{
     width: 50%;
 }
+
+.blinking{
+    color: black;
+  -webkit-text-fill-color: white; 
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  font-size: 1.5em;
+  animation:blinkingText 2s infinite;
+  animation-timing-function: linear;
+    }
+@keyframes blinkingText{
+    0%{   -webkit-text-fill-color: black;}
+    10%{   -webkit-text-fill-color: black;}
+    
+    70%{   -webkit-text-fill-color: white;}
+    
+    100%{   -webkit-text-fill-color: white;   }
+}
+
+
+.headline2 .blinking:nth-child(2) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+  }
+  .headline2 .blinking:nth-child(3) {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+  .blinking:nth-child(4) {
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+  }
+

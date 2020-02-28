@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'categories', component: CategoriesComponent },
   { path: 'contactlist', component: ContactListComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent , data : {animation :'isRight'} },
   { path: 'signup', component: SignupComponent},
   { path: 'dashboard', component: DashboardComponent},
   { path: 'book/view/:id', component: ViewComponent},
