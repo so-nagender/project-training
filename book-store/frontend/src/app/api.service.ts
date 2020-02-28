@@ -18,12 +18,15 @@ export class ApiService {
   private message = new BehaviorSubject<any>(false)
   currentMessage = this.message
   cutomerror= new BehaviorSubject<string>('default');
-
+  userdata = new BehaviorSubject<any>('default')
 
 
 
   constructor(private http: HttpClient , private routes: Router) { }
- 
+  insertuserdata(value)
+  {
+    return this.userdata.next(value)
+  }
   changemessage(message:boolean){
     this.message.next(message)
   }
@@ -147,6 +150,16 @@ export class ApiService {
    else
    return throwError(error)
   }
+
+  // getaddedBooks(id){
+  //  const getid$ =this.http.get(`/api/books`)
+  //   getid$.subscribe(data=>{console.log("------->>>>")
+    
+  
+  // })
+    
+  //   this.http.get(`/api/catogries/books?id=${id}`)
+  // }
   
 }
    
