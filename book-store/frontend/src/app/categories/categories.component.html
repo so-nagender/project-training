@@ -36,15 +36,13 @@
                           </div>
                       </div>
                   </div>
-                  <div>
-                    <div class="close">
-                      <button (click)="close(categoryForm)" >close</button>
-                    </div>
-                  
-                    <div class="submit"> 
-                      <button type="submit" [disabled]="categoryForm.invalid">submit</button>
-                    </div>
-                  </div>
+              </div>
+              <div class="close">
+                <button (click)="close(categoryForm)">close</button>
+              </div>
+            
+              <div class="submit"> 
+                <button type="submit" [disabled]="categoryForm.invalid">submit</button>
               </div>
           </form>
       </div>
