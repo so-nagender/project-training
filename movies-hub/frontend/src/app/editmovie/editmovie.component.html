@@ -44,6 +44,23 @@
         <option value="{{i.id}}" *ngFor="let i of catogry">{{i.genre}}</option>
       </select>
       <!-- Dropdown End -->
+
+       <!-- Rating Start -->
+      <label>
+        <div class="form-group">
+          <input type="text" required class="input" formControlName="rating" [(ngModel)]="dataa.rating"
+            [ngClass]="{'is-invalid': checkoutForm.get('rating').touched && checkoutForm.get('rating').invalid}">
+          <p class="label-txt">Rating</p>
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+          <div class="invalid-feedback">
+          Invalid (1-5 only)
+          </div>
+        </div>
+      </label>
+      <!-- Rating End -->
+
       <label>
         <div class="form-group">
           <input type="text" required class="input" formControlName="cast" [(ngModel)]="dataa.cast"
