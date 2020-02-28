@@ -1,10 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  Resolve,
-  ActivatedRouteSnapshot,
-  RouterStateSnapshot,
-  Router
-} from '@angular/router';
+import {  Resolve,ActivatedRouteSnapshot, RouterStateSnapshot,Router} from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { ApiserviceService } from './apiservice.service';
 
@@ -12,11 +7,7 @@ import { ApiserviceService } from './apiservice.service';
   providedIn: 'root'
 })
 export class DataResolverService implements Resolve<any> {
-  constructor(
-    private serve: ApiserviceService,
-    private activatedRoute: ActivatedRoute,
-    private router: Router
-  ) { }
+  constructor(private serve: ApiserviceService,private activatedRoute: ActivatedRoute,private router: Router) { }
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     if (localStorage.getItem("accessToken")) { 
       return this.serve.getMovies();}

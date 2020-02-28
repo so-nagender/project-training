@@ -359,42 +359,6 @@
       "createdAt": 1582701921999,
       "updatedAt": 1582701921999,
       "id": 21
-    },
-    {
-      "movieName": "",
-      "year": "",
-      "catId": "",
-      "cast": [
-        ""
-      ],
-      "synopsis": "",
-      "createdAt": 1582721443903,
-      "updatedAt": 1582721443903,
-      "id": 22
-    },
-    {
-      "movieName": "",
-      "year": "",
-      "catId": "",
-      "cast": [
-        ""
-      ],
-      "synopsis": "",
-      "createdAt": 1582721452806,
-      "updatedAt": 1582721452806,
-      "id": 23
-    },
-    {
-      "movieName": "",
-      "year": "",
-      "catId": "",
-      "cast": [
-        ""
-      ],
-      "synopsis": "",
-      "createdAt": 1582721464719,
-      "updatedAt": 1582721464719,
-      "id": 24
     }
   ],
   "cats": [
