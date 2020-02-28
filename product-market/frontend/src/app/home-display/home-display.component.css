@@ -1,0 +1,217 @@
+.container {
+    margin: 50px auto;
+    width: 70%;
+  }
+  
+  header h1 {
+    color: #bdabbd;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: "Indie Flower", cursive;
+    font-weight: 500;
+  }
+  
+  .accordion {
+    background-color: #222;
+    width: 116%;
+    min-width: 800px;
+    /* display: block; */
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    overflow: hidden;
+    height: 400px;
+    font-size: 0;
+  }
+  
+  .tab {
+    display: inline-block;
+    background-color: #444;
+    border-right: 1px solid #333;
+    width: 80px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    transition: all 0.6s ease-in-out 0.1s;
+  }
+  
+  .tab:hover {
+    width: 450px;
+    box-shadow: 3px 3px 20px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .tab:hover .social a::before {
+    margin-left: -100px;
+  }
+  
+  .tab:hover .social a::after {
+    margin-left: -5px;
+  }
+  
+  .tab .content {
+    background: #fff;
+    width: 360px;
+    height: 400px;
+    margin-left: 80px;
+    position: relative;
+    padding: 40px 0 0 15px;
+  }
+  
+  .tab .content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: Kalam;
+  }
+  
+  .youtube-title {
+    color: #ff0000;
+  }
+  
+  .twitter-title {
+    color: #6dc5dd;
+  }
+  
+  .facebook-title {
+    color: #3b5998;
+  }
+  
+  .linkedin-title {
+    color: #00a9cd;
+  }
+  
+  .instagram-title {
+    color: #6dc993;
+  }
+  
+  .tumblr-title {
+    color: #283e56;
+  }
+  
+  .dribble-title {
+    color: #e03a70;
+  }
+  
+  .tab .content p {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    padding-right: 30px;
+    font-family: Kalam;
+  }
+  
+  .social a:before,
+  .social a:after {
+    transition: all 0.4s ease-in-out;
+    width: 80px;
+    height: 400px;
+    position: absolute;
+    text-indent: 0;
+    padding-top: 90px;
+    padding-left: 25px;
+    display: block;
+    font: normal 30px "Genericons";
+    color: #fff;
+  }
+  
+  .social a:after {
+    font-size: 48px;
+    padding-left: 20px;
+    padding-top: 80px;
+    margin-left: 85px;
+  }
+  
+  .youtube a::before,
+  .youtube a::after {
+    content: "\f213";
+  }
+  
+  .youtube a::after {
+    background-color: #ff0000;
+  }
+  
+  .twitter a::before,
+  .twitter a::after {
+    content: "\f202";
+  }
+  
+  .twitter a::after {
+    background-color: #6dc5dd;
+  }
+  
+  .facebook a::before,
+  .facebook a::after {
+    content: "\f204";
+  }
+  
+  .facebook a::after {
+    background-color: #3b5998;
+  }
+  
+  .linkedin a::before,
+  .linkedin a::after {
+    content: "\f208";
+  }
+  .linkedin a::after {
+    background-color: #00a9cd;
+  }
+  
+  .instagram a::before,
+  .instagram a::after {
+    content: "\f215";
+  }
+  .instagram a::after {
+    background-color: #6dc993;
+  }
+  
+  .tumblr a::before,
+  .tumblr a::after {
+    content: "\f214";
+  }
+  .tumblr a::after {
+    background-color: #283e56;
+  }
+  
+  .dribble a::before,
+  .dribble a::after {
+    content: "\f201";
+  }
+  .dribble a::after {
+    background-color: #e03a70;
+  }
+  
+  @media (max-width: 950px) {
+    .container {
+      width: 70%;
+    }
+  
+    .tab {
+      display: block;
+      width: 100%;
+      border-bottom: 3px #333 solid;
+    }
+  
+    .accordion {
+      display: block;
+      min-width: 450px;
+      height: auto;
+    }
+  
+    .tab .content {
+      width: 85%;
+    }
+  
+    .tab:hover {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 680px) {
+    .container {
+      width: 95%;
+    }
+  
+    .accordion {
+      width: 100%;
+      min-width: 350px;
+    }
+  }

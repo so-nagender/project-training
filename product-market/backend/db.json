@@ -1,44 +1,28 @@
 {
   "product-category": [
     {
-      "name": "fashion",
-      "description": "Main consumer electronics products include radio receivers, television sets, MP3 players",
-      "createdAt": 1582205272823,
-      "updatedAt": 1582205272823,
-      "id": 3
-    },
-    {
-      "name": "Groceries",
-      "description": "Main consumer electronics products include radio receivers, television sets, MP3 players.",
-      "createdAt": 1582525475435,
-      "updatedAt": 1582525475435,
-      "id": 5
-    },
-    {
-      "name": "Accessories",
-      "description": "Main consumer electronics",
-      "createdAt": 1582525516601,
-      "updatedAt": 1582525516601,
-      "id": 6
+      "name": "Fashion",
+      "description": "crop top",
+      "createdAt": 1582703337320,
+      "updatedAt": 1582703337320,
+      "id": 1
     },
     {
       "name": "electronics",
-      "description": "heater",
-      "createdAt": 1582613120109,
-      "updatedAt": 1582613120109,
-      "id": 7
+      "description": "laptop",
+      "createdAt": 1582703390088,
+      "updatedAt": 1582703390088,
+      "id": 2
+    },
+    {
+      "name": "Sandals",
+      "description": "flat shoe",
+      "createdAt": 1582703428601,
+      "updatedAt": 1582703428601,
+      "id": 3
     }
   ],
   "product-items": [
-    {
-      "name": "vegetables",
-      "categoryId": "5",
-      "rating": "3",
-      "description": "bdjsbfjangkfdg",
-      "createdAt": 1582525578632,
-      "updatedAt": 1582525578632,
-      "id": 7
-    },
     {
       "name": "heater",
       "categoryId": "4",
@@ -58,33 +42,73 @@
       "id": 9
     },
     {
-      "name": "Laptop",
-      "categoryId": "7",
-      "rating": "3",
-      "description": "datad",
-      "cost": 30000,
-      "updatedAt": 1582702687985,
+      "name": "laptop",
+      "categoryId": "2",
+      "rating": "5",
+      "description": "ghfsadffggfgjgdggjcgj gvjg jgj",
+      "cost": 500,
+      "createdAt": 1582715176962,
+      "updatedAt": 1582715176962,
       "id": 10
+    },
+    {
+      "name": "gas",
+      "categoryId": "2",
+      "rating": "1",
+      "description": "bbmbvmvhhfhgkhghkghdhghdhsggdggdfg",
+      "cost": 500,
+      "createdAt": 1582780777955,
+      "updatedAt": 1582780777956,
+      "id": 11
+    },
+    {
+      "name": "",
+      "categoryId": "3",
+      "rating": "",
+      "description": "",
+      "cost": "",
+      "createdAt": 1582801472327,
+      "updatedAt": 1582801472327,
+      "id": 13
+    },
+    {
+      "name": "",
+      "categoryId": "3",
+      "rating": "",
+      "description": "nmn",
+      "cost": "",
+      "createdAt": 1582801673814,
+      "updatedAt": 1582801673814,
+      "id": 14
     }
   ],
   "product-cart": [
     {
-      "name": "Laptops",
-      "rating": 4,
-      "cost": 50000,
-      "description": "Flipkart has wide range of branded laptops browse and buy online shopping store. ... Acer Predator Helios 300 Core i7 8th Gen - (8 GB + 16 GB Optane/2 TB HDD/Windows 10 Home/6 GB Graphics.",
-      "createdAt": 1582545196510,
-      "updatedAt": 1582545196510,
+      "name": "laptop",
+      "rating": 5,
+      "cost": 500,
+      "description": "ghfsadffggfgjgdggjcgj gvjg jgj",
+      "createdAt": 1582802769430,
+      "updatedAt": 1582802769430,
       "id": 3
     },
     {
       "name": "laptop",
-      "rating": 3,
-      "cost": 200,
-      "description": "ccvcvc",
-      "createdAt": 1582702177279,
-      "updatedAt": 1582702177279,
-      "id": 5
+      "rating": 5,
+      "cost": 500,
+      "description": "ghfsadffggfgjgdggjcgj gvjg jgj",
+      "createdAt": 1582802859198,
+      "updatedAt": 1582802859198,
+      "id": 6
+    },
+    {
+      "name": "laptop",
+      "rating": 5,
+      "cost": 500,
+      "description": "ghfsadffggfgjgdggjcgj gvjg jgj",
+      "createdAt": 1582803127294,
+      "updatedAt": 1582803127294,
+      "id": 7
     }
   ],
   "posts": [

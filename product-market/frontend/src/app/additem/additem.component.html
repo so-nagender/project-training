@@ -19,10 +19,11 @@
         formControlName="item"
         class="form-control"
         placeholder="Name of  Item"
-        [ngClass]="{ 'is-invalid': f.item.errors }"
+        [ngClass]="{ 'is-invalid':f.item.touched && f.item.errors }"
       />
-      <div *ngIf="f.item.errors" class="invalid-feedback">
-        <div *ngIf="f.item.errors.required">*Caterogy Name is required</div>
+      <div *ngIf="f.item.touched && f.item.errors" class="invalid-feedback">
+        <div *ngIf="f.item.errors.required">*Item Name is required</div>
+        <div *ngIf="f.item.errors.pattern">*Alphabet required</div>
       </div>
     </div>
     <div class="form-group">
@@ -34,10 +35,11 @@
         formControlName="cost"
         class="form-control"
         placeholder="Cost of  Item"
-        [ngClass]="{ 'is-invalid': f.cost.errors }"
+        [ngClass]="{ 'is-invalid':f.cost.touched && f.cost.errors }"
       />
-      <div *ngIf="f.cost.errors" class="invalid-feedback">
-        <div *ngIf="f.cost.errors.required">*Caterogy Name is required</div>
+      <div *ngIf="f.cost.touched && f.cost.errors" class="invalid-feedback">
+        <div *ngIf="f.cost.errors.required">*cost is required</div>
+       
       </div>
     </div>
     <div class="form-group">
@@ -46,7 +48,7 @@
         id="inputState"
         class="form-control"
         formControlName="rating"
-        [ngClass]="{ 'is-invalid': f.rating.errors }"
+        [ngClass]="{ 'is-invalid':f.rating.touched && f.rating.errors }"
       >
         <option>1</option>
         <option>2</option>
@@ -54,7 +56,7 @@
         <option>4</option>
         <option>5</option>
       </select>
-      <div *ngIf="f.rating.errors" class="invalid-feedback">
+      <div *ngIf="f.rating.touched && f.rating.errors" class="invalid-feedback">
         <div *ngIf="f.rating.errors.required">*Rating is required</div>
       </div>
     </div>
@@ -68,9 +70,9 @@
         rows="3"
         class="form-control"
         style="padding:10px;"
-        [ngClass]="{ 'is-invalid': f.Description.errors }"
+        [ngClass]="{ 'is-invalid':f.Description.touched && f.Description.errors }"
       ></textarea>
-      <div *ngIf="f.Description.errors" class="invalid-feedback">
+      <div *ngIf="f.Description.touched && f.Description.errors" class="invalid-feedback">
         <div *ngIf="f.Description.errors.required">*Description of item</div>
       </div>
     </div>

@@ -29,6 +29,7 @@ import { ResolverItemsService} from './resolver-items.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeDisplayComponent } from './home-display/home-display.component';
 import { ListEditDirective } from './list-edit.directive';
+import { MainpageComponent } from './mainpage/mainpage.component';
 
 const routes: Routes = [
   {
@@ -113,7 +114,8 @@ const routes: Routes = [
     FilterdataPipe,
     ItemviewComponent,
     HomeDisplayComponent,
-    ListEditDirective
+    ListEditDirective,
+    MainpageComponent
 
 
   ],
