@@ -1,5 +1,8 @@
 .container-fluid{
- }
+  padding-bottom: 250px;
+}
+
+
 
 div.container.midView{
     margin-top: 15%;
@@ -32,3 +35,4 @@ table {
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+
