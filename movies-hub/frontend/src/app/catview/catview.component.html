@@ -26,7 +26,7 @@
             <td>{{ movie.movieName }}</td>
             <td>{{ movie.year }}</td>
             <td>{{ movie.cast }}</td>
-            <td>{{ catg || movie.cat.genre}}</td>
+            <td>{{ catg }}</td>
             <!-- <td>{{ catg }}</td> -->
             <!-- <td>{{ movie.rating }}</td> -->
         <a [routerLink] = "['/movie', movie.id]" routerLinkActive="active" >

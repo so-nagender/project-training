@@ -27,6 +27,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import {MatButtonModule} from '@angular/material/button';
 import { FilterdataPipe } from './filterdata.pipe';
+import { CatviewComponent } from './catview/catview.component';
 
 const appRoutes: Routes = [
   {path:'movielist',component:MovieListComponent},   
@@ -40,7 +41,7 @@ const appRoutes: Routes = [
   { path: '', component: DefaultComponent },
   { path: 'signup', component: SignupComponent },
   {
-    path: 'details/:id',
+    path: 'movie/:id',
     component: DetailsComponent,
     resolve: {
       hero: DataResolverService
@@ -74,6 +75,13 @@ const appRoutes: Routes = [
       hero: DataResolverService
     }
    },
+   { 
+    path: 'movieByCatg/:id', 
+    component: CatviewComponent,
+    resolve: {
+      hero: DataResolverService
+    }
+   },
 
 ];
 @NgModule({
@@ -93,6 +101,7 @@ const appRoutes: Routes = [
     FilterdataPipe,
     GenresComponent,
     MovieListComponent,
+    CatviewComponent,
 
   ],
   imports: [

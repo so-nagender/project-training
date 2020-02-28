@@ -1,5 +1,5 @@
 .body-img{
-    background:  linear-gradient(to right ,hsla(0, 12%, 5%, 0.493),  rgba(0, 0, 0, 0.8), transparent), url("../../assets/img/bg2.jpg") no-repeat center; 
+    background:  linear-gradient(to right ,hsla(0, 12%, 5%, 0.493),  rgba(0, 0, 0, 0.8), transparent), url("../../assets/img/background-image.jpg") no-repeat center; 
 }
 .navbar-brand {
     display: inline-block;

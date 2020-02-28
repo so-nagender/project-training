@@ -358,12 +358,14 @@
     {
       "movieName": "My Name is Khan",
       "year": "2011",
-      "catId": "3",
+      "catId": "4",
       "cast": [
-        "Shahrukh Khan, Kajol,dfghf,fgdf"
+        [
+          "Shahrukh Khan, Kajol,dgdfg"
+        ]
       ],
       "synopsis": "y Name Is Khan is a 2010 Indian Hindi-language drama film directed by Karan Johar, produced by Hiroo Johar and Gauri Khan, and starring Shah Rukh Khan and Kajol in lead roles",
-      "updatedAt": 1582808629382,
+      "updatedAt": 1582866852995,
       "id": 23
     }
   ],
