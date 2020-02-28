@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container view">
   <div class="container padding_top">
       <div class="row">
         <div class="col-sm-4"><b>Category Name</b></div><div class="col-sm-4"><b>Description</b></div><div class="col-sm-4"><b>Action</b></div>
@@ -36,15 +36,13 @@
                           </div>
                       </div>
                   </div>
-                  <div>
-                    <div class="close">
-                      <button (click)="close(categoryForm)" >close</button>
-                    </div>
-                  
-                    <div class="submit"> 
-                      <button type="submit" [disabled]="categoryForm.invalid">submit</button>
-                    </div>
-                  </div>
+              </div>
+              <div class="close">
+                <button (click)="close(categoryForm)">close</button>
+              </div>
+            
+              <div class="submit"> 
+                <button type="submit" [disabled]="categoryForm.invalid">submit</button>
               </div>
           </form>
       </div>

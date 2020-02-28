@@ -42,7 +42,7 @@
                             <div *ngIf="u.des.errors.required">Description is required</div>
                         </div>
                         <div style="margin-top: 10px;">
-                            <button type="submit" [disabled]="!ngForm.valid" class="btn btn-primary " [routerLink]="['/addbook']" (click)="onSubmit()" > Add Book</button>
+                            <button type="submit" [disabled]="!ngForm.valid" class="btn btn-primary" (click)="onSubmit()" > Add Book</button>
                             <button type="button" class="btn btn-primary" style="margin-left: 10px;" routerLink="/viewbook">Cancle</button>
                         </div>
                     </form>

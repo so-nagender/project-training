@@ -39,8 +39,10 @@ export class AddbookComponent implements OnInit {
     const obj = { "BookName" : BookName , "AuthorName" : AuthorName, "catogrieId" : CatName, "description" : BookDes };
     console.log(obj)
     this.api.addBook(obj).subscribe();
+    console.log(CatName)
+    this.api.getBookDetail(CatName).subscribe()
     this.book();
-    this.router.navigate(['viewbook'])
+    // this.router.navigate(['viewbook'])
     }
   }
 
