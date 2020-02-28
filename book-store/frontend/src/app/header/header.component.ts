@@ -25,6 +25,7 @@ export class HeaderComponent implements OnInit {
     console.log(this.routes.url)
     this.api.currentMessage.subscribe(message=>{
     this.buttonisdisabled= message;
+    
   })
   if(localStorage.getItem('accessToken')){
     this.buttonisdisabled = true;
