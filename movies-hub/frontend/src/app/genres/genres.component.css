@@ -29,15 +29,10 @@ body {
   -moz-box-shadow: 0 2px 2px -2px #0E1119;
   box-shadow: 0 2px 2px -2px #0E1119;
 }
-
-
-
-
 .container td,
 .container th {
   padding-bottom: 2%;
   padding-top: 2%;
-  /* padding-left: 2%; */
 }
 
 /* Background-color of the odd rows */
@@ -127,18 +122,13 @@ body {
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgb(180, 66, 66);
+    background: #8BC34A;
     transition: ease .6s;
   }
-  
   .input:focus + .line-box .line {
     width: 100%;
   }
-  
-  .label-active {
-    top: -3em;
-  }
-  
+
   button {
     display: inline-block;
     padding: 12px 24px;

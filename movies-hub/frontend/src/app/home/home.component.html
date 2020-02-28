@@ -57,127 +57,20 @@
     </a>
   </div>
 
-<div class="container bg-color">
-  <div class="row mt-4">
-    <div class="col-3  xy">
+<div class="container bg-color" >
+  <div class="row mt-4" >
+    <div class="col-3  xy" *ngFor="let i of movies" style="padding: 10px;">
       <div class="card" style="width: 15rem;">
-        <img src="../../assets/img/frozen.jpg" class="card-img-top image " alt="frozen2">
+        <img src="../../assets/img/load2.jpg" class="card-img-top image img-responsive" alt="frozen2">
         <div class="middle">
-          <button class="btn btn-danger" routerLink='/add'>View Details</button>
+          <button class="btn btn-danger" [routerLink]= "['/details', i.id]"  routerLinkActive="active" >View Details</button>
        </div> 
         <div class="card-body">
           <a href="...">
-            <h2 class="card-title text--bold palewhite title">Frozen 2</h2>
+            <h2 class="card-title text--bold palewhite title">{{i.movieName}}</h2>
           </a>
-          <h5 class="card-text">2019</h5>
-          <h5 class="card-text">Adventure / Animation/ Comedy/ Family / Fantasy </h5>
-        </div>
-      </div>
-    </div>
-    <div class="col-3  xy">
-      <div class="card" style="width: 15rem;">
-        <img src="../../assets/img/fg.jpg" class="card-img-top image" alt="the sheep movie">
-        <div class="middle">
-          <button class="btn btn-danger" routerLink='/add'>View Details</button>
-       </div> 
-        <div class="card-body">
-          <a href="...">
-            <h2 class="card-title text--bold palewhite title">A Shaun the Sheep: Farmageddon</h2>
-          </a>
-          <h5 class="card-text">2019</h5>
-          <h5 class="card-text">Adventure / Animation/ Comedy/ Family</h5>
-        </div>
-      </div>
-    </div>
-    <div class="col-3  xy">
-      <div class="card" style="width: 15rem;">
-        <img src="../../assets/img/ifinity.jpg" class="card-img-top image" alt="Avengers">
-        <div class="middle">
-          <button class="btn btn-danger" routerLink='/add'>View Details</button>
-       </div> 
-        <div class="card-body">
-          <a href="...">
-            <h2 class="card-title text--bold palewhite title">Avengers Infinity War</h2>
-          </a>
-          <h5 class="card-text">2018</h5>
-          <h5 class="card-text">Action / Adventure / Drama/ Fantasy /Sci-Fi</h5>
-        </div>
-      </div>
-    </div>
-    <div class="col-3  xy">
-      <div class="card" style="width: 15rem;">
-        <img src="../../assets/img/wws.jpg" class="card-img-top image" alt="Wolf os WallStreet">
-        <div class="middle">
-          <button class="btn btn-danger" routerLink='/add'>View Details</button>
-       </div>
-        <div class="card-body">
-          <a href="...">
-            <h2 class="card-title text--bold palewhite title">The Wolf of Wall Street</h2>
-          </a>
-          <h5 class="card-text">2013 </h5>
-          <h5 class="card-text">Action / Biography / Comedy / Crime / Drama</h5>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row mt-4">
-    <div class="col-3  xy">
-      <div class="card" style="width: 15rem;">
-        <img src="../../assets/img/dk.jpg" class="card-img-top image" alt="The Dark Knight">
-        <div class="middle">
-          <button class="btn btn-danger" routerLink='/add'>View Details</button>
-       </div>
-        <div class="card-body">
-          <a href="...">
-            <h2 class="card-title text--bold palewhite title">The Dark Knight </h2>
-          </a>
-          <h5 class="card-text">2008</h5>
-          <h5 class="card-text">Action / Adventure / Crime / Drama / Thriller</h5>
-        </div>
-      </div>
-    </div>
-    <div class="col-3  xy">
-      <div class="card" style="width: 15rem;">
-        <img src="../../assets/img/rises.jpg" class="card-img-top image" alt="The Dark Knight rises">
-        <div class="middle">
-          <button class="btn btn-danger" routerLink='/add'>View Details</button>
-       </div>
-        <div class="card-body">
-          <a href="...">
-            <h2 class="card-title text--bold palewhite title">The Dark Knight Rises</h2>
-          </a>
-          <h5 class="card-text">2012</h5>
-          <h5 class="card-text">Action / Adventure / Drama / Fantasy / Sci-Fi / Thriller</h5>
-        </div>
-      </div>
-    </div>
-    <div class="col-3  xy">
-      <div class="card" style="width: 15rem;">
-        <img src="../../assets/img/dhoni.jpg" class="card-img-top image" alt="MSD">
-        <div class="middle">
-          <button class="btn btn-danger" routerLink='/add'>View Details</button>
-       </div>
-        <div class="card-body">
-          <a href="...">
-            <h2 class="card-title text--bold palewhite title">M.S. Dhoni: The Untold Story</h2>
-          </a>
-          <h5 class="card-text">2016</h5>
-          <h5 class="card-text">Action / Biography / Drama / Sport</h5>
-        </div>
-      </div>
-    </div>
-    <div class="col-3  xy">
-      <div class="card" style="width: 15rem;">
-        <img src="../../assets/img/itw.jpg" class="card-img-top image" alt="Into the Wild">
-        <div class="middle">
-          <button class="btn btn-danger" routerLink='/add'>View Details</button>
-       </div>
-        <div class="card-body">
-          <a href="...">
-            <h2 class="card-title text--bold palewhite title">Into the Wild</h2>
-          </a>
-          <h5 class="card-text">2007</h5>
-          <h5 class="card-text">Action / Adventure / Biography / Drama / Romance</h5>
+          <h5 class="card-text palewhite">{{i.year}}</h5>
+          <h5 class="card-text palewhite">{{i.cat.genre}} </h5>
         </div>
       </div>
     </div>

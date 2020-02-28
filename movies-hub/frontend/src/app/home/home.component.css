@@ -3,7 +3,7 @@
     font-weight: 500;
 }
 .palewhite {
-    color: black;
+    color:white;
 }
 a {
     text-decoration: none;
@@ -19,7 +19,8 @@ a {
   }
 .card{
     width: 500px;
-    height: 540px;
+    height: 500px;
+    background: #101010;
 }
 
 .imageShadow{
@@ -30,7 +31,7 @@ a {
     opacity: 1;
     display: block;
     width: 100%;
-    height: auto;
+    height: 350px;
     transition: .5s ease;
     backface-visibility: hidden;
   }

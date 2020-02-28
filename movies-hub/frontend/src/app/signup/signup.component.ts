@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
 import { ApiserviceService } from '../apiservice.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MustMatch } from '../match';
+
 
 @Component({
   selector: 'app-signup',
@@ -14,17 +14,15 @@ export class SignupComponent implements OnInit {
   email: any;
   password: any;
   submitted: boolean = false;
+  error: string;
+  loading: boolean;
   constructor(private router: Router, private formBuilder: FormBuilder, private myservice: ApiserviceService, private activatedRoute: ActivatedRoute) { 
     this.checkoutForm = this.formBuilder.group({
       Name: new FormControl ('', Validators.required),
       email: new FormControl ('', [Validators.required, Validators.email]),
       password: new FormControl ('', Validators.required),
       retypepassword: new FormControl ('', Validators.required)
-  },
-  {
-    validator: MustMatch('password', 'retypepassword') // Custmize Validator
-  }
-  );
+  });
 }
 
   ngOnInit() {
@@ -46,7 +44,12 @@ onSubmit() {
     this.myservice.signupData(obj).subscribe(res =>{
       localStorage.setItem("accessToken", res.accessToken);
       this.router.navigate(['/home']);
-  });
+  },
+  error => {
+    this.error = error;
+    this.loading = false;
+  }
+  );
   }
 }
 }

@@ -1,5 +1,5 @@
 .body-img{
-    background:  linear-gradient(hsla(0, 2%, 10%, 0.493), rgba(14, 13, 13, 0.8), transparent), url("../../assets/img/background-image.jpg") no-repeat center; 
+    background:  linear-gradient(to right ,hsla(0, 12%, 5%, 0.493),  rgba(0, 0, 0, 0.8), transparent), url("../../assets/img/bg2.jpg") no-repeat center; 
 }
 .navbar-brand {
     display: inline-block;
@@ -19,21 +19,15 @@
     font-family: "Poppins", Arial, sans-serif;
     line-height: 1;
 }
-.navbar-brand:hover, .navbar-brand:focus {
-    text-decoration: none;
-    box-sizing: border-box;
-    border: 1.5px solid #9e9d9d;
-    border-radius: 3px;
-}
+
 .navbar-brand i {
     font-style: normal;
-    color: rgb(180, 66, 66); 
-}
-.navbar-brand i:hover{
-    color:#ee8267;
+    color: rgb(204, 196, 196);
+    text-shadow: 1px 1px 2px black, 0 0 25px rgba(177, 177, 180, 0.726), 0 0 5px rgb(226, 191, 191); 
 }
 .color a{
-    color: rgb(180, 66, 66); 
+    color: rgb(255, 247, 247); 
+    font-size: large;
 }
 .color a:hover{
     color:#ee8267;
@@ -45,12 +39,13 @@
     font-weight: 800;
 }
 .content-color{
-    color: rgba(206, 204, 204, 0.801);
+    color: rgba(206, 204, 204, 0.678);
 }
 .bolder{
-    color: rgba(177, 177, 177, 0.712);
+    color: rgba(255, 254, 254, 0.637);
     font-size: 7rem;
     font-weight: 900;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgba(177, 177, 180, 0.726), 0 0 5px rgb(226, 191, 191);
 }
 .spacing-around{
     padding: 200px 0px;
@@ -65,7 +60,11 @@ input[type="text"], input[type="password"] {
 }
 label {
     color: aliceblue;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgba(177, 177, 180, 0.726), 0 0 5px rgb(226, 191, 191)
 }
 .signup-style {
     margin-top: 10%;
+}
+h4 {
+    text-shadow: 1px 1px 2px black, 0 0 25px rgba(177, 177, 180, 0.726), 0 0 5px rgb(226, 191, 191);
 }
