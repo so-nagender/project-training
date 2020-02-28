@@ -23,7 +23,8 @@ export class EditmovieComponent implements OnInit {
    this.checkoutForm= this.checkout.group({
     moviename : ['', [Validators.required]],
     date : ['', Validators.required],
-    cat: [''],
+    cat: ['',Validators.required],
+    rating:['',[Validators.required,Validators.max(5)]],
     cast: ['', Validators.required],
     syn: ['', [Validators.required]]
   })
@@ -52,9 +53,10 @@ export class EditmovieComponent implements OnInit {
       const moviename= this.checkoutForm.controls.moviename.value;
       const year= this.checkoutForm.controls.date.value;
       const category= this.checkoutForm.controls.cat.value;
+      const rating= this.checkoutForm.controls.rating.value;
       const cast= this.checkoutForm.controls.cast.value;
       const synopsys = this.checkoutForm.controls.syn.value;
-      const obj= {movieName: moviename, year: year, catId: category, cast: [cast], synopsis: synopsys};
+      const obj= {movieName: moviename, year: year, catId: category,rating:rating, cast: [cast], synopsis: synopsys};
       this.myservice.update(this.id, obj).subscribe();
       this.route.navigate(['/list']);
 

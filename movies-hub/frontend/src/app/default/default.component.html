@@ -54,25 +54,35 @@
             <div class="form-group">
               <label for="exampleInputEmail1">Email Address / User</label>
               <input type="text" name="email" id="e1" formControlName="email" placeholder="Email" class="form-control"
-                [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
-              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                [ngClass]="{ 'is-invalid': checkoutForm.get('email').touched &&  checkoutForm.get('email').invalid}" >
+                <div class="invalid-feedback">
+                  Email Is Required
+                </div>
+              <!-- <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                 <div *ngIf="f.email.errors.required">required</div>
-              </div>
+              </div> -->
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
               <input type="password" name="password" id="e2" formControlName="password" class="form-control"
-                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="Password">
-              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                [ngClass]="{ 'is-invalid': checkoutForm.get('password').touched &&  checkoutForm.get('password').invalid }" placeholder="Password">
+                <div class="invalid-feedback">
+                  Password Is Required
+                </div>
+              <!-- <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
                 <div *ngIf="f.password.errors.required">required</div>
-              </div>
+              </div> -->
             </div>
             <div>
               <h5 style="color: brown ;">
                 {{error}}
               </h5>
             </div>
-            <button type="submit" class="btn btn-outline-danger mt-4">Log In</button>
+            <div *ngIf="!isvalidvalue">
+              Email and Password are not filled.
+            </div>
+            <button type="submit"  class="btn btn-outline-danger mt-4">Log In</button>
+            
           </form>
           <div class="signup-style">
             <label>New To Movie$-Hub</label> <a routerLink="/signup" style="color: rgb(240, 50, 16);"

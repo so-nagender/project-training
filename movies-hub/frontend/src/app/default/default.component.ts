@@ -4,21 +4,24 @@ import { ActivatedRoute } from '@angular/router';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
+
+
+
 @Component({
   selector: 'app-default',
   templateUrl: './default.component.html',
   styleUrls: ['./default.component.css']
 })
 export class DefaultComponent implements OnInit {
-  checkoutForm: FormGroup;
-  isSubmitted: boolean = false;
+  checkoutForm: FormGroup;  
   error: string;
   loading: boolean;
   msg: string;
+  isvalidvalue= true;
 
   constructor(private router: Router, private formBuilder: FormBuilder, private myservice: ApiserviceService, private activatedRoute: ActivatedRoute) {
     this.checkoutForm = this.formBuilder.group({
-      email: new FormControl('', Validators.required),
+      email: new FormControl('',[Validators.required,Validators.email]),
       password: new FormControl('', Validators.required),
     })
   };
@@ -29,14 +32,16 @@ export class DefaultComponent implements OnInit {
     return this.checkoutForm.controls;
   }
   onLogin() {
-    this.isSubmitted = true;
+    this.error='';
+    this.isvalidvalue = true;    
     const email = this.checkoutForm.controls.email.value;
     const password = this.checkoutForm.controls.password.value;
     const obj = { "name": email, "password": password }
-    if (this.checkoutForm.invalid) {
-      // alert('Fields is/are empty');
-      this.msg = "Required";
-      return;
+    if (this.checkoutForm.invalid || email.empty || password.empty ) {
+ 
+      this.isvalidvalue = false;     
+
+           
     } else {
       // if Form is valid then it will post the data into the JSON server...
       this.myservice.lognIn(obj).subscribe(res => {

@@ -206,5 +206,12 @@ export class ListComponent implements OnInit {
         switching = true;
       }
     }
+  } 
+  createRange(num) {
+    const items: number[] = [];
+    for (let i = 1; i <= num; i++) {
+      items.push(i);
+    }
+    return items;
   }
 }
