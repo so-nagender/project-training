@@ -29,6 +29,15 @@
                     </div>
                 </div>
             </label>
+            <label>
+                <div class="form-group">
+                    <input type="text" required class="input" formControlName="rating">
+                    <p class="label-txt" ngModel maxlength="25">Rating</p>
+                    <div class="line-box">
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </label>
             <h5>catogaries</h5>
             <select formControlName="cat" class="custom-select" formControlsName="cat" id="iinlineFormCustomSelect">
                 <option value="{{i.id}}" *ngFor="let i of catogry">{{i.genre}}</option>

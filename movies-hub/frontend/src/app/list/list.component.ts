@@ -202,4 +202,11 @@ export class ListComponent implements OnInit {
       }
     }
   } 
+  createRange(num) {
+    const items: number[] = [];
+    for (let i = 1; i <= num; i++) {
+      items.push(i);
+    }
+    return items;
+  }
 }
