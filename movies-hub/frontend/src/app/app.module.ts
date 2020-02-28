@@ -28,6 +28,7 @@ import { MatSortModule } from '@angular/material/sort';
 import {MatButtonModule} from '@angular/material/button';
 import { FilterdataPipe } from './filterdata.pipe';
 import { CatviewComponent } from './catview/catview.component';
+import { EditgenreComponent } from './editgenre/editgenre.component';
 
 const appRoutes: Routes = [
   {path:'movielist',component:MovieListComponent},   
@@ -78,6 +79,8 @@ const appRoutes: Routes = [
    { 
     path: 'movieByCatg/:id', 
     component: CatviewComponent,
+    path: 'editgenre/:id', 
+    component: EditgenreComponent,
     resolve: {
       hero: DataResolverService
     }
@@ -102,6 +105,7 @@ const appRoutes: Routes = [
     GenresComponent,
     MovieListComponent,
     CatviewComponent,
+    EditgenreComponent,
 
   ],
   imports: [

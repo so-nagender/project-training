@@ -404,48 +404,64 @@
   ],
   "cats": [
     {
-      "genre": "Adventure ",
-      "id": 1
-    },
-    {
-      "genre": "Animation",
-      "id": 2
-    },
-    {
       "genre": "Action",
+      "desc": "Action film is a film genre in which the protagonist or protagonists are thrust into a series of events that typically include violence, extended fighting",
+      "updatedAt": 1582889137689,
       "id": 3
     },
     {
       "genre": " Biography",
-      "id": 4
+      "id": 4,
+      "desc": "Biopic is a film that dramatizes the life of a non-fictional or historically-based person or people."
     },
     {
       "genre": " Thriller",
-      "id": 5
+      "id": 5,
+      "desc": "Thriller is a genre of fiction, having numerous, often overlapping subgenres. Thrillers are characterized and defined by the moods they elicit, giving viewers heightened feelings of suspense, excitement, surprise"
     },
     {
       "genre": " Sci-Fi",
-      "id": 6
+      "id": 6,
+      "desc": "Science fiction film (or sci-fi film) is a genre that uses speculative, fictional science-based depictions of phenomena that are not fully accepted by mainstream science"
     },
     {
       "genre": " Sport",
-      "id": 7
+      "id": 7,
+      "desc": "A sports film is a film genre that uses sport as the theme of the film. It is a production in which a sport, sporting event, athlete (and their sport), or follower of sport (and the sport they follow) are prominently featured, and which depend on sport to a significant degree for their plot motivation or resolution."
     },
     {
       "genre": "Fantasy",
-      "id": 8
+      "id": 8,
+      "desc": "Fantasy films are films that belong to the fantasy genre with fantastic themes, usually magic, supernatural events, mythology, folklore, or exotic fantasy worlds."
     },
     {
       "genre": " Romantic ",
-      "id": 9
+      "id": 9,
+      "desc": "Romance film can be defined as a genre wherein the plot revolves around the love between two protagonists. This genre usually has a theme that explores an issue within love,"
     },
     {
-      "genre": " Thriller ",
-      "id": 10
+      "genre": "Horror",
+      "id": 10,
+      "desc": "Horror films are unsettling movies that strive to elicit the emotions of fear, disgust and horror from viewers."
     },
     {
       "genre": " Comedy ",
-      "id": 11
+      "id": 11,
+      "desc": "Comedy is a genre of film in which the main emphasis is on humour. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect."
+    },
+    {
+      "genre": "Anime",
+      "createdAt": 1582710513931,
+      "updatedAt": 1582710513931,
+      "id": 13,
+      "desc": "Anime (pronounced AH-nee-may ) is a term for a style of Japanese comic book and video cartoon animation in which the main characters have large doe-like eyes. Many Web sites are devoted to anime"
+    },
+    {
+      "genre": "Suspense",
+      "createdAt": 1582719135136,
+      "updatedAt": 1582719135136,
+      "id": 14,
+      "desc": "Suspense films. Used for films that feature a build up of suspense, tension, uncertainty, menace, and anxiety as primary elements and in which the audience is kept on tenterhooks"
     }
   ],
   "tests": [

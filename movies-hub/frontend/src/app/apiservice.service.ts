@@ -69,4 +69,11 @@ export class ApiserviceService {
   getDataT(): Observable<any> {
     return this.subjecttwo.asObservable();
   }
+  getCatById(id): Observable<any> {
+    return this.http.get(`/api/cats/${id}`);
+  }
+  updateCat(id, obj) {
+    const cat = `/api/cats/${id}`;
+    return this.http.put(cat, obj)
+  }
 }
