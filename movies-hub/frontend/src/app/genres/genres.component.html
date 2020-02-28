@@ -1,42 +1,66 @@
 <div>
   <app-header></app-header>
 </div>
-<br/>
-<table class="container">
+<br />
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <h1 style="text-align: center;">List of Genres</h1>
+    <button class="btn btn-danger mb-2 float-right" (click)="toggle()">Add a Genre</button>
+    <div *ngIf="!isCollapsed">
+      <form [formGroup]="checkoutForm">
+        <div>
+          <img src="../../assets/img/genre.jpg" width="150px">
+          <h6>Add a Genre of your choice</h6>
+        </div>
+        <label>
+          <div class="form-group">
+            <input type="text" required class="input" formControlName="genrename" [ngClass]="{'is-invalid': checkoutForm.get('genrename').touched && checkoutForm.get('genrename').invalid}">
+            <p class="label-txt">Genre Name</p>
+            <div class="line-box">
+              <div class="line"></div>
+            </div>
+            <div class="invalid-feedback">
+              <h5 style="font-size: small;"><strong>Genre Name ke bina nahi babumoshai</strong></h5>
+            </div>
+          </div>
+        </label>
+        <label>
+          <div class="form-group">
+            <input type="text" required class="input" formControlName="Description" [ngClass]="{'is-invalid': checkoutForm.get('Description').touched && checkoutForm.get('Description').invalid}">
+            <p class="label-txt">Description</p>
+            <div class="line-box">
+              <div class="line"></div>
+            </div>
+            <div class="invalid-feedback">
+              <h5 style="font-size: small;"><strong>Description ke bina nahi babumoshai</strong></h5>
+            </div>
+          </div>
+        </label>
+        <div class="col-auto">
+          <button type="submit" routerLink="/Genres" (click)=onSubmit() class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-2"></div>
+</div>
+<div class="container">
+  <table class="table table-hover table-dark cont">
     <thead>
       <tr>
-        <th><h1>List of Genres</h1></th>
-        <th><h1 style="text-align: start;">Actions</h1></th>
+        <th scope="col" style="width: 15%;" style="text-align: start;"> Genres</th>
+        <th scope="col" style="width: 65%;">Description</th>
+        <th scope="col" style="width: 20%;">Actions</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let movie of movies">
-        <td>{{movie.genre}}</td>
-        <button  (click)="delete(movie.id)">Delete</button>
+        <td style="text-align: start;">{{movie.genre}}</td>
+        <td>{{movie.desc}}</td>
+        <button class="mt-4" style="text-align: left;" (click)="delete(movie.id)">Delete</button>
+        <button [routerLink]="['/editgenre', movie.id]" routerLinkActive="active" class="mx-2 mt-4">Edit</button>
       </tr>
     </tbody>
   </table>
-  <br/>
-  <div class="container">
-  <button  class="btn btn-danger mb-2 float-right" (click)= "toggle()">Add a Genre</button>
-  <div *ngIf= "!isCollapsed">
-    <form [formGroup]="checkoutForm">
-      <div>
-        <img src="../../assets/img/genre.jpg" width="300px"  style="margin-top: -100px;">
-        <h6 >Add a Genre of your choice</h6>
-      </div>
-      <label>
-        <div class="form-group" >
-          <input type= "text" required class= "input" formControlName="genrename" >
-          <p class="label-txt">Genre Name</p>
-           <div class="line-box">
-            <div class="line"></div>
-          </div>
-        </div>
-      </label>
-      <div class="col-auto my-1">
-        <button type="submit" routerLink="/Genres" (click)=onSubmit() class="btn btn-primary">Submit</button>
-    </div>
-     </form>
-    </div>
-  </div>
+

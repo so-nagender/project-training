@@ -27,6 +27,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import {MatButtonModule} from '@angular/material/button';
 import { FilterdataPipe } from './filterdata.pipe';
+import { EditgenreComponent } from './editgenre/editgenre.component';
 
 const appRoutes: Routes = [
   {path:'movielist',component:MovieListComponent},   
@@ -74,6 +75,13 @@ const appRoutes: Routes = [
       hero: DataResolverService
     }
    },
+   { 
+    path: 'editgenre/:id', 
+    component: EditgenreComponent,
+    resolve: {
+      hero: DataResolverService
+    }
+   },
 
 ];
 @NgModule({
@@ -93,6 +101,7 @@ const appRoutes: Routes = [
     FilterdataPipe,
     GenresComponent,
     MovieListComponent,
+    EditgenreComponent,
 
   ],
   imports: [

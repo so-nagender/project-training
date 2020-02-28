@@ -57,8 +57,6 @@ export class EditmovieComponent implements OnInit {
       const obj= {movieName: moviename, year: year, catId: category, cast: [cast], synopsis: synopsys};
       this.myservice.update(this.id, obj).subscribe();
       this.route.navigate(['/list']);
-
-      }
-      
+     }  
     }
   }

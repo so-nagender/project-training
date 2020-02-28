@@ -18,7 +18,16 @@ export class GenresComponent implements OnInit {
 
   constructor(private myservice: ApiserviceService, private activatedRoute: ActivatedRoute, private router: Router,  private formBuilder: FormBuilder) {
     this.checkoutForm = this.formBuilder.group({
-      genrename: ['']
+      genrename: ['',  [
+        Validators.required,
+        Validators.maxLength(50),
+        Validators.pattern('^[a-zA-Z]*$')
+      ]],
+      Description: ['',  [
+        Validators.required,
+        Validators.maxLength(50),
+        Validators.pattern('^[a-zA-Z]*$')
+      ]]
     })
    }
 
@@ -37,13 +46,20 @@ export class GenresComponent implements OnInit {
     this.isCollapsed= !this.isCollapsed;
   }
   onSubmit() {
+    if(this.checkoutForm.invalid)
+    {
+      return;
+    }
+    else{
     const genrename= this.checkoutForm.controls.genrename.value;
-    const obj= {genre: genrename};
+    const des= this.checkoutForm.controls.Description.value;
+    const obj= {genre: genrename, desc: des};
     this.myservice.postCat(obj).subscribe();
     this.myservice.getCat().subscribe(res => {
       this.movies = res;
     });
     this.checkoutForm.reset();
+  }
 
   }
 }

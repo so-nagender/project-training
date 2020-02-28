@@ -1,0 +1,47 @@
+<div>
+  <app-header></app-header>
+</div>
+<form [formGroup]="checkoutForm">
+  <div class="row moviesDetailsMargin">
+    <div class="col-2">
+    </div>
+    <div class="container col-2 imageShadow">
+      <img src="../../assets/img/frozen.jpg" class="img-fluid image" alt="Responsive" style="width:100%">
+    </div>
+    <div class="col-1">
+    </div>
+    <div class="col-3">
+      <label>
+        <div class="form-group">
+          <input type="text" required class="input" formControlName="genr" [(ngModel)]="catogry.genre"
+            [ngClass]="{'is-invalid': checkoutForm.get('genr').touched && checkoutForm.get('genr').invalid}">
+          <p class="label-txt">Category Name</p>
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+          <div class="invalid-feedback">
+            <h5 style="font-size: small;"><strong>Category Name ke bina nahi babumoshai</strong></h5>
+          </div>
+        </div>
+      </label>
+      <label>
+        <div class="form-group">
+          <input type="text" required class="input" formControlName="description" [(ngModel)]="catogry.desc"
+            [ngClass]="{'is-invalid': checkoutForm.get('description').touched && checkoutForm.get('description').invalid}">
+          <p class="label-txt">Description</p>
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+          <div class="invalid-feedback">
+            <h5 style="font-size: small;"><strong>Jate Jate "Description" to dete jao</strong></h5>
+          </div>
+        </div>
+      </label>
+    </div>
+    <div class="col-4">
+    </div>
+  </div>
+  <div class="col-auto mx-4">
+    <button type="submit" (click)=onSubmit() class="btn btn-primary">Submit</button>
+  </div>
+</form>
