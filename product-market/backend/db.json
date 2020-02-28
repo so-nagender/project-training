@@ -1,11 +1,11 @@
 {
   "cats": [
     {
-      "name": "Accessories",
-      "description": "Main consumer electronics",
-      "createdAt": 1582525516601,
-      "updatedAt": 1582525516601,
-      "id": 6
+      "name": "electronics",
+      "description": "laptop",
+      "createdAt": 1582703390088,
+      "updatedAt": 1582703390088,
+      "id": 2
     },
     {
       "name": "electronics",

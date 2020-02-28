@@ -22,8 +22,9 @@ export class AddformComponent implements OnInit {
 
   ngOnInit() {
     this.addform = this.fb.group({
-      name: ["", [Validators.required]],
-      item: ["", [Validators.required]]
+      name: ["", [Validators.required,Validators.pattern('^[^\s]+[-a-zA-Z\s]+([-a-zA-Z]+)*$')]],
+      item: ["", [Validators.required,Validators.pattern('^[^\s]+[-a-zA-Z\s]+([-a-zA-Z]+)*$')]],
+      Description: ["", [Validators.required]]
     });
   }
   datas: any;

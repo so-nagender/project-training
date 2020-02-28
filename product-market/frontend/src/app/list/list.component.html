@@ -78,12 +78,34 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of datas| filterdata: search">
-        <td class="font2"><p>{{data.name}}</p>
-        <button appListEdit [first]="data.id" type="button" class="btn mt-3 float-left" >EDIT</button><br>
-        <button type="button" class="btn" style="margin-top: 5px; float: left;" (click)="onaddCart(data)">ADD TO
-          CART</button>
-    
+      <tr *ngFor="let data of datas| filterdata: search" >
+        <td class="font2">{{data.name}}<br>
+
+          <button type="button" class="btn" style="margin-top: 40px; float: left;" (click)="onaddCart(data)"  data-toggle="modal" data-target="#exampleModal">ADD TO
+            CART</button>
+            <!-- modal of add to cart -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header" style="background-color:#f88288;">
+                    <h5 class="modal-title" id="exampleModalLabel" >MY CART</h5>
+                    <img src="../../assets/images/shopping-cart.svg" style="height: 30px;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    ITEM ADDED SUCESSFULLY <img src="../../assets/images/fall-in-love.svg" style="height: 30px;">
+                  </div>
+                  <div class="modal-footer" >
+                    <button type="button" class="btn " data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <!-- MODAL ENDS -->
+
+
         </td>
         <td>
           <p>{{data.cost}}</p>
@@ -131,7 +153,10 @@
       </tr>
     </tbody>
   </table>
+  
+   <ng-template #noResults> <p> fklmlllllllllllld"{{search}"}</p> </ng-template>
 </div>
+
 
 <link
   rel="stylesheet"

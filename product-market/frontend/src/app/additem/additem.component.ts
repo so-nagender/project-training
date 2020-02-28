@@ -26,7 +26,7 @@ export class AdditemComponent implements OnInit {
   id: any;
   ngOnInit() {
     this.itemform = this.fb.group({
-      item: ["", [Validators.required]],
+      item: ["", [Validators.required,Validators.pattern('^[^\s]+[-a-zA-Z\s]+([-a-zA-Z]+)*$')]],
       rating: ["", [Validators.required]],
       cost: ["", Validators.required],
       Description: ["", [Validators.required]]
