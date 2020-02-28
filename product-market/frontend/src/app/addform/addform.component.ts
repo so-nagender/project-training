@@ -39,6 +39,7 @@ export class AddformComponent implements OnInit {
         this.datas = res;
       });
       this.serve.sendMessage(this.datas);
+      this.router.navigate(["/categories"]);
     }
   }
 

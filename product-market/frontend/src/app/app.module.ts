@@ -73,7 +73,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: "items/:id",
+    path: "items/category/:id",
     component: ItemviewComponent,
     resolve: { data: ResolverItemsService },
     children: [

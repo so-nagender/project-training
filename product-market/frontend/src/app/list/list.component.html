@@ -79,10 +79,11 @@
     </thead>
     <tbody>
       <tr *ngFor="let data of datas| filterdata: search">
-        <td class="font2">{{data.name}}<br>
-
-          <button type="button" class="btn" style="margin-top: 40px; float: left;" (click)="onaddCart(data)">ADD TO
-            CART</button>
+        <td class="font2"><p>{{data.name}}</p>
+        <button appListEdit [first]="data.id" type="button" class="btn mt-3 float-left" >EDIT</button><br>
+        <button type="button" class="btn" style="margin-top: 5px; float: left;" (click)="onaddCart(data)">ADD TO
+          CART</button>
+    
         </td>
         <td>
           <p>{{data.cost}}</p>
@@ -122,7 +123,6 @@
                 <div class="card-body">
                   <h5 class="card-title">{{data.name}}</h5>
                   <p class="card-text">{{data.description}}</p>
-                  <button appListEdit [first]="data.id" type="button" class="btn p-1 mb-2 float-right" >EDIT</button>
                 </div>
               </div>
             </div>

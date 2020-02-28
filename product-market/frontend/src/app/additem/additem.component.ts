@@ -34,18 +34,25 @@ export class AdditemComponent implements OnInit {
   }
 
   onClose() {
-    const url = `items/${this.id}`;
+    const url = `items/category/${this.id}`;
     this.router.navigate([url]);
   }
   onSubmit() {
+    if (this.itemform.invalid) {
+      return;
+    }
+    else{
+    const url = `items/category/${this.id}`;
     const obj = {
       name: this.itemform.controls.item.value,
-      categoryId: this.id,
+      catId: parseInt(this.id),
       rating: this.itemform.controls.rating.value,
       description: this.itemform.controls.Description.value,
       cost: this.itemform.controls.cost.value
     };
     this.serve.postItem(obj).subscribe();
     this.serve.sendnewItem();
+    this.router.navigate([url]);
+  }
   }
 }

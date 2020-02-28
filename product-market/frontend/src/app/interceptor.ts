@@ -31,15 +31,11 @@ export class TokenInterceptor implements HttpInterceptor {
           errorMessage = `Error: ${error.error.message}`;
         } else if (error.status === 403) {
           // server-side error
-          console.log(error);
           errorMessage = `${error.error.message}`;
         } else if (error.status === 409) {
           // server-side error
-          console.log(error);
           errorMessage = `user already exists,please either use an new mail address or login`;
         }
-
-        console.log(errorMessage);
         return throwError(errorMessage);
       })
     );

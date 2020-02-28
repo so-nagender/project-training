@@ -1,19 +1,5 @@
 {
-  "product-category": [
-    {
-      "name": "fashion",
-      "description": "Main consumer electronics products include radio receivers, television sets, MP3 players",
-      "createdAt": 1582205272823,
-      "updatedAt": 1582205272823,
-      "id": 3
-    },
-    {
-      "name": "Groceries",
-      "description": "Main consumer electronics products include radio receivers, television sets, MP3 players.",
-      "createdAt": 1582525475435,
-      "updatedAt": 1582525475435,
-      "id": 5
-    },
+  "cats": [
     {
       "name": "Accessories",
       "description": "Main consumer electronics",
@@ -27,63 +13,180 @@
       "createdAt": 1582613120109,
       "updatedAt": 1582613120109,
       "id": 7
+    },
+    {
+      "name": "Groceries",
+      "description": "Vegetables,Fruits",
+      "createdAt": 1582721000903,
+      "updatedAt": 1582721000903,
+      "id": 8
+    },
+    {
+      "name": "kids",
+      "description": "rtrt",
+      "createdAt": 1582788058109,
+      "updatedAt": 1582788058109,
+      "id": 9
     }
   ],
   "product-items": [
     {
-      "name": "vegetables",
-      "categoryId": "5",
-      "rating": "3",
-      "description": "bdjsbfjangkfdg",
-      "createdAt": 1582525578632,
-      "updatedAt": 1582525578632,
-      "id": 7
+      "name": "handbags",
+      "rating": "4",
+      "description": "DFJHBKNHSITUNRYINP",
+      "cost": 5000,
+      "updatedAt": 1582796448685,
+      "id": 12
+    },
+    {
+      "name": "Laptops",
+      "rating": "4",
+      "description": "njekyrnkaretieyilburliuilue oruilenvoaetbu",
+      "cost": 50000,
+      "updatedAt": 1582797180973,
+      "id": 14
     },
     {
       "name": "heater",
-      "categoryId": "4",
       "rating": "5",
-      "description": "cc",
-      "createdAt": 1582608904295,
-      "updatedAt": 1582608904295,
-      "id": 8
+      "description": "for room heatinghgfh",
+      "cost": 2000,
+      "updatedAt": 1582788609412,
+      "id": 15
     },
     {
-      "name": "gas",
-      "categoryId": "4",
-      "rating": "3",
-      "description": "ccccdc",
-      "createdAt": 1582608911891,
-      "updatedAt": 1582608911891,
-      "id": 9
+      "name": "Mobiles",
+      "rating": "4",
+      "description": "Mobiles are a device.",
+      "cost": 4000,
+      "updatedAt": 1582797246477,
+      "id": 16
     },
     {
-      "name": "Laptop",
-      "categoryId": "7",
+      "name": "Heater",
       "rating": "3",
-      "description": "datad",
-      "cost": 30000,
-      "updatedAt": 1582702687985,
-      "id": 10
+      "description": "dsiuhveritbienys",
+      "cost": 3000,
+      "updatedAt": 1582797323326,
+      "id": 17
+    },
+    {
+      "name": "Microwave",
+      "rating": "3",
+      "description": "Hdjkknhtjkh",
+      "cost": 6000,
+      "updatedAt": 1582797349037,
+      "id": 18
+    },
+    {
+      "name": "raju",
+      "rating": "2",
+      "description": "sfagrthrthrhrh",
+      "cost": 5000,
+      "updatedAt": 1582798439933,
+      "id": 19
+    },
+    {
+      "name": "monika",
+      "rating": "5",
+      "description": "",
+      "cost": 50000,
+      "updatedAt": 1582798535163,
+      "id": 20
+    },
+    {
+      "name": "rajuujk",
+      "catId": 7,
+      "rating": "4",
+      "description": "ghfjgchjfyif,yg,oiu.ogiu/imui,y,o\ny,oikl,jk,jjkhjkk",
+      "cost": "5000000",
+      "updatedAt": 1582804286375,
+      "id": 21
+    },
+    {
+      "name": "Vagetables",
+      "catId": 8,
+      "rating": "4",
+      "description": "Vegaetables",
+      "cost": 50,
+      "createdAt": 1582802784887,
+      "updatedAt": 1582802784887,
+      "id": 24
+    },
+    {
+      "name": "Watch",
+      "catId": 6,
+      "rating": "5",
+      "description": "q/d'dkoggujeto ruyi5",
+      "cost": 50000,
+      "updatedAt": 1582807229747,
+      "id": 25
+    },
+    {
+      "name": "Realme 5i",
+      "catId": 6,
+      "rating": "4",
+      "description": "The Realme 5i is here to meet your smartphone demands seamlessly as it houses a massive 5000 mAh battery and is powered by a 2.0 GHz Qualcomm Snapdragon 665 AIE Processor",
+      "cost": 8999,
+      "createdAt": 1582809281995,
+      "updatedAt": 1582809281995,
+      "id": 26
+    },
+    {
+      "name": "Proof Quartz Analog Watch ",
+      "catId": 6,
+      "rating": "3",
+      "description": "Day and Date Functioning Blue Check Ray Pattern Leather Strap Water Resistant Shock Proof Quartz",
+      "cost": 999,
+      "createdAt": 1582810198101,
+      "updatedAt": 1582810198101,
+      "id": 27
     }
   ],
   "product-cart": [
     {
-      "name": "Laptops",
-      "rating": 4,
+      "name": "Watch",
+      "rating": 5,
+      "cost": 5000,
+      "description": "q/d'dkoggujeto ruyi5",
+      "createdAt": 1582807198017,
+      "updatedAt": 1582807198017,
+      "id": 1
+    },
+    {
+      "name": "Watch",
+      "rating": 5,
+      "cost": 5000,
+      "description": "q/d'dkoggujeto ruyi5",
+      "createdAt": 1582807607105,
+      "updatedAt": 1582807607105,
+      "id": 2
+    },
+    {
+      "name": "Watch",
+      "rating": 5,
       "cost": 50000,
-      "description": "Flipkart has wide range of branded laptops browse and buy online shopping store. ... Acer Predator Helios 300 Core i7 8th Gen - (8 GB + 16 GB Optane/2 TB HDD/Windows 10 Home/6 GB Graphics.",
-      "createdAt": 1582545196510,
-      "updatedAt": 1582545196510,
+      "description": "q/d'dkoggujeto ruyi5",
+      "createdAt": 1582807618724,
+      "updatedAt": 1582807618724,
       "id": 3
     },
     {
-      "name": "laptop",
+      "name": "Realme 5i",
+      "rating": 4,
+      "cost": 8999,
+      "description": "The Realme 5i is here to meet your smartphone demands seamlessly as it houses a massive 5000 mAh battery and is powered by a 2.0 GHz Qualcomm Snapdragon 665 AIE Processor",
+      "createdAt": 1582809284378,
+      "updatedAt": 1582809284378,
+      "id": 4
+    },
+    {
+      "name": "Proof Quartz Analog Watch ",
       "rating": 3,
-      "cost": 200,
-      "description": "ccvcvc",
-      "createdAt": 1582702177279,
-      "updatedAt": 1582702177279,
+      "cost": 999,
+      "description": "Day and Date Functioning Blue Check Ray Pattern Leather Strap Water Resistant Shock Proof Quartz",
+      "createdAt": 1582810207202,
+      "updatedAt": 1582810207202,
       "id": 5
     }
   ],

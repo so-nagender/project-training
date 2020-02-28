@@ -45,11 +45,12 @@
   <div class="pl-3">
     <div class="row">
       <div class="col-lg-3" *ngFor="let data of datas">
-        <div class="card">
+        <div class="card" style="height: 355px;">
           <img
             src="../../assets/images/download (6).jfif"
             class="rounded-0"
             alt="..."
+            style="height: 130px;"
           />
           <div class="card-body">
             <button
@@ -63,17 +64,18 @@
             <button
               style="border-radius: 0px; border: 0px;background-color: white;"
               class="p-0"
-              [routerLink]="['/items', data.id]"
+              [routerLink]="['/items/category',data.id]"
             >
               <span
-                ><h4 class="card-title">{{ data.name }}</h4></span
+                ><h4 class="card-title" style="font-weight: 600; text-transform: capitalize;">{{ data.name }}</h4></span
               >
             </button>
-            <p class="card-text">
-              Main consumer electronics products include radio receivers,
-              television sets, MP3 players.
-            </p>
-            <button class="btn" type="submit">EDIT</button>
+            <div class="card-text example" style="text-align: left;height: 110px; overflow: scroll; overflow-x: hidden;">
+
+              <li style="font-size: 15px;font-family:cursive; text-transform: capitalize;" *ngFor="let k of data['product-items']">{{k.name}}</li>
+
+            </div>
+            <button class="btn mt-3 p-1 float-right" type="submit">EDIT</button>
           </div>
         </div>
       </div>

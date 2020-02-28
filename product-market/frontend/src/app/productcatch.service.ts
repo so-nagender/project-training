@@ -15,7 +15,7 @@ export class ProductcatchService {
   private subjectofcart = new Subject();
 
   getData(): Observable<any> {
-    return this.http.get('/api/product-category');
+    return this.http.get('/api/cats');
   }
 
   signUp(obj): Observable<any> {
@@ -26,11 +26,11 @@ export class ProductcatchService {
     return this.http.post<any>('/api/login', obj);
   }
   deleteData(x: number): Observable<any> {
-    const url = `/api/product-category/${x}`;
+    const url = `/api/cats/${x}`;
     return this.http.delete(url);
   }
   postValue(obj): Observable<any> {
-    return this.http.post<any>('/api/product-category', obj);
+    return this.http.post<any>('/api/cats', obj);
   }
 
   sendMessage(message: any) {
@@ -42,7 +42,7 @@ export class ProductcatchService {
   }
 
   getItems(x: number): Observable<any> {
-    const url = `/api/product-items?categoryId=${x}`;
+    const url = `/api/product-items?catId=${x}`;
     return this.http.get(url);
   }
   deleteItem(x: number): Observable<any> {
@@ -92,4 +92,10 @@ export class ProductcatchService {
     const url = `/api/product-items/${x}`;
     return this.http.put<any>(url, obj);
   }
+
+  getidData(): Observable<any> {
+    return this.http.get('/api/cats?_embed=product-items');
+  }
+
+  
 }

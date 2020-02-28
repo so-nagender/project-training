@@ -19,7 +19,7 @@
           >
         </li>
         <li class="nav-item dropdown">
-          <a
+          <a [routerLink]="['/categories']"
             class="nav-link dropdown-toggle"
             href="#"
             id="navbarDropdown"
@@ -32,7 +32,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a
-              [routerLink]="['/items', data.id]"
+              [routerLink]="['/items/category', data.id]"
               class="dropdown-item"
               *ngFor="let data of datas"
             >

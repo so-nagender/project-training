@@ -23,7 +23,6 @@ export class ListComponent implements OnInit {
     this.activatedRoute.data.subscribe(data => {
       this.datas = data.data;
       this.datas.forEach(item => (item.rating = parseInt(item.rating,10)));
-      console.log(this.datas);
     });
     this.serve.getnewItem().subscribe(() => {
       const varId = this.activatedRoute.snapshot.params.id;
@@ -36,10 +35,11 @@ export class ListComponent implements OnInit {
 
   onClose(param) {
     const x = param.id;
-    const catId = param.categoryId;
+    const catId = param.catId;
     this.serve.deleteItem(x).subscribe();
     this.serve.getItems(catId).subscribe(param => {
       this.datas = param;
+      this.datas.forEach(item => (item.rating = parseInt(item.rating,10)))
     });
   }
 

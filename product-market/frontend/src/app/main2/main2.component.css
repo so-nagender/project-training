@@ -10,6 +10,7 @@
 
   font-size: 15px;
   text-align: center;
+  vertical-align: inherit;
 }
 .images2 {
   height: auto;
@@ -37,4 +38,8 @@
 }
 .rounded-0 {
   width: auto;
+}
+
+.example {
+  -ms-overflow-style: none;
 }

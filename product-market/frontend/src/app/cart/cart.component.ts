@@ -47,10 +47,9 @@ export class CartComponent implements OnInit {
     ) {
       const id = this.activatedRoute.snapshot["_routerState"]._root.children[0]
         .value.params.id;
-      const url = `items/${id}`;
+      const url = `items/category/${id}`;
       this.router.navigate([url]);
     } else {
-      console.log("2");
       this.router.navigate(["/categories"], {
         relativeTo: this.activatedRoute
       });
