@@ -1,6 +1,11 @@
 {
   "catogries": [
     {
+      "id": 1,
+      "title": "horror",
+      "description": "Horror literature has roots in religion, folklore, and history; "
+    },
+    {
       "title": "adventure",
       "id": 2,
       "description": "Adventure (pronounced ad-ven-cher) was originally a Middle English word derived from the Old French aventure "
@@ -12,6 +17,50 @@
     }
   ],
   "books": [
+    {
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
+      "catogrieId": "2",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
+      "updatedAt": 1582708851837,
+      "id": 2
+    },
+    {
+      "BookName": "ghgfhgf",
+      "AuthorName": "uiou",
+      "catogrieId": "2",
+      "description": "ioui",
+      "updatedAt": 1582789921578,
+      "id": 3
+    },
+    {
+      "id": 5,
+      "BookName": "The Haunting of Hill House",
+      "AuthorName": "Shirley Jackson",
+      "catogrieId": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
+    },
+    {
+      "id": 6,
+      "BookName": "Dracula",
+      "AuthorName": "Bram Stoker",
+      "catogrieId": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
+    },
+    {
+      "id": 8,
+      "BookName": "The Shining",
+      "AuthorName": "Stephen King",
+      "catogrieId": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
+    },
+    {
+      "id": 10,
+      "BookName": "Rebecca",
+      "AuthorName": "Daphne du Maurier",
+      "catogrieId": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
+    },
     {
       "id": 11,
       "BookName": "The Odyssey",
@@ -105,193 +154,227 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
     },
     {
-      "BookName": "sthsy",
-      "AuthorName": "asdasdasd",
-      "catogrieId": "2",
-      "description": "asdasdasdasd",
-      "createdAt": 1582804085034,
-      "updatedAt": 1582804085034,
-      "id": 25
+      "id": 25,
+      "BookName": "Good Omens",
+      "AuthorName": "Terry Pratchett and Neil Gaiman",
+      "catogrieId": 3,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
     },
     {
-      "BookName": "asdasdasd",
-      "AuthorName": "dsfsfsdf",
+      "BookName": "Intercepts",
+      "AuthorName": "shiwani",
       "catogrieId": "3",
-      "description": "sdfsdfsdfsdfsdf",
-      "createdAt": 1582804225695,
-      "updatedAt": 1582804225695,
+      "description": "fhfhffhfhf",
+      "createdAt": 1582715582199,
+      "updatedAt": 1582715582199,
       "id": 26
     },
     {
-      "BookName": "sthsy",
-      "AuthorName": "T. J. Payne",
-      "catogrieId": "3",
-      "description": "asdasdassssssssssadddd",
-      "createdAt": 1582804502331,
-      "updatedAt": 1582804502331,
+      "BookName": "ewe",
+      "AuthorName": "werw",
+      "catogrieId": "2",
+      "description": "erwer",
+      "createdAt": 1582789988352,
+      "updatedAt": 1582789988352,
       "id": 27
     },
     {
-      "BookName": "asdasdasd",
-      "AuthorName": "asdasdasdasd",
+      "BookName": "Intercepts",
+      "AuthorName": "werwerwe",
       "catogrieId": "2",
-      "description": "asdasdasdasd",
-      "createdAt": 1582804677282,
-      "updatedAt": 1582804677282,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
+      "createdAt": 1582875435201,
+      "updatedAt": 1582875435201,
       "id": 28
     },
     {
-      "BookName": "asdasdas",
-      "AuthorName": "dasdasdasdasd",
-      "catogrieId": "2",
-      "description": "asdasdasdasdasdasdasd",
-      "createdAt": 1582804761679,
-      "updatedAt": 1582804761679,
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
+      "catogrieId": "3",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
+      "createdAt": 1582875462574,
+      "updatedAt": 1582875462574,
       "id": 29
     },
     {
-      "BookName": "asdasdasd",
-      "AuthorName": "asdasdas",
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
       "catogrieId": "3",
-      "description": "asdasdasdasdasdasdasd",
-      "createdAt": 1582804788019,
-      "updatedAt": 1582804788019,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
+      "createdAt": 1582875467030,
+      "updatedAt": 1582875467030,
       "id": 30
     },
     {
-      "BookName": "asdasdasd",
-      "AuthorName": "asdasdas",
-      "catogrieId": "3",
-      "description": "asdasdasdasdasdasdasd",
-      "createdAt": 1582804820879,
-      "updatedAt": 1582804820879,
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
+      "catogrieId": "2",
+      "description": "adasdasdasdasdasdasdasdas",
+      "createdAt": 1582875611639,
+      "updatedAt": 1582875611639,
       "id": 31
     },
     {
-      "BookName": "asdasdasd",
-      "AuthorName": "asdasdas",
-      "catogrieId": "3",
-      "description": "asdasdasdasdasdasdasd",
-      "createdAt": 1582804822303,
-      "updatedAt": 1582804822303,
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
+      "catogrieId": "2",
+      "description": "qweqweqweqweqweqweqw",
+      "createdAt": 1582875652319,
+      "updatedAt": 1582875652319,
       "id": 32
     },
     {
-      "BookName": "asdasdasd",
-      "AuthorName": "asdasdas",
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
       "catogrieId": "3",
-      "description": "asdasdasdasdasdasdasd",
-      "createdAt": 1582804822443,
-      "updatedAt": 1582804822443,
+      "description": "asdasdasd",
+      "createdAt": 1582875826151,
+      "updatedAt": 1582875826151,
       "id": 33
     },
     {
-      "BookName": "asdasdasd",
-      "AuthorName": "asdasdas",
+      "BookName": "Intercepts",
+      "AuthorName": "222222",
       "catogrieId": "3",
-      "description": "asdasdasdasdasdasdasd",
-      "createdAt": 1582804822553,
-      "updatedAt": 1582804822553,
+      "description": "asdasdasd",
+      "createdAt": 1582875835671,
+      "updatedAt": 1582875835671,
       "id": 34
     },
     {
-      "BookName": "asdasdasd",
-      "AuthorName": "asdasdas",
+      "BookName": "Intercepts",
+      "AuthorName": "222222",
       "catogrieId": "3",
-      "description": "asdasdasdasdasdasdasd",
-      "createdAt": 1582804822624,
-      "updatedAt": 1582804822624,
+      "description": "asdasdasd",
+      "createdAt": 1582875839735,
+      "updatedAt": 1582875839735,
       "id": 35
     },
     {
-      "BookName": "adasda",
-      "AuthorName": "asdasdas",
-      "catogrieId": "3",
-      "description": "asdasdasdasdasdasdasd",
-      "createdAt": 1582804852847,
-      "updatedAt": 1582804852847,
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
+      "catogrieId": "2",
+      "description": "d",
+      "createdAt": 1582875891673,
+      "updatedAt": 1582875891673,
       "id": 36
     },
     {
-      "BookName": "adasda",
-      "AuthorName": "asdasdas",
-      "catogrieId": "3",
-      "description": "asdasdasdasdasdasdasd",
-      "createdAt": 1582804857422,
-      "updatedAt": 1582804857422,
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
+      "catogrieId": "2",
+      "description": "d",
+      "createdAt": 1582875892990,
+      "updatedAt": 1582875892990,
       "id": 37
     },
     {
-      "BookName": "adad",
-      "AuthorName": "asdasda",
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
       "catogrieId": "2",
-      "description": "adasdasdasdasd",
-      "createdAt": 1582804941713,
-      "updatedAt": 1582804941713,
+      "description": "d",
+      "createdAt": 1582875894348,
+      "updatedAt": 1582875894348,
       "id": 38
     },
     {
-      "BookName": "sdasdasdasd",
-      "AuthorName": "asda",
-      "catogrieId": "3",
-      "description": "asdasdasdasdaasda",
-      "createdAt": 1582805022350,
-      "updatedAt": 1582805022350,
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
+      "catogrieId": "2",
+      "description": "d",
+      "createdAt": 1582875894532,
+      "updatedAt": 1582875894532,
       "id": 39
     },
     {
-      "BookName": "qwesd",
+      "BookName": "Intercepts12w3",
       "AuthorName": "T. J. Payne",
-      "catogrieId": "3",
-      "description": "adadasdasd",
-      "createdAt": 1582805170144,
-      "updatedAt": 1582805170144,
+      "catogrieId": "2",
+      "description": "d",
+      "createdAt": 1582875896485,
+      "updatedAt": 1582875896485,
       "id": 40
     },
     {
-      "BookName": "dasd",
-      "AuthorName": "aasdas",
+      "BookName": "Intercepts12w3",
+      "AuthorName": "T. J. Payne",
       "catogrieId": "2",
-      "description": "asdasdasdasdasdasdasd",
-      "createdAt": 1582805403541,
-      "updatedAt": 1582805403541,
+      "description": "d",
+      "createdAt": 1582875904735,
+      "updatedAt": 1582875904735,
       "id": 41
     },
     {
-      "BookName": "dasd",
-      "AuthorName": "aasdas",
+      "BookName": "Intercepts12w3",
+      "AuthorName": "T. J. Payne",
       "catogrieId": "2",
-      "description": "asdasdasdasdasdasdasd",
-      "createdAt": 1582805408205,
-      "updatedAt": 1582805408205,
+      "description": "d",
+      "createdAt": 1582875907246,
+      "updatedAt": 1582875907246,
       "id": 42
     },
     {
-      "BookName": "adasda",
-      "AuthorName": "adasd",
-      "catogrieId": "320",
-      "description": "asdasdasdasdasd",
-      "createdAt": 1582805461590,
-      "updatedAt": 1582805461590,
+      "BookName": "Intercepts131231212w3",
+      "AuthorName": "T. J. Payne",
+      "catogrieId": "2",
+      "description": "d",
+      "createdAt": 1582875912110,
+      "updatedAt": 1582875912110,
       "id": 43
     },
     {
-      "BookName": "adasda",
-      "AuthorName": "adasd",
-      "catogrieId": "320",
-      "description": "asdasdasdasdasd",
-      "createdAt": 1582805470308,
-      "updatedAt": 1582805470308,
+      "BookName": "Intercepts131231212w3",
+      "AuthorName": "T. J. Payne",
+      "catogrieId": "3",
+      "description": "d",
+      "createdAt": 1582875915621,
+      "updatedAt": 1582875915621,
       "id": 44
     },
     {
-      "BookName": "adasda",
-      "AuthorName": "adasd",
-      "catogrieId": "320",
-      "description": "asdasdasdasdasd",
-      "createdAt": 1582805473479,
-      "updatedAt": 1582805473479,
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
+      "catogrieId": "3",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
+      "createdAt": 1582875963529,
+      "updatedAt": 1582875963529,
       "id": 45
+    },
+    {
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
+      "catogrieId": "3",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
+      "createdAt": 1582875965701,
+      "updatedAt": 1582875965701,
+      "id": 46
+    },
+    {
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
+      "catogrieId": "3",
+      "description": "123123123",
+      "createdAt": 1582880769129,
+      "updatedAt": 1582880769129,
+      "id": 47
+    },
+    {
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
+      "catogrieId": "3",
+      "description": "123123123",
+      "createdAt": 1582880771088,
+      "updatedAt": 1582880771088,
+      "id": 48
+    },
+    {
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
+      "catogrieId": "3",
+      "description": "123123123",
+      "createdAt": 1582880772933,
+      "updatedAt": 1582880772933,
+      "id": 49
     }
   ],
   "profile": [
@@ -428,18 +511,6 @@
       "password": "111111",
       "createdAt": 1582204575752,
       "updatedAt": 1582204575752
-    },
-    {
-      "name": "sonu@gmail.com",
-      "password": "123456789",
-      "createdAt": 1582698358215,
-      "updatedAt": 1582698358215
-    },
-    {
-      "name": "sonu123@gmail.com",
-      "password": "123456789",
-      "createdAt": 1582698372503,
-      "updatedAt": 1582698372503
     }
   ],
   "movies": [
