@@ -42,7 +42,7 @@ export class EditComponent implements OnInit {
     const obj = { "BookName" : BookName , "AuthorName" : AuthorName, "catogrieId" : CatName, "description" : BookDes };
     this.api.updateBook(obj , this.id).subscribe();
     this.book();
-    this.router.navigate(['viewbook'])
+    this.router.navigate(['/book/view', this.id])
     }
   }
 

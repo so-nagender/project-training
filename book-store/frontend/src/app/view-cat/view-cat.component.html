@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="form-group mb-4">
+        <h2 style="text-align: center; margin-top: 80px;">Categorie View</h2>
+    </div>
+    <div style="text-align: center;">
+        <h2 style="color: blueviolet; margin-top: 50px;" >{{apiCat.title| uppercase}}</h2>
+        <br>
+        <h4 style="margin-top: 25pxpx;">Categorie Description </h4>
+        {{apiCat.description}}
+        <br>
+    </div>
+    <h2 style="text-align: center; color: blueviolet; margin-top: 50px;">Books</h2>
+    <div class="form-group mb-4">
+      <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
+    </div>
+    <table style="width: 100%; margin-bottom: 25px;" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
+        <tr>
+          <th style="width: 33.3%;">Book Name</th>
+          <th style="width: 33.3%;">Book Author</th>
+          <th style="width: 33.3%;">Action</th>
+        </tr>
+        <tr *ngFor="let element of apiBook| filter: searchText  ;">
+          <td>{{element.BookName}}</td>
+          <td>{{element.AuthorName}}</td>
+          <td>
+            <button type="button" class="btn btn-primary" style="margin-right: 10px;" [routerLink]="['/book/view', element.id]">View</button>
+            <button type="button" class="btn btn-primary" style="margin-right: 10px;" [routerLink]="['/book/edit', element.id]">Edit</button>
+            <button type="button" class="btn btn-primary" (click)="onDelete1(element.id)">Delete</button>
+          </td>
+        </tr>
+      
+      
+    </table>
+    <ng-template #noResults>
+      <p>No results found for "{{searchText}}".</p>
+    </ng-template>
+      
+</div>

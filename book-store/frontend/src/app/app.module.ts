@@ -25,7 +25,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ViewComponent } from './view/view.component';
 import { EditComponent } from './edit/edit.component';
 import { AddbookComponent } from './addbook/addbook.component';
-import { ViewbookComponent } from './viewbook/viewbook.component'
+import { ViewbookComponent } from './viewbook/viewbook.component';
+import { EditCatComponent } from './edit-cat/edit-cat.component';
+import { ViewCatComponent } from './view-cat/view-cat.component'
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { ViewbookComponent } from './viewbook/viewbook.component'
     ViewComponent,
     EditComponent,
     AddbookComponent,
-    ViewbookComponent
+    ViewbookComponent,
+    EditCatComponent,
+    ViewCatComponent
   ],
   imports: [
     BrowserModule,

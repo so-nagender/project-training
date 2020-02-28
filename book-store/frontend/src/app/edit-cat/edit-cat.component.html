@@ -1,0 +1,27 @@
+<div class="container midView" style="margin-bottom: 100px; margin-top: 80px; text-align: center;">
+    <h2  style="margin-bottom: 50px;">Edit Categorie Details</h2>
+    <form [formGroup]="formData">
+
+         Catogrie Name:
+        <br>
+        <input id="catname" class="form-control" type="text" [(ngModel)]="apiCat.title" formControlName="catname"
+        [ngClass]="{ 'is-invalid':submitted && u.catname.errors }">
+        <div *ngIf="submitted && u.catname.errors" class="invalid-feedback">
+          <div *ngIf="u.catname.errors.required"> Catogrie Name is required</div>
+        </div>
+        <br>
+        Description:
+        <br>
+        <textarea id="des" class="form-control" type="text" [(ngModel)]="apiCat.description" formControlName="des"
+        [ngClass]="{ 'is-invalid': submitted && u.des.errors }">
+        </textarea>
+        <div *ngIf="submitted && u.des.errors" class="invalid-feedback">
+          <div *ngIf="u.des.errors.required">Description is required</div>
+      </div>
+        <div style="margin-top: 10px;">
+            <button type="submit" [disabled]="!ngForm.valid" class="btn btn-primary" (click)="onUpdateCat()"> Update </button>
+            <button type="button" class="btn btn-primary" style="margin-left: 10px;" routerLink="/categories">Cancle</button>
+        </div>
+    </form>
+</div> 
+

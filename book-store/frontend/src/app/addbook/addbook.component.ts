@@ -39,13 +39,13 @@ export class AddbookComponent implements OnInit {
     const BookDes = this.formData.controls.des.value;
     const obj = { "BookName" : BookName , "AuthorName" : AuthorName, "catogrieId" : CatName, "description" : BookDes };
   
-    const apihit =this.api.addBook(obj).subscribe();
-    if(apihit){
-      console.log('value--->>>>>',obj)
-      this.bookDataArr.push(obj)
-      console.log('new array',this.bookDataArr)
-      
+    const apihit =this.api.addBook(obj).subscribe((res)=>{
+      this.bookDataArr.push(res)
     }
+    );
+
+      
+    
 
  
    

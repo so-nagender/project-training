@@ -1,61 +1,23 @@
 <div class="view">
 <div class="container">
-  <div class="row row-cols-3">
-    
-    <div class="col"><button class="upper-button" (click)=setview()>View All Books</button></div>
-    <div class="col"><button class="upper-button" routerLink="/categories">View categories Book</button></div>
-  </div>
-    
-    
-    
-    
+  <div class="form-group mb-4">
   
-    <div class="form-group mb-4">
-      <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
-    </div>
-    <div *ngIf="!showcategoryview">
-
-    <table class="table" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
-      <colgroup>
-        <col width="5%">
-        <col width="*">
-        <col width="25%">
-        <col width="15%">
-        <col width="25%">
-      </colgroup>
-      <thead>
-        <tr class="table_head">
-          <th scope="col">#</th>
-          <th scope="col">Book Name </th>
-          <th scope="col">Author Name</th>
-          <th scope="col">Catogery</th>
-          <th scope="col">Action</th>
-          
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let books of apiBook | filter: searchText  ; let i = index">
-          <th scope="row">{{i + 1}}</th>
-            <td>{{books.BookName}}</td>
-            <td>{{books.AuthorName}}</td>
-        <td>{{books.catogrie.title}}</td>
-        <td><button type="button" class="text-center" style="margin-right: 10px;" [routerLink]="['/book/view', books.id]">View</button>
-          <button type="button" class="text-center" style="margin-right: 10px;" [routerLink]="['/book/edit', books.id]">Edit</button>
-          <button type="button" class="text-center" (click)="onDelete(books.id)">Delete</button>
-        </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <ng-template #noResults>
-      <p>No results found for "{{searchText}}".</p>
-    </ng-template>
+  
+  <h2 style="text-align: center;">Categorie View</h2>
+  
+    <!-- <button type="button" class="btn btn-primary float-right" style="margin-right: 10px; margin-top: 50px;" [routerLink]="['/book/edit', apiBook.id]">Edit Detail</button>
+    <button type="button" class="btn btn-primary float-right" style="margin-right: 10px; margin-top: 50px;" routerLink="/viewbook">Back</button> -->
   </div>
+    <!-- <div style="text-align: center;">
+    <h2 style="color: blueviolet; margin-top: 50px;" >{{apiCat.title| uppercase}}</h2>
+    <br>
+    <h4 style="margin-top: 50px;">Categorie Description </h4>
+    {{apiCat.description}}
+    <br>
+    </div> -->
 
 
-
-
-<div *ngIf="showcategoryview" class="container">
+<!-- <div class="container">
  
 <table style="width: 100%;" *ngIf="(getdata | filter: searchText).length > 0; else noResults">
   <tr>
@@ -75,13 +37,8 @@
 
 
 </table>
-<ng-template #noResults>
-  <p>No results found for "{{searchText}}".</p>
-</ng-template>
-</div>
-</div>
 
-
+</div> -->
 
 
 
