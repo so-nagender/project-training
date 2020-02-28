@@ -17,7 +17,7 @@
         <div class="imageinvalid" *ngIf="!Hascatdata"><img src ="../../assets/images/support (1).svg">
         <p class='red'>Server Error</p></div>
           <div class="col-sm-12 border " *ngFor="let data of categoryFormdata"> 
-            <div class="row"><div class="col-sm-4 ">  {{data.title | uppercase}}</div>
+            <div class="row"><div class="col-sm-4 " style="padding-top: 30px;">  {{data.title | uppercase}}</div>
             <div class="col-sm "> <p>{{data.description}} </p> </div>
               <div class="col-sm ">
               <br> <button type="button" class="btn btn-primary buttonCss" (click)="onDeleteCat(data.id)">Delete</button> 
@@ -28,19 +28,20 @@
           </div>
         </div>
       </div>
-      <div class="row-add-image-form popup">
-        <div class="col-sm-4 border" style="height:200px" *ngIf="view_form" #category_form>
+    
+      <div class="popup">
+        <div class="col-sm-5 border" *ngIf="view_form" #category_form>
           <form name="categoryForm" [formGroup]="categoryForm" (ngSubmit)="onSubmit(categoryForm)" class="container">
               <div class="form-row">
                   <div class="col">
                       <div class="cat_name">
-                        <input type="text" id="catname"  class="form-control" formControlName="bookname" [ngClass]="{'is-invalid': categoryForm.get('bookname').touched && categoryForm.get('bookname').invalid}" placeholder="Book Name">
+                        <input type="text" id="catname"  class="form-control" formControlName="bookname" [ngClass]="{'is-invalid': categoryForm.get('bookname').touched && categoryForm.get('bookname').invalid}" placeholder="Category Name">
                           <div class="invalid-feedback">
                             <div>Book Name is Required</div>
                           </div>
                       </div>
-                      <div>
-                        <textarea  rows="3" cols="3" id="catdescription" class="form-control" formControlName="bookdescription" [ngClass]="{'is-invalid': categoryForm.get('bookdescription').touched && categoryForm.get('bookdescription').invalid}" placeholder="Book Description"></textarea>
+                      <div class="cat-desc">
+                        <textarea  rows="3" cols="3" id="catdescription" class="form-control" formControlName="bookdescription" [ngClass]="{'is-invalid': categoryForm.get('bookdescription').touched && categoryForm.get('bookdescription').invalid}" placeholder="Category Description"></textarea>
                           <div class="invalid-feedback">
                             <div>Dscription is Required</div>
                           </div>
@@ -48,7 +49,7 @@
                   </div>
               </div>
               <div class="close">
-                <button (click)="close(categoryForm)">close</button>
+                <button type="button" (click)="close(categoryForm)">close</button>
               </div>
             
               <div class="submit"> 

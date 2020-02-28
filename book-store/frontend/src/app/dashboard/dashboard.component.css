@@ -166,4 +166,32 @@ div span{
 .view{
   padding-top: 10%;
 }
+
+/* sidebar */
+aside{
+    
+background-color: black;
+ font-family: 'Poppins', sans-serif;
+ color:white;
+ height: 100vh;
+ width: 300px;
+ line-height: 5em;
+ position: fixed;
+ text-align: left;
+ left: 0px;
+
+}
+
+aside li{
+ list-style: none;
+ padding: 2px;
+ background-color: black
+}
+
+aside li:hover{
+
+ cursor: pointer;
+ font-size: 30px;
+}
+
 /*-- End --*/

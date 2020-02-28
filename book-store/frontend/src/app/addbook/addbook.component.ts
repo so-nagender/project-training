@@ -15,6 +15,7 @@ export class AddbookComponent implements OnInit {
   apiBook1;
   apiBook2;
   submitted = false;
+  bookDataArr = [];
 
   constructor(private api: ApiService, private http: HttpClient, private formBuilder: FormBuilder, private router: Router) { }
 
@@ -37,10 +38,17 @@ export class AddbookComponent implements OnInit {
     const CatName = this.formData.controls.catname.value;
     const BookDes = this.formData.controls.des.value;
     const obj = { "BookName" : BookName , "AuthorName" : AuthorName, "catogrieId" : CatName, "description" : BookDes };
-    this.api.addBook(obj).subscribe();
-    this.api.getBookDetail(CatName).subscribe()
-    this.book();
-    // this.router.navigate(['viewbook'])
+  
+    const apihit =this.api.addBook(obj).subscribe((res)=>{
+      this.bookDataArr.push(res)
+    }
+    );
+
+      
+    
+
+ 
+   
     }
   }
 

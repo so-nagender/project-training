@@ -13,44 +13,27 @@
     -webkit-box-shadow: 0 0 10px #ccc;
     box-shadow: 0 0 10px #ccc;
     margin-top: 10px;
-    
-    
 }
+
 tr{
     padding: 100px;
     min-height: 100px;
 }
 
-
 .cat_name{
-    margin-top: 4px;
-    margin-bottom: 4px;
-}
-.button{
-  /* right: 1px;
-  bottom: 0%;
-  position: absolute; */
-  border-radius: 25px;
-}
-.close{
-    /* right: 1px;
-    top: 0%;
-    position: absolute; */
-    border-radius: 25px;
+    margin-top: 8px;
+    margin-bottom: 12px;
 }
 div.reset{
     right: 1px;
     bottom: 50%;
     position: absolute;
 }
-/* .form-row{
-    float: center;
-} */
-button[type=submit], [type=reset], [type=close] {
-    background-color:transparent;
-    box-sizing: border-box;
-    cursor:pointer;
 
+button[type=submit], [type=reset], [type=close] {
+    box-sizing: border-box;
+    /* cursor:pointer; */
+    margin-top: 10px;
 }
 
 .imageinvalid img{
@@ -65,8 +48,9 @@ p{
     cursor: pointer;
     margin-top: 26px;
 }
-div .col-sm-4.border{
-    margin-left: 36%;
+div .col-sm-5.border{
+    margin-left: 30%;
+    background-color: black;
 }
 .popup{
     z-index: 1;
@@ -76,6 +60,7 @@ div .col-sm-4.border{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 50%;
+    border-radius: 25px;
 }
 
 .view{
@@ -93,4 +78,14 @@ div .col-sm-4.border{
     text-decoration: underline  #8167a9 ;
     text-decoration-style: solid;
     color:  #8167a9;
+}
+.close{
+    margin-top: 10px;
+    z-index: 1px;
+}
+button{
+    border-radius: 25px;
+}
+p.text-left{
+    text-decoration-color: white;
 }
