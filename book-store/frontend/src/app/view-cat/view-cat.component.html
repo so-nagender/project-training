@@ -23,9 +23,9 @@
           <td>{{element.BookName}}</td>
           <td>{{element.AuthorName}}</td>
           <td>
-            <button type="button" class="btn btn-primary" style="margin-right: 10px;" [routerLink]="['/book/view', element.id]">View</button>
-            <button type="button" class="btn btn-primary" style="margin-right: 10px;" [routerLink]="['/book/edit', element.id]">Edit</button>
-            <button type="button" class="btn btn-primary" (click)="onDelete1(element.id)">Delete</button>
+            <button type="button" class="btn btn-primary buttonCss" style="margin-right: 10px;" [routerLink]="['/book/view', element.id]">View</button>
+            <button type="button" class="btn btn-primary buttonCss" style="margin-right: 10px;" [routerLink]="['/book/edit', element.id]">Edit</button>
+            <button type="button" class="btn btn-primary buttonCss" (click)="onDelete1(element.id)">Delete</button>
           </td>
         </tr>
       
