@@ -26,15 +26,17 @@ tr{
     margin-top: 4px;
     margin-bottom: 4px;
 }
-div.submit{
-  right: 1px;
+.button{
+  /* right: 1px;
   bottom: 0%;
-  position: absolute;
+  position: absolute; */
+  border-radius: 25px;
 }
-div.close{
-    right: 1px;
+.close{
+    /* right: 1px;
     top: 0%;
-    position: absolute;
+    position: absolute; */
+    border-radius: 25px;
 }
 div.reset{
     right: 1px;

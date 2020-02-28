@@ -37,10 +37,10 @@ export class AddbookComponent implements OnInit {
     const CatName = this.formData.controls.catname.value;
     const BookDes = this.formData.controls.des.value;
     const obj = { "BookName" : BookName , "AuthorName" : AuthorName, "catogrieId" : CatName, "description" : BookDes };
-    console.log(obj)
     this.api.addBook(obj).subscribe();
+    this.api.getBookDetail(CatName).subscribe()
     this.book();
-    this.router.navigate(['viewbook'])
+    // this.router.navigate(['viewbook'])
     }
   }
 

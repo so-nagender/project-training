@@ -1,6 +1,6 @@
 
 <div class="container">
-  <h2 style="color: blueviolet; text-align: center;" >Book's Categories</h2>
+  <h2 style="color: blueviolet; text-align: center; margin-top: 50px;" >Book's Categories</h2>
   <div class="row">
     <div class="col-sm-6" >
 
@@ -46,15 +46,13 @@
                           </div>
                       </div>
                   </div>
-                  <div>
-                    <div class="close">
-                      <button (click)="close(categoryForm)" >close</button>
-                    </div>
-                  
-                    <div class="submit"> 
-                      <button type="submit" [disabled]="categoryForm.invalid">submit</button>
-                    </div>
-                  </div>
+              </div>
+              <div class="close">
+                <button (click)="close(categoryForm)">close</button>
+              </div>
+            
+              <div class="submit"> 
+                <button type="submit" [disabled]="categoryForm.invalid">submit</button>
               </div>
           </form>
       </div>
