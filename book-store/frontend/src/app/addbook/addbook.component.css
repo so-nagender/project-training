@@ -36,3 +36,15 @@ table {
     background-color: #dddddd;
   }
 
+  .buttonCss{
+    background: black;
+    border-color: black;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+.buttonCss:hover{
+    text-decoration: underline  #8167a9 ;
+    text-decoration-style: solid;
+    color:  #8167a9;
+}

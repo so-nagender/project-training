@@ -38,9 +38,7 @@ export class AddbookComponent implements OnInit {
     const CatName = this.formData.controls.catname.value;
     const BookDes = this.formData.controls.des.value;
     const obj = { "BookName" : BookName , "AuthorName" : AuthorName, "catogrieId" : CatName, "description" : BookDes };
-  
-    const apihit =this.api.addBook(obj).subscribe((res)=>{
-      this.bookDataArr.push(res)
+    const apihit =this.api.addBook(obj).subscribe((res)=>{this.bookDataArr.push(res)
     }
     );
 

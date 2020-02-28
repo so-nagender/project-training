@@ -191,10 +191,22 @@ aside li{
 aside li:hover{
 
  cursor: pointer;
- font-size: 30px;
+
+ color : #8167a9
 }
 
 .top-space-sidebar{
  padding-top: 50%;
+
+}
+.top-space-sidebar img{
+  max-width: 50%;
+  border: 1px solid #8167a9;
+  border-radius: 50%;
+}
+.top-space-sidebar li{
+  text-align: center;
+  position: relative;
+ 
 }
 /*-- End --*/
