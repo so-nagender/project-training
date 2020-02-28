@@ -1,68 +1,61 @@
-<div class="header-position">
-  <nav
-    class="navbar navbar-expand-lg navbar-dark bg-dark padding_left shadow"
- 
-  >
-    <a class="navbar-brand" href=""
-      ><img src="../../assets/images/book.svg"
-    /></a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse flex" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active flex">
-          <a routerLink="" routerLinkActive="active">Home</a>
-        </li>
-        <li class="nav-item flex" *ngIf="this.buttonisdisabled">
-          <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-        </li>
-        <li class="nav-item flex" *ngIf="this.buttonisdisabled">
-          <a routerLink="/categories" routerLinkActive="active">Categories</a>
-        </li>
-        
-          <li class="nav-item flex"  *ngIf="this.buttonisdisabled">
-            
-            <div class="dropdown" >
-              <button class="btn btn-secondary dropdown-toggle" style="color: black;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                View-Books
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" ><button class="upper-button"  routerLink="/viewbook">View All Books</button></a>
-                <a class="dropdown-item" ><button class="upper-button" routerLink="/categories">Catogrie's Books</button></a>
-              </div>
-            </div>  
-          </li>
-          <li class="nav-item flex" *ngIf="this.buttonisdisabled">
-            <a routerLink="/addbook" routerLinkActive="active">Add-Book</a>
-          </li>
-        
-      </ul>
-      <div class=" my-2 my-lg-0">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item flex" *ngIf="this.buttonisdisabled">
-            <a href="" routerLinkActive="active" (click)="logout()"
-              ><img class="bigimg" src="../../assets/images/shut-down-icon.svg"
-            /></a>
-          </li>
-          <li class="nav-item flex" *ngIf="!this.buttonisdisabled">
-            <a routerLink="/login" routerLinkActive="active"
-              ><img
-                class="bigimg"
-                src="../../assets/images/shut-down-icon (1).svg"
-            /></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
+<!-- chage line -->
+
+
+	<div class="navigation-wrap bg-light start-header start-style">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<nav class="navbar navbar-expand-md navbar-light">
+					
+            <a class="navbar-brand" href=""><img src="../../assets/images/book.svg" alt=""></a>	
+            <ul class="navbar-nav ml-auto py-4 py-md-0">
+            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+              <a class="nav-link" routerLink="" routerLinkActive="active">Home</a>
+            </li>
+          </ul>
+						
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav ml-auto py-4 py-md-0">
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+									
+								</li>
+								
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" routerLink="/categories" routerLinkActive="active" *ngIf="this.buttonisdisabled">Categories</a>
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" routerLink="/addbook" routerLinkActive="active" *ngIf="this.buttonisdisabled">Add Book</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" *ngIf="this.buttonisdisabled">View-Books</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" routerLink="/viewbook">View All Books</a>
+										<a class="dropdown-item" routerLink="/categories">Catogrie's Books</a>
+									</div>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" routerLink="/dashboard" routerLinkActive="active" *ngIf="this.buttonisdisabled">Dashboard</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" *ngIf="this.buttonisdisabled">
+									<a class="nav-link" href="" routerLinkActive="active" (click)="logout()">Logout</a>
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" *ngIf="!this.buttonisdisabled">
+									<a class="nav-link" routerLink="/login" routerLinkActive="active"
+                  >Login</a>
+								</li>
+							</ul>
+						</div>
+						
+					</nav>		
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+

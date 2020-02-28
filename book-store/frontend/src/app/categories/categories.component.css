@@ -75,3 +75,7 @@ div .col-sm-4.border{
     transform: translate(-50%, -50%);
     width: 50%;
 }
+
+.view{
+    padding-top: 10%;
+}
