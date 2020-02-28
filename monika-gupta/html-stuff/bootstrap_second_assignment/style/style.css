@@ -1,0 +1,44 @@
+.containerNew{
+    background-image: url(../back2.jfif);
+    height: auto;
+    max-width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+header{
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    bottom: o;
+    left: 0;
+    right: 0;
+}
+.button2{
+    border-radius: 20px;
+    background: rgba(85, 83, 212, 0.952);
+    margin-right: 10px;
+}
+.section4{
+    background: rgba(253, 250, 243, 0.973);
+}
+.background{
+    background: rgb(28, 4, 94);
+    
+}
+.back{
+    color: whitesmoke;
+}
+.topcolumn a{
+    color: black;
+  }
+.foot{
+    background: black;
+    padding: 40px 40px 10px 40px;
+}
+.topcolumn1 a{
+    color: white;
+}
+.box{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}

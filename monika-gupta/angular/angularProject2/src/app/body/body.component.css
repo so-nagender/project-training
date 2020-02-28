@@ -1,0 +1,14 @@
+.services{
+  padding-top: 70px;
+  font-size: 15px;
+  color: rebeccapurple;
+  text-align: center;
+}
+.box{
+  padding: 50px 20px;
+}
+.boxstyle{
+  padding: 30px 30px;
+  border-radius: 5px;
+  text-align: center;
+}

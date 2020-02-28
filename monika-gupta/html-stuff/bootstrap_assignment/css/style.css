@@ -1,0 +1,57 @@
+.containerNew{
+  background:  linear-gradient(to top right,hsla(303, 63%, 12%, 0.651), rgba(27, 27, 26, 0.87), transparent), url("../team-3-assets/banner.png") no-repeat center;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  padding-top: 10px;  
+}
+.color{
+  background: black !important;
+}
+.dash{
+  padding-top: 10px;
+  padding-bottom: 320px;   
+}
+.bg{
+  background:  linear-gradient(to top right,hsla(303, 63%, 12%, 0.651), rgba(27, 27, 26, 0.87), transparent), url("../team-3-assets/banner.png") no-repeat center;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.topcolumn a{
+  color: white;
+}
+article h2{
+  font-size: 55px;
+  color: white;
+  padding: 100px 390px 220px 260px;
+}
+.button2{
+  border-radius: 20px;
+  background: rgba(85, 83, 212, 0.952);
+  margin-right: 10px;
+}
+article h4{
+  font-size: 25px;
+  padding: 20px 480px;
+  text-align: center;
+}
+.service{
+  padding-top: 70px;
+  font-size: 15px;
+  color: rebeccapurple;
+}
+.box{
+  padding: 50px 20px;
+}
+.boxstyle{
+  padding: 30px 30px;
+  border-radius: 5px;
+}
+.foot{
+  background: black;
+  padding: 40px 40px 10px 40px;
+}
