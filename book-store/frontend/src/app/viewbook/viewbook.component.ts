@@ -11,6 +11,7 @@ export class ViewbookComponent implements OnInit {
   searchText: string;
   apiBook;
   id;
+  dis_price: Array<any> = [];
 
   constructor(private api: ApiService, private activatedRoute: ActivatedRoute) { 
     this.id = this.activatedRoute.snapshot.params.id;
@@ -18,6 +19,7 @@ export class ViewbookComponent implements OnInit {
 
   ngOnInit() {
     this.book();
+    this.bookprice();
   }
   book(){
     this.api.getBook().subscribe((res)=>{
@@ -33,6 +35,14 @@ export class ViewbookComponent implements OnInit {
     this.api.deleteTeams(id).subscribe();
     this.book();
   } 
+  stars(x) {
+    let item: number[] =[];
+    for(let i=1; i<=x; i++)
+    {
+      item.push(i);
+    }
+    return item;
+  }
 
   bookNameSortAes (){ 
    var table, i, x, y; 
@@ -84,5 +94,21 @@ bookNameSortDes(){
  } 
 }
 
+bookprice()
+{
+  this.api.getBook().subscribe((res)=>{
+   console.log('ress___>>>>',res);
+   res.forEach(element => {
+     if(element.BookPrice == undefined){
+       element.BookPrice = 'free'
+       element.discount = 'no discount'
+     }
+      let dis_price=  element.BookPrice-(element.BookPrice*element.discount/100)
+      console.log('price', dis_price)
+   
+      
+   });
+  });
+}
 
 }

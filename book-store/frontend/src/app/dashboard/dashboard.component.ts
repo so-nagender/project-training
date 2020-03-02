@@ -8,23 +8,13 @@ import { ApiService } from '../api.service';
 })
 export class DashboardComponent implements OnInit {
   userlogindetail;
-  carousleSlide = document.querySelector('.carousel-slide')
-  carouseImages = document.querySelector('.carousel-slide img')
-
-
-  //button
-
-  prevBtn = document.querySelector('#prevBtn')
-  nextBtn = document.querySelector('#nextBtn')
   constructor(private api : ApiService) { }
 
   ngOnInit() {
 
-    
-
     this.userlogindetail= this.api.userdata.value;
     
   }
- 
+
 
 }
