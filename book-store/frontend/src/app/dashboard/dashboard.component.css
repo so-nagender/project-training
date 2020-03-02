@@ -1,3 +1,8 @@
+/* *{
+  box-sizing: border-box;
+} */
+
+
 .padding-top-200px{
     padding-top: 50px;
     padding-bottom: 50px;
@@ -26,72 +31,18 @@ body {
     padding: 5%;
     text-align: center;
   }
-  
-  #slideshow {
-    overflow: hidden;
-    height: 510px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  
-  .slide-wrapper {
-    width: 3330px;
-    -webkit-animation: slide 18s ease infinite;
-   
-  }
-  
-  .slide {
-    float: left;
-    height: 510px;
-    width: 1110px;
-    position: relative;
-  }
-  
-  .slide:nth-child(1) {
-    
+/* carsoule container */
+.carsoule-container{
+  width: 100%;
+  margin: auto;
+  border: 5px solid black;
+}
+.carsoule-slide{
+  display: flex;
+  width: 100%;
+  height: 500%;
+}
 
-    background-size: unset;
-  }
-  
-  .slide:nth-child(2) {
-
-    
-    background-size: unset;
-
-  }
-  
-  .slide:nth-child(3) {
-
- 
-    background-size: unset;
-
-
-  }
-  
-  .slide-number {
-    
-    text-align: center;
-    padding-left: 45%;
-    background: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    bottom: 15%;
-    width: 100%;
-    left: 0;
-    
-  }
-  h1{
-    color: white;
-    z-index: 1;
-    font-size: 75px;
-    
-  }
-  @-webkit-keyframes slide {
-    10% {margin-left: 0px;}
-    20% {margin-left: -1110px;}
-    30% {margin-left: -2220px;}
-   
-    
-  }
 
 /*-- Dashboard book boxes Work--*/
 .container {
@@ -173,7 +124,7 @@ aside{
 background-color: black;
  font-family: 'Poppins', sans-serif;
  color:white;
- height: 100vh;
+ height: 98%;
  width: 300px;
  line-height: 5em;
  position: fixed;
@@ -191,7 +142,22 @@ aside li{
 aside li:hover{
 
  cursor: pointer;
- font-size: 30px;
+
+ color : #8167a9
 }
 
+.top-space-sidebar{
+ padding-top: 50%;
+
+}
+.top-space-sidebar img{
+  max-width: 50%;
+  border: 1px solid #8167a9;
+  border-radius: 50%;
+}
+.top-space-sidebar li{
+  text-align: center;
+  position: relative;
+ 
+}
 /*-- End --*/

@@ -1,49 +1,28 @@
 <div class="container-fluid  padding-top-200px">
   <aside>
-    <ul>
+    <ul class="top-space-sidebar">
+      <li><img src="../../assets/images/user.svg"> </li>
     <li>{{userlogindetail}} </li>
-    <li>infomation 2 </li>
-    <li>infomation 3 </li>
-    <li>infomation 4 </li>
-    <li>infomation 4 </li>    
-    <li>infomation 5 </li>
+    
+    <li routerLink="/categories"> Categories </li>
+    <li>description1 </li>
+    <li>description1 </li>    
+    <li>description1 </li>
 
     </ul>
 </aside>
 <div class="container  view">
-  
-    
-    <div id="slideshow">
-        <div class="slide-wrapper">
-          <div class="slide">
-    
-            <img src="../../assets/images/adventure/adventure1.jpg">
-            <img src="../../assets/images/adventure/adventure2.jpg">
-            <img src="../../assets/images/adventure/adventure3.jpg">
-            <img src="../../assets/images/adventure/adventure4.jpg">
-            
-            
-            
-            <h1 class="slide-number">adventure</h1></div>
-          <div class="slide">
-              <div class="container-fluid">
-            <img src="../../assets/images/fantasy/fantasy1.jpg">
-            <img src="../../assets/images/fantasy/fantasy2.jpg">
-            <img src="../../assets/images/fantasy/fantasy5.jpg">
-        </div>
-            <h1 class="slide-number">Fantasy</h1></div>
-          <div class="slide">
-            <img src="../../assets/images/horro//horror1.jpg">
-            <img src="../../assets/images/horro//horror2.jpg">
-            <img src="../../assets/images/horro//horror3.jpg">
-            <img src="../../assets/images/horro//horror4.jpg">
-            <img src="../../assets/images/horro/horror5.jpg">  
-      
-            <h1 class="slide-number">Horror</h1></div> 
-        </div>
-      </div>
+  <div class= "carsoule-container">
+    <div class="carsoule-slide">
+      <img src ="../../assets/images/Eaton-collage.jpg" id ="lastClone">
+      <img src ="../../assets/images/GiftBooksCollage-1.jpg">
+      <img src ="../../assets/images/scary-stories-collage-1024x332.jpg">
+      <img src ="../../assets/images/Eaton-collage.jpg">
+      <img src ="../../assets/images/GiftBooksCollage-1.jpg" id ="firstClone">
+    </div>
 </div>
-
+<button id = "prevBtn">Prev</button>
+<button id ="nextBtn">Next</button>
 <div class="line container"></div>
 <div class="books-section  padding-top-200px container">
   <div class="row row-cols-4">
