@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiserviceService } from '../apiservice.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
@@ -15,20 +15,28 @@ export class ListComponent implements OnInit {
   cat: any;
   catid: any;
   catogry: any;
+  catg: any;
   constructor(private myservice: ApiserviceService, private activatedRoute: ActivatedRoute, private router: Router) {
     let id = this.activatedRoute.snapshot.params.id;
+    // override the route reuse strategy
+    // this.router.routeReuseStrategy.shouldReuseRoute = function () {
+    //   return false;
+    // }
+    // this.router.events.subscribe((evt) => {
+    //   if (evt instanceof NavigationEnd) {
+    //     // trick the Router into believing it's last link wasn't previously loaded
+    //     this.router.navigated = false;
+    //   }
+    // });
   }
 
   ngOnInit() {
-   
-    this.getCatById();
-    this.getMovieBySubject();
+    // this.getCatById();
+    // this.getMovieBySubject();
     this.getMovies();
   }
   getMovies() {
     this.myservice.getMovies().subscribe(res => {
-      console.log('movies direct')
-      console.log(this.activatedRoute)
       this.movies = res;
     });
   }
@@ -36,18 +44,15 @@ export class ListComponent implements OnInit {
     this.myservice.getData().subscribe(id => {
       this.catid = id;
       this.myservice.getMoviesByCatg(this.catid).subscribe(res => {
-        console.log(res)
-        console.log('cat id')
-        console.log(this.activatedRoute)
-        this.movies = res;
+        this.catg = res.genre;
+        this.movies = res.movies;
+
       });
     });
   }
   getMovieBySubject() {
     this.myservice.getDataT().subscribe(response => {
       this.myservice.getMovies().subscribe(res => {
-        console.log('movie subject')
-        console.log(this.activatedRoute)
         this.movies = res;
       })
     })
@@ -58,7 +63,7 @@ export class ListComponent implements OnInit {
       this.movies = res;
     });
   }
- // Get Elements by its category
+  // Get Elements by its category
   getCategory() {
     this.myservice.getCat().subscribe((res) => {
       this.catogry = res;

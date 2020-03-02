@@ -14,8 +14,9 @@ export class ApiserviceService {
     return this.http.get('api/movies?_expand=cat')
   }
   getMoviesByCatg(id): Observable<any> {
-    const add = `api/movies?catId=${id}`
+    const add = `api/cats/${id}?_embed=movies`
     return this.http.get(add);
+    // api/movies?catId=${id}
   }
   signupData(obj): Observable<any> {
     return this.http.post<any>('/api/signup', obj);

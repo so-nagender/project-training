@@ -30,14 +30,14 @@ export class HeaderComponent implements OnInit {
   }
   onSelect(obj) {
     this.myservice.setData(obj.id);
-    this.router.navigate(['list'])
+    // ['/edit', movie.id]
+    // this.router.navigate(['movieByCatg',obj.id])
   }
-  onClick() {
+  onClickMovie() {
     this.myservice.setDataT();
     if(this.activatedRoute.snapshot.routeConfig.path == "list"){
       this.router.navigate(['list']);
-    }
-    else{
+    } else {
       this.router.navigate(['list']);
     }
   }

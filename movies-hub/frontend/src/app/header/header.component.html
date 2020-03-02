@@ -25,7 +25,7 @@
               <table>
               <tr *ngFor="let i of catogry">
                 <th>
-                  <button class="dropdown-item" (click)='onSelect(i)' >{{i.genre}}</button>
+                  <button class="dropdown-item" (click)="onSelect(i)" [routerLink]="['/movieByCatg',i.id]" >{{i.genre}}</button>
                 </th>
               </tr>
             </table>
@@ -35,7 +35,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="onClick()" style="color: white;"><button>Movie List</button> </a>
+          <a class="nav-link" (click)="onClickMovie()" style="color: white;"><button>Movie List</button> </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" (click)=logout() style="color: white;"><button>Log out</button> </a>
