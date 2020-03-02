@@ -26,9 +26,9 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
       "updatedAt": 1582808142016,
       "id": 5,
-      "BookPrice":"500",
+      "BookPrice": "500",
       "discount": "10",
-      "Rating" : "4"
+      "Rating": "4"
     },
     {
       "BookName": "The Odyssey",
@@ -37,18 +37,18 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
       "updatedAt": 1582701955901,
       "id": 11,
-      "BookPrice":"500",
+      "BookPrice": "500",
       "discount": "10",
-      "Rating" : "4"
+      "Rating": "4"
     },
     {
       "id": 12,
       "BookName": "Gulliver's Travels",
       "AuthorName": "Jonathan Swift",
       "catogrieId": 2,
-      "BookPrice":"500",
+      "BookPrice": "500",
       "discount": "10",
-      "Rating" : "4",
+      "Rating": "4",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
     },
     {
@@ -56,9 +56,9 @@
       "BookName": "Moby Dick",
       "AuthorName": "Herman Melville",
       "catogrieId": 2,
-      "BookPrice":"500",
+      "BookPrice": "500",
       "discount": "10",
-      "Rating" : "4",
+      "Rating": "4",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
     },
     {
@@ -68,9 +68,9 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
       "updatedAt": 1582694924222,
       "id": 14,
-      "BookPrice":"500",
+      "BookPrice": "500",
       "discount": "10",
-      "Rating" : "4"
+      "Rating": "4"
     },
     {
       "BookName": "King Solomon's Mines",
@@ -79,9 +79,9 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
       "updatedAt": 1582632421316,
       "id": 15,
-      "BookPrice":"500",
+      "BookPrice": "500",
       "discount": "10",
-      "Rating" : "4"
+      "Rating": "4"
     },
     {
       "BookName": "The Golem and the Djinni",
@@ -90,18 +90,18 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
       "updatedAt": 1582702139798,
       "id": 21,
-      "BookPrice":"500",
+      "BookPrice": "500",
       "discount": "10",
-      "Rating" : "4"
+      "Rating": "4"
     },
     {
       "id": 22,
       "BookName": "Dune",
       "AuthorName": "Frank Herbert",
       "catogrieId": 3,
-      "BookPrice":"500",
+      "BookPrice": "500",
       "discount": "10",
-      "Rating" : "4",
+      "Rating": "4",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
     },
     {
@@ -109,9 +109,9 @@
       "BookName": "The Dark Tower",
       "AuthorName": "Stephen King",
       "catogrieId": 3,
-      "BookPrice":"500",
+      "BookPrice": "500",
       "discount": "10",
-      "Rating" : "4",
+      "Rating": "4",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
     },
     {
@@ -119,9 +119,9 @@
       "BookName": "A Game of Thrones",
       "AuthorName": "George R.R. Martin",
       "catogrieId": 3,
-      "BookPrice":"500",
+      "BookPrice": "500",
       "discount": "10",
-      "Rating" : "4",
+      "Rating": "4",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
     },
     {
@@ -132,9 +132,9 @@
       "createdAt": 1582700895510,
       "updatedAt": 1582700895510,
       "id": 25,
-      "BookPrice":"500",
+      "BookPrice": "500",
       "discount": "10",
-      "Rating" : "4"
+      "Rating": "4"
     },
     {
       "BookName": "csdcd",
@@ -144,9 +144,9 @@
       "createdAt": 1582702712710,
       "updatedAt": 1582702712710,
       "id": 26,
-      "BookPrice":"500",
+      "BookPrice": "500",
       "discount": "10",
-      "Rating" : "4"
+      "Rating": "4"
     },
     {
       "BookName": "The Haunting of Hill House111",
@@ -155,9 +155,9 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
       "updatedAt": 1582709555064,
       "id": 27,
-      "BookPrice":"500",
+      "BookPrice": "500",
       "discount": "10",
-      "Rating" : "4"
+      "Rating": "4"
     },
     {
       "BookName": "Intercepts",
@@ -167,9 +167,45 @@
       "createdAt": 1582709711646,
       "updatedAt": 1582709711646,
       "id": 28,
-      "BookPrice":"500",
+      "BookPrice": "500",
       "discount": "10",
-      "Rating" : "4"
+      "Rating": "4"
+    },
+    {
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
+      "catogrieId": "1",
+      "description": "erfertfe",
+      "createdAt": 1582895029260,
+      "updatedAt": 1582895029260,
+      "id": 29
+    },
+    {
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
+      "catogrieId": "1",
+      "description": "erfertfe",
+      "createdAt": 1582895031002,
+      "updatedAt": 1582895031002,
+      "id": 30
+    },
+    {
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
+      "catogrieId": "1",
+      "description": "erfertfe",
+      "createdAt": 1582895031253,
+      "updatedAt": 1582895031253,
+      "id": 31
+    },
+    {
+      "BookName": "Intercepts",
+      "AuthorName": "T. J. Payne",
+      "catogrieId": "1",
+      "description": "erfertfe",
+      "createdAt": 1582895031385,
+      "updatedAt": 1582895031385,
+      "id": 32
     }
   ],
   "profile": [

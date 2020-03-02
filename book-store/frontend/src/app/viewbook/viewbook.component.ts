@@ -33,6 +33,14 @@ export class ViewbookComponent implements OnInit {
     this.api.deleteTeams(id).subscribe();
     this.book();
   } 
+  stars(x) {
+    let item: number[] =[];
+    for(let i=1; i<=x; i++)
+    {
+      item.push(i);
+    }
+    return item;
+  }
 
   bookNameSortAes (){ 
    var table, i, x, y; 

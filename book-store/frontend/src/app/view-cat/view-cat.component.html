@@ -13,24 +13,36 @@
     <div class="form-group mb-4">
       <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
     </div>
-    <table style="width: 100%; margin-bottom: 25px;" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
-        <tr>
-          <th style="width: 33.3%;">Book Name</th>
-          <th style="width: 33.3%;">Book Author</th>
-          <th style="width: 33.3%;">Action</th>
-        </tr>
-        <tr *ngFor="let element of apiBook| filter: searchText  ;">
-          <td>{{element.BookName}}</td>
-          <td>{{element.AuthorName}}</td>
-          <td>
-            <button type="button" class="btn btn-primary buttonCss" style="margin-right: 10px;" [routerLink]="['/book/view', element.id]">View</button>
-            <button type="button" class="btn btn-primary buttonCss" style="margin-right: 10px;" [routerLink]="['/book/edit', element.id]">Edit</button>
-            <button type="button" class="btn btn-primary buttonCss" (click)="onDelete1(element.id)">Delete</button>
-          </td>
-        </tr>
-      
-      
-    </table>
+    <ul class="list-group" style="margin-bottom: 25px;" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
+    <li class="list-group-item" *ngFor="let books of apiBook | filter: searchText" >
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="../../assets/images/bookview.png" height="200px"> 
+
+        </div>
+        <div class="col-sm-8"> 
+          <div class="row">
+            <div class="col-sm-8"> 
+              <b>Book Name-</b>{{books.BookName | uppercase}}
+            </div>
+            <div class="col-sm-4"> 
+              <span *ngFor = 'let i of stars(books.Rating)' class="fa fa-star checked" style="color: orange;"></span>
+              <span *ngFor = 'let i of stars(5-books.Rating)' class="fa fa-star"></span>
+
+            </div>
+
+          </div>
+          <b>Author Name-</b>{{books.AuthorName}}
+          <br>
+          <b>Description-</b>{{books.description}}
+          <br>
+          <b>Price-</b>{{books.BookPrice}}
+
+        </div>
+
+      </div>
+    </li>
+  </ul>
     <ng-template #noResults>
       <p>No results found for "{{searchText}}".</p>
     </ng-template>

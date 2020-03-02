@@ -3,9 +3,43 @@
     <div class="form-group mb-10">
         <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
     </div>
+    <ul class="list-group" style="margin-bottom: 25px;" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
+      <li class="list-group-item" *ngFor="let books of apiBook | filter: searchText" >
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="../../assets/images/bookview.png" height="200px"> 
+
+          </div>
+          <div class="col-sm-8"> 
+            <div class="row">
+              <div class="col-sm-8"> 
+                <b>Book Name-</b>{{books.BookName | uppercase}}
+              </div>
+              <div class="col-sm-4"> 
+                <span *ngFor = 'let i of stars(books.Rating)' class="fa fa-star checked" style="color: orange;"></span>
+                <span *ngFor = 'let i of stars(5-books.Rating)' class="fa fa-star"></span>
+
+              </div>
+
+            </div>
+            <b>Author Name-</b>{{books.AuthorName}}
+            <br>
+            <b>Categorie Name-</b>{{books.catogrie.title}}
+            <br>
+            <b>Price-</b><del>{{books.BookPrice}}</del>
+            <br>
+            <b>Discount</b>
+            <button type="button" class="btn btn-primary buttonCss" style="margin-right: 10px;" [routerLink]="['/book/view', books.id]">View</button>
+
+          </div>
+          
+
+        </div>
+      </li>
+    </ul>
     
   
-      <table id="bookTable" class="table" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
+      <!-- <table id="bookTable" class="table" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
         <colgroup>
           <col width="5%">
           <col width="*">
@@ -36,7 +70,7 @@
           </td>
           </tr>
         </tbody>
-      </table>
+      </table> -->
   
       <ng-template #noResults>
         <p>No results found for "{{searchText}}".</p>
