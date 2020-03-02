@@ -29,6 +29,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { FilterdataPipe } from './filterdata.pipe';
 import { CatviewComponent } from './catview/catview.component';
 import { EditgenreComponent } from './editgenre/editgenre.component';
+import { WatchlistComponent } from './watchlist/watchlist.component';
 
 const appRoutes: Routes = [
   {path:'movielist',component:MovieListComponent},   
@@ -89,6 +90,13 @@ const appRoutes: Routes = [
     resolve: {
       hero: DataResolverService
     }
+   },
+   {
+    path: 'watchlist', 
+    component: WatchlistComponent,
+    resolve: {
+      hero: DataResolverService
+    }
    }
 
 ];
@@ -111,6 +119,7 @@ const appRoutes: Routes = [
     MovieListComponent,
     CatviewComponent,
     EditgenreComponent,
+    WatchlistComponent,
 
   ],
   imports: [
