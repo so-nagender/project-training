@@ -18,16 +18,9 @@ export class CatviewComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.myservice.getMoviesByCatg(this.id).subscribe(res => {
-      console.log("without subject",this.id)
-      this.movies = res.movies;
-      console.log(this.movies)
-      this.catg = res.genre;
-      this.movies.forEach(item => (item.rating = parseInt(item.rating,10)));
-    });
-    this.myservice.getData().subscribe( () => {
-      const id = this.activatedRoute.snapshot.params.id
-      this.myservice.getMoviesByCatg(id).subscribe(res => {
+    this.myservice.getData().subscribe((catiId) => {
+      const id = catiId;
+      this.getMoviesByCatg(id).subscribe(res => {
         console.log("with subject",id)
         this.catg = res.genre;
         console.log(res)
@@ -35,21 +28,28 @@ export class CatviewComponent implements OnInit {
         this.movies.forEach(item => (item.rating = parseInt(item.rating,10)));
       });
     });
+    this.myservice.setData(this.activatedRoute.snapshot.params.id);
   }
-  
 
-  getMoviesByCatg() {
-    
+  getMoviesByCatg(id) {
+    return this.myservice.getMoviesByCatg(id);
   }
-  getCatById() {
-    this.myservice.getData().subscribe( () => {
-      const id = this.activatedRoute.snapshot.params.id
-      this.myservice.getMoviesByCatg(id).subscribe(res => {
-        console.log(id)
-        this.catg = res.genre;
-        console.log(res)
-        this.movies = res.movies;
-      });
-    });
+  // getCatById() {
+  //   this.myservice.getData().subscribe( () => {
+  //     const id = this.activatedRoute.snapshot.params.id
+  //     this.myservice.getMoviesByCatg(id).subscribe(res => {
+  //       console.log(id)
+  //       this.catg = res.genre;
+  //       console.log(res)
+  //       this.movies = res.movies;
+  //     });
+  //   });
+  // }
+  createRange(num) {
+    const items: number[] = [];
+    for (let i = 1; i <= num; i++) {
+      items.push(i);
+    }
+    return items;
   }
 }

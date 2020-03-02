@@ -79,12 +79,17 @@ const appRoutes: Routes = [
    { 
     path: 'movieByCatg/:id', 
     component: CatviewComponent,
+    resolve: {
+      hero: DataResolverService
+    }
+   },
+   {
     path: 'editgenre/:id', 
     component: EditgenreComponent,
     resolve: {
       hero: DataResolverService
     }
-   },
+   }
 
 ];
 @NgModule({
