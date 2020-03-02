@@ -50,20 +50,20 @@
                     </form>
                 </div> 
             </div>
-            <div class="col">
+            <div class="col-sm">
                 <div class="table-decorator">
                     <p class="text-center">Your Added Book</p>
                     <table>
                         <tr>
                         <th>BookName</th>
                         <th>AuthorName</th>
-                        <th>Category</th>
+               
                         </tr>
-                        <tr *ngFor="let books of apiBook">
-                        <th scope="row">{{i + 1}}</th>
+                        <tr *ngFor="let books of bookDataArr">
+                    
                         <td>{{books.BookName}}</td>
                         <td>{{books.AuthorName}}</td>
-                        <td>{{books.catogrie.title}}</td>
+     
                         </tr>
                     </table>
                 </div>

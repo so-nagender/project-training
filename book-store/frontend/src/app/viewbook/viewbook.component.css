@@ -10,3 +10,25 @@
     text-decoration-style: solid;
     color:  #8167a9;
 }
+
+.discounted{
+
+    position: absolute;
+    background-color: red;
+    padding: 3px ;
+    border-radius: 50px 50px 50px 50px ;
+    position: absolute;
+    top: 8px;
+    right: 120px;
+}
+.book-image-container{
+    position: relative;
+    text-align: center;
+    color: white;
+
+    
+}
+.book-image-container img{
+ 
+    
+}

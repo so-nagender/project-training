@@ -27,7 +27,8 @@
       "BookPrice": "500",
       "discount": 15,
       "updatedAt": 1583144620437,
-      "id": 5
+      "id": 5,
+      "Rating": "2"
     },
     {
       "BookName": "The Odyssey",
@@ -108,7 +109,7 @@
       "BookName": "The Dark Tower",
       "AuthorName": "Stephen King",
       "catogrieId": 3,
-      "BookPrice": "500",
+      "BookPrice": "100",
       "discount": "10",
       "Rating": "4",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
@@ -118,7 +119,7 @@
       "BookName": "A Game of Thrones",
       "AuthorName": "George R.R. Martin",
       "catogrieId": 3,
-      "BookPrice": "500",
+      "BookPrice": "5600",
       "discount": "10",
       "Rating": "4",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
@@ -131,7 +132,7 @@
       "createdAt": 1582700895510,
       "updatedAt": 1582700895510,
       "id": 25,
-      "BookPrice": "500",
+      "BookPrice": "200",
       "discount": "10",
       "Rating": "4"
     },
@@ -143,7 +144,7 @@
       "createdAt": 1582702712710,
       "updatedAt": 1582702712710,
       "id": 26,
-      "BookPrice": "500",
+      "BookPrice": "550",
       "discount": "10",
       "Rating": "4"
     },
@@ -154,7 +155,7 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
       "updatedAt": 1582709555064,
       "id": 27,
-      "BookPrice": "500",
+      "BookPrice": "5400",
       "discount": "10",
       "Rating": "4"
     },

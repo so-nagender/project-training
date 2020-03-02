@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     const apicall =this.api.postlogin(this.form.value.email, this.form.value.password).subscribe((data: any)=> {
       localStorage.setItem("accessToken", data.accessToken);
       this.api.insertuserdata(this.form.value.email);
-      
+      console.log('here--->>>>>>>>>>>>>>>>>>>>>>',this.api.userdata)
       if(data!= null){
         this.routes.navigate(['/dashboard'])
  

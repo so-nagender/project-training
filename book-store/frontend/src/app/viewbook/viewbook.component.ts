@@ -11,6 +11,8 @@ export class ViewbookComponent implements OnInit {
   searchText: string;
   apiBook;
   id;
+  bookdata: any;
+
 
   constructor(private api: ApiService, private activatedRoute: ActivatedRoute) { 
     this.id = this.activatedRoute.snapshot.params.id;
@@ -18,12 +20,19 @@ export class ViewbookComponent implements OnInit {
 
   ngOnInit() {
     this.book();
+  
   }
   book(){
     this.api.getBook().subscribe((res)=>{
+     
       this.apiBook = res;
     });
     this.api.getCat().subscribe((res)=>{
+      res = res.map(item => ({
+        ...item,
+        discountPrice: item.BookPrice-(item.BookPrice*item.discount/100)
+      }))
+      console.log('mapped data',res)
       this.apiBook = res;
     });
   }
@@ -90,6 +99,19 @@ export class ViewbookComponent implements OnInit {
 //          switching = true; 
 //      } 
 //  } 
+// }
+
+// bookprice()
+// {
+//   this.api.getBook().subscribe((res)=>{
+ 
+//    res = res.map(item => ({
+//     ...item,
+//     discountPrice: item.BookPrice-(item.BookPrice*item.discount/100)
+//   }))
+//    console.log('mapped data', res)
+//    return this.bookdata = res;
+//   });
 // }
 
 
