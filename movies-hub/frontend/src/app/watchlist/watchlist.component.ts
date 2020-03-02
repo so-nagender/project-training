@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiserviceService } from '../apiservice.service';
 
 @Component({
   selector: 'app-watchlist',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./watchlist.component.css']
 })
 export class WatchlistComponent implements OnInit {
+  movies: any;
 
-  constructor() { }
+  constructor(private myservice: ApiserviceService) { }
 
   ngOnInit() {
+    this.getWL();
+  }
+  getWL() {
+    this.myservice.getWatchList().subscribe((res) => {
+      this.movies = res;
+      console.log(this.movies);
+    });
   }
 
 }

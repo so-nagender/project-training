@@ -30,6 +30,7 @@ import { FilterdataPipe } from './filterdata.pipe';
 import { CatviewComponent } from './catview/catview.component';
 import { EditgenreComponent } from './editgenre/editgenre.component';
 import { WatchlistComponent } from './watchlist/watchlist.component';
+import { CookieService } from 'ngx-cookie-service';
 
 const appRoutes: Routes = [
   {path:'movielist',component:MovieListComponent},   
@@ -145,7 +146,9 @@ const appRoutes: Routes = [
     provide: HTTP_INTERCEPTORS,
     useClass: Interceptor,
     multi: true
-  }],
+  },
+  CookieService,
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

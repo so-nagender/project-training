@@ -76,4 +76,12 @@ export class ApiserviceService {
     const cat = `/api/cats/${id}`;
     return this.http.put(cat, obj)
   }
+  setWatchList(id,obj): Observable<any> {
+    const url = `/api/watchlists/${id}`
+    return this.http.put<any>(url, obj);
+  }
+  getWatchList(): Observable<any> {
+    const url = `/api/watchlists?_expand=movie`
+    return this.http.get(url)
+  }
 }

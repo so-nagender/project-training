@@ -13,7 +13,6 @@ export class EditgenreComponent implements OnInit {
   checkoutForm: FormGroup;
   catogry: any;
   id;
-
   constructor(private checkout: FormBuilder, private activatedRoute: ActivatedRoute, private myservice: ApiserviceService, private route: Router) { 
     this.id = this.activatedRoute.snapshot.params.id;
     this.checkoutForm= this.checkout.group({
@@ -43,7 +42,6 @@ export class EditgenreComponent implements OnInit {
     const obj= {genre: genres, desc: describe};
     this.myservice.updateCat(this.id, obj).subscribe();
     this.route.navigate(['/Genres']);
-
     }
     
   }

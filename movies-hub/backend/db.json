@@ -64,12 +64,6 @@
       "updatedAt": 1582114213608
     },
     {
-      "name": "rajuuu",
-      "password": "12344",
-      "createdAt": 1582114442950,
-      "updatedAt": 1582114442950
-    },
-    {
       "name": "monika",
       "password": "1234",
       "createdAt": 1582175207296,
@@ -106,18 +100,6 @@
       "updatedAt": 1582198409982
     },
     {
-      "name": "rraju@gmail.com",
-      "password": "1123456",
-      "createdAt": 1582200299235,
-      "updatedAt": 1582200299235
-    },
-    {
-      "name": "abcde@gmail.com",
-      "password": "1234",
-      "createdAt": 1582521340981,
-      "updatedAt": 1582521340981
-    },
-    {
       "name": "sikh@gmail.com",
       "password": "1234",
       "createdAt": 1582521629524,
@@ -140,6 +122,26 @@
       "password": "123456",
       "createdAt": 1582875406100,
       "updatedAt": 1582875406100
+    },
+    {
+      "user": "Raju Sharma",
+      "name": "ab.cd@gmail.com",
+      "password": "1234",
+      "createdAt": 1583142807548,
+      "updatedAt": 1583142807548
+    },
+    {
+      "user": "Monika Gupta",
+      "name": "moni@gmail.com",
+      "password": "1234",
+      "createdAt": 1583152705481,
+      "updatedAt": 1583152705481
+    }
+  ],
+  "watchlists": [
+    {
+      "user": "ab.cd@gmail.com",
+      "movieId": 3
     }
   ],
   "movies": [
@@ -147,16 +149,14 @@
       "movieName": "Avengers: Infinity War",
       "year": "2018",
       "catId": "8",
-      "rating": "6",
+      "rating": "5",
       "cast": [
-        [
-          "Chris Hemsworth",
-          "Chris Pratt",
-          "Robert Downey Jr."
-        ]
+            "Chris Hemsworth",
+            "Chris Pratt",
+            "Robert Downey Jr."
       ],
       "synopsis": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment, the fate of Earth and existence has never been more uncertain.",
-      "updatedAt": 1582891103546,
+      "updatedAt": 1583143071386,
       "id": 3
     },
     {

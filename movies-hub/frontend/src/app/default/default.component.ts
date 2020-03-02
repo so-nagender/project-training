@@ -3,9 +3,7 @@ import { ApiserviceService } from '../apiservice.service';
 import { ActivatedRoute } from '@angular/router';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-
-
-
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-default',
@@ -18,8 +16,9 @@ export class DefaultComponent implements OnInit {
   loading: boolean;
   msg: string;
   isvalidvalue= true;
+  cookieValue = 'UNKNOWN';
 
-  constructor(private router: Router, private formBuilder: FormBuilder, private myservice: ApiserviceService, private activatedRoute: ActivatedRoute) {
+  constructor(private router: Router, private formBuilder: FormBuilder, private myservice: ApiserviceService, private cookieService: CookieService) {
     this.checkoutForm = this.formBuilder.group({
       email: new FormControl('',[Validators.required,Validators.email]),
       password: new FormControl('', Validators.required),
@@ -38,14 +37,13 @@ export class DefaultComponent implements OnInit {
     const password = this.checkoutForm.controls.password.value;
     const obj = { "name": email, "password": password }
     if (this.checkoutForm.invalid || email.empty || password.empty ) {
- 
-      this.isvalidvalue = false;     
-
-           
+      this.isvalidvalue = false;  
     } else {
       // if Form is valid then it will post the data into the JSON server...
       this.myservice.lognIn(obj).subscribe(res => {
-        localStorage.setItem("accessToken", res.accessToken);
+        localStorage.setItem("accessToken", res.accessToken); 
+        this.cookieService.set( 'Test', email);
+        this.cookieValue = this.cookieService.get('Test');
         this.router.navigate(['/home']);
       },
         error => {
@@ -54,6 +52,8 @@ export class DefaultComponent implements OnInit {
         }
       );
     }
+
+    
 
   }
   checkLogIn() {

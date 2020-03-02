@@ -3,6 +3,7 @@ import { ApiserviceService } from '../apiservice.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { __values } from 'tslib';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-header',
@@ -11,16 +12,19 @@ import { __values } from 'tslib';
 })
 export class HeaderComponent implements OnInit {
   catogry: any;
+  value: any;
 
-  constructor(private router: Router, private myservice: ApiserviceService, private activatedRoute: ActivatedRoute) {
+  constructor(private router: Router, private myservice: ApiserviceService, private activatedRoute: ActivatedRoute, private cookieService: CookieService) {
     let id = this.activatedRoute.snapshot.params.id;
    }
 
   ngOnInit() {
     this.getCategory();
+    this.getUserName();
   }
   logout() {
     localStorage.removeItem("accessToken");
+    this.cookieService.delete('Test');
     this.router.navigate(['/']);
   }
   getCategory() {
@@ -28,10 +32,11 @@ export class HeaderComponent implements OnInit {
       this.catogry = res;
     });
   }
+  getUserName() {
+    this.value = this.cookieService.get('Test');
+  }
   onSelect(obj) {
     this.myservice.setData(obj.id);
-    // ['/edit', movie.id]
-    // this.router.navigate(['movieByCatg',obj.id])
   }
   onClickMovie() {
     this.myservice.setDataT();
