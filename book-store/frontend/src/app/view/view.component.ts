@@ -28,4 +28,13 @@ export class ViewComponent implements OnInit {
     });
   }
 
+  stars(x) {
+    let item: number[] =[];
+    for(let i=1; i<=x; i++)
+    {
+      item.push(i);
+    }
+    return item;
+  }
+
 }

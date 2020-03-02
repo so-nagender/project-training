@@ -39,7 +39,9 @@ export class EditComponent implements OnInit {
     const AuthorName = this.formData.controls.authorname.value;
     const CatName = this.formData.controls.catname.value;
     const BookDes = this.formData.controls.des.value;
-    const obj = { "BookName" : BookName , "AuthorName" : AuthorName, "catogrieId" : CatName, "description" : BookDes };
+    const BookPrice = this.formData.controls.bookprice.value;
+    const BookDiscount = this.formData.controls.bookdiscount.value;
+    const obj = { "BookName" : BookName , "AuthorName" : AuthorName, "catogrieId" : CatName, "description" : BookDes, "BookPrice" : BookPrice, "discount" : BookDiscount };
     this.api.updateBook(obj , this.id).subscribe();
     this.book();
     this.router.navigate(['/book/view', this.id])
@@ -64,8 +66,19 @@ export class EditComponent implements OnInit {
       bookname: ['',Validators.required],
       authorname: ['',Validators.required],
       catname: ['',Validators.required],
-      des: ['',Validators.required]
+      des: ['',Validators.required],
+      bookprice: ['', Validators.required],
+      bookdiscount: ['', Validators.required]
     });
+  }
+
+  stars(x) {
+    let item: number[] =[];
+    for(let i=1; i<=x; i++)
+    {
+      item.push(i);
+    }
+    return item;
   }
 
 }

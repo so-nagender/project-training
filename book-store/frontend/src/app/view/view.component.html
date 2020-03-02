@@ -1,13 +1,21 @@
 <div class="container  midView" style="margin-bottom: 100px; margin-top: 80px;">
     <h2 style="text-align: center;">Book Description</h2>
     <div style="text-align: center;">
-    <h2 style="color: blueviolet; margin-top: 50px;" >{{apiBook.BookName | uppercase}}</h2>
+      <h2 style="color: blueviolet; margin-top: 50px;" >{{apiBook.BookName | uppercase}}</h2>
     <br>
     <h4>Author Name - {{apiBook.AuthorName| uppercase}}</h4>
     <h4>Book Catogery - {{apiBook.catogrie.title| uppercase}}</h4>
+    <div> 
+      <b>Rating- </b>
+      <span *ngFor = 'let i of stars(apiBook.Rating)' class="fa fa-star checked" style="color: orange;"></span>
+      <span *ngFor = 'let i of stars(5-apiBook.Rating)' class="fa fa-star"></span>
+    </div>
     <h4 style="margin-top: 50px;">Book Description </h4>
     {{apiBook.description}}
     <br>
+    <br>
+    <h4>Discount - {{apiBook.discount}}% </h4>
+    <h4>Book Price - <del>{{apiBook.BookPrice}}</del> </h4>
 
     <button type="button" class="btn btn-primary buttonCss" style="margin-right: 10px; margin-top: 50px;" [routerLink]="['/book/edit', apiBook.id]">Edit Detail</button>
     <!-- <button type="button" class="btn btn-primary" style="margin-right: 10px; margin-top: 50px;" routerLink="/viewbook">Back</button> -->

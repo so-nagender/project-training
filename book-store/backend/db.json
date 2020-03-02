@@ -24,11 +24,10 @@
       "AuthorName": "dasf",
       "catogrieId": "1",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
-      "updatedAt": 1582808142016,
-      "id": 5,
       "BookPrice": "500",
-      "discount": "10",
-      "Rating": "4"
+      "discount": 15,
+      "updatedAt": 1583144620437,
+      "id": 5
     },
     {
       "BookName": "The Odyssey",

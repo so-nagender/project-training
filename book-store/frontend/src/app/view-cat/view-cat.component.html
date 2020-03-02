@@ -32,11 +32,27 @@
             </div>
 
           </div>
-          <b>Author Name-</b>{{books.AuthorName}}
-          <br>
-          <b>Description-</b>{{books.description}}
-          <br>
-          <b>Price-</b>{{books.BookPrice}}
+          <div class="row"> 
+            <div class="col-sm-11">
+              <b>Author Name-</b>{{books.AuthorName}}
+              <br>
+              <b>Price- </b><del>{{books.BookPrice}}</del>
+              <br>
+              <b>Actual Price- </b>
+
+            </div>
+            <div class="col-sm-1 float-right">
+              <img src="../../assets/images/eye.png" height="20px" style="margin-right: 10px;" [routerLink]="['/book/view', books.id]">
+              <br>
+              <br>
+              <img src="../../assets/images/draw.svg" height="20px" style="margin-right: 10px;" [routerLink]="['/book/edit', books.id]"> 
+              <br>
+              <br>
+              <img src="../../assets/images/garbage.svg" height="20px" (click)="onDelete(books.id)">
+
+            </div>
+
+          </div>
 
         </div>
 

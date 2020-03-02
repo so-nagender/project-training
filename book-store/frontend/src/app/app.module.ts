@@ -61,7 +61,6 @@ import { ViewCatComponent } from './view-cat/view-cat.component'
     MatSortModule,
     HttpClientModule,
     MatInputModule
-   
 
    
   ],
