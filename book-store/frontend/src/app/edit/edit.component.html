@@ -43,8 +43,8 @@
           <div *ngIf="u.des.errors.required">Description is required</div>
       </div>
         <div style="margin-top: 10px;">
-            <button type="submit" [disabled]="!ngForm.valid" class="btn btn-primary" (click)="onUpdate()"> Update </button>
-            <button type="button" class="btn btn-primary" style="margin-left: 10px;" [routerLink]="['/book/view', apiBook.id]">Cancle</button>
+            <button type="submit" [disabled]="!ngForm.valid" class="btn btn-primary buttonCss" (click)="onUpdate()"> Update </button>
+            <button type="button" class="btn btn-primary buttonCss" style="margin-left: 10px;" [routerLink]="['/book/view', apiBook.id]">Cancle</button>
         </div>
     </form>
 </div> 

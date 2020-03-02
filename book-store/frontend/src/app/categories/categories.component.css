@@ -66,6 +66,19 @@ div .col-sm-5.border{
 .view{
     padding-top: 10%;
 }
+
+.buttonCss{
+    background: black;
+    border-color: black;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+.buttonCss:hover{
+    text-decoration: underline  #8167a9 ;
+    text-decoration-style: solid;
+    color:  #8167a9;
+}
 .close{
     margin-top: 10px;
     z-index: 1px;

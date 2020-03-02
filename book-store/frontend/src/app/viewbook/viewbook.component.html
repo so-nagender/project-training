@@ -30,9 +30,9 @@
               <td>{{books.BookName}}</td>
               <td>{{books.AuthorName}}</td>
           <td>{{books.catogrie.title}}</td>
-          <td><button type="button" class="btn btn-primary" style="margin-right: 10px;" [routerLink]="['/book/view', books.id]">View</button>
-            <button type="button" class="btn btn-primary" style="margin-right: 10px;" [routerLink]="['/book/edit', books.id]">Edit</button>
-            <button type="button" class="btn btn-primary" (click)="onDelete(books.id)">Delete</button>
+          <td><button type="button" class="btn btn-primary buttonCss" style="margin-right: 10px;" [routerLink]="['/book/view', books.id]">View</button>
+            <button type="button" class="btn btn-primary buttonCss" style="margin-right: 10px;" [routerLink]="['/book/edit', books.id]">Edit</button>
+            <button type="button" class="btn btn-primary buttonCss" (click)="onDelete(books.id)">Delete</button>
           </td>
           </tr>
         </tbody>

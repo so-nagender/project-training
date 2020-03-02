@@ -1,5 +1,3 @@
-.container-fluid{
- }
 
 div.container.midView{
     margin-top: 15%;
@@ -32,3 +30,19 @@ table {
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+
+  .buttonCss{
+    background: black;
+    border-color: black;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+.buttonCss:hover{
+    text-decoration: underline  #8167a9 ;
+    text-decoration-style: solid;
+    color:  #8167a9;
+}
+.add-form{
+  margin-top: 50px;
+}

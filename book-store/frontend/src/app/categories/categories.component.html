@@ -7,7 +7,7 @@
 
     </div>
     <div class="col-sm-6 ">
-      <button type="button" class="btn btn-primary float-right"  (click)="toggle_form()" >Add Categorie</button>
+      <button type="button" class="btn btn-primary float-right buttonCss"  (click)="toggle_form()" >Add Categorie</button>
     </div>
 
   </div>
@@ -17,12 +17,12 @@
         <div class="imageinvalid" *ngIf="!Hascatdata"><img src ="../../assets/images/support (1).svg">
         <p class='red'>Server Error</p></div>
           <div class="col-sm-12 border " *ngFor="let data of categoryFormdata"> 
-            <div class="row"><div class="col-sm-4 ">  {{data.title | uppercase}}</div>
+            <div class="row"><div class="col-sm-4 " style="padding-top: 30px;">  {{data.title | uppercase}}</div>
             <div class="col-sm "> <p>{{data.description}} </p> </div>
               <div class="col-sm ">
-              <br> <button type="button" class="btn btn-primary" (click)="onDeleteCat(data.id)">Delete</button> 
-              <button type="button" class="btn btn-primary" style="margin-left: 10px;" [routerLink]="['/Categorie/edit', data.id]">Edit</button> 
-              <button type="button" class="btn btn-primary" style="margin-left: 10px;" [routerLink]="['/Categorie/book', data.id]">View Books</button> 
+              <br> <button type="button" class="btn btn-primary buttonCss" (click)="onDeleteCat(data.id)">Delete</button> 
+              <button type="button" class="btn btn-primary buttonCss" style="margin-left: 10px;" [routerLink]="['/Categorie/edit', data.id]">Edit</button> 
+              <button type="button" class="btn btn-primary buttonCss" style="margin-left: 10px;" [routerLink]="['/Categorie/book', data.id]">View Books</button> 
               </div>
           
           </div>
