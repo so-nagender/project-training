@@ -18,3 +18,10 @@
   .dropdown-menu{
       background: rgb(0, 0, 0);
   }
+  
+  .caption {
+    display: block;
+    color: white;
+    padding-top: 8px;
+    margin-right: 17px
+}
