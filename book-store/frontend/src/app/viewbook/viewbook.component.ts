@@ -42,55 +42,55 @@ export class ViewbookComponent implements OnInit {
     return item;
   }
 
-  bookNameSortAes (){ 
-   var table, i, x, y; 
-   table = document.getElementById("bookTable"); 
-   var switching = true; 
-   while (switching) { 
-       switching = false; 
-       var rows = table.rows; 
-     console.log(rows)
-       for (i = 1; i < (rows.length - 1); i++) { 
-           var Switch = false; 
-           x = rows[i].getElementsByTagName("td")[0]; 
-           y = rows[i + 1].getElementsByTagName("td")[0]; 
-           if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) 
-               { 
-               Switch = true; 
-               break; 
-           }
-       } 
-       if (Switch) {  
-           rows[i].parentNode.insertBefore(rows[i + 1], rows[i]); 
-           switching = true; 
-       } 
-   } 
-}
+//   bookNameSortAes (){ 
+//    var table, i, x, y; 
+//    table = document.getElementById("bookTable"); 
+//    var switching = true; 
+//    while (switching) { 
+//        switching = false; 
+//        var rows = table.rows; 
+//      console.log(rows)
+//        for (i = 1; i < (rows.length - 1); i++) { 
+//            var Switch = false; 
+//            x = rows[i].getElementsByTagName("td")[0]; 
+//            y = rows[i + 1].getElementsByTagName("td")[0]; 
+//            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) 
+//                { 
+//                Switch = true; 
+//                break; 
+//            }
+//        } 
+//        if (Switch) {  
+//            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]); 
+//            switching = true; 
+//        } 
+//    } 
+// }
 
-bookNameSortDes(){ 
- var table, i, x, y; 
- table = document.getElementById("bookTable"); 
- var switching = true; 
- while (switching) { 
-     switching = false; 
-     var rows = table.rows; 
-   console.log(rows)
-     for (i = 1; i < (rows.length - 1); i++) { 
-         var Switch = false; 
-         x = rows[i].getElementsByTagName("td")[0]; 
-         y = rows[i + 1].getElementsByTagName("td")[0]; 
-         if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) 
-             { 
-             Switch = true; 
-             break; 
-         }
-     } 
-     if (Switch) { 
-         rows[i].parentNode.insertBefore(rows[i + 1], rows[i]); 
-         switching = true; 
-     } 
- } 
-}
+// bookNameSortDes(){ 
+//  var table, i, x, y; 
+//  table = document.getElementById("bookTable"); 
+//  var switching = true; 
+//  while (switching) { 
+//      switching = false; 
+//      var rows = table.rows; 
+//    console.log(rows)
+//      for (i = 1; i < (rows.length - 1); i++) { 
+//          var Switch = false; 
+//          x = rows[i].getElementsByTagName("td")[0]; 
+//          y = rows[i + 1].getElementsByTagName("td")[0]; 
+//          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) 
+//              { 
+//              Switch = true; 
+//              break; 
+//          }
+//      } 
+//      if (Switch) { 
+//          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]); 
+//          switching = true; 
+//      } 
+//  } 
+// }
 
 
 }

@@ -170,42 +170,6 @@
       "BookPrice": "500",
       "discount": "10",
       "Rating": "4"
-    },
-    {
-      "BookName": "Intercepts",
-      "AuthorName": "T. J. Payne",
-      "catogrieId": "1",
-      "description": "erfertfe",
-      "createdAt": 1582895029260,
-      "updatedAt": 1582895029260,
-      "id": 29
-    },
-    {
-      "BookName": "Intercepts",
-      "AuthorName": "T. J. Payne",
-      "catogrieId": "1",
-      "description": "erfertfe",
-      "createdAt": 1582895031002,
-      "updatedAt": 1582895031002,
-      "id": 30
-    },
-    {
-      "BookName": "Intercepts",
-      "AuthorName": "T. J. Payne",
-      "catogrieId": "1",
-      "description": "erfertfe",
-      "createdAt": 1582895031253,
-      "updatedAt": 1582895031253,
-      "id": 31
-    },
-    {
-      "BookName": "Intercepts",
-      "AuthorName": "T. J. Payne",
-      "catogrieId": "1",
-      "description": "erfertfe",
-      "createdAt": 1582895031385,
-      "updatedAt": 1582895031385,
-      "id": 32
     }
   ],
   "profile": [
