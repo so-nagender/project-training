@@ -24,11 +24,11 @@
       "AuthorName": "dasf",
       "catogrieId": "1",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
-      "updatedAt": 1582808142016,
-      "id": 5,
       "BookPrice": "500",
-      "discount": "10",
-      "Rating": "4"
+      "discount": 15,
+      "updatedAt": 1583144620437,
+      "id": 5,
+      "Rating": "2"
     },
     {
       "BookName": "The Odyssey",
@@ -109,7 +109,7 @@
       "BookName": "The Dark Tower",
       "AuthorName": "Stephen King",
       "catogrieId": 3,
-      "BookPrice": "500",
+      "BookPrice": "100",
       "discount": "10",
       "Rating": "4",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
@@ -119,7 +119,7 @@
       "BookName": "A Game of Thrones",
       "AuthorName": "George R.R. Martin",
       "catogrieId": 3,
-      "BookPrice": "500",
+      "BookPrice": "5600",
       "discount": "10",
       "Rating": "4",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
@@ -132,7 +132,7 @@
       "createdAt": 1582700895510,
       "updatedAt": 1582700895510,
       "id": 25,
-      "BookPrice": "500",
+      "BookPrice": "200",
       "discount": "10",
       "Rating": "4"
     },
@@ -144,7 +144,7 @@
       "createdAt": 1582702712710,
       "updatedAt": 1582702712710,
       "id": 26,
-      "BookPrice": "500",
+      "BookPrice": "550",
       "discount": "10",
       "Rating": "4"
     },
@@ -155,7 +155,7 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
       "updatedAt": 1582709555064,
       "id": 27,
-      "BookPrice": "500",
+      "BookPrice": "5400",
       "discount": "10",
       "Rating": "4"
     },
@@ -170,54 +170,6 @@
       "BookPrice": "500",
       "discount": "10",
       "Rating": "4"
-    },
-    {
-      "BookName": "fghjert",
-      "AuthorName": "dfyjheryj",
-      "catogrieId": "2",
-      "description": "dghjn",
-      "BookPrice": "gh",
-      "BookDiscount": "dghjn",
-      "BookRating": "4",
-      "createdAt": 1583145641795,
-      "updatedAt": 1583145641795,
-      "id": 29
-    },
-    {
-      "BookName": "ghk,gik",
-      "AuthorName": "ghjk,",
-      "catogrieId": "2",
-      "description": "ghk,ghk",
-      "BookPrice": "gbhik,",
-      "BookDiscount": "ghk,",
-      "BookRating": "gjk,g",
-      "createdAt": 1583145745022,
-      "updatedAt": 1583145745022,
-      "id": 30
-    },
-    {
-      "BookName": "sonu",
-      "AuthorName": "s",
-      "catogrieId": "2",
-      "description": "kertgj",
-      "BookPrice": "100",
-      "BookDiscount": "10",
-      "BookRating": "10",
-      "createdAt": 1583146486860,
-      "updatedAt": 1583146486860,
-      "id": 31
-    },
-    {
-      "BookName": "adasda",
-      "AuthorName": "T. J. Payne",
-      "catogrieId": "1",
-      "description": "dgcfgc",
-      "BookPrice": 600,
-      "BookDiscount": 30,
-      "BookRating": "5",
-      "createdAt": 1583149562044,
-      "updatedAt": 1583149562044,
-      "id": 32
     }
   ],
   "profile": [

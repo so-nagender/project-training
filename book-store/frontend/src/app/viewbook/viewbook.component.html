@@ -3,9 +3,68 @@
     <div class="form-group mb-10">
         <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
     </div>
+    <ul class="list-group" style="margin-bottom: 25px;" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
+      <li class="list-group-item" *ngFor="let books of apiBook | filter: searchText" >
+        <div class="row">
+          <div class="col-sm-4 book-image-container">
+            <img src="../../assets/images/bookview.png" height="200px"> 
+            <span class="discounted">
+              {{books.discount}}%
+
+            </span>
+          </div>
+          <div class="col-sm-8"> 
+            <div class="row">
+              <div class="col-sm-8"> 
+                <b>Book Name-</b>{{books.BookName | uppercase}}
+              </div>
+              <div class="col-sm-4"> 
+                <span *ngFor = 'let i of stars(books.Rating)' class="fa fa-star checked" style="color: black;"></span>
+                <span *ngFor = 'let i of stars(5-books.Rating)' class="fa fa-star" style="color: 	#CCCCCC	;" ></span>
+                <br>
+
+                
+
+              </div>
+
+            </div>
+            <div class="row" > 
+              <div class="col-sm-11" >
+                <b>Author Name-</b>{{books.AuthorName}}
+                <br>
+                <b>Categorie Name -</b>{{books.catogrie.title}}
+                <br>
+                <b>Price - </b><del>{{books.BookPrice}}</del>
+                <br>
+                <b>Discount Price - </b> {{books.discountPrice}}
+              </div>
+              <div class="col-sm-1 float-right">
+                <img src="../../assets/images/eye.png" height="20px" style="margin-right: 10px;" [routerLink]="['/book/view', books.id]">
+                <br>
+                <br>
+                <img src="../../assets/images/draw.svg" height="20px" style="margin-right: 10px;" [routerLink]="['/book/edit', books.id]"> 
+                <br>
+                <br>
+                <img src="../../assets/images/garbage.svg" height="20px" (click)="onDelete(books.id)">
+
+              </div>
+
+            </div>
+          
+           
+     
+            
+            <!-- <button type="button" class="btn btn-primary buttonCss" style="margin-right: 10px;" [routerLink]="['/book/view', books.id]">View</button> -->
+
+          </div>
+          
+
+        </div>
+      </li>
+    </ul>
     
   
-      <table id="bookTable" class="table" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
+      <!-- <table id="bookTable" class="table" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
         <colgroup>
           <col width="5%">
           <col width="*">
@@ -36,7 +95,7 @@
           </td>
           </tr>
         </tbody>
-      </table>
+      </table> -->
   
       <ng-template #noResults>
         <p>No results found for "{{searchText}}".</p>

@@ -38,6 +38,14 @@ export class ViewCatComponent implements OnInit {
     this.api.deleteTeams(id).subscribe();
     this.Cat();
   } 
+  stars(x) {
+    let item: number[] =[];
+    for(let i=1; i<=x; i++)
+    {
+      item.push(i);
+    }
+    return item;
+  }
 
 
 
