@@ -3,6 +3,7 @@ import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
 import { ApiserviceService } from '../apiservice.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
+import { MustMatch } from '../match';
 
 
 @Component({
@@ -18,20 +19,22 @@ export class SignupComponent implements OnInit {
   error: string;
   loading: boolean;
   cookieValue = 'UNKNOWN';
-  constructor(private router: Router, private formBuilder: FormBuilder, private myservice: ApiserviceService, private cookieService: CookieService) { 
+  constructor(private router: Router, private formBuilder: FormBuilder, private myservice: ApiserviceService, private cookieService: CookieService) { }
+
+  ngOnInit() {
     this.checkoutForm = this.formBuilder.group({
       Name: new FormControl ('', Validators.required),
       email: new FormControl ('', [Validators.required, Validators.email]),
       password: new FormControl ('', Validators.required),
       retypepassword: new FormControl ('', Validators.required)
-  });
-}
-
-  ngOnInit() {
+    },
+      {
+        validator: MustMatch('password', 'retypepassword')
+    });
   }
   get f() {
     return this.checkoutForm.controls;
-  }
+  };
 onSubmit() {
   this.submitted = true;
   const name = this.checkoutForm.controls.Name.value;

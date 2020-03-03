@@ -1,52 +1,52 @@
 <div>
-    <app-header></app-header>
+  <app-header></app-header>
 </div>
 <div class="container">
-    <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Search Movies"
-        aria-describedby="inputGroup-sizing-sm" [(ngModel)]="search" class="form-control mr-sm-2 searchInList">
+  <input type="text" class="form-control mt-2" placeholder="Search Movies" [(ngModel)]="search">
 
-    <!-- <button (click)="sortTable()">Sort</button> -->
-    <table class="table table-striped" id="table">
-        <tr>
-
-            <th style="width:18%">Movie Name
-                <img src="../../assets/img/arrowUp.svg" class="img-fluid" alt="Responsive image"
-                    (click)="sortTableAsc()" class="arrow">
-                <img src="../../assets/img/arrowDown.svg" class="img-fluid" alt="Responsive image"
-                    (click)="sortTableDes()" class="arrow">
-            </th>
-            <th style="width:10%">Year
-                <img src="../../assets/img/arrowUp.svg" class="img-fluid" alt="Responsive image"
-                    (click)="sortTableYearAsc()" class="arrow">
-                <img src="../../assets/img/arrowDown.svg" class="img-fluid" alt="Responsive image"
-                    (click)="sortTableYearDes()" class="arrow">
-            </th>
-            <th style="width:20%">Cast</th>
-            <th style="width:6%">Genre</th>
-            <th style="width:18%">Rating</th>
-            <th >Actions</th>
-        </tr>
-        <tbody>
-            <tr *ngFor="let movie of movies| filterdata :search">
-                <td>{{ movie.movieName}}</td>
-                <td>{{ movie.year }}</td>
-                <td>{{ movie.cast }}</td>
-                <td>{{ catg || movie.cat.genre}}</td>
-                <!-- <td>{{ catg }}</td> -->
-                <!-- <td>{{ movie.rating }}</td> -->
-                    <td>
-                        <span *ngFor="let i of createRange(movie.rating)" class="fa fa-star checked">
-                        </span>
-                    </td>
-                    <!-- <td>{{ movie.rating }}</td> -->
-                    <button [routerLink]="['/movie', movie.id]" routerLinkActive="active">View</button>
-                    <button [routerLink]="['/edit', movie.id]" routerLinkActive="active" class="mx-2">Edit</button>
-                    <button (click)="delete(movie.id)">Delete</button>
-            </tr>
-        </tbody>
-    </table>
-    <button routerLink='/add' class="btn btn-danger mb-2 float-right">Add Movie</button>
+  <!-- <button (click)="sortTable()">Sort</button> -->
+  <table class="table table-striped mt-2" id="table">
+    <tr>
+      <th style="width:18%">Movie Name
+        <img src="../../assets/img/arrowUp.svg" class="img-fluid" alt="Responsive image" (click)="sortTableAsc()"
+          class="arrow">
+        <img src="../../assets/img/arrowDown.svg" class="img-fluid" alt="Responsive image" (click)="sortTableDes()"
+          class="arrow">
+      </th>
+      <th style="width:10%">Year
+        <img src="../../assets/img/arrowUp.svg" class="img-fluid" alt="Responsive image" (click)="sortTableYearAsc()"
+          class="arrow">
+        <img src="../../assets/img/arrowDown.svg" class="img-fluid" alt="Responsive image" (click)="sortTableYearDes()"
+          class="arrow">
+      </th>
+      <th style="width:20%">Cast</th>
+      <th style="width:6%">Genre</th>
+      <th style="width:18%">Rating</th>
+      <th>Actions</th>
+    </tr>
+    <tbody>
+      <tr *ngFor="let movie of movies| filterdata :search">
+        <td>{{ movie.movieName}}</td>
+        <td>{{ movie.year }}</td>
+        <td>{{ movie.cast }}</td>
+        <td>{{ catg || movie.cat.genre}}</td>
+        <!-- <td>{{ catg }}</td> -->
+        <!-- <td>{{ movie.rating }}</td> -->
+        <td>
+          <span *ngFor="let i of createRange(movie.rating)" class="fa fa-star checked">
+          </span>
+        </td>
+        <!-- <td>{{ movie.rating }}</td> -->
+        <i [routerLink]="['/movie', movie.id]" routerLinkActive="active" class="fa fa-binoculars" aria-hidden="true"
+          style="cursor: pointer;"></i>
+        <i [routerLink]="['/edit', movie.id]" routerLinkActive="active" class="fa fa-pencil mx-4" aria-hidden="true"
+          style="cursor: pointer;"></i>
+        <i (click)="delete(movie.id)" class="fa fa-trash mx-1" aria-hidden="true" style="cursor: pointer;"></i>
+      </tr>
+    </tbody>
+  </table>
+  <button routerLink='/add' class="btn btn-danger mb-2 float-right">Add Movie</button>
 </div>
 <div>
-    <app-footer></app-footer>
+  <app-footer></app-footer>
 </div>

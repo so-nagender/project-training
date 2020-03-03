@@ -151,9 +151,9 @@
       "catId": "8",
       "rating": "5",
       "cast": [
-            "Chris Hemsworth",
-            "Chris Pratt",
-            "Robert Downey Jr."
+        "Chris Hemsworth",
+        "Chris Pratt",
+        "Robert Downey Jr."
       ],
       "synopsis": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment, the fate of Earth and existence has never been more uncertain.",
       "updatedAt": 1583143071386,
@@ -365,40 +365,31 @@
     {
       "movieName": "Koi Mil Gaya",
       "year": "2006",
-      "catId": "8",
+      "catId": "4",
+      "rating": "5",
       "cast": [
-        "Hrithik Roshan and Preeti Jinta"
+        [
+          "Hrithik Roshan and Preeti Jinta"
+        ]
       ],
-      "rating": "4",
       "synopsis": "Movie is about alliens.",
-      "createdAt": 1582701921999,
-      "updatedAt": 1582701921999,
+      "updatedAt": 1583220047621,
       "id": 21
-    },
-    {
-      "movieName": "jhkgcyuy",
-      "year": "tfxtuuf",
-      "rating": "7",
-      "catId": "3",
-      "cast": [
-        "tfxftu"
-      ],
-      "synopsis": "rtrurtu",
-      "createdAt": 1582890838665,
-      "updatedAt": 1582890838665,
-      "id": 22
     },
     {
       "movieName": "My Name is Khan",
       "year": "2011",
-      "catId": "4",
+      "catId": "8",
+      "rating": "3",
       "cast": [
         [
-          "Shahrukh Khan, Kajol,dgdfg"
+          [
+            "Shahrukh Khan, Kajol,dgdfg"
+          ]
         ]
       ],
       "synopsis": "y Name Is Khan is a 2010 Indian Hindi-language drama film directed by Karan Johar, produced by Hiroo Johar and Gauri Khan, and starring Shah Rukh Khan and Kajol in lead roles",
-      "updatedAt": 1582866852995,
+      "updatedAt": 1583220065772,
       "id": 23
     }
   ],
@@ -406,7 +397,7 @@
     {
       "genre": "Action",
       "desc": "Action film is a film genre in which the protagonist or protagonists are thrust into a series of events that typically include violence, extended fighting",
-      "updatedAt": 1582889137689,
+      "updatedAt": 1583220093661,
       "id": 3
     },
     {
