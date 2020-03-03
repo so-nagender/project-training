@@ -31,6 +31,7 @@ import { CatviewComponent } from './catview/catview.component';
 import { EditgenreComponent } from './editgenre/editgenre.component';
 import { WatchlistComponent } from './watchlist/watchlist.component';
 import { CookieService } from 'ngx-cookie-service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const appRoutes: Routes = [
   {path:'movielist',component:MovieListComponent},   
@@ -129,6 +130,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     MatButtonModule,
     FormsModule,
+    NgbModule,
 
     RouterModule.forRoot(
       appRoutes,
@@ -149,6 +151,7 @@ const appRoutes: Routes = [
   },
   CookieService,
 ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,WatchlistComponent],
+  exports: [WatchlistComponent],
 })
 export class AppModule { }

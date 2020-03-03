@@ -8,6 +8,7 @@ import { ApiserviceService } from '../apiservice.service';
 })
 export class WatchlistComponent implements OnInit {
   movies: any;
+  currentRate = 8;
 
   constructor(private myservice: ApiserviceService) { }
 
@@ -17,8 +18,15 @@ export class WatchlistComponent implements OnInit {
   getWL() {
     this.myservice.getWatchList().subscribe((res) => {
       this.movies = res;
-      console.log(this.movies);
+      console.log(res.movie);
     });
+  }
+  createRange(num) {
+    const items: number[] = [];
+    for (let i = 1; i <= num; i++) {
+      items.push(i);
+    }
+    return items;
   }
 
 }

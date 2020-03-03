@@ -35,7 +35,9 @@
                 <!-- <td>{{ catg }}</td> -->
                 <!-- <td>{{ movie.rating }}</td> -->
                     <td>
-                        <span *ngFor="let i of createRange(movie.rating)" class="fa fa-star checked">
+                        <span *ngFor="let i of createRange(movie.rating)" style="color: rgb(245, 224, 35);" class="fa fa-star checked">
+                        </span>
+                        <span *ngFor="let i of createRange(5-(movie.rating))" style="color: rgb(158, 158, 158);" class="fa fa-star">
                         </span>
                     </td>
                     <!-- <td>{{ movie.rating }}</td> -->
