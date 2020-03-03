@@ -26,9 +26,9 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
       "BookPrice": "500",
       "discount": 15,
-      "updatedAt": 1583144620437,
+      "updatedAt": 1583228720801,
       "id": 5,
-      "Rating": "2"
+      "Rating": "4"
     },
     {
       "BookName": "The Odyssey",
@@ -170,6 +170,42 @@
       "BookPrice": "500",
       "discount": "10",
       "Rating": "4"
+    },
+    {
+      "BookName": "xzx",
+      "AuthorName": "zsxsz",
+      "catogrieId": "1",
+      "description": "sdvdcvdvd",
+      "BookPrice": 345345,
+      "discount": 23,
+      "Rating": "3",
+      "createdAt": 1583150838795,
+      "updatedAt": 1583150838795,
+      "id": 29
+    },
+    {
+      "BookName": "dfgfdgbf",
+      "AuthorName": "dgdfgh",
+      "catogrieId": "2",
+      "description": "gdfghnfggjhng",
+      "BookPrice": 234242,
+      "discount": 23,
+      "Rating": "4",
+      "createdAt": 1583228505130,
+      "updatedAt": 1583228505130,
+      "id": 30
+    },
+    {
+      "BookName": "King Solomon's Mines1333",
+      "AuthorName": "Shirley Jackson111",
+      "catogrieId": "2",
+      "description": "hgnmhbnghnhfghfghgfgfhgfjfgfgfgfgfgfgfgfgfgfgfg",
+      "BookPrice": 5464,
+      "discount": 17,
+      "Rating": "4",
+      "createdAt": 1583229439639,
+      "updatedAt": 1583229439639,
+      "id": 31
     }
   ],
   "profile": [

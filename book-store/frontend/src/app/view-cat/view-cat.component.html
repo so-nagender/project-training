@@ -16,8 +16,12 @@
     <ul class="list-group" style="margin-bottom: 25px;" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
     <li class="list-group-item" *ngFor="let books of apiBook | filter: searchText" >
       <div class="row">
-        <div class="col-sm-4">
-          <img src="../../assets/images/bookview.png" height="200px"> 
+        <div class="col-sm-4 book-image-container">
+          <img src="../../assets/images/bookview.png" height="200px">
+          <span class="discounted">
+            {{books.discount}}%
+
+          </span> 
 
         </div>
         <div class="col-sm-8"> 
@@ -26,8 +30,8 @@
               <b>Book Name-</b>{{books.BookName | uppercase}}
             </div>
             <div class="col-sm-4"> 
-              <span *ngFor = 'let i of stars(books.Rating)' class="fa fa-star checked" style="color: orange;"></span>
-              <span *ngFor = 'let i of stars(5-books.Rating)' class="fa fa-star"></span>
+              <span *ngFor = 'let i of stars(books.Rating)' class="fa fa-star checked" style="color: black;"></span>
+              <span *ngFor = 'let i of stars(5-books.Rating)' class="fa fa-star" style="color: 	#CCCCCC	;"></span>
 
             </div>
 
@@ -38,7 +42,7 @@
               <br>
               <b>Price- </b><del>{{books.BookPrice}}</del>
               <br>
-              <b>Actual Price- </b>
+              <b>Discount Price-</b>{{books.discountPrice}}
 
             </div>
             <div class="col-sm-1 float-right">
@@ -59,8 +63,8 @@
       </div>
     </li>
   </ul>
-    <ng-template #noResults>
-      <p>No results found for "{{searchText}}".</p>
-    </ng-template>
+  <ng-template #noResults > 
+    <p><b style="color: red; font-size: 20px;">No results found for "{{searchText}}".<img src="../../assets/images/no result.jpg" height="80px"></b></p>
+  </ng-template>
       
 </div>

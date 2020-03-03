@@ -24,8 +24,8 @@ const routes: Routes = [
   { path: 'book/edit/:id', component: EditComponent},
   { path: 'addbook', component: AddbookComponent},
   { path: 'viewbook', component: ViewbookComponent},
-  { path: 'Categorie/edit/:id', component: EditCatComponent},
-  { path: 'Categorie/book/:id', component: ViewCatComponent },
+  { path: 'categorie/edit/:id', component: EditCatComponent},
+  { path: 'categorie/book/:id', component: ViewCatComponent },
   
 ];
 

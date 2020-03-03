@@ -37,15 +37,13 @@ export class AddbookComponent implements OnInit {
     const AuthorName = this.formData.controls.authorname.value;
     const CatName = this.formData.controls.catname.value;
     const BookDes = this.formData.controls.des.value;
-    const obj = { "BookName" : BookName , "AuthorName" : AuthorName, "catogrieId" : CatName, "description" : BookDes };
+    const BookPrice = this.formData.controls.bookprice.value;
+    const BookDiscount = this.formData.controls.discount.value;
+    const BookRating = this.formData.controls.rating.value;
+    const obj = { "BookName" : BookName , "AuthorName" : AuthorName, "catogrieId" : CatName, "description" : BookDes, "BookPrice" :  BookPrice, "discount" : BookDiscount, "Rating" : BookRating};
     const apihit =this.api.addBook(obj).subscribe((res)=>{this.bookDataArr.push(res)
     }
     );
-
-      
-    
-
- 
    
     }
   }
@@ -61,7 +59,10 @@ export class AddbookComponent implements OnInit {
       bookname: ['',Validators.required],
       authorname: ['',Validators.required],
       catname: ['',Validators.required],
-      des: ['',Validators.required]
+      des: ['',Validators.required],
+      bookprice: ['',Validators.required],
+      discount: ['',Validators.required],
+      rating: ['',Validators.required]
     });
   }
 

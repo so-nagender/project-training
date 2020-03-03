@@ -7,13 +7,21 @@ import { ApiService } from '../api.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  apiCat;
   userlogindetail;
   constructor(private api : ApiService) { }
 
   ngOnInit() {
 
     this.userlogindetail= this.api.userdata.value;
+    this.categorie();
     
+  }
+
+  categorie(){
+    this.api.getCatogery().subscribe((res)=>{
+      this.apiCat = res;
+    });
   }
 
 

@@ -12,22 +12,47 @@
 
   </div>
   <div class="container padding_top">
-      <div class="row">
-        <div class="col-sm-4"><b>Category Name</b></div><div class="col-sm-4"><b>Description</b></div><div class="col-sm-4"><b>Action</b></div>
-        <div class="imageinvalid" *ngIf="!Hascatdata"><img src ="../../assets/images/support (1).svg">
-        <p class='red'>Server Error</p></div>
-          <div class="col-sm-12 border " *ngFor="let data of categoryFormdata"> 
-            <div class="row"><div class="col-sm-4 " style="padding-top: 30px;">  {{data.title | uppercase}}</div>
-            <div class="col-sm "> <p>{{data.description}} </p> </div>
-              <div class="col-sm ">
-              <br> <button type="button" class="btn btn-primary buttonCss" (click)="onDeleteCat(data.id)">Delete</button> 
-              <button type="button" class="btn btn-primary buttonCss" style="margin-left: 10px;" [routerLink]="['/Categorie/edit', data.id]">Edit</button> 
-              <button type="button" class="btn btn-primary buttonCss" style="margin-left: 10px;" [routerLink]="['/Categorie/book', data.id]">View Books</button> 
-              </div>
-          
+
+      <div class="form-group mb-10">
+        <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
+    </div>
+    <ul class="list-group" style="margin-bottom: 25px;" *ngIf="(categoryFormdata| filter: searchText).length > 0; else noResults">
+      <li class="list-group-item" *ngFor="let data of categoryFormdata | filter: searchText" >
+        <div class="row">
+          <div class="col-sm-3">
+            <img src="../../assets/images/bookcategorie.png" height="150px"> 
           </div>
+          <div class="col-sm-9">  
+            <div class="row" > 
+              <div class="col-sm-11" >
+                <b>Categorie Name -</b> {{data.title | uppercase}}
+                <br>
+                <b>Categorie Description -</b> {{data.description}}
+              </div>
+              <div class="col-sm-1 float-right">
+                <img src="../../assets/images/eye.png" height="20px" style="margin-right: 10px;" [routerLink]="['/categorie/book', data.id]">
+                <br>
+                <br>
+                <img src="../../assets/images/draw.svg" height="20px" style="margin-right: 10px;" [routerLink]="['/categorie/edit', data.id]"> 
+                <br>
+                <br>
+                <img src="../../assets/images/garbage.svg" height="20px" (click)="onDeleteCat(data.id)">
+
+              </div>
+
+            </div>
+          </div>
+          
+
         </div>
-      </div>
+      </li>
+    </ul>
+    <ng-template #noResults > 
+      <p><b style="color: red; font-size: 20px;">No results found for "{{searchText}}".<img src="../../assets/images/no result.jpg" height="80px"></b></p>
+    </ng-template>
+          
+           
+     
     
       <div class="popup">
         <div class="col-sm-5 border" *ngIf="view_form" #category_form>
@@ -37,7 +62,7 @@
                       <div class="cat_name">
                         <input type="text" id="catname"  class="form-control" formControlName="bookname" [ngClass]="{'is-invalid': categoryForm.get('bookname').touched && categoryForm.get('bookname').invalid}" placeholder="Category Name">
                           <div class="invalid-feedback">
-                            <div>Book Name is Required</div>
+                            <div>Categorie Name is Required</div>
                           </div>
                       </div>
                       <div class="cat-desc">
