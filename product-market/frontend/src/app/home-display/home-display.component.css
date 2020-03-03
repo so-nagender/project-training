@@ -34,11 +34,13 @@
     position: relative;
     margin: 0;
     transition: all 0.6s ease-in-out 0.1s;
+    border: solid black 5px;
   }
   
   .tab:hover {
     width: 450px;
     box-shadow: 3px 3px 20px 8px rgba(0, 0, 0, 0.5);
+   
   }
   
   .tab:hover .social a::before {
@@ -66,30 +68,38 @@
   
   .youtube-title {
     color: #ff0000;
+    margin-top: 65px;
+  
   }
   
   .twitter-title {
     color: #6dc5dd;
+    margin-top: 65px;
   }
   
   .facebook-title {
     color: #3b5998;
+    margin-top: 65px;
   }
   
   .linkedin-title {
     color: #00a9cd;
+    margin-top: 65px;
   }
   
   .instagram-title {
     color: #6dc993;
+    margin-top: 65px;
   }
   
   .tumblr-title {
     color: #283e56;
+    margin-top: 65px;
   }
   
   .dribble-title {
     color: #e03a70;
+    margin-top: 65px;
   }
   
   .tab .content p {
@@ -97,6 +107,7 @@
     line-height: 1.4rem;
     padding-right: 30px;
     font-family: Kalam;
+    margin-top: 15px;
   }
   
   .social a:before,
@@ -127,6 +138,7 @@
   
   .youtube a::after {
     background-color: #ff0000;
+    background-image: url(../../assets/images/couple.svg);
   }
   
   .twitter a::before,
@@ -136,6 +148,7 @@
   
   .twitter a::after {
     background-color: #6dc5dd;
+    background-image: url(../../assets/images/both.svg);
   }
   
   .facebook a::before,
@@ -145,6 +158,7 @@
   
   .facebook a::after {
     background-color: #3b5998;
+    background-image: url(../../assets/images/pijama.svg);
   }
   
   .linkedin a::before,
@@ -153,6 +167,7 @@
   }
   .linkedin a::after {
     background-color: #00a9cd;
+    background-image: url(../../assets/images/laptop.svg);
   }
   
   .instagram a::before,
@@ -161,6 +176,7 @@
   }
   .instagram a::after {
     background-color: #6dc993;
+    background-image: url(../../assets/images/boot.svg);
   }
   
   .tumblr a::before,
@@ -169,6 +185,7 @@
   }
   .tumblr a::after {
     background-color: #283e56;
+    background-image: url(../../assets/images/coat.svg);
   }
   
   .dribble a::before,
@@ -177,6 +194,7 @@
   }
   .dribble a::after {
     background-color: #e03a70;
+    background-image: url(../../assets/images/coat.svg);
   }
   
   @media (max-width: 950px) {

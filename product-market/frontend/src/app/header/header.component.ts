@@ -10,7 +10,14 @@ import { ProductcatchService } from "../productcatch.service";
 export class HeaderComponent implements OnInit {
   constructor(private router: Router, private serve: ProductcatchService) {}
   datas: any;
+  items : any
+  counter: number = 0;
   ngOnInit() {
+    this.serve.getCart().subscribe((res)=>{
+      this.items = res;
+      this.counter = this.items.length
+      console.log(this.items)
+    })
     this.serve.getData().subscribe(data => {
       this.datas = data;
       console.log(this.datas);
@@ -20,6 +27,12 @@ export class HeaderComponent implements OnInit {
         this.datas = res;
       });
     });
+    this.serve.getcartlength().subscribe(()=>{
+      this.serve.getCart().subscribe((res)=>{
+        this.items = res;
+        this.counter = this.items.length
+      })
+    })
   }
   onLogout() {
     localStorage.removeItem("accessToken");

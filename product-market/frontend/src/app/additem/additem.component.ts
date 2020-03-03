@@ -26,7 +26,7 @@ export class AdditemComponent implements OnInit {
   id: any;
   ngOnInit() {
     this.itemform = this.fb.group({
-      item: ["", [Validators.required,Validators.pattern('^[^\s]+[-a-zA-Z\s]+([-a-zA-Z]+)*$')]],
+      item: ["", [Validators.required]],
       rating: ["", [Validators.required]],
       cost: ["", Validators.required],
       Description: ["", [Validators.required]]
@@ -38,11 +38,13 @@ export class AdditemComponent implements OnInit {
     this.router.navigate([url]);
   }
   onSubmit() {
+   
     if (this.itemform.invalid) {
       return;
     }
     else{
     const url = `items/category/${this.id}`;
+    console.log(this.itemform.controls.item)
     const obj = {
       name: this.itemform.controls.item.value,
       catId: parseInt(this.id),
@@ -50,9 +52,14 @@ export class AdditemComponent implements OnInit {
       description: this.itemform.controls.Description.value,
       cost: this.itemform.controls.cost.value
     };
+ 
     this.serve.postItem(obj).subscribe();
     this.serve.sendnewItem();
     this.router.navigate([url]);
   }
   }
 }
+
+
+
+

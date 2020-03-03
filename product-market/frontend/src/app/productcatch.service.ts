@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductcatchService {
+
+  datas: any;
   constructor(private http: HttpClient) {}
 
   private subject = new Subject();
@@ -13,6 +15,8 @@ export class ProductcatchService {
   private subjectforId = new Subject();
 
   private subjectofcart = new Subject();
+  private subforlength = new Subject();
+  private catname = new Subject();
 
   getData(): Observable<any> {
     return this.http.get('/api/cats');
@@ -96,6 +100,15 @@ export class ProductcatchService {
   getidData(): Observable<any> {
     return this.http.get('/api/cats?_embed=product-items');
   }
+
+  setcartlength() {
+    this.subforlength.next();
+  }
+
+  getcartlength(): Observable<any> {
+    return this.subforlength.asObservable();
+  }
+
 
   
 }

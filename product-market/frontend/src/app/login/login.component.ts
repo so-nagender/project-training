@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   loginform: FormGroup;
   error: any;
-
-  constructor(
+  submitted = false;
+ constructor(
     private fb: FormBuilder,
     private serve: ProductcatchService,
     private router: Router
@@ -46,6 +46,7 @@ export class LoginComponent implements OnInit {
         }
       );
     }
+    this.submitted = true;
   }
   onClose() {
     this.router.navigate(['/home']);
