@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProductcatchService } from '../productcatch.service';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-login',
@@ -11,11 +12,13 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   loginform: FormGroup;
   error: any;
+  customerName : any
 
   constructor(
     private fb: FormBuilder,
     private serve: ProductcatchService,
-    private router: Router
+    private router: Router,
+    private cookieService: CookieService
   ) {}
   get f() {
     return this.loginform.controls;
@@ -38,7 +41,8 @@ export class LoginComponent implements OnInit {
         res => {
           if (res.accessToken) {
             localStorage.setItem('accessToken', res.accessToken);
-            this.router.navigate(['/categories']);
+            this.cookieService.set('username',username)
+            this.router.navigate(['welcomescreen']);
           }
         },
         error => {

@@ -6,13 +6,18 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductcatchService {
+  
   constructor(private http: HttpClient) {}
 
   private subject = new Subject();
 
+  private subjectHeader = new Subject();
+
   private subjectforId = new Subject();
 
   private subjectofcart = new Subject();
+
+  rating = 0;
 
   getData(): Observable<any> {
     return this.http.get('/api/cats');

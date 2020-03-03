@@ -30,6 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeDisplayComponent } from './home-display/home-display.component';
 import { ListEditDirective } from './list-edit.directive';
 import { MainpageComponent } from './mainpage/mainpage.component';
+import { ResolverWelcomeService } from './resolver-welcome.service';
+import { CookieService } from 'ngx-cookie-service';
 
 const routes: Routes = [
   {
@@ -53,6 +55,11 @@ const routes: Routes = [
         component: LoginComponent
       }
     ]
+  },
+  {
+    path : "welcomescreen",
+    component : HomeDisplayComponent,
+    resolve : { data: ResolverWelcomeService }
   },
   {
     path: "categories",
@@ -133,7 +140,8 @@ const routes: Routes = [
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
       multi: true
-    }
+    },
+    CookieService
   ],
   bootstrap: [AppComponent]
 })

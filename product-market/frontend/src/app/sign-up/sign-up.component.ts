@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { ProductcatchService } from '../productcatch.service';
 import { Router } from '@angular/router';
 import { error } from 'protractor';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-sign-up',
@@ -17,7 +18,8 @@ export class SignUpComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private serve: ProductcatchService,
-    private router: Router
+    private router: Router,
+    private cookieService: CookieService
   ) {}
   get f() {
     return this.signupform.controls;
@@ -40,7 +42,8 @@ export class SignUpComponent implements OnInit {
       this.serve.signUp(obj).subscribe(
         res => {
           localStorage.setItem('accessToken', res.accessToken);
-          this.router.navigate(['/categories']);
+          this.cookieService.set('username',username)
+          this.router.navigate(['/welcomescreen']);
         },
         error => {
           this.error = error;

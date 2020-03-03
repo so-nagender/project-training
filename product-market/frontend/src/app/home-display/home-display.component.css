@@ -1,8 +1,12 @@
-.container {
-    margin: 50px auto;
-    width: 70%;
+.container2 {
+    margin: auto auto;
+    width: 80%;
   }
   
+  .tab:nth-child(even) {
+    color:black;
+  }
+
   header h1 {
     color: #bdabbd;
     margin-bottom: 10px;
@@ -12,28 +16,31 @@
   }
   
   .accordion {
+    background-image: url("../../assets/images/4682814.jpg");
     background-color: #222;
-    width: 116%;
+    width: 100%;
     min-width: 800px;
     /* display: block; */
     display: flex;
     justify-content: center;
     list-style-type: none;
     overflow: hidden;
-    height: 400px;
+    height: 300px;
     font-size: 0;
+    ;
   }
   
   .tab {
     display: inline-block;
-    background-color: #444;
+    background-color: #f88288;
     border-right: 1px solid #333;
     width: 80px;
-    height: 400px;
+    height: 300px;
     overflow: hidden;
     position: relative;
     margin: 0;
     transition: all 0.6s ease-in-out 0.1s;
+    vertical-align: middle;
   }
   
   .tab:hover {
@@ -51,11 +58,13 @@
   
   .tab .content {
     background: #fff;
+    text-align: justify;
     width: 360px;
-    height: 400px;
+    height: 300px;
     margin-left: 80px;
-    position: relative;
+    position : relative;
     padding: 40px 0 0 15px;
+    display: inline-block;
   }
   
   .tab .content h1 {
@@ -97,13 +106,14 @@
     line-height: 1.4rem;
     padding-right: 30px;
     font-family: Kalam;
+    margin: auto;
   }
   
   .social a:before,
   .social a:after {
     transition: all 0.4s ease-in-out;
     width: 80px;
-    height: 400px;
+    height: 300px;
     position: absolute;
     text-indent: 0;
     padding-top: 90px;
@@ -140,7 +150,7 @@
   
   .facebook a::before,
   .facebook a::after {
-    content: "\f204";
+    content: url("../../assets/images/play (1).svg");
   }
   
   .facebook a::after {

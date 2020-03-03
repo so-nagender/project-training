@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     if (localStorage.getItem('accessToken')) {
-      this.router.navigate(['/categories']);
+      this.router.navigate(['/welcomescreen']);
     }
   }
 }

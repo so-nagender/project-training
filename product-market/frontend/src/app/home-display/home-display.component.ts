@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { ProductcatchService } from '../productcatch.service';
 
 @Component({
   selector: 'app-home-display',
@@ -7,9 +8,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./home-display.component.css']
 })
 export class HomeDisplayComponent implements OnInit {
-  constructor(private route: Router) {}
+  datas: any;
+  constructor(private route: Router,private activatedRoute: ActivatedRoute,private serve : ProductcatchService) {}
 
   ngOnInit() {
-    this.route.navigate(['/home']);
+    if (localStorage.getItem('accessToken')) {
+      this.activatedRoute.data.subscribe(data => {
+        this.datas = data.data;
+        console.log(this.datas)
+      });
+    } else {
+      console.log("my")
+      this.route.navigate(['/home']);
+    }
   }
 }
