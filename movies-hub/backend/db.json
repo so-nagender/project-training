@@ -133,7 +133,7 @@
     {
       "user": "Monika Gupta",
       "name": "moni@gmail.com",
-      "password": "1234",
+      "password": "1234",   
       "createdAt": 1583152705481,
       "updatedAt": 1583152705481
     }
@@ -141,7 +141,7 @@
   "watchlists": [
     {
       "user": "ab.cd@gmail.com",
-      "movieId": 3
+      "movieId": [3,4,5]
     }
   ],
   "movies": [

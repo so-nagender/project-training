@@ -7,20 +7,27 @@ import { ApiserviceService } from '../apiservice.service';
   styleUrls: ['./watchlist.component.css']
 })
 export class WatchlistComponent implements OnInit {
-  movies: any;
+  watchlist: any;
   currentRate = 8;
+  movies: any;
 
   constructor(private myservice: ApiserviceService) { }
 
   ngOnInit() {
-    this.getWL();
-  }
-  getWL() {
     this.myservice.getWatchList().subscribe((res) => {
-      this.movies = res;
-      console.log(res.movie);
+      this.watchlist = res;
+      console.log(res);
+      console.log(this.watchlist[0].user);
+      let temp = this.watchlist[0].movieId[1];
+      console.log(temp);
+      this.myservice.getSingleElementById(temp).subscribe((res) => {
+        this.movies = res;
+      });
+
     });
+    
   }
+
   createRange(num) {
     const items: number[] = [];
     for (let i = 1; i <= num; i++) {

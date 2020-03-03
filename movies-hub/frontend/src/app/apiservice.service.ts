@@ -81,7 +81,7 @@ export class ApiserviceService {
     return this.http.put<any>(url, obj);
   }
   getWatchList(): Observable<any> {
-    const url = `/api/watchlists?_expand=movie`
+    const url = `/api/watchlists`
     return this.http.get(url)
   }
 }
