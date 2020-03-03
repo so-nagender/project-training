@@ -12,6 +12,7 @@ import {ProductcatchService} from '../productcatch.service'
 export class ListComponent implements OnInit {
   datas: any;
   id: any;
+  cartbodyname: any;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -55,7 +56,9 @@ export class ListComponent implements OnInit {
       cost: data.cost,
       description: data.description
     };
+    this.cartbodyname = data.name
     this.serve.addCart(obj).subscribe();
+    this.serve.setcartlength();
     this.serve.setnewsubCart();
   }
 

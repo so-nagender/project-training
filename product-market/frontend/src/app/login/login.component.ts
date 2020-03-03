@@ -12,9 +12,9 @@ import { CookieService } from 'ngx-cookie-service';
 export class LoginComponent implements OnInit {
   loginform: FormGroup;
   error: any;
-  customerName : any
-
-  constructor(
+customerName : any  
+submitted = false;
+ constructor(
     private fb: FormBuilder,
     private serve: ProductcatchService,
     private router: Router,
@@ -50,6 +50,7 @@ export class LoginComponent implements OnInit {
         }
       );
     }
+    this.submitted = true;
   }
   onClose() {
     this.router.navigate(['/home']);

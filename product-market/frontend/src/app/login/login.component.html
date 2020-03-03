@@ -12,6 +12,27 @@
     <u>or</u> <strong style="color: #f88288;"> already have an account</strong>
   </p>
   <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
+    <!-- <div class="form-group">
+      <label for="exampleInputEmail1" style="padding-top: 3px;">Username</label>
+      <input
+        type="text"
+        formControlName="username"
+        class="form-control"
+        aria-describedby="emailHelp"
+        placeholder="mobile no. or email">
+    </div>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.username">
+        <div class="error-message" *ngIf="loginform.get('username').hasError(error.type) && (loginform.get('username').dirty || loginform.get('username').touched)">
+          {{ error.message }}
+        </div>
+      </ng-container>
+    </div> -->
+     
+
+
+
+
     <div class="form-group">
       <label for="exampleInputEmail1" style="padding-top: 3px;">Username</label>
       <input

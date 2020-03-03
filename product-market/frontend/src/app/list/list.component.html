@@ -65,7 +65,7 @@
   <div class="row" style="background-image: url(../../assets/images/categorycover.jpg);margin-left: 5px;font-size: 50px; background-size: cover; ">
     Get your Now
   </div>
-  <table class="table" id="table" style="border: solid black 2px;margin-left: 5px;">
+  <table class="table" id="table" style="border: solid black 2px;margin-left: 5px;" *ngIf="(datas | filterdata: search).length > 0; else noResults" >
     <thead>
       <tr>
         <th scope="col" class="font1" >
@@ -100,7 +100,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    ITEM ADDED SUCESSFULLY <img src="../../assets/images/fall-in-love.svg" style="height: 30px;">
+                  {{cartbodyname}} ADDED SUCESSFULLY <img src="../../assets/images/fall-in-love.svg" style="height: 30px;">
                   </div>
                   <div class="modal-footer" >
                     <button type="button" class="btn " data-dismiss="modal">Close</button>
@@ -159,7 +159,8 @@
     </tbody>
   </table>
   
-   <ng-template #noResults> <p> "{{search}"}</p> </ng-template>
+   <ng-template #noResults> <h3 style="text-align: center; margin-top: 40px;font-weight: 700;"> NO RESULT FOUND for " {{search}} " <img src="../../assets/images/dislike.svg" style="height: 30px;"></h3> 
+  </ng-template>
 </div>
 
 

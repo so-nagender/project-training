@@ -21,9 +21,9 @@
         placeholder="Name of  Item"
         [ngClass]="{ 'is-invalid':f.item.touched && f.item.errors }"
       />
-      <div *ngIf="f.item.touched && f.item.errors" class="invalid-feedback">
-        <div *ngIf="f.item.errors.required">*Item Name is required</div>
-        <div *ngIf="f.item.errors.pattern">*Alphabet required</div>
+      <div *ngIf="f.item.touched && f.item.errors"class="invalid-feedback">
+        <div *ngIf="f.item.errors.required">*name Name is required</div>
+      
       </div>
     </div>
     <div class="form-group">
