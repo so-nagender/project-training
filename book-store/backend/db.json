@@ -170,6 +170,42 @@
       "BookPrice": "500",
       "discount": "10",
       "Rating": "4"
+    },
+    {
+      "BookName": "asdasd",
+      "AuthorName": "adasdasd",
+      "catogrieId": "3",
+      "description": "fdsfdfs",
+      "BookPrice": 12,
+      "BookDiscount": 1,
+      "BookRating": 2,
+      "createdAt": 1583298306661,
+      "updatedAt": 1583298306661,
+      "id": 29
+    },
+    {
+      "BookName": "asdasd",
+      "AuthorName": "adasdasd",
+      "catogrieId": "3",
+      "description": "fdsfdfs",
+      "BookPrice": 12,
+      "BookDiscount": 1,
+      "BookRating": 5,
+      "createdAt": 1583298315792,
+      "updatedAt": 1583298315792,
+      "id": 30
+    },
+    {
+      "BookName": "booknewtest",
+      "AuthorName": "testauthor",
+      "catogrieId": "3",
+      "description": "test_des",
+      "BookPrice": 12222,
+      "BookDiscount": 11,
+      "BookRating": 4,
+      "createdAt": 1583298363837,
+      "updatedAt": 1583298363837,
+      "id": 31
     }
   ],
   "profile": [

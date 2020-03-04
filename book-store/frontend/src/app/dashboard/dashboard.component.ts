@@ -8,13 +8,21 @@ import { ApiService } from '../api.service';
 })
 export class DashboardComponent implements OnInit {
   userlogindetail;
+  apiCat;
   constructor(private api : ApiService) { }
 
   ngOnInit() {
 
     this.userlogindetail= this.api.userdata.value;
+    this.Category()
     
   }
+  Category(){
+    this.api.getCatogery().subscribe((res)=>{
+      this.apiCat=res;
+    });
+  }
+  
 
 
 }

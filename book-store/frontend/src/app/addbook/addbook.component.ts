@@ -54,6 +54,7 @@ export class AddbookComponent implements OnInit {
     console.log('inside submit',this.selected)
     const obj = { "BookName" : BookName , "AuthorName" : AuthorName, "catogrieId" : CatName, "description" : BookDes, "BookPrice" :  BookPrice, "BookDiscount" : BookDiscount, "BookRating" : BookRating};
     const apihit =this.api.addBook(obj).subscribe((res)=>{this.bookDataArr.push(res)
+  
     }
     );
    
@@ -68,13 +69,13 @@ export class AddbookComponent implements OnInit {
   
   formValue() {
     this.formData = this.formBuilder.group({
-      bookname: ['',Validators.required],
-      authorname: ['',Validators.required],
-      catname: ['',Validators.required],
+      bookname: ['',[Validators.required,Validators.pattern('^[-a-zA-Z\s]+([-a-zA-Z]+)*$')]],
+      authorname: ['',[Validators.required,Validators.pattern('^[-a-zA-Z\s]+([-a-zA-Z]+)*$')]],
+      catname: ['',[Validators.required,]],
       des: ['',Validators.required],
-      bookprice: ['',Validators.required],
-      discount: ['',Validators.required],
-      rating: ['',Validators.required]
+      bookprice: ['',[Validators.required,Validators.min(0)]],
+      discount: ['',[Validators.required,Validators.min(0)]],
+      rating: ['',]
     });
   }
   // arrinsatll(){
