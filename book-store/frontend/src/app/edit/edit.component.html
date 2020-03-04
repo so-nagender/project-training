@@ -3,9 +3,13 @@
     <form [formGroup]="formData">
       <div> 
       <b>Rating- </b>
-      <span  *ngFor = 'let i of stars(apiBook.Rating)' class="fa fa-star checked" style="color: orange;"></span>
-      <span *ngFor = 'let i of stars(5 - apiBook.Rating)' class="fa fa-star"></span>
+      <div *ngFor="let i of totalArray">
+        <p [class.selected]="i <= selected" class="normal" (click)="starSelected(i)">
+      
+        </p>
+      </div>
     </div>
+    <br>
     <br>
 
          Book Name:
@@ -31,9 +35,9 @@
             
               <select formControlName="catname" class="form-control"
               [ngClass]="{ 'is-invalid': submitted && u.catname.errors }" >
-               
+                <option value="" selected disabled hidden>{{apiBook1.catogrie.title}}</option>
                 <option value="{{i.id}}" *ngFor="let i of apiBook2">{{i.title}}</option>
-                <option value="{{apiBook1.catogrie.id}}" selected>{{apiBook1.catogrie.title}}</option>
+                
               </select>
               <div *ngIf="submitted && u.catname.errors" class="invalid-feedback">
                 <div *ngIf="u.catname.errors.required">Catogery is required</div>
@@ -70,7 +74,7 @@
         <br>
         <div style="margin-top: 10px;">
             <button type="submit" [disabled]="!ngForm.valid" class="btn btn-primary buttonCss" (click)="onUpdate()"> Update </button>
-            <button type="button" class="btn btn-primary buttonCss" style="margin-left: 10px;" [routerLink]="['/book/view', apiBook.id]">Cancle</button>
+            <button type="button" class="btn btn-primary buttonCss" style="margin-left: 10px;" [routerLink]="['/viewbook']">Cancle</button>
         </div>
     </form>
 </div> 
