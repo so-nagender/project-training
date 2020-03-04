@@ -9,16 +9,14 @@
 
     </ul>
 </aside>
-<div class="container  view">
-  
-    
+<div class="container view"> 
     <div id="slideshow">
         <div class="slide-wrapper">
           <div class="slide">
             <img src="../../assets/images/adventure/adventure1.jpg">
             <img src="../../assets/images/adventure/adventure2.jpg">
             <img src="../../assets/images/adventure/adventure3.jpg">
-            <img src="../../assets/images/adventure/adventure4.jpg">
+            <img src="../../assets/images/adventure/adventure5.jpg">
             <h1 class="slide-number">adventure</h1>
           </div>
           <div class="slide">
@@ -40,112 +38,19 @@
       </div>
 </div>
 
-<div class="line container"></div>
-<div class="books-section  padding-top-200px container">
-  <div class="row row-cols-4">
-    <div class="col">
-      <img src="../../assets/images/adventure/adventure1.jpg" class="image">
-      <div class="overlay">
-        <div class="text"><p>Adventure<p></div>
-        <button type="button" [routerLink]="['/Categorie/book/2']" class="view_button">View Details</button>
-        </div>
-    </div>
-    <div class="col">
-      <img src="../../assets/images/horro/horror1.jpg" class="image">
-      <div class="overlay">
-       <div class="text">Horror</div>
-        <button type="button" [routerLink]="['/Categorie/book/1']" class="view_button">View Details</button></div>
-    </div>
-    <div class="col">
-      <img src="../../assets/images/fantasy/fantasy1.jpg" class="image">
-      <div class="overlay">
-        <div class="text">Fantasy</div>
-        <button type="button" [routerLink]="['/Categorie/book/3']" class="view_button">View Details</button></div>
-    </div>
-    <div class="col">
-      <img src="../../assets/images/artImage/art3.jpg" class="image">
-      <div class="overlay">
-        <div class="text">Art</div>
-        <button class="view_button">View Details</button></div>
-    </div>
-  </div>
 
-  <div class="row row-cols-4">
-    <div class="col">
-      <img src="../../assets/images/Engineering/er1.jpg" class="image">
-      <div class="overlay">
-        <div class="text">Engineering</div>
-        <button class="view_button">View Details</button></div>
-    </div>
-    <div class="col">
-      <img src="../../assets/images/Bussiness/Bussiness1.jpg" class="image">
-      <div class="overlay">
-        <div class="text">Business</div>
-        <button class="view_button">View Details</button>
-      </div>
-    </div>
-    <div class="col">
-      <img src="../../assets/images/HumanResource/hr.jpg" class="image">
-      <div class="overlay">
-        <div class="text">Human Resource</div>
-        <button class="view_button">View Details</button></div>
-    </div>
-    <div class="col">
-      <img src="../../assets/images/Love/love.jpg" class="image">
-      <div class="overlay">
-        <div class="text">Love</div>
-        <button class="view_button">View Details</button></div>
-    </div>
-  </div>
+<div class="books-section container">
+  <p style="border-top: 2px solid black;"></p>
+  <b style="font-size: 25px; margin-right: 38%; color: blueviolet;"> Feature Categories</b>
+  
   <div class="row row-cols-4">
     <div class="col" *ngFor="let cat of apiCat">
       <img src="../../assets/images/Love/love.jpg" class="image">
       <div class="overlay">
-        <div class="text">{{apiCat.title| uppercase}}</div>
-        <button class="view_button">View Details</button></div>
-    </div>
-  </div>
-  
-
-  <!-- <div class="row row-cols-4">
-    <div class="col">
-      <img src="../../assets/images/fantasy/fantasy1.jpg" class="image">
-      <div class="overlay">
-        <span>&#11088;</span>
-        <div class="rating">6.4/10</div>
-        <div class="text">Fantasy</div>
-        <button class="view_button">View Details</button>
+        <div class="text">{{cat.title| uppercase}}</div>
+        <button class="btn btn-outline-success" style="margin-right: 23%; margin-top: 70%;" [routerLink]="['/categorie/book', cat.id]">View Details</button></div>
       </div>
     </div>
-    <div class="col">
-      <img src="../../assets/images/fantasy/fantasy2.jpg" class="image">
-      <div class="overlay">
-        <span>&#11088;</span>
-        <div class="rating">6.4/10</div>
-        <div class="text">Fantasy</div>
-        <button class="view_button">View Details</button></div>
-    </div>
-    <div class="col">
-      <img src="../../assets/images/fantasy/fantasy3.jpg" class="image">
-      <div class="overlay">
-        <span>&#11088;</span>
-        <div class="rating">6.4/10</div>
-        <div class="text">Fantasy</div>
-        <button class="view_button" >View Details</button></div>
-    </div>
-    <div class="col">
-      <img src="../../assets/images/fantasy/fantasy4.jpg" class="image">
-      <div class="overlay">
-        <span>&#11088;</span>
-        <div class="rating">6.4/10</div>
-        <div class="text">Fantasy</div>
-        <button class="view_button">View Details</button></div>
-    </div>
-  </div> -->
-      
-
-  
-  
-</div>
+  </div>
 </div>
     

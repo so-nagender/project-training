@@ -30,13 +30,13 @@
                 <b>Categorie Description -</b> {{data.description}}
               </div>
               <div class="col-sm-1 float-right">
-                <img src="../../assets/images/eye.png" height="20px" style="margin-right: 10px;" [routerLink]="['/categorie/book', data.id]">
+                <img src="../../assets/images/eye.png" height="20px" style="margin-right: 10px; cursor: pointer;" [routerLink]="['/categorie/book', data.id]">
                 <br>
                 <br>
-                <img src="../../assets/images/draw.svg" height="20px" style="margin-right: 10px;" [routerLink]="['/categorie/edit', data.id]"> 
+                <img src="../../assets/images/draw.svg" height="20px" style="margin-right: 10px; cursor: pointer;" [routerLink]="['/categorie/edit', data.id]"> 
                 <br>
                 <br>
-                <img src="../../assets/images/garbage.svg" height="20px" (click)="onDeleteCat(data.id)">
+                <img src="../../assets/images/garbage.svg" height="20px" style="cursor: pointer;" (click)="onDeleteCat(data.id)">
 
               </div>
 
