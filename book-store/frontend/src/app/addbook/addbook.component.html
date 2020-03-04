@@ -50,10 +50,19 @@
                             <div *ngIf="u.discount.errors.required">Discount ??</div>
                         </div>
                         <br>
-                        Rating:
-                        <br>
-                        <input id="rating" class="form-control" type="text" formControlName="rating"
-                            [ngClass]="{ 'is-invalid': submitted && u.rating.errors }">
+                        Rating :          
+                      
+                        <!-- <span *ngFor="let number of  Ratingarr">
+                            <p [class.selected]="i <= selected" class="normal" (click)="starSelected(number)">
+                               
+                               </p>
+                            </span> -->
+                            <div *ngFor="let i of totalArray">
+                                <p [class.selected]="i <= selected" class="normal" (click)="starSelected(i)">
+                              
+                                </p>
+                              </div>
+                       
                         <div *ngIf=" submitted && u.rating.errors" class="invalid-feedback">
                             <div *ngIf="u.rating.errors.required">Rating is required</div>
                         </div>

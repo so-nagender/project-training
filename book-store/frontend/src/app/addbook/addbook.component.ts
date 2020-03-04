@@ -16,12 +16,23 @@ export class AddbookComponent implements OnInit {
   apiBook2;
   submitted = false;
   bookDataArr = [];
+  total = 5;
+  selected = 0;
+  totalArray: number[] = [];
 
   constructor(private api: ApiService, private http: HttpClient, private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit() {
+    
     this.formValue();
     this.book();
+
+    for (let i = 0; i < this.total; i++) {
+      this.totalArray.push(i + 1);
+    }
+    console.log(this.totalArray);
+
+  
   }
 
   get u() {
@@ -39,7 +50,8 @@ export class AddbookComponent implements OnInit {
     const BookDes = this.formData.controls.des.value;
     const BookPrice = this.formData.controls.bookprice.value;
     const BookDiscount = this.formData.controls.discount.value;
-    const BookRating = this.formData.controls.rating.value;
+    const BookRating = this.selected
+    console.log('inside submit',this.selected)
     const obj = { "BookName" : BookName , "AuthorName" : AuthorName, "catogrieId" : CatName, "description" : BookDes, "BookPrice" :  BookPrice, "BookDiscount" : BookDiscount, "BookRating" : BookRating};
     const apihit =this.api.addBook(obj).subscribe((res)=>{this.bookDataArr.push(res)
     }
@@ -65,5 +77,19 @@ export class AddbookComponent implements OnInit {
       rating: ['',Validators.required]
     });
   }
+  // arrinsatll(){
+  //   for (let i = 0; i < this.TotalRating; i++) {
+  //     this.Ratingarr.push(i + 1);
+  //   }
+  //   console.log('here-->>',this.Ratingarr);
+  // }
+  
+ 
+  starSelected(val) {
+    this.selected = val;
+    console.log(this.selected);
+    return this.selected
+  }
+
 
 }
