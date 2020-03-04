@@ -15,6 +15,8 @@ export class ListComponent implements OnInit {
   id: any;
   cartbodyname: any;
   cartdata : any;
+  catname:any;
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private serve: ProductcatchService,
@@ -26,7 +28,6 @@ export class ListComponent implements OnInit {
     this.activatedRoute.data.subscribe(data => {
       this.datas = data.data;
       this.datas.forEach(item => (item.rating = parseInt(item.rating,10)));
-      console.log(this.datas)
     });
     this.serve.getnewItem().subscribe(() => {
       const varId = this.activatedRoute.snapshot.params.id;
@@ -35,6 +36,11 @@ export class ListComponent implements OnInit {
         this.datas.forEach(item => (item.rating = parseInt(item.rating,10)));
       });
     });
+    this.serve.getparticularCat(this.activatedRoute.snapshot.params.id).subscribe(res => {
+      this.catname = res;
+      console.log(this.catname,">>>>>>>>");
+    })
+
   }
 
   onClose(param) {

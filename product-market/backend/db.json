@@ -8,87 +8,53 @@
       "id": 7
     },
     {
-      "name": "Groceries",
-      "description": "Vegetables,Fruits",
-      "createdAt": 1582721000903,
-      "updatedAt": 1582721000903,
+      "name": "Women",
+      "description": "vb",
+      "createdAt": 1583298845403,
+      "updatedAt": 1583298845403,
       "id": 8
     },
     {
-      "name": "kids",
-      "description": "rtrt",
-      "createdAt": 1582788058109,
-      "updatedAt": 1582788058109,
+      "name": "Men",
+      "description": "d",
+      "createdAt": 1583299070880,
+      "updatedAt": 1583299070880,
       "id": 9
     }
   ],
   "product-items": [
     {
-      "name": "handbags",
-      "rating": "4",
-      "description": "DFJHBKNHSITUNRYINP",
-      "cost": 5000,
-      "updatedAt": 1582796448685,
-      "id": 12
-    },
-    {
-      "name": "Laptops",
-      "rating": "4",
-      "description": "njekyrnkaretieyilburliuilue oruilenvoaetbu",
-      "cost": 50000,
-      "updatedAt": 1582797180973,
-      "id": 14
-    },
-    {
-      "name": "heater",
-      "rating": "5",
-      "description": "for room heatinghgfh",
-      "cost": 2000,
-      "updatedAt": 1582788609412,
-      "id": 15
-    },
-    {
-      "name": "Mobiles",
-      "rating": "4",
-      "description": "Mobiles are a device.",
-      "cost": 4000,
-      "updatedAt": 1582797246477,
-      "id": 16
-    },
-    {
-      "name": "Heater",
+      "name": "microwave",
+      "catId": 7,
       "rating": "3",
-      "description": "dsiuhveritbienys",
-      "cost": 3000,
-      "updatedAt": 1582797323326,
-      "id": 17
+      "description": "A microwave oven (commonly referred to as a microwave) is an electric oven that heats and cooks food by exposing it to electromagnetic radiation in the microwave frequency range",
+      "cost": 15000,
+      "createdAt": 1583298479808,
+      "updatedAt": 1583298479808,
+      "id": 1
     },
     {
-      "name": "Microwave",
-      "rating": "3",
-      "description": "Hdjkknhtjkh",
-      "cost": 6000,
-      "updatedAt": 1582797349037,
-      "id": 18
-    },
-    {
-      "name": "raju",
+      "name": "electric heater",
+      "catId": 7,
       "rating": "2",
-      "description": "sfagrthrthrhrh",
-      "cost": 5000,
-      "updatedAt": 1582798439933,
-      "id": 19
+      "description": "An electric heater is an electrical device that converts an electric current into heat. The heating element inside every electric heater is an electrical resistor, and works on the principle of Joule heating: an electric current passing through a resistor will convert that electrical energy into heat energy.",
+      "cost": 1250,
+      "createdAt": 1583298546312,
+      "updatedAt": 1583298546312,
+      "id": 2
     },
     {
-      "name": "monika",
-      "rating": "5",
-      "description": "",
-      "cost": 50000,
-      "updatedAt": 1582798535163,
-      "id": 20
+      "name": "laptop",
+      "catId": 7,
+      "rating": "2",
+      "description": "A laptop computer, sometimes called a notebook computer by manufacturers, is a battery- or AC-powered personal computer generally smaller than a briefcase that can easily be transported and conveniently used in temporary spaces such as on airplanes, in libraries, temporary offices, and at meetings.",
+      "cost": 32000,
+      "createdAt": 1583298608001,
+      "updatedAt": 1583298608001,
+      "id": 3
     },
     {
-      "name": "rajuujk",
+      "name": "refrigerator",
       "catId": 7,
       "rating": 4,
       "description": "ghfjgchjfyif,yg,oiu.ogiu/imui,y,o y,oikl,jk,jjkhjkkgfdhgdfh",
@@ -97,7 +63,7 @@
       "id": 21
     },
     {
-      "name": "raju",
+      "name": "crop top",
       "catId": 8,
       "rating": 4,
       "description": "jhhjkhgjkhjk",
@@ -106,7 +72,7 @@
       "id": 24
     },
     {
-      "name": "DBSJFJSDHF",
+      "name": "off shoulder top",
       "catId": 8,
       "rating": 4,
       "description": "sds",
