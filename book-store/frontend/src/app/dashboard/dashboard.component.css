@@ -133,7 +133,7 @@ body {
   color: white;
   font-size: 20px;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -173,12 +173,15 @@ aside{
 background-color: black;
  font-family: 'Poppins', sans-serif;
  color:white;
- height: 98%;
- width: 300px;
+ height: 218%;
+ width: 15%;
  line-height: 5em;
- position: fixed;
+ position: absolute;
  text-align: left;
- left: 0px;
+ left: -10px;
+ float: left;
+ border: 2px solid #8167a9;
+ 
 
 }
 
@@ -196,17 +199,26 @@ aside li:hover{
 }
 
 .top-space-sidebar{
- padding-top: 50%;
+ padding-top: 35%;
+ float: left;
 
 }
 .top-space-sidebar img{
-  max-width: 50%;
+  /* max-width: 50%; */
   border: 1px solid #8167a9;
   border-radius: 50%;
 }
 .top-space-sidebar li{
   text-align: center;
-  position: relative;
+  position: relative ;
  
 }
 /*-- End --*/
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+
+
+  font-size: 20px;
+}

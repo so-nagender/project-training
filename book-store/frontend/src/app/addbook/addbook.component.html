@@ -11,6 +11,7 @@
                             [ngClass]="{ 'is-invalid':submitted && u.bookname.errors }">
                         <div *ngIf="submitted && u.bookname.errors" class="invalid-feedback">
                             <div *ngIf="u.bookname.errors.required"> Book Name is required</div>
+                            <div *ngIf="u.bookname.errors.pattern">Book Name should be Alphabet</div>
                         </div>
                         <br>
                         Author Name:
@@ -19,6 +20,7 @@
                             [ngClass]="{ 'is-invalid': submitted && u.authorname.errors }">
                         <div *ngIf=" submitted && u.authorname.errors" class="invalid-feedback">
                             <div *ngIf="u.authorname.errors.required"> Author Name is required</div>
+                            <div *ngIf="u.bookname.errors.pattern">Book Name should be Alphabet</div>
                         </div>
                         <br>
                         Catogery Name:
@@ -40,6 +42,7 @@
                             [ngClass]="{ 'is-invalid': submitted && u.bookprice.errors }">
                         <div *ngIf=" submitted && u.bookprice.errors" class="invalid-feedback">
                             <div *ngIf="u.bookprice.errors.required">Book Price is required</div>
+                            <div *ngIf="u.bookprice.errors.min">Minimum price should be 0</div>
                         </div>
                         <br>
                         Discount:
@@ -48,6 +51,7 @@
                             [ngClass]="{ 'is-invalid': submitted && u.discount.errors }">
                         <div *ngIf=" submitted && u.discount.errors" class="invalid-feedback">
                             <div *ngIf="u.discount.errors.required">Discount ??</div>
+                            <div *ngIf="u.bookprice.errors.min">Minimum Discount should be 0</div>
                         </div>
                         <br>
                         Rating:
@@ -56,6 +60,7 @@
                             [ngClass]="{ 'is-invalid': submitted && u.rating.errors }">
                         <div *ngIf=" submitted && u.rating.errors" class="invalid-feedback">
                             <div *ngIf="u.rating.errors.required">Rating is required</div>
+                            <div *ngIf="u.bookprice.errors.min">Minimum Rating should be 0</div>
                         </div>
                         <br>
                         Description:
