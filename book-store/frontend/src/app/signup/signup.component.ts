@@ -15,8 +15,8 @@ import { Router } from '@angular/router';
 
 export class SignupComponent implements OnInit {
   form = new FormGroup({
-    fname: new FormControl('',[Validators.required,Validators.pattern('^[^\s]+[-a-zA-Z\s]+([-a-zA-Z]+)*$')]),
-    lname: new FormControl('',[Validators.required,Validators.pattern('^[^\s]+[-a-zA-Z\s]+([-a-zA-Z]+)*$')]),
+    fname: new FormControl('',[Validators.required,Validators.pattern('^[-a-zA-Z\s]+([-a-zA-Z]+)*$')]),
+    lname: new FormControl('',[Validators.required,Validators.pattern('^[-a-zA-Z\s]+([-a-zA-Z]+)*$')]),
     email: new FormControl('',[Validators.required, Validators.email]),
     password: new FormControl('',[Validators.required, Validators.minLength(6)]),
     password2: new FormControl('',[Validators.required, Validators.minLength(6)])
@@ -31,6 +31,10 @@ export class SignupComponent implements OnInit {
 
   onSubmit(form) {
     if (this.form.value.password == this.form.value.password2){
+      // if(!this.form.valid) {
+      //   return;
+      // }
+    
       const password = this.form.value.password
       this.api.postloginDetails(this.form.value.email,password).subscribe((data: any)=> {
         localStorage.setItem('accessToken', data.accessToken);
