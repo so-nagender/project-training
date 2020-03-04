@@ -101,18 +101,6 @@ export class ViewbookComponent implements OnInit {
 //  } 
 // }
 
-// bookprice()
-// {
-//   this.api.getBook().subscribe((res)=>{
- 
-//    res = res.map(item => ({
-//     ...item,
-//     discountPrice: item.BookPrice-(item.BookPrice*item.discount/100)
-//   }))
-//    console.log('mapped data', res)
-//    return this.bookdata = res;
-//   });
-// }
 
 
 }

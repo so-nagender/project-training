@@ -29,6 +29,11 @@ export class ViewCatComponent implements OnInit {
       this.apiCat = res;
     }); 
     this.api.getCatBook(this.id).subscribe((res)=>{
+      res = res.map(item => ({
+        ...item,
+        discountPrice: item.BookPrice-(item.BookPrice*item.discount/100)
+      }))
+      console.log('mapped data',res)
       this.apiBook =res;
     }); 
   }

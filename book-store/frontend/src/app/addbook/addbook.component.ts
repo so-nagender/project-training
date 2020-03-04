@@ -50,9 +50,8 @@ export class AddbookComponent implements OnInit {
     const BookDes = this.formData.controls.des.value;
     const BookPrice = this.formData.controls.bookprice.value;
     const BookDiscount = this.formData.controls.discount.value;
-    const BookRating = this.selected
-    console.log('inside submit',this.selected)
-    const obj = { "BookName" : BookName , "AuthorName" : AuthorName, "catogrieId" : CatName, "description" : BookDes, "BookPrice" :  BookPrice, "BookDiscount" : BookDiscount, "BookRating" : BookRating};
+    const BookRating = this.selected;
+    const obj = { "BookName" : BookName , "AuthorName" : AuthorName, "catogrieId" : CatName, "description" : BookDes, "BookPrice" :  BookPrice, "discount" : BookDiscount, "Rating" : BookRating};
     const apihit =this.api.addBook(obj).subscribe((res)=>{this.bookDataArr.push(res)
   
     }

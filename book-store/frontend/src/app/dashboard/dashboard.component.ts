@@ -7,8 +7,9 @@ import { ApiService } from '../api.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  userlogindetail;
   apiCat;
+  userlogindetail;
+
   constructor(private api : ApiService) { }
 
   ngOnInit() {
@@ -23,6 +24,8 @@ export class DashboardComponent implements OnInit {
     });
   }
   
+
+
 
 
 }

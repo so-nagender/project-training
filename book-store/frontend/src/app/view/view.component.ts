@@ -11,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ViewComponent implements OnInit {
   id;
   apiBook;
+  Book;
 
   constructor(private api: ApiService, private activatedRoute: ActivatedRoute) {
     this.id = this.activatedRoute.snapshot.params.id;
@@ -20,8 +21,10 @@ export class ViewComponent implements OnInit {
     this.book();
   }
   book(){
-    this.api.getBookDetail(this.id).subscribe((res)=>{
-      this.apiBook = res;
+    this.api.getBookDetail(this.id).subscribe((data)=>{
+      debugger;
+      this.Book = data;
+      this.Book.discountPrice = this.Book.BookPrice - (this.Book.BookPrice*this.Book.discount/100);
     });
     this.api.getCatDetail(this.id).subscribe((res)=>{
       this.apiBook = res;

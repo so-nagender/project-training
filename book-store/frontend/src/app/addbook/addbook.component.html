@@ -97,11 +97,47 @@
                         <td>{{books.BookName}}</td>
                         <td>{{books.AuthorName}}</td>
                         <td>{{books.BookPrice}}</td>
-                        <td>{{books.BookDiscount}}</td>
-                        <td>{{books.BookRating}}</td>
+                        <td>{{books.discount}}</td>
+                        <td>{{books.Rating}}</td>
                         </tr>
                     </table>
+                    <!-- <ul class="list-group" style="margin-bottom: 25px;" *ngIf="(books).length > 0; else noResults">
+                        <li class="list-group-item">
+                          <div class="row">
+                            <div class="col-sm-4 book-image-container">
+                              <img src="../../assets/images/bookview.png" height="200px"> 
+                              <span class="discounted">
+                                {{books.discount}}%
+                  
+                              </span>
+                            </div>
+                            <div class="col-sm-8"> 
+                                  <b>Book Name-</b>{{books.BookName | uppercase}}
+                                  <b> Rating </b>
+                                  <span *ngFor = 'let i of stars(books.Rating)' class="fa fa-star checked" style="color: black;"></span>
+                                  <span *ngFor = 'let i of stars(5-books.Rating)' class="fa fa-star" style="color: 	#CCCCCC	;" ></span>
+                                  <br>
+                                  <b>Author Name-</b>{{books.AuthorName}}
+                                  <br>
+                                  <b>Categorie Name -</b>{{books.catogrie.title}}
+                                  <br>
+                                  <b>Price - </b><del>{{books.BookPrice}}</del>
+                                  <br>
+                            </div>
+                  
+                              
+                  
+                           
+                            
+                  
+                          </div>
+                        </li>
+                      </ul>
+                    <ng-template > 
+                        <p><b style="color: red; font-size: 20px;">No results found for "{{searchText}}".<img src="../../assets/images/no result.jpg" height="80px"></b></p>
+                      </ng-template>
                 </div>
+                 -->
             </div>
         
         
