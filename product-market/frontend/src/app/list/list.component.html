@@ -62,8 +62,7 @@
     </div>
   </div>
 
-  <div class="row" style="background-image: url(../../assets/images/categorycover.jpg);margin-left: 5px;font-size: 50px; background-size: cover; ">
-    Get your Now
+  <div class="row padding-left" style="font-size: 50px;">{{catname.name}}
   </div>
   <table class="table" id="table" style="border: solid black 2px;margin-left: 5px;" *ngIf="(datas | filterdata: search).length > 0; else noResults" >
     <thead>
@@ -85,8 +84,8 @@
       <tr *ngFor="let data of datas| filterdata: search" >
         <td class="font2">
           <p>{{data.name}}</p>
-          <button appListEdit [first]="data" type="button" class="btn" style="margin-top: 40px; float: left;">EDIT</button>
-          <button type="button" class="btn" style="margin-top: 10px;float: left;" (click)="onaddCart(data)"  data-toggle="modal" data-target="#exampleModal">ADD TO
+          <button appListEdit [first]="data" type="button" class="btn" style="margin-top: 40px;">EDIT</button><br>
+          <button type="button" class="btn" style="margin-top: 10px;" (click)="onaddCart(data)"  data-toggle="modal" data-target="#exampleModal">ADD TO
             CART</button>
             <!-- modal of add to cart -->
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

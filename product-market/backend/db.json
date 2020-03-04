@@ -8,159 +8,140 @@
       "id": 7
     },
     {
-      "name": "Groceries",
-      "description": "Vegetables,Fruits",
-      "createdAt": 1582721000903,
-      "updatedAt": 1582721000903,
+      "name": "Women",
+      "description": "vb",
+      "createdAt": 1583298845403,
+      "updatedAt": 1583298845403,
       "id": 8
     },
     {
-      "name": "kids",
-      "description": "rtrt",
-      "createdAt": 1582788058109,
-      "updatedAt": 1582788058109,
+      "name": "Men",
+      "description": "d",
+      "createdAt": 1583299070880,
+      "updatedAt": 1583299070880,
       "id": 9
     }
   ],
   "product-items": [
     {
-      "name": "handbags",
-      "rating": "4",
-      "description": "DFJHBKNHSITUNRYINP",
-      "cost": 5000,
-      "updatedAt": 1582796448685,
-      "id": 12
-    },
-    {
-      "name": "Laptops",
-      "rating": "4",
-      "description": "njekyrnkaretieyilburliuilue oruilenvoaetbu",
-      "cost": 50000,
-      "updatedAt": 1582797180973,
-      "id": 14
-    },
-    {
-      "name": "heater",
-      "rating": "5",
-      "description": "for room heatinghgfh",
-      "cost": 2000,
-      "updatedAt": 1582788609412,
-      "id": 15
-    },
-    {
-      "name": "Mobiles",
-      "rating": "4",
-      "description": "Mobiles are a device.",
-      "cost": 4000,
-      "updatedAt": 1582797246477,
-      "id": 16
-    },
-    {
-      "name": "Heater",
-      "rating": "3",
-      "description": "dsiuhveritbienys",
-      "cost": 3000,
-      "updatedAt": 1582797323326,
-      "id": 17
-    },
-    {
-      "name": "Microwave",
-      "rating": "3",
-      "description": "Hdjkknhtjkh",
-      "cost": 6000,
-      "updatedAt": 1582797349037,
-      "id": 18
-    },
-    {
-      "name": "raju",
-      "rating": "2",
-      "description": "sfagrthrthrhrh",
-      "cost": 5000,
-      "updatedAt": 1582798439933,
-      "id": 19
-    },
-    {
-      "name": "monika",
-      "rating": "5",
-      "description": "",
-      "cost": 50000,
-      "updatedAt": 1582798535163,
-      "id": 20
-    },
-    {
-      "name": "rajuujk",
+      "name": "microwave",
       "catId": 7,
-      "rating": "4",
-      "description": "ghfjgchjfyif,yg,oiu.ogiu/imui,y,o y,oikl,jk,jjkhjkkgfdhgdfh",
-      "cost": 5000,
-      "updatedAt": 1583150709851,
-      "id": 21
+      "rating": "3",
+      "description": "A microwave oven (commonly referred to as a microwave) is an electric oven that heats and cooks food by exposing it to electromagnetic radiation in the microwave frequency range",
+      "cost": 15000,
+      "createdAt": 1583298479808,
+      "updatedAt": 1583298479808,
+      "id": 1
     },
     {
-      "name": "raju",
+      "name": "electric heater",
+      "catId": 7,
+      "rating": "2",
+      "description": "An electric heater is an electrical device that converts an electric current into heat. The heating element inside every electric heater is an electrical resistor, and works on the principle of Joule heating: an electric current passing through a resistor will convert that electrical energy into heat energy.",
+      "cost": 1250,
+      "createdAt": 1583298546312,
+      "updatedAt": 1583298546312,
+      "id": 2
+    },
+    {
+      "name": "laptop",
+      "catId": 7,
+      "rating": "2",
+      "description": "A laptop computer, sometimes called a notebook computer by manufacturers, is a battery- or AC-powered personal computer generally smaller than a briefcase that can easily be transported and conveniently used in temporary spaces such as on airplanes, in libraries, temporary offices, and at meetings.",
+      "cost": 32000,
+      "createdAt": 1583298608001,
+      "updatedAt": 1583298608001,
+      "id": 3
+    },
+    {
+      "name": "refrigerator",
+      "catId": 7,
+      "rating": "5",
+      "description": "A refrigerator is a machine for keeping things cold. It is sometimes called a fridge or an icebox. People put food and drinks in it, to keep those items cold or good (unspoiled) for a longer time. A refrigerator has a heat pump. ... The heat gets added to the air outside.",
+      "cost": 20000,
+      "createdAt": 1583298799961,
+      "updatedAt": 1583298799961,
+      "id": 4
+    },
+    {
+      "name": "crop top",
       "catId": 8,
       "rating": 4,
-      "description": "jhhjkhgjkhjk",
-      "cost": 500000,
-      "updatedAt": 1583236577475,
-      "id": 24
+      "description": "A crop top (also cropped top, belly shirt, half shirt, midriff shirt, midriff top, tummy top, short shirt, and cutoff shirt) is a top, the lower part of which is high enough to expose the waist, navel, or some of the midriff.",
+      "cost": 500,
+      "updatedAt": 1583300410664,
+      "id": 5
     },
     {
-      "name": "DBSJFJSDHF",
+      "name": "off shoulder top",
       "catId": 8,
-      "rating": 1,
-      "description": "sds",
-      "cost": 5,
-      "updatedAt": 1583234653346,
-      "id": 25
+      "rating": "3",
+      "description": "Why the off-the-shoulder top is suddenly everywhere. ... A variation known as the cold shoulder top — which leaves skin bare between strap and sleeve — has also been flying off shelves.",
+      "cost": 400,
+      "createdAt": 1583298937779,
+      "updatedAt": 1583298937779,
+      "id": 6
     },
     {
-      "name": "fsfdfs",
+      "name": "dresses",
       "catId": 8,
       "rating": "4",
-      "description": "fvbgfhd",
-      "cost": 5000,
-      "createdAt": 1583235486137,
-      "updatedAt": 1583235486137,
-      "id": 26
+      "description": "A dress (also known as a frock or a gown) is a garment traditionally worn by women or girls consisting of a skirt with an attached bodice (or a matching bodice giving the effect of a one-piece garment).[1] It consists of a top piece that covers the torso and hangs down over the legs",
+      "cost": 800,
+      "createdAt": 1583298982197,
+      "updatedAt": 1583298982197,
+      "id": 7
+    },
+    {
+      "name": "ethnic wear",
+      "catId": 8,
+      "rating": "2",
+      "description": "In simple terms Indian ethnic wear include the traditional dresses worn my women on special occasions like weddings, festivals and worships.",
+      "cost": 500,
+      "createdAt": 1583299029939,
+      "updatedAt": 1583299029939,
+      "id": 8
+    },
+    {
+      "name": "T-shirt",
+      "catId": 9,
+      "rating": "3",
+      "description": "a short-sleeved casual top, generally made of cotton, having the shape of a T when spread out flat",
+      "cost": 400,
+      "createdAt": 1583299151970,
+      "updatedAt": 1583299151970,
+      "id": 9
+    },
+    {
+      "name": "shirt",
+      "catId": 9,
+      "rating": "2",
+      "description": "A shirt is a cloth garment for the upper body. There are various types of shirt for men and women. Basic shirt is one of them. ... This shirt has a formal collar, a full-length opening at the front from the collar to the hem and sleeves with cuffs.",
+      "cost": 400,
+      "createdAt": 1583299182402,
+      "updatedAt": 1583299182402,
+      "id": 10
+    },
+    {
+      "name": "Denim jacket",
+      "catId": 9,
+      "rating": "2",
+      "description": "A jean jacket, also called a denim jacket or trucker jacket, is a jacket made from denim. Introduced in the United States in the late 19th century, it has been a popular type of casual apparel with both men and women and has been described as an iconic element of American fashion",
+      "cost": 600,
+      "createdAt": 1583299282026,
+      "updatedAt": 1583299282026,
+      "id": 11
     }
   ],
   "product-cart": [
     {
-      "name": "rajuujk",
+      "name": "crop top",
       "rating": 4,
-      "cost": 5000,
-      "description": "ghfjgchjfyif,yg,oiu.ogiu/imui,y,o y,oikl,jk,jjkhjkkgfdhgdfh",
-      "createdAt": 1582883683641,
-      "updatedAt": 1582883683641,
+      "cost": 500,
+      "description": "A crop top (also cropped top, belly shirt, half shirt, midriff shirt, midriff top, tummy top, short shirt, and cutoff shirt) is a top, the lower part of which is high enough to expose the waist, navel, or some of the midriff.",
+      "createdAt": 1583303998858,
+      "updatedAt": 1583303998858,
       "id": 1
-    },
-    {
-      "name": "rajuujk",
-      "rating": 4,
-      "cost": 5000,
-      "description": "ghfjgchjfyif,yg,oiu.ogiu/imui,y,o y,oikl,jk,jjkhjkkgfdhgdfh",
-      "createdAt": 1582883686976,
-      "updatedAt": 1582883686976,
-      "id": 2
-    },
-    {
-      "name": "rajuujk",
-      "rating": 4,
-      "cost": 5000,
-      "description": "ghfjgchjfyif,yg,oiu.ogiu/imui,y,o y,oikl,jk,jjkhjkkgfdhgdfh",
-      "createdAt": 1582885768152,
-      "updatedAt": 1582885768152,
-      "id": 3
-    },
-    {
-      "name": "rajuujk",
-      "rating": 4,
-      "cost": 5000,
-      "description": "ghfjgchjfyif,yg,oiu.ogiu/imui,y,o y,oikl,jk,jjkhjkkgfdhgdfh",
-      "createdAt": 1583153135400,
-      "updatedAt": 1583153135400,
-      "id": 4
     }
   ],
   "posts": [

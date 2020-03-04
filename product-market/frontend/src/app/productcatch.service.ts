@@ -111,7 +111,11 @@ export class ProductcatchService {
   getcartlength(): Observable<any> {
     return this.subforlength.asObservable();
   }
-
+  getparticularCat(x: number): Observable<any> {
+    const url = `/api/cats/${x}`;
+    return this.http.get(url);
+  }
+  
 
   
 }

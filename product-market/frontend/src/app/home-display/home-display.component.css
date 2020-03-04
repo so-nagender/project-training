@@ -16,7 +16,7 @@
   }
   
   .accordion {
-    background-image: url("../../assets/images/4682814.jpg");
+    background-image: url("../../assets/images/images.png");
     background-color: #222;
     width: 100%;
     min-width: 800px;
@@ -147,7 +147,7 @@
   
   .youtube a::after {
     background-color: #ff0000;
-    background-image: url(../../assets/images/couple.svg);
+    
   }
   
   .twitter a::before,
@@ -157,7 +157,7 @@
   
   .twitter a::after {
     background-color: #6dc5dd;
-    background-image: url(../../assets/images/both.svg);
+   
   }
   
   .facebook a::before,
@@ -167,7 +167,7 @@
   
   .facebook a::after {
     background-color: #3b5998;
-    background-image: url(../../assets/images/pijama.svg);
+   
   }
   
   .linkedin a::before,
@@ -176,7 +176,7 @@
   }
   .linkedin a::after {
     background-color: #00a9cd;
-    background-image: url(../../assets/images/laptop.svg);
+    
   }
   
   .instagram a::before,
@@ -185,7 +185,7 @@
   }
   .instagram a::after {
     background-color: #6dc993;
-    background-image: url(../../assets/images/boot.svg);
+  
   }
   
   .tumblr a::before,
@@ -194,7 +194,7 @@
   }
   .tumblr a::after {
     background-color: #283e56;
-    background-image: url(../../assets/images/coat.svg);
+   
   }
   
   .dribble a::before,
@@ -203,7 +203,7 @@
   }
   .dribble a::after {
     background-color: #e03a70;
-    background-image: url(../../assets/images/coat.svg);
+   
   }
   
   @media (max-width: 950px) {
