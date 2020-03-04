@@ -9,16 +9,14 @@
 
     </ul>
 </aside>
-<div class="container  view">
-  
-    
+<div class="container  view"> 
     <div id="slideshow">
         <div class="slide-wrapper">
           <div class="slide">
             <img src="../../assets/images/adventure/adventure1.jpg">
             <img src="../../assets/images/adventure/adventure2.jpg">
             <img src="../../assets/images/adventure/adventure3.jpg">
-            <img src="../../assets/images/adventure/adventure4.jpg">
+            <img src="../../assets/images/adventure/adventure5.jpg">
             <h1 class="slide-number">adventure</h1>
           </div>
           <div class="slide">
@@ -41,13 +39,16 @@
 </div>
 
 <div class="line container"></div>
-<div class="books-section  padding-top-200px container">
+
+<div class="books-section container">
+  <b style="font-size: 25px; margin-right: 38%; color: blueviolet;"> Feature Categories</b>
+  
   <div class="row row-cols-4">
     <div class="col" *ngFor="let cat of apiCat">
       <img src="../../assets/images/Love/love.jpg" class="image">
       <div class="overlay">
         <div class="text">{{cat.title| uppercase}}</div>
-        <button class="view_button"  [routerLink]="['/categorie/book', cat.id]">View Details</button></div>
+        <button class="btn btn-outline-success" style="margin-right: 23%; margin-top: 70%;" [routerLink]="['/categorie/book', cat.id]">View Details</button></div>
       </div>
     </div>
   </div>

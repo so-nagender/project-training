@@ -9,10 +9,12 @@
 .line{
     border: 1px solid grey;
     margin-top: 55px;
+    left: 8%;
    
 }
 .books-section{
-    padding-top: 100px;
+    padding-top: 30px;
+    padding-bottom: 25px;
 
 }
 img{
@@ -70,13 +72,12 @@ body {
   
   .slide-number {
     
-    text-align: center;
-    padding-left: 45%;
+    text-align: left;
+    padding-left: 15%;
     background: rgba(0, 0, 0, 0.7);
     position: absolute;
     bottom: 15%;
     width: 100%;
-    left: 0;
     
   }
   h1{
@@ -97,13 +98,14 @@ body {
 .container {
   position: relative;
   text-align: right;
-  width: 50%;
+  width: 100%;
+  padding-left: 10%;
 }
 
 .image {
   display: block;
   width: 100%;
-  height: 200px;
+  height: auto;
 
   margin: 20px 10px 20px 10px ;
   border: 5px solid#333333;
@@ -116,7 +118,7 @@ body {
   left: 10px;
   margin-top: 20px;
   right: 0;
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
   width: 100%;
   height: 0;
@@ -124,9 +126,9 @@ body {
 }
 
 .col:hover .overlay {
-  height: 88%;
+  height: 92%;
   width: 88%;
-  margin-left: 10px;
+  margin-left: 12px;
   margin-bottom: 10px;
 }
 
@@ -144,28 +146,16 @@ body {
 div span{
   margin-left: 62px;
 }
-.rating{
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
 .view_button{
   background-color: #75c74e;
   border: 1px solid #75c74e;
-  margin-top: 110px;
-  margin-left: 22px;
+  margin-top: 70%;
   border-radius: 20px;
 
 }
 
 .view{
-  padding-top: 10%;
+  padding-top: 6%;
 }
 
 /* sidebar */
