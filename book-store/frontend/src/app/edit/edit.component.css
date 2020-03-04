@@ -1,5 +1,5 @@
 .midView{
-    max-width: 30%;
+    max-width: 35%;
 }
 .buttonCss{
     background: black;
@@ -34,4 +34,7 @@
     background-repeat: no-repeat;
     float: left;
     margin: 5px;
+  }
+  .center_element{
+      padding-left:15%;
   }

@@ -3,7 +3,7 @@
     <form [formGroup]="formData">
       <div> 
       <b>Rating- </b>
-      <div *ngFor="let i of totalArray">
+      <div *ngFor="let i of totalArray" class="center_element">
         <p [class.selected]="i <= selected" class="normal" (click)="starSelected(i)">
       
         </p>
