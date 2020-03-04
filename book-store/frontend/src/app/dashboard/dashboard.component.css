@@ -171,17 +171,17 @@ div span{
 /* sidebar */
 aside{
     
-background-color: black;
+ background-color: black;
  font-family: 'Poppins', sans-serif;
  color:white;
- height: 218%;
+ height: 100vh;
  width: 15%;
  line-height: 5em;
  position: absolute;
  text-align: left;
- left: -10px;
  float: left;
- border: 2px solid #8167a9;
+
+ /* background-color: red; */
  
 
 }
@@ -189,7 +189,9 @@ background-color: black;
 aside li{
  list-style: none;
  padding: 2px;
- background-color: black
+ background-color: black;
+ 
+ 
 }
 
 aside li:hover{
@@ -202,11 +204,14 @@ aside li:hover{
 .top-space-sidebar{
  padding-top: 35%;
  float: left;
+ 
+ 
 
 }
 .top-space-sidebar img{
   /* max-width: 50%; */
   border: 1px solid #8167a9;
+  
   border-radius: 50%;
 }
 .top-space-sidebar li{
@@ -219,7 +224,11 @@ aside li:hover{
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  left: 0;
 
 
   font-size: 20px;
+}
+.container-fluid{
+  padding-left: 0px !important;
 }
