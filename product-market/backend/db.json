@@ -90,10 +90,10 @@
     {
       "name": "rajuujk",
       "catId": 7,
-      "rating": "4",
+      "rating": 4,
       "description": "ghfjgchjfyif,yg,oiu.ogiu/imui,y,o y,oikl,jk,jjkhjkkgfdhgdfh",
       "cost": 5000,
-      "updatedAt": 1583150709851,
+      "updatedAt": 1583323151821,
       "id": 21
     },
     {
@@ -101,66 +101,31 @@
       "catId": 8,
       "rating": 4,
       "description": "jhhjkhgjkhjk",
-      "cost": 500000,
-      "updatedAt": 1583236577475,
+      "cost": 5000,
+      "updatedAt": 1583322822596,
       "id": 24
     },
     {
       "name": "DBSJFJSDHF",
       "catId": 8,
-      "rating": 1,
+      "rating": 4,
       "description": "sds",
-      "cost": 5,
-      "updatedAt": 1583234653346,
+      "cost": 50000,
+      "updatedAt": 1583322833463,
       "id": 25
-    },
-    {
-      "name": "fsfdfs",
-      "catId": 8,
-      "rating": "4",
-      "description": "fvbgfhd",
-      "cost": 5000,
-      "createdAt": 1583235486137,
-      "updatedAt": 1583235486137,
-      "id": 26
     }
   ],
   "product-cart": [
     {
-      "name": "rajuujk",
-      "rating": 4,
-      "cost": 5000,
-      "description": "ghfjgchjfyif,yg,oiu.ogiu/imui,y,o y,oikl,jk,jjkhjkkgfdhgdfh",
-      "createdAt": 1582883683641,
-      "updatedAt": 1582883683641,
+      "name": "raju",
+      "rating": 3,
+      "cost": 50000,
+      "description": "jhhjkhgjkhjk",
+      "quantity": 10,
+      "username": "bansal.ashu35@gmail.com",
+      "prodId": 24,
+      "updatedAt": 1583322760881,
       "id": 1
-    },
-    {
-      "name": "rajuujk",
-      "rating": 4,
-      "cost": 5000,
-      "description": "ghfjgchjfyif,yg,oiu.ogiu/imui,y,o y,oikl,jk,jjkhjkkgfdhgdfh",
-      "createdAt": 1582883686976,
-      "updatedAt": 1582883686976,
-      "id": 2
-    },
-    {
-      "name": "rajuujk",
-      "rating": 4,
-      "cost": 5000,
-      "description": "ghfjgchjfyif,yg,oiu.ogiu/imui,y,o y,oikl,jk,jjkhjkkgfdhgdfh",
-      "createdAt": 1582885768152,
-      "updatedAt": 1582885768152,
-      "id": 3
-    },
-    {
-      "name": "rajuujk",
-      "rating": 4,
-      "cost": 5000,
-      "description": "ghfjgchjfyif,yg,oiu.ogiu/imui,y,o y,oikl,jk,jjkhjkkgfdhgdfh",
-      "createdAt": 1583153135400,
-      "updatedAt": 1583153135400,
-      "id": 4
     }
   ],
   "posts": [

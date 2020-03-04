@@ -23,9 +23,6 @@ export class ListEditDirective {
       this.card.nativeElement.parentNode.parentNode.cells[1].children[0].contentEditable = 'true';
       this.card.nativeElement.parentNode.parentNode.cells[4].children[1].children[0].children[1].children[0].children[0].contentEditable = 'true';
       this.card.nativeElement.parentNode.parentNode.cells[4].children[1].children[0].children[1].children[0].children[1].contentEditable = 'true';
-      for(let i=0;i<this.datas.rating;i++){
-        this.card.nativeElement.parentNode.parentNode.cells[2].children[i].classList.remove("checked");
-      }
       for(let i=0;i<5;i++){
         this.card.nativeElement.parentNode.parentNode.cells[2].children[i].onclick = function editStars(card){
           for(let w=0;w<5;w++){
@@ -35,7 +32,6 @@ export class ListEditDirective {
             card.srcElement.parentNode.children[x].classList.add("checked")
           }
           self.myService.rating = i;
-          console.log(this.j+1)
           };
       } 
       this.card.nativeElement.parentNode.parentNode.cells[1].children[0].style.border =
@@ -66,7 +62,10 @@ export class ListEditDirective {
       this.card.nativeElement.parentNode.parentNode.cells[4].children[1].children[0].children[1].children[0].children[1].style.border =
       'none';
       this.counter = 0;
+      this.myService.sendnewItem();
+      this.myService.setnewsubCart();
     }
+    
   }
   
 

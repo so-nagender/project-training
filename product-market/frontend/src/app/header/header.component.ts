@@ -18,10 +18,11 @@ export class HeaderComponent implements OnInit {
   items : any
   counter: number = 0;
   ngOnInit() {
-    this.serve.getCart().subscribe((res)=>{
+    this.serve.getCart(this.cookieService.get('username')).subscribe((res)=>{
       this.items = res;
-      this.counter = this.items.length
-      console.log(this.items)
+      this.items.forEach(item => {
+        this.counter = this.counter + item.quantity;
+      });
     })
     this.serve.getData().subscribe(data => {
       this.datas = data;
@@ -34,9 +35,12 @@ export class HeaderComponent implements OnInit {
     });
     this.username = this.cookieService.get('username')   
     this.serve.getcartlength().subscribe(()=>{
-      this.serve.getCart().subscribe((res)=>{
+      this.serve.getCart(this.cookieService.get('username')).subscribe((res)=>{
+        this.counter = 0
         this.items = res;
-        this.counter = this.items.length
+        this.items.forEach(item => {
+          this.counter = this.counter + item.quantity;
+        });
       })
     })
   }

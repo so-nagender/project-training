@@ -17,7 +17,6 @@ export class ProductcatchService {
 
   private subjectofcart = new Subject();
   private subforlength = new Subject();
-  private catname = new Subject();
 
   rating = 0;
 
@@ -69,8 +68,9 @@ export class ProductcatchService {
     return this.http.post<any>('/api/product-items', obj);
   }
 
-  getCart(): Observable<any> {
-    return this.http.get('/api/product-cart');
+  getCart(text): Observable<any> {
+    const url =  `/api/product-cart?username=${text}`
+    return this.http.get(url);
   }
 
   addCart(obj: any) {
@@ -110,6 +110,16 @@ export class ProductcatchService {
 
   getcartlength(): Observable<any> {
     return this.subforlength.asObservable();
+  }
+
+  getparticularCat(x: number): Observable<any> {
+    const url = `/api/cats/${x}`;
+    return this.http.get(url);
+  }
+
+  updateproductCart(x,obj): Observable<any>{
+    const url = `/api/product-cart/${x}`;
+    return this.http.put<any>(url, obj);
   }
 
 

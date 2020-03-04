@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ProductcatchService } from "../productcatch.service";
 import { ActivatedRoute, Router } from "@angular/router";
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: "app-cart",
@@ -11,30 +12,31 @@ export class CartComponent implements OnInit {
   constructor(
     private serve: ProductcatchService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private cookieService: CookieService
   ) {}
   datas: any;
   counter: number = 0;
   totalCost: number = 0;
 
   ngOnInit() {
-    this.serve.getCart().subscribe(res => {
+    this.serve.getCart(this.cookieService.get('username')).subscribe(res => {
       this.datas = res;
       this.datas.forEach(item => {
         item.rating = parseInt(item.rating);
-        this.counter = this.counter + 1;
-        this.totalCost = item.cost + this.totalCost;
+        this.counter = this.counter + item.quantity;
+        this.totalCost = (item.cost * item.quantity) + this.totalCost;
       });
     });
     this.serve.getnewsubCart().subscribe(() => {
-      this.serve.getCart().subscribe(res => {
+      this.serve.getCart(this.cookieService.get('username')).subscribe(res => {
         this.counter = 0;
         this.totalCost = 0;
         this.datas = res;
         this.datas.forEach(item => {
           item.rating = parseInt(item.rating);
-          this.counter = this.counter + 1;
-          this.totalCost = item.cost + this.totalCost;
+          this.counter = this.counter + item.quantity;
+          this.totalCost = (item.cost * item.quantity) + this.totalCost;
         });
       });
     });
@@ -58,13 +60,7 @@ export class CartComponent implements OnInit {
   onDelete(data) {
     const x = data.id;
     this.serve.deleteCart(x).subscribe();
-    this.serve.getCart().subscribe(res => {
-      this.datas = res;
-      this.datas.forEach(item => {
-        item.rating = parseInt(item.rating);
-      });
-      this.counter = this.counter - 1;
-      this.totalCost = this.totalCost - parseInt(data.cost);
-    });
+    this.serve.setnewsubCart();
+    this.serve.setcartlength();
   }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, ɵConsole } from '@angular/core';
 import { ActivatedRoute,Router } from '@angular/router';
 import {ProductcatchService} from '../productcatch.service'
+import { CookieService } from 'ngx-cookie-service';
 
 
 
@@ -13,11 +14,12 @@ export class ListComponent implements OnInit {
   datas: any;
   id: any;
   cartbodyname: any;
-
+  cartdata : any;
   constructor(
     private activatedRoute: ActivatedRoute,
     private serve: ProductcatchService,
-    private router: Router
+    private router: Router,
+    private cookieService: CookieService
   ) {}
 
   ngOnInit() {
@@ -50,16 +52,50 @@ export class ListComponent implements OnInit {
   }
 
   onaddCart(data) {
-    const obj = {
-      name: data.name,
-      rating: data.rating,
-      cost: data.cost,
-      description: data.description
-    };
-    this.cartbodyname = data.name
-    this.serve.addCart(obj).subscribe();
-    this.serve.setcartlength();
-    this.serve.setnewsubCart();
+    let newquant : number
+    this.serve.getCart(this.cookieService.get('username')).subscribe(res => {
+      let counter : number = 0
+      let updateId : number 
+      this.cartdata = res;
+      this.cartdata.forEach(item => {
+        if(item.prodId == data.id){counter = counter + 1;newquant = item.quantity + 1;updateId = item.id;;console.log(item)}
+        else{counter = counter + 0}
+      });
+      console.log(counter);
+      if(counter == 0){
+        const obj = {
+          name: data.name,
+          rating: data.rating,
+          cost: data.cost,
+          description: data.description,
+          quantity : 1,
+          username : this.cookieService.get('username'),
+          prodId : parseInt(data.id)
+        };
+        this.serve.addCart(obj).subscribe();
+        this.serve.setnewsubCart();
+        this.serve.setcartlength();
+      }
+      else{
+        const obj = {
+          name: data.name,
+          rating: data.rating,
+          cost: data.cost,
+          description: data.description,
+          quantity : newquant,
+          username : this.cookieService.get('username'),
+          prodId : parseInt(data.id)
+        };
+        console.log(updateId)
+        this.serve.updateproductCart(updateId,obj).subscribe();
+        this.serve.setnewsubCart();
+        this.serve.setcartlength();
+      }
+      
+    });  
+    this.cartbodyname = data.name  
+    
+    
   }
 
 
