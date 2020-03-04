@@ -18,6 +18,9 @@ export class EditComponent implements OnInit {
   apiBook2;
   apiBook1;
   submitted = false;
+  total = 5;
+  selected = 0;
+  totalArray: number[] = [];
 
   constructor(private api: ApiService, private activatedRoute: ActivatedRoute, private http: HttpClient, private formBuilder: FormBuilder,private router: Router) {
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
@@ -26,6 +29,14 @@ export class EditComponent implements OnInit {
   ngOnInit() {
    this.formValue();
    this.book();
+
+    for (let i = 0; i < this.total; i++) {
+      this.totalArray.push(i + 1);
+    }
+    console.log(this.totalArray);
+
+
+  
   }
   get u() {
     return this.formData.controls;
@@ -41,16 +52,22 @@ export class EditComponent implements OnInit {
     const BookDes = this.formData.controls.des.value;
     const BookPrice = this.formData.controls.bookprice.value;
     const BookDiscount = this.formData.controls.bookdiscount.value;
-    const obj = { "BookName" : BookName , "AuthorName" : AuthorName, "catogrieId" : CatName, "description" : BookDes, "BookPrice" : BookPrice, "discount" : BookDiscount };
+    const BookRating = this.selected;
+    console.log('rating--->', this.selected)
+    const obj = { "BookName" : BookName , "AuthorName" : AuthorName, "catogrieId" : CatName, "description" : BookDes, "BookPrice" : BookPrice, "discount" : BookDiscount , "Rating" : BookRating};
     this.api.updateBook(obj , this.id).subscribe();
     this.book();
     this.router.navigate(['/book/view', this.id])
+
     }
   }
 
   book(){
     this.api.getBookDetail(this.id).subscribe((res)=>{
       this.apiBook = res;
+      this.selected= res.Rating  
+    
+     
     });
     this.api.getCatDetail(this.id).subscribe((res)=>{
       this.apiBook1 = res;
@@ -72,13 +89,10 @@ export class EditComponent implements OnInit {
     });
   }
 
-  stars(x) {
-    let item: number[] =[];
-    for(let i=1; i<=x; i++)
-    {
-      item.push(i);
-    }
-    return item;
+  starSelected(val) {
+    this.selected = val;
+    console.log(this.selected);
+    return this.selected
   }
 
 }

@@ -27,6 +27,7 @@ export class SignupComponent implements OnInit {
  
 
   ngOnInit() {
+    this.checkcredentials();
   }
 
   onSubmit(form) {
@@ -60,6 +61,11 @@ export class SignupComponent implements OnInit {
   }
 }
 
+checkcredentials(){
+  if(localStorage.getItem('accessToken')){
+  this.routes.navigate(['/dashboard'])
+  }
+}
   
   
  
