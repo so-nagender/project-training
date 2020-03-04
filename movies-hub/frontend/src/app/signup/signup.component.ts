@@ -19,7 +19,10 @@ export class SignupComponent implements OnInit {
   error: string;
   loading: boolean;
   cookieValue = 'UNKNOWN';
-  constructor(private router: Router, private formBuilder: FormBuilder, private myservice: ApiserviceService, private cookieService: CookieService) { }
+  shown: boolean;
+  constructor(private router: Router, private formBuilder: FormBuilder, private myservice: ApiserviceService, private cookieService: CookieService) {
+    this.shown = false;
+   }
 
   ngOnInit() {
     this.checkoutForm = this.formBuilder.group({
@@ -58,5 +61,8 @@ onSubmit() {
   }
   );
   }
+}
+togglePassword(){
+  this.shown = !this.shown;
 }
 }

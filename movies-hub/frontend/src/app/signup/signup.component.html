@@ -32,13 +32,14 @@
   </label>
   <label>
     <div class="form-group">
-      <input type="password" required class="input" formControlName="password"
+      <input [type]="shown ? 'text' : 'password'" required class="input" formControlName="password"
         [ngClass]="{'is-invalid': checkoutForm.get('password').touched && checkoutForm.get('password').invalid}">
-      <p class="label-txt">Password</p>
-      <div class="line-box">
-        <div class="line"></div>
-      </div>
-      <div class="invalid-feedback">
+        <p class="label-txt">Password</p>
+        <i class="fa fa-eye" aria-hidden="true" (click)= "togglePassword()"></i>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+        <div class="invalid-feedback">
         <h5 style="font-size: small;"><strong>Password is a required field</strong></h5>
       </div>
     </div>
