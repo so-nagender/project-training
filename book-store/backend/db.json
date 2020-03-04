@@ -182,6 +182,54 @@
       "createdAt": 1583298812935,
       "updatedAt": 1583298812935,
       "id": 32
+    },
+    {
+      "BookName": "dyje",
+      "AuthorName": "etyj",
+      "catogrieId": "1",
+      "description": "sfgh",
+      "BookPrice": 100,
+      "discount": 1,
+      "Rating": 3,
+      "createdAt": 1583304429454,
+      "updatedAt": 1583304429454,
+      "id": 33
+    },
+    {
+      "BookName": "dsadasd",
+      "AuthorName": "asdasda",
+      "catogrieId": "2",
+      "description": "dasdasd",
+      "BookPrice": 133,
+      "discount": 333,
+      "Rating": 2,
+      "createdAt": 1583306838626,
+      "updatedAt": 1583306838626,
+      "id": 34
+    },
+    {
+      "BookName": "we5yhw",
+      "AuthorName": "sw",
+      "catogrieId": "1",
+      "description": "sth",
+      "BookPrice": 100,
+      "discount": 1,
+      "Rating": 2,
+      "createdAt": 1583306925665,
+      "updatedAt": 1583306925665,
+      "id": 35
+    },
+    {
+      "BookName": "123123",
+      "AuthorName": "dfdf",
+      "catogrieId": "2",
+      "description": "dsfdfsd",
+      "BookPrice": 12312312,
+      "discount": 1,
+      "Rating": 0,
+      "createdAt": 1583307159654,
+      "updatedAt": 1583307159654,
+      "id": 36
     }
   ],
   "profile": [
