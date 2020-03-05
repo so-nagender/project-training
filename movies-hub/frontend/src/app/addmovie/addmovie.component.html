@@ -30,13 +30,16 @@
                 </div>
             </label>
             <label>
-                <div class="form-group">
-                    <input type="text" required class="input" formControlName="rating">
-                    <p class="label-txt" ngModel maxlength="25">Rating</p>
-                    <div class="line-box">
+                 <div class="form-group"> 
+                    <!-- <input type="text" required class="input" formControlName="rating"> -->
+                    <p class="label-txt">Rating</p> 
+                    <!-- <div class="line-box">
                         <div class="line"></div>
-                    </div>
+                    </div>                  -->
+                   <ngb-rating [formControl]="rating" class="rating" (click)='toggle()'></ngb-rating>
+                    Stars: <b>{{ rating.value }}</b>
                 </div>
+               
             </label>
             <h5>catogaries</h5>
             <select formControlName="cat" class="custom-select" formControlsName="cat" id="iinlineFormCustomSelect">
@@ -71,3 +74,4 @@
         <button type="button" routerLink="/list" class="btn btn-primary">Back</button>
     </div>
 </form>
+

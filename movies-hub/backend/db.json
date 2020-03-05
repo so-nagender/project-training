@@ -146,33 +146,22 @@
   ],
   "movies": [
     {
-      "movieName": "Avengers: Infinity War",
-      "year": "2018",
-      "catId": "8",
-      "rating": "3",
+      "movieName": "The Wolf of Wall Street",
+      "year": "2013",
+      "catId": "4",
+      "rating": 7,
       "cast": [
         [
-          "Chris Hemsworth",
-          "Chris Pratt",
-          "Robert Downey Jr."
+          [
+            "Leonardo DiCaprio",
+            "Margot Robbie",
+            "Matthew McConaughey"
+          ]
         ]
       ],
-      "synopsis": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment, the fate of Earth and existence has never been more uncertain.",
-      "updatedAt": 1583227843431,
-      "id": 3
-    },
-    {
-      "movieName": "The Wolf of Wall Street",
-      "id": 4,
-      "year": "2013",
-      "rating": "5",
-      "cast": [
-        "Leonardo DiCaprio",
-        "Margot Robbie",
-        "Matthew McConaughey"
-      ],
-      "catId": 4,
-      "synopsis": "Jordan Belfort is a Long Island penny stockbroker who served 22 months in prison for defrauding investors in a massive 1990s securities scam that involved widespread corruption on Wall Street and in the corporate banking world, including shoe designer Steve Madden."
+      "synopsis": "Jordan Belfort is a Long Island penny stockbroker who served 22 months in prison for defrauding investors in a massive 1990s securities scam that involved widespread corruption on Wall Street and in the corporate banking world, including shoe designer Steve Madden.",
+      "updatedAt": 1583405706298,
+      "id": 4
     },
     {
       "movieName": "The Dark Knight",
@@ -406,6 +395,55 @@
       "synopsis": "y Name Is Khan is a 2010 Indian Hindi-language drama film directed by Karan Johar, produced by Hiroo Johar and Gauri Khan, and starring Shah Rukh Khan and Kajol in lead roles",
       "updatedAt": 1583228051810,
       "id": 23
+    },
+    {
+      "movieName": "hrdfyh",
+      "year": "2012",
+      "rating": 8,
+      "catId": "5",
+      "cast": [
+        "fgjhng"
+      ],
+      "synopsis": "jdfhjf",
+      "createdAt": 1583385845170,
+      "updatedAt": 1583385845170,
+      "id": 39
+    },
+    {
+      "movieName": "tydhf",
+      "year": "2101",
+      "catId": "7",
+      "rating": "5",
+      "cast": [
+        [
+          "egdf"
+        ]
+      ],
+      "synopsis": "ergvdf",
+      "updatedAt": 1583386111232,
+      "id": 40
+    },
+    {
+      "movieName": "Sonu",
+      "year": "2020",
+      "catId": "3",
+      "rating": 8,
+      "cast": [
+        [
+          [
+            [
+              [
+                [
+                  "Chunri"
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      "synopsis": "dsgdrthyfhy",
+      "updatedAt": 1583405860210,
+      "id": 41
     }
   ],
   "cats": [

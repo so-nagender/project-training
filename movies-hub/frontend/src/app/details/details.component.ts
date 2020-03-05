@@ -20,4 +20,12 @@ export class DetailsComponent implements OnInit {
       this.data= res;
     });
   }
+
+  createRange(num) {
+    const items: number[] = [];
+    for (let i = 1; i <= num; i++) {
+      items.push(i);
+    }
+    return items;
+  }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiserviceService } from '../apiservice.service';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-watchlist',
@@ -7,8 +8,17 @@ import { ApiserviceService } from '../apiservice.service';
   styleUrls: ['./watchlist.component.css']
 })
 export class WatchlistComponent implements OnInit {
+  ctrl = new FormControl(null, [Validators.required]);
   movies: any;
-  currentRate = 8;
+
+  toggle() {
+    if (this.ctrl.disabled) {
+      this.ctrl.enable();
+    } else {
+      this.ctrl.disable();
+    }
+  }
+  
 
   constructor(private myservice: ApiserviceService) { }
 

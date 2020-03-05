@@ -47,16 +47,16 @@
 
        <!-- Rating Start -->
       <label>
+        <p class="label-txt rate">Rating</p>
         <div class="form-group">
-          <input type="text" required class="input" formControlName="rating" [(ngModel)]="dataa.rating"
-            [ngClass]="{'is-invalid': checkoutForm.get('rating').touched && checkoutForm.get('rating').invalid}">
-          <p class="label-txt">Rating</p>
+          
+          <ngb-rating [formControl]="rating" class="rating" (click)='toggle()' [(ngModel)]="dataa.rating"
+            [ngClass]="{'is-invalid': checkoutForm.get('rating').touched}"></ngb-rating>
+            {{dataa.rating}}/10
+          
           <div class="line-box">
             <div class="line"></div>
-          </div>
-          <div class="invalid-feedback">
-          Invalid (1-5 only)
-          </div>
+          </div>          
         </div>
       </label>
       <!-- Rating End -->

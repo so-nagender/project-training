@@ -35,11 +35,25 @@
                 <!-- <td>{{ catg }}</td> -->
                 <!-- <td>{{ movie.rating }}</td> -->
                     <td>
-                        <span *ngFor="let i of createRange(movie.rating)" style="color: rgb(245, 224, 35);" class="fa fa-star checked">
+                        <span *ngFor="let i of createRange(movie.rating)" style="color:rgb(221,160,221);" class="fa fa-star checked">
                         </span>
-                        <span *ngFor="let i of createRange(5-(movie.rating))" style="color: rgb(158, 158, 158);" class="fa fa-star">
+                        <span *ngFor="let i of createRange(10-(movie.rating))" style="color: rgb(158, 158, 158);" class="fa fa-star">
                         </span>
+                        {{movie.rating}}/10
                     </td>
+                    <!-- <td>                         -->
+                        <!-- <div class="form-group"> -->
+                            <!-- <ngb-rating [formControl]="rating"></ngb-rating> -->
+                            <!-- <div class="form-text small"> -->
+                               <!-- <div *ngIf="rating.valid" class="text-success">Thanks!</div>  -->
+                              <!-- <div *ngIf="ctrl.invalid" class="text-danger">Please rate us</div>
+                            </div>  -->
+                          <!-- </div> -->
+                          
+                          <!-- {{ movie.rating }}   -->
+                                            
+                    <!-- </td> -->
+
                     <!-- <td>{{ movie.rating }}</td> -->
                     <button [routerLink]="['/movie', movie.id]" routerLinkActive="active">View</button>
                     <button [routerLink]="['/edit', movie.id]" routerLinkActive="active" class="mx-2">Edit</button>

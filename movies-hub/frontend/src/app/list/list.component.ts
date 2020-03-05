@@ -3,6 +3,7 @@ import { ApiserviceService } from '../apiservice.service';
 import { ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-list',
@@ -201,4 +202,7 @@ export class ListComponent implements OnInit {
     }
     return items;
   }
+
+
+  
 }
