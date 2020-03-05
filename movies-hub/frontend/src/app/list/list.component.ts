@@ -18,21 +18,9 @@ export class ListComponent implements OnInit {
   catg: any;
   constructor(private myservice: ApiserviceService, private activatedRoute: ActivatedRoute, private router: Router) {
     let id = this.activatedRoute.snapshot.params.id;
-    // override the route reuse strategy
-    // this.router.routeReuseStrategy.shouldReuseRoute = function () {
-    //   return false;
-    // }
-    // this.router.events.subscribe((evt) => {
-    //   if (evt instanceof NavigationEnd) {
-    //     // trick the Router into believing it's last link wasn't previously loaded
-    //     this.router.navigated = false;
-    //   }
-    // });
   }
 
   ngOnInit() {
-    // this.getCatById();
-    // this.getMovieBySubject();
     this.getMovies();
   }
   getMovies() {
@@ -46,7 +34,6 @@ export class ListComponent implements OnInit {
       this.myservice.getMoviesByCatg(this.catid).subscribe(res => {
         this.catg = res.genre;
         this.movies = res.movies;
-
       });
     });
   }
