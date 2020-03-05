@@ -1,7 +1,8 @@
 <div>
   <app-header></app-header>
 </div>
-<form [formGroup]="checkoutForm">
+<div>
+<form [formGroup]="checkoutForm" >
   <div class="row moviesDetailsMargin">
     <div class="col-2">
     </div>
@@ -45,7 +46,7 @@
       </select>
       <!-- Dropdown End -->
 
-       <!-- Rating Start -->
+      <!-- Rating Start -->
       <label>
         <p class="label-txt rate">Rating</p>
         <div class="form-group">
@@ -64,7 +65,7 @@
       <label>
         <div class="form-group">
           <input type="text" required class="input" formControlName="cast" [(ngModel)]="dataa.cast"
-          [ngClass]="{'is-invalid': checkoutForm.get('cast').touched && checkoutForm.get('cast').invalid}">
+            [ngClass]="{'is-invalid': checkoutForm.get('cast').touched && checkoutForm.get('cast').invalid}">
           <p class="label-txt">Cast</p>
           <div class="line-box">
             <div class="line"></div>
@@ -84,18 +85,19 @@
       <div class="col-4">
         <div class="form-group">
           <label for="synopsys">Synopsis:</label>
-          <textarea class="form-control" rows="4" formControlName="syn" [(ngModel)]="dataa.synopsis"id="comment"
-          [ngClass]="{'is-invalid': checkoutForm.get('syn').touched && checkoutForm.get('syn').invalid}">
+          <textarea class="form-control" rows="4" formControlName="syn" [(ngModel)]="dataa.synopsis" id="comment"
+            [ngClass]="{'is-invalid': checkoutForm.get('syn').touched && checkoutForm.get('syn').invalid}">
         </textarea>
-        <div class="invalid-feedback">
-          <h5 style="font-size: small;"><strong>Hulk wants synopsis</strong></h5>
-        </div>
+          <div class="invalid-feedback">
+            <h5 style="font-size: small;"><strong>Hulk wants synopsis</strong></h5>
+          </div>
         </div>
       </div>
       <div class="col-3"></div>
     </div>
   </div>
   <div class="col-auto my-1">
-    <button type="submit"  (click)=onSubmit() class="btn btn-primary">Submit</button>
+    <button type="submit" (click)=onSubmit() class="btn btn-primary">Submit</button>
   </div>
 </form>
+</div>

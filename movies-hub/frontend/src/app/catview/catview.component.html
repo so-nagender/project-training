@@ -39,9 +39,11 @@
                     </span>
                 </td>
                 <!-- <td>{{ movie.rating }}</td> -->
-                <button [routerLink]="['/movie', movie.id]" routerLinkActive="active">View</button>
-                <button [routerLink]="['/edit', movie.id]" routerLinkActive="active" class="mx-2">Edit</button>
-                <button (click)="delete(movie.id)">Delete</button>
+                <i [routerLink]="['/movie', movie.id]" routerLinkActive="active" class="fa fa-binoculars" aria-hidden="true"
+                style="cursor: pointer;"></i>
+                <i [routerLink]="['/edit', movie.id]" routerLinkActive="active" class="fa fa-pencil mx-4" aria-hidden="true"
+                style="cursor: pointer;"></i>
+                <i (click)="delete(movie.id)" class="fa fa-trash mx-1" aria-hidden="true" style="cursor: pointer;"></i>
             </tr>
         </tbody>
     </table>

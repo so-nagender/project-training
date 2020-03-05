@@ -1,7 +1,7 @@
 <div>
     <app-header></app-header>
 </div>
-<div class="container">
+<!-- <div class="container">
     <table class="table table-striped" id="table1">
         <tr>
             <th style="width:18%">Movie Name
@@ -36,7 +36,17 @@
             </tr>
         </tbody>
     </table>
+</div> -->
+
+<div class="container" *ngFor="let i of watchlist">
+    <h1  >hgajghdaj----  {{i.user}}</h1>
+    <br>
+    <h2>movies - {{i.movieId}}</h2>
 </div>
+<div class="container" *ngFor="let i of movies">
+    <h1></h1>
+</div>
+
 <div class="container">
     <p>Please Rate me</p>
 

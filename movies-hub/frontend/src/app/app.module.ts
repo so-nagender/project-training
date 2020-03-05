@@ -8,7 +8,6 @@ import { DefaultComponent } from './default/default.component'
 import { FooterComponent } from './footer/footer.component'
 // import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Confirmpasswordvalidator } from '../../src/app/match'
 import { SignupComponent } from './signup/signup.component';
 import { DetailsComponent } from './details/details.component';
 import { ListComponent } from './list/list.component';
@@ -32,6 +31,7 @@ import { EditgenreComponent } from './editgenre/editgenre.component';
 import { WatchlistComponent } from './watchlist/watchlist.component';
 import { CookieService } from 'ngx-cookie-service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 const appRoutes: Routes = [
   {path:'movielist',component:MovieListComponent},   
@@ -114,9 +114,7 @@ const appRoutes: Routes = [
     ListComponent,
     EditmovieComponent,
     AddmovieComponent,
-    Confirmpasswordvalidator,
-    
-    FilterdataPipe,
+     FilterdataPipe,
     GenresComponent,
     MovieListComponent,
     CatviewComponent,

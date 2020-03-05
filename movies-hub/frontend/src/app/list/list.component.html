@@ -1,9 +1,8 @@
 <div>
-    <app-header></app-header>
+  <app-header></app-header>
 </div>
 <div class="container">
-    <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Search Movies"
-        aria-describedby="inputGroup-sizing-sm" [(ngModel)]="search" class="form-control mr-sm-2 searchInList">
+  <input type="text" class="form-control mt-2" placeholder="Search Movies" [(ngModel)]="search">
 
     <!-- <button (click)="sortTable()">Sort</button> -->
     <table class="table table-striped" id="table">
@@ -55,14 +54,16 @@
                     <!-- </td> -->
 
                     <!-- <td>{{ movie.rating }}</td> -->
-                    <button [routerLink]="['/movie', movie.id]" routerLinkActive="active">View</button>
-                    <button [routerLink]="['/edit', movie.id]" routerLinkActive="active" class="mx-2">Edit</button>
-                    <button (click)="delete(movie.id)">Delete</button>
+                    <i [routerLink]="['/movie', movie.id]" routerLinkActive="active" class="fa fa-binoculars" aria-hidden="true"
+          style="cursor: pointer;"></i>
+        <i [routerLink]="['/edit', movie.id]" routerLinkActive="active" class="fa fa-pencil mx-4" aria-hidden="true"
+          style="cursor: pointer;"></i>
+        <i (click)="delete(movie.id)" class="fa fa-trash mx-1" aria-hidden="true" style="cursor: pointer;"></i>
             </tr>
         </tbody>
     </table>
     <button routerLink='/add' class="btn btn-danger mb-2 float-right">Add Movie</button>
 </div>
 <div>
-    <app-footer></app-footer>
+  <app-footer></app-footer>
 </div>

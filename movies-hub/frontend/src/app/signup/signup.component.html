@@ -32,30 +32,31 @@
   </label>
   <label>
     <div class="form-group">
-      <input type="password" required class="input" formControlName="password"
+      <input [type]="shown ? 'text' : 'password'" required class="input" formControlName="password"
         [ngClass]="{'is-invalid': checkoutForm.get('password').touched && checkoutForm.get('password').invalid}">
-      <p class="label-txt">Password</p>
-      <div class="line-box">
-        <div class="line"></div>
-      </div>
-      <div class="invalid-feedback">
+        <p class="label-txt">Password</p>
+        <i class="fa fa-eye" aria-hidden="true" (click)= "togglePassword()"></i>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+        <div class="invalid-feedback">
         <h5 style="font-size: small;"><strong>Password is a required field</strong></h5>
       </div>
     </div>
   </label>
   <label>
     <div class="form-group">
-      <input type="password" required class="input" appMatch="password" formControlName="retypepassword"
+      <input type="password" required class="input"  formControlName="retypepassword"
         [ngClass]="{'is-invalid': checkoutForm.get('retypepassword').touched && checkoutForm.get('retypepassword').invalid}">
       <p class="label-txt">Retype password</p>
       <div class="line-box">
         <div class="line"></div>
       </div>
       <div class="invalid-feedback">
-        <h5 *ngIf="checkoutForm.get('retypepassword').errors" style="font-size: small;"><strong>.</strong></h5>
+        <h5 *ngIf="checkoutForm.get('retypepassword').errors.required" style="font-size: small;"><strong>Retype password is a required field</strong></h5>
       </div>
       <div *ngIf="checkoutForm.get('retypepassword').touched" class="invalid-feedback">
-        <h4 style="font-size: small;" *ngIf="checkoutForm.get('retypepassword').errors"><strong>Passwords do not
+        <h4 style="font-size: small;" *ngIf="checkoutForm.get('retypepassword').errors && !checkoutForm.get('retypepassword').errors.required"><strong>Passwords do not
             match</strong></h4>
       </div>
     </div>
