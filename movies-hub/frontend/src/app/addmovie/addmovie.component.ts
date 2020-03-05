@@ -14,7 +14,7 @@ export class AddmovieComponent implements OnInit {
   public value: string;
   checkoutForm: FormGroup;
   catogry: any;
-  constructor(private router: Router, private formBuilder: FormBuilder, private myservice: ApiserviceService, private activatedRoute: ActivatedRoute) {
+  constructor(private router: Router, private formBuilder: FormBuilder, private myservice: ApiserviceService, private activatedRoute: ActivatedRoute, private route: Router) {
     this.checkoutForm = this.formBuilder.group({
       moviename: ['', Validators.required],
       date: ['', Validators.required],
@@ -36,6 +36,11 @@ export class AddmovieComponent implements OnInit {
     });
   }
   onSubmit() {
+    if(this.checkoutForm.invalid)
+    {
+      return;
+    }
+    else{
     const moviename= this.checkoutForm.controls.moviename.value;
     const year= this.checkoutForm.controls.date.value;
     const category= this.checkoutForm.controls.cat.value;
@@ -44,6 +49,8 @@ export class AddmovieComponent implements OnInit {
     const synopsys = this.checkoutForm.controls.syn.value;
     const obj= {movieName: moviename, year: year, rating: rating, catId: category, cast: [cast], synopsis: synopsys};
     this.myservice.postData(obj).subscribe();
+    this.route.navigate(['/list']);
+    }
   }
 
 
