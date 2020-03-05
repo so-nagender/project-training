@@ -42,7 +42,7 @@ export class AddmovieComponent implements OnInit {
     const rating= this.checkoutForm.controls.rating.value;
     const cast= this.checkoutForm.controls.cast.value;
     const synopsys = this.checkoutForm.controls.syn.value;
-    const obj= {movieName: moviename, year: year,rating:rating, catId: category, ["cast"]: [cast], synopsis: synopsys};
+    const obj= {movieName: moviename, year: year, rating: rating, catId: category, cast: [cast], synopsis: synopsys};
     this.myservice.postData(obj).subscribe();
   }
 

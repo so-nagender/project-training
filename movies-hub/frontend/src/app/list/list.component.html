@@ -27,7 +27,7 @@
             <th >Actions</th>
         </tr>
         <tbody>
-            <tr *ngFor="let movie of movies| filterdata :search">
+            <tr *ngFor="let movie of movies| filterdata :search | paginate: { itemsPerPage: 5, currentPage: p}">
                 <td>{{ movie.movieName}}</td>
                 <td>{{ movie.year }}</td>
                 <td>{{ movie.cast }}</td>
@@ -44,9 +44,13 @@
                     <button [routerLink]="['/movie', movie.id]" routerLinkActive="active">View</button>
                     <button [routerLink]="['/edit', movie.id]" routerLinkActive="active" class="mx-2">Edit</button>
                     <button (click)="delete(movie.id)">Delete</button>
+                    <button >+</button>
             </tr>
+            
         </tbody>
+        
     </table>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
     <button routerLink='/add' class="btn btn-danger mb-2 float-right">Add Movie</button>
 </div>
 <div>

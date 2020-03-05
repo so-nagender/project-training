@@ -16,8 +16,13 @@ export class ListComponent implements OnInit {
   catid: any;
   catogry: any;
   catg: any;
+  // collection = [];
   constructor(private myservice: ApiserviceService, private activatedRoute: ActivatedRoute, private router: Router) {
     let id = this.activatedRoute.snapshot.params.id;
+    // for(let i=1;i<=100;i++){
+    //   let Obj = {'name': `Employee Name ${i}`,'code': `EMP00 ${i}`}
+    //   this.collection.push(Obj);
+    //   }
   }
 
   ngOnInit() {

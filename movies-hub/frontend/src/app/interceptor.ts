@@ -20,7 +20,8 @@ export class Interceptor implements HttpInterceptor {
         Authorization: `Bearer ${localStorage.getItem("accessToken")}`
       }
     });
-    return next.handle(request).pipe(
+    return next.handle(request)
+    .pipe(
       retry(1),
       catchError((error: HttpErrorResponse) => {
         let errorMessage = '';
@@ -33,7 +34,6 @@ export class Interceptor implements HttpInterceptor {
           errorMessage = `User Already Exits`;
           // window.alert(errorMessage);
           // this.router.navigate(['/']);
-
         } else {
           // server-side error
           errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;

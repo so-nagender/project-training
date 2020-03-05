@@ -1,7 +1,7 @@
 <div>
     <app-header></app-header>
 </div>
-<!-- <div class="container">
+<div class="container">
     <table class="table table-striped" id="table1">
         <tr>
             <th style="width:18%">Movie Name
@@ -17,39 +17,25 @@
                     (click)="sortTableYearDes()" class="arrow">
             </th>
             <th style="width:20%">Cast</th>
+            <th style="width:6%">Genre</th>
             <th style="width:18%">Rating</th>
             <th >Actions</th>
         </tr>
         <tbody>
             <tr *ngFor="let i of movies">
-                <td>{{ i.movie.movieName }}</td>
-                <td>{{ i.movie.year }}</td>
-                <td>{{ i.movie.cast }}</td>
+                <td>{{ i.movieName }}</td>
+                <td>{{ i.year }}</td>
+                <td>{{ i.cast }}</td>
+                <td>{{i.cat.genre}}</td>
                 <td>
-                    <span *ngFor="let i of createRange(i.movie.rating)" style="color: rgb(235, 212, 6);" class="fa fa-star checked">
+                    <span *ngFor="let i of createRange(i.rating)" style="color: rgb(235, 212, 6);" class="fa fa-star checked">
                     </span>
-                    <span *ngFor="let i of createRange(5-(i.movie.rating))" style="color: rgb(158, 158, 158);" class="fa fa-star">
+                    <span *ngFor="let i of createRange(5-(i.rating))" style="color: rgb(158, 158, 158);" class="fa fa-star">
                     </span>
                 </td>
                 <td>
-                <button [routerLink]="['/movie', i.movie.id]" routerLinkActive="active">View</button>
+                <button [routerLink]="['/movie', i.id]" routerLinkActive="active">View</button>
             </tr>
         </tbody>
     </table>
-</div> -->
-
-<div class="container" *ngFor="let i of watchlist">
-    <h1  >hgajghdaj----  {{i.user}}</h1>
-    <br>
-    <h2>movies - {{i.movieId}}</h2>
-</div>
-<div class="container" *ngFor="let i of movies">
-    <h1></h1>
-</div>
-
-<div class="container">
-    <ngb-rating [(rate)]="currentRate"></ngb-rating>
-<hr>
-<pre>Rate: <b>{{currentRate}}</b></pre>
-
 </div>

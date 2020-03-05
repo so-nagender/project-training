@@ -32,6 +32,7 @@ import { EditgenreComponent } from './editgenre/editgenre.component';
 import { WatchlistComponent } from './watchlist/watchlist.component';
 import { CookieService } from 'ngx-cookie-service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 const appRoutes: Routes = [
   {path:'movielist',component:MovieListComponent},   
@@ -131,6 +132,7 @@ const appRoutes: Routes = [
     MatButtonModule,
     FormsModule,
     NgbModule,
+    NgxPaginationModule,
 
     RouterModule.forRoot(
       appRoutes,

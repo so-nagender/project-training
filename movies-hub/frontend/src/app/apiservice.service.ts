@@ -57,6 +57,8 @@ export class ApiserviceService {
   postCat(obj): Observable<any> {
     return this.http.post<any>('/api/cats',obj)
   }
+
+  // Subjects Starts
   setData(msg: any) {
     this.subject.next(msg);
   }
@@ -69,6 +71,8 @@ export class ApiserviceService {
   getDataT(): Observable<any> {
     return this.subjecttwo.asObservable();
   }
+  // Subjects End
+  
   getCatById(id): Observable<any> {
     return this.http.get(`/api/cats/${id}`);
   }
@@ -76,12 +80,17 @@ export class ApiserviceService {
     const cat = `/api/cats/${id}`;
     return this.http.put(cat, obj)
   }
-  setWatchList(id,obj): Observable<any> {
-    const url = `/api/watchlists/${id}`
-    return this.http.put<any>(url, obj);
-  }
   getWatchList(): Observable<any> {
     const url = `/api/watchlists`
     return this.http.get(url)
   }
+  setWatchlist(obj): Observable<any> {
+    const url = `/api/watchlists`;
+    return this.http.post<any>(url,obj)
+  }
+  getUser(user): Observable<any> {
+    const url = `/api/watchlists?${user}`;
+    return this.http.get(url);
+  }
+
 }

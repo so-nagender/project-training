@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiserviceService } from '../apiservice.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-watchlist',
@@ -9,24 +10,46 @@ import { ApiserviceService } from '../apiservice.service';
 export class WatchlistComponent implements OnInit {
   watchlist: any;
   currentRate = 8;
-  movies: any;
+  movies = [];
+  value: string;
+  test = [];
 
-  constructor(private myservice: ApiserviceService) { }
+  constructor(private myservice: ApiserviceService, private cookieService: CookieService) { }
 
   ngOnInit() {
+
     this.myservice.getWatchList().subscribe((res) => {
       this.watchlist = res;
-      console.log(res);
-      console.log(this.watchlist[0].user);
-      let temp = this.watchlist[0].movieId[1];
-      console.log(temp);
-      this.myservice.getSingleElementById(temp).subscribe((res) => {
-        this.movies = res;
-      });
+      //console.log(res);
+      // console.log(this.watchlist[0].user);
+      console.log(this.watchlist.length);
+      for (let j = 0; j < this.watchlist.length; j++) {
+        let index;
+        if (this.cookieService.get('Test') == (this.watchlist[j].user)) {
+          console.log("got that")
+          console.log("index is--", j);
+          let len = this.watchlist[j].movieId.length;
+          // console.log(len);
+          for (let i = 0; i < len; i++) {
+            let temp = this.watchlist[0].movieId[i];
+            // console.log(temp);
+            this.myservice.getSingleElementById(temp).subscribe((response) => {
+              this.movies.push(response);
+              // console.log(this.movies);
+            });
+          }
+        } else {
+          console.log("Not Found");
+        }
+      }
 
     });
-    
   }
+
+  getUserName() {
+    this.value = this.cookieService.get('Test');
+  }
+
 
   createRange(num) {
     const items: number[] = [];
