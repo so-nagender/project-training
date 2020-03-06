@@ -133,7 +133,7 @@
     {
       "user": "Monika Gupta",
       "name": "moni@gmail.com",
-      "password": "1234",   
+      "password": "1234",
       "createdAt": 1583152705481,
       "updatedAt": 1583152705481
     }
@@ -141,40 +141,28 @@
   "watchlists": [
     {
       "user": "ab.cd@gmail.com",
-      "movieId": [3,4,5]
+      "movieId": 3
     }
   ],
   "movies": [
     {
-      "movieName": "Avengers: Infinity War",
-      "year": "2018",
-      "catId": "8",
-      "rating": "3",
-      "cast": [
-          "Chris Hemsworth",
-          "Chris Pratt",
-          "Robert Downey Jr."
-      ],
-      "synopsis": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment, the fate of Earth and existence has never been more uncertain.",
-      "updatedAt": 1583227843431,
-      "id": 3
-    },
-    {
       "movieName": "The Wolf of Wall Street",
       "year": "2013",
       "catId": "4",
-      "rating": 7,
+      "rating": 9,
       "cast": [
         [
           [
-            "Leonardo DiCaprio",
-            "Margot Robbie",
-            "Matthew McConaughey"
+            [
+              "Leonardo DiCaprio",
+              "Margot Robbie",
+              "Matthew McConaughey"
+            ]
           ]
         ]
       ],
       "synopsis": "Jordan Belfort is a Long Island penny stockbroker who served 22 months in prison for defrauding investors in a massive 1990s securities scam that involved widespread corruption on Wall Street and in the corporate banking world, including shoe designer Steve Madden.",
-      "updatedAt": 1583405706298,
+      "updatedAt": 1583410470372,
       "id": 4
     },
     {
@@ -370,15 +358,14 @@
     {
       "movieName": "Koi Mil Gaya",
       "year": "2006",
-      "catId": "4",
-      "rating": "5",
+      "catId": "8",
       "cast": [
-        [
-          "Hrithik Roshan and Preeti Jinta"
-        ]
+        "Hrithik Roshan and Preeti Jinta"
       ],
+      "rating": "4",
       "synopsis": "Movie is about alliens.",
-      "updatedAt": 1583220047621,
+      "createdAt": 1582701921999,
+      "updatedAt": 1582701921999,
       "id": 21
     },
     {
@@ -425,20 +412,6 @@
       "id": 39
     },
     {
-      "movieName": "tydhf",
-      "year": "2101",
-      "catId": "7",
-      "rating": "5",
-      "cast": [
-        [
-          "egdf"
-        ]
-      ],
-      "synopsis": "ergvdf",
-      "updatedAt": 1583386111232,
-      "id": 40
-    },
-    {
       "movieName": "Sonu",
       "year": "2020",
       "catId": "3",
@@ -459,13 +432,27 @@
       "synopsis": "dsgdrthyfhy",
       "updatedAt": 1583405860210,
       "id": 41
+    },
+    {
+      "movieName": "PS: I Love You",
+      "year": "2019",
+      "catId": "9",
+      "rating": 10,
+      "cast": [
+        [
+          "Shiwani , IT  Infra"
+        ]
+      ],
+      "synopsis": "It Infra was a good specilization for me.",
+      "updatedAt": 1583480059126,
+      "id": 42
     }
   ],
   "cats": [
     {
       "genre": "Action",
       "desc": "Action film is a film genre in which the protagonist or protagonists are thrust into a series of events that typically include violence, extended fighting",
-      "updatedAt": 1583220093661,
+      "updatedAt": 1582889137689,
       "id": 3
     },
     {
