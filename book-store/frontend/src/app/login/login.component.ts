@@ -1,5 +1,6 @@
 import { Component, OnInit, RootRenderer } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { CookieService } from 'ngx-cookie-service';
 
 import { ApiService} from '.././api.service'
 
@@ -22,9 +23,10 @@ export class LoginComponent implements OnInit {
   islogin: boolean;
   message: any;
   validerr: string;
+  cookieValue = 'UNKNOWN';
 
  
-  constructor(private api: ApiService , private routes : Router) { 
+  constructor(private api: ApiService , private routes : Router, private cookieService: CookieService) { 
     
   }
 
@@ -38,8 +40,9 @@ export class LoginComponent implements OnInit {
   onSubmit(form) {
     const apicall =this.api.postlogin(this.form.value.email, this.form.value.password).subscribe((data: any)=> {
       localStorage.setItem("accessToken", data.accessToken);
+      this.cookieService.set( 'user', this.form.value.email );
+      this.cookieValue = this.cookieService.get('user');
       this.api.insertuserdata(this.form.value.email);
-      console.log('here--->>>>>>>>>>>>>>>>>>>>>>',this.api.userdata)
       if(data!= null){
         this.routes.navigate(['/dashboard'])
  
@@ -53,12 +56,7 @@ export class LoginComponent implements OnInit {
           title: 'Oops...',
           text: res
         });this.validerr = res})
-      });
-      
-   
-    
-   
-    // this.api.disable()/////////  
+      });  
   }
 
   viewData()

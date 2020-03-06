@@ -4,6 +4,7 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { ApiService } from '../api.service';
 import Swal from 'sweetalert2'
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @Component({
@@ -14,6 +15,7 @@ import { Router } from '@angular/router';
 
 
 export class SignupComponent implements OnInit {
+  cookieValue = 'UNKNOWN';
   form = new FormGroup({
     fname: new FormControl('',[Validators.required,Validators.pattern('^[-a-zA-Z\s]+([-a-zA-Z]+)*$')]),
     lname: new FormControl('',[Validators.required,Validators.pattern('^[-a-zA-Z\s]+([-a-zA-Z]+)*$')]),
@@ -23,7 +25,7 @@ export class SignupComponent implements OnInit {
   })
   validerr: string;
 
-  constructor(private api: ApiService, private routes: Router) { }
+  constructor(private api: ApiService, private routes: Router, private cookieService: CookieService) { }
  
 
   ngOnInit() {
@@ -32,13 +34,15 @@ export class SignupComponent implements OnInit {
 
   onSubmit(form) {
     if (this.form.value.password == this.form.value.password2){
-      // if(!this.form.valid) {
-      //   return;
-      // }
-    
+      const obj = {"user" : this.form.value.email, "bookID" : [] }
+      console.log("-------------->>>>>>>", obj);
+      
       const password = this.form.value.password
       this.api.postloginDetails(this.form.value.email,password).subscribe((data: any)=> {
         localStorage.setItem('accessToken', data.accessToken);
+        this.cookieService.set( 'user', this.form.value.email );
+        this.api.addcart(obj).subscribe();
+        this.cookieValue = this.cookieService.get('user');
         if(data!= null){
           this.routes.navigate(['/dashboard'])
    

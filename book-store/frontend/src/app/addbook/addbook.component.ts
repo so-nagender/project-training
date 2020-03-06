@@ -82,12 +82,6 @@ export class AddbookComponent implements OnInit {
       rating: ['',]
     });
   }
-  // arrinsatll(){
-  //   for (let i = 0; i < this.TotalRating; i++) {
-  //     this.Ratingarr.push(i + 1);
-  //   }
-  //   console.log('here-->>',this.Ratingarr);
-  // }
   
  
   starSelected(val) {

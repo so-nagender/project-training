@@ -92,6 +92,15 @@ export class ApiService {
     return this.http.post<any>('/api/books', obj);
   }
 
+  addcart(obj): Observable<any> {
+    return this.http.post<any>('/api/cart', obj);
+  }
+
+  getCart(): Observable<any>{
+    const url = `/api/cart`;
+    return this.http.get<any>(url); 
+  }
+
   deleteTeams(x): Observable<any>{
     const url = `/api/books/${x}`;
     return this.http.delete<any>( url);
@@ -160,15 +169,7 @@ export class ApiService {
    return throwError(error)
   }
 
-  // getaddedBooks(id){
-  //  const getid$ =this.http.get(`/api/books`)
-  //   getid$.subscribe(data=>{console.log("------->>>>")
-    
   
-  // })
-    
-  //   this.http.get(`/api/catogries/books?id=${id}`)
-  // }
   
 }
    

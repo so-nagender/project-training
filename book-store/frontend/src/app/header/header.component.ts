@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { ApiService } from '../api.service';
+import { CookieService } from 'ngx-cookie-service';
+
+
 
 
 @Component({
@@ -12,30 +15,29 @@ export class HeaderComponent implements OnInit {
   
     val = '/login/'
     buttonisdisabled: boolean= false;
-  constructor(private routes: Router, private api : ApiService) { 
-  //   routes.events.pipe(
-  //     filter(event => event instanceof NavigationEnd)  
-  //   ).subscribe((event: NavigationEnd) => {
-  //     console.log("this is _________>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",event.url);
-  //   });
-    }
+  user: string;
+  constructor(private routes: Router, private api : ApiService, private cookieService: CookieService) { }
   
 
   ngOnInit() {
+    
     console.log(this.routes.url)
     this.api.currentMessage.subscribe(message=>{
     this.buttonisdisabled= message;
-    
+     this.user= this.cookieService.get('user');
   })
   if(localStorage.getItem('accessToken')){
+   
     this.buttonisdisabled = true;
+   
   }
 
   }
   logout(){
     localStorage.clear();
+    this.cookieService.delete('user');
     if(localStorage.getItem('accessToken')){
-      this.buttonisdisabled= false
+      this.buttonisdisabled= false;
       this.routes.navigate([''])
     }
     
