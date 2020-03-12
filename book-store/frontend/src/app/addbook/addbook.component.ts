@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { FormBuilder, Validators,} from '@angular/forms';
 import { ApiService } from '../api.service';
 import { Router} from '@angular/router'
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-addbook',
@@ -42,7 +43,9 @@ export class AddbookComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     if (this.formData.invalid) {
-      return;
+     console.log(this.formData)
+     
+      
     } else {
     const BookName = this.formData.controls.bookname.value;
     const AuthorName = this.formData.controls.authorname.value;
@@ -54,6 +57,7 @@ export class AddbookComponent implements OnInit {
     const obj = { "BookName" : BookName , "AuthorName" : AuthorName, "catogrieId" : CatName, "description" : BookDes, "BookPrice" :  BookPrice, "discount" : BookDiscount, "Rating" : BookRating};
     const apihit =this.api.addBook(obj).subscribe((res)=>{this.bookDataArr.push(res)
     this.formData.reset();
+    this.selected = 0;
     }
     );
 
@@ -75,7 +79,7 @@ export class AddbookComponent implements OnInit {
     this.formData = this.formBuilder.group({
       bookname: ['',[Validators.required]],
       authorname: ['',[Validators.required]],
-      catname: ['',[Validators.required,]],
+      catname: [' ',[Validators.required,]],
       des: ['',Validators.required],
       bookprice: ['',[Validators.required,Validators.min(0)]],
       discount: ['',[Validators.required,Validators.min(0)]],
