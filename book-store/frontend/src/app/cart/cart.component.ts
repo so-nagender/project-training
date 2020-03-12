@@ -60,15 +60,25 @@ export class CartComponent implements OnInit {
         if(this.user == this.apiCart[i].user){
           for(let j=0; j < this.apiCart[i].bookID.length; j++){
             if(id == this.apiCart[i].bookID[j].itemID){
-              if(this.apiCart[i].bookID[j].quantity > 0)
-              console.log(this.apiCart[i].bookID[j].quantity)
-              break;
+              this.apiCart[i].bookID.splice(j, 1);
             }
+            const obj = {"user": this.apiCart[i].user, "bookID": this.apiCart[i].bookID};
+            this.api.updateCart(obj, this.apiCart[i].id).subscribe((res)=>{
+              this.apiCart = res;
+              for(let j=0; j < this.apiCart.bookID.length; j++){
+                let x = this.apiCart.bookID[j].itemID;
+                this.api.getCatDetail(x).subscribe((item)=>{
+                this.Book =item;
+                this.Book.discountPrice = this.Book.BookPrice - (this.Book.BookPrice*this.Book.discount/100);
+                this.apiBook=[];
+                this.apiBook.push(this.Book);
+                });
+              }
+            });  
           }
         }
       }
     });
-
   }
 
 }

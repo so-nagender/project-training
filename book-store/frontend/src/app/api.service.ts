@@ -88,8 +88,17 @@ export class ApiService {
     return this.http.put<any>( url, obj);
   }
 
+  updateCart(obj, x): Observable<any>{
+    const url = `/api/cart/${x}`;
+    return this.http.put<any>( url, obj);
+  }
+
   addBook(obj): Observable<any> {
     return this.http.post<any>('/api/books', obj);
+  }
+
+  addBookCart(obj, x): Observable<any> {
+    return this.http.post<any>('/api/cart/${x}', obj);
   }
 
   addcart(obj): Observable<any> {

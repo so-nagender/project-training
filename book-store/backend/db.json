@@ -36,8 +36,13 @@
         {
           "itemID": 15,
           "quantity": 2
+        },
+        {
+          "itemID": 11,
+          "quantity": 6
         }
       ],
+      "updatedAt": 1584008603758,
       "id": 1
     },
     {
