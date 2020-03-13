@@ -45,25 +45,37 @@ export class ViewbookComponent implements OnInit {
     this.user= this.cookieService.get('user');
   }
 
-  addCart(x){
-    let id =x;
-    this.api.getCart().subscribe((res)=>{
-      this.apiCart = res;
-      for(let i=0; i < this.apiCart.length; i++){
-        if(this.user == this.apiCart[i].user){
-          for(let j=0; j < this.apiCart[i].bookID.length; j++){
-            if(id == this.apiCart[i].bookID[j].itemID){
-              console.log(this.apiCart[i].bookID[j].quantity);
-            }
-            else{
-              console.log(id);
-              const obj ={"itemID": id, "quantity": 1};
-              this.api.addBookCart(obj, x)
-            }
-          }
-        }
+  addCart(id){
+
+    console.log(id)
+    this.api.getCart().subscribe(res=>{
+      // console.log('data--->>>>>>>>>>>>>>>>>',res);
+ 
+      for(let i =0 ; i<res.length;i++){
+        console.log('bokkkkkkkk--...',res[i])
+        console.log('bookid',res[i].bookID.length)
+        // for(let j = 0 ;j< res[i].bookID.length;){
+         
+        // }
       }
-    });
+    })
+    // this.api.getCart().subscribe((res)=>{
+    //   this.apiCart = res;
+    //   for(let i=0; i < this.apiCart.length; i++){
+    //     if(this.user == this.apiCart[i].user){
+    //       for(let j=0; j < this.apiCart[i].bookID.length; j++){
+    //         if(id == this.apiCart[i].bookID[j].itemID){
+    //           console.log(this.apiCart[i].bookID[j].quantity);
+    //         }
+    //         else{
+    //           console.log(id);
+    //           const obj ={"itemID": id, "quantity": 1};
+    //           this.api.addBookCart(obj, x)
+    //         }
+    //       }
+    //     }
+    //   }
+    // });
 
   }
 

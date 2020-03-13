@@ -44,13 +44,6 @@
       ],
       "updatedAt": 1584008603758,
       "id": 1
-    },
-    {
-      "user": "Raju123@gmail.com",
-      "bookID": [],
-      "createdAt": 1583478654349,
-      "updatedAt": 1583478654349,
-      "id": 2
     }
   ],
   "books": [
@@ -790,6 +783,24 @@
       "password": "123456",
       "createdAt": 1583476732764,
       "updatedAt": 1583476732764
+    },
+    {
+      "name": "ashish@hmail.com",
+      "password": "123456",
+      "createdAt": 1584013195808,
+      "updatedAt": 1584013195808
+    },
+    {
+      "name": "monika1111@gmai.com",
+      "password": "123456",
+      "createdAt": 1584013362549,
+      "updatedAt": 1584013362549
+    },
+    {
+      "name": "soni11@gmil.com",
+      "password": "123456",
+      "createdAt": 1584013511936,
+      "updatedAt": 1584013511936
     }
   ],
   "movies": [
