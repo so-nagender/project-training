@@ -63,18 +63,7 @@ export class CartComponent implements OnInit {
               this.apiCart[i].bookID.splice(j, 1);
             }
             const obj = {"user": this.apiCart[i].user, "bookID": this.apiCart[i].bookID};
-            this.api.updateCart(obj, this.apiCart[i].id).subscribe((res)=>{
-              this.apiCart = res;
-              for(let j=0; j < this.apiCart.bookID.length; j++){
-                let x = this.apiCart.bookID[j].itemID;
-                this.api.getCatDetail(x).subscribe((item)=>{
-                this.Book =item;
-                this.Book.discountPrice = this.Book.BookPrice - (this.Book.BookPrice*this.Book.discount/100);
-                this.apiBook=[];
-                this.apiBook.push(this.Book);
-                });
-              }
-            });  
+            this.api.updateCart(obj, this.apiCart[i].id).subscribe();
           }
         }
       }

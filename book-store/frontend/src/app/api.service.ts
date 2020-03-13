@@ -97,9 +97,9 @@ export class ApiService {
     return this.http.post<any>('/api/books', obj);
   }
 
-  addBookCart(obj, x): Observable<any> {
-    return this.http.post<any>('/api/cart/${x}', obj);
-  }
+  // addBookCart(obj, x): Observable<any> {
+  //   return this.http.post<any>('/api/cart/${x}', obj);
+  // }
 
   addcart(obj): Observable<any> {
     return this.http.post<any>('/api/cart', obj);

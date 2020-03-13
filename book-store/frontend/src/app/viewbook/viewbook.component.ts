@@ -49,15 +49,33 @@ export class ViewbookComponent implements OnInit {
 
     console.log(id)
     this.api.getCart().subscribe(res=>{
-      // console.log('data--->>>>>>>>>>>>>>>>>',res);
- 
+       console.log('data--->>>>>>>>>>>>>>>>>',res);
+     
       for(let i =0 ; i<res.length;i++){
         console.log('bokkkkkkkk--...',res[i])
-        console.log('bookid',res[i].bookID.length)
-        // for(let j = 0 ;j< res[i].bookID.length;){
+        console.log('bookid',res[i].bookID)
+        let user_id =res[i].id
+        console.log(user_id)
+
+        for(let j = 0 ;j < res[i].bookID.length; j++){
+          // console.log('items id --->',res[i].bookID[j])
          
-        // }
+          if(res[i].bookID[j].itemID == id){
+            let obj={ 'item':1, 
+                    'qt': '1'}
+            res[i].bookID.push(obj);
+            const obj1 = {"user": res[i].user, "bookID": res[i].bookID};
+            this.api.updateCart(obj1,user_id).subscribe(res=>{console.log('sucess--->>>>>>>>>', res)})
+           
+            
+          }
+          
+
+          // console.log('books in there',res[i].bookID)
+          
+         
       }
+    }
     })
     // this.api.getCart().subscribe((res)=>{
     //   this.apiCart = res;
