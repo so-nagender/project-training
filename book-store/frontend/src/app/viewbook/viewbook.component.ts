@@ -52,14 +52,16 @@ export class ViewbookComponent implements OnInit {
       for(let i=0; i < this.apiCart.length; i++){
         if(this.user == this.apiCart[i].user){
           for(let j=0; j < this.apiCart[i].bookID.length; j++){
-            if(id == this.apiCart[i].bookID[j].itemID){
-              console.log(this.apiCart[i].bookID[j].quantity);
+            if(id != this.apiCart[i].bookID[j].itemID){
+              const obj ={"itemID": id, "quantity": 1};
+              this.apiCart[i].bookID.push(obj);
+              const obj1 = {"user": this.apiCart[i].user, "bookID": this.apiCart[i].bookID};
+              this.api.updateCart(obj1, this.apiCart[i].id).subscribe();
             }
             else{
-              console.log(id);
-              const obj ={"itemID": id, "quantity": 1};
-              this.api.addBookCart(obj, x)
-            }
+              let quant = this.apiCart[i].bookID[j].quantity; 
+              console.log( quant );
+            } 
           }
         }
       }
