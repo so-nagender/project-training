@@ -43,7 +43,6 @@ export class ListEditDirective {
       this.counter = 1;
     } else if (this.counter === 1) {
       this.card.nativeElement.innerText = "Edit";
-      console.log(this.card.nativeElement.parentElement.parentNode.cells[0].children[0].innerText)
       this.card.nativeElement.parentElement.parentNode.cells[0].children[0].innerText=this.card.nativeElement.parentNode.parentNode.cells[4].children[1].children[0].children[1].children[0].children[0].innerText
       const myText = this.card.nativeElement.parentNode.parentNode.cells[4].children[1].children[0].children[1].children[0].children[1].innerText;
       const a = this.card.nativeElement.parentNode.parentNode.cells[4].children[1].children[0].children[1].children[0].children[0].innerText;
