@@ -71,9 +71,31 @@ export class ViewbookComponent implements OnInit {
               break;
             } 
           }
-        }
+          
+
+          // console.log('books in there',res[i].bookID)
+          
+         
       }
-    });
+    }
+    })
+    // this.api.getCart().subscribe((res)=>{
+    //   this.apiCart = res;
+    //   for(let i=0; i < this.apiCart.length; i++){
+    //     if(this.user == this.apiCart[i].user){
+    //       for(let j=0; j < this.apiCart[i].bookID.length; j++){
+    //         if(id == this.apiCart[i].bookID[j].itemID){
+    //           console.log(this.apiCart[i].bookID[j].quantity);
+    //         }
+    //         else{
+    //           console.log(id);
+    //           const obj ={"itemID": id, "quantity": 1};
+    //           this.api.addBookCart(obj, x)
+    //         }
+    //       }
+    //     }
+    //   }
+    // });
 
   }
 

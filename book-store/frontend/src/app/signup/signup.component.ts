@@ -34,14 +34,14 @@ export class SignupComponent implements OnInit {
 
   onSubmit(form) {
     if (this.form.value.password == this.form.value.password2){
-      const obj = {"user" : this.form.value.email, "bookID" : [] }
-      console.log("-------------->>>>>>>", obj);
+      // const obj = {"user" : this.form.value.email, "bookID" : [] }
+      // console.log("-------------->>>>>>>", obj);
       
       const password = this.form.value.password
       this.api.postloginDetails(this.form.value.email,password).subscribe((data: any)=> {
         localStorage.setItem('accessToken', data.accessToken);
         this.cookieService.set( 'user', this.form.value.email );
-        this.api.addcart(obj).subscribe();
+        // this.api.addcart(obj).subscribe();
         this.cookieValue = this.cookieService.get('user');
         if(data!= null){
           this.routes.navigate(['/dashboard'])
