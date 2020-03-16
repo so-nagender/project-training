@@ -15,14 +15,14 @@ export class HeaderComponent implements OnInit {
   }
   datas: any;
   username : any;
-  items : any
+  cartdata : any
   counter: number = 0;
   ngOnInit() {
     this.serve.getCart(this.cookieService.get('username')).subscribe((res)=>{
-      this.items = res;
-      this.items.forEach(item => {
-        this.counter = this.counter + item.quantity;
-      });
+      this.cartdata = res[0];
+      this.cartdata.items.forEach(item => {
+        this.counter = this.counter + item.quantity
+      })
     })
     this.serve.getData().subscribe(data => {
       this.datas = data;
@@ -37,10 +37,10 @@ export class HeaderComponent implements OnInit {
     this.serve.getcartlength().subscribe(()=>{
       this.serve.getCart(this.cookieService.get('username')).subscribe((res)=>{
         this.counter = 0
-        this.items = res;
-        this.items.forEach(item => {
-          this.counter = this.counter + item.quantity;
-        });
+        this.cartdata = res[0];
+        this.cartdata.items.forEach(item => {
+          this.counter = this.counter + item.quantity
+        })
       })
     })
   }

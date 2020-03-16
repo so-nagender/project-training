@@ -48,7 +48,7 @@ export class AdditemComponent implements OnInit {
     const obj = {
       name: this.itemform.controls.item.value,
       catId: parseInt(this.id),
-      rating: this.itemform.controls.rating.value,
+      rating: parseInt(this.itemform.controls.rating.value),
       description: this.itemform.controls.Description.value,
       cost: this.itemform.controls.cost.value
     };

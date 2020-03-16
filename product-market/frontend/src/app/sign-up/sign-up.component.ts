@@ -33,6 +33,7 @@ export class SignUpComponent implements OnInit {
   }
 
   onSubmit() {
+    
     if (this.signupform.invalid) {
       return;
     } else {
@@ -42,7 +43,7 @@ export class SignUpComponent implements OnInit {
       this.serve.signUp(obj).subscribe(
         res => {
           localStorage.setItem('accessToken', res.accessToken);
-          this.cookieService.set('username',username)
+          this.cookieService.set('username',username);
           this.router.navigate(['/welcomescreen']);
         },
         error => {

@@ -2,6 +2,7 @@ import { Component, OnInit, ɵConsole } from '@angular/core';
 import { ActivatedRoute,Router } from '@angular/router';
 import {ProductcatchService} from '../productcatch.service'
 import { CookieService } from 'ngx-cookie-service';
+import { ItemviewComponent } from '../itemview/itemview.component';
 
 
 
@@ -16,6 +17,7 @@ export class ListComponent implements OnInit {
   cartbodyname: any;
   cartdata : any;
   catname:any;
+  deletedata: any
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -25,9 +27,28 @@ export class ListComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    let toggle = 0
+    this.serve.getallcart().subscribe(res => {
+      res.forEach(element => {
+        if(element.username==(this.cookieService.get('username'))){
+          console.log(element)
+          toggle = toggle + 1
+          console.log(" ia m")
+        }
+      });
+      if(toggle == 0){
+        const obj2 = {"username" : this.cookieService.get('username'),"items" : []}       
+        this.serve.addCart(obj2).subscribe();
+        console.log("we are")
+      }
+    })
     this.activatedRoute.data.subscribe(data => {
       this.datas = data.data;
       this.datas.forEach(item => (item.rating = parseInt(item.rating,10)));
+      this.serve.getparticularCat(this.activatedRoute.snapshot.params.id).subscribe(res => {
+        this.catname = res;
+        console.log(this.catname);
+      })
     });
     this.serve.getnewItem().subscribe(() => {
       const varId = this.activatedRoute.snapshot.params.id;
@@ -36,21 +57,32 @@ export class ListComponent implements OnInit {
         this.datas.forEach(item => (item.rating = parseInt(item.rating,10)));
       });
     });
-    this.serve.getparticularCat(this.activatedRoute.snapshot.params.id).subscribe(res => {
-      this.catname = res;
-      console.log(this.catname,">>>>>>>>");
-    })
 
   }
 
   onClose(param) {
     const x = param.id;
     const catId = param.catId;
+    let toggle = 0
+    this.serve.getallcart().subscribe((res) => {
+      for(let i =0;i<res.length;i++){
+        for(let j = 0;j <res[i].items.length;j++){
+          if(res[i].items[j].itemId == x){
+            res[i].items.splice(j,1)
+            console.log(res[i].items)
+            console.log(res[i].id)
+            console.log(res[i])
+            this.serve.updateproductCart(res[i].id,res[i]).subscribe();
+            break;
+          }
+        }
+        
+      }
+    })
     this.serve.deleteItem(x).subscribe();
-    this.serve.getItems(catId).subscribe(param => {
-      this.datas = param;
-      this.datas.forEach(item => (item.rating = parseInt(item.rating,10)))
-    });
+    this.serve.sendnewItem();
+    this.serve.setnewsubCart();
+    this.serve.setcartlength();       
   }
 
   onaddItem() {
@@ -58,50 +90,34 @@ export class ListComponent implements OnInit {
   }
 
   onaddCart(data) {
-    let newquant : number
+    console.log(data.id)
     this.serve.getCart(this.cookieService.get('username')).subscribe(res => {
-      let counter : number = 0
-      let updateId : number 
-      this.cartdata = res;
-      this.cartdata.forEach(item => {
-        if(item.prodId == data.id){counter = counter + 1;newquant = item.quantity + 1;updateId = item.id;;console.log(item)}
-        else{counter = counter + 0}
-      });
-      console.log(counter);
+      this.cartdata = res[0];
+      let counter = 0
+      for(let i =0;i<this.cartdata.items.length;i++){
+        if(this.cartdata.items[i].itemId == data.id){  
+          this.cartdata.items[i].quantity = this.cartdata.items[i].quantity + 1;
+          counter = counter + 1;
+          break;
+        }
+        console.log(counter)
+      }
       if(counter == 0){
-        const obj = {
-          name: data.name,
-          rating: data.rating,
-          cost: data.cost,
-          description: data.description,
-          quantity : 1,
-          username : this.cookieService.get('username'),
-          prodId : parseInt(data.id)
-        };
-        this.serve.addCart(obj).subscribe();
+        const obj1 = {"itemId" : data.id,"quantity" : 1}
+        this.cartdata.items.push(obj1)
+        const obj = {"username" : this.cartdata.username,"items": this.cartdata.items}
+        this.serve.updateproductCart(this.cartdata.id,obj).subscribe();
         this.serve.setnewsubCart();
-        this.serve.setcartlength();
+        this.serve.setcartlength(); 
       }
       else{
-        const obj = {
-          name: data.name,
-          rating: data.rating,
-          cost: data.cost,
-          description: data.description,
-          quantity : newquant,
-          username : this.cookieService.get('username'),
-          prodId : parseInt(data.id)
-        };
-        console.log(updateId)
-        this.serve.updateproductCart(updateId,obj).subscribe();
+        this.serve.updateproductCart(this.cartdata.id,this.cartdata).subscribe();
         this.serve.setnewsubCart();
-        this.serve.setcartlength();
+        this.serve.setcartlength(); 
       }
-      
+       
     });  
-    this.cartbodyname = data.name  
-    
-    
+    this.cartbodyname = data.name     
   }
 
 

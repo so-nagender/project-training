@@ -35,12 +35,17 @@
             >
               <div class="col-lg-6" style="text-align: center;">
                 <img src="../../assets/images/1837450.jpg" class="images" />
-                <p
-                  class="m-2"
-                  style="margin-bottom: 3px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 18px;"
-                >
-                  QUANTITY : {{data.quantity}}
-                </p>
+                  <p
+                    class="m-2 mb-0"
+                    style="margin-bottom: 3px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 18px;"
+                  >
+                    QUANTITY : 
+                  </p>
+                <div class="btn-group m-3" role="group">
+                  <button type="button" class="btn btn-secondary" (click)="onplusitem(data)">+</button>
+                  <button type="button" class="btn btn-secondary">{{data.quantity}}</button>
+                  <button type="button" class="btn btn-secondary" (click)="onsubitem(data)">-</button>
+                </div>
               </div>
               <div class="col-lg-6">
                 <button

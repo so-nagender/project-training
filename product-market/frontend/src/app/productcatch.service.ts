@@ -121,6 +121,10 @@ export class ProductcatchService {
     return this.http.put<any>(url, obj);
   }
 
+  getallcart(): Observable<any> {
+    return this.http.get('/api/product-cart');
+  }
+
 
   
 }

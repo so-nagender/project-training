@@ -15,28 +15,38 @@ export class CartComponent implements OnInit {
     private router: Router,
     private cookieService: CookieService
   ) {}
-  datas: any;
+  cartdata : any
+  datas: any = [];
   counter: number = 0;
   totalCost: number = 0;
+  quantity = []
 
   ngOnInit() {
     this.serve.getCart(this.cookieService.get('username')).subscribe(res => {
-      this.datas = res;
-      this.datas.forEach(item => {
-        item.rating = parseInt(item.rating);
-        this.counter = this.counter + item.quantity;
-        this.totalCost = (item.cost * item.quantity) + this.totalCost;
+        this.cartdata = res[0];
+        this.cartdata.items.forEach(item => {
+        this.serve.getParticularItem(item.itemId).subscribe(res => {
+        res.quantity = item.quantity;
+        console.log(res.rating)
+        this.datas.push(res);
+        this.totalCost = this.totalCost + (res.cost * res.quantity)
+        this.counter =  this.counter + res.quantity
+      })
       });
     });
     this.serve.getnewsubCart().subscribe(() => {
       this.serve.getCart(this.cookieService.get('username')).subscribe(res => {
-        this.counter = 0;
-        this.totalCost = 0;
-        this.datas = res;
-        this.datas.forEach(item => {
-          item.rating = parseInt(item.rating);
-          this.counter = this.counter + item.quantity;
-          this.totalCost = (item.cost * item.quantity) + this.totalCost;
+        this.cartdata = res[0];
+        this.datas = []
+        this.totalCost = 0
+        this.counter = 0
+        this.cartdata.items.forEach(item => {
+          this.serve.getParticularItem(item.itemId).subscribe(res => {
+          res.quantity = item.quantity;
+          this.datas.push(res);
+          this.totalCost = this.totalCost + (res.cost * res.quantity)
+          this.counter =  this.counter + res.quantity
+        })
         });
       });
     });
@@ -59,8 +69,57 @@ export class CartComponent implements OnInit {
   }
   onDelete(data) {
     const x = data.id;
-    this.serve.deleteCart(x).subscribe();
-    this.serve.setnewsubCart();
-    this.serve.setcartlength();
+    this.serve.getCart(this.cookieService.get('username')).subscribe(res => {
+      this.cartdata = res[0];
+      for(let i =0;i<this.cartdata.items.length;i++){
+        if(this.cartdata.items[i].itemId == x){
+          console.log(this.cartdata.items[i].itemId)
+          this.cartdata.items.splice(i,1)
+        }
+      }
+      console.log(this.cartdata.items)
+      const obj = {"username" : this.cartdata.username,"items": this.cartdata.items}
+      this.serve.updateproductCart(this.cartdata.id,obj).subscribe();
+      this.serve.setnewsubCart();
+      this.serve.setcartlength();  
+    });
+  }
+
+  onplusitem(data){
+    this.serve.getCart(this.cookieService.get('username')).subscribe(res => {
+      this.cartdata = res[0];
+      for(let i =0;i<this.cartdata.items.length;i++){
+        if(this.cartdata.items[i].itemId == data.id){  
+          this.cartdata.items[i].quantity = this.cartdata.items[i].quantity + 1;
+          break;
+        }
+      }
+      console.log(this.cartdata)
+      this.serve.updateproductCart(this.cartdata.id,this.cartdata).subscribe();
+      this.serve.setnewsubCart();
+      this.serve.setcartlength();       
+    }); 
+  }
+
+  onsubitem(data){
+    this.serve.getCart(this.cookieService.get('username')).subscribe(res => {
+      this.cartdata = res[0];
+      for(let i =0;i<this.cartdata.items.length;i++){
+        if(this.cartdata.items[i].itemId == data.id){
+          if(this.cartdata.items[i].quantity == 1){
+            this.cartdata.items.splice(i,1)
+            break;
+          }
+          else{
+            this.cartdata.items[i].quantity = this.cartdata.items[i].quantity - 1;
+            break;
+          }
+        }
+      }
+      console.log(this.cartdata)
+      this.serve.updateproductCart(this.cartdata.id,this.cartdata).subscribe();
+      this.serve.setnewsubCart();
+      this.serve.setcartlength();       
+    });
   }
 }
