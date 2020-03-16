@@ -2,45 +2,24 @@
   "cats": [
     {
       "name": "electronics",
-      "description": "Electronics is the study of how to control the flow of electrons. It deals with circuits made up of components that control the flow of electricity yElectronics is a part of physics and electrical engineering.Electrical components like transistors and relays can act as switches. This lets us use electrical circuits to process information and transmit information across long distances. Circuits can also take a weak signal (like a whisper) and amplify it (make it louder)",
+      "description": "heater",
       "createdAt": 1582613120109,
       "updatedAt": 1582613120109,
       "id": 7
     },
     {
-      "name": "Women",
-      "description": "A dress (also known as a frock or a gown) is a garment traditionally worn by women or girls consisting of a skirt with an attached bodice (or a matching bodice giving the effect of a one-piece garment).[1] It consists of a top piece that covers the torso and hangs down over the legs. A dress can be any one-piece garment containing a skirt of any length and can be formal or casual.",
-      "createdAt": 1583298845403,
-      "updatedAt": 1583298845403,
+      "name": "Groceries",
+      "description": "Vegetables,Fruits",
+      "createdAt": 1582721000903,
+      "updatedAt": 1582721000903,
       "id": 8
     },
     {
-      "name": "Men",
-      "description": "Men's Fashion Week is an event usually held twice a year in major cities around the globe, typically in January (Autumn/Winter) and June (Spring/Summer)[1]. The fashion industry event is held for fashion professionals and fashion occult. It is an event for designers and brands to showcase upcoming collections to press, media, stylists, buyers, fashion trailblazers and, in some cases, the public.",
-      "createdAt": 1583299070880,
-      "updatedAt": 1583299070880,
+      "name": "kids",
+      "description": "rtrt",
+      "createdAt": 1582788058109,
+      "updatedAt": 1582788058109,
       "id": 9
-    },
-    {
-      "name": "Cosmetics",
-      "description": "Cosmetics are products used to enhance or change the appearance of the face, fragrance or the texture of the body. Many cosmetics are designed for use of applying to the face and body. They are generally mixtures of chemical compounds derived from natural sources, or may be synthetic or artificial.",
-      "createdAt": 1583324193781,
-      "updatedAt": 1583324193781,
-      "id": 10
-    },
-    {
-      "name": "Kids",
-      "description": "Children's clothing is care about their health. Good quality, well designed, garments are now a priority for a growing number of parents and children's clothing is getting a prime place in top label stores and high-end fashion retail outlets. Dresses are also getting separately designed for boys and girls at a very early age.",
-      "createdAt": 1583407425373,
-      "updatedAt": 1583407425373,
-      "id": 11
-    },
-    {
-      "name": "shivanii",
-      "password": "123456789",
-      "createdAt": 1583491210462,
-      "updatedAt": 1583491210462,
-      "id": 12
     }
   ],
   "product-items": [
@@ -101,90 +80,32 @@
       "id": 19
     },
     {
-      "name": "refrigerator",
-      "catId": 7,
+      "name": "monika",
       "rating": "5",
-      "description": "A refrigerator is a machine for keeping things cold. It is sometimes called a fridge or an icebox. People put food and drinks in it, to keep those items cold or good (unspoiled) for a longer time. A refrigerator has a heat pump. ... The heat gets added to the air outside.",
-      "cost": 20000,
-      "createdAt": 1583298799961,
-      "updatedAt": 1583298799961,
-      "id": 4
+      "description": "",
+      "cost": 50000,
+      "updatedAt": 1582798535163,
+      "id": 20
     },
     {
-      "name": "crop tophh",
+      "name": "kgasjdhwkalh",
       "catId": 8,
-      "rating": 3,
-      "description": "A crop top (also cropped top, belly shirt, half shirt, midriff shirt, midriff top, tummy top, short shirt, and cutoff shirt) is a top, the lower part of which is high enough to expose the waist, navel, or some of the midriff.",
-      "cost": 500,
-      "updatedAt": 1583327670749,
-      "id": 5
+      "rating": "4",
+      "description": "wfasdgethh",
+      "cost": 4000,
+      "createdAt": 1583996385586,
+      "updatedAt": 1583996385586,
+      "id": 25
     },
     {
       "name": "kfbgjdkfngdkglhnld",
       "catId": 8,
-      "rating": "3",
-      "description": "Why the off-the-shoulder top is suddenly everywhere. ... A variation known as the cold shoulder top — which leaves skin bare between strap and sleeve — has also been flying off shelves.",
-      "cost": 400,
-      "createdAt": 1583298937779,
-      "updatedAt": 1583298937779,
-      "id": 6
-    },
-    {
-      "name": "ethnic wear",
-      "catId": 8,
-      "rating": "2",
-      "description": "In simple terms Indian ethnic wear include the traditional dresses worn my women on special occasions like weddings, festivals and worships.",
-      "cost": 500,
-      "createdAt": 1583299029939,
-      "updatedAt": 1583299029939,
-      "id": 8
-    },
-    {
-      "name": "T-shirt",
-      "catId": 9,
-      "rating": "3",
-      "description": "a short-sleeved casual top, generally made of cotton, having the shape of a T when spread out flat",
-      "cost": 400,
-      "createdAt": 1583299151970,
-      "updatedAt": 1583299151970,
-      "id": 9
-    },
-    {
-      "name": "shirt",
-      "catId": 9,
-      "rating": "2",
-      "description": "A shirt is a cloth garment for the upper body. There are various types of shirt for men and women. Basic shirt is one of them. ... This shirt has a formal collar, a full-length opening at the front from the collar to the hem and sleeves with cuffs.",
-      "cost": 400,
-      "createdAt": 1583299182402,
-      "updatedAt": 1583299182402,
-      "id": 10
-    },
-    {
-      "name": "Denim jacket",
-      "catId": 9,
-      "rating": "2",
-      "description": "A jean jacket, also called a denim jacket or trucker jacket, is a jacket made from denim. Introduced in the United States in the late 19th century, it has been a popular type of casual apparel with both men and women and has been described as an iconic element of American fashion",
-      "cost": 600,
-      "createdAt": 1583299282026,
-      "updatedAt": 1583299282026,
-      "id": 11
-    },
-    {
-      "name": "crop",
-      "catId": 8,
-      "rating": "3",
-      "description": "hjdhbdbvbcvbxcbvbvbhjhjvbjhs",
-      "cost": 400,
-      "createdAt": 1583393056873,
-      "updatedAt": 1583393056873,
-      "id": 12
-    },
-    {
-      "name": "shivanii",
-      "password": "123456789",
-      "createdAt": 1583491067009,
-      "updatedAt": 1583491067009,
-      "id": 13
+      "rating": 3,
+      "description": "fkjxgkhnrgvkjdbhs",
+      "cost": 6000,
+      "createdAt": 1584012305512,
+      "updatedAt": 1584012305512,
+      "id": 26
     }
   ],
   "product-cart": [
@@ -215,6 +136,17 @@
       ],
       "updatedAt": 1584075508015,
       "id": 3
+    },
+    {
+      "username": "12@gmail.com",
+      "items": [
+        {
+          "itemId": 25,
+          "quantity": 1
+        }
+      ],
+      "updatedAt": 1584336531300,
+      "id": 4
     }
   ],
   "posts": [
