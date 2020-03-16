@@ -4,7 +4,7 @@
           <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search" style="margin-top: 25px;">
       </div>
       <ul class="list-group" style="margin-bottom: 25px;" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
-        <li class="list-group-item" *ngFor="let books of apiBook | filter: searchText | paginate: { itemsPerPage: 5, currentPage: p }" >
+        <li class="list-group-item" *ngFor="  let books of apiBook | filter: searchText | paginate: { itemsPerPage: 5, currentPage: p }" >
           <div class="row">
             <div class="col-sm-4 book-image-container">
               <img src="../../assets/images/bookview.png" height="200px"> 
@@ -37,6 +37,11 @@
                   <b>Price - </b><del>{{books.BookPrice}}</del>
                   <br>
                   <b>Discount Price - </b> {{books.discountPrice}}
+                  <br>
+                  <b>Quantity - </b>
+                  <img src="../../assets/images/sort-down.svg" height="20px" style="cursor: pointer;" (click)="decrease(books.id)">
+                  {{books.quantity}}
+                  <img src="../../assets/images/sort-up-ascending-arrow.svg" height="20px" style="cursor: pointer;" (click)="increase(books.id)">
                 </div>
                 <div class="col-sm-1 float-right">
                   <img src="../../assets/images/eye.png" height="20px" style="margin-right: 10px; cursor: pointer;" [routerLink]="['/book/view', books.id]">

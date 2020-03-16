@@ -31,26 +31,22 @@
       "bookID": [
         {
           "itemID": 21,
-          "quantity": 4
-        },
-        {
-          "itemID": 12,
-          "quantity": 1
+          "quantity": 3
         },
         {
           "itemID": 13,
-          "quantity": 1
+          "quantity": 2
         },
         {
           "itemID": 31,
           "quantity": 1
         },
         {
-          "itemID": 36,
+          "itemID": 5,
           "quantity": 1
         }
       ],
-      "updatedAt": 1584078925212,
+      "updatedAt": 1584088435886,
       "id": 1
     },
     {
@@ -90,16 +86,6 @@
       "BookPrice": "500",
       "discount": "10",
       "Rating": "4"
-    },
-    {
-      "id": 12,
-      "BookName": "Gulliver's Travels",
-      "AuthorName": "Jonathan Swift",
-      "catogrieId": 2,
-      "BookPrice": "500",
-      "discount": "10",
-      "Rating": "4",
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim."
     },
     {
       "id": 13,
