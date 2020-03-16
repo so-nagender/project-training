@@ -32,6 +32,8 @@ import { ListEditDirective } from './list-edit.directive';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { ResolverWelcomeService } from './resolver-welcome.service';
 import { CookieService } from 'ngx-cookie-service';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { from } from 'rxjs';
 
 const routes: Routes = [
   {
@@ -122,7 +124,8 @@ const routes: Routes = [
     ItemviewComponent,
     HomeDisplayComponent,
     ListEditDirective,
-    MainpageComponent
+    MainpageComponent,
+  
 
 
   ],
@@ -134,6 +137,7 @@ const routes: Routes = [
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    NgxPaginationModule
   ],
   providers: [
     {

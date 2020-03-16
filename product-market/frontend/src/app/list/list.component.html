@@ -81,7 +81,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of datas| filterdata: search" >
+      <tr *ngFor="let data of datas| filterdata: search  | paginate: { itemsPerPage: 2, currentPage: p }">
         <td class="font2">
           <p>{{data.name}}</p>
           <button appListEdit [first]="data" type="button" class="btn" style="margin-top: 40px;">EDIT</button><br>
@@ -157,9 +157,10 @@
       </tr>
     </tbody>
   </table>
-  
-   <ng-template #noResults> <h3 style="text-align: center; margin-top: 40px;font-weight: 700;"> NO RESULT FOUND for " {{search}} " <img src="../../assets/images/dislike.svg" style="height: 30px;"></h3> 
+  <ng-template #noResults> <h3 style="text-align: center; margin-top: 40px;font-weight: 700;"> NO RESULT FOUND in {{catname.name}}  <img src="../../assets/images/dislike.svg" style="height: 30px;"></h3> 
   </ng-template>
+   
+  <pagination-controls style="background-color: black;text-align: center;position: relative;;" (pageChange)="p = $event"></pagination-controls>
 </div>
 
 
