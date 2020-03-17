@@ -65,4 +65,8 @@ a {
     .bg-color{
       background: #101010;
     }
+    .pagination {
+      background: rgb(97, 97, 97);
+      box-sizing: border-box;
+    }
    

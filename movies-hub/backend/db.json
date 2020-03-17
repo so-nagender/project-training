@@ -136,26 +136,74 @@
       "password": "1234",
       "createdAt": 1583152705481,
       "updatedAt": 1583152705481
+    },
+    {
+      "user": "Shubham",
+      "name": "subhuu@gmail.com",
+      "password": "1234",
+      "createdAt": 1583392338454,
+      "updatedAt": 1583392338454
     }
   ],
   "watchlists": [
     {
       "user": "ab.cd@gmail.com",
-      "movieId": 3
+      "movieId": [
+        3,
+        4,
+        5
+      ],
+      "id": 1
+    },
+    {
+      "user": "moni@gmail.com",
+      "movieId": [
+        6
+      ],
+      "id": 2
+    },
+    {
+      "user": "raju123@gmail.com",
+      "movieId": [],
+      "createdAt": 1583478510085,
+      "updatedAt": 1583478510085,
+      "id": 3
+    },
+    {
+      "user": "new@gmail.com",
+      "movieId": [],
+      "createdAt": 1584422987935,
+      "updatedAt": 1584422987935,
+      "id": 4
     }
   ],
   "movies": [
     {
-      "movieName": "The Wolf of Wall Street",
-      "year": "2013",
-      "catId": "4",
-      "rating": 9,
+      "movieName": "Avengers: Infinity War",
+      "year": "2018",
+      "catId": "11",
+      "rating": "3",
       "cast": [
-        "Christian Bale,Cillian Murphy,Heath Ledger"
+        "Chris Hemsworth",
+        "Chris Pratt",
+        "Robert Downey Jr."
       ],
-      "synopsis": "Jordan Belfort is a Long Island penny stockbroker who served 22 months in prison for defrauding investors in a massive 1990s securities scam that involved widespread corruption on Wall Street and in the corporate banking world, including shoe designer Steve Madden.",
-      "updatedAt": 1584363505695,
-      "id": 4
+      "synopsis": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment, the fate of Earth and existence has never been more uncertain.",
+      "updatedAt": 1583327391456,
+      "id": 3
+    },
+    {
+      "movieName": "The Wolf of Wall Street",
+      "id": 4,
+      "year": "2013",
+      "rating": "5",
+      "cast": [
+        "Leonardo DiCaprio",
+        "Margot Robbie",
+        "Matthew McConaughey"
+      ],
+      "catId": 4,
+      "synopsis": "Jordan Belfort is a Long Island penny stockbroker who served 22 months in prison for defrauding investors in a massive 1990s securities scam that involved widespread corruption on Wall Street and in the corporate banking world, including shoe designer Steve Madden."
     },
     {
       "movieName": "The Dark Knight",
@@ -363,15 +411,13 @@
     {
       "movieName": "jhkgcyuy",
       "year": "tfxtuuf",
-      "catId": "3",
-      "rating": "4",
+      "catId": "11",
+      "rating": 3,
       "cast": [
-        [
-          "tfxftu"
-        ]
+            "tfxftu"
       ],
       "synopsis": "rtrurtu",
-      "updatedAt": 1583228042080,
+      "updatedAt": 1584423840945,
       "id": 22
     },
     {

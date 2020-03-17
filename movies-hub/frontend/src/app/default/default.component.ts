@@ -52,9 +52,6 @@ export class DefaultComponent implements OnInit {
         }
       );
     }
-
-    
-
   }
   checkLogIn() {
     if(localStorage.getItem("accessToken")){

@@ -56,7 +56,7 @@
   </div>
 <div class="container" >
   <div class="row mt-4" >
-    <div class="col-3  xy" *ngFor="let i of movies" style="padding: 10px;">
+    <div class="col-3  xy" *ngFor="let i of movies | paginate: { itemsPerPage: 8, currentPage: p}" style="padding: 10px;">
       <div class="card" style="width: 15rem;">
         <img src="../../assets/img/load2.jpg" class="card-img-top image img-responsive" alt="frozen2">
         <div class="middle">
@@ -71,7 +71,11 @@
         </div>
       </div>
     </div>
+    <div class="pagination container-fluid mb-1 pt-2">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
   </div>
+    
 </div>
 </div>
 <div>
