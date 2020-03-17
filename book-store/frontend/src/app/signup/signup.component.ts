@@ -16,6 +16,7 @@ import { CookieService } from 'ngx-cookie-service';
 
 export class SignupComponent implements OnInit {
   cookieValue = 'UNKNOWN';
+  error='';
   form = new FormGroup({
     fname: new FormControl('',[Validators.required,Validators.pattern('^[-a-zA-Z\s]+([-a-zA-Z]+)*$')]),
     lname: new FormControl('',[Validators.required,Validators.pattern('^[-a-zA-Z\s]+([-a-zA-Z]+)*$')]),
@@ -33,21 +34,27 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit(form) {
+    
     if (this.form.value.password == this.form.value.password2){
       // const obj = {"user" : this.form.value.email, "bookID" : [] }
       // console.log("-------------->>>>>>>", obj);
       
-      const password = this.form.value.password
-      this.api.postloginDetails(this.form.value.email,password).subscribe((data: any)=> {
-        localStorage.setItem('accessToken', data.accessToken);
-        this.cookieService.set( 'user', this.form.value.email );
-        // this.api.addcart(obj).subscribe();
-        this.cookieValue = this.cookieService.get('user');
+    
+      if(this.form.valid){
+      
+      const password = this.form.value.password;
+      this.api.postloginDetails(this.form.value.email,password).subscribe((data: any)=> 
+      {
+      localStorage.setItem('accessToken', data.accessToken);
+      this.cookieService.set( 'user', this.form.value.email );
+      // this.api.addcart(obj).subscribe();
+      this.cookieValue = this.cookieService.get('user');
+      
         if(data!= null){
           this.routes.navigate(['/dashboard'])
    
         }
-        }, error => {
+      }, error => {
           this.api.handleError(error);
           this.api.cutomerror.subscribe(res =>{Swal.fire({
             icon: 'error',
@@ -55,7 +62,13 @@ export class SignupComponent implements OnInit {
             text: res
           });this.validerr = res})
         });
+
+       
   }
+  else{
+    this.error='All Field Is Required'
+  }
+}
   else {
     Swal.fire({
       icon: 'error',
