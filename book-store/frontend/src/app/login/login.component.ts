@@ -33,15 +33,23 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
 
     this.checkcredentials();
-
+    this.cookieService.set( 'user', 'hello');
     
     
   }
+  setCookie(username) {
+    var d = new Date();
+    d.setTime(d.getTime() + (24*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = 'user' + "=" + username + ";" + expires + ";path=/";
+  }
   onSubmit(form) {
-    const apicall =this.api.postlogin(this.form.value.email, this.form.value.password).subscribe((data: any)=> {
+      this.setCookie(this.form.value.email)
+      const apicall =this.api.postlogin(this.form.value.email, this.form.value.password).subscribe((data: any)=> {
+      this.cookieService.set( 'value', 'hello');
       localStorage.setItem("accessToken", data.accessToken);
-      this.cookieService.set( 'user', this.form.value.email );
-      this.cookieValue = this.cookieService.get('user');
+   
+ 
       this.api.insertuserdata(this.form.value.email);
       if(data!= null){
         this.routes.navigate(['/dashboard'])
