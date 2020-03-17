@@ -55,7 +55,11 @@ export class ViewbookComponent implements OnInit {
         if(this.user == this.apiCart[i].user){
           for(let j=0; j < this.apiCart[i].bookID.length; j++){
             if(this.apiCart[i].bookID[j].itemID != id){
+              console.log(this.apiCart[i].bookID[j].itemID)
+              console.log(id)
               const obj ={"itemID": id, "quantity": 1};
+              console.log(this.user)
+              console.log("abc")
               this.apiCart[i].bookID.push(obj);
               const obj1 = {"user": this.apiCart[i].user, "bookID": this.apiCart[i].bookID};
               this.api.updateCart(obj1, this.apiCart[i].id).subscribe();
