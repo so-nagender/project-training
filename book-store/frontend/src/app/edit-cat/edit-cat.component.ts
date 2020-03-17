@@ -4,6 +4,7 @@ import { FormBuilder, Validators} from '@angular/forms';
 import { ApiService } from '../api.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router} from '@angular/router'
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-cat',
@@ -45,6 +46,10 @@ export class EditCatComponent implements OnInit {
     this.api.updateCat(obj , this.id).subscribe();
     this.Cat();
     this.router.navigate(['/categories'])
+    Swal.fire({
+      title: 'Updated',
+      text: "Categorie Updated "
+    })
     }
   }
 

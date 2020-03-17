@@ -4,6 +4,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms"
 import { ApiService } from '../api.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -40,6 +41,10 @@ export class CategoriesComponent implements OnInit {
   onSubmit(form){
     this.view_form=false;
     this.api.postbookcategories(form)
+    Swal.fire({
+      title: 'Yeah...',
+      text: "Categorie Added"
+    })
     this.view();
   }
   view(){
@@ -75,6 +80,10 @@ export class CategoriesComponent implements OnInit {
   const id = x;
   this.api.deleteCat(id).subscribe();
   this.api.deleteCatBook(id).subscribe();
+  Swal.fire({
+    title: 'Deleted',
+    text: "Categorie Deleted "
+  })
   this.view();
 
  }

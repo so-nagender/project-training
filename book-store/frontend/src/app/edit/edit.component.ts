@@ -4,6 +4,7 @@ import { FormBuilder, Validators} from '@angular/forms';
 import { ApiService } from '../api.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router} from '@angular/router'
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit',
@@ -58,6 +59,10 @@ export class EditComponent implements OnInit {
     this.api.updateBook(obj , this.id).subscribe();
     this.book();
     this.router.navigate(['/book/view', this.id])
+    Swal.fire({
+      title: 'Updated',
+      text: "Book Details Updated "
+    })
 
     }
   }

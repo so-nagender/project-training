@@ -101,6 +101,25 @@ export class ViewbookComponent implements OnInit {
   onDelete(x) {
     const id = x;
     this.api.deleteTeams(id).subscribe();
+    this.api.getCart().subscribe((res)=>{
+      this.apiCart = res;
+      for(let i=0; i < this.apiCart.length; i++){
+        if(this.user == this.apiCart[i].user){
+          for(let j=0; j < this.apiCart[i].bookID.length; j++){
+            if(this.apiCart[i].bookID[j].itemID == id){
+              this.apiCart[i].bookID.splice(j, 1);
+              const obj = {"user": this.apiCart[i].user, "bookID": this.apiCart[i].bookID};
+              this.api.updateCart(obj, this.apiCart[i].id).subscribe();
+            }
+          }
+         
+        }
+      }
+    });
+    Swal.fire({
+      title: 'Deleted',
+      text: "Book Deleted"
+    })
     this.book();
   } 
   stars(x) {

@@ -3,7 +3,7 @@
     {
       "title": "horror",
       "description": "Horror literature has roots in religion, folklore, and history; ",
-      "updatedAt": 1582802204663,
+      "updatedAt": 1584446056449,
       "id": 1
     },
     {
@@ -42,10 +42,6 @@
           "quantity": 4
         },
         {
-          "itemID": 5,
-          "quantity": 2
-        },
-        {
           "itemID": 14,
           "quantity": 1
         },
@@ -54,11 +50,11 @@
           "quantity": 1
         },
         {
-          "itemID": 5,
+          "itemID": 36,
           "quantity": 1
         }
       ],
-      "updatedAt": 1584428819844,
+      "updatedAt": 1584445170284,
       "id": 1
     },
     {
@@ -99,9 +95,9 @@
       "catogrieId": "1",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem ipsam similique dolores dolorum ex amet nostrum in est ab cum assumenda dicta, officia quidem eveniet beatae, quaerat voluptatibus enim.",
       "BookPrice": "500",
-      "discount": -20,
+      "discount": 20,
       "Rating": 2,
-      "updatedAt": 1583326525137,
+      "updatedAt": 1584446329163,
       "id": 5
     },
     {
@@ -234,18 +230,6 @@
       "BookPrice": "500",
       "discount": "10",
       "Rating": "4"
-    },
-    {
-      "BookName": "xzx",
-      "AuthorName": "zsxsz",
-      "catogrieId": "1",
-      "description": "sdvdcvdvd",
-      "BookPrice": 345345,
-      "discount": 23,
-      "Rating": "3",
-      "createdAt": 1583150838795,
-      "updatedAt": 1583150838795,
-      "id": 29
     },
     {
       "BookName": "dfgfdgbf",
