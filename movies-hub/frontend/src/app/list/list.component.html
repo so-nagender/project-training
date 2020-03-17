@@ -33,21 +33,59 @@
         <!-- <td>{{ catg }}</td> -->
         <!-- <td>{{ movie.rating }}</td> -->
         <td>
-          <span *ngFor="let i of createRange(movie.rating)" style="color: rgba(216, 158, 0, 0.753);" class="fa fa-star checked"></span>
+          <span *ngFor="let i of createRange(movie.rating)" style="color: violet" class="fa fa-star checked"></span>
           <span *ngFor="let i of createRange(10 - movie.rating)"  style="color: rgb(226, 226, 220);" class="fa fa-star checked"></span>
           {{movie.rating}}/10
         </td>
-        <!-- <td>{{ movie.rating }}</td> -->
-        <i [routerLink]="['/movie', movie.id]" routerLinkActive="active" class="fa fa-binoculars" aria-hidden="true"
-          style="cursor: pointer;"></i>
-        <i [routerLink]="['/edit', movie.id]" routerLinkActive="active" class="fa fa-pencil mx-4" aria-hidden="true"
-          style="cursor: pointer;"></i>
-        <i (click)="delete(movie.id)" class="fa fa-trash mx-1" aria-hidden="true" style="cursor: pointer;"></i>
-        <i (click)="add(movie.id)" class="mx-3" style="cursor: pointer;"><img src="../../assets/img/add-fav.svg" height="20px"></i>
+        <div class="actionButtonMarginTop">
+        <!-- <td>{{ movie.rating }}</td> -->       
+        <i [routerLink]="['/movie', movie.id]" routerLinkActive="active" aria-hidden="true"
+          style="cursor: pointer;">   
+          <div class="tooltip">
+              <img style="cursor: pointer;" src="../../assets/img/view.svg" height="20px"> 
+              <span class="tooltiptext">View Movie</span> 
+          </div>
+        </i>
+        <!-- <i [routerLink]="['/edit', movie.id]" routerLinkActive="active" class="fa fa-pencil mx-4" aria-hidden="true"
+          style="cursor: pointer;">
+          <div class="tooltip">             
+            <span class="tooltiptext">Add Movie</span>  
+           </div>
+        </i> -->
+        <i [routerLink]="['/edit', movie.id]" routerLinkActive="active"  aria-hidden="true"
+          style="cursor: pointer;">
+          <div class="tooltip">
+            <img style="cursor: pointer;" src="../../assets/img/edit.svg" height="20px" class="actionButtonGap"> 
+            <span class="tooltiptext">Edit Movie</span> 
+          </div>
+        </i>  
+        <!-- <i (click)="delete(movie.id)" class="fa fa-trash mx-1" aria-hidden="true" style="cursor: pointer;">
+        </i> -->
+        <i (click)="delete(movie.id)" aria-hidden="true" style="cursor: pointer;">
+          <div class="tooltip">
+            <img style="cursor: pointer;" src="../../assets/img/delete.svg" height="20px" class="actionButtonGap"> 
+            <span class="tooltiptext">Delete Movie</span> 
+          </div>
+        </i>
+      
+        <i (click)="add(movie.id)" class="mx-3" style="cursor: pointer;">
+          <div class="tooltip">
+          <img src="../../assets/img/add-fav.svg" height="20px">
+          <span class="tooltiptext">Add to WatchList</span>  
+        </div>
+        </i>
+      </div>  
       </tr>
     </tbody>
-  </table><i routerLink='/add' class="icon float-right"><img style="cursor: pointer;" src="../../assets/img/Add-icon.svg" height="50px"></i>
- 
+  </table>
+  <i routerLink='/add' class="icon float-right">
+    <div class="tooltip">
+   <img style="cursor: pointer;" src="../../assets/img/Add-icon.svg" height="50px">  
+   <span class="tooltiptext">Add Movie</span>  
+  </div>
+  </i>
+  
+
   <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div> 
 <div>

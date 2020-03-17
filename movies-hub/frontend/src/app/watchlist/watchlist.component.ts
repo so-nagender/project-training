@@ -10,7 +10,7 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class WatchlistComponent implements OnInit {
   ctrl = new FormControl(null, [Validators.required]);
-  movies: any;
+  // movies: any;
 
   toggle() {
     if (this.ctrl.disabled) {
