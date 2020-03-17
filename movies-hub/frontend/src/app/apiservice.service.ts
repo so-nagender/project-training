@@ -90,7 +90,7 @@ export class ApiserviceService {
   }
   upDateWL(id,obj): Observable<any> {
     const url = `/api/watchlists/${id}`;
-    return this.http.post<any>(url, obj);
+    return this.http.put<any>(url, obj);
   }
   getUser(user): Observable<any> {
     const url = `/api/watchlists?${user}`;
