@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiserviceService } from '../apiservice.service';
 import { CookieService } from 'ngx-cookie-service';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-watchlist',
@@ -8,6 +9,17 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./watchlist.component.css']
 })
 export class WatchlistComponent implements OnInit {
+  ctrl = new FormControl(null, [Validators.required]);
+  movies: any;
+
+  toggle() {
+    if (this.ctrl.disabled) {
+      this.ctrl.enable();
+    } else {
+      this.ctrl.disable();
+    }
+  }
+  
   watchlist: any;
   currentRate = 8;
   movies = [];

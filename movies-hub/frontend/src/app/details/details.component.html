@@ -18,7 +18,13 @@
         <h4>Movie Name: {{data.movieName}}</h4>
         <h4>Year: {{data.year}}</h4>
         <h5>Category: {{data.cat.genre}}</h5>
-        <h5>Rating: {{data.rating}}</h5>
+        <h5>Rating:             
+                <span *ngFor="let i of createRange(data.rating)" style="color: rgb(221,160,221);" class="fa fa-star checked">
+                </span>
+                <span *ngFor="let i of createRange(5-(data.rating))" style="color: rgb(158, 158, 158);" class="fa fa-star">
+                </span>
+                {{data.rating}}/10            
+        </h5>
         <h5 class="moviesDetailsContentGap"><i>Available In:</i></h5>
         <button class="downloadButtonSpace">2160p.bluray</button>
         <button class="downloadButtonSpace">1080p.bluray</button>

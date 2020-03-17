@@ -35,6 +35,7 @@
         <td>
           <span *ngFor="let i of createRange(movie.rating)" style="color: rgba(216, 158, 0, 0.753);" class="fa fa-star checked"></span>
           <span *ngFor="let i of createRange(10 - movie.rating)"  style="color: rgb(226, 226, 220);" class="fa fa-star checked"></span>
+          {{movie.rating}}/10
         </td>
         <!-- <td>{{ movie.rating }}</td> -->
         <i [routerLink]="['/movie', movie.id]" routerLinkActive="active" class="fa fa-binoculars" aria-hidden="true"

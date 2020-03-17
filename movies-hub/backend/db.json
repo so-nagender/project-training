@@ -411,15 +411,13 @@
     {
       "movieName": "jhkgcyuy",
       "year": "tfxtuuf",
-      "catId": "3",
-      "rating": "4",
+      "catId": "11",
+      "rating": 3,
       "cast": [
-        [
-          "tfxftu"
-        ]
+            "tfxftu"
       ],
       "synopsis": "rtrurtu",
-      "updatedAt": 1583228042080,
+      "updatedAt": 1584423840945,
       "id": 22
     }
   ],

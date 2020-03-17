@@ -37,7 +37,7 @@
           </div>
         </div>
       </label>
-      <label>
+      <!-- <label>
         <div class="form-group">
           <input type="text" required class="input" formControlName="rating"
             [ngClass]="{'is-invalid': checkoutForm.get('rating').touched && checkoutForm.get('rating').invalid}">
@@ -48,26 +48,57 @@
           <div class="invalid-feedback">
             Invalid (1-5 only)
           </div>
+        </div> -->
+        <!-- <div class="col-3">
+            <label>
+                <div class="form-group">
+                    <input type="text" required class="input" formControlName="moviename">
+                    <p class="label-txt">Movie Name</p>
+                    <div class="line-box">
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </label>
+            <label>
+                <div class="form-group">
+                    <input type="text" required class="input" formControlName="date">
+                    <p class="label-txt">Release Date</p>
+                    <div class="line-box">
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </label> -->
+            <label>
+                 <div class="form-group"> 
+                    <!-- <input type="text" required class="input" formControlName="rating"> -->
+                    <p class="label-txt">Rating</p> 
+                    <!-- <div class="line-box">
+                        <div class="line"></div>
+                    </div>                  -->
+                   <ngb-rating [formControl]="rating" class="rating" (click)='toggle()'></ngb-rating>
+                    Stars: <b>{{ rating.value }}</b>
+                </div>
+               
+            </label>
+            <h5>catogaries</h5>
+            <select formControlName="cat" class="custom-select" formControlsName="cat" id="iinlineFormCustomSelect">
+                <option value="{{i.id}}" *ngFor="let i of catogry">{{i.genre}}</option>
+            </select>
+            <label>
+                <div class="form-group">
+                    <input type="text" required class="input" formControlName="cast">
+                    <p class="label-txt">Cast</p>
+                    <div class="line-box">
+                        <div class="line"></div>
+                    </div>
+                    <div class="invalid-feedback">
+                      <h5 style="font-size: small;"><strong>Not Caste but Cast is required</strong></h5>
+                    </div>
+                </div>
+            </label>
         </div>
-      </label>
-      <h5>catogaries</h5>
-      <select formControlName="cat" class="custom-select" formControlsName="cat" id="iinlineFormCustomSelect">
-        <option value="{{i.id}}" *ngFor="let i of catogry">{{i.genre}}</option>
-      </select>
-      <label>
-        <div class="form-group">
-          <input type="text" required class="input" formControlName="cast"
-            [ngClass]="{'is-invalid': checkoutForm.get('cast').touched && checkoutForm.get('cast').invalid}">
-          <p class="label-txt">Cast</p>
-          <div class="line-box">
-            <div class="line"></div>
-          </div>
-          <div class="invalid-feedback">
-            <h5 style="font-size: small;"><strong>Not Caste but Cast is required</strong></h5>
-          </div>
-        </div>
-      </label>
-    </div>
+      
+    
     <div class="col-4"></div>
   </div>
   <div class="container">

@@ -18,7 +18,7 @@ export class AddmovieComponent implements OnInit {
     this.checkoutForm = this.formBuilder.group({
       moviename: ['', Validators.required],
       date: ['', Validators.required],
-      rating:['', [Validators.required,Validators.max(5)]],
+      rating:[''],
       cat: ['', Validators.required],
       cast: ['', Validators.required],
       syn: ['', Validators.required],
@@ -44,14 +44,28 @@ export class AddmovieComponent implements OnInit {
     const moviename= this.checkoutForm.controls.moviename.value;
     const year= this.checkoutForm.controls.date.value;
     const category= this.checkoutForm.controls.cat.value;
-    const rating= this.checkoutForm.controls.rating.value;
+    const temp = this.toggle();
+    console.log("temp working",temp);
+    // const rating= this.checkoutForm.controls.rating.value;
     const cast= this.checkoutForm.controls.cast.value;
     const synopsys = this.checkoutForm.controls.syn.value;
-    const obj= {movieName: moviename, year: year, rating: rating, catId: category, cast: [cast], synopsis: synopsys};
+    const obj= {movieName: moviename, year: year,rating: temp, catId: category, ["cast"]: [cast], synopsis: synopsys};
     this.myservice.postData(obj).subscribe();
     this.route.navigate(['/list']);
     }
   }
 
+  rating = new FormControl(null, [Validators.required]);
+  
+
+  toggle() {
+    if (this.rating.disabled) {
+      this.rating.enable();
+    } else {
+      this.rating.disable();
+    }    
+    return this.rating.value;
+    
+  }
 
 }
