@@ -3,6 +3,7 @@ import { ApiserviceService } from '../apiservice.service';
 import { ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-list',
@@ -16,8 +17,11 @@ export class ListComponent implements OnInit {
   catid: any;
   catogry: any;
   catg: any;
+  result: any;
+  username = this.cookieService.get('Test');
+  
   // collection = [];
-  constructor(private myservice: ApiserviceService, private activatedRoute: ActivatedRoute, private router: Router) {
+  constructor(private myservice: ApiserviceService, private activatedRoute: ActivatedRoute, private router: Router, private cookieService: CookieService) {
     let id = this.activatedRoute.snapshot.params.id;
     // for(let i=1;i<=100;i++){
     //   let Obj = {'name': `Employee Name ${i}`,'code': `EMP00 ${i}`}
@@ -31,7 +35,9 @@ export class ListComponent implements OnInit {
   getMovies() {
     this.myservice.getMovies().subscribe(res => {
       this.movies = res;
+      this.result = this.movies;
     });
+    return this.result;
   }
   getCatById() {
     this.myservice.getData().subscribe(id => {
@@ -56,6 +62,53 @@ export class ListComponent implements OnInit {
     });
   }
   // Get Elements by its category
+
+  getMovieArrayFromW() {
+    // let arr = []
+    //  this.myservice.getWatchList().subscribe((res) => {
+    //   const temp = res;
+    //   for(let i =0;i<temp.length;i++) {
+    //     if(this.username == temp[i].user) {
+    //       arr.push(temp[i].movieId);
+    //     } 
+    //   }
+    // })
+  }
+
+  // ADD TO WATCH LIST START
+add() {alert("Saved")}
+
+  // add(id) {
+  //   console.log("and id",id);
+    
+
+  //   let arr = [];
+  //    this.myservice.getWatchList().subscribe((res) => {
+  //     const temp = res;
+  //     for(let i =0;i<temp.length;i++) {
+  //       if(this.username == temp[i].user) {
+  //         for(let j=0; j<temp[i].movieId.length ;j++){
+  //           arr[j] = temp[i].movieID[j];
+  //         }
+  //         console.log(arr);
+  //       } 
+  //     }
+  //     console.log("movie array -- before add",arr)
+  //     console.log("After add array",arr);
+  //     const obj = {user: this.username, movieId: [id] };
+  //     console.log("Obj ------",obj);
+  //   })
+    
+
+    // this.myservice.getSingleElementById(id).subscribe((response) => {
+    //   this.movies.push(response);
+    //   const temp = response;
+    //   console.log(temp.movieName);
+    // });
+  // }
+  // ADD TO WATCH LIST END
+
+
   getCategory() {
     this.myservice.getCat().subscribe((res) => {
       this.catogry = res;

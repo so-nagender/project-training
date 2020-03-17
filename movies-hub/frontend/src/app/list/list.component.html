@@ -19,7 +19,7 @@
         <img src="../../assets/img/arrowDown.svg" class="img-fluid" alt="Responsive image" (click)="sortTableYearDes()"
           class="arrow">
       </th>
-      <th style="width:20%">Cast</th>
+      <th style="width:25%">Cast</th>
       <th style="width:6%">Genre</th>
       <th style="width:18%">Rating</th>
       <th>Actions</th>
@@ -33,8 +33,8 @@
         <!-- <td>{{ catg }}</td> -->
         <!-- <td>{{ movie.rating }}</td> -->
         <td>
-          <span *ngFor="let i of createRange(movie.rating)" class="fa fa-star checked">
-          </span>
+          <span *ngFor="let i of createRange(movie.rating)" style="color: rgba(216, 158, 0, 0.753);" class="fa fa-star checked"></span>
+          <span *ngFor="let i of createRange(10 - movie.rating)"  style="color: rgb(226, 226, 220);" class="fa fa-star checked"></span>
         </td>
         <!-- <td>{{ movie.rating }}</td> -->
         <i [routerLink]="['/movie', movie.id]" routerLinkActive="active" class="fa fa-binoculars" aria-hidden="true"
@@ -42,12 +42,13 @@
         <i [routerLink]="['/edit', movie.id]" routerLinkActive="active" class="fa fa-pencil mx-4" aria-hidden="true"
           style="cursor: pointer;"></i>
         <i (click)="delete(movie.id)" class="fa fa-trash mx-1" aria-hidden="true" style="cursor: pointer;"></i>
+        <i (click)="add(movie.id)" class="mx-3" style="cursor: pointer;"><img src="../../assets/img/add-fav.svg" height="20px"></i>
       </tr>
     </tbody>
-  </table>
+  </table><i routerLink='/add' class="icon float-right"><img style="cursor: pointer;" src="../../assets/img/Add-icon.svg" height="50px"></i>
+ 
   <pagination-controls (pageChange)="p = $event"></pagination-controls>
-  <button routerLink='/add' class="btn btn-danger mb-2 float-right">Add Movie</button>
-</div>
+</div> 
 <div>
   <app-footer></app-footer>
 </div>

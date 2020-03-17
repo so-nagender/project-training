@@ -22,27 +22,23 @@ export class WatchlistComponent implements OnInit {
       this.watchlist = res;
       //console.log(res);
       // console.log(this.watchlist[0].user);
-      console.log(this.watchlist.length);
+      //console.log(this.watchlist.length);
       for (let j = 0; j < this.watchlist.length; j++) {
-        let index;
         if (this.cookieService.get('Test') == (this.watchlist[j].user)) {
-          console.log("got that")
-          console.log("index is--", j);
           let len = this.watchlist[j].movieId.length;
           // console.log(len);
+          // console.log(this.watchlist.movieId)
           for (let i = 0; i < len; i++) {
-            let temp = this.watchlist[0].movieId[i];
-            // console.log(temp);
+            let temp = this.watchlist[j].movieId[i];
+            //console.log(temp);
             this.myservice.getSingleElementById(temp).subscribe((response) => {
               this.movies.push(response);
               // console.log(this.movies);
             });
           }
         } else {
-          console.log("Not Found");
         }
       }
-
     });
   }
 
