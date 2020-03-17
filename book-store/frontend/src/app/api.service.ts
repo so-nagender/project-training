@@ -20,8 +20,6 @@ export class ApiService {
   cutomerror= new BehaviorSubject<string>('default');
   userdata = new BehaviorSubject<any>('default')
 
-
-
   constructor(private http: HttpClient , private routes: Router) { }
   insertuserdata(value)
   {

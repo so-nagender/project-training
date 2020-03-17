@@ -43,7 +43,7 @@ export class AddbookComponent implements OnInit {
     this.submitted = true;
     if (this.formData.invalid) {
       return;
-    } else {
+    } else{
     const BookName = this.formData.controls.bookname.value;
     const AuthorName = this.formData.controls.authorname.value;
     const CatName = this.formData.controls.catname.value;
@@ -53,7 +53,7 @@ export class AddbookComponent implements OnInit {
     const BookRating = this.selected;
     const obj = { "BookName" : BookName , "AuthorName" : AuthorName, "catogrieId" : CatName, "description" : BookDes, "BookPrice" :  BookPrice, "discount" : BookDiscount, "Rating" : BookRating};
     const apihit =this.api.addBook(obj).subscribe((res)=>{this.bookDataArr.push(res)
-    this.formData.reset();
+    // this.formData.reset();
     }
     );
 
@@ -69,12 +69,13 @@ export class AddbookComponent implements OnInit {
   reset(){
     this.formData.reset();
     this.selected = 0 
+    // this.formData(null);
   }
   
   formValue() {
     this.formData = this.formBuilder.group({
       bookname: ['',[Validators.required]],
-      authorname: ['',[Validators.required]],
+      authorname: ['',[Validators.required,Validators.pattern('^[a-zA-Z][a-zA-Z\\s]+$')]],
       catname: ['',[Validators.required,]],
       des: ['',Validators.required],
       bookprice: ['',[Validators.required,Validators.min(0)]],
@@ -93,8 +94,14 @@ export class AddbookComponent implements OnInit {
   starSelected(val) {
     this.selected = val;
     console.log(this.selected);
-    return this.selected
+    return this.selected;
   }
+
+  // onSubmitReset(){
+  //   if(this.onSubmit() == this.formData){
+  //      return this.formData.reset();
+  //   }
+  // }
 
 
 }

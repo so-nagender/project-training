@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
 export class SignupComponent implements OnInit {
   form = new FormGroup({
     fname: new FormControl('',[Validators.required,Validators.pattern('^[-a-zA-Z\s]+([-a-zA-Z]+)*$')]),
-    lname: new FormControl('',[Validators.required,Validators.pattern('^[-a-zA-Z\s]+([-a-zA-Z]+)*$')]),
+    lname: new FormControl('',[Validators.required,Validators.pattern('^[a-zA-Z][a-zA-Z\\s]+$')]),
     email: new FormControl('',[Validators.required, Validators.email]),
     password: new FormControl('',[Validators.required, Validators.minLength(6)]),
     password2: new FormControl('',[Validators.required, Validators.minLength(6)])

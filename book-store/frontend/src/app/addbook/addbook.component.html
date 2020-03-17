@@ -57,12 +57,9 @@
                                
                                </p>
                             </span> -->
-                            <div *ngFor="let i of totalArray">
-                                <p [class.selected]="i <= selected" class="normal" (click)="starSelected(i)">
-                              
-                                </p>
-                              </div>
-                       
+                        <div *ngFor="let i of totalArray">
+                            <p [class.selected]="i <= selected" class="normal" (click)="starSelected(i)"></p>
+                        </div>
                         <div *ngIf=" submitted && u.rating.errors" class="invalid-feedback">
                             <div *ngIf="u.rating.errors.required">Rating is required</div>
                         </div>
@@ -76,7 +73,7 @@
                             <div *ngIf="u.des.errors.required">Description is required</div>
                         </div>
                         <div style="margin-top: 10px;">
-                            <button type="submit" class="btn btn-primary buttonCss" (click)="onSubmit(); reset() "> Add Book</button>
+                            <button type="submit" class="btn btn-primary buttonCss" (click)="onSubmit();reset() "> Add Book</button>
                             <button type="button" class="btn btn-primary buttonCss" style="margin-left: 10px;" (click)="reset()">Reset</button>
                         </div>
                     </form>
