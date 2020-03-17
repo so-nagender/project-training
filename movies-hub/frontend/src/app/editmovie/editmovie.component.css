@@ -125,3 +125,7 @@ color:rgb(221,160,221)
 .rate{
   margin-top: 15px;
 }
+
+.xOverflow{
+  overflow-x: hidden;
+}

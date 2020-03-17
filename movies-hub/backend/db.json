@@ -151,18 +151,10 @@
       "catId": "4",
       "rating": 9,
       "cast": [
-        [
-          [
-            [
-              "Leonardo DiCaprio",
-              "Margot Robbie",
-              "Matthew McConaughey"
-            ]
-          ]
-        ]
+        "Christian Bale,Cillian Murphy,Heath Ledger"
       ],
       "synopsis": "Jordan Belfort is a Long Island penny stockbroker who served 22 months in prison for defrauding investors in a massive 1990s securities scam that involved widespread corruption on Wall Street and in the corporate banking world, including shoe designer Steve Madden.",
-      "updatedAt": 1583410470372,
+      "updatedAt": 1584363505695,
       "id": 4
     },
     {
@@ -410,28 +402,6 @@
       "createdAt": 1583385845170,
       "updatedAt": 1583385845170,
       "id": 39
-    },
-    {
-      "movieName": "Sonu",
-      "year": "2020",
-      "catId": "3",
-      "rating": 8,
-      "cast": [
-        [
-          [
-            [
-              [
-                [
-                  "Chunri"
-                ]
-              ]
-            ]
-          ]
-        ]
-      ],
-      "synopsis": "dsgdrthyfhy",
-      "updatedAt": 1583405860210,
-      "id": 41
     },
     {
       "movieName": "PS: I Love You",
