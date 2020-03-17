@@ -73,6 +73,7 @@ import { CartComponent } from './cart/cart.component'
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptor,
     multi: true,
+    
   },
   CookieService ],
   bootstrap: [AppComponent]
