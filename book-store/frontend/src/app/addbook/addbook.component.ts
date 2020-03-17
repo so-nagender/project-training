@@ -20,6 +20,7 @@ export class AddbookComponent implements OnInit {
   total = 5;
   selected = 0;
   totalArray: number[] = [];
+  errormsg = ''
 
   constructor(private api: ApiService, private http: HttpClient, private formBuilder: FormBuilder, private router: Router) { }
 
@@ -44,9 +45,12 @@ export class AddbookComponent implements OnInit {
     this.submitted = true;
     if (this.formData.invalid) {
      console.log(this.formData)
+     console.log('error data')
+     this.errormsg = ' **all data not filled **'
      
       
     } else {
+     
     const BookName = this.formData.controls.bookname.value;
     const AuthorName = this.formData.controls.authorname.value;
     const CatName = this.formData.controls.catname.value;
@@ -54,6 +58,9 @@ export class AddbookComponent implements OnInit {
     const BookPrice = this.formData.controls.bookprice.value;
     const BookDiscount = this.formData.controls.discount.value;
     const BookRating = this.selected;
+    this.errormsg =" "
+    
+    
     const obj = { "BookName" : BookName , "AuthorName" : AuthorName, "catogrieId" : CatName, "description" : BookDes, "BookPrice" :  BookPrice, "discount" : BookDiscount, "Rating" : BookRating};
     const apihit =this.api.addBook(obj).subscribe((res)=>{this.bookDataArr.push(res)
     this.formData.reset();
