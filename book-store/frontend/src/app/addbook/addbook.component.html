@@ -69,11 +69,14 @@
                         <div *ngIf="formData.get('des').touched && formData.get('des').invalid" class="invalid-feedback">
                             <div *ngIf="formData.get('des').errors.required">Description PLSS</div>
                         </div>
+                        <b>  {{errormsg}} </b>
                         <div style="margin-top: 10px;">
                             <button type="submit" class="btn btn-primary buttonCss" (click)="onSubmit()"> Add Book</button>
+                            
                             <button type="button" class="btn btn-primary buttonCss" style="margin-left: 10px;" (click)="reset()">Reset</button>
                         </div>
                     </form>
+                
                 </div> 
             </div>
             <div class="col-sm">
