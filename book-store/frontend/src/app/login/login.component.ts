@@ -46,7 +46,6 @@ export class LoginComponent implements OnInit {
   onSubmit(form) {
       this.setCookie(this.form.value.email)
       const apicall =this.api.postlogin(this.form.value.email, this.form.value.password).subscribe((data: any)=> {
-      this.cookieService.set( 'value', 'hello');
       localStorage.setItem("accessToken", data.accessToken);
    
  

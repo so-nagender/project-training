@@ -39,9 +39,9 @@
                   <b>Discount Price - </b> {{books.discountPrice}}
                   <br>
                   <b>Quantity - </b>
-                  <img src="../../assets/images/sort-down.svg" height="20px" style="cursor: pointer;" (click)="decrease(books.id)">
+                  <img src="../../assets/images/sort-down.svg" height="20px" style="cursor: pointer;" (click)="decrease(books)">
                   {{books.quantity}}
-                  <img src="../../assets/images/sort-up-ascending-arrow.svg" height="20px" style="cursor: pointer;" (click)="increase(books.id)">
+                  <img src="../../assets/images/sort-up-ascending-arrow.svg" height="20px" style="cursor: pointer;" (click)="increase(books)">
                 </div>
                 <div class="col-sm-1 float-right">
                   <img src="../../assets/images/eye.png" height="20px" style="margin-right: 10px; cursor: pointer;" [routerLink]="['/book/view', books.id]">
@@ -50,7 +50,7 @@
                   <img src="../../assets/images/draw.svg" height="20px" style="margin-right: 10px; cursor: pointer;" [routerLink]="['/book/edit', books.id]"> 
                   <br>
                   <br>
-                  <img src="../../assets/images/garbage.svg" height="20px" style="cursor: pointer;" (click)="onDeleteCart(books.id)">
+                  <img src="../../assets/images/garbage.svg" height="20px" style="cursor: pointer;" (click)="onDeleteCart(books)">
   
                 </div>
   
