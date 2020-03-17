@@ -17,6 +17,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import {MatInputModule} from '@angular/material/input';
+import {NgxPaginationModule} from 'ngx-pagination'; 
+import { CookieService } from 'ngx-cookie-service';
 
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpResponse } from '@angular/common/http';
 import { TokenInterceptor } from './TokenInterceptor';
@@ -27,7 +29,8 @@ import { EditComponent } from './edit/edit.component';
 import { AddbookComponent } from './addbook/addbook.component';
 import { ViewbookComponent } from './viewbook/viewbook.component';
 import { EditCatComponent } from './edit-cat/edit-cat.component';
-import { ViewCatComponent } from './view-cat/view-cat.component'
+import { ViewCatComponent } from './view-cat/view-cat.component';
+import { CartComponent } from './cart/cart.component'
 
 
 @NgModule({
@@ -48,7 +51,8 @@ import { ViewCatComponent } from './view-cat/view-cat.component'
     AddbookComponent,
     ViewbookComponent,
     EditCatComponent,
-    ViewCatComponent
+    ViewCatComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -60,15 +64,17 @@ import { ViewCatComponent } from './view-cat/view-cat.component'
     MatPaginatorModule,
     MatSortModule,
     HttpClientModule,
-    MatInputModule
+    MatInputModule,
+    NgxPaginationModule
 
    
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptor,
-    multi: true
-  }],
+    multi: true,
+  },
+  CookieService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

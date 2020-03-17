@@ -12,6 +12,7 @@ import { AddbookComponent } from './addbook/addbook.component';
 import { ViewbookComponent } from './viewbook/viewbook.component';
 import { EditCatComponent } from './edit-cat/edit-cat.component';
 import { ViewCatComponent } from './view-cat/view-cat.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'viewbook', component: ViewbookComponent},
   { path: 'categorie/edit/:id', component: EditCatComponent},
   { path: 'categorie/book/:id', component: ViewCatComponent },
+  { path: 'cart', component: CartComponent },
   
 ];
 

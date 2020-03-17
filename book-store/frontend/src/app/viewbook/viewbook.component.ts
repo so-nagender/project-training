@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { ActivatedRoute } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-viewbook',
@@ -12,14 +13,17 @@ export class ViewbookComponent implements OnInit {
   apiBook;
   id;
   bookdata: any;
+  user;
+  apiCart;
 
 
-  constructor(private api: ApiService, private activatedRoute: ActivatedRoute) { 
+  constructor(private api: ApiService, private activatedRoute: ActivatedRoute, private cookieService: CookieService) { 
     this.id = this.activatedRoute.snapshot.params.id;
   }
 
   ngOnInit() {
     this.book();
+    this.getCookie();
   
   }
   book(){
@@ -35,6 +39,62 @@ export class ViewbookComponent implements OnInit {
       console.log('mapped data',res)
       this.apiBook = res;
     });
+  }
+
+  getCookie(){
+    this.user= this.cookieService.get('user');
+  }
+
+  addCart(id){
+
+    console.log(id)
+    this.api.getCart().subscribe(res=>{
+       console.log('data--->>>>>>>>>>>>>>>>>',res);
+     
+      for(let i =0 ; i<res.length;i++){
+        console.log('bokkkkkkkk--...',res[i])
+        console.log('bookid',res[i].bookID)
+        let user_id =res[i].id
+        console.log(user_id)
+
+        for(let j = 0 ;j < res[i].bookID.length; j++){
+          // console.log('items id --->',res[i].bookID[j])
+         
+          if(res[i].bookID[j].itemID == id){
+            let obj={ 'item':1, 
+                    'qt': '1'}
+            res[i].bookID.push(obj);
+            const obj1 = {"user": res[i].user, "bookID": res[i].bookID};
+            this.api.updateCart(obj1,user_id).subscribe(res=>{console.log('sucess--->>>>>>>>>', res)})
+           
+            
+          }
+          
+
+          // console.log('books in there',res[i].bookID)
+          
+         
+      }
+    }
+    })
+    // this.api.getCart().subscribe((res)=>{
+    //   this.apiCart = res;
+    //   for(let i=0; i < this.apiCart.length; i++){
+    //     if(this.user == this.apiCart[i].user){
+    //       for(let j=0; j < this.apiCart[i].bookID.length; j++){
+    //         if(id == this.apiCart[i].bookID[j].itemID){
+    //           console.log(this.apiCart[i].bookID[j].quantity);
+    //         }
+    //         else{
+    //           console.log(id);
+    //           const obj ={"itemID": id, "quantity": 1};
+    //           this.api.addBookCart(obj, x)
+    //         }
+    //       }
+    //     }
+    //   }
+    // });
+
   }
 
   onDelete(x) {

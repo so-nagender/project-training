@@ -14,7 +14,7 @@
       <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
     </div>
     <ul class="list-group" style="margin-bottom: 25px;" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
-    <li class="list-group-item" *ngFor="let books of apiBook | filter: searchText" >
+    <li class="list-group-item" *ngFor="let books of apiBook | filter: searchText | paginate: { itemsPerPage: 5, currentPage: p }" >
       <div class="row">
         <div class="col-sm-4 book-image-container">
           <img src="../../assets/images/bookview.png" height="200px">
@@ -63,6 +63,7 @@
       </div>
     </li>
   </ul>
+  <pagination-controls style="text-align: center;" (pageChange)="p = $event"></pagination-controls>
   <ng-template #noResults > 
     <p><b style="color: red; font-size: 20px;">No results found for "{{searchText}}".<img src="../../assets/images/no result.jpg" height="80px"></b></p>
   </ng-template>
