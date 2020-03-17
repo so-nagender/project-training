@@ -35,6 +35,8 @@
                 </td>
                 <td>
                 <button [routerLink]="['/movie', i.id]" routerLinkActive="active">View</button>
+                <i (click)="delete(i.id)" class="fa fa-trash mx-1" aria-hidden="true" style="cursor: pointer;"></i>
+                </td>
             </tr>
         </tbody>
     </table>

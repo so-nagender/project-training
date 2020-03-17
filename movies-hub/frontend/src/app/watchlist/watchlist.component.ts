@@ -28,7 +28,6 @@ export class WatchlistComponent implements OnInit {
   constructor(private myservice: ApiserviceService, private cookieService: CookieService) { }
 
   ngOnInit() {
-
     this.myservice.getWatchList().subscribe((res) => {
       this.watchlist = res;
       //console.log(res);
@@ -47,7 +46,6 @@ export class WatchlistComponent implements OnInit {
               // console.log(this.movies);
             });
           }
-        } else {
         }
       }
     });
@@ -56,6 +54,12 @@ export class WatchlistComponent implements OnInit {
   getUserName() {
     this.value = this.cookieService.get('Test');
   }
+  // delete(id) {
+  //   this.myservice.deleteMovie(id).subscribe();
+  //   this.myservice.getMovies().subscribe(res => {
+  //     this.movies = res;
+  //   });
+  // }
 
 
   createRange(num) {

@@ -151,24 +151,19 @@
       "movieId": [
         3,
         4,
-        5,
-        7,
-        6,
-        12,
-        16,
-        19,
-        21,
-        18
+        5
       ],
-      "updatedAt": 1584444553690,
       "id": 1
     },
     {
       "user": "moni@gmail.com",
       "movieId": [
         6,
-        14
+        3,
+        7,
+        5
       ],
+      "updatedAt": 1584450721951,
       "id": 2
     },
     {
@@ -177,25 +172,30 @@
       "createdAt": 1583478510085,
       "updatedAt": 1583478510085,
       "id": 3
+    },
+    {
+      "user": "new@gmail.com",
+      "movieId": [],
+      "createdAt": 1584422987935,
+      "updatedAt": 1584422987935,
+      "id": 4
     }
   ],
   "movies": [
     {
       "movieName": "Avengers: Infinity War",
       "year": "2018",
-      "catId": "3",
-      "rating": 10,
+      "catId": "4",
+      "rating": 6,
       "cast": [
         [
-          [
-            "Chris Hemsworth",
-            "Chris Pratt",
-            "Robert Downey Jr."
-          ]
+          "Chris Hemsworth",
+          "Chris Pratt",
+          "Robert Downey Jr."
         ]
       ],
       "synopsis": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment, the fate of Earth and existence has never been more uncertain.",
-      "updatedAt": 1584444809766,
+      "updatedAt": 1584424648940,
       "id": 3
     },
     {
@@ -239,20 +239,17 @@
     },
     {
       "movieName": "M.S. Dhoni: The Untold Story",
+      "id": 7,
       "year": "2016",
-      "catId": "7",
-      "rating": 10,
+      "rating": "1",
       "cast": [
-        [
-          "Anupam Kher",
-          "Sushant Singh Rajput",
-          "Disha",
-          "Kiara"
-        ]
+        "Anupam Kher",
+        "Sushant Singh Rajput",
+        "Disha",
+        "Kiara"
       ],
-      "synopsis": "Mahendra Singh Dhoni is a goalkeeper in school football team.Bannerjee a school cricket coach asks him to join his cricket team and practice daily with him for two hours time passes and he becomes a big state level cricketer but for a long time his luck doesn't favor him to become a member of Indian Cricket team.Dhoni takes up a job in Indian Railways as a ticket checker and plays cricket for the railways after long wait of 4 years he gets selected in Indian Cricket team and turns to be one of the best cricketing captains in history of Indian Cricket.",
-      "updatedAt": 1584444824709,
-      "id": 7
+      "catId": 7,
+      "synopsis": "Mahendra Singh Dhoni is a goalkeeper in school football team.Bannerjee a school cricket coach asks him to join his cricket team and practice daily with him for two hours time passes and he becomes a big state level cricketer but for a long time his luck doesn't favor him to become a member of Indian Cricket team.Dhoni takes up a job in Indian Railways as a ticket checker and plays cricket for the railways after long wait of 4 years he gets selected in Indian Cricket team and turns to be one of the best cricketing captains in history of Indian Cricket."
     },
     {
       "movieName": "Into the Wild",
