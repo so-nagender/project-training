@@ -35,7 +35,6 @@ export class SignupComponent implements OnInit {
   onSubmit(form) {
     if (this.form.value.password == this.form.value.password2){
       // const obj = {"user" : this.form.value.email, "bookID" : [] }
-      // console.log("-------------->>>>>>>", obj);
       
       const password = this.form.value.password
       this.api.postloginDetails(this.form.value.email,password).subscribe((data: any)=> {
