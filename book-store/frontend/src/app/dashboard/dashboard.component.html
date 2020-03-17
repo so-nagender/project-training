@@ -1,0 +1,56 @@
+<div class="container-fluid">
+  <aside class="sticky">
+    <ul class="top-space-sidebar">
+      <li><img src="../../assets/images/user/user (1).svg"> </li>
+
+    <li routerLink="/categories"> Categories </li>
+    <li>description1 </li>
+
+
+    </ul>
+</aside>
+<div class="container view"> 
+    <div id="slideshow">
+        <div class="slide-wrapper">
+          <div class="slide">
+            <img src="../../assets/images/adventure/adventure1.jpg">
+            <img src="../../assets/images/adventure/adventure2.jpg">
+            <img src="../../assets/images/adventure/adventure3.jpg">
+            <img src="../../assets/images/adventure/adventure5.jpg">
+            <h1 class="slide-number">adventure</h1>
+          </div>
+          <div class="slide">
+              <div class="container-fluid">
+            <img src="../../assets/images/fantasy/fantasy1.jpg">
+            <img src="../../assets/images/fantasy/fantasy2.jpg">
+            <img src="../../assets/images/fantasy/fantasy5.jpg">
+        </div>
+            <h1 class="slide-number">Fantasy</h1></div>
+          <div class="slide">
+            <img src="../../assets/images/horro//horror1.jpg">
+            <img src="../../assets/images/horro//horror2.jpg">
+            <img src="../../assets/images/horro//horror3.jpg">
+            <img src="../../assets/images/horro//horror4.jpg">
+            <img src="../../assets/images/horro/horror5.jpg">  
+      
+            <h1 class="slide-number">Horror</h1></div> 
+        </div>
+      </div>
+</div>
+
+
+<div class="books-section container">
+  <p style="border-top: 2px solid black;"></p>
+  <b style="font-size: 25px; margin-right: 38%; color: blueviolet;"> Feature Categories</b>
+  
+  <div class="row row-cols-4">
+    <div class="col" *ngFor="let cat of apiCat">
+      <img src="../../assets/images/Love/love.jpg" class="image">
+      <div class="overlay">
+        <div class="text">{{cat.title| uppercase}}</div>
+        <button class="btn btn-outline-success" style="margin-right: 23%; margin-top: 70%;" [routerLink]="['/categorie/book', cat.id]">View Details</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+    

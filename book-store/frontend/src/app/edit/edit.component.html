@@ -1,0 +1,80 @@
+<div class="container midView" style="margin-bottom: 100px; margin-top: 80px; text-align: center;">
+    <h2  style="margin-bottom: 50px;">Edit Book Details</h2>
+    <form [formGroup]="formData">
+      <div> 
+      <b>Rating- </b>
+      <div *ngFor="let i of totalArray" class="center_element">
+        <p [class.selected]="i <= selected" class="normal" (click)="starSelected(i)">
+      
+        </p>
+      </div>
+    </div>
+    <br>
+    <br>
+
+         Book Name:
+        <br>
+        <input id="bookname" class="form-control" type="text" [(ngModel)]="apiBook.BookName" formControlName="bookname"
+        [ngClass]="{ 'is-invalid':submitted && u.bookname.errors }">
+        <div *ngIf="submitted && u.bookname.errors" class="invalid-feedback">
+          <div *ngIf="u.bookname.errors.required"> Book Name is required</div>
+      </div>
+        <br>
+        
+        Author Name:
+        <br>
+        <input id="authorname" class="form-control" type="text" [(ngModel)]="apiBook.AuthorName" formControlName="authorname"
+        [ngClass]="{ 'is-invalid': submitted && u.authorname.errors }">
+        <div *ngIf=" submitted && u.authorname.errors" class="invalid-feedback">
+          <div *ngIf="u.authorname.errors.required"> Author Name is required</div>
+      </div>
+        <br>
+        Catogery Name:
+        <br>
+        <div class="form-row align-items-center">
+            
+              <select formControlName="catname" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && u.catname.errors }" >
+                <option value="" selected disabled hidden>{{apiBook1.catogrie.title}}</option>
+                <option value="{{i.id}}" *ngFor="let i of apiBook2">{{i.title}}</option>
+                
+              </select>
+              <div *ngIf="submitted && u.catname.errors" class="invalid-feedback">
+                <div *ngIf="u.catname.errors.required">Catogery is required</div>
+            </div>
+            </div>
+        
+        <br>
+        Description:
+        <br>
+        <textarea id="des" class="form-control" type="text" [(ngModel)]="apiBook.description" formControlName="des"
+        [ngClass]="{ 'is-invalid': submitted && u.des.errors }">
+        </textarea>
+        <div *ngIf="submitted && u.des.errors" class="invalid-feedback">
+          <div *ngIf="u.des.errors.required">Description is required</div>
+      </div>
+      <br>
+
+      Book Price:
+        <br>
+        <input id="bookprice" class="form-control" type="number" [(ngModel)]="apiBook.BookPrice" formControlName="bookprice"
+        [ngClass]="{ 'is-invalid':submitted && u.bookprice.errors }">
+        <div *ngIf="submitted && u.bookprice.errors" class="invalid-feedback">
+          <div *ngIf="u.bookprice.errors.required"> Book Price is required</div>
+        </div>
+        <br>
+
+        Book Discount:
+        <br>
+        <input id="bookdiscount" class="form-control" type="number" [(ngModel)]="apiBook.discount" formControlName="bookdiscount"
+        [ngClass]="{ 'is-invalid':submitted && u.bookdiscount.errors }">
+        <div *ngIf="submitted && u.bookdiscount.errors" class="invalid-feedback">
+          <div *ngIf="u.bookdiscount.errors.required"> Book Discount is required</div>
+        </div>
+        <br>
+        <div style="margin-top: 10px;">
+            <button type="submit" [disabled]="!ngForm.valid" class="btn btn-primary buttonCss" (click)="onUpdate()"> Update </button>
+            <button type="button" class="btn btn-primary buttonCss" style="margin-left: 10px;" [routerLink]="['/viewbook']">Cancle</button>
+        </div>
+    </form>
+</div> 

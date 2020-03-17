@@ -1,0 +1,34 @@
+<div class="container padding-btm midView" style="margin-bottom: 100px; margin-top: 80px;">
+    <h2 style="text-align: center;">Book Description</h2>
+    <div >
+      <h2 style="color: blueviolet; text-align: center; margin-top: 50px;" >{{apiBook.BookName | uppercase}}</h2>
+      <div class="row" style="margin-top: 25px;">
+        <div class="col-sm-3  book-image-container">
+          <img src="../../assets/images/bookview.png" height="200px"> 
+          <span class="discounted">
+            {{apiBook.discount}}%
+          </span>
+        </div>
+        <div class="col-sm-4" style="margin-top: 25px;">
+          <h4>Author Name - {{apiBook.AuthorName| uppercase}}</h4>
+          <h4>Book Catogery - {{apiBook.catogrie.title| uppercase}}</h4>
+          <h4>Book Price - <del>{{apiBook.BookPrice}}</del> {{ Book.discountPrice}}</h4>
+          <div> 
+            <b>Rating- </b>
+            <span *ngFor = 'let i of stars(apiBook.Rating)' class="fa fa-star checked" style="color: black;"></span>
+            <span *ngFor = 'let i of stars(5-apiBook.Rating)' class="fa fa-star" style="color: 	#CCCCCC	;"></span>
+          </div>
+
+        </div>
+        <div class="col-sm-5" style="margin-top: 25px;">
+          <h4>Book Description </h4>
+          {{apiBook.description}}
+          <br>
+          <br>
+
+        </div>
+      </div>
+    <br>
+    <button type="button" class="btn btn-primary buttonCss float-right" style="margin-right: 10px; margin-top: 25px;" [routerLink]="['/book/edit', apiBook.id]">Edit Detail</button>
+    </div>
+  </div>

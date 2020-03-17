@@ -1,0 +1,40 @@
+.midView{
+    max-width: 35%;
+}
+.buttonCss{
+    background: black;
+    border-color: black;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+.buttonCss:hover{
+    text-decoration: underline  #8167a9 ;
+    text-decoration-style: solid;
+    color:  #8167a9;
+}
+
+
+.normal {
+    height: 35px;
+    width: 55px;
+    border-radius: 25px;
+    background-image: url("../../assets/images/star.svg");
+    background-repeat: no-repeat;
+    
+    float: left;
+    margin: 5px;
+  }
+  
+  .selected {
+    height: 35px;
+    width: 55px;
+    border-radius: 25px;
+    background-image: url("../../assets/images/star (1).svg");
+    background-repeat: no-repeat;
+    float: left;
+    margin: 5px;
+  }
+  .center_element{
+      padding-left:15%;
+  }

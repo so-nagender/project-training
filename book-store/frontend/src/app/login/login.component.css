@@ -1,0 +1,19 @@
+.padding_top{
+    padding-top: 10%;
+    max-width: 40%;
+    padding-bottom: 350px;
+}
+.buttonCss{
+    background: black;
+    border-color: black;
+    border-radius: 15px;
+    font-size: 18px;
+    color: white;
+    padding: 5px 5px;
+}
+
+.buttonCss:hover{
+    text-decoration: underline  #8167a9 ;
+    text-decoration-style: solid;
+    color:  #8167a9;
+}

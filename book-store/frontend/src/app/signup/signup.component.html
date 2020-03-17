@@ -1,25 +1,22 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h4 style="text-align: center;">SIGN UP FORM</h4>
-    <form name="form" [formGroup]="form" class="container">
+ <div class="container padding_top">
+    <h1 class= " text-center">Sign Up</h1>
+    <form name="form" [formGroup]="form"  (ngSubmit)="onSubmit(form)" >
         <div class="row">
           <div class="col">
             <input type="text" class="form-control" formControlName="fname" [ngClass]="{'is-invalid': form.get('fname').touched && form.get('fname').invalid}" placeholder="First name">
             <div class="invalid-feedback">
-                <div>First Name is Required</div>
+                <div><ul>
+                    <li>First Name is Required</li>
+                    <li>First name contain only Alphabet</li>
+                </ul> 
             </div>
+            </div>
+            
           </div>
           <div class="col">
             <input type="text" class="form-control" formControlName="lname" [ngClass]="{'is-invalid': form.get('lname').touched && form.get('lname').invalid}" placeholder="Last name">
             <div class="invalid-feedback">
-                <div>Last Name is Required</div>
+                <div>Last Name is Required with only Alphabet</div>
             </div>
           </div>
         </div>
@@ -70,14 +67,17 @@
                 
             </div>
             <div class="col" >
-                <input type="password" class="form-control" formControlName="password2" [ngClass]="{'is-invalid': form.get('password2').touched && form.get('password2').invalid}" id="inputPassword3" placeholder="Confirm Password">
+                <input type="password" class="form-control" formControlName="password2" [ngClass]="{'is-invalid': form.get('password2').touched && form.get('password2').invalid}" id="inputPassword3" placeholder="Cnf Password">
                 <div *ngIf="form.get('password2').touched && form.get('password2').invalid" class="invalid-feedback">
                     <div *ngIf="form.get('password2').errors.required">Password must Required</div>
                     <div *ngIf="form.get('password2').errors.minlength">Password at least siX character</div>
                 </div>
             </div>
-          </div>
-          <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Sign Up</button>
+        </div>
+        <button type="submit" class="buttonCss" style="margin-top: 10px;">Sign Up</button>
+        
+        <div><a class="text-left" routerLink="/login" routerLinkActive="active">Already member?|Sign Here</a></div>
     </form>
-  </body>
-</html>
+
+</div>
+

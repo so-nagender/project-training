@@ -1,26 +1,92 @@
-<div class="container padding_top">
-    <div class="row">
-      <div class="col-sm-8 border">col-sm-8</div>
-    
+
+<div class="container">
+  <h2 style="color: blueviolet; text-align: center; margin-top: 50px;" >Book's Categories</h2>
+  <div class="row">
+    <div class="col-sm-6" >
+
+
     </div>
-      <div class="row">
-        <div class="col-sm-4 border plus_image"(click)="toggle_form()">col-sm-8</div>
-        <div class="col-sm-7 border padding_left" *ngIf="view_form" #category_form>
+    <div class="col-sm-6 ">
+      <button type="button" class="btn btn-primary float-right buttonCss"  (click)="toggle_form()" >Add Categorie</button>
+    </div>
 
-          <form>
-            <input>
-            <input type="submit">
+  </div>
+  <div class="container padding_top">
 
+      <div class="form-group mb-10">
+        <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
+    </div>
+    <ul class="list-group" style="margin-bottom: 25px;" *ngIf="(categoryFormdata| filter: searchText).length > 0; else noResults">
+      <li class="list-group-item" *ngFor="let data of categoryFormdata | filter: searchText" >
+        <div class="row">
+          <div class="col-sm-3">
+            <img src="../../assets/images/bookcategorie.png" height="150px"> 
+          </div>
+          <div class="col-sm-9">  
+            <div class="row" > 
+              <div class="col-sm-11" >
+                <b>Categorie Name -</b> {{data.title | uppercase}}
+                <br>
+                <b>Categorie Description -</b> {{data.description}}
+              </div>
+              <div class="col-sm-1 float-right">
+                <img src="../../assets/images/eye.png" height="20px" style="margin-right: 10px; cursor: pointer;" [routerLink]="['/categorie/book', data.id]">
+                <br>
+                <br>
+                <img src="../../assets/images/draw.svg" height="20px" style="margin-right: 10px; cursor: pointer;" [routerLink]="['/categorie/edit', data.id]"> 
+                <br>
+                <br>
+                <img src="../../assets/images/garbage.svg" height="20px" style="cursor: pointer;" (click)="onDeleteCat(data.id)">
 
-          </form>
+              </div>
 
-
-
-
+            </div>
+          </div>
+          
 
         </div>
+      </li>
+    </ul>
+    <ng-template #noResults > 
+      <p><b style="color: red; font-size: 20px;">No results found for "{{searchText}}".<img src="../../assets/images/no result.jpg" height="80px"></b></p>
+    </ng-template>
+          
+           
+     
+    
+      <div class="popup">
+        <div class="col-sm-5 border" *ngIf="view_form" #category_form>
+          <form name="categoryForm" [formGroup]="categoryForm" (ngSubmit)="onSubmit(categoryForm)" class="container">
+              <div class="form-row">
+                  <div class="col">
+                      <div class="cat_name">
+                        <input type="text" id="catname"  class="form-control" formControlName="bookname" [ngClass]="{'is-invalid': categoryForm.get('bookname').touched && categoryForm.get('bookname').invalid}" placeholder="Category Name">
+                          <div class="invalid-feedback">
+                            <div>Categorie Name is Required</div>
+                          </div>
+                      </div>
+                      <div class="cat-desc">
+                        <textarea  rows="3" cols="3" id="catdescription" class="form-control" formControlName="bookdescription" [ngClass]="{'is-invalid': categoryForm.get('bookdescription').touched && categoryForm.get('bookdescription').invalid}" placeholder="Category Description"></textarea>
+                          <div class="invalid-feedback">
+                            <div>Dscription is Required</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="close">
+                <button type="button" (click)="close(categoryForm)">close</button>
+              </div>
+            
+              <div class="submit"> 
+                <button type="submit" [disabled]="categoryForm.invalid">submit</button>
+              </div>
+          </form>
       </div>
       </div>
+  </div>
+</div>
+
+
     
 
   

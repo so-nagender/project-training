@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="form-group mb-4">
+        <h2 style="text-align: center; margin-top: 80px;">Categorie View</h2>
+    </div>
+    <div style="text-align: center;">
+        <h2 style="color: blueviolet; margin-top: 50px;" >{{apiCat.title| uppercase}}</h2>
+        <br>
+        <h4 style="margin-top: 25pxpx;">Categorie Description </h4>
+        {{apiCat.description}}
+        <br>
+    </div>
+    <h2 style="text-align: center; color: blueviolet; margin-top: 50px;">Books</h2>
+    <div class="form-group mb-4">
+      <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
+    </div>
+    <ul class="list-group" style="margin-bottom: 25px;" *ngIf="(apiBook | filter: searchText).length > 0; else noResults">
+    <li class="list-group-item" *ngFor="let books of apiBook | filter: searchText | paginate: { itemsPerPage: 5, currentPage: p }" >
+      <div class="row">
+        <div class="col-sm-4 book-image-container">
+          <img src="../../assets/images/bookview.png" height="200px">
+          <span class="discounted">
+            {{books.discount}}%
+
+          </span> 
+
+        </div>
+        <div class="col-sm-8"> 
+          <div class="row">
+            <div class="col-sm-8"> 
+              <b>Book Name-</b>{{books.BookName | uppercase}}
+            </div>
+            <div class="col-sm-4"> 
+              <span *ngFor = 'let i of stars(books.Rating)' class="fa fa-star checked" style="color: black;"></span>
+              <span *ngFor = 'let i of stars(5-books.Rating)' class="fa fa-star" style="color: 	#CCCCCC	;"></span>
+
+            </div>
+
+          </div>
+          <div class="row"> 
+            <div class="col-sm-11">
+              <b>Author Name-</b>{{books.AuthorName}}
+              <br>
+              <b>Price- </b><del>{{books.BookPrice}}</del>
+              <br>
+              <b>Discount Price-</b>{{books.discountPrice}}
+
+            </div>
+            <div class="col-sm-1 float-right">
+              <img src="../../assets/images/eye.png" height="20px" style="margin-right: 10px; cursor: pointer;" [routerLink]="['/book/view', books.id]">
+              <br>
+              <br>
+              <img src="../../assets/images/draw.svg" height="20px" style="margin-right: 10px; cursor: pointer;" [routerLink]="['/book/edit', books.id]"> 
+              <br>
+              <br>
+              <img src="../../assets/images/garbage.svg" height="20px" style="cursor: pointer;" (click)="onDelete(books.id)">
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </li>
+  </ul>
+  <pagination-controls style="text-align: center;" (pageChange)="p = $event"></pagination-controls>
+  <ng-template #noResults > 
+    <p><b style="color: red; font-size: 20px;">No results found for "{{searchText}}".<img src="../../assets/images/no result.jpg" height="80px"></b></p>
+  </ng-template>
+      
+</div>

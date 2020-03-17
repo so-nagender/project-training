@@ -1,0 +1,25 @@
+.foot{
+    background: black;
+}
+.text-right{
+    margin-right: 57px;
+    font-size: 22px;
+}
+.social-icon{
+    margin-right: 50px;
+    float: right;
+}
+.instagram{
+    margin-inline-start: 8px;
+}
+.twitter{
+    margin-inline-start: 16px;
+}
+
+.foot{
+    bottom: 1px;
+   
+}
+p{
+    margin-bottom: 0 !important;
+}

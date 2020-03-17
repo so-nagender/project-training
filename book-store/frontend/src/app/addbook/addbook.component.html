@@ -1,0 +1,142 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="row row-cols-2">
+            <div class="col">
+                <div class="container midView" >
+                    <p class="text-left">Add Book Here</p>
+                    <form [formGroup]="formData" class="col-sm-10" >
+                        Book Name:
+                        <br>
+                        <input id="bookname" class="form-control" type="text" formControlName="bookname"
+                            [ngClass]="{'is-invalid':formData.get('bookname').touched && formData.get('bookname').invalid}">
+                        <div *ngIf=" formData.get('bookname').touched && formData.get('bookname').invalid " class="invalid-feedback">
+                            <div *ngIf="formData.get('bookname').errors.required">Book is Required</div>
+                        </div>
+                        <br>
+                        Author Name:
+                        <br>
+                        <input id="authorname" class="form-control" type="text" formControlName="authorname"
+                            [ngClass]="{ 'is-invalid':formData.get('authorname').touched && formData.get('authorname').invalid}">
+                        <div *ngIf="formData.get('authorname').touched && formData.get('authorname').invalid" class="invalid-feedback">
+                            <div *ngIf="formData.get('authorname').errors.required"> Author Name is required</div>
+                        </div>
+                        <br>
+                        Category Name:
+                        <br>
+                        <div class="form-row align-items-center"> 
+                            <select formControlName="catname" class="custom-select mr-sm-2" id="inlineFormCustomSelect" 
+                            [ngClass]="{'is-invalid':formData.get('catname').touched && formData.get('catname').invalid}">
+                            <option value=" " selected disabled hidden>Choose Category</option>
+                            <option  value="{{i.id}}" *ngFor="let i of apiBook2">{{i.title}}</option>
+                            </select>
+                            <div *ngIf="formData.get('catname').touched && formData.get('bookprice').invalid" class="invalid-feedback">
+                            <div *ngIf="formData.get('catname').errors?.required">Catogery is required</div>
+                            </div>
+                        </div>
+                        <br>
+                        Book Price:
+                        <br>
+                        <input id="bookprice" class="form-control" type="number" formControlName="bookprice"
+                        [ngClass]="{'is-invalid':formData.get('bookprice').touched && formData.get('bookprice').invalid}">
+                        <div *ngIf="formData.get('bookprice').touched && formData.get('bookprice').invalid" class="invalid-feedback">
+                            <div *ngIf="formData.get('bookprice').errors.required">Price is Required</div>
+                        </div>
+                        <br>
+                        Discount:
+                        <br>
+                        <input id="discount" class="form-control" type="number" formControlName="discount"
+                        [ngClass]="{'is-invalid':formData.get('discount').touched && formData.get('discount').invalid}">
+                        <div *ngIf="formData.get('discount').touched && formData.get('discount').invalid" class="invalid-feedback">
+                            <div *ngIf="formData.get('discount').errors.required">discount PLSS</div>
+                        </div>
+                        <br>
+                        Rating :          
+                            <div *ngFor="let i of totalArray">
+                                <p [class.selected]="i <= selected" class="normal" (click)="starSelected(i)">
+                              
+                                </p>
+                              </div>
+                       
+                        <div *ngIf=" submitted && u.rating.errors" class="invalid-feedback">
+                            <div *ngIf="u.rating.errors.required">Rating is required</div>
+                        </div>
+                        <br>
+                        Description:
+                        <br>
+                        <textarea id="des" class="form-control" type="text" formControlName="des"
+                        [ngClass]="{'is-invalid':formData.get('des').touched && formData.get('des').invalid}">
+                        </textarea>
+                        <div *ngIf="formData.get('des').touched && formData.get('des').invalid" class="invalid-feedback">
+                            <div *ngIf="formData.get('des').errors.required">Description PLSS</div>
+                        </div>
+                        <b>  {{errormsg}} </b>
+                        <div style="margin-top: 10px;">
+                            <button type="submit" class="btn btn-primary buttonCss" (click)="onSubmit()"> Add Book</button>
+                            
+                            <button type="button" class="btn btn-primary buttonCss" style="margin-left: 10px;" (click)="reset()">Reset</button>
+                        </div>
+                    </form>
+                
+                </div> 
+            </div>
+            <div class="col-sm">
+                <div class="table-decorator">
+                    <p class="text-center">Your Added Book</p>
+                    <table>
+                        <tr>
+                        <th>BookName</th>
+                        <th>AuthorName</th>
+                        <th>Price</th>
+                        <th>Discount</th>
+                        <th>Rating</th>
+                        </tr>
+                        <tr *ngFor="let books of bookDataArr">
+                        <td>{{books.BookName}}</td>
+                        <td>{{books.AuthorName}}</td>
+                        <td>{{books.BookPrice}}</td>
+                        <td>{{books.discount}}</td>
+                        <td>{{books.Rating}}</td>
+                        </tr>
+                    </table>
+                    <!-- <ul class="list-group" style="margin-bottom: 25px;" *ngIf="(books).length > 0; else noResults">
+                        <li class="list-group-item">
+                          <div class="row">
+                            <div class="col-sm-4 book-image-container">
+                              <img src="../../assets/images/bookview.png" height="200px"> 
+                              <span class="discounted">
+                                {{books.discount}}%
+                  
+                              </span>
+                            </div>
+                            <div class="col-sm-8"> 
+                                  <b>Book Name-</b>{{books.BookName | uppercase}}
+                                  <b> Rating </b>
+                                  <span *ngFor = 'let i of stars(books.Rating)' class="fa fa-star checked" style="color: black;"></span>
+                                  <span *ngFor = 'let i of stars(5-books.Rating)' class="fa fa-star" style="color: 	#CCCCCC	;" ></span>
+                                  <br>
+                                  <b>Author Name-</b>{{books.AuthorName}}
+                                  <br>
+                                  <b>Categorie Name -</b>{{books.catogrie.title}}
+                                  <br>
+                                  <b>Price - </b><del>{{books.BookPrice}}</del>
+                                  <br>
+                            </div>
+                  
+                              
+                  
+                           
+                            
+                  
+                          </div>
+                        </li>
+                      </ul>
+                    <ng-template > 
+                        <p><b style="color: red; font-size: 20px;">No results found for "{{searchText}}".<img src="../../assets/images/no result.jpg" height="80px"></b></p>
+                      </ng-template>
+                </div>
+                 -->
+            </div>
+        
+        
+    </div>
+</div>
