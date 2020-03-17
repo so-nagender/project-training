@@ -96,7 +96,6 @@ export class CartComponent implements OnInit {
               }
               else{
                 this.apiCart[i].bookID[j].quantity -= 1;
-                console.log(this.apiCart[i].bookID[j].quantity)
                 const obj1 = {"user": this.apiCart[i].user, "bookID": this.apiCart[i].bookID};
                 this.api.updateCart(obj1, this.apiCart[i].id).subscribe();
                 break;

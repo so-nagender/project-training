@@ -48,59 +48,42 @@ export class ViewbookComponent implements OnInit {
 
   addCart(x){
     let id =x;
-    console.log(id);
     this.api.getCart().subscribe((res)=>{
       this.apiCart = res;
       for(let i=0; i < this.apiCart.length; i++){
         if(this.user == this.apiCart[i].user){
+          let counter = 0;
+          let bookId;
           for(let j=0; j < this.apiCart[i].bookID.length; j++){
-            if(this.apiCart[i].bookID[j].itemID != id){
-              console.log(this.apiCart[i].bookID[j].itemID)
-              console.log(id)
-              const obj ={"itemID": id, "quantity": 1};
-              console.log(this.user)
-              console.log("abc")
-              this.apiCart[i].bookID.push(obj);
-              const obj1 = {"user": this.apiCart[i].user, "bookID": this.apiCart[i].bookID};
-              this.api.updateCart(obj1, this.apiCart[i].id).subscribe();
-              Swal.fire({
-                title: 'Yeah...',
-                text: "Book Added to Cart "
-              })
-              break;
+            if(this.apiCart[i].bookID[j].itemID == id){
+              counter++;
+              bookId = j;
             }
-            else{
-              let quant = this.apiCart[i].bookID[j].quantity; 
-              console.log( quant );
-              break;
-            } 
           }
-          
-
-          // console.log('books in there',res[i].bookID)
-          
-         
+          if(counter > 0){
+            this.apiCart[i].bookID[bookId].quantity += 1;
+            const obj1 = {"user": this.apiCart[i].user, "bookID": this.apiCart[i].bookID};
+            this.api.updateCart(obj1, this.apiCart[i].id).subscribe();
+            Swal.fire({
+              title: 'Yeah...',
+              text: "Book Added to Cart "
+            })
+            break;
+          }
+          else{
+            const obj ={"itemID": id, "quantity": 1};
+            this.apiCart[i].bookID.push(obj);
+            const obj1 = {"user": this.apiCart[i].user, "bookID": this.apiCart[i].bookID};
+            this.api.updateCart(obj1, this.apiCart[i].id).subscribe();
+            Swal.fire({
+              title: 'Yeah...',
+              text: "Book Added to Cart "
+            })
+            break;
+          } 
       }
     }
     })
-    // this.api.getCart().subscribe((res)=>{
-    //   this.apiCart = res;
-    //   for(let i=0; i < this.apiCart.length; i++){
-    //     if(this.user == this.apiCart[i].user){
-    //       for(let j=0; j < this.apiCart[i].bookID.length; j++){
-    //         if(id == this.apiCart[i].bookID[j].itemID){
-    //           console.log(this.apiCart[i].bookID[j].quantity);
-    //         }
-    //         else{
-    //           console.log(id);
-    //           const obj ={"itemID": id, "quantity": 1};
-    //           this.api.addBookCart(obj, x)
-    //         }
-    //       }
-    //     }
-    //   }
-    // });
-
   }
 
   onDelete(x) {
@@ -116,57 +99,5 @@ export class ViewbookComponent implements OnInit {
     }
     return item;
   }
-
-//   bookNameSortAes (){ 
-//    var table, i, x, y; 
-//    table = document.getElementById("bookTable"); 
-//    var switching = true; 
-//    while (switching) { 
-//        switching = false; 
-//        var rows = table.rows; 
-//      console.log(rows)
-//        for (i = 1; i < (rows.length - 1); i++) { 
-//            var Switch = false; 
-//            x = rows[i].getElementsByTagName("td")[0]; 
-//            y = rows[i + 1].getElementsByTagName("td")[0]; 
-//            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) 
-//                { 
-//                Switch = true; 
-//                break; 
-//            }
-//        } 
-//        if (Switch) {  
-//            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]); 
-//            switching = true; 
-//        } 
-//    } 
-// }
-
-// bookNameSortDes(){ 
-//  var table, i, x, y; 
-//  table = document.getElementById("bookTable"); 
-//  var switching = true; 
-//  while (switching) { 
-//      switching = false; 
-//      var rows = table.rows; 
-//    console.log(rows)
-//      for (i = 1; i < (rows.length - 1); i++) { 
-//          var Switch = false; 
-//          x = rows[i].getElementsByTagName("td")[0]; 
-//          y = rows[i + 1].getElementsByTagName("td")[0]; 
-//          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) 
-//              { 
-//              Switch = true; 
-//              break; 
-//          }
-//      } 
-//      if (Switch) { 
-//          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]); 
-//          switching = true; 
-//      } 
-//  } 
-// }
-
-
 
 }

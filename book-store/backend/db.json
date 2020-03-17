@@ -42,11 +42,15 @@
           "quantity": 1
         },
         {
-          "itemID": 5,
+          "itemID": 11,
           "quantity": 1
+        },
+        {
+          "itemID": 5,
+          "quantity": 2
         }
       ],
-      "updatedAt": 1584423023621,
+      "updatedAt": 1584425702998,
       "id": 1
     },
     {
