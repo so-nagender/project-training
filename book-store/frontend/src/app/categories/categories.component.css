@@ -1,8 +1,8 @@
 .padding_top{
     padding-top: 200px;
-    padding-bottom: 250px;
-   
+    padding-bottom: 250px; 
 }
+
 .container{
     padding-top: 30px;
     padding-bottom: 150px;
@@ -24,6 +24,7 @@ tr{
     margin-top: 8px;
     margin-bottom: 12px;
 }
+
 div.reset{
     right: 1px;
     bottom: 50%;
@@ -32,14 +33,13 @@ div.reset{
 
 button[type=submit], [type=reset], [type=close] {
     box-sizing: border-box;
-    /* cursor:pointer; */
     margin-top: 10px;
 }
 
 .imageinvalid img{
-
     width: 30%;
 }
+
 .red{
     color: red;
 }
@@ -48,10 +48,12 @@ p{
     cursor: pointer;
     margin-top: 26px;
 }
+
 div .col-sm-5.border{
     margin-left: 30%;
     background-color: black;
 }
+
 .popup{
     z-index: 1;
     display: block;
@@ -79,13 +81,16 @@ div .col-sm-5.border{
     text-decoration-style: solid;
     color:  #8167a9;
 }
+
 .close{
     margin-top: 10px;
     z-index: 1px;
 }
+
 button{
     border-radius: 25px;
 }
+
 p.text-left{
     text-decoration-color: white;
 }

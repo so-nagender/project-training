@@ -28,6 +28,7 @@ export class CartComponent implements OnInit {
   getCookie(){
     this.user= this.cookieService.get('user');
   }
+  
   cart(){
     this.api.getCart().subscribe((res)=>{
       this.apiCart = res;
@@ -40,7 +41,6 @@ export class CartComponent implements OnInit {
             this.Book.quantity = this.apiCart[i].bookID[j].quantity;
             this.Book.discountPrice = this.Book.BookPrice - (this.Book.BookPrice*this.Book.discount/100);
             this.apiBook.push(this.Book);
-            
             });
           }
         }
@@ -72,15 +72,10 @@ export class CartComponent implements OnInit {
                 text: "Book Deleted from Cart "
               })
             const obj = {"user": this.apiCart[i].user, "bookID": this.apiCart[i].bookID};
-            this.api.updateCart(obj, this.apiCart[i].id).subscribe(res=>{console.log('here--->>>>', res);
-            location.reload()
-              
-          
+            this.api.updateCart(obj, this.apiCart[i].id).subscribe(res=>{
+            location.reload()  
             });
             }
-            
-            
-
           }
         }
       }
@@ -105,26 +100,16 @@ export class CartComponent implements OnInit {
               else{
                 this.apiCart[i].bookID[j].quantity -= 1;
                 const obj1 = {"user": this.apiCart[i].user, "bookID": this.apiCart[i].bookID};
-                this.api.updateCart(obj1, this.apiCart[i].id).subscribe(
-                  
-                  res=> {
-                    book.quantity = this.apiCart[i].bookID[j].quantity;
-                    console.log('result--> ',res);
-                    console.log('changes to be made',this.apiBook)
-                  }
-
-                  );
-               
+                this.api.updateCart(obj1, this.apiCart[i].id).subscribe(res=> {
+                  book.quantity = this.apiCart[i].bookID[j].quantity;
+                });
                 break;
-                
               }
             }
           }
         }
       }
-    }
-    );
-
+    });
   }
 
   increase(book){
@@ -135,24 +120,17 @@ export class CartComponent implements OnInit {
         if(this.user == this.apiCart[i].user){
           for(let j=0; j < this.apiCart[i].bookID.length; j++){
             if(this.apiCart[i].bookID[j].itemID == id){
-            
               this.apiCart[i].bookID[j].quantity += 1;
-              console.log(this.apiCart[i].bookID[j].quantity)
               const obj1 = {"user": this.apiCart[i].user, "bookID": this.apiCart[i].bookID};
-              this.api.updateCart(obj1, this.apiCart[i].id).subscribe(
-                res => 
-                {
+              this.api.updateCart(obj1, this.apiCart[i].id).subscribe(res => {
                   book.quantity = this.apiCart[i].bookID[j].quantity;
-                }
-              );
+                });
               break;
-            
             }
           }
         }
       }
     });
-
   }
 
 

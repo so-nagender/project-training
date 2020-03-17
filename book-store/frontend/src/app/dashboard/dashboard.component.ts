@@ -13,19 +13,14 @@ export class DashboardComponent implements OnInit {
   constructor(private api : ApiService) { }
 
   ngOnInit() {
-
     this.userlogindetail= this.api.userdata.value;
     this.Category()
-    
   }
+
   Category(){
     this.api.getCatogery().subscribe((res)=>{
       this.apiCat=res;
     });
   }
-  
-
-
-
 
 }
