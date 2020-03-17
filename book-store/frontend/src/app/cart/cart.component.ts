@@ -22,6 +22,7 @@ export class CartComponent implements OnInit {
   ngOnInit() {
     this.getCookie();
     this.cart();
+
   }
 
   getCookie(){
@@ -39,6 +40,7 @@ export class CartComponent implements OnInit {
             this.Book.quantity = this.apiCart[i].bookID[j].quantity;
             this.Book.discountPrice = this.Book.BookPrice - (this.Book.BookPrice*this.Book.discount/100);
             this.apiBook.push(this.Book);
+            
             });
           }
         }
@@ -56,8 +58,8 @@ export class CartComponent implements OnInit {
     return item;
   }
 
-  onDeleteCart(x){
-    let id =x;
+  onDeleteCart(book){
+    let id =book.id;
     this.api.getCart().subscribe((res)=>{
       this.apiCart = res;
       for(let i=0; i < this.apiCart.length; i++){
@@ -69,9 +71,14 @@ export class CartComponent implements OnInit {
                 title: 'Deleted',
                 text: "Book Deleted from Cart "
               })
-            }
             const obj = {"user": this.apiCart[i].user, "bookID": this.apiCart[i].bookID};
-            this.api.updateCart(obj, this.apiCart[i].id).subscribe();
+            this.api.updateCart(obj, this.apiCart[i].id).subscribe(res=>{console.log('here--->>>>', res);
+            location.reload()
+              
+          
+            });
+            }
+            
             
 
           }
@@ -80,8 +87,8 @@ export class CartComponent implements OnInit {
     });
   }
 
-  decrease(x){
-    let id = x;
+  decrease(book){
+    let id = book.id;
     this.api.getCart().subscribe((res)=>{
       this.apiCart = res;
       for(let i=0; i < this.apiCart.length; i++){
@@ -93,22 +100,35 @@ export class CartComponent implements OnInit {
                   title: 'Oops...',
                   text: "Can't Decrease Quantity Please Delete "
                 })
+               
               }
               else{
                 this.apiCart[i].bookID[j].quantity -= 1;
                 const obj1 = {"user": this.apiCart[i].user, "bookID": this.apiCart[i].bookID};
-                this.api.updateCart(obj1, this.apiCart[i].id).subscribe();
+                this.api.updateCart(obj1, this.apiCart[i].id).subscribe(
+                  
+                  res=> {
+                    book.quantity = this.apiCart[i].bookID[j].quantity;
+                    console.log('result--> ',res);
+                    console.log('changes to be made',this.apiBook)
+                  }
+
+                  );
+               
                 break;
+                
               }
             }
           }
         }
       }
-    });
+    }
+    );
+
   }
 
-  increase(x){
-    let id = x;
+  increase(book){
+    let id = book.id;
     this.api.getCart().subscribe((res)=>{
       this.apiCart = res;
       for(let i=0; i < this.apiCart.length; i++){
@@ -119,7 +139,12 @@ export class CartComponent implements OnInit {
               this.apiCart[i].bookID[j].quantity += 1;
               console.log(this.apiCart[i].bookID[j].quantity)
               const obj1 = {"user": this.apiCart[i].user, "bookID": this.apiCart[i].bookID};
-              this.api.updateCart(obj1, this.apiCart[i].id).subscribe();
+              this.api.updateCart(obj1, this.apiCart[i].id).subscribe(
+                res => 
+                {
+                  book.quantity = this.apiCart[i].bookID[j].quantity;
+                }
+              );
               break;
             
             }
@@ -127,6 +152,9 @@ export class CartComponent implements OnInit {
         }
       }
     });
+
   }
 
+
+  
 }
