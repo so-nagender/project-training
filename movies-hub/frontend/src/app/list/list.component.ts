@@ -4,7 +4,8 @@ import { ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { CookieService } from 'ngx-cookie-service';
-import { FormControl, Validators } from '@angular/forms';
+import Swal from 'sweetalert2'
+
 
 @Component({
   selector: 'app-list',
@@ -20,7 +21,8 @@ export class ListComponent implements OnInit {
   catg: any;
   result: any;
   username = this.cookieService.get('Test');
-  
+  watchlist: any;
+
   // collection = [];
   constructor(private myservice: ApiserviceService, private activatedRoute: ActivatedRoute, private router: Router, private cookieService: CookieService) {
     let id = this.activatedRoute.snapshot.params.id;
@@ -77,11 +79,42 @@ export class ListComponent implements OnInit {
   }
 
   // ADD TO WATCH LIST START
-add() {alert("Saved")}
+  add(mid) {
+    this.myservice.getWatchList().subscribe((res) => {
+      this.watchlist = res;
+      for (let i = 0; i < this.watchlist.length; i++) {
+        if (this.username == this.watchlist[i].user) {
+          let c = 0;
+          let movieid;
+          for (let j = 0; j < this.watchlist[i].movieId.length; j++) {
+            if (this.watchlist[i].movieId[j] == mid) {
+              c++;
+              movieid = j;
+            }
+          }
+          if (c > 0) {
+            return;
+          }
+          else {
+            this.watchlist[i].movieId.push(mid);
+            const obj = { "user": this.username, "movieId": this.watchlist[i].movieId };
+            console.log(this.watchlist[i].id)
+            this.myservice.upDateWL(this.watchlist[i].id, obj).subscribe();
+            Swal.fire({
+              title: "voila",
+              text: "Movie succesfully added to your wishlist"
+            }
+            )
+          }
+        }
+      }
+    })
+  }
+
 
   // add(id) {
   //   console.log("and id",id);
-    
+
 
   //   let arr = [];
   //    this.myservice.getWatchList().subscribe((res) => {
@@ -99,13 +132,13 @@ add() {alert("Saved")}
   //     const obj = {user: this.username, movieId: [id] };
   //     console.log("Obj ------",obj);
   //   })
-    
 
-    // this.myservice.getSingleElementById(id).subscribe((response) => {
-    //   this.movies.push(response);
-    //   const temp = response;
-    //   console.log(temp.movieName);
-    // });
+
+  // this.myservice.getSingleElementById(id).subscribe((response) => {
+  //   this.movies.push(response);
+  //   const temp = response;
+  //   console.log(temp.movieName);
+  // });
   // }
   // ADD TO WATCH LIST END
 
@@ -252,7 +285,7 @@ add() {alert("Saved")}
         switching = true;
       }
     }
-  } 
+  }
   createRange(num) {
     const items: number[] = [];
     for (let i = 1; i <= num; i++) {
@@ -260,7 +293,4 @@ add() {alert("Saved")}
     }
     return items;
   }
-
-
-  
 }

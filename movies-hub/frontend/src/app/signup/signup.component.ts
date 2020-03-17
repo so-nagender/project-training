@@ -41,7 +41,7 @@ export class SignupComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     const name = this.checkoutForm.controls.Name.value;
-    const email = this.checkoutForm.controls.email.value;
+    let email = this.checkoutForm.controls.email.value;
     const password = this.checkoutForm.controls.password.value;
     const obj = { "user": name, "name": email, "password": password }
     if (this.checkoutForm.invalid) {
