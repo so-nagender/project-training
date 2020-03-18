@@ -40,6 +40,7 @@
                         [ngClass]="{'is-invalid':formData.get('bookprice').touched && formData.get('bookprice').invalid}">
                         <div *ngIf="formData.get('bookprice').touched && formData.get('bookprice').invalid" class="invalid-feedback">
                             <div *ngIf="formData.get('bookprice').errors.required">Price is Required</div>
+                            <div *ngIf="formData.get('bookprice').errors.min">price should be positive number</div>
                         </div>
                         <br>
                         Discount:
@@ -47,7 +48,9 @@
                         <input id="discount" class="form-control" type="number" formControlName="discount"
                         [ngClass]="{'is-invalid':formData.get('discount').touched && formData.get('discount').invalid}">
                         <div *ngIf="formData.get('discount').touched && formData.get('discount').invalid" class="invalid-feedback">
-                            <div *ngIf="formData.get('discount').errors.required">discount PLSS</div>
+                            <div *ngIf="formData.get('discount').errors.required">discount is Required</div>
+                            <div *ngIf="formData.get('discount').errors.min">discount Should Be In Positive number</div>
+                            <div *ngIf="formData.get('discount').errors.max">discount Must Be less Than Equal to 100%</div>
                         </div>
                         <br>
                         Rating :          

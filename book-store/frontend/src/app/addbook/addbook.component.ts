@@ -89,7 +89,7 @@ export class AddbookComponent implements OnInit {
       catname: [' ',[Validators.required,]],
       des: ['',Validators.required],
       bookprice: ['',[Validators.required,Validators.min(0)]],
-      discount: ['',[Validators.required,Validators.min(0)]],
+      discount: ['',[Validators.required,Validators.max(100),Validators.min(0)]],
       rating: ['',]
     });
   }
