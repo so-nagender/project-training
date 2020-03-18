@@ -1,8 +1,17 @@
 .moviesDetailsMargin{
-    margin-top: 110px;
+    margin-top: 30px;
 }
 .imageShadow{
     box-shadow: 10px 10px 5px #ccc;
+}
+.image-width {
+  max-width: 200px;
+}
+.form-spacing {
+  padding-right: 50px;
+}
+.form-container {
+  max-width: 500px;
 }
 .form-group{
     position: relative;
@@ -121,4 +130,10 @@
 .rating{
   margin-top: 15px;
   margin-left: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .form-container {
+    margin: 0 auto;
+  }
 }
