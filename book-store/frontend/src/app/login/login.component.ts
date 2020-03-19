@@ -3,8 +3,6 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 
 import { ApiService} from '.././api.service'
-
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2'
 
@@ -46,15 +44,11 @@ export class LoginComponent implements OnInit {
   onSubmit(form) {
       this.setCookie(this.form.value.email)
       const apicall =this.api.postlogin(this.form.value.email, this.form.value.password).subscribe((data: any)=> {
-      localStorage.setItem("accessToken", data.accessToken);
-   
- 
-      this.api.insertuserdata(this.form.value.email);
-      if(data!= null){
-        this.routes.navigate(['/dashboard'])
- 
-      }
-     
+        localStorage.setItem("accessToken", data.accessToken);
+        this.api.insertuserdata(this.form.value.email);
+        if(data!= null){
+          this.routes.navigate(['/dashboard'])
+        }
       },
       error => {
         this.api.handleError(error);
@@ -62,18 +56,18 @@ export class LoginComponent implements OnInit {
           icon: 'error',
           title: 'Oops...',
           text: res
-        });this.validerr = res})
-      });  
-  }
+        });
+        this.validerr = res})
+        });  
+      }
 
-  viewData()
-  {
+    viewData()
+    {
      const data=this.api.viewdata().subscribe(data => { this.observeddata = data; console.log(this.observeddata)});
-
-  }
-  checkcredentials(){
-    if(localStorage.getItem('accessToken')){
-    this.routes.navigate(['/dashboard'])
+    }
+    checkcredentials(){
+      if(localStorage.getItem('accessToken')){
+      this.routes.navigate(['/dashboard'])
     }
   }
 }

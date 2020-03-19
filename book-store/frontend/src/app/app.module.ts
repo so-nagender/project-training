@@ -9,10 +9,8 @@ import { FormsModule } from '@angular/forms'
 import { SignupComponent } from './signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms'
 import { LoginComponent } from './login/login.component';
-import { ContactListComponent } from './contact-list/contact-list.component';
 import { FilterPipe } from '../filter.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ContactTableComponent } from './contact-table/contact-table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
@@ -41,9 +39,7 @@ import { CartComponent } from './cart/cart.component'
     CategoriesComponent,
     SignupComponent,
     LoginComponent,
-    ContactListComponent,
     FilterPipe,
-    ContactTableComponent,
     DashboardComponent,
     FooterComponent,
     ViewComponent,

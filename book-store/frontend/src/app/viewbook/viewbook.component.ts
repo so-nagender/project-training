@@ -122,6 +122,7 @@ export class ViewbookComponent implements OnInit {
     })
     this.book();
   } 
+  
   stars(x) {
     let item: number[] =[];
     for(let i=1; i<=x; i++)

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { FormBuilder, Validators} from '@angular/forms';
+import { FormBuilder} from '@angular/forms';
 import { ApiService } from '../api.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router} from '@angular/router'
@@ -72,6 +72,7 @@ export class ViewCatComponent implements OnInit {
     })
     this.Cat();
   } 
+  
   stars(x) {
     let item: number[] =[];
     for(let i=1; i<=x; i++)

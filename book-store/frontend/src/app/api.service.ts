@@ -1,11 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { TokenInterceptor} from '././TokenInterceptor'
-import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
-import { Subject, Observable, throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
-import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -23,31 +20,31 @@ export class ApiService {
 
 
   constructor(private http: HttpClient , private routes: Router) { }
+
   insertuserdata(value)
   {
     return this.userdata.next(value)
   }
+
   changemessage(message:boolean){
     this.message.next(message)
   }
+
   changeerror(err){
     this.cutomerror.next(err)
   }
 
   postloginDetails(email, password){
-  
     return  this.http.post('http://localhost:3000/signup',{ "name" : email,"password" : password})
-    
-  
   }
-  postlogin(email, password){
 
+  postlogin(email, password){
     return  this.http.post('/api/login', { "name" : email,"password" : password})
   }
+
   viewdata(){
-      const teams$ = this.http.get(this.url)
-      return teams$;
-  
+    const teams$ = this.http.get(this.url)
+    return teams$;
   }
 
   getBook(): Observable<any>{
@@ -59,11 +56,11 @@ export class ApiService {
     const url1 = `/api/catogries`;
     return this.http.get<any>(url1); 
   }
+
   getCatDetailEdit(x): Observable<any>{
     const url1 = `/api/catogries/${x}`;
     return this.http.get<any>(url1); 
   }
-
 
   getCat(): Observable<any>{
     const url2 = `/api/books?_expand=catogrie`;
@@ -83,6 +80,7 @@ export class ApiService {
     const url = `/api/catogries/${x}`;
     return this.http.put<any>( url, obj);
   }
+
   updateBook(obj, x): Observable<any>{
     const url = `/api/books/${x}`;
     return this.http.put<any>( url, obj);
@@ -96,10 +94,6 @@ export class ApiService {
   addBook(obj): Observable<any> {
     return this.http.post<any>('/api/books', obj);
   }
-
-  // addBookCart(obj, x): Observable<any> {
-  //   return this.http.post<any>('/api/cart/${x}', obj);
-  // }
 
   addcart(obj): Observable<any> {
     return this.http.post<any>('/api/cart', obj);
@@ -131,55 +125,43 @@ export class ApiService {
   }
     
   postbookcategories(form){
-
-      const urltopostcateories$ = this.http.post('/api/catogries', 
-      {
-        "title": form.value.bookname,
-        "description" : form.value.bookdescription
-      }).
-      subscribe((data: any)=> {
-      console.log(data)});
-      const urlget$ = this.http.get('/api/catogries').subscribe((data: any)=> {
-         console.log('_____________<<<<<<<<<<<<',data)});
+    const urltopostcateories$ = this.http.post('/api/catogries', 
+    {
+      "title": form.value.bookname,
+      "description" : form.value.bookdescription
+    }).
+    subscribe();
+    const urlget$ = this.http.get('/api/catogries').subscribe();
   }
+
   sendata(id){
-    console.log('here --------------->>>>>>>>>>',id)
-    this.routes.navigate(['/contactlist'])
     this.charterid= id
     return id;
   }
-  charid(){
-    return  this.charterid
-    
-  }
+
   newMessage(){
     this.changemessage(true)
   }
 
   Viewdatacategories(){
-   const Formdata$ =this.http.get('/api/catogries')
+    const Formdata$ =this.http.get('/api/catogries')
     return Formdata$
-   }
-   retrivedata(id){
-    
-    const data$ =this.http.get(`/api/books?catogrieId=${id}`);
-
-
-    return data$;
-
-   }
-   handleError(error: HttpErrorResponse){
-   
-    if(error.status){
-    this.changeerror(error.message)
-    return throwError(error)
-    }
-   else
-   return throwError(error)
   }
 
-  
-  
+  retrivedata(id){
+  const data$ =this.http.get(`/api/books?catogrieId=${id}`);
+  return data$;
+  }
+
+  handleError(error: HttpErrorResponse){
+  if(error.status){
+    this.changeerror(error.message)
+    return throwError(error)
+  }
+  else
+    return throwError(error)
+}
+ 
 }
    
 

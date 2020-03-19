@@ -1,11 +1,9 @@
 import{
     trigger,
     transition, style,
-    query, group, animate, state,
-
-} from '@angular/animations'
-
-
+    animate, state,
+  } 
+  from '@angular/animations'
 
 export const  fader = 
                 trigger('routeAnimations',[

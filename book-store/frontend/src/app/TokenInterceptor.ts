@@ -34,14 +34,12 @@ export class TokenInterceptor implements HttpInterceptor {
           console.log(event.status)
           if(event.status === 200 || event.status === 201)
           {
-           
             console.log("inerceptor success>>>>>>>>>>>", event);
             this.api.currentMessage.subscribe(message=> this.message= message)
             this.api.newMessage()
             return event;
           }
          else
-         console.log("11111111",HttpErrorResponse)
           return event.body;
 
         }
