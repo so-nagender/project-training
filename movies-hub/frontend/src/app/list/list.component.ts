@@ -96,7 +96,7 @@ export class ListComponent implements OnInit {
             
             Swal.fire({
               title: "voila",
-              text: "Movie succesfully added to your wishlist"
+              text: "Movie already added to your wishlist"
              })
             return;
           }

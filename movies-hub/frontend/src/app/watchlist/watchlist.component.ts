@@ -19,7 +19,6 @@ export class WatchlistComponent implements OnInit {
       this.ctrl.disable();
     }
   }
-  
   watchlist: any;
   currentRate = 8;
   movies = [];
@@ -50,18 +49,35 @@ export class WatchlistComponent implements OnInit {
         }
       }
     });
-  }
-
-  getUserName() {
     this.value = this.cookieService.get('Test');
   }
-  // delete(id) {
-  //   this.myservice.deleteMovie(id).subscribe();
-  //   this.myservice.getMovies().subscribe(res => {
-  //     this.movies = res;
-  //   });
-  // }
-
+  delete(id) {
+    console.log(id)
+    this.myservice.getWatchList().subscribe((res) => {
+      this.watchlist = res;
+      for (let i = 0; i < this.watchlist.length; i++) {
+        if (this.value == this.watchlist[i].user) {
+          console.log(this.value)
+          let c = 0;
+          let movieid
+          for (let j = 0; j < this.watchlist[i].movieId.length; j++) {
+            if (this.watchlist[i].movieId[j] == id) {
+              c++;
+              movieid = j;
+            }
+          }
+          if (c > 0) {
+            this.watchlist[i].movieId.splice(movieid, 1);
+            console.log(this.watchlist[i].movieId);
+            const obj = { "user": this.value, "movieId": this.watchlist[i].movieId };
+            this.myservice.upDateWL(this.watchlist[i].id, obj).subscribe();
+            location.reload();
+          }
+        }
+      }
+    }
+    )
+  }
 
   createRange(num) {
     const items: number[] = [];
@@ -70,5 +86,4 @@ export class WatchlistComponent implements OnInit {
     }
     return items;
   }
-
 }
