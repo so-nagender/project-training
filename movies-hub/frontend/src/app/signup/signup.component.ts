@@ -47,7 +47,8 @@ export class SignupComponent implements OnInit {
     if (this.checkoutForm.invalid) {
       alert('Fields is/are empty');
       return;
-    } else {
+    }
+    else {
       // if Form is valid then it will post the data into the JSON server...
       const user = {"user": email, "movieId": []};
       this.myservice.signupData(obj).subscribe(res => {

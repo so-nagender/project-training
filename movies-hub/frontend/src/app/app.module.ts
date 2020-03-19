@@ -75,10 +75,7 @@ const appRoutes: Routes = [
    },
    { 
     path: 'Genres', 
-    component: GenresComponent,
-    resolve: {
-      hero: DataResolverService
-    }
+    component: GenresComponent
    },
    { 
     path: 'movieByCatg/:id', 

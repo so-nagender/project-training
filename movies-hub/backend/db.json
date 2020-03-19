@@ -425,6 +425,36 @@
       "synopsis": "rtrurtu",
       "updatedAt": 1584423840945,
       "id": 22
+    },
+    {
+      "movieName": "My Name is Khan",
+      "year": "2011",
+      "catId": "3",
+      "rating": "2",
+      "cast": [
+        [
+          [
+            "Shahrukh Khan, Kajol,dgdfg"
+          ]
+        ]
+      ],
+      "synopsis": "y Name Is Khan is a 2010 Indian Hindi-language drama film directed by Karan Johar, produced by Hiroo Johar and Gauri Khan, and starring Shah Rukh Khan and Kajol in lead roles",
+      "updatedAt": 1583228051810,
+      "id": 23
+    },
+    {
+      "movieName": "PS: I Love You",
+      "year": "2019",
+      "catId": "9",
+      "rating": 10,
+      "cast": [
+        [
+          "Shiwani , IT  Infra"
+        ]
+      ],
+      "synopsis": "It Infra was a good specilization for me.",
+      "updatedAt": 1583480059126,
+      "id": 42
     }
   ],
   "cats": [
