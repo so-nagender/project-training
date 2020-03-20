@@ -97,6 +97,11 @@ export class ListComponent implements OnInit {
             }
           }
           if (c > 0) {
+            
+            Swal.fire({
+              title: "voila",
+              text: "Movie already added to your wishlist"
+             })
             return;
           } else {
             this.watchlist[i].movieId.push(mid);

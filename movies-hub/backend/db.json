@@ -147,34 +147,55 @@
   ],
   "watchlists": [
     {
+      "user": "ab.cd@gmail.com",
+      "movieId": [
+        3,
+        4,
+        5
+      ],
+      "id": 1
+    },
+    {
       "user": "moni@gmail.com",
       "movieId": [
         6,
-        7,
-        21,
-        3
+        3,
+        4,
+        5
       ],
-      "updatedAt": 1584511806774,
+      "updatedAt": 1584611254271,
       "id": 2
+    },
+    {
+      "user": "raju123@gmail.com",
+      "movieId": [],
+      "createdAt": 1583478510085,
+      "updatedAt": 1583478510085,
+      "id": 3
+    },
+    {
+      "user": "new@gmail.com",
+      "movieId": [],
+      "createdAt": 1584422987935,
+      "updatedAt": 1584422987935,
+      "id": 4
     }
   ],
   "movies": [
     {
       "movieName": "Avengers: Infinity War",
       "year": "2018",
-      "catId": "11",
-      "rating": 4,
+      "catId": "4",
+      "rating": 6,
       "cast": [
         [
-          [
-            "Chris Hemsworth",
-            "Chris Pratt",
-            "Robert Downey Jr."
-          ]
+          "Chris Hemsworth",
+          "Chris Pratt",
+          "Robert Downey Jr."
         ]
       ],
       "synopsis": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment, the fate of Earth and existence has never been more uncertain.",
-      "updatedAt": 1584511372574,
+      "updatedAt": 1584424648940,
       "id": 3
     },
     {
