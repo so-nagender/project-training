@@ -43,18 +43,18 @@ export class SignupComponent implements OnInit {
     const name = this.checkoutForm.controls.Name.value;
     let email = this.checkoutForm.controls.email.value;
     const password = this.checkoutForm.controls.password.value;
-    const obj = { "user": name, "name": email, "password": password }
+    const obj = { "userName": name, "name": email, "password": password }
     if (this.checkoutForm.invalid) {
       alert('Fields is/are empty');
       return;
     }
     else {
       // if Form is valid then it will post the data into the JSON server...
-      const user = {"user": email, "movieId": []};
+      // const user = {"user": email, "movieId": []};
       this.myservice.signupData(obj).subscribe(res => {
         localStorage.setItem("accessToken", res.accessToken);
         this.cookieService.set('Test', email);
-        this.myservice.setWatchlist(user).subscribe();
+        // this.myservice.setWatchlist(user).subscribe();
         this.cookieValue = this.cookieService.get('Test');
         this.router.navigate(['/home']);
       },

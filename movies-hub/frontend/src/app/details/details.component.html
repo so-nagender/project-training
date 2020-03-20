@@ -10,11 +10,7 @@
     <div class="col-2">            
     </div>
     <div class="container col-2 imageShadow">         
-        <img src="../../assets/img/frozen.jpg" class="img-fluid image" alt="Responsive" style="width:100%" >
-        <div class="middle">
-           <button class="btn btn-danger" routerLink='/add'>View Details</button>
-           
-        </div>        
+        <img src="../../assets/img/frozen.jpg" class="img-fluid" alt="Responsive" style="width:100%" >
     </div>
     <div class="col-1">        
     </div>        
@@ -25,7 +21,7 @@
         <h5>Rating:             
                 <span *ngFor="let i of createRange(data.rating)" style="color: rgb(221,160,221);" class="fa fa-star checked">
                 </span>
-                <span *ngFor="let i of createRange(5-(data.rating))" style="color: rgb(158, 158, 158);" class="fa fa-star">
+                <span *ngFor="let i of createRange(10-(data.rating))" style="color: rgb(158, 158, 158);" class="fa fa-star">
                 </span>
                 {{data.rating}}/10            
         </h5>

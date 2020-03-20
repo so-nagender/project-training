@@ -82,8 +82,12 @@ export class ListComponent implements OnInit {
   add(mid) {
     this.myservice.getWatchList().subscribe((res) => {
       this.watchlist = res;
+      const user = {"user": this.username, "movieId": []};
+      let count = 0;
       for (let i = 0; i < this.watchlist.length; i++) {
-        if (this.username == this.watchlist[i].user) {
+        if (this.username == this.watchlist[i].user ) {
+          count++
+          // console.log("matched")
           let c = 0;
           let movieid;
           for (let j = 0; j < this.watchlist[i].movieId.length; j++) {
@@ -94,19 +98,27 @@ export class ListComponent implements OnInit {
           }
           if (c > 0) {
             return;
-          }
-          else {
+          } else {
             this.watchlist[i].movieId.push(mid);
             const obj = { "user": this.username, "movieId": this.watchlist[i].movieId };
-            console.log(this.watchlist[i].id)
+            // console.log(this.watchlist[i].id)
             this.myservice.upDateWL(this.watchlist[i].id, obj).subscribe();
             Swal.fire({
               title: "voila",
               text: "Movie succesfully added to your wishlist"
-            }
-            )
+            })
           }
+        } else {
+          count = count;
         }
+      } 
+      // console.log("count value---",count)
+      if(count==0) {
+          this.myservice.setWatchlist(user).subscribe(( res) =>{
+            console.log("done initialization")
+          });
+      } else {
+        // console.log("niche wala else ")
       }
     })
   }
