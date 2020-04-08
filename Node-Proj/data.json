@@ -1,0 +1,16 @@
+{
+    "friends":[{
+        "title" : "Class-Friend",
+        "name" : "Shivam Agarwal",
+        "Desc" : "Shivam is from Aagra"
+    },
+    {
+        "title" : "Class-Friend",
+        "name" : "Ayush Krishna",
+        "Desc" : "Ayush Krishna is from Motihari(Bihar)"
+    },{
+        "title" : "Class-Friend",
+        "name" : "Shivam Pathak",
+        "Desc" : "Shivam Pathak is from Patna"
+    }]
+}
