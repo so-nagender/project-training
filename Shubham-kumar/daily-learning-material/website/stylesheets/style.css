@@ -1,0 +1,43 @@
+*{
+padding:0px;
+margin: 0px;
+box-sizing: border-box;
+
+}
+
+nav{
+    display:flex;
+    justify-content: space-around;
+    align-height :8vh;
+    background-color: red;
+    font-family: 'Poppins', sans-serif;
+    color:white;
+}
+.logo{
+text-transform:uppercase;
+letter-spacing : 5px;
+font-size : 20px;
+}
+
+.nav-links{
+display:flex;
+justify-content :space-around;
+width: 30%;
+
+}
+.nav-links li{
+
+list-style:none;
+}
+.nav-links a {
+color:white;
+text-decoration:none;
+letter spacing: 3px;
+font-weight: bold;
+font-size 14px;
+
+
+}
+
+
+

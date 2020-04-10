@@ -1,0 +1,39 @@
+body{
+    background-image: url('../images/banner1.png');
+   
+    background-repeat: no-repeat;
+}
+
+.div1 img{
+    padding-left: 100px;
+    height: 45px;
+    
+}
+
+.div1 ul{
+    padding-left: 400px;
+    font-size:25px;
+}
+.heading{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:70px;
+    color: white !important;
+
+}
+.div1 ul button {
+    margin-left:600px ;
+
+}
+div ul button a{
+    color: white !important;
+}
+
+.main{
+    color: black;
+    font-size: large;
+    background-color: white;
+    height: 500px;
+    margin-left: 371px;
+    margin-right: 180px;
+    text-align: center;
+}

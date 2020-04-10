@@ -1,0 +1,11 @@
+img {
+  height: 40px;
+}
+.checked {
+  color: orange;
+}
+.border {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+}

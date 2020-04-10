@@ -1,0 +1,17 @@
+img {
+  height: 200px;
+}
+
+ul li {
+  padding-left: 80px;
+  font-family: 'Uncial Antiqua', cursive;
+  font-family: 'Lobster', cursive;
+  font-family: 'Pacifico', cursive;
+}
+a {
+  color: #007bff !important;
+}
+
+.shadow {
+  box-shadow: 5px 5px 5px 15px #dbdbdb;
+}
