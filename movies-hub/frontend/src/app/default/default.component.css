@@ -1,5 +1,16 @@
 .body-img{
     background:  linear-gradient(to right ,hsla(0, 12%, 5%, 0.493),  rgba(0, 0, 0, 0.8), transparent), url("../../assets/img/background-image.jpg") no-repeat center; 
+    min-height: 100%;
+    min-width: 1024px;
+        
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+        
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 .navbar-brand {
     display: inline-block;
@@ -19,7 +30,6 @@
     font-family: "Poppins", Arial, sans-serif;
     line-height: 1;
 }
-
 .navbar-brand i {
     font-style: normal;
     color: rgb(204, 196, 196);
