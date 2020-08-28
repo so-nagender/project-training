@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-lg ">
+  <div class="container">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/welcomescreen']"
+            >Home <span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/categories']" class="nav-link">
+            Categories
+          </a>
+        </li>
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+          </a>
+        <li class="nav-item dropdown">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a
+              [routerLink]="['/items/category', data.id]"
+              class="dropdown-item"
+              *ngFor="let data of datas"
+            >
+              <img src="../../assets/images/female.svg" class="images" />{{
+                data.name
+              }}</a
+            >
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['cart']">
+            <img src="../../assets/images/shopping-cart.svg" class="images" />
+               Cart({{counter}})
+            </a> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.flipkart.com/helpcentre">Contact us</a>
+        </li>
+      </ul>
+
+      <div class="row mr-3 py-1" style="background-color: white; opacity: 65%;border: solid black 2px;">
+        <div class="col-lg-3 pr-2"><img src="../../assets/images/user (1).svg" class="images" /></div>
+        <div class="col-lg-9 pl-0 pr-3" style="font-weight: 650;">{{username}}</div>
+      </div>
+      
+      <button class="btn  my-2 my-sm-0" type="submit" (click)="onLogout()">
+        Logout
+      </button>
+    </div>
+  </div>
+</nav>

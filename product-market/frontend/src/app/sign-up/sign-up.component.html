@@ -1,0 +1,57 @@
+<div class="container pt-4 pr-5 pl-5 pb-5">
+  <button type="button" class="close" aria-label="Close" (click)="onClose()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h1>
+    <strong
+      style="font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+      >SIGN-UP</strong
+    >
+  </h1>
+  <p><u>or</u> <strong style="color: #f88288"> Create a new account</strong></p>
+  <form [formGroup]="signupform" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="exampleInputEmail1" style="padding-top: 3px;">Username</label>
+      <input
+        type="text"
+        formControlName="username"
+        class="form-control"
+        aria-describedby="emailHelp"
+        placeholder="mobile no. or email"
+        [ngClass]="{ 'is-invalid':f.username.touched && f.username.errors }"
+      />
+      <div *ngIf="f.username.touched && f.username.errors" class="invalid-feedback">
+        <div *ngIf="f.username.errors.required">*UserName is required</div>
+        <div *ngIf="f.username.errors.email">*email should be a valid </div>
+      </div>
+      <small id="emailHelp" class="form-text text-muted"
+        >We'll never share your information with anyone else.
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1" style="padding-top: 3px;"
+        >Password</label
+      >
+      <input
+        type="password"
+        formControlName="password"
+        class="form-control"
+        placeholder="password"
+        [ngClass]="{ 'is-invalid':f.password.touched  && f.password.errors }"
+      />
+      <div *ngIf="f.password.touched && f.password.errors" class="invalid-feedback">
+        <div *ngIf="f.password.errors.required">
+          *password is required
+        </div>
+        <div *ngIf="f.password.errors.minlength">
+          *password length should be 8
+        </div>
+        <div *ngIf="f.password.errors.pattern">
+          *password should conatin one number
+        </div>
+      </div>
+    </div>
+    <div *ngIf="error" style="color: red;">{{ error }}</div>
+    <button type="submit" class="btn">SIGN-UP</button>
+  </form>
+</div>

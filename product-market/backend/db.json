@@ -1,4 +1,154 @@
 {
+  "cats": [
+    {
+      "name": "electronics",
+      "description": "heater",
+      "createdAt": 1582613120109,
+      "updatedAt": 1582613120109,
+      "id": 7
+    },
+    {
+      "name": "Groceries",
+      "description": "Vegetables,Fruits",
+      "createdAt": 1582721000903,
+      "updatedAt": 1582721000903,
+      "id": 8
+    },
+    {
+      "name": "kids",
+      "description": "rtrt",
+      "createdAt": 1582788058109,
+      "updatedAt": 1582788058109,
+      "id": 9
+    }
+  ],
+  "product-items": [
+    {
+      "name": "handbags",
+      "rating": "4",
+      "description": "DFJHBKNHSITUNRYINP",
+      "cost": 5000,
+      "updatedAt": 1582796448685,
+      "id": 12
+    },
+    {
+      "name": "Laptops",
+      "rating": "4",
+      "description": "njekyrnkaretieyilburliuilue oruilenvoaetbu",
+      "cost": 50000,
+      "updatedAt": 1582797180973,
+      "id": 14
+    },
+    {
+      "name": "heater",
+      "rating": "5",
+      "description": "for room heatinghgfh",
+      "cost": 2000,
+      "updatedAt": 1582788609412,
+      "id": 15
+    },
+    {
+      "name": "Mobiles",
+      "rating": "4",
+      "description": "Mobiles are a device.",
+      "cost": 4000,
+      "updatedAt": 1582797246477,
+      "id": 16
+    },
+    {
+      "name": "Heater",
+      "rating": "3",
+      "description": "dsiuhveritbienys",
+      "cost": 3000,
+      "updatedAt": 1582797323326,
+      "id": 17
+    },
+    {
+      "name": "Microwave",
+      "rating": "3",
+      "description": "Hdjkknhtjkh",
+      "cost": 6000,
+      "updatedAt": 1582797349037,
+      "id": 18
+    },
+    {
+      "name": "raju",
+      "rating": "2",
+      "description": "sfagrthrthrhrh",
+      "cost": 5000,
+      "updatedAt": 1582798439933,
+      "id": 19
+    },
+    {
+      "name": "monika",
+      "rating": "5",
+      "description": "",
+      "cost": 50000,
+      "updatedAt": 1582798535163,
+      "id": 20
+    },
+    {
+      "name": "kgasjdhwkalh",
+      "catId": 8,
+      "rating": "4",
+      "description": "wfasdgethh",
+      "cost": 4000,
+      "createdAt": 1583996385586,
+      "updatedAt": 1583996385586,
+      "id": 25
+    },
+    {
+      "name": "kfbgjdkfngdkglhnld",
+      "catId": 8,
+      "rating": 3,
+      "description": "fkjxgkhnrgvkjdbhs",
+      "cost": 6000,
+      "createdAt": 1584012305512,
+      "updatedAt": 1584012305512,
+      "id": 26
+    }
+  ],
+  "product-cart": [
+    {
+      "username": "123@gmail.com",
+      "items": [],
+      "updatedAt": 1584015565403,
+      "id": 1
+    },
+    {
+      "username": "1342@gmail.com",
+      "items": [
+        {
+          "itemId": 26,
+          "quantity": 1
+        }
+      ],
+      "updatedAt": 1584015565404,
+      "id": 2
+    },
+    {
+      "username": "new@gmail.com",
+      "items": [
+        {
+          "itemId": 25,
+          "quantity": 2
+        }
+      ],
+      "updatedAt": 1584075508015,
+      "id": 3
+    },
+    {
+      "username": "12@gmail.com",
+      "items": [
+        {
+          "itemId": 25,
+          "quantity": 1
+        }
+      ],
+      "updatedAt": 1584336531300,
+      "id": 4
+    }
+  ],
   "posts": [
     {
       "id": 1,
@@ -48,8 +198,34 @@
       "password": "sdsdsd"
     },
     {
-      "name": "hello",
-      "password": "1234"
+      "name": "bansal.ashu35@gmail.com",
+      "password": "ashish321",
+      "createdAt": 1584012935586,
+      "updatedAt": 1584012935586
+    },
+    {
+      "name": "12@gmail.com",
+      "password": "12345678",
+      "createdAt": 1584013003051,
+      "updatedAt": 1584013003051
+    },
+    {
+      "name": "12@gmail.com1",
+      "password": "12345678",
+      "createdAt": 1584013035913,
+      "updatedAt": 1584013035913
+    },
+    {
+      "name": "12@gmail.com3",
+      "password": "12345678",
+      "createdAt": 1584013330009,
+      "updatedAt": 1584013330009
+    },
+    {
+      "name": "123@gmail.com",
+      "password": "12345678",
+      "createdAt": 1584013373432,
+      "updatedAt": 1584013373432
     }
   ],
   "movies": [
@@ -98,6 +274,13 @@
       "createdAt": 1581847793897,
       "updatedAt": 1581847793897,
       "id": 9
+    },
+    {
+      "name": "ashish",
+      "password": "1234",
+      "createdAt": 1582097217428,
+      "updatedAt": 1582097217428,
+      "id": 10
     }
   ],
   "tests": [

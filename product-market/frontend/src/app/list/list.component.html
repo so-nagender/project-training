@@ -1,0 +1,187 @@
+<div class="container" style="margin-top: 20px;">
+  <div class="row mt-4">
+    <div class="col-lg-6">
+      <div
+        id="mainDisplay"
+        class="carousel slide carousel-fade"
+        data-ride="carousel"
+        data-interval="3000"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h2
+              style="font-weight: bolder;font-family :'Trebuchet MS','Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;padding-left: 25px;"
+            >
+              GIVE US RATING!!
+              <img src="../../assets/images/favorite.svg" class="images" />
+            </h2>
+          </div>
+          <div class="carousel-item">
+            <h2
+              style="font-weight: bolder;font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;padding-left: 25px"
+            >
+              GET FREE SHIPPING !!!
+              <img
+                src="../../assets/images/delivery-truck.svg"
+                class="images"
+              />
+            </h2>
+          </div>
+          <div class="carousel-item">
+            <h2
+              style="font-weight: bolder;font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;padding-left: 25px"
+            >
+              CONTANT US 18000-18000<img
+                src="../../assets/images/customer-service.svg"
+                class="images"
+              />
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="row mt-2">
+        <div class="col-lg-7">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm"><img style="height: 20px;"
+                  src="../../assets/images/search.svg"></span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm" [(ngModel)]="search">
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <button class="btn " style="float: right; font-size: 15px;;" (click)="onaddItem()" type="submit">ADD
+            ITEM</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="row pl-2" style="font-size: 30px;text-transform: uppercase;background-color:#f88288;font-weight: 800;margin:5px;">{{catname.name}}
+  </div>
+  <table class="table" id="table" style="border: solid black 2px;margin-left: 5px;" *ngIf="(datas | filterdata: search).length > 0; else noResults" >
+    <thead>
+      <tr>
+        <th scope="col" class="font1" >
+          <img src="../../assets/images/sort-up-ascending-arrow.svg"  (click)="sortTableAsc()" class="images2">
+          LIST OF ITEMS
+         <img src="../../assets/images/sort-down.svg"class="images2"  (click)="sortTableDsc()"></th>
+        <th scope="col" class="font1" >
+          <img src="../../assets/images/sort-up-ascending-arrow.svg"  (click)="sortTablecostAsc()" class="images2">
+          COST
+          <img src="../../assets/images/sort-down.svg"class="images2"  (click)="sortTablecostDsc()"></th>
+        <th scope="col" class="font1">RATINGS</th>
+        <th scope="col" class="font1">CHOOSE BRAND</th>
+        <th scope="col" class="font1">ITEMS ARE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of datas| filterdata: search  | paginate: { itemsPerPage: 2, currentPage: p }">
+        <td class="font2">
+          <p>{{data.name}}</p>
+          <button appListEdit [first]="data" type="button" class="btn" style="margin-top: 40px;">EDIT</button><br>
+          <button type="button" class="btn" style="margin-top: 10px;" (click)="onaddCart(data)"  data-toggle="modal" data-target="#exampleModal">ADD TO
+            CART</button>
+            <!-- modal of add to cart -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header" style="background-color:#f88288;">
+                    <h5 class="modal-title" id="exampleModalLabel" >MY CART</h5>
+                    <img src="../../assets/images/shopping-cart.svg" style="height: 30px;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                  {{cartbodyname}} ADDED SUCESSFULLY <img src="../../assets/images/fall-in-love.svg" style="height: 30px;">
+                  </div>
+                  <div class="modal-footer" >
+                    <button type="button" class="btn " data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <!-- MODAL ENDS -->
+
+
+        </td>
+        <td>
+          <p>{{data.cost}}</p>
+        </td>
+        <td>
+          <span
+            class="fa fa-star checked"
+            *ngFor="let star of [].constructor(data.rating)"
+          ></span>
+          <span
+            class="fa fa-star"
+            *ngFor="let star of [].constructor(5 - data.rating)"
+          ></span>
+        </td>
+        <td>
+          <select id="BRAND" name="brands" form="brandform">
+            <option value="L.G">L.G</option>
+            <option value="SONY">SONY</option>
+            <option value="SAMSUNG">SAMSUNG</option>
+          </select>
+        </td>
+        <td>
+          <button
+            type="button"
+            class="close"
+            aria-label="Close"
+            (click)="onClose(data)"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="card mb-3" style="max-width: 300px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="../../assets/images/download (1).jfif" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{data.name}}</h5>
+                  <p class="card-text">{{data.description}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ng-template #noResults> <h3 style="text-align: center; margin-top: 40px;font-weight: 700;"> NO RESULT FOUND in {{catname.name}}  <img src="../../assets/images/dislike.svg" style="height: 30px;"></h3> 
+  </ng-template>
+   
+  <pagination-controls style="background-color: black;text-align: center;position: relative;;" (pageChange)="p = $event"></pagination-controls>
+</div>
+
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
