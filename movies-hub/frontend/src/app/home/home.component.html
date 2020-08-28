@@ -1,0 +1,83 @@
+<div>
+  <app-header></app-header>
+</div>
+<div class="container-fluid bg-color pt-3">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" style="padding: 10px;">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-4 pad" >
+            <img src="../../assets/img/infinity1.jpg" class="d-block" alt="Infinity War" width="100%" height="450px">
+          </div>
+          <div class="col-8 pad1">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6ZfuNTqbHE8" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-4 pad">
+            <img src="../../assets/img/avengeend.jpg" class="d-block  " alt="Endgame" width="100%" height="450px">
+          </div>
+          <div class="col-8 pad1">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-4 pad">
+            <img src="../../assets/img/avenge.jpg" class="d-block  " alt="..."  width="100%" height="450px">
+          </div>
+          <div class="col-8 pad1">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/eOrNdBpGMv8?start=5" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+<div class="container" >
+  <div class="row mt-4" >
+    <div class="col-3  xy" *ngFor="let i of movies | paginate: { itemsPerPage: 8, currentPage: p}" style="padding: 10px;">
+      <div class="card" style="width: 15rem;">
+        <img src="../../assets/img/load2.jpg" class="card-img-top image img-responsive" alt="frozen2">
+        <div class="middle">
+          <button class="btn btn-danger" [routerLink]= "['/movie', i.id]"  routerLinkActive="active" >View Details</button>
+       </div> 
+        <div class="card-body">
+          <a href="...">
+            <h2 class="card-title text--bold palewhite title">{{i.movieName}}</h2>
+          </a>
+          <h5 class="card-text palewhite">{{i.year}}</h5>
+          <h5 class="card-text palewhite">{{i.cat.genre}} </h5>
+        </div>
+      </div>
+    </div>
+    <div class="pagination container-fluid mb-1 pt-2">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+    
+</div>
+</div>
+<div>
+  <app-footer></app-footer>
+</div>

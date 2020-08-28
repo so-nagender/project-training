@@ -1,0 +1,74 @@
+<div class="container-fluid body-img">
+  <!-- Nav Bar Start -->
+  <div>
+    <header>
+      <div class="container pt-3">
+        <a href="#" class="float-left pt-3 navbar-brand mt-1">
+          <img src="../../assets/img/logo2.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+          <i> Movie$-Hub</i>
+        </a>
+        <ul class="nav justify-content-end color">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/signup">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="modal" data-target="#exampleModal1" href="#">Sign In</a>            
+          </li>
+        </ul>
+      </div>
+    </header>
+  </div>
+  <!-- nav Bar end -->
+  <div class="container">
+    <div class="spacing-around content-color">
+      <div class="row">
+        <div class="col-4">
+          <form [formGroup]="checkoutForm" (ngSubmit)="onLogin()" class="signin-form">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email Address / User</label>
+              <input type="text" name="email" id="e1" formControlName="email" placeholder="Email" class="form-control"
+                [ngClass]="{ 'is-invalid': checkoutForm.get('email').touched &&  checkoutForm.get('email').invalid}" >
+                <div class="invalid-feedback">
+                  Email Is Required
+                </div>
+              <!-- <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">required</div>
+              </div> -->
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" name="password" id="e2" formControlName="password" class="form-control"
+                [ngClass]="{ 'is-invalid': checkoutForm.get('password').touched &&  checkoutForm.get('password').invalid }" placeholder="Password">
+                <div class="invalid-feedback">
+                  Password Is Required
+                </div>
+              <!-- <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">required</div>
+              </div> -->
+            </div>
+            <div>
+              <h5 style="color: brown ;">
+                {{error}}
+              </h5>
+            </div>
+            <div *ngIf="!isvalidvalue">
+              Email and Password are not filled.
+            </div>
+            <button type="submit"  class="btn btn-outline-danger mt-4">Log In</button>
+            
+          </form>
+          <div class="signup-style">
+            <label>New To Movie$-Hub</label> <a routerLink="/signup" style="color: rgb(240, 50, 16);"
+              class="color ml-1">Sign Up </a>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="pl-4">
+            <h4> Hello Welcome to</h4>
+            <h1 class="display-1 bolder"> Movie$-Hub </h1>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

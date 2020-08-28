@@ -1,0 +1,40 @@
+.hcolor{
+    background-color:lightblue;
+}
+.logoText{
+    margin-top: 199px;
+}
+.body{    
+        background-image: url("../images/world.png");
+             
+}
+.logotext{
+    padding-left: 80px;
+    padding-top: 80px;
+}
+.logoColor{
+    color: blue;
+}
+.button{
+    background-color: purple;
+    border-radius: 10px;
+}
+.image{
+    height: 50px;
+    width: 50px;
+}
+.logoAlign{
+    
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 10px #888888;
+    
+    padding: 50px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold; 
+    padding-top: 20px;
+    
+}
+
+

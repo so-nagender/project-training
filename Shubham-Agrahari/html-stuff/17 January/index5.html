@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<head>
+    <Title>
+       TO DO LIST 
+    </Title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+<body>
+  <script src="node.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <div class="bgImage">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#" img> <img src="images/logo.png"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse menu-right" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li> -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Loan <span class="sr-only">(current)</span></a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Loan</a>
+                  </li> -->
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li> -->
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li> -->
+                
+                <!-- <form class="form-inline my-2 my-lg-0 "> -->
+                    
+                    <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign In </button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> Sign Up </button> -->
+                    <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                  Sign In
+                  </button>
+
+                  <!-- Modal -->
+                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                 <div class="modal-dialog" role="document">
+                 <div class="modal-content">
+                 <div class="modal-header">
+                 <h5 class="modal-title" id="exampleModalLabel">Enter Your Details</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+                 </button>
+                 </div>
+                 <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Password">
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submit" onclick="checkCookie()">Submit</button>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                
+                </div>
+                </div>
+                </div>
+                </div>
+
+                <button  type="button" class="btn btn-primary button_2" data-toggle="modal" data-target="#exampleModal_1" onclick="addcookie(event)">
+                 Sign Up
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                  <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Enter Your Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+                  </div>
+                  <div class="modal-body">
+                   <form id="signup">
+                     <div class="form-group">
+                       <label for="exampleInputName">Name</label>
+                       <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter Name">
+                     </div>
+                     <!-- <div class="form-group">
+                       <label for="exampleInputMobileNumber">Mobile Number</label>
+                       <input type="text" class="form-control" id="exampleInputMobileNumber" aria-describedby="mobileNumberHelp" placeholder="Enter Mobile Number">
+                     </div> -->
+                     <!-- <div class="form-group">
+                       <label for="exampleInputAddress">Address</label>
+                       <input type="text" class="form-control" id="exampleInputAddress" aria-describedby="addressHelp" placeholder="Enter Your Address">
+                     </div>                     -->
+                     <div class="form-group">
+                       <label for="exampleInputEmail1">Email address</label>
+                       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                     </div>
+                     <div class="form-group">
+                       <label for="exampleInputPassword1">Password</label>
+                       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                     </div>
+                     <div class="form-check">
+                       <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                       <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                     </div>
+                     <button type="submit" class="btn btn-primary"> Submit</button>
+                   </form>
+                 </div>
+                 <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>                 
+                 </div>
+                 </div>
+                 </div>
+                 </div>
+                <!-- </form> -->
+            </div>
+          </nav>
+          <section>
+            <!-- <div class="row">
+              <article class="col-sm-6"> -->
+                  <font color="white"><h3>Get Loan for your<br> Business growth or<br> startup</h3></font>>
+              </article>
+              <!-- <article class="col-sm-6">                 -->
+                </article>
+                </div>
+          </section>
+        </div>
+    </div>
+
+    <main>
+        <div class="container2">
+            <div class="row">
+                <article class="col-sm-6">
+                    <img src="images/about.png" alt="Responsive image" class="img-thumbnail">
+
+                </article>
+
+                    
+                <article class="col-sm-6 list">   
+                    <h2>Why Choose Us?</h2>
+                    <p>Esteem spirit temper too say adieus who direct esteem.It esteems luckily or picture placing
+                        drawing.Apartments frequently or motionless or reasonable.
+                    <ul class="points">
+                        <li><strong>Loans with quick approval.</strong></li>
+                        <li><strong>Customize a loan based on the amount.</strong></li>
+                        <li><strong>Good credit profile and you have built your loan.</strong></li>
+                        <li><strong>We provide online instant cash loans.</strong></li>  
+                    </ul>
+                    <button type="button" class="btn btn-primary">About Us</button>      
+                </article> 
+            </div>
+        </div>
+    </main>
+    
+    <footer class="bgImage3">
+      <div class="container-fluid">
+        <div class="row">
+            <article class="col-sm-8">
+        
+                <h3><font color="white">Apply for a Loan for your startup,<br> education or company.</font></h3>
+            </article>    
+            <article class="col-sm-4">
+                <button type="button" class="btn btn-primary button">Apply Now</button>
+                </article>   
+              </div>
+            </div>
+                
+
+    </footer>
+    <span class="footer"><font color="blue"><strong>Copyright &copy;2020 All rights reserved | This template is made by Shubham Agrahari.</strong></font></span>
+
+    <script src="cookie.js"></script>
+
+</body>
+<!-- <script>
+    //document.cookie = "amuk";
+    var today = new Date();
+      var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
+        function cookieSet(form){
+            alert(form[0]);
+        }
+      function setCookie(id, value)
+      {
+          console.log('setcookie');
+        document.cookie=id + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+      }
+      //this should set the UserName cookie to the proper value;
+    function putCookie(form)
+                    
+      {
+          console.log('dsfskdjfsdfkjsdfkj');
+    //    setCookie("exampleInputName", form[0].exampleInputName.value);
+    
+    //     return true;
+      }
+    
+      </script> -->
+</html>        
+
+

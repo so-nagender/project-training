@@ -1,0 +1,75 @@
+<div class="bg">
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+  <div>
+    <img src="../../assets/img/clapperboard.svg" width="150px" style="margin-top: -100px;">
+    <h2 class="title">Jump on board</h2>
+  </div>
+  <label>
+    <div class="form-group">
+      <input type="text" required class="input" formControlName="Name"
+        [ngClass]="{'is-invalid': checkoutForm.get('Name').touched && checkoutForm.get('Name').invalid}">
+      <p class="label-txt">Name</p>
+      <div class="line-box">
+        <div class="line"></div>
+      </div>
+      <div class="invalid-feedback">
+        <h5 style="font-size: small;"><strong>Name is a required field</strong></h5>
+      </div>
+    </div>
+  </label>
+  <label>
+    <div class="form-group">
+      <input type="text" required class="input" formControlName="email"
+        [ngClass]="{'is-invalid': checkoutForm.get('email').touched && checkoutForm.get('email').invalid}">
+      <p class="label-txt">Email Address</p>
+      <div class="line-box">
+        <div class="line"></div>
+      </div>
+      <div class="invalid-feedback">
+        <h5 style="font-size: small;"><strong>Email is a required field</strong></h5>
+      </div>
+    </div>
+  </label>
+  <label>
+    <div class="form-group">
+      <input [type]="shown ? 'text' : 'password'" required class="input" formControlName="password"
+        [ngClass]="{'is-invalid': checkoutForm.get('password').touched && checkoutForm.get('password').invalid}">
+        <p class="label-txt">Password</p>
+        <i class="fa fa-eye" aria-hidden="true" (click)= "togglePassword()"></i>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+        <div class="invalid-feedback">
+        <h5 style="font-size: small;"><strong>Password is a required field</strong></h5>
+      </div>
+    </div>
+  </label>
+  <label>
+    <div class="form-group">
+      <input type="password" required class="input"  formControlName="retypepassword"
+        [ngClass]="{'is-invalid': checkoutForm.get('retypepassword').touched && checkoutForm.get('retypepassword').invalid}">
+      <p class="label-txt">Retype password</p>
+      <div class="line-box">
+        <div class="line"></div>
+      </div>
+      <div class="invalid-feedback">
+        <h5 *ngIf="checkoutForm.get('retypepassword').errors.required" style="font-size: small;"><strong>Retype password is a required field</strong></h5>
+      </div>
+      <div *ngIf="checkoutForm.get('retypepassword').touched" class="invalid-feedback">
+        <h4 style="font-size: small;" *ngIf="checkoutForm.get('retypepassword').errors && !checkoutForm.get('retypepassword').errors.required"><strong>Passwords do not
+            match</strong></h4>
+      </div>
+    </div>
+  </label>
+  <div>
+    <h3 style="color: brown;">
+      {{error}}
+    </h3>
+  </div>
+  <button type="submit">Sign up</button>
+  <p class="center super mt-3">
+    "Already have an account?"
+    <a routerLink="/">Sign in here</a>
+  </p>
+</form>
+</div>

@@ -1,0 +1,27 @@
+/* .color a{
+    color: white; 
+} */
+/* .dropdown:hover .dropdown-menu {
+    display: block;
+  } */
+  .input{
+    font-family: "futura-pt",serif !important;
+    font-style: normal;
+    font-weight: 400;
+    background:white;
+    font-size: 1em;
+    letter-spacing: 2pt;
+  }
+  .dropdown-item{
+      color:  rgb(180, 66, 66);
+  }
+  .dropdown-menu{
+      background: rgb(0, 0, 0);
+  }
+  
+  .caption {
+    display: block;
+    color: white;
+    padding-top: 8px;
+    margin-right: 17px
+}

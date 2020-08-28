@@ -1,0 +1,16 @@
+.nav-style {
+    background: rgb(59, 58, 58);
+}
+.footerText{
+    color:white;
+}
+.footerTextMargin1{
+    margin-left: 300px;
+}
+.footerTextMargin2{
+    margin-left: 350px;
+    color: aliceblue;
+}
+.footerLinkGap{
+    margin-left: 10px;
+}

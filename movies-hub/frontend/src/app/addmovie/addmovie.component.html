@@ -1,0 +1,118 @@
+<div>
+  <app-header></app-header>
+</div>
+<form [formGroup]="checkoutForm">
+  <div class="row moviesDetailsMargin">
+    <div class="container col-md-4  col-xs-12">
+      <img src="../../assets/img/frozen.jpg" class="img-fluid image-width imageShadow" alt="Responsive" style="width:100%">
+    </div>
+    <div class="col-md-8  col-xs-12 form-spacing">
+      <div class="form-container">
+        <label>
+          <div class="form-group">
+            <input type="text" required class="input" formControlName="moviename"
+              [ngClass]="{'is-invalid': checkoutForm.get('moviename').touched && checkoutForm.get('moviename').invalid}">
+            <p class="label-txt">Movie Name</p>
+            <div class="line-box">
+              <div class="line"></div>
+            </div>
+            <div class="invalid-feedback">
+              <h5 style="font-size: small;"><strong>Movie Name ke bina nahi babumoshai</strong></h5>
+            </div>
+          </div>
+        </label>
+        <label>
+          <div class="form-group">
+            <input type="text" required class="input" formControlName="date"
+              [ngClass]="{'is-invalid': checkoutForm.get('date').touched && checkoutForm.get('date').invalid}">
+            <p class="label-txt">Release Date</p>
+            <div class="line-box">
+              <div class="line"></div>
+            </div>
+            <div class="invalid-feedback">
+              <h5 style="font-size: small;"><strong>Jate Jate "Year" to batate jao</strong></h5>
+            </div>
+          </div>
+        </label>
+        <!-- <label>
+          <div class="form-group">
+            <input type="text" required class="input" formControlName="rating"
+              [ngClass]="{'is-invalid': checkoutForm.get('rating').touched && checkoutForm.get('rating').invalid}">
+            <p class="label-txt" ngModel maxlength="25">Rating</p>
+            <div class="line-box">
+              <div class="line"></div>
+            </div>
+            <div class="invalid-feedback">
+              Invalid (1-5 only)
+            </div>
+          </div> -->
+          <!-- <div class="col-3">
+              <label>
+                  <div class="form-group">
+                      <input type="text" required class="input" formControlName="moviename">
+                      <p class="label-txt">Movie Name</p>
+                      <div class="line-box">
+                          <div class="line"></div>
+                      </div>
+                  </div>
+              </label>
+              <label>
+                  <div class="form-group">
+                      <input type="text" required class="input" formControlName="date">
+                      <p class="label-txt">Release Date</p>
+                      <div class="line-box">
+                          <div class="line"></div>
+                      </div>
+                  </div>
+              </label> -->
+        <label>
+              <div class="form-group"> 
+                <!-- <input type="text" required class="input" formControlName="rating"> -->
+                <p class="label-txt">Rating</p> 
+                <!-- <div class="line-box">
+                    <div class="line"></div>
+                </div>                  -->
+                <ngb-rating [formControl]="rating" class="rating" (click)='toggle()'></ngb-rating>
+                Stars: <b>{{ rating.value }}</b>
+            </div>
+            
+        </label>
+        <h5>categories</h5>
+        <select formControlName="cat" class="custom-select" formControlsName="cat" id="iinlineFormCustomSelect">
+            <option value="{{i.id}}" *ngFor="let i of catogry">{{i.genre}}</option>
+        </select>
+        <label>
+            <div class="form-group">
+                <input type="text" required class="input" formControlName="cast">
+                <p class="label-txt">Cast</p>
+                <div class="line-box">
+                    <div class="line"></div>
+                </div>
+                <div class="invalid-feedback">
+                  <h5 style="font-size: small;"><strong>Not Caste but Cast is required</strong></h5>
+                </div>
+            </div>
+        </label>
+        <label for="synopsys">Synopsys:</label>
+        <textarea class="form-control" rows="4" formControlName="syn" id="comment"
+          [ngClass]="{'is-invalid': checkoutForm.get('syn').touched && checkoutForm.get('syn').invalid}"></textarea>
+        <div class="invalid-feedback">
+          <h5 style="font-size: small;"><strong>Hulk wants synopsis</strong></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col-5"></div>
+      <div class="col-4">
+        
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div> -->
+  <div class="col-auto my-1">
+    <button type="submit" (click)=onSubmit() class="btn btn-primary buttonGap">Submit</button>
+    <button type="button" routerLink="/list" class="btn btn-primary">Back</button>
+  </div>
+</form>

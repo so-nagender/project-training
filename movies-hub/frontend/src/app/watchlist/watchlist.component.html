@@ -1,0 +1,43 @@
+<div>
+    <app-header></app-header>
+</div>
+<div class="container">
+    <table class="table table-striped" id="table1">
+        <tr>
+            <th style="width:18%">Movie Name
+                <img src="../../assets/img/arrowUp.svg" class="img-fluid" alt="Responsive image"
+                    (click)="sortTableAsc()" class="arrow">
+                <img src="../../assets/img/arrowDown.svg" class="img-fluid" alt="Responsive image"
+                    (click)="sortTableDes()" class="arrow">
+            </th>
+            <th style="width:10%">Year
+                <img src="../../assets/img/arrowUp.svg" class="img-fluid" alt="Responsive image"
+                    (click)="sortTableYearAsc()" class="arrow">
+                <img src="../../assets/img/arrowDown.svg" class="img-fluid" alt="Responsive image"
+                    (click)="sortTableYearDes()" class="arrow">
+            </th>
+            <th style="width:20%">Cast</th>
+            <th style="width:6%">Genre</th>
+            <th style="width:18%">Rating</th>
+            <th >Actions</th>
+        </tr>
+        <tbody>
+            <tr *ngFor="let i of movies">
+                <td>{{ i.movieName }}</td>
+                <td>{{ i.year }}</td>
+                <td>{{ i.cast }}</td>
+                <td>{{i.cat.genre}}</td>
+                <td>
+                    <span *ngFor="let i of createRange(i.rating)" style="color: rgb(235, 212, 6);" class="fa fa-star checked">
+                    </span>
+                    <span *ngFor="let i of createRange(5-(i.rating))" style="color: rgb(158, 158, 158);" class="fa fa-star">
+                    </span>
+                </td>
+                <td>
+                <button [routerLink]="['/movie', i.id]" routerLinkActive="active">View</button>
+                <i (click)="delete(i.id)" class="fa fa-trash mx-1" aria-hidden="true" style="cursor: pointer;"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,71 @@
+<!-- Header Start-->
+<div>
+    <app-header></app-header>
+</div>
+<!-- Header End-->
+
+<!-- Movie Details Start-->
+<div class="xOverflow">
+<div class="row moviesDetailsMargin">
+    <div class="col-2">            
+    </div>
+    <div class="container col-2 imageShadow">         
+        <img src="../../assets/img/frozen.jpg" class="img-fluid" alt="Responsive" style="width:100%" >
+    </div>
+    <div class="col-1">        
+    </div>        
+    <div class="col-5">
+        <h4>Movie Name: {{data.movieName}}</h4>
+        <h4>Year: {{data.year}}</h4>
+        <h5>Category: {{data.cat.genre}}</h5>
+        <h5>Rating:             
+                <span *ngFor="let i of createRange(data.rating)" style="color: rgb(221,160,221);" class="fa fa-star checked">
+                </span>
+                <span *ngFor="let i of createRange(10-(data.rating))" style="color: rgb(158, 158, 158);" class="fa fa-star">
+                </span>
+                {{data.rating}}/10            
+        </h5>
+        <h5 class="moviesDetailsContentGap"><i>Available In:</i></h5>
+        <button class="downloadButtonSpace">2160p.bluray</button>
+        <button class="downloadButtonSpace">1080p.bluray</button>
+        <button>720.bluray</button>
+        <div>
+            <button class="moviesDetailsContentGap">
+                 <img src="../../assets/img/heart.svg" class="img-fluid moviesDetailsLogoSizeLike" alt="Responsive image">
+            </button>
+        </div>
+        <div>
+        <img src="../../assets/img/imdb.svg" class="img-fluid moviesDetailsLogoSize" alt="Responsive image">
+        </div>
+        
+    </div>
+    <div class="col-2">        
+    </div>
+    <div class='clearfix'></div>
+</div>
+<div class="row moviesDetailsMargin">
+    <div class="col-2"></div>
+    <div class="col-6 container">
+    <h2>Synopsis</h2>     
+    <p>{{data.synopsis}}</p>
+    </div>
+    <div class="col-3"> 
+        <h4 class="p-3"><strong>Cast</strong></h4>
+        <ul class="list-group list-group-flush" *ngFor="let i of data.cast">
+            <li class="list-group-item" >{{i}}</li>
+        </ul>           
+    </div>
+    <div class="col-1">        
+    </div>
+    <div class='clearfix'></div>
+</div>
+</div>
+<!-- Movie Details End-->
+
+<!-- Footer Start -->
+<div>
+    <app-footer></app-footer>
+</div>
+<!-- Footer End -->
+
+
